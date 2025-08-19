@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Calendar, Clock, Mail, Bell, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Bell, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths } from 'date-fns';
-import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 
 interface PaymentDate {
@@ -23,7 +22,6 @@ interface MonthlyPayments {
 }
 
 const PaymentCalendar: React.FC = () => {
-  const { translations } = useAppContext();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [payments, setPayments] = useState<MonthlyPayments[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -35,52 +33,13 @@ const PaymentCalendar: React.FC = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        // Sample payment data - in production this would come from payments.json
-        const samplePayments: MonthlyPayments[] = [
-          {
-            month: '2025-01',
-            grants: [
-              {
-                type: 'Old Age Grant',
-                dates: ['2025-01-02', '2025-01-03'],
-                amount: 2090,
-                notes: 'Dates adjusted due to New Year holiday'
-              },
-              {
-                type: 'Disability Grant',
-                dates: ['2025-01-06', '2025-01-07'],
-                amount: 2090
-              },
-              {
-                type: 'Child Support Grant',
-                dates: ['2025-01-08', '2025-01-09', '2025-01-10'],
-                amount: 510
-              }
-            ]
-          },
-          {
-            month: '2025-02',
-            grants: [
-              {
-                type: 'Old Age Grant',
-                dates: ['2025-02-03', '2025-02-04'],
-                amount: 2090,
-                notes: 'Dates adjusted due to weekend'
-              },
-              {
-                type: 'Disability Grant',
-                dates: ['2025-02-05', '2025-02-06'],
-                amount: 2090
-              },
-              {
-                type: 'Child Support Grant',
-                dates: ['2025-02-07', '2025-02-10', '2025-02-11'],
-                amount: 510
-              }
-            ]
-          }
-        ];
-        setPayments(samplePayments);
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a4ae0e43b1c97be922a4f9/latest');
+        if (!response.ok) {
+          throw new Error('Failed to fetch payment data');
+        }
+        const jsonResponse = await response.json();
+        const data: MonthlyPayments[] = jsonResponse.record;
+        setPayments(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
