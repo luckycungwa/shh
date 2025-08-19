@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, AlertTriangle, Search, Phone, Mail, MessageSquare, ExternalLink, Eye, EyeOff } from 'lucide-react';
-import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 
 interface Scam {
@@ -17,7 +16,6 @@ interface Scam {
 }
 
 const ScamAlert: React.FC = () => {
-  const { translations } = useAppContext();
   const [scams, setScams] = useState<Scam[]>([]);
   const [filteredScams, setFilteredScams] = useState<Scam[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,88 +31,14 @@ const ScamAlert: React.FC = () => {
   useEffect(() => {
     const fetchScams = async () => {
       try {
-        // Sample scam data - in production this would come from scams.json
-        const sampleScams: Scam[] = [
-          {
-            id: 'scam-001',
-            title: 'Fake SASSA SMS Requesting Banking Details',
-            description: 'SMS messages claiming to be from SASSA asking beneficiaries to update their banking details by replying with personal information.',
-            type: 'SMS',
-            severity: 'high',
-            reportedDate: '2025-01-20',
-            indicators: [
-              'Requests banking details via SMS',
-              'Claims urgent action required',
-              'Uses unofficial phone numbers',
-              'Poor grammar and spelling'
-            ],
-            prevention: 'SASSA will never ask for banking details via SMS. Always verify through official channels.',
-            examples: [
-              'SASSA: Your grant will be suspended. Reply with your banking details to update.',
-              'URGENT: SASSA account verification needed. Send ID and bank details now.'
-            ]
-          },
-          {
-            id: 'scam-002',
-            title: 'Fake SASSA Officials Demanding Payments',
-            description: 'Individuals posing as SASSA officials visiting homes or communities, demanding payments for grant applications or renewals.',
-            type: 'In-Person',
-            severity: 'critical',
-            reportedDate: '2025-01-18',
-            indicators: [
-              'Demands upfront payments',
-              'No official SASSA identification',
-              'Promises to speed up applications',
-              'Operates outside official offices'
-            ],
-            prevention: 'SASSA services are always free. Verify official identity and report suspicious individuals.',
-            examples: [
-              'Pay R500 now and your grant will be approved faster',
-              'I can help you get your grant today for just R200'
-            ]
-          },
-          {
-            id: 'scam-003',
-            title: 'Fraudulent SASSA Loan Offers',
-            description: 'Phone calls or messages offering loans against SASSA grants, requesting personal information and upfront fees.',
-            type: 'Phone',
-            severity: 'high',
-            reportedDate: '2025-01-15',
-            indicators: [
-              'Offers loans against grants',
-              'Requests upfront fees',
-              'Asks for SASSA card details',
-              'Promises immediate approval'
-            ],
-            prevention: 'SASSA does not offer loans. Never share your SASSA card details with unauthorized persons.',
-            examples: [
-              'Get a R5000 loan against your SASSA grant today!',
-              'Approved! Just pay R300 processing fee to receive your loan.'
-            ]
-          },
-          {
-            id: 'scam-004',
-            title: 'Fake SASSA Websites',
-            description: 'Websites mimicking the official SASSA website to steal personal information and banking details.',
-            type: 'Website',
-            severity: 'medium',
-            reportedDate: '2025-01-12',
-            indicators: [
-              'URL is not www.sassa.gov.za',
-              'Requests sensitive information',
-              'Poor website design',
-              'No official government branding'
-            ],
-            prevention: 'Only use the official SASSA website: www.sassa.gov.za. Check the URL carefully.',
-            examples: [
-              'www.sassa-grants.co.za',
-              'www.sassaonline.org.za'
-            ]
-          }
-        ];
-        
-        setScams(sampleScams);
-        setFilteredScams(sampleScams);
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a4ac2443b1c97be922a3c7/latest');
+        if (!response.ok) {
+          throw new Error('Failed to fetch scam data');
+        }
+        const jsonResponse = await response.json();
+        const data: Scam[] = jsonResponse.record;
+        setScams(data);
+        setFilteredScams(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
@@ -182,7 +106,7 @@ const ScamAlert: React.FC = () => {
 
     const text = scamCheckerText.toLowerCase();
     let riskLevel = 'low';
-    let warnings: string[] = [];
+    const warnings: string[] = [];
 
     // Check for common scam indicators
     if (text.includes('banking details') || text.includes('bank details')) {

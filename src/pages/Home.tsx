@@ -30,9 +30,10 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const response = await fetch('/data/updates.json');
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a4ad18d0ea881f405d8b0c/latest');
         if (!response.ok) throw new Error('Failed to fetch updates');
-        const data = await response.json();
+        const jsonResponse = await response.json();
+        const data = jsonResponse.record;
         setUpdates(data.slice(0, 3)); // Show only latest 3 updates
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
