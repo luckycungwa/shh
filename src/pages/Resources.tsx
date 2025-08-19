@@ -1,0 +1,487 @@
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MapPin, Phone, Clock, Navigation, Search, Filter, ExternalLink } from 'lucide-react';
+import { useAppContext } from '../contexts/AppContext';
+import LoadingSpinner from '../components/Common/LoadingSpinner';
+
+interface SassaOffice {
+  id: string;
+  name: string;
+  address: string;
+  city: string;
+  province: string;
+  postalCode: string;
+  phone: string;
+  email?: string;
+  hours: {
+    weekdays: string;
+    saturday?: string;
+    sunday?: string;
+  };
+  services: string[];
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  accessibility: string[];
+}
+
+const Resources: React.FC = () => {
+  const { translations } = useAppContext();
+  const [offices, setOffices] = useState<SassaOffice[]>([]);
+  const [filteredOffices, setFilteredOffices] = useState<SassaOffice[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedProvince, setSelectedProvince] = useState<string>('all');
+  const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
+  const [locationError, setLocationError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchOffices = async () => {
+      try {
+        // Sample office data - in production this would come from resources.json
+        const sampleOffices: SassaOffice[] = [
+          {
+            id: 'office-001',
+            name: 'SASSA Cape Town Regional Office',
+            address: '123 Adderley Street',
+            city: 'Cape Town',
+            province: 'Western Cape',
+            postalCode: '8001',
+            phone: '021 123 4567',
+            email: 'capetown@sassa.gov.za',
+            hours: {
+              weekdays: '08:00 - 16:00',
+              saturday: '08:00 - 12:00'
+            },
+            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Appeals'],
+            coordinates: { lat: -33.9249, lng: 18.4241 },
+            accessibility: ['Wheelchair accessible', 'Parking available', 'Public transport nearby']
+          },
+          {
+            id: 'office-002',
+            name: 'SASSA Johannesburg Central',
+            address: '456 Commissioner Street',
+            city: 'Johannesburg',
+            province: 'Gauteng',
+            postalCode: '2001',
+            phone: '011 987 6543',
+            email: 'johannesburg@sassa.gov.za',
+            hours: {
+              weekdays: '07:30 - 16:30',
+              saturday: '08:00 - 13:00'
+            },
+            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Medical Assessments'],
+            coordinates: { lat: -26.2041, lng: 28.0473 },
+            accessibility: ['Wheelchair accessible', 'Parking available', 'Security on site']
+          },
+          {
+            id: 'office-003',
+            name: 'SASSA Durban Office',
+            address: '789 West Street',
+            city: 'Durban',
+            province: 'KwaZulu-Natal',
+            postalCode: '4001',
+            phone: '031 555 7890',
+            email: 'durban@sassa.gov.za',
+            hours: {
+              weekdays: '08:00 - 16:00',
+              saturday: '08:00 - 12:00'
+            },
+            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Foster Care Grants'],
+            coordinates: { lat: -29.8587, lng: 31.0218 },
+            accessibility: ['Wheelchair accessible', 'Public transport nearby', 'Interpreter services']
+          },
+          {
+            id: 'office-004',
+            name: 'SASSA Pretoria Office',
+            address: '321 Church Street',
+            city: 'Pretoria',
+            province: 'Gauteng',
+            postalCode: '0002',
+            phone: '012 444 5555',
+            email: 'pretoria@sassa.gov.za',
+            hours: {
+              weekdays: '08:00 - 16:00'
+            },
+            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Appeals', 'Medical Assessments'],
+            coordinates: { lat: -25.7479, lng: 28.2293 },
+            accessibility: ['Wheelchair accessible', 'Parking available', 'Air conditioning']
+          },
+          {
+            id: 'office-005',
+            name: 'SASSA Port Elizabeth Office',
+            address: '654 Main Street',
+            city: 'Gqeberha',
+            province: 'Eastern Cape',
+            postalCode: '6001',
+            phone: '041 333 2222',
+            email: 'portelizabeth@sassa.gov.za',
+            hours: {
+              weekdays: '08:00 - 16:00',
+              saturday: '08:00 - 12:00'
+            },
+            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements'],
+            coordinates: { lat: -33.9608, lng: 25.6022 },
+            accessibility: ['Wheelchair accessible', 'Public transport nearby']
+          }
+        ];
+        
+        setOffices(sampleOffices);
+        setFilteredOffices(sampleOffices);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchOffices();
+  }, []);
+
+  useEffect(() => {
+    let filtered = [...offices];
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(office =>
+        office.name.toLowerCase().includes(query) ||
+        office.city.toLowerCase().includes(query) ||
+        office.province.toLowerCase().includes(query) ||
+        office.address.toLowerCase().includes(query)
+      );
+    }
+
+    // Filter by province
+    if (selectedProvince !== 'all') {
+      filtered = filtered.filter(office => office.province === selectedProvince);
+    }
+
+    // Sort by distance if user location is available
+    if (userLocation) {
+      filtered.sort((a, b) => {
+        const distanceA = calculateDistance(userLocation, a.coordinates);
+        const distanceB = calculateDistance(userLocation, b.coordinates);
+        return distanceA - distanceB;
+      });
+    }
+
+    setFilteredOffices(filtered);
+  }, [offices, searchQuery, selectedProvince, userLocation]);
+
+  const calculateDistance = (pos1: {lat: number, lng: number}, pos2: {lat: number, lng: number}) => {
+    const R = 6371; // Earth's radius in km
+    const dLat = (pos2.lat - pos1.lat) * Math.PI / 180;
+    const dLng = (pos2.lng - pos1.lng) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(pos1.lat * Math.PI / 180) * Math.cos(pos2.lat * Math.PI / 180) *
+              Math.sin(dLng/2) * Math.sin(dLng/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  };
+
+  const requestLocation = () => {
+    if (!navigator.geolocation) {
+      setLocationError('Geolocation is not supported by this browser.');
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setUserLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        });
+        setLocationError(null);
+      },
+      (error) => {
+        setLocationError('Unable to retrieve your location. Please search manually.');
+      }
+    );
+  };
+
+  const provinces = ['all', ...new Set(offices.map(office => office.province))];
+
+  const getDirections = (office: SassaOffice) => {
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${office.coordinates.lat},${office.coordinates.lng}`;
+    window.open(url, '_blank');
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <LoadingSpinner size="lg" text="Loading SASSA offices..." />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Error Loading Offices</h2>
+          <p className="text-gray-600">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <Helmet>
+        <title>SASSA Offices - Find Your Nearest SASSA Office | SASSA Help Hub</title>
+        <meta name="description" content="Find your nearest SASSA office with addresses, phone numbers, operating hours, and directions. Locate SASSA offices across South Africa." />
+        <meta name="keywords" content="SASSA offices, SASSA locations, nearest SASSA office, SASSA address, SASSA contact details" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Find Your Nearest SASSA Office
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Locate SASSA offices across South Africa with contact details, operating hours, and directions.
+            </p>
+          </div>
+
+          {/* Location Request */}
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <div className="text-center">
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">
+                Find Offices Near You
+              </h2>
+              {!userLocation ? (
+                <div>
+                  <p className="text-gray-600 mb-4">
+                    Allow location access to find the nearest SASSA offices to you.
+                  </p>
+                  <button
+                    onClick={requestLocation}
+                    className="bg-primary-yellow text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 inline-flex items-center"
+                  >
+                    <Navigation className="w-4 h-4 mr-2" />
+                    Use My Location
+                  </button>
+                  {locationError && (
+                    <p className="text-red-600 text-sm mt-2">{locationError}</p>
+                  )}
+                </div>
+              ) : (
+                <div className="text-green-600">
+                  <p className="mb-2">✓ Location enabled - offices sorted by distance</p>
+                  <button
+                    onClick={() => setUserLocation(null)}
+                    className="text-sm text-gray-500 hover:text-gray-700"
+                  >
+                    Clear location
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Search and Filter */}
+          <div className="mb-8 space-y-4">
+            <div className="relative max-w-2xl mx-auto">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search by city, province, or office name..."
+                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+              />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
+
+            <div className="flex items-center justify-center space-x-4">
+              <Filter className="w-5 h-5 text-gray-500" />
+              <span className="text-sm font-medium text-gray-700">Province:</span>
+              <select
+                value={selectedProvince}
+                onChange={(e) => setSelectedProvince(e.target.value)}
+                className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+              >
+                {provinces.map((province) => (
+                  <option key={province} value={province}>
+                    {province === 'all' ? 'All Provinces' : province}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Results Count */}
+          <div className="mb-6">
+            <p className="text-sm text-gray-600 text-center">
+              {filteredOffices.length === 1
+                ? '1 office found'
+                : `${filteredOffices.length} offices found`}
+            </p>
+          </div>
+
+          {/* Office List */}
+          <div className="space-y-6">
+            {filteredOffices.length === 0 ? (
+              <div className="text-center py-12">
+                <MapPin className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                <p className="text-gray-500 text-lg">
+                  No offices found matching your criteria.
+                </p>
+              </div>
+            ) : (
+              filteredOffices.map((office) => (
+                <div
+                  key={office.id}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+                >
+                  <div className="p-6">
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-4">
+                          <div>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                              {office.name}
+                            </h3>
+                            <div className="flex items-start text-gray-600 mb-2">
+                              <MapPin className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />
+                              <div>
+                                <p>{office.address}</p>
+                                <p>{office.city}, {office.province} {office.postalCode}</p>
+                              </div>
+                            </div>
+                          </div>
+                          {userLocation && (
+                            <div className="text-right text-sm text-gray-500">
+                              <p>{calculateDistance(userLocation, office.coordinates).toFixed(1)} km away</p>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Contact Information</h4>
+                            <div className="space-y-2 text-sm">
+                              <div className="flex items-center">
+                                <Phone className="w-4 h-4 mr-2 text-gray-400" />
+                                <a href={`tel:${office.phone}`} className="text-primary-yellow hover:text-primary-gold">
+                                  {office.phone}
+                                </a>
+                              </div>
+                              {office.email && (
+                                <div className="flex items-center">
+                                  <ExternalLink className="w-4 h-4 mr-2 text-gray-400" />
+                                  <a href={`mailto:${office.email}`} className="text-primary-yellow hover:text-primary-gold">
+                                    {office.email}
+                                  </a>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Operating Hours</h4>
+                            <div className="space-y-1 text-sm text-gray-600">
+                              <div className="flex items-center">
+                                <Clock className="w-4 h-4 mr-2 text-gray-400" />
+                                <span>Mon-Fri: {office.hours.weekdays}</span>
+                              </div>
+                              {office.hours.saturday && (
+                                <div className="flex items-center">
+                                  <Clock className="w-4 h-4 mr-2 text-gray-400" />
+                                  <span>Saturday: {office.hours.saturday}</span>
+                                </div>
+                              )}
+                              {office.hours.sunday && (
+                                <div className="flex items-center">
+                                  <Clock className="w-4 h-4 mr-2 text-gray-400" />
+                                  <span>Sunday: {office.hours.sunday}</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="mt-4">
+                          <h4 className="font-semibold text-gray-900 mb-2">Services Available</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {office.services.map((service, index) => (
+                              <span
+                                key={index}
+                                className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                              >
+                                {service}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {office.accessibility.length > 0 && (
+                          <div className="mt-4">
+                            <h4 className="font-semibold text-gray-900 mb-2">Accessibility</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {office.accessibility.map((feature, index) => (
+                                <span
+                                  key={index}
+                                  className="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full"
+                                >
+                                  {feature}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="mt-6 lg:mt-0 lg:ml-6 flex-shrink-0">
+                        <button
+                          onClick={() => getDirections(office)}
+                          className="w-full lg:w-auto bg-primary-yellow text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 inline-flex items-center justify-center"
+                        >
+                          <Navigation className="w-4 h-4 mr-2" />
+                          Get Directions
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+
+          {/* Emergency Contact */}
+          <div className="mt-12 bg-primary-dark text-white rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-semibold mb-4">
+              Need Immediate Assistance?
+            </h2>
+            <p className="text-gray-300 mb-6">
+              For urgent SASSA queries or if you can't visit an office, contact the SASSA helpline.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:0800601011"
+                className="bg-primary-yellow text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+              >
+                Call SASSA: 0800 60 10 11
+              </a>
+              <a
+                href="https://www.sassa.gov.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gray-300 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition-colors duration-200 inline-flex items-center"
+              >
+                Visit Official Website
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Resources;

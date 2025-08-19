@@ -1,0 +1,66 @@
+[
+  {
+    "id": "update-001",
+    "title": "SASSA Payment Dates for February 2025 Confirmed",
+    "summary": "SASSA has confirmed the payment schedule for February 2025. Old Age and Disability grants will be paid from 3-4 February due to the weekend. Child Support Grants will commence from 5 February 2025.",
+    "date": "2025-01-28",
+    "type": "news",
+    "urgent": false
+  },
+  {
+    "id": "update-002",
+    "title": "URGENT: New SMS Scam Targeting SASSA Beneficiaries",
+    "summary": "SASSA warns beneficiaries about SMS messages claiming grant applications need urgent updates. These are scams requesting personal banking information. SASSA will never ask for banking details via SMS.",
+    "date": "2025-01-25",
+    "type": "alert",
+    "urgent": true
+  },
+  {
+    "id": "update-003",
+    "title": "SASSA Office Hours Extended During Peak Period",
+    "summary": "Selected SASSA offices will extend operating hours during February 2025 to assist with the high volume of new grant applications. Check with your local office for extended hours availability.",
+    "date": "2025-01-20",
+    "type": "update",
+    "urgent": false
+  },
+  {
+    "id": "update-004",
+    "title": "Child Support Grant Increase Takes Effect March 2025",
+    "summary": "The Child Support Grant amount will increase from R510 to R530 per month effective from March 2025 payment cycle. This adjustment reflects the annual cost of living increase.",
+    "date": "2025-01-18",
+    "type": "news",
+    "urgent": false
+  },
+  {
+    "id": "update-005",
+    "title": "WARNING: Fake SASSA Officials Operating in Rural Areas",
+    "summary": "Communities in rural KwaZulu-Natal and Eastern Cape report individuals claiming to be SASSA officials collecting fees for grant applications. Remember: SASSA services are always FREE.",
+    "date": "2025-01-15",
+    "type": "alert",
+    "urgent": true
+  },
+  {
+    "id": "update-006",
+    "title": "New SASSA Mobile Units Deployed to Remote Areas",
+    "summary": "SASSA has deployed additional mobile units to serve remote communities in Limpopo, Northern Cape, and parts of Free State. Check the schedule for your area on the official SASSA website.",
+    "date": "2025-01-12",
+    "type": "update",
+    "urgent": false
+  },
+  {
+    "id": "update-007",
+    "title": "System Maintenance Notice: Online Services Temporarily Unavailable",
+    "summary": "SASSA online services including status checks will be unavailable from 2-6 AM on Sunday, 2 February 2025, due to scheduled system maintenance. Normal service will resume by 6 AM.",
+    "date": "2025-01-10",
+    "type": "update",
+    "urgent": false
+  },
+  {
+    "id": "update-008",
+    "title": "SASSA Launches New Fraud Prevention Campaign",
+    "summary": "SASSA introduces 'Grant Guard' - a new public awareness campaign to educate beneficiaries about fraud prevention. Information sessions will be held at community centers nationwide.",
+    "date": "2025-01-08",
+    "type": "news",
+    "urgent": false
+  }
+]

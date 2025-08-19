@@ -1,0 +1,368 @@
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Search, Filter, BookOpen, Clock, User, ExternalLink } from 'lucide-react';
+import { useAppContext } from '../contexts/AppContext';
+import LoadingSpinner from '../components/Common/LoadingSpinner';
+
+interface Guide {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  estimatedTime: string;
+  steps: Array<{
+    title: string;
+    content: string;
+    tips?: string[];
+  }>;
+  tags: string[];
+  lastUpdated: string;
+  author: string;
+  relatedLinks?: Array<{
+    title: string;
+    url: string;
+    isExternal: boolean;
+  }>;
+}
+
+const Guides: React.FC = () => {
+  const { translations, searchQuery, setSearchQuery } = useAppContext();
+  const [guides, setGuides] = useState<Guide[]>([]);
+  const [filteredGuides, setFilteredGuides] = useState<Guide[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
+  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
+
+  useEffect(() => {
+    const fetchGuides = async () => {
+      try {
+        // For now, we'll use sample data since guides.json doesn't exist yet
+        const sampleGuides: Guide[] = [
+          {
+            id: 'guide-001',
+            title: 'How to Apply for Child Support Grant',
+            description: 'Step-by-step guide to applying for the Child Support Grant, including required documents and eligibility criteria.',
+            category: 'Applications',
+            difficulty: 'beginner',
+            estimatedTime: '30 minutes',
+            steps: [
+              {
+                title: 'Check Eligibility',
+                content: 'Ensure you meet the requirements: child under 18, South African citizen/permanent resident, and pass the means test.',
+                tips: ['Single caregiver income must be under R4,800/month', 'Married couple combined income under R9,600/month']
+              },
+              {
+                title: 'Gather Required Documents',
+                content: 'Collect all necessary documents before visiting the SASSA office.',
+                tips: ['Make copies of all documents', 'Ensure documents are not older than 3 months']
+              },
+              {
+                title: 'Visit SASSA Office',
+                content: 'Go to your nearest SASSA office with all documents and complete the application form.',
+                tips: ['Arrive early to avoid long queues', 'Bring a pen and reading glasses if needed']
+              }
+            ],
+            tags: ['child support', 'application', 'grants', 'eligibility'],
+            lastUpdated: '2024-01-15',
+            author: 'SASSA Help Hub Team',
+            relatedLinks: [
+              {
+                title: 'Child Support Grant FAQ',
+                url: '/faq?search=child%20support',
+                isExternal: false
+              }
+            ]
+          },
+          {
+            id: 'guide-002',
+            title: 'How to Avoid SASSA Scams',
+            description: 'Comprehensive guide to identifying and avoiding common SASSA-related scams and fraudulent activities.',
+            category: 'Scam Protection',
+            difficulty: 'beginner',
+            estimatedTime: '15 minutes',
+            steps: [
+              {
+                title: 'Recognize Common Scam Types',
+                content: 'Learn to identify SMS scams, fake officials, and fraudulent websites.',
+                tips: ['SASSA will never ask for banking details via SMS', 'Official SASSA communications come from verified sources']
+              },
+              {
+                title: 'Verify Official Communications',
+                content: 'Always verify any SASSA communication through official channels.',
+                tips: ['Call SASSA directly at 0800 60 10 11', 'Visit www.sassa.gov.za for official information']
+              }
+            ],
+            tags: ['scams', 'fraud', 'protection', 'safety'],
+            lastUpdated: '2024-01-10',
+            author: 'SASSA Help Hub Team'
+          }
+        ];
+        
+        setGuides(sampleGuides);
+        setFilteredGuides(sampleGuides);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchGuides();
+  }, []);
+
+  useEffect(() => {
+    let filtered = [...guides];
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(guide => guide.category === selectedCategory);
+    }
+
+    // Filter by difficulty
+    if (selectedDifficulty !== 'all') {
+      filtered = filtered.filter(guide => guide.difficulty === selectedDifficulty);
+    }
+
+    // Filter by search query
+    if (localSearchQuery.trim()) {
+      const query = localSearchQuery.toLowerCase();
+      filtered = filtered.filter(guide =>
+        guide.title.toLowerCase().includes(query) ||
+        guide.description.toLowerCase().includes(query) ||
+        guide.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    }
+
+    setFilteredGuides(filtered);
+  }, [guides, selectedCategory, selectedDifficulty, localSearchQuery]);
+
+  const categories = ['all', ...new Set(guides.map(guide => guide.category))];
+  const difficulties = ['all', 'beginner', 'intermediate', 'advanced'];
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSearchQuery(localSearchQuery);
+  };
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'beginner': return 'bg-green-100 text-green-800';
+      case 'intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'advanced': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <LoadingSpinner size="lg" text="Loading guides..." />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Error Loading Guides</h2>
+          <p className="text-gray-600">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <Helmet>
+        <title>SASSA Guides - Step-by-Step Instructions | SASSA Help Hub</title>
+        <meta name="description" content="Comprehensive step-by-step guides for SASSA services. Learn how to apply for grants, avoid scams, and navigate SASSA processes." />
+        <meta name="keywords" content="SASSA guides, SASSA application guide, SASSA step by step, SASSA help" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Step-by-Step Guides
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive guides to help you navigate SASSA services, applications, and processes with confidence.
+            </p>
+          </div>
+
+          {/* Search and Filter Section */}
+          <div className="mb-8 space-y-4">
+            <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto">
+              <input
+                type="text"
+                value={localSearchQuery}
+                onChange={(e) => setLocalSearchQuery(e.target.value)}
+                placeholder="Search guides..."
+                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+              />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-yellow text-primary-black px-4 py-1.5 rounded-md font-medium hover:bg-primary-gold transition-colors duration-200"
+              >
+                Search
+              </button>
+            </form>
+
+            {/* Filters */}
+            <div className="flex items-center justify-center space-x-6 flex-wrap">
+              <div className="flex items-center space-x-2">
+                <Filter className="w-5 h-5 text-gray-500" />
+                <span className="text-sm font-medium text-gray-700">Category:</span>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                >
+                  {categories.map((category) => (
+                    <option key={category} value={category}>
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <span className="text-sm font-medium text-gray-700">Difficulty:</span>
+                <select
+                  value={selectedDifficulty}
+                  onChange={(e) => setSelectedDifficulty(e.target.value)}
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                >
+                  {difficulties.map((difficulty) => (
+                    <option key={difficulty} value={difficulty}>
+                      {difficulty === 'all' ? 'All Levels' : difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Count */}
+          <div className="mb-6">
+            <p className="text-sm text-gray-600 text-center">
+              {filteredGuides.length === 1
+                ? '1 guide found'
+                : `${filteredGuides.length} guides found`}
+            </p>
+          </div>
+
+          {/* Guides Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredGuides.length === 0 ? (
+              <div className="col-span-full text-center py-12">
+                <BookOpen className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                <p className="text-gray-500 text-lg">
+                  No guides found matching your criteria.
+                </p>
+              </div>
+            ) : (
+              filteredGuides.map((guide) => (
+                <div
+                  key={guide.id}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200"
+                >
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">
+                        {guide.category}
+                      </span>
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(guide.difficulty)}`}>
+                        {guide.difficulty}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {guide.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {guide.description}
+                    </p>
+
+                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {guide.estimatedTime}
+                      </div>
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {guide.author}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="text-xs text-gray-500">
+                        Updated {new Date(guide.lastUpdated).toLocaleDateString()}
+                      </div>
+                      <button className="text-primary-yellow hover:text-primary-gold font-medium text-sm">
+                        Read Guide →
+                      </button>
+                    </div>
+
+                    {/* Tags */}
+                    <div className="mt-4 flex flex-wrap gap-1">
+                      {guide.tags.slice(0, 3).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                      {guide.tags.length > 3 && (
+                        <span className="text-xs text-gray-500">
+                          +{guide.tags.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+
+          {/* Contact CTA */}
+          <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Need More Help?
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Can't find the guide you're looking for? Contact SASSA directly for personalized assistance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:0800601011"
+                className="bg-primary-yellow text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+              >
+                Call SASSA: 0800 60 10 11
+              </a>
+              <a
+                href="https://www.sassa.gov.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 inline-flex items-center"
+              >
+                Visit Official Website
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Guides;
