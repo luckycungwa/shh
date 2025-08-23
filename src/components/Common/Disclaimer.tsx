@@ -9,16 +9,16 @@ const Disclaimer: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-warning text-primary-black py-2 px-4 relative" role="banner" aria-label="Important disclaimer">
+    <div className="bg-yellow-500 text-primary-black py-2 px-4 relative" role="banner" aria-label="Important disclaimer">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2 flex-1">
           <AlertTriangle className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
           <div className="text-sm font-medium">
             <span className="block sm:inline">
-              {translations.disclaimer || 'This is an independent, unofficial resource.'}
+              {translations.disclaimer || 'This is an independent resource and is not affiliated with the SASSA. '}
             </span>
             <span className="block sm:inline sm:ml-2">
-              {translations.disclaimerAction || 'Always verify information on'}{' '}
+              {translations.disclaimerAction || 'Always verify with official SASSA on'}{' '}
               <a
                 href="https://www.sassa.gov.za"
                 target="_blank"

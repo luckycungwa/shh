@@ -48,24 +48,24 @@ const Home: React.FC = () => {
   const quickStats: QuickStat[] = [
     {
       label: translations.beneficiariesHelped || 'Beneficiaries Helped',
-      value: '50,000+',
+      value: '2000+',
       icon: <Users className="w-6 h-6" />,
       trend: '+15%',
     },
     {
       label: translations.scamsPrevented || 'Scams Prevented',
-      value: '1,200+',
+      value: '100+',
       icon: <Shield className="w-6 h-6" />,
       trend: '+22%',
     },
     {
       label: translations.officesListed || 'SASSA Offices',
-      value: '350+',
+      value: '200+',
       icon: <MapPin className="w-6 h-6" />,
     },
     {
       label: translations.lastUpdated || 'Last Updated',
-      value: 'Today',
+      value: new Date().toLocaleString('default', { month: 'long', }),
       icon: <Clock className="w-6 h-6" />,
     },
   ];
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
       description: translations.checkPaymentDatesDesc || 'View upcoming SASSA payment schedules',
       icon: <Calendar className="w-8 h-8" />,
       link: '/payment-calendar',
-      color: 'bg-blue-500',
+      color: 'bg-green-600',
     },
     {
       title: translations.scamAlert || 'Scam Alert',
@@ -90,14 +90,14 @@ const Home: React.FC = () => {
       description: translations.findOfficeDesc || 'Locate your nearest SASSA office',
       icon: <MapPin className="w-8 h-8" />,
       link: '/resources',
-      color: 'bg-green-500',
+      color: 'bg-green-600',
     },
     {
       title: translations.faqAndGuides || 'FAQ & Guides',
       description: translations.faqAndGuidesDesc || 'Get answers to common questions',
       icon: <HelpCircle className="w-8 h-8" />,
       link: '/faq',
-      color: 'bg-purple-500',
+      color: 'bg-green-600',
     },
   ];
 
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
               {translations.heroTitle || 'Welcome to SASSA Help Hub'}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto animate-slide-up">
-              {translations.heroSubtitle || 'Your unofficial guide to SASSA services, payment dates, scam protection, and community support.'}
+              {translations.heroSubtitle || 'Your friendly guide to SASSA services, payment dates, questions, and scam protection'}
             </p>
 
             {/* Search Bar */}
@@ -154,13 +154,13 @@ const Home: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder={translations.searchPlaceholder || 'Search FAQs, guides, or ask a question...'}
-                  className="w-full px-6 py-4 pl-14 text-gray-900 bg-white rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-primary-yellow focus:ring-opacity-50"
+                  className="w-full px-6 py-4 pl-14 text-gray-900 bg-white rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-primary-gold focus:ring-opacity-50"
                   aria-label="Search FAQs and guides"
                 />
                 <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-yellow text-primary-black px-6 py-2 rounded-full font-medium hover:bg-primary-gold transition-colors duration-200"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-gold text-primary-black px-6 py-2 rounded-full font-medium hover:bg-primary-gold transition-colors duration-200"
                   aria-label="Search"
                 >
                   {translations.search || 'Search'}
@@ -172,7 +172,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {quickStats.map((stat, index) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="flex justify-center mb-2 text-primary-yellow">
+                  <div className="flex justify-center mb-2 text-primary-gold">
                     {stat.icon}
                   </div>
                   <div className="text-2xl font-bold mb-1">{stat.value}</div>
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 mb-4">
                     {action.description}
                   </p>
-                  <div className="flex items-center text-primary-yellow font-medium group-hover:text-primary-gold">
+                  <div className="flex items-center text-primary-gold font-medium group-hover:text-primary-gold">
                     {translations.learnMore || 'Learn More'}
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
@@ -241,7 +241,7 @@ const Home: React.FC = () => {
               </div>
               <Link
                 to="/updates"
-                className="hidden md:inline-flex items-center text-primary-yellow hover:text-primary-gold font-medium"
+                className="hidden md:inline-flex items-center text-primary-gold hover:text-primary-gold font-medium"
               >
                 {translations.viewAll || 'View All'}
                 <ArrowRight className="w-4 h-4 ml-1" />
@@ -264,7 +264,7 @@ const Home: React.FC = () => {
                 {updates.map((update) => (
                   <article
                     key={update.id}
-                    className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-200"
+                    className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-200 hover:cursor-pointer"
                   >
                     <div className="flex items-center justify-between mb-3">
                       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
@@ -276,7 +276,7 @@ const Home: React.FC = () => {
                         {update.type.toUpperCase()}
                       </span>
                       {update.urgent && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-warning text-primary-black">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-500 text-primary-black">
                           {translations.urgent || 'URGENT'}
                         </span>
                       )}
@@ -294,7 +294,8 @@ const Home: React.FC = () => {
                       <time dateTime={update.date}>
                         {new Date(update.date).toLocaleDateString()}
                       </time>
-                      <span className="text-primary-yellow font-medium">
+                      <span className="text-primary-gold font-medium">
+                        {/* Navigate to Updates pages > {slug} */}
                         {translations.readMore || 'Read More'}
                       </span>
                     </div>
@@ -306,7 +307,7 @@ const Home: React.FC = () => {
             <div className="text-center mt-8 md:hidden">
               <Link
                 to="/updates"
-                className="inline-flex items-center text-primary-yellow hover:text-primary-gold font-medium"
+                className="inline-flex items-center text-primary-gold hover:text-primary-gold font-medium"
               >
                 {translations.viewAll || 'View All Updates'}
                 <ArrowRight className="w-4 h-4 ml-1" />
@@ -325,12 +326,12 @@ const Home: React.FC = () => {
               {translations.ctaDesc || 'Join thousands of South Africans who trust SASSA Help Hub for accurate, up-to-date information.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              {/* <Link
                 to="/community"
-                className="bg-primary-yellow text-primary-black px-8 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+                className="bg-primary-gold text-primary-black px-8 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
               >
                 {translations.joinCommunity || 'Join Our Community'}
-              </Link>
+              </Link> */}
               <a
                 href="tel:0800601011"
                 className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition-colors duration-200"

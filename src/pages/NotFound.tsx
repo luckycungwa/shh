@@ -15,7 +15,7 @@ const NotFound: React.FC = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="text-6xl font-bold text-primary-yellow mb-4">404</div>
+            <div className="text-6xl font-bold text-primary-gold mb-4">404</div>
             
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Page Not Found
@@ -28,7 +28,7 @@ const NotFound: React.FC = () => {
             <div className="space-y-4">
               <Link
                 to="/"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary-yellow text-primary-black font-semibold rounded-lg hover:bg-primary-gold transition-colors duration-200"
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary-gold text-primary-black font-semibold rounded-lg hover:bg-primary-gold transition-colors duration-200"
               >
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
@@ -55,15 +55,15 @@ const NotFound: React.FC = () => {
           <div className="mt-8 text-sm text-gray-500">
             <p>Looking for something specific? Try these popular sections:</p>
             <div className="mt-2 flex flex-wrap gap-2 justify-center">
-              <Link to="/payment-calendar" className="text-primary-yellow hover:text-primary-gold">
+              <Link to="/payment-calendar" className="text-primary-gold hover:text-primary-gold">
                 Payment Calendar
               </Link>
               <span>•</span>
-              <Link to="/scam-alert" className="text-primary-yellow hover:text-primary-gold">
+              <Link to="/scam-alert" className="text-primary-gold hover:text-primary-gold">
                 Scam Alert
               </Link>
               <span>•</span>
-              <Link to="/resources" className="text-primary-yellow hover:text-primary-gold">
+              <Link to="/resources" className="text-primary-gold hover:text-primary-gold">
                 SASSA Offices
               </Link>
             </div>

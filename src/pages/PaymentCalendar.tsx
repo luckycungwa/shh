@@ -145,8 +145,8 @@ const PaymentCalendar: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA Payment Calendar 2025 - Payment Dates | SASSA Help Hub</title>
-        <meta name="description" content="View SASSA payment dates for 2025. Get Old Age Grant, Disability Grant, and Child Support Grant payment schedules with email reminders." />
+        <title>SASSA Payment {format(currentDate, 'MMMM yyyy')} | SASSA Help Hub</title>
+        <meta name="description" content="View SASSA payment dates for 2025. Get SRD Grant, Old Age Grant, Disability Grant, and Child Support Grant payment schedules with email reminders." />
         <meta name="keywords" content="SASSA payment dates 2025, SASSA calendar, grant payment schedule, SASSA payment times" />
       </Helmet>
 
@@ -155,7 +155,7 @@ const PaymentCalendar: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              SASSA Payment Calendar
+              SASSA Payment Dates {format(currentDate, 'MMMM yyyy')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               View upcoming SASSA payment dates and set up email reminders for your grants.
@@ -174,7 +174,7 @@ const PaymentCalendar: React.FC = () => {
               </button>
               
               <h2 className="text-2xl font-semibold text-gray-900">
-                {format(currentDate, 'MMMM yyyy')}
+                {format(currentDate, 'MMMM ')} Grant Dates
               </h2>
               
               <button
@@ -189,7 +189,7 @@ const PaymentCalendar: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => setShowEmailForm(true)}
-                className="inline-flex items-center px-4 py-2 bg-primary-yellow text-primary-black font-medium rounded-lg hover:bg-primary-gold transition-colors duration-200"
+                className="inline-flex items-center px-4 py-2 bg-primary-gold text-primary-black font-medium rounded-lg hover:bg-primary-gold transition-colors duration-200"
               >
                 <Bell className="w-4 h-4 mr-2" />
                 Set Email Reminder
@@ -229,7 +229,7 @@ const PaymentCalendar: React.FC = () => {
                     onClick={() => setSelectedDate(day)}
                     className={`p-2 min-h-[80px] border-b border-r border-gray-200 text-left hover:bg-gray-50 transition-colors duration-200 ${
                       !isSameMonth(day, currentDate) ? 'text-gray-400 bg-gray-50' : ''
-                    } ${isSelected ? 'bg-primary-yellow bg-opacity-20' : ''}`}
+                    } ${isSelected ? 'bg-primary-gold bg-opacity-20' : ''}`}
                   >
                     <div className="text-sm font-medium mb-1">
                       {format(day, 'd')}
@@ -239,7 +239,7 @@ const PaymentCalendar: React.FC = () => {
                         {dayPayments.map((payment, index) => (
                           <div
                             key={index}
-                            className="text-xs bg-primary-yellow text-primary-black px-1 py-0.5 rounded truncate"
+                            className="text-xs bg-primary-gold text-primary-black px-1 py-0.5 rounded truncate"
                           >
                             {payment.grantType.split(' ')[0]} - R{payment.amount}
                           </div>
@@ -265,7 +265,7 @@ const PaymentCalendar: React.FC = () => {
                     <div key={index} className="border border-gray-200 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-medium text-gray-900">{payment.grantType}</h4>
-                        <span className="text-lg font-semibold text-primary-yellow">
+                        <span className="text-lg font-semibold text-primary-gold/50">
                           R{payment.amount}
                         </span>
                       </div>
@@ -298,7 +298,7 @@ const PaymentCalendar: React.FC = () => {
                       id="email"
                       value={emailReminder}
                       onChange={(e) => setEmailReminder(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
                       placeholder="your.email@example.com"
                       required
                     />
@@ -306,7 +306,7 @@ const PaymentCalendar: React.FC = () => {
                   <div className="flex gap-3">
                     <button
                       type="submit"
-                      className="flex-1 bg-primary-yellow text-primary-black py-2 px-4 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200"
+                      className="flex-1 bg-primary-gold text-primary-black py-2 px-4 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200"
                     >
                       Set Reminder
                     </button>
@@ -325,19 +325,24 @@ const PaymentCalendar: React.FC = () => {
 
           {/* Payment Legend */}
           <div className="mt-6 bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Payment Schedule Legend</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{format(currentDate, 'MMMM ')  } Payment Schedule Legend</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 bg-blue-500 rounded"></div>
                 <span className="text-sm">Old Age Grant - R2,090</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-4 h-4 bg-green-500 rounded"></div>
+                <div className="w-4 h-4 bg-green-600 rounded"></div>
                 <span className="text-sm">Disability Grant - R2,090</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 bg-purple-500 rounded"></div>
                 <span className="text-sm">Child Support Grant - R510</span>
+              </div>
+              {/*SRD Grant */}
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-red-500 rounded"></div>
+                <span className="text-sm">SRD Grant - R370</span>
               </div>
             </div>
             <p className="text-xs text-gray-500 mt-4">

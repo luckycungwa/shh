@@ -9,7 +9,7 @@ import Guides from './pages/Guides';
 import PaymentCalendar from './pages/PaymentCalendar';
 import ScamAlert from './pages/ScamAlert';
 import Resources from './pages/Resources';
-import Community from './pages/Community';
+// import Community from './pages/Community';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
@@ -31,7 +31,7 @@ function App() {
                 <Route path="/payment-calendar" element={<PaymentCalendar />} />
                 <Route path="/scam-alert" element={<ScamAlert />} />
                 <Route path="/resources" element={<Resources />} />
-                <Route path="/community" element={<Community />} />
+                {/* <Route path="/community" element={<Community />} /> */}
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="*" element={<NotFound />} />

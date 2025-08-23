@@ -76,7 +76,7 @@ class ErrorBoundary extends Component<Props, State> {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleRetry}
-                  className="inline-flex items-center px-4 py-2 bg-primary-yellow text-primary-black font-medium rounded-lg hover:bg-primary-gold transition-colors duration-200"
+                  className="inline-flex items-center px-4 py-2 bg-primary-gold text-primary-black font-medium rounded-lg hover:bg-primary-gold transition-colors duration-200"
                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again

@@ -26,7 +26,7 @@ const ScamAlert: React.FC = () => {
   const [scamCheckerText, setScamCheckerText] = useState('');
   const [scamCheckResult, setScamCheckResult] = useState<string | null>(null);
   const [isChecking, setIsChecking] = useState(false);
-  const [showScamChecker, setShowScamChecker] = useState(false);
+  const [showScamChecker, setShowScamChecker] = useState(true);
 
   useEffect(() => {
     const fetchScams = async () => {
@@ -78,7 +78,7 @@ const ScamAlert: React.FC = () => {
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'medium': return 'bg-yellow-500-100 text-yellow-500-800 border-yellow-500-200';
       case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'critical': return 'bg-red-100 text-red-800 border-red-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
@@ -190,12 +190,12 @@ const ScamAlert: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-semibold text-gray-900 flex items-center">
-                <Shield className="w-6 h-6 mr-2 text-primary-yellow" />
+                {/* <Shield className="w-6 h-6 mr-2 text-primary-gold" /> */}
                 Scam Checker Tool
               </h2>
               <button
                 onClick={() => setShowScamChecker(!showScamChecker)}
-                className="flex items-center text-primary-yellow hover:text-primary-gold"
+                className="flex items-center text-primary-gold hover:text-primary-gold"
               >
                 {showScamChecker ? <EyeOff className="w-5 h-5 mr-1" /> : <Eye className="w-5 h-5 mr-1" />}
                 {showScamChecker ? 'Hide' : 'Show'} Checker
@@ -205,19 +205,19 @@ const ScamAlert: React.FC = () => {
             {showScamChecker && (
               <div className="space-y-4">
                 <p className="text-gray-600">
-                  Paste a suspicious message below and we'll analyze it for common scam indicators.
+                  Copy & paste the suspicious message and we'll analyze & verify it for you.
                 </p>
                 <textarea
                   value={scamCheckerText}
                   onChange={(e) => setScamCheckerText(e.target.value)}
                   placeholder="Paste the suspicious SMS, email, or message here..."
-                  className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent resize-none"
+                  className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent resize-none"
                 />
                 <div className="flex justify-between items-center">
                   <button
                     onClick={checkForScam}
                     disabled={!scamCheckerText.trim() || isChecking}
-                    className="bg-primary-yellow text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-primary-gold text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isChecking ? 'Analyzing...' : 'Check for Scam'}
                   </button>
@@ -233,7 +233,7 @@ const ScamAlert: React.FC = () => {
                 </div>
                 
                 {scamCheckResult && (
-                  <div className="mt-4 p-4 bg-gray-50 rounded-lg border-l-4 border-primary-yellow">
+                  <div className="mt-4 p-4 bg-gray-50 rounded-lg border-l-4 border-primary-gold">
                     <h4 className="font-semibold mb-2">Analysis Result:</h4>
                     <p className="text-sm">{scamCheckResult}</p>
                   </div>
@@ -250,7 +250,7 @@ const ScamAlert: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search scam alerts..."
-                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
@@ -261,7 +261,7 @@ const ScamAlert: React.FC = () => {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
                 >
                   {types.map((type) => (
                     <option key={type} value={type}>
@@ -276,7 +276,7 @@ const ScamAlert: React.FC = () => {
                 <select
                   value={selectedSeverity}
                   onChange={(e) => setSelectedSeverity(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
                 >
                   {severities.map((severity) => (
                     <option key={severity} value={severity}>
@@ -375,7 +375,7 @@ const ScamAlert: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:0800601011"
-                className="bg-primary-yellow text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+                className="bg-primary-gold text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
               >
                 Report to SASSA: 0800 60 10 11
               </a>

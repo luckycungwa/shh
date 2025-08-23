@@ -17,7 +17,7 @@ const Terms: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-sm p-8">
             <div className="text-center mb-12">
-              <FileText className="w-16 h-16 text-primary-yellow mx-auto mb-6" />
+              <FileText className="w-16 h-16 text-primary-gold mx-auto mb-6" />
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
               <p className="text-gray-600">
                 Last updated: {new Date(lastUpdated).toLocaleDateString()}
@@ -55,7 +55,7 @@ const Terms: React.FC = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Shield className="w-6 h-6 mr-2 text-primary-yellow" />
+                  <Shield className="w-6 h-6 mr-2 text-primary-gold" />
                   2. Service Description
                 </h2>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -101,9 +101,9 @@ const Terms: React.FC = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-yellow-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-yellow-900 mb-2">Prohibited Activities</h3>
-                    <ul className="text-yellow-800 text-sm space-y-1">
+                  <div className="bg-yellow-500-50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-yellow-500-900 mb-2">Prohibited Activities</h3>
+                    <ul className="text-yellow-500-800 text-sm space-y-1">
                       <li>• Misrepresenting yourself or impersonating others</li>
                       <li>• Posting false, misleading, or harmful information</li>
                       <li>• Attempting to breach website security</li>
@@ -116,8 +116,8 @@ const Terms: React.FC = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Information Accuracy and Updates</h2>
-                <div className="bg-yellow-50 border-l-4 border-warning p-4 mb-4">
-                  <p className="text-yellow-800">
+                <div className="bg-yellow-500-50 border-l-4 border-yellow-500 p-4 mb-4">
+                  <p className="text-yellow-500-800">
                     <strong>No Guarantee of Accuracy:</strong> While we strive to provide accurate and up-to-date information, 
                     we cannot guarantee the completeness, accuracy, or timeliness of the information on our website.
                   </p>
@@ -164,7 +164,7 @@ const Terms: React.FC = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Scale className="w-6 h-6 mr-2 text-primary-yellow" />
+                  <Scale className="w-6 h-6 mr-2 text-primary-gold" />
                   6. Disclaimers and Limitation of Liability
                 </h2>
                 
@@ -216,8 +216,8 @@ const Terms: React.FC = () => {
                     <li>Content delivery networks</li>
                   </ul>
                 </div>
-                <div className="bg-yellow-50 p-4 rounded-lg">
-                  <p className="text-yellow-800 text-sm">
+                <div className="bg-yellow-500-50 p-4 rounded-lg">
+                  <p className="text-yellow-500-800 text-sm">
                     <strong>Important:</strong> We are not responsible for the content, privacy policies, or practices of third-party websites. 
                     Your interactions with third-party services are governed by their respective terms and privacy policies.
                   </p>
@@ -277,8 +277,8 @@ const Terms: React.FC = () => {
                     <li>Third-party advertisers may use cookies for targeted advertising</li>
                     <li>You can opt-out of personalized advertising through your browser settings</li>
                   </ul>
-                  <div className="bg-yellow-50 p-3 rounded border-l-4 border-warning">
-                    <p className="text-yellow-800 text-sm">
+                  <div className="bg-yellow-500-50 p-3 rounded border-l-4 border-yellow-500">
+                    <p className="text-yellow-500-800 text-sm">
                       <strong>Scam Warning:</strong> Be cautious of advertisements claiming to offer official SASSA services, 
                       loans, or grants. Always verify through official SASSA channels.
                     </p>
@@ -347,7 +347,7 @@ const Terms: React.FC = () => {
                 </p>
               </section>
 
-              <section className="bg-primary-yellow bg-opacity-10 p-6 rounded-lg">
+              <section className="bg-primary-gold bg-opacity-10 p-6 rounded-lg">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">15. Contact Information</h2>
                 <p className="text-gray-700 mb-4">
                   For questions about these Terms of Service or our website:
@@ -359,12 +359,12 @@ const Terms: React.FC = () => {
                     For SASSA-related queries, contact SASSA directly:
                   </p>
                   <div className="flex items-center space-x-4 text-sm">
-                    <a href="tel:0800601011" className="text-primary-yellow hover:text-primary-gold">
+                    <a href="tel:0800601011" className="text-primary-gold hover:text-primary-gold">
                       0800 60 10 11
                     </a>
                     <span>|</span>
                     <a href="https://www.sassa.gov.za" target="_blank" rel="noopener noreferrer" 
-                       className="text-primary-yellow hover:text-primary-gold inline-flex items-center">
+                       className="text-primary-gold hover:text-primary-gold inline-flex items-center">
                       www.sassa.gov.za
                       <ExternalLink className="w-3 h-3 ml-1" />
                     </a>

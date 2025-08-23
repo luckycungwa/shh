@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Filter, ChevronDown, ChevronUp, Star, Heart, ExternalLink } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, Star, Heart, ExternalLink } from 'lucide-react';
 import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 
@@ -124,7 +124,7 @@ const FAQ: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA FAQ - Frequently Asked Questions | SASSA Help Hub</title>
+        <title>SASSA Frequently Asked Questions | SASSA Help Hub</title>
         <meta name="description" content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2025." />
         <meta name="keywords" content="SASSA FAQ, SASSA questions, SASSA grant application, SASSA payment dates, SASSA help" />
       </Helmet>
@@ -149,12 +149,12 @@ const FAQ: React.FC = () => {
                 value={localSearchQuery}
                 onChange={(e) => setLocalSearchQuery(e.target.value)}
                 placeholder={translations.searchFaqPlaceholder || 'Search FAQs...'}
-                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-yellow text-primary-black px-4 py-1.5 rounded-md font-medium hover:bg-primary-gold transition-colors duration-200"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-gold text-primary-black px-4 py-1.5 rounded-md font-medium hover:bg-primary-gold transition-colors duration-200"
               >
                 {translations.search || 'Search'}
               </button>
@@ -162,18 +162,18 @@ const FAQ: React.FC = () => {
 
             {/* Category Filter */}
             <div className="flex items-center justify-center space-x-2 flex-wrap">
-              <Filter className="w-5 h-5 text-gray-500" />
+              {/* <Filter className="w-5 h-5 text-gray-500" />
               <span className="text-sm font-medium text-gray-700 mr-4">
                 {translations.filterByCategory || 'Filter by category:'}
-              </span>
+              </span> */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                    className={`px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 ${
                       selectedCategory === category
-                        ? 'bg-primary-yellow text-primary-black'
+                        ? 'bg-primary-gold text-primary-black'
                         : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                     }`}
                   >
@@ -286,7 +286,7 @@ const FAQ: React.FC = () => {
                                     href={link.url}
                                     target={link.isExternal ? '_blank' : '_self'}
                                     rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                                    className="text-primary-yellow hover:text-primary-gold text-sm inline-flex items-center"
+                                    className="text-primary-gold hover:text-primary-gold text-sm inline-flex items-center"
                                   >
                                     {link.title}
                                     {link.isExternal && <ExternalLink className="w-3 h-3 ml-1" />}
@@ -315,7 +315,7 @@ const FAQ: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:0800601011"
-                className="bg-primary-yellow text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+                className="bg-primary-gold text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
               >
                 {translations.callSassaHelpline || "Call SASSA: 0800 60 10 11"}
               </a>

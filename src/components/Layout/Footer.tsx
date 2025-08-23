@@ -13,48 +13,48 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-yellow">
+            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
               {translations.aboutSassaHelpHub || 'About SASSA Help Hub'}
             </h3>
             <p className="text-secondary-gray text-sm mb-4">
-              {translations.footerAbout || 'An unofficial resource providing accurate SASSA information, payment dates, and scam protection for South African beneficiaries.'}
+              {translations.footerAbout || ''}
             </p>
             <div className="flex items-start space-x-2 text-xs text-secondary-gray">
-              <div className="w-1 h-1 bg-warning rounded-full mt-2 flex-shrink-0"></div>
+              <div className="w-1 h-1 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
               <span>
-                {translations.footerDisclaimer || 'This is an independent, unofficial resource. Always verify information on official SASSA channels.'}
+                {translations.footerDisclaimer || 'This is an independent resource and is not affiliated with the SASSA. Always verify information directly with official SASSA channels.'}
               </span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-yellow">
+            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
               {translations.quickLinks || 'Quick Links'}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/faq" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/faq" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.faq || 'FAQ'}
                 </Link>
               </li>
               <li>
-                <Link to="/guides" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/guides" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.guides || 'Guides'}
                 </Link>
               </li>
               <li>
-                <Link to="/payment-calendar" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/payment-calendar" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.paymentCalendar || 'Payment Calendar'}
                 </Link>
               </li>
               <li>
-                <Link to="/scam-alert" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/scam-alert" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.scamAlert || 'Scam Alert'}
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/resources" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.resources || 'Resources'}
                 </Link>
               </li>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
 
           {/* Official Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-yellow">
+            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
               {translations.officialResources || 'Official Resources'}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                   href="https://www.sassa.gov.za"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200 flex items-center"
+                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200 flex items-center"
                 >
                   SASSA Official Website
                   <ExternalLink className="w-3 h-3 ml-1" />
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                   href="https://www.sanews.gov.za"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200 flex items-center"
+                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200 flex items-center"
                 >
                   SA Government News
                   <ExternalLink className="w-3 h-3 ml-1" />
@@ -106,24 +106,24 @@ const Footer: React.FC = () => {
 
           {/* Legal & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-yellow">
+            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
               {translations.legalAndSupport || 'Legal & Support'}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/privacy" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/privacy" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.privacyPolicy || 'Privacy Policy'}
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200">
+                <Link to="/terms" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.termsOfService || 'Terms of Service'}
                 </Link>
               </li>
               <li>
                 <a
                   href="mailto:support@sassahelphub.co.za"
-                  className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200"
+                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200"
                 >
                   {translations.contactSupport || 'Contact Support'}
                 </a>
@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="/sitemap.xml"
-                  className="text-secondary-gray hover:text-primary-yellow transition-colors duration-200"
+                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200"
                 >
                   {translations.sitemap || 'Sitemap'}
                 </a>
@@ -162,8 +162,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Emergency Notice */}
-          <div className="mt-6 p-4 bg-warning bg-opacity-20 border-l-4 border-warning rounded-r-lg">
-            <p className="text-sm font-medium text-warning">
+          <div className="mt-6 p-4 bg-yellow-500 bg-opacity-20 border-l-4 border-yellow-500 rounded-r-lg">
+            <p className="text-sm font-medium text-yellow-500">
               {translations.emergencyNotice || '🚨 Emergency: For urgent SASSA queries, call 0800 60 10 11 or visit your nearest SASSA office.'}
             </p>
           </div>

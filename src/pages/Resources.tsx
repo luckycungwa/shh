@@ -261,7 +261,7 @@ const Resources: React.FC = () => {
                   </p>
                   <button
                     onClick={requestLocation}
-                    className="bg-primary-yellow text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 inline-flex items-center"
+                    className="bg-primary-gold text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 inline-flex items-center"
                   >
                     <Navigation className="w-4 h-4 mr-2" />
                     Use My Location
@@ -292,7 +292,7 @@ const Resources: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by city, province, or office name..."
-                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
@@ -303,7 +303,7 @@ const Resources: React.FC = () => {
               <select
                 value={selectedProvince}
                 onChange={(e) => setSelectedProvince(e.target.value)}
-                className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
               >
                 {provinces.map((province) => (
                   <option key={province} value={province}>
@@ -367,14 +367,14 @@ const Resources: React.FC = () => {
                             <div className="space-y-2 text-sm">
                               <div className="flex items-center">
                                 <Phone className="w-4 h-4 mr-2 text-gray-400" />
-                                <a href={`tel:${office.phone}`} className="text-primary-yellow hover:text-primary-gold">
+                                <a href={`tel:${office.phone}`} className="text-primary-gold hover:text-primary-gold">
                                   {office.phone}
                                 </a>
                               </div>
                               {office.email && (
                                 <div className="flex items-center">
                                   <ExternalLink className="w-4 h-4 mr-2 text-gray-400" />
-                                  <a href={`mailto:${office.email}`} className="text-primary-yellow hover:text-primary-gold">
+                                  <a href={`mailto:${office.email}`} className="text-primary-gold hover:text-primary-gold">
                                     {office.email}
                                   </a>
                                 </div>
@@ -439,7 +439,7 @@ const Resources: React.FC = () => {
                       <div className="mt-6 lg:mt-0 lg:ml-6 flex-shrink-0">
                         <button
                           onClick={() => getDirections(office)}
-                          className="w-full lg:w-auto bg-primary-yellow text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 inline-flex items-center justify-center"
+                          className="w-full lg:w-auto bg-primary-gold text-primary-black px-6 py-2 rounded-lg font-medium hover:bg-primary-gold transition-colors duration-200 inline-flex items-center justify-center"
                         >
                           <Navigation className="w-4 h-4 mr-2" />
                           Get Directions
@@ -463,7 +463,7 @@ const Resources: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:0800601011"
-                className="bg-primary-yellow text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+                className="bg-primary-gold text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
               >
                 Call SASSA: 0800 60 10 11
               </a>

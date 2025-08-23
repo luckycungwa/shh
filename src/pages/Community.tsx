@@ -187,7 +187,7 @@ const Community: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center">
                 <Users className="w-8 h-8 text-primary-black" />
               </div>
             </div>
@@ -202,19 +202,19 @@ const Community: React.FC = () => {
           {/* Community Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-lg shadow-sm p-6 text-center">
-              <div className="text-3xl font-bold text-primary-yellow mb-2">
+              <div className="text-3xl font-bold text-primary-gold mb-2">
                 {posts.length}
               </div>
               <div className="text-gray-600">Community Posts</div>
             </div>
             <div className="bg-white rounded-lg shadow-sm p-6 text-center">
-              <div className="text-3xl font-bold text-primary-yellow mb-2">
+              <div className="text-3xl font-bold text-primary-gold mb-2">
                 {posts.reduce((sum, post) => sum + post.helpful, 0)}
               </div>
               <div className="text-gray-600">People Helped</div>
             </div>
             <div className="bg-white rounded-lg shadow-sm p-6 text-center">
-              <div className="text-3xl font-bold text-primary-yellow mb-2">
+              <div className="text-3xl font-bold text-primary-gold mb-2">
                 {posts.filter(post => post.verified).length}
               </div>
               <div className="text-gray-600">Verified Answers</div>
@@ -229,7 +229,7 @@ const Community: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search community posts..."
-                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
@@ -241,7 +241,7 @@ const Community: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
                 >
                   {categories.map((category) => (
                     <option key={category} value={category}>
@@ -256,7 +256,7 @@ const Community: React.FC = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'recent' | 'helpful' | 'popular')}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
                 >
                   <option value="helpful">Most Helpful</option>
                   <option value="recent">Most Recent</option>
@@ -367,7 +367,7 @@ const Community: React.FC = () => {
                     href="https://twitter.com/sassahelphub"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200 inline-flex items-center"
+                    className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200 inline-flex items-center"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Twitter
@@ -394,7 +394,7 @@ const Community: React.FC = () => {
                 <div className="flex justify-center space-x-4">
                   <a
                     href="tel:0800601011"
-                    className="bg-primary-yellow text-primary-black px-4 py-2 rounded-lg hover:bg-primary-gold transition-colors duration-200"
+                    className="bg-primary-gold text-primary-black px-4 py-2 rounded-lg hover:bg-primary-gold transition-colors duration-200"
                   >
                     Call SASSA
                   </a>
@@ -413,8 +413,8 @@ const Community: React.FC = () => {
           </div>
 
           {/* Disclaimer */}
-          <div className="mt-8 p-4 bg-yellow-50 border-l-4 border-warning rounded-r-lg">
-            <p className="text-sm text-yellow-800">
+          <div className="mt-8 p-4 bg-yellow-500-50 border-l-4 border-yellow-500 rounded-r-lg">
+            <p className="text-sm text-yellow-500-800">
               <strong>Community Disclaimer:</strong> Information shared in the community comes from users and may not always be accurate or up-to-date. 
               Always verify important information through official SASSA channels at www.sassa.gov.za or 0800 60 10 11.
             </p>

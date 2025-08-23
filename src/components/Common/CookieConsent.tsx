@@ -81,7 +81,7 @@ const CookieConsent: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-start space-x-4">
           <div className="flex-shrink-0">
-            <Cookie className="w-6 h-6 text-primary-yellow" />
+            <Cookie className="w-6 h-6 text-primary-gold" />
           </div>
           
           <div className="flex-1">
@@ -91,7 +91,7 @@ const CookieConsent: React.FC = () => {
             
             <p className="text-sm text-gray-600 mb-4">
               We use cookies to improve your experience on our website. You can choose which types of cookies you want to allow.{' '}
-              <Link to="/privacy" className="text-primary-yellow hover:text-primary-gold underline">
+              <Link to="/privacy" className="text-primary-gold hover:text-primary-gold underline">
                 Learn more in our Privacy Policy
                 <ExternalLink className="w-3 h-3 inline ml-1" />
               </Link>
@@ -104,7 +104,7 @@ const CookieConsent: React.FC = () => {
                   id="necessary"
                   checked={preferences.necessary}
                   disabled
-                  className="w-4 h-4 text-primary-yellow bg-gray-100 border-gray-300 rounded focus:ring-primary-yellow"
+                  className="w-4 h-4 text-primary-gold bg-gray-100 border-gray-300 rounded focus:ring-primary-gold"
                 />
                 <label htmlFor="necessary" className="ml-2 text-sm text-gray-700">
                   <span className="font-medium">Necessary cookies</span> (Required)
@@ -120,7 +120,7 @@ const CookieConsent: React.FC = () => {
                   id="analytics"
                   checked={preferences.analytics}
                   onChange={() => handlePreferenceChange('analytics')}
-                  className="w-4 h-4 text-primary-yellow bg-gray-100 border-gray-300 rounded focus:ring-primary-yellow"
+                  className="w-4 h-4 text-primary-gold bg-gray-100 border-gray-300 rounded focus:ring-primary-gold"
                 />
                 <label htmlFor="analytics" className="ml-2 text-sm text-gray-700">
                   <span className="font-medium">Analytics cookies</span>
@@ -136,7 +136,7 @@ const CookieConsent: React.FC = () => {
                   id="advertising"
                   checked={preferences.advertising}
                   onChange={() => handlePreferenceChange('advertising')}
-                  className="w-4 h-4 text-primary-yellow bg-gray-100 border-gray-300 rounded focus:ring-primary-yellow"
+                  className="w-4 h-4 text-primary-gold bg-gray-100 border-gray-300 rounded focus:ring-primary-gold"
                 />
                 <label htmlFor="advertising" className="ml-2 text-sm text-gray-700">
                   <span className="font-medium">Advertising cookies</span>
@@ -150,7 +150,7 @@ const CookieConsent: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-2">
               <button
                 onClick={handleAcceptAll}
-                className="px-4 py-2 bg-primary-yellow text-primary-black font-medium rounded-lg hover:bg-primary-gold transition-colors duration-200"
+                className="px-4 py-2 bg-primary-gold text-primary-black font-medium rounded-lg hover:bg-primary-gold transition-colors duration-200"
               >
                 Accept All
               </button>

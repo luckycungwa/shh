@@ -12,12 +12,13 @@ const Header: React.FC = () => {
 
   const navigationItems = [
     { path: '/', label: translations.home || 'Home' },
-    { path: '/faq', label: translations.faq || 'FAQ' },
+   
+    { path: '/payment-calendar', label: translations.paymentCalendar || 'Payment Date' },
     { path: '/guides', label: translations.guides || 'Guides' },
-    { path: '/payment-calendar', label: translations.paymentCalendar || 'Payment Calendar' },
     { path: '/scam-alert', label: translations.scamAlert || 'Scam Alert' },
     { path: '/resources', label: translations.resources || 'Resources' },
-    { path: '/community', label: translations.community || 'Community' },
+   { path: '/faq', label: translations.faq || 'FAQ' },
+    // { path: '/community', label: translations.community || 'Community' },
   ];
 
   const languages = [
@@ -41,13 +42,12 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-2 text-primary-yellow font-bold text-xl"
+            className="flex items-center space-x-2 text-primary-gold font-bold text-xl"
             aria-label="SASSA Help Hub Home"
           >
-            <div className="w-8 h-8 bg-primary-yellow rounded-lg flex items-center justify-center">
-              <span className="text-primary-black font-bold text-sm">SH</span>
+            <div className="w-8 h-8 bg-primary-gold rounded-lg flex items-center justify-center">
+              <img src="/logo.png" alt="Logo" className="rounded-md w-8 h-8" />
             </div>
-            <span className="hidden sm:inline">SASSA Help Hub</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -58,8 +58,8 @@ const Header: React.FC = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'bg-primary-yellow text-primary-black'
-                    : 'text-white hover:bg-primary-dark hover:text-primary-yellow'
+                    ? 'bg-primary-gold text-primary-black'
+                    : 'text-white hover:bg-primary-dark hover:text-primary-gold'
                 }`}
                 aria-current={isActive(item.path) ? 'page' : undefined}
               >
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setIsThemeMenuOpen(!isThemeMenuOpen)}
-                className="p-2 text-white hover:text-primary-yellow transition-colors duration-200"
+                className="p-2 text-white hover:text-primary-gold transition-colors duration-200"
                 aria-label="Change theme"
                 aria-expanded={isThemeMenuOpen}
                 aria-haspopup="true"
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-                className="flex items-center space-x-1 p-2 text-white hover:text-primary-yellow transition-colors duration-200"
+                className="flex items-center space-x-1 p-2 text-white hover:text-primary-gold transition-colors duration-200"
                 aria-label="Change language"
                 aria-expanded={isLanguageMenuOpen}
                 aria-haspopup="true"
@@ -139,7 +139,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-primary-yellow transition-colors duration-200"
+              className="lg:hidden p-2 text-white hover:text-primary-gold transition-colors duration-200"
               aria-label="Toggle mobile menu"
               aria-expanded={isMenuOpen}
             >
@@ -158,8 +158,8 @@ const Header: React.FC = () => {
                   to={item.path}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'bg-primary-yellow text-primary-black'
-                      : 'text-white hover:bg-primary-dark hover:text-primary-yellow'
+                      ? 'bg-primary-gold text-primary-black'
+                      : 'text-white hover:bg-primary-dark hover:text-primary-gold'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={isActive(item.path) ? 'page' : undefined}

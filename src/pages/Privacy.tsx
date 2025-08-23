@@ -17,7 +17,7 @@ const Privacy: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-sm p-8">
             <div className="text-center mb-12">
-              <Shield className="w-16 h-16 text-primary-yellow mx-auto mb-6" />
+              <Shield className="w-16 h-16 text-primary-gold mx-auto mb-6" />
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
               <p className="text-gray-600">
                 Last updated: {new Date(lastUpdated).toLocaleDateString()}
@@ -27,7 +27,7 @@ const Privacy: React.FC = () => {
             <div className="prose max-w-none">
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Eye className="w-6 h-6 mr-2 text-primary-yellow" />
+                  <Eye className="w-6 h-6 mr-2 text-primary-gold" />
                   Information We Collect
                 </h2>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -52,7 +52,7 @@ const Privacy: React.FC = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Cookie className="w-6 h-6 mr-2 text-primary-yellow" />
+                  <Cookie className="w-6 h-6 mr-2 text-primary-gold" />
                   Cookies and Tracking
                 </h2>
                 <p className="text-gray-700 mb-4">
@@ -80,8 +80,8 @@ const Privacy: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-4 p-4 bg-yellow-50 border-l-4 border-warning rounded-r-lg">
-                  <p className="text-sm text-yellow-800">
+                <div className="mt-4 p-4 bg-yellow-500-50 border-l-4 border-yellow-500 rounded-r-lg">
+                  <p className="text-sm text-yellow-500-800">
                     <strong>Your Choice:</strong> You can control cookie preferences through your browser settings or our cookie consent banner.
                   </p>
                 </div>
@@ -206,8 +206,8 @@ const Privacy: React.FC = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Children's Privacy</h2>
-                <div className="bg-yellow-50 border-l-4 border-warning p-4">
-                  <p className="text-yellow-800">
+                <div className="bg-yellow-500-50 border-l-4 border-yellow-500 p-4">
+                  <p className="text-yellow-500-800">
                     Our website is not intended for children under 13. We do not knowingly collect personal information from children. 
                     If you believe we have collected information from a child, please contact us immediately.
                   </p>
@@ -237,9 +237,9 @@ const Privacy: React.FC = () => {
                 </ul>
               </section>
 
-              <section className="bg-primary-yellow bg-opacity-10 p-6 rounded-lg">
+              <section className="bg-primary-gold bg-opacity-10 p-6 rounded-lg">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Mail className="w-6 h-6 mr-2 text-primary-yellow" />
+                  <Mail className="w-6 h-6 mr-2 text-primary-gold" />
                   Contact Us
                 </h2>
                 <p className="text-gray-700 mb-4">

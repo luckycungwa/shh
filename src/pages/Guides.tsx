@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Filter, BookOpen, Clock, User, ExternalLink } from 'lucide-react';
+import { Search, BookOpen, Clock, User, ExternalLink } from 'lucide-react';
 import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 
@@ -150,7 +150,7 @@ const Guides: React.FC = () => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-100 text-green-800';
-      case 'intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'intermediate': return 'bg-yellow-500-100 text-yellow-500-800';
       case 'advanced': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
     }
@@ -191,7 +191,7 @@ const Guides: React.FC = () => {
               Step-by-Step Guides
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive guides to help you navigate SASSA services, applications, and processes with confidence.
+              Friendly Guides to help you navigate SASSA services, applications, and processes with confidence.
             </p>
           </div>
 
@@ -203,12 +203,12 @@ const Guides: React.FC = () => {
                 value={localSearchQuery}
                 onChange={(e) => setLocalSearchQuery(e.target.value)}
                 placeholder="Search guides..."
-                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-yellow text-primary-black px-4 py-1.5 rounded-md font-medium hover:bg-primary-gold transition-colors duration-200"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary-gold text-primary-black px-4 py-1.5 rounded-md font-medium hover:bg-primary-gold transition-colors duration-200"
               >
                 Search
               </button>
@@ -217,12 +217,12 @@ const Guides: React.FC = () => {
             {/* Filters */}
             <div className="flex items-center justify-center space-x-6 flex-wrap">
               <div className="flex items-center space-x-2">
-                <Filter className="w-5 h-5 text-gray-500" />
+                {/* <Filter className="w-5 h-5 text-gray-500" /> */}
                 <span className="text-sm font-medium text-gray-700">Category:</span>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
                 >
                   {categories.map((category) => (
                     <option key={category} value={category}>
@@ -237,7 +237,7 @@ const Guides: React.FC = () => {
                 <select
                   value={selectedDifficulty}
                   onChange={(e) => setSelectedDifficulty(e.target.value)}
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow"
+                  className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-gold"
                 >
                   {difficulties.map((difficulty) => (
                     <option key={difficulty} value={difficulty}>
@@ -306,7 +306,7 @@ const Guides: React.FC = () => {
                       <div className="text-xs text-gray-500">
                         Updated {new Date(guide.lastUpdated).toLocaleDateString()}
                       </div>
-                      <button className="text-primary-yellow hover:text-primary-gold font-medium text-sm">
+                      <button className="text-primary-gold hover:text-primary-gold font-medium text-sm">
                         Read Guide →
                       </button>
                     </div>
@@ -344,7 +344,7 @@ const Guides: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:0800601011"
-                className="bg-primary-yellow text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+                className="bg-primary-gold text-primary-black px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
               >
                 Call SASSA: 0800 60 10 11
               </a>

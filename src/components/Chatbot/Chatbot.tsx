@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User, AlertTriangle } from 'lucide-react';
+import { MessageCircle, X, Bot, User, AlertTriangle, Brain, ArrowRight } from 'lucide-react';
 import { useAppContext } from '../../contexts/AppContext';
 
 interface Message {
@@ -317,11 +317,11 @@ Try asking about any of these topics, or rephrase your question for more specifi
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 bg-primary-yellow text-primary-black p-4 rounded-full shadow-lg hover:bg-primary-gold transition-all duration-200 transform hover:scale-110 z-50 ${className}`}
+        className={`fixed bottom-6 right-6 bg-primary-gold text-primary-black p-4 rounded-full shadow-lg hover:bg-primary-gold transition-all duration-200 transform hover:scale-110 z-50 ${className}`}
         aria-label="Open chat assistant"
       >
         <MessageCircle className="w-6 h-6" />
-        <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
       </button>
     );
   }
@@ -331,7 +331,7 @@ Try asking about any of these topics, or rephrase your question for more specifi
       {/* Header */}
       <div className="bg-primary-black text-white p-4 rounded-t-lg flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary-yellow rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-primary-gold rounded-full flex items-center justify-center">
             <Bot className="w-5 h-5 text-primary-black" />
           </div>
           <div>
@@ -357,17 +357,17 @@ Try asking about any of these topics, or rephrase your question for more specifi
           >
             <div className={`flex max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'} items-start space-x-2`}>
               <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
-                message.type === 'user' ? 'bg-primary-yellow' : 'bg-primary-dark'
+                message.type === 'user' ? 'bg-primary-gold' : 'bg-primary-dark'
               }`}>
                 {message.type === 'user' ? (
                   <User className="w-3 h-3 text-primary-black" />
                 ) : (
-                  <Bot className="w-3 h-3 text-white" />
+                  <Brain className="w-3 h-3 text-white" />
                 )}
               </div>
               <div className={`p-3 rounded-lg text-sm ${
                 message.type === 'user' 
-                  ? 'bg-primary-yellow text-primary-black ml-2' 
+                  ? 'bg-primary-gold text-primary-black ml-2' 
                   : 'bg-white text-gray-800 border border-gray-200 mr-2'
               }`}>
                 <div 
@@ -388,7 +388,7 @@ Try asking about any of these topics, or rephrase your question for more specifi
           <div className="flex justify-start">
             <div className="flex items-start space-x-2">
               <div className="w-6 h-6 bg-primary-dark rounded-full flex items-center justify-center flex-shrink-0">
-                <Bot className="w-3 h-3 text-white" />
+                <Brain className="w-3 h-3 text-white" />
               </div>
               <div className="bg-white border border-gray-200 p-3 rounded-lg">
                 <div className="flex space-x-1">
@@ -424,19 +424,19 @@ Try asking about any of these topics, or rephrase your question for more specifi
             onKeyPress={handleKeyPress}
             placeholder="Ask about SASSA services..."
             disabled={isLoading}
-            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-transparent text-sm disabled:opacity-50"
+            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent text-sm disabled:opacity-50"
           />
           <button
             onClick={handleSendMessage}
             disabled={isLoading || !inputMessage.trim()}
-            className="bg-primary-yellow text-primary-black p-2 rounded-lg hover:bg-primary-gold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-primary-gold text-primary-black p-2 rounded-lg hover:bg-primary-gold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Send message"
           >
-            <Send className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
         <p className="text-xs text-gray-500 mt-1 text-center">
-          Unofficial assistant • Always verify at www.sassa.gov.za
+          This bot is not affiliated with SASSA • Always verify at www.sassa.gov.za
         </p>
       </div>
     </div>
