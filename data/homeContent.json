@@ -1,0 +1,29 @@
+{
+  "grantTypes": {
+    "title": "Understanding the Different Types of SASSA Grants",
+    "intro": "The South African Social Security Agency (SASSA) provides a range of social grants to support vulnerable citizens. Understanding which grant you qualify for is the first step in the application process. Below is a summary of the main grant types available in 2025. Each grant has specific eligibility requirements and application procedures.",
+    "grants": [
+      {
+        "name": "SRD R370 Grant (Social Relief of Distress)",
+        "description": "The SRD Grant is a temporary provision for South African citizens, refugees, asylum seekers, and special permit holders who are between the ages of 18 and 59 and have insufficient means. This grant was introduced during the COVID-19 pandemic and has been extended to provide ongoing support. A key part of managing this grant is performing a regular 'SASSA status check' to confirm your eligibility and payment dates.",
+        "link": "/srd-grant-guide"
+      },
+      {
+        "name": "Older Persons Grant (Old Age Pension)",
+        "description": "This grant provides financial support to South African citizens, permanent residents, or refugees who are 60 years or older. Applicants must not be receiving any other social grant for themselves and must pass a means test. It is a critical support for the elderly who are no longer able to work.",
+        "link": "/old-age-grant-guide"
+      },
+      {
+        "name": "Disability Grant",
+        "description": "The Disability Grant is for South African citizens aged 18 to 59 who have a permanent or temporary physical or mental disability that makes them unfit to work for a period longer than six months. A medical assessment report from a state-appointed doctor is required as part of the application.",
+        "link": "/disability-grant-guide"
+      },
+      {
+        "name": "Child Support Grant",
+        "description": "This grant is for the primary caregiver of a child under the age of 18. The caregiver must pass a means test, and both the caregiver and the child must reside in South Africa. This grant aims to assist lower-income households in covering the basic needs of their children.",
+        "link": "/child-support-grant-guide"
+      }
+    ],
+    "outro": "For detailed information on how to apply, eligibility requirements, and the necessary documents for each grant, please visit our comprehensive guides section."
+  }
+}

@@ -21,20 +21,54 @@ interface QuickStat {
   trend?: string;
 }
 
+interface PaymentDate {
+  grant: string;
+  date: string;
+  day: string;
+}
+
+interface HomeContent {
+  grantTypes: {
+    title: string;
+    intro: string;
+    grants: Array<{
+      name: string;
+      description: string;
+      link: string;
+    }>;
+    outro: string;
+  };
+}
+
 const Home: React.FC = () => {
   const { translations, searchQuery, setSearchQuery } = useAppContext();
   const [updates, setUpdates] = useState<Update[]>([]);
+  const [paymentDates, setPaymentDates] = useState<PaymentDate[]>([]);
+  const [homeContent, setHomeContent] = useState<HomeContent | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchUpdates = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a4ad18d0ea881f405d8b0c/latest');
-        if (!response.ok) throw new Error('Failed to fetch updates');
-        const jsonResponse = await response.json();
-        const data = jsonResponse.record;
-        setUpdates(data.slice(0, 3)); // Show only latest 3 updates
+        const [updatesResponse, paymentDatesResponse, homeContentResponse] = await Promise.all([
+          fetch('https://api.jsonbin.io/v3/b/68a4ad18d0ea881f405d8b0c/latest'),
+          fetch('/data/paymentDates.json'),
+          fetch('/data/homeContent.json')
+        ]);
+
+        if (!updatesResponse.ok) throw new Error('Failed to fetch updates');
+        if (!paymentDatesResponse.ok) throw new Error('Failed to fetch payment dates');
+        if (!homeContentResponse.ok) throw new Error('Failed to fetch home content');
+
+        const updatesJson = await updatesResponse.json();
+        const paymentDatesJson = await paymentDatesResponse.json();
+        const homeContentJson = await homeContentResponse.json();
+
+        setUpdates(updatesJson.record.slice(0, 3));
+        setPaymentDates(paymentDatesJson);
+        setHomeContent(homeContentJson);
+
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
@@ -42,7 +76,7 @@ const Home: React.FC = () => {
       }
     };
 
-    fetchUpdates();
+    fetchData();
   }, []);
 
   const quickStats: QuickStat[] = [
@@ -189,6 +223,66 @@ const Home: React.FC = () => {
           </div>
         </section>
 
+        {/* SASSA Status Check Section */}
+        <section className="py-16 px-4 bg-gray-100">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              SRD SASSA Status Check for R370
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              Check your SRD R370 grant application status online. Enter your South African ID number and the cell phone number you used during your application to see your payment dates and status for August 2025.
+            </p>
+            <form
+              action="https://srd.sassa.gov.za/sc19/status"
+              method="get"
+              target="_blank"
+              className="bg-white p-8 rounded-lg shadow-md space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="id_number" className="block text-sm font-medium text-gray-700 text-left mb-1">
+                    ID Number
+                  </label>
+                  <input
+                    type="text"
+                    name="idnumber"
+                    id="id_number"
+                    pattern="\d{13}"
+                    title="Please enter a valid 13-digit South African ID number"
+                    required
+                    placeholder="Your 13-digit SA ID Number"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="cell_phone" className="block text-sm font-medium text-gray-700 text-left mb-1">
+                    Cellphone Number
+                  </label>
+                  <input
+                    type="text"
+                    name="mobile"
+                    id="cell_phone"
+                    pattern="\d{10}"
+                    title="Please enter a valid 10-digit cellphone number"
+                    required
+                    placeholder="Your 10-digit cellphone number"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-primary-gold text-primary-black px-8 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+              >
+                Check Status Now
+              </button>
+              <p className="text-xs text-gray-500">
+                This will securely redirect you to the official SASSA website to check your status. We do not store your personal information.
+              </p>
+            </form>
+          </div>
+        </section>
+
         {/* Quick Actions */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -223,6 +317,34 @@ const Home: React.FC = () => {
                   </div>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Upcoming Payment Dates Section */}
+        <section className="py-16 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Upcoming SASSA Payment Dates for September 2025
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Here are the confirmed payment dates for the major SASSA grants. SRD R370 grant dates are variable and will be paid towards the end of the month.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {paymentDates.map((payment, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center">
+                  <p className="text-sm font-semibold text-gray-600">{payment.grant}</p>
+                  <p className="text-2xl font-bold text-primary-black my-2">{new Date(payment.date).getDate()}</p>
+                  <p className="text-sm text-gray-500">{payment.day}, September {new Date(payment.date).getFullYear()}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/payment-calendar" className="text-primary-gold hover:text-primary-gold font-medium">
+                View Full Payment Calendar →
+              </Link>
             </div>
           </div>
         </section>
@@ -315,6 +437,33 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Grant Types Info Section */}
+        {homeContent && (
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  {homeContent.grantTypes.title}
+                </h2>
+                <p className="text-gray-600 max-w-3xl mx-auto">
+                  {homeContent.grantTypes.intro}
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {homeContent.grantTypes.grants.map((grant, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{grant.name}</h3>
+                    <p className="text-gray-600">{grant.description}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-center mt-8 text-gray-600">
+                {homeContent.grantTypes.outro}
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-primary-dark text-white">
