@@ -1,0 +1,56 @@
+[
+  {
+    "id": "scam-001",
+    "title": "Fake SASSA Websites",
+    "description": "Scammers are creating fake websites that look very similar to the official SASSA website. These websites are designed to trick you into entering your personal information, such as your ID number, bank details, and phone number.",
+    "type": "Website",
+    "severity": "critical",
+    "reportedDate": "2025-08-24",
+    "indicators": [
+      "The website URL is not sassa.gov.za.",
+      "The website asks for your bank account password.",
+      "The website has spelling and grammar mistakes.",
+      "The website looks unprofessional or has a poor design."
+    ],
+    "prevention": "Always double-check the website URL before entering any personal information. The official SASSA website is https://www.sassa.gov.za. Do not trust any other website that claims to be from SASSA.",
+    "examples": [
+      "sassa-grants.co.za",
+      "sassa-status-check.org"
+    ]
+  },
+  {
+    "id": "scam-002",
+    "title": "\"Grant Approved\" SMS Scam",
+    "description": "You may receive an SMS that says your SASSA grant has been approved and you need to click a link or pay a fee to receive your payment. This is a scam. SASSA will never ask you to pay a fee to receive a grant.",
+    "type": "SMS",
+    "severity": "high",
+    "reportedDate": "2025-08-24",
+    "indicators": [
+      "The SMS asks you to click on a link.",
+      "The SMS asks you to pay a fee.",
+      "The SMS is from an unknown number.",
+      "The SMS contains spelling and grammar mistakes."
+    ],
+    "prevention": "Do not click on any links or pay any fees. SASSA will never ask you for money to process your grant. If you receive such an SMS, delete it immediately and block the number.",
+    "examples": [
+      "Your R370 grant is approved. Click here to claim: [link]",
+      "Pay R50 to get your SASSA payment now."
+    ]
+  },
+  {
+    "id": "scam-003",
+    "title": "Impersonation of SASSA Officials",
+    "description": "Scammers may come to your home pretending to be SASSA officials. They may offer to help you with your grant application or tell you that there is a problem with your grant. They will then try to steal your personal information or ask you for money.",
+    "type": "In-Person",
+    "severity": "high",
+    "reportedDate": "2025-08-24",
+    "indicators": [
+      "The person does not have official SASSA identification.",
+      "The person asks for money.",
+      "The person asks for your PIN or password.",
+      "The person tries to rush you into making a decision."
+    ],
+    "prevention": "Always ask for official identification. SASSA officials will never ask for money or your PIN. If you are suspicious, do not let the person into your home and call the police or SASSA immediately.",
+    "examples": []
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "redFlags": {
+    "title": "Common Scam Red Flags",
+    "intro": "Scammers often use the same tricks. Learn to recognize these common red flags to protect yourself.",
+    "flags": [
+      {
+        "id": "flag1",
+        "title": "Sense of Urgency",
+        "description": "Scammers try to create panic to make you act without thinking. They might say your grant will be cancelled if you don't act immediately.",
+        "icon": "Clock"
+      },
+      {
+        "id": "flag2",
+        "title": "Request for Payment",
+        "description": "SASSA will never ask you to pay a fee to receive a grant. If someone asks you for money, it's a scam.",
+        "icon": "DollarSign"
+      },
+      {
+        "id": "flag3",
+        "title": "Requests for Personal Information",
+        "description": "Be very careful about sharing your ID number, banking details, or PIN. SASSA will never ask for your bank card PIN.",
+        "icon": "Lock"
+      },
+      {
+        "id": "flag4",
+        "title": "Suspicious Links",
+        "description": "Do not click on links in SMS or email messages that claim to be from SASSA. These links can lead to fake websites that steal your information.",
+        "icon": "Link"
+      },
+      {
+        "id": "flag5",
+        "title": "Poor Grammar and Spelling",
+        "description": "Official communication from SASSA is professional. Scam messages often contain spelling and grammar mistakes.",
+        "icon": "Type"
+      },
+      {
+        "id": "flag6",
+        "title": "Unusual Contact Methods",
+        "description": "Be wary of unexpected calls or messages from unofficial channels. Always verify the source.",
+        "icon": "MessageSquare"
+      }
+    ]
+  },
+  "checklist": {
+    "title": "Scam Prevention Checklist",
+    "intro": "Use this checklist to make sure you are doing everything you can to stay safe from scams.",
+    "items": [
+      {
+        "id": "check1",
+        "text": "I never share my SASSA card PIN with anyone.",
+        "isInitiallyChecked": false
+      },
+      {
+        "id": "check2",
+        "text": "I only use the official SASSA website (sassa.gov.za) for information.",
+        "isInitiallyChecked": false,
+        "link": {
+          "text": "Visit official site",
+          "url": "https://www.sassa.gov.za",
+          "isExternal": true
+        }
+      },
+      {
+        "id": "check3",
+        "text": "I ignore SMS messages that ask for money or personal details.",
+        "isInitiallyChecked": false
+      },
+      {
+        "id": "check4",
+        "text": "I have saved the official SASSA contact numbers.",
+        "isInitiallyChecked": false,
+        "link": {
+          "text": "View contact details",
+          "url": "/contact",
+          "isExternal": false
+        }
+      },
+      {
+        "id": "check5",
+        "text": "I know how to report a scam.",
+        "isInitiallyChecked": false,
+        "link": {
+          "text": "Learn how to report",
+          "url": "/guides/understanding-and-reporting-sassa-fraud",
+          "isExternal": false
+        }
+      }
+    ]
+  }
+}
