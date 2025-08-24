@@ -13,7 +13,7 @@ const Disclaimer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2 flex-1">
           <AlertTriangle className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
-          <div className="text-sm font-medium">
+          <div className="text-xs text-center font-medium">
             <span className="block sm:inline">
               {translations.disclaimer || 'This is an independent resource and is not affiliated with the SASSA. '}
             </span>
