@@ -39,14 +39,18 @@ const Guides: React.FC = () => {
   useEffect(() => {
     const fetchGuides = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest');
-        if (!response.ok) {
-          throw new Error('Failed to fetch guides');
-        }
-        const jsonResponse = await response.json();
-        const data: Guide[] = jsonResponse.record;
-        setGuides(data);
-        setFilteredGuides(data);
+        const [apiResponse, localResponse] = await Promise.all([
+          fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest').then(res => res.ok ? res.json() : Promise.resolve({ record: [] })),
+          fetch('/data/newGuides.json').then(res => res.ok ? res.json() : Promise.resolve([]))
+        ]);
+
+        const apiGuides: Guide[] = apiResponse.record || [];
+        const localGuides: Guide[] = localResponse || [];
+
+        const allGuides = [...apiGuides, ...localGuides];
+
+        setGuides(allGuides);
+        setFilteredGuides(allGuides);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
