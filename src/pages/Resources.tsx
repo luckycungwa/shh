@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Clock, Navigation, Search, Filter, ExternalLink } from 'lucide-react';
-import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 
 interface SassaOffice {
@@ -27,7 +26,6 @@ interface SassaOffice {
 }
 
 const Resources: React.FC = () => {
-  const { translations } = useAppContext();
   const [offices, setOffices] = useState<SassaOffice[]>([]);
   const [filteredOffices, setFilteredOffices] = useState<SassaOffice[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -114,7 +112,8 @@ const Resources: React.FC = () => {
         });
         setLocationError(null);
       },
-      (error) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      (_error) => {
         setLocationError('Unable to retrieve your location. Please search manually.');
       }
     );

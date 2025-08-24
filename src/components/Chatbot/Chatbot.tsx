@@ -1,5 +1,5 @@
 // Chatbot.tsx
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import {
   MessageCircle,
   X,
@@ -41,8 +41,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ className = '' }) => {
   };
   const dailyCount = () => Number(localStorage.getItem('chatCount') || 0);
 
-  /* ----------  Initial greeting  ---------- */
-  const initialMessage: Message = {
+  const initialMessage = useMemo((): Message => ({
     id: 'initial',
     type: 'bot',
     content: `Hello! I'm the SASSA Help Hub assistant. I can help you with:
@@ -55,10 +54,14 @@ const Chatbot: React.FC<ChatbotProps> = ({ className = '' }) => {
 
 How can I help you today?`,
     timestamp: new Date(),
-  };
+  }), []);
 
   /* ----------  Side-effects  ---------- */
   useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      setMessages([initialMessage]);
+    }
+
     const fetchPrompt = async () => {
       if (!isOpen) return;
       setIsPromptLoading(true);
@@ -68,6 +71,7 @@ How can I help you today?`,
         const json = await response.json();
         setSystemPrompt(json.record.prompt);
       } catch (error) {
+        console.error("Failed to fetch system prompt:", error);
         setHasError(true);
         setMessages((prev) => [
           ...prev,
@@ -84,8 +88,7 @@ How can I help you today?`,
     };
 
     fetchPrompt();
-    if (isOpen && messages.length === 0) setMessages([initialMessage]);
-  }, [isOpen]);
+  }, [isOpen, messages.length, initialMessage]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -162,8 +165,9 @@ How can I help you today?`,
       };
       setMessages((prev) => [...prev, botMsg]);
       incDailyCount();
-    } catch (err: any) {
-      if (retries > 0 && /rate|quota/i.test(err.message)) {
+    } catch (err: unknown) {
+      const isRateLimitError = err instanceof Error && /rate|quota/i.test(err.message);
+      if (retries > 0 && isRateLimitError) {
         await new Promise((r) => setTimeout(r, 60000));
         return handleSendMessage(retries - 1);
       }

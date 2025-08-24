@@ -27,7 +27,7 @@ interface Guide {
 }
 
 const Guides: React.FC = () => {
-  const { translations, searchQuery, setSearchQuery } = useAppContext();
+  const { searchQuery, setSearchQuery } = useAppContext();
   const [guides, setGuides] = useState<Guide[]>([]);
   const [filteredGuides, setFilteredGuides] = useState<Guide[]>([]);
   const [isLoading, setIsLoading] = useState(true);
