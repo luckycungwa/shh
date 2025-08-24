@@ -77,7 +77,7 @@ VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 VITE_ADSENSE_CLIENT=ca-pub-xxxxxxxxxxxxxxxx
 
 # API Configuration (for chatbot)
-VITE_GEMINI_API_KEY=your_gemini_api_key
+VITE_VITE_GEMINI_API_KEY=your_VITE_GEMINI_API_KEY
 VITE_OPENAI_API_KEY=your_openai_api_key_backup
 ```
 
@@ -387,7 +387,7 @@ gtag('config', 'GA_MEASUREMENT_ID', {
 ## 📄 Legal & Compliance
 
 ### Disclaimer
-This is an **independent, unofficial resource** not affiliated with SASSA or the South African Government. Users must verify all information through official SASSA channels:
+This is an **independent  resource** not affiliated with SASSA or the South African Government. Users must verify all information through official SASSA channels:
 
 - **Official Website**: https://www.sassa.gov.za
 - **Helpline**: 0800 60 10 11

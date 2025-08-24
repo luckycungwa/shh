@@ -32,7 +32,7 @@ const Terms: React.FC = () => {
                     <div>
                       <h3 className="text-red-800 font-semibold text-lg mb-2">Important Disclaimer</h3>
                       <p className="text-red-700">
-                        <strong>SASSA Help Hub is an independent, unofficial resource.</strong> We are not affiliated with, 
+                        <strong>SASSA Help Hub is an independent resource.</strong> We are not affiliated with, 
                         endorsed by, or officially connected to the South African Social Security Agency (SASSA), 
                         the South African Government, or any government department. 
                         Always verify information through official SASSA channels.
