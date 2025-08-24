@@ -1,0 +1,202 @@
+[
+  {
+    "id": "scam-001",
+    "title": "Fake SASSA SMS Requesting Banking Details",
+    "description": "Scammers send SMS messages claiming to be from SASSA, asking beneficiaries to update their banking details by clicking a link or replying with personal information. These messages often create urgency by claiming grants will be suspended.",
+    "type": "SMS",
+    "severity": "critical",
+    "reportedDate": "2025-01-10",
+    "indicators": [
+      "Requests banking details via SMS",
+      "Creates false urgency about grant suspension",
+      "Contains suspicious links",
+      "Poor grammar and spelling",
+      "Asks for PIN numbers or passwords"
+    ],
+    "prevention": "SASSA will never ask for banking details via SMS. Always verify through official channels: 0800 60 10 11 or www.sassa.gov.za",
+    "examples": [
+      "URGENT: Your SASSA grant will be suspended. Update banking details at [suspicious link]",
+      "SASSA ALERT: Confirm your bank details by replying with account number and PIN"
+    ]
+  },
+  {
+    "id": "scam-002",
+    "title": "Fake SASSA Officials Collecting Fees",
+    "description": "Fraudsters pose as SASSA officials in communities, especially rural areas, claiming they can help with grant applications for a fee. They may wear fake uniforms or carry fake identification.",
+    "type": "In-Person",
+    "severity": "high",
+    "reportedDate": "2025-01-08",
+    "indicators": [
+      "Requests payment for SASSA services",
+      "Claims to be SASSA official without proper ID",
+      "Operates door-to-door in communities",
+      "Promises faster processing for money",
+      "Cannot provide official SASSA office details"
+    ],
+    "prevention": "All SASSA services are FREE. Real officials work from official offices and never collect fees. Report suspicious individuals to police and SASSA.",
+    "examples": [
+      "Pay R500 and I'll process your grant application faster",
+      "I'm from SASSA head office, give me R200 to update your details"
+    ]
+  },
+  {
+    "id": "scam-003",
+    "title": "WhatsApp Grant Application Scam",
+    "description": "Scammers create fake WhatsApp groups or contacts claiming to help with SASSA applications. They request personal documents and may ask for money to 'guarantee' approval.",
+    "type": "WhatsApp",
+    "severity": "high",
+    "reportedDate": "2025-01-05",
+    "indicators": [
+      "Unofficial WhatsApp numbers claiming to be SASSA",
+      "Requests copies of ID documents and personal info",
+      "Promises guaranteed grant approval",
+      "Asks for upfront payments or fees",
+      "Uses unofficial SASSA logos or branding"
+    ],
+    "prevention": "Only use official SASSA WhatsApp number: 082 046 8553. Never send ID copies to unknown contacts or pay for applications.",
+    "examples": [
+      "Send R300 and your ID copy for guaranteed SRD approval",
+      "Join our SASSA WhatsApp group for fast grant processing"
+    ]
+  },
+  {
+    "id": "scam-004",
+    "title": "Fake SASSA Loan Offers",
+    "description": "Criminals send messages offering loans against SASSA grants, claiming beneficiaries can borrow money that will be deducted from future grant payments. These are illegal and often involve identity theft.",
+    "type": "SMS",
+    "severity": "critical",
+    "reportedDate": "2025-01-03",
+    "indicators": [
+      "Offers loans against SASSA grants",
+      "Claims no credit checks needed",
+      "Requests SASSA card details or PIN",
+      "Promises instant cash",
+      "Uses unofficial contact numbers"
+    ],
+    "prevention": "SASSA does not offer loans. Never share your SASSA card details or PIN. Report loan scams to SASSA and police immediately.",
+    "examples": [
+      "Get R5000 loan against your SASSA grant - no credit check needed",
+      "Borrow money now, we'll deduct from your next SASSA payment"
+    ]
+  },
+  {
+    "id": "scam-005",
+    "title": "Fraudulent SASSA Websites",
+    "description": "Fake websites that look like official SASSA sites are used to steal personal information. These sites may offer grant applications or status checks but are designed to harvest data.",
+    "type": "Website",
+    "severity": "high",
+    "reportedDate": "2024-12-28",
+    "indicators": [
+      "URLs that don't end in .gov.za",
+      "Poor website design or broken links",
+      "Requests for unnecessary personal information",
+      "No official government branding",
+      "Asks for payment for free services"
+    ],
+    "prevention": "Only use official SASSA websites: www.sassa.gov.za and srd.sassa.gov.za. Check the URL carefully and look for .gov.za domain.",
+    "examples": [
+      "www.sassa-grants.co.za (fake site)",
+      "www.sassaonline.com (fake site)"
+    ]
+  },
+  {
+    "id": "scam-006",
+    "title": "SRD Grant Approval Fee Scam",
+    "description": "Scammers contact people whose SRD applications were declined, claiming they can help get approval for a fee. They may have access to some personal information to appear legitimate.",
+    "type": "Phone",
+    "severity": "medium",
+    "reportedDate": "2024-12-25",
+    "indicators": [
+      "Calls after SRD application decline",
+      "Claims to have inside connections at SASSA",
+      "Requests payment for appeal assistance",
+      "Knows some personal details about your application",
+      "Pressures for immediate payment"
+    ],
+    "prevention": "SRD appeals are free through the official website. SASSA staff will never call requesting payments. Use only official appeal process.",
+    "examples": [
+      "Pay R1000 and I'll get your SRD approved through my SASSA contacts",
+      "Your appeal was declined, but I can help for R500"
+    ]
+  },
+  {
+    "id": "scam-007",
+    "title": "Fake SASSA Card Replacement Scam",
+    "description": "Fraudsters target people with lost or damaged SASSA cards, offering replacement services for a fee. They may operate near SASSA offices to appear legitimate.",
+    "type": "In-Person",
+    "severity": "medium",
+    "reportedDate": "2024-12-20",
+    "indicators": [
+      "Offers card replacement services outside SASSA offices",
+      "Requests payment for replacement cards",
+      "Claims faster service than official process",
+      "Cannot provide official SASSA documentation",
+      "Operates from unofficial locations"
+    ],
+    "prevention": "Card replacements are done only at official SASSA offices. Some fees may apply, but payment is made to SASSA directly, not individuals.",
+    "examples": [
+      "Get your new SASSA card today for R200 - no waiting",
+      "I work with SASSA, pay me R150 for express card replacement"
+    ]
+  },
+  {
+    "id": "scam-008",
+    "title": "Grant Increase Notification Scam",
+    "description": "Scammers send messages claiming SASSA grants have been increased and beneficiaries need to 'activate' the increase by providing personal information or paying a fee.",
+    "type": "SMS",
+    "severity": "medium",
+    "reportedDate": "2024-12-15",
+    "indicators": [
+      "Claims about grant increases not announced officially",
+      "Requests activation fees or personal details",
+      "Creates urgency about missing out on increases",
+      "Uses unofficial contact numbers",
+      "Poor grammar and unofficial language"
+    ],
+    "prevention": "Grant increases are announced officially by government. No activation is required. Check official SASSA channels for real announcements.",
+    "examples": [
+      "Your SASSA grant increased to R3000! Pay R100 activation fee to claim",
+      "URGENT: Activate your grant increase by sending ID number to this number"
+    ]
+  },
+  {
+    "id": "scam-009",
+    "title": "Fake Disability Grant Medical Assessment",
+    "description": "Criminals pose as medical professionals offering to help with disability grant medical assessments for payment, or claim they can influence the assessment outcome.",
+    "type": "In-Person",
+    "severity": "high",
+    "reportedDate": "2024-12-10",
+    "indicators": [
+      "Offers to help with medical assessments for money",
+      "Claims to guarantee disability grant approval",
+      "Operates outside official medical facilities",
+      "Cannot provide proper medical credentials",
+      "Requests payment before services"
+    ],
+    "prevention": "Medical assessments are done by qualified doctors at designated facilities. No one can guarantee approval outcomes. Report fake medical professionals to authorities.",
+    "examples": [
+      "Pay R2000 and I'll make sure you pass your disability assessment",
+      "I'm a SASSA doctor, give me R1500 to approve your disability grant"
+    ]
+  },
+  {
+    "id": "scam-010",
+    "title": "Child Support Grant Document Fraud",
+    "description": "Fraudsters offer to help obtain or create false documents needed for Child Support Grant applications, such as fake birth certificates or affidavits.",
+    "type": "In-Person",
+    "severity": "critical",
+    "reportedDate": "2024-12-05",
+    "indicators": [
+      "Offers to create or obtain false documents",
+      "Claims to have connections at Home Affairs",
+      "Requests payment for document services",
+      "Cannot provide official documentation for services",
+      "Operates from unofficial locations"
+    ],
+    "prevention": "Only use official documents from proper government departments. Using false documents is illegal and will result in grant cancellation and criminal charges.",
+    "examples": [
+      "Need a birth certificate? I can get you one for R800",
+      "Pay R500 and I'll create the affidavit you need for your child grant"
+    ]
+  }
+]

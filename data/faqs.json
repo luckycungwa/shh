@@ -1,0 +1,106 @@
+[
+  {
+    "id": "faq-001",
+    "question": "What are the SASSA payment dates for 2025?",
+    "answer": "<p>SASSA payment dates for 2025 are typically scheduled for the first week of each month:</p><ul><li><strong>Old Age Grant:</strong> Usually paid on the 1st or 2nd working day</li><li><strong>Disability Grant:</strong> Usually paid on the 2nd or 3rd working day</li><li><strong>Child Support Grant:</strong> Usually paid on the 3rd or 4th working day</li><li><strong>SRD R370 Grant:</strong> Variable dates, usually towards the end of the month</li></ul><p>Payment dates may change due to weekends, public holidays, or technical issues. Always check the official SASSA website or SMS your ID number to 32148 for the most current information.</p>",
+    "category": "Payment Dates",
+    "tags": ["payment dates", "2025", "schedule", "grants"],
+    "helpful": 245,
+    "lastUpdated": "2025-01-15",
+    "relatedLinks": [
+      {
+        "title": "Official SASSA Payment Schedule",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "faq-002",
+    "question": "How do I check my SRD R370 grant status?",
+    "answer": "<p>You can check your SRD R370 grant status using several methods:</p><ol><li><strong>Online:</strong> Visit <a href='https://srd.sassa.gov.za' target='_blank'>srd.sassa.gov.za</a> and enter your ID number and phone number</li><li><strong>SMS:</strong> Send your ID number to 32148 (costs R1)</li><li><strong>WhatsApp:</strong> Send 'Hi' to 082 046 8553</li><li><strong>USSD:</strong> Dial *134*7737# from your registered phone</li></ol><p>Make sure to use the same phone number you used when applying. If your status shows 'Approved' but no payment date, be patient as payments are processed in batches.</p>",
+    "category": "SRD Grant",
+    "tags": ["SRD", "R370", "status check", "application"],
+    "helpful": 189,
+    "lastUpdated": "2025-01-15",
+    "relatedLinks": [
+      {
+        "title": "SRD Grant Portal",
+        "url": "https://srd.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "faq-003",
+    "question": "What documents do I need to apply for a Child Support Grant?",
+    "answer": "<p>To apply for a Child Support Grant, you need the following documents:</p><h4>For the applicant (caregiver):</h4><ul><li>South African ID document or passport with permit</li><li>Proof of income (payslip, UIF card, or affidavit if unemployed)</li><li>Proof of residence (utility bill, lease agreement, or letter from traditional leader)</li><li>Bank account details (if you have one)</li></ul><h4>For the child:</h4><ul><li>Child's birth certificate (unabridged)</li><li>Child's clinic card or medical records</li><li>School attendance certificate (if child is school-going)</li></ul><h4>Additional documents (if applicable):</h4><ul><li>Death certificate of parent(s) if deceased</li><li>Court order for custody or guardianship</li><li>Affidavit from biological parent if not applying</li></ul><p>All documents must be certified copies. You can get them certified at a police station, post office, or commissioner of oaths.</p>",
+    "category": "Applications",
+    "tags": ["child support grant", "documents", "application", "requirements"],
+    "helpful": 156,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-004",
+    "question": "How much are SASSA grants in 2025?",
+    "answer": "<p>SASSA grant amounts for 2025 (effective from April 2025):</p><ul><li><strong>Old Age Grant:</strong> R2,090 per month</li><li><strong>Disability Grant:</strong> R2,090 per month</li><li><strong>War Veterans Grant:</strong> R2,110 per month</li><li><strong>Child Support Grant:</strong> R510 per month per child</li><li><strong>Foster Child Grant:</strong> R1,130 per month per child</li><li><strong>Care Dependency Grant:</strong> R2,090 per month</li><li><strong>Grant-in-Aid:</strong> R510 per month (additional support)</li><li><strong>SRD Grant:</strong> R370 per month (temporary)</li></ul><p>These amounts are reviewed annually and may increase based on inflation and government budget allocations.</p>",
+    "category": "Grant Amounts",
+    "tags": ["grant amounts", "2025", "money", "payments"],
+    "helpful": 203,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-005",
+    "question": "Why was my SRD grant declined and how can I appeal?",
+    "answer": "<p>Common reasons for SRD grant decline:</p><ul><li><strong>Income above threshold:</strong> You or household members earn more than R624 per month</li><li><strong>Receiving other grants:</strong> You're already receiving SASSA grants or UIF payments</li><li><strong>Database mismatch:</strong> Your details don't match government databases</li><li><strong>Incomplete application:</strong> Missing information or documents</li><li><strong>Bank account issues:</strong> Invalid or inaccessible bank details</li></ul><h4>How to appeal:</h4><ol><li>Visit <a href='https://srd.sassa.gov.za' target='_blank'>srd.sassa.gov.za</a></li><li>Click on 'Appeal' and enter your details</li><li>Provide reasons for your appeal and supporting documents</li><li>Submit within 30 days of decline notification</li><li>Wait for SMS notification about appeal outcome</li></ol><p>Appeals are processed within 90 days. If successful, you may receive back-payments.</p>",
+    "category": "SRD Grant",
+    "tags": ["SRD", "declined", "appeal", "reasons"],
+    "helpful": 178,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-006",
+    "question": "What is the income threshold for SASSA grants in 2025?",
+    "answer": "<p>Income thresholds for SASSA grants in 2025:</p><h4>Old Age Grant:</h4><ul><li><strong>Single person:</strong> R7,920 per month or R95,040 per year</li><li><strong>Married couple:</strong> R15,840 combined per month or R190,080 per year</li></ul><h4>Disability Grant:</h4><ul><li><strong>Single person:</strong> R7,920 per month or R95,040 per year</li><li><strong>Married couple:</strong> R15,840 combined per month or R190,080 per year</li></ul><h4>Child Support Grant:</h4><ul><li><strong>Single caregiver:</strong> R5,280 per month or R63,360 per year</li><li><strong>Married couple:</strong> R10,560 combined per month or R126,720 per year</li></ul><h4>SRD Grant:</h4><ul><li><strong>Individual:</strong> R624 per month (no other income or grants)</li></ul><p>Asset thresholds also apply. These limits are reviewed annually.</p>",
+    "category": "Eligibility",
+    "tags": ["income threshold", "eligibility", "means test", "2025"],
+    "helpful": 134,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-007",
+    "question": "How do I change my SASSA banking details?",
+    "answer": "<p>To change your SASSA banking details:</p><h4>For SRD Grant:</h4><ol><li>Visit <a href='https://srd.sassa.gov.za' target='_blank'>srd.sassa.gov.za</a></li><li>Click 'Banking Details Change'</li><li>Enter your ID number and phone number</li><li>Upload required documents and submit</li></ol><h4>For other grants:</h4><ol><li>Visit your nearest SASSA office</li><li>Bring your ID document</li><li>Bring bank confirmation letter (not older than 3 months)</li><li>Bring recent bank statement</li><li>Complete the change of payment method form</li></ol><h4>Required documents:</h4><ul><li>South African ID document</li><li>Bank confirmation letter from your bank</li><li>Recent bank statement (not older than 3 months)</li><li>Proof of residence</li></ul><p>Changes typically take 1-2 months to take effect. You'll receive SMS confirmation once processed.</p>",
+    "category": "Banking Details",
+    "tags": ["banking details", "change", "payment method", "bank account"],
+    "helpful": 167,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-008",
+    "question": "What should I do if my SASSA card is lost or stolen?",
+    "answer": "<p>If your SASSA card is lost or stolen, follow these steps immediately:</p><h4>Immediate actions:</h4><ol><li><strong>Report to SASSA:</strong> Call 0800 60 10 11 immediately</li><li><strong>Visit SASSA office:</strong> Go to your nearest office with your ID</li><li><strong>Report to police:</strong> Open a case if the card was stolen</li><li><strong>Block the card:</strong> Ask SASSA to block the card to prevent misuse</li></ol><h4>Getting a replacement:</h4><ul><li>Complete an affidavit about the lost/stolen card</li><li>Provide your ID document and proof of residence</li><li>Pay the replacement fee (if applicable)</li><li>Wait 10-15 working days for the new card</li></ul><h4>Temporary solutions:</h4><ul><li>Collect grants using your ID at designated pay points</li><li>Use retail outlets like Pick n Pay, Shoprite, or Boxer</li><li>Ensure you have your ID and SMS notification</li></ul><p>Never share your PIN with anyone and always cover your hand when entering it.</p>",
+    "category": "Card Issues",
+    "tags": ["lost card", "stolen card", "replacement", "SASSA card"],
+    "helpful": 145,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-009",
+    "question": "Can I receive multiple SASSA grants at the same time?",
+    "answer": "<p>Yes, you can receive multiple SASSA grants, but there are specific rules:</p><h4>Allowed combinations:</h4><ul><li><strong>Child Support Grant:</strong> Can receive for multiple children</li><li><strong>Foster Child Grant:</strong> Can receive for multiple foster children</li><li><strong>Care Dependency Grant:</strong> Can receive with other grants</li><li><strong>Grant-in-Aid:</strong> Additional support with primary grants</li></ul><h4>Not allowed combinations:</h4><ul><li>Cannot receive both Old Age Grant and Disability Grant</li><li>Cannot receive SRD Grant with any other SASSA grant</li><li>Cannot receive grants if you're getting UIF or other government support</li></ul><h4>Special cases:</h4><ul><li>You can receive Old Age Grant and Child Support Grant for your grandchildren</li><li>Disability Grant recipients can receive Child Support Grant for their children</li><li>Foster parents can receive both Foster Child Grant and Child Support Grant for different children</li></ul><p>Each application is assessed separately based on eligibility criteria.</p>",
+    "category": "Eligibility",
+    "tags": ["multiple grants", "combinations", "eligibility", "rules"],
+    "helpful": 123,
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-010",
+    "question": "How long does it take to get approved for SASSA grants?",
+    "answer": "<p>Processing times for SASSA grants vary by type:</p><h4>SRD Grant (R370):</h4><ul><li><strong>New applications:</strong> 7-14 days</li><li><strong>Appeals:</strong> 30-90 days</li><li><strong>Reconsiderations:</strong> 14-30 days</li></ul><h4>Child Support Grant:</h4><ul><li><strong>Complete applications:</strong> 30-60 days</li><li><strong>With missing documents:</strong> 60-90 days</li></ul><h4>Old Age Grant:</h4><ul><li><strong>Standard processing:</strong> 30-90 days</li><li><strong>With verification issues:</strong> 90-120 days</li></ul><h4>Disability Grant:</h4><ul><li><strong>Temporary disability:</strong> 30-60 days</li><li><strong>Permanent disability:</strong> 60-120 days (includes medical assessment)</li></ul><h4>Factors affecting processing time:</h4><ul><li>Completeness of application and documents</li><li>Verification with other government departments</li><li>Medical assessments (for disability grants)</li><li>Office workload and capacity</li><li>Appeals and reconsiderations</li></ul><p>You can check your application status online or by SMS during the processing period.</p>",
+    "category": "Applications",
+    "tags": ["processing time", "approval", "application", "waiting period"],
+    "helpful": 198,
+    "lastUpdated": "2025-01-15"
+  }
+]
