@@ -39,70 +39,14 @@ const Guides: React.FC = () => {
   useEffect(() => {
     const fetchGuides = async () => {
       try {
-        // For now, we'll use sample data since guides.json doesn't exist yet
-        const sampleGuides: Guide[] = [
-          {
-            id: 'guide-001',
-            title: 'How to Apply for Child Support Grant',
-            description: 'Step-by-step guide to applying for the Child Support Grant, including required documents and eligibility criteria.',
-            category: 'Applications',
-            difficulty: 'beginner',
-            estimatedTime: '30 minutes',
-            steps: [
-              {
-                title: 'Check Eligibility',
-                content: 'Ensure you meet the requirements: child under 18, South African citizen/permanent resident, and pass the means test.',
-                tips: ['Single caregiver income must be under R4,800/month', 'Married couple combined income under R9,600/month']
-              },
-              {
-                title: 'Gather Required Documents',
-                content: 'Collect all necessary documents before visiting the SASSA office.',
-                tips: ['Make copies of all documents', 'Ensure documents are not older than 3 months']
-              },
-              {
-                title: 'Visit SASSA Office',
-                content: 'Go to your nearest SASSA office with all documents and complete the application form.',
-                tips: ['Arrive early to avoid long queues', 'Bring a pen and reading glasses if needed']
-              }
-            ],
-            tags: ['child support', 'application', 'grants', 'eligibility'],
-            lastUpdated: '2024-01-15',
-            author: 'SASSA Help Hub Team',
-            relatedLinks: [
-              {
-                title: 'Child Support Grant FAQ',
-                url: '/faq?search=child%20support',
-                isExternal: false
-              }
-            ]
-          },
-          {
-            id: 'guide-002',
-            title: 'How to Avoid SASSA Scams',
-            description: 'Comprehensive guide to identifying and avoiding common SASSA-related scams and fraudulent activities.',
-            category: 'Scam Protection',
-            difficulty: 'beginner',
-            estimatedTime: '15 minutes',
-            steps: [
-              {
-                title: 'Recognize Common Scam Types',
-                content: 'Learn to identify SMS scams, fake officials, and fraudulent websites.',
-                tips: ['SASSA will never ask for banking details via SMS', 'Official SASSA communications come from verified sources']
-              },
-              {
-                title: 'Verify Official Communications',
-                content: 'Always verify any SASSA communication through official channels.',
-                tips: ['Call SASSA directly at 0800 60 10 11', 'Visit www.sassa.gov.za for official information']
-              }
-            ],
-            tags: ['scams', 'fraud', 'protection', 'safety'],
-            lastUpdated: '2024-01-10',
-            author: 'SASSA Help Hub Team'
-          }
-        ];
-        
-        setGuides(sampleGuides);
-        setFilteredGuides(sampleGuides);
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest');
+        if (!response.ok) {
+          throw new Error('Failed to fetch guides');
+        }
+        const jsonResponse = await response.json();
+        const data: Guide[] = jsonResponse.record;
+        setGuides(data);
+        setFilteredGuides(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {

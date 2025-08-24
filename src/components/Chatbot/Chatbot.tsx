@@ -9,7 +9,6 @@ import {
   Brain,
   ArrowRight,
 } from 'lucide-react';
-import systemPromptData from './systemPrompt.json';
 
 interface Message {
   id: string;
@@ -28,10 +27,10 @@ const Chatbot: React.FC<ChatbotProps> = ({ className = '' }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [systemPrompt, setSystemPrompt] = useState('');
+  const [isPromptLoading, setIsPromptLoading] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const systemPrompt = systemPromptData.prompt;
 
   /* ----------  Daily usage guard  ---------- */
   const DAILY_LIMIT = 200;
@@ -60,6 +59,31 @@ How can I help you today?`,
 
   /* ----------  Side-effects  ---------- */
   useEffect(() => {
+    const fetchPrompt = async () => {
+      if (!isOpen) return;
+      setIsPromptLoading(true);
+      try {
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a9e74243b1c97be92696b3/latest');
+        if (!response.ok) throw new Error('Failed to load system prompt');
+        const json = await response.json();
+        setSystemPrompt(json.record.prompt);
+      } catch (error) {
+        setHasError(true);
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: `err-prompt-${Date.now()}`,
+            type: 'bot',
+            content: 'Error: Could not load chatbot configuration. Please try again later.',
+            timestamp: new Date(),
+          },
+        ]);
+      } finally {
+        setIsPromptLoading(false);
+      }
+    };
+
+    fetchPrompt();
     if (isOpen && messages.length === 0) setMessages([initialMessage]);
   }, [isOpen]);
 
@@ -100,7 +124,7 @@ How can I help you today?`,
 
   /* ----------  Send handler  ---------- */
   const handleSendMessage = async (retries = 1) => {
-    if (!inputMessage.trim() || isLoading) return;
+    if (!inputMessage.trim() || isLoading || isPromptLoading) return;
     if (dailyCount() >= DAILY_LIMIT) {
       setHasError(true);
       setMessages((prev) => [
@@ -284,13 +308,13 @@ How can I help you today?`,
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Ask about SASSA services..."
-            disabled={isLoading}
+            placeholder={isPromptLoading ? 'Initializing chat...' : 'Ask about SASSA services...'}
+            disabled={isLoading || isPromptLoading}
             className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent text-sm disabled:opacity-50"
           />
           <button
             onClick={() => handleSendMessage()}
-            disabled={isLoading || !inputMessage.trim()}
+            disabled={isLoading || isPromptLoading || !inputMessage.trim()}
             className="bg-primary-gold text-primary-black p-2 rounded-lg hover:bg-primary-gold transition-colors disabled:opacity-50"
             aria-label="Send message"
           >

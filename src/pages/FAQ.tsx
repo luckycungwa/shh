@@ -32,9 +32,10 @@ const FAQ: React.FC = () => {
   useEffect(() => {
     const fetchFAQs = async () => {
       try {
-        const response = await fetch('/data/faqs.json');
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ea6bd0ea881f405e5846/latest');
         if (!response.ok) throw new Error('Failed to fetch FAQs');
-        const data = await response.json();
+        const jsonResponse = await response.json();
+        const data = jsonResponse.record;
         setFaqs(data);
         setFilteredFaqs(data);
       } catch (err) {

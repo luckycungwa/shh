@@ -40,96 +40,14 @@ const Resources: React.FC = () => {
   useEffect(() => {
     const fetchOffices = async () => {
       try {
-        // Sample office data - in production this would come from resources.json
-        const sampleOffices: SassaOffice[] = [
-          {
-            id: 'office-001',
-            name: 'SASSA Cape Town Regional Office',
-            address: '123 Adderley Street',
-            city: 'Cape Town',
-            province: 'Western Cape',
-            postalCode: '8001',
-            phone: '021 123 4567',
-            email: 'capetown@sassa.gov.za',
-            hours: {
-              weekdays: '08:00 - 16:00',
-              saturday: '08:00 - 12:00'
-            },
-            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Appeals'],
-            coordinates: { lat: -33.9249, lng: 18.4241 },
-            accessibility: ['Wheelchair accessible', 'Parking available', 'Public transport nearby']
-          },
-          {
-            id: 'office-002',
-            name: 'SASSA Johannesburg Central',
-            address: '456 Commissioner Street',
-            city: 'Johannesburg',
-            province: 'Gauteng',
-            postalCode: '2001',
-            phone: '011 987 6543',
-            email: 'johannesburg@sassa.gov.za',
-            hours: {
-              weekdays: '07:30 - 16:30',
-              saturday: '08:00 - 13:00'
-            },
-            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Medical Assessments'],
-            coordinates: { lat: -26.2041, lng: 28.0473 },
-            accessibility: ['Wheelchair accessible', 'Parking available', 'Security on site']
-          },
-          {
-            id: 'office-003',
-            name: 'SASSA Durban Office',
-            address: '789 West Street',
-            city: 'Durban',
-            province: 'KwaZulu-Natal',
-            postalCode: '4001',
-            phone: '031 555 7890',
-            email: 'durban@sassa.gov.za',
-            hours: {
-              weekdays: '08:00 - 16:00',
-              saturday: '08:00 - 12:00'
-            },
-            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Foster Care Grants'],
-            coordinates: { lat: -29.8587, lng: 31.0218 },
-            accessibility: ['Wheelchair accessible', 'Public transport nearby', 'Interpreter services']
-          },
-          {
-            id: 'office-004',
-            name: 'SASSA Pretoria Office',
-            address: '321 Church Street',
-            city: 'Pretoria',
-            province: 'Gauteng',
-            postalCode: '0002',
-            phone: '012 444 5555',
-            email: 'pretoria@sassa.gov.za',
-            hours: {
-              weekdays: '08:00 - 16:00'
-            },
-            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements', 'Appeals', 'Medical Assessments'],
-            coordinates: { lat: -25.7479, lng: 28.2293 },
-            accessibility: ['Wheelchair accessible', 'Parking available', 'Air conditioning']
-          },
-          {
-            id: 'office-005',
-            name: 'SASSA Port Elizabeth Office',
-            address: '654 Main Street',
-            city: 'Gqeberha',
-            province: 'Eastern Cape',
-            postalCode: '6001',
-            phone: '041 333 2222',
-            email: 'portelizabeth@sassa.gov.za',
-            hours: {
-              weekdays: '08:00 - 16:00',
-              saturday: '08:00 - 12:00'
-            },
-            services: ['Grant Applications', 'Status Inquiries', 'Card Replacements'],
-            coordinates: { lat: -33.9608, lng: 25.6022 },
-            accessibility: ['Wheelchair accessible', 'Public transport nearby']
-          }
-        ];
-        
-        setOffices(sampleOffices);
-        setFilteredOffices(sampleOffices);
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a68cb3ae596e708fcfa5f5/latest');
+        if (!response.ok) {
+          throw new Error('Failed to fetch offices');
+        }
+        const jsonResponse = await response.json();
+        const data: SassaOffice[] = jsonResponse.record;
+        setOffices(data);
+        setFilteredOffices(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
