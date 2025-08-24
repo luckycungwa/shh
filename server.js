@@ -1,6 +1,7 @@
 // server.js
 import express from 'express';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import 'dotenv/config';
 
 const app = express();
 app.use(express.json());
@@ -11,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/gemini', async (req, res) => {
   const { prompt } = req.body;
-  const genAI = new GoogleGenerativeAI(process.env.VITE_GEMINI_API_KEY);
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
   try {

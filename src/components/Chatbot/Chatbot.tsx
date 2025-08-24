@@ -10,7 +10,6 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import systemPromptData from './systemPrompt.json';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 
 interface Message {
   id: string;
@@ -32,10 +31,6 @@ const Chatbot: React.FC<ChatbotProps> = ({ className = '' }) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  /* ----------  Gemini client  ---------- */
-  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || '');
-  console.log('Key loaded:', import.meta.env.VITE_GEMINI_API_KEY?.slice(0, 6) + '***');
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
   const systemPrompt = systemPromptData.prompt;
 
   /* ----------  Daily usage guard  ---------- */
