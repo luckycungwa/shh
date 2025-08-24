@@ -21,25 +21,64 @@ interface MonthlyPayments {
   }>;
 }
 
+interface CalendarContent {
+  title: string;
+  intro: {
+    heading: string;
+    paragraphs: string[];
+  };
+  paymentSchedule: {
+    heading: string;
+    months: Array<{
+      month: string;
+      olderPersons: string;
+      disability: string;
+      childrens: string;
+    }>;
+  };
+  paymentMethods: {
+    heading: string;
+    methods: Array<{
+      name: string;
+      description: string;
+    }>;
+  };
+  faqs: {
+    heading: string;
+    questions: Array<{
+      q: string;
+      a: string;
+    }>;
+  };
+}
+
 const PaymentCalendar: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [payments, setPayments] = useState<MonthlyPayments[]>([]);
+  const [extraContent, setExtraContent] = useState<CalendarContent | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [emailReminder, setEmailReminder] = useState('');
   const [showEmailForm, setShowEmailForm] = useState(false);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    const fetchPayments = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a4ae0e43b1c97be922a4f9/latest');
-        if (!response.ok) {
-          throw new Error('Failed to fetch payment data');
-        }
-        const jsonResponse = await response.json();
-        const data: MonthlyPayments[] = jsonResponse.record;
-        setPayments(data);
+        const [paymentsResponse, contentResponse] = await Promise.all([
+          fetch('https://api.jsonbin.io/v3/b/68a4ae0e43b1c97be922a4f9/latest'),
+          fetch('/data/paymentCalendarContent.json')
+        ]);
+
+        if (!paymentsResponse.ok) throw new Error('Failed to fetch payment data');
+        if (!contentResponse.ok) throw new Error('Failed to fetch calendar content');
+
+        const paymentsData = await paymentsResponse.json();
+        const contentData = await contentResponse.json();
+
+        setPayments(paymentsData.record);
+        setExtraContent(contentData);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
@@ -47,7 +86,7 @@ const PaymentCalendar: React.FC = () => {
       }
     };
 
-    fetchPayments();
+    fetchData();
   }, []);
 
   const monthStart = startOfMonth(currentDate);
@@ -351,6 +390,81 @@ const PaymentCalendar: React.FC = () => {
             </p>
           </div>
         </div>
+
+        {extraContent && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+            {/* Introduction Section */}
+            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">{extraContent.intro.heading}</h2>
+              {extraContent.intro.paragraphs.map((p, index) => (
+                <p key={index} className="text-gray-700 mb-4">{p}</p>
+              ))}
+            </div>
+
+            {/* Payment Schedule Table */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+              <h2 className="text-2xl font-semibold text-gray-900 p-6">{extraContent.paymentSchedule.heading}</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="p-4 text-sm font-medium text-gray-600">Month</th>
+                      <th className="p-4 text-sm font-medium text-gray-600">Older Persons Grant</th>
+                      <th className="p-4 text-sm font-medium text-gray-600">Disability Grant</th>
+                      <th className="p-4 text-sm font-medium text-gray-600">Children's Grants</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {extraContent.paymentSchedule.months.map((item, index) => (
+                      <tr key={index} className="border-t">
+                        <td className="p-4 font-medium text-gray-900">{item.month}</td>
+                        <td className="p-4 text-gray-700">{item.olderPersons}</td>
+                        <td className="p-4 text-gray-700">{item.disability}</td>
+                        <td className="p-4 text-gray-700">{item.childrens}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Payment Methods Section */}
+            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">{extraContent.paymentMethods.heading}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {extraContent.paymentMethods.methods.map((method, index) => (
+                  <div key={index}>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">{method.name}</h3>
+                    <p className="text-gray-600">{method.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="bg-white rounded-lg shadow-sm p-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">{extraContent.faqs.heading}</h2>
+              <div className="space-y-4">
+                {extraContent.faqs.questions.map((faq, index) => (
+                  <div key={index} className="border-b last:border-b-0 pb-4">
+                    <button
+                      onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                      className="w-full text-left flex justify-between items-center"
+                    >
+                      <h3 className="text-lg font-medium text-gray-800">{faq.q}</h3>
+                      <ChevronRight className={`w-5 h-5 transition-transform ${expandedFaq === index ? 'rotate-90' : ''}`} />
+                    </button>
+                    {expandedFaq === index && (
+                      <div className="mt-2 text-gray-600">
+                        <p>{faq.a}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
