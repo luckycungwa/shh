@@ -102,5 +102,68 @@
     "tags": ["processing time", "approval", "application", "waiting period"],
     "helpful": 198,
     "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": "faq-011",
+    "question": "What is the Foster Child Grant and who can apply?",
+    "answer": "<p>The Foster Child Grant is financial support for people who are caring for a foster child. To apply, you must be a South African citizen, permanent resident, or refugee, and you must have a court order that places the child in your care. The child must be under 18 and you must pass the means test.</p>",
+    "category": "Grant Types",
+    "tags": ["foster child grant", "eligibility", "application"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
+  },
+  {
+    "id": "faq-012",
+    "question": "What is the Care Dependency Grant?",
+    "answer": "<p>The Care Dependency Grant is for caregivers of children under 18 who have a severe, permanent disability and require full-time care. The caregiver must be a South African citizen, permanent resident, or refugee, and the child must have a medical report confirming the disability. The grant is not means-tested.</p>",
+    "category": "Grant Types",
+    "tags": ["care dependency grant", "eligibility", "disability"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
+  },
+  {
+    "id": "faq-013",
+    "question": "What is the War Veterans Grant?",
+    "answer": "<p>The War Veterans Grant is for people who served in the Second World War (1939-1945) or the Korean War (1950-1953). Applicants must be South African citizens or permanent residents, be 60 years or older, or be disabled. They must also pass a means test and not be receiving any other social grant.</p>",
+    "category": "Grant Types",
+    "tags": ["war veterans grant", "eligibility", "veterans"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
+  },
+  {
+    "id": "faq-014",
+    "question": "What is a Grant-In-Aid?",
+    "answer": "<p>A Grant-In-Aid is an additional grant for recipients of an Older Persons Grant, Disability Grant, or War Veterans Grant who are unable to care for themselves and need full-time care from another person. It is intended to help pay the person who takes care of you.</p>",
+    "category": "Grant Types",
+    "tags": ["grant-in-aid", "eligibility", "caregiver"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
+  },
+  {
+    "id": "faq-015",
+    "question": "How do I apply for a grant if I am bedridden?",
+    "answer": "<p>If you are too sick, old, or disabled to apply for a grant yourself, you can have a family member or friend apply on your behalf. They will need to bring a letter from you and a doctor's note explaining why you cannot apply in person. SASSA can also arrange for a home visit in exceptional circumstances.</p>",
+    "category": "Applications",
+    "tags": ["application", "bedridden", "home visit"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
+  },
+  {
+    "id": "faq-016",
+    "question": "What happens to my grant if I am hospitalized?",
+    "answer": "<p>If you are admitted to a state institution (like a hospital or prison) for more than three months, your grant may be suspended. You need to inform SASSA about your situation. For shorter hospital stays, your grant should not be affected.</p>",
+    "category": "Grant Management",
+    "tags": ["hospitalization", "grant suspension", "rules"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
+  },
+  {
+    "id": "faq-017",
+    "question": "Can I use my grant to get a loan?",
+    "answer": "<p>It is illegal for anyone to take your SASSA card and PIN as security for a loan. This includes moneylenders (mashonisas). If you need a loan, you should approach a registered financial institution. Never use your SASSA grant as security for a loan.</p>",
+    "category": "Grant Management",
+    "tags": ["loan", "moneylenders", "illegal"],
+    "helpful": 0,
+    "lastUpdated": "2025-08-24"
   }
 ]
