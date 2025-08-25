@@ -22,8 +22,114 @@
         "name": "Child Support Grant",
         "description": "This grant is for the primary caregiver of a child under the age of 18. The caregiver must pass a means test, and both the caregiver and the child must reside in South Africa. This grant aims to assist lower-income households in covering the basic needs of their children.",
         "link": "/child-support-grant-guide"
+      },
+      {
+        "name": "Foster Child Grant",
+        "description": "This grant is for foster parents of a child under the age of 18 who has been placed in their care by a court order. The aim is to provide financial assistance to ensure the child's well-being.",
+        "link": "/foster-child-grant-guide"
+      },
+      {
+        "name": "Care Dependency Grant",
+        "description": "This grant is for the primary caregiver of a child under 18 with a severe, permanent disability that requires full-time care. A medical assessment is required to confirm the level of care needed.",
+        "link": "/care-dependency-grant-guide"
+      },
+      {
+        "name": "War Veterans Grant",
+        "description": "This grant is for individuals who served in the Second World War or the Korean War. Applicants must be over 60 years old or disabled and meet the residency and means test requirements.",
+        "link": "/war-veterans-grant-guide"
+      },
+      {
+        "name": "Grant-In-Aid",
+        "description": "This is an additional grant for recipients of an Older Persons, Disability, or War Veterans Grant who require full-time care from another person. It helps cover the cost of hiring a caregiver.",
+        "link": "/grant-in-aid-guide"
       }
     ],
     "outro": "For detailed information on how to apply, eligibility requirements, and the necessary documents for each grant, please visit our comprehensive guides section."
+  },
+  "howToApply": {
+    "title": "How to Apply for a SASSA Grant",
+    "intro": "Applying for a SASSA grant can seem daunting, but we've broken it down into simple steps. You can apply either online or in person at a SASSA office. Here’s a general guide to help you through the process.",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "Gather Your Documents",
+        "description": "Before you start, make sure you have all the necessary documents. This typically includes your 13-digit bar-coded ID, proof of income, proof of residence, and any other specific documents required for the grant you are applying for (e.g., birth certificates for child grants, medical reports for disability grants)."
+      },
+      {
+        "id": "step2",
+        "title": "Choose Your Application Method",
+        "description": "You can apply online for certain grants like the SRD grant through the official SASSA website. For other grants, you will need to visit a SASSA office. Check the specific requirements for your grant."
+      },
+      {
+        "id": "step3",
+        "title": "Complete the Application Form",
+        "description": "Fill out the application form carefully and accurately. If you are at a SASSA office, an official will assist you. Ensure all information is correct to avoid delays."
+      },
+      {
+        "id": "step4",
+        "title": "Submit and Get a Receipt",
+        "description": "Once you submit your application, you will receive a dated receipt with the name of the SASSA official who assisted you. Keep this receipt safe as it is your proof of application."
+      },
+      {
+        "id": "step5",
+        "title": "Await the Outcome",
+        "description": "SASSA will process your application, which can take up to three months. You can check your application status during this time. If your grant is approved, you will start receiving payments from the date you applied."
+      }
+    ],
+    "outro": "If your application is declined, you have the right to appeal the decision within 90 days. You will be provided with a reason for the decline."
+  },
+  "statusCheckMethods": {
+    "title": "How to Check Your SASSA Status",
+    "intro": "It's important to regularly check the status of your SASSA application or grant. Here are the different ways you can do it:",
+    "methods": [
+      {
+        "name": "Online Portal",
+        "description": "The official SASSA website has a status check portal. You will need your ID number and the phone number you used to apply.",
+        "icon": "online"
+      },
+      {
+        "name": "WhatsApp",
+        "description": "Save the SASSA WhatsApp number (082 046 8553) and send a message with the word 'SASSA'. Follow the prompts to check your status.",
+        "icon": "whatsapp"
+      },
+      {
+        "name": "SMS/USSD",
+        "description": "You can check your status by dialing a USSD code (*120*3210# or *120*69277#) from your phone or by sending an SMS with your ID number to the SASSA number.",
+        "icon": "sms"
+      },
+      {
+        "name": "Moya App",
+        "description": "The Moya App is a data-free application that allows you to check your SASSA status without using any mobile data.",
+        "icon": "app"
+      },
+      {
+        "name": "Phone Call",
+        "description": "You can call the SASSA toll-free number (0800 60 10 11) and speak to an agent who will help you check your status.",
+        "icon": "phone"
+      }
+    ]
+  },
+  "latestNews": {
+    "title": "Latest News & Updates",
+    "articles": [
+      {
+        "id": "news1",
+        "title": "SRD Grant Extended to March 2026",
+        "summary": "The South African government has announced the extension of the SRD R370 grant until March 2026, providing continued support to millions of vulnerable citizens.",
+        "date": "2025-08-20"
+      },
+      {
+        "id": "news2",
+        "title": "SASSA Warns Against New Phishing Scams",
+        "summary": "SASSA has issued a warning about new phishing scams circulating via SMS and email. Beneficiaries are advised not to click on any suspicious links or share their personal information.",
+        "date": "2025-08-15"
+      },
+      {
+        "id": "news3",
+        "title": "Biometric Identity Verification for New Applicants",
+        "summary": "SASSA is rolling out a new biometric identity verification system for all new grant applicants to enhance security and prevent fraud.",
+        "date": "2025-08-10"
+      }
+    ]
   }
 }

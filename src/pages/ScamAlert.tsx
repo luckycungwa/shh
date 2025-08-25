@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, AlertTriangle, Search, Phone, Mail, MessageSquare, ExternalLink, Eye, EyeOff } from 'lucide-react';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import CommonScamRedFlags from '../components/ScamAlert/CommonScamRedFlags';
+import ScamPreventionChecklist from '../components/ScamAlert/ScamPreventionChecklist';
 
 interface Scam {
   id: string;
@@ -15,8 +17,36 @@ interface Scam {
   examples?: string[];
 }
 
+interface ScamPreventionData {
+  redFlags: {
+    title: string;
+    intro: string;
+    flags: Array<{
+      id: string;
+      title: string;
+      description: string;
+      icon: string;
+    }>;
+  };
+  checklist: {
+    title: string;
+    intro: string;
+    items: Array<{
+      id: string;
+      text: string;
+      isInitiallyChecked: boolean;
+      link?: {
+        text: string;
+        url: string;
+        isExternal: boolean;
+      };
+    }>;
+  };
+}
+
 const ScamAlert: React.FC = () => {
   const [scams, setScams] = useState<Scam[]>([]);
+  const [scamPreventionData, setScamPreventionData] = useState<ScamPreventionData | null>(null);
   const [filteredScams, setFilteredScams] = useState<Scam[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -29,16 +59,22 @@ const ScamAlert: React.FC = () => {
   const [showScamChecker, setShowScamChecker] = useState(true);
 
   useEffect(() => {
-    const fetchScams = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a4ac2443b1c97be922a3c7/latest');
-        if (!response.ok) {
-          throw new Error('Failed to fetch scam data');
-        }
-        const jsonResponse = await response.json();
-        const data: Scam[] = jsonResponse.record;
-        setScams(data);
-        setFilteredScams(data);
+        const [scamsApiResponse, scamsLocalResponse, scamPreventionResponse] = await Promise.all([
+          fetch('https://api.jsonbin.io/v3/b/68a4ac2443b1c97be922a3c7/latest').then(res => res.ok ? res.json() : Promise.resolve({ record: [] })),
+          fetch('/data/newScams.json').then(res => res.ok ? res.json() : Promise.resolve([])),
+          fetch('/data/scamPrevention.json').then(res => res.ok ? res.json() : Promise.resolve(null))
+        ]);
+
+        const apiScams: Scam[] = scamsApiResponse.record || [];
+        const localScams: Scam[] = scamsLocalResponse || [];
+        const allScams = [...apiScams, ...localScams];
+
+        setScams(allScams);
+        setFilteredScams(allScams);
+        setScamPreventionData(scamPreventionResponse);
+
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
@@ -46,7 +82,7 @@ const ScamAlert: React.FC = () => {
       }
     };
 
-    fetchScams();
+    fetchData();
   }, []);
 
   useEffect(() => {
@@ -185,6 +221,14 @@ const ScamAlert: React.FC = () => {
               Protect yourself from SASSA-related scams and fraud. Learn to identify threats and report suspicious activity.
             </p>
           </div>
+
+          {/* Scam Prevention Hub */}
+          {scamPreventionData && (
+            <div className="bg-white rounded-lg shadow-sm p-6 mb-8 space-y-8">
+              <CommonScamRedFlags content={scamPreventionData.redFlags} />
+              <ScamPreventionChecklist content={scamPreventionData.checklist} />
+            </div>
+          )}
 
           {/* Scam Checker Tool */}
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8">

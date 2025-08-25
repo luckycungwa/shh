@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { Search, Calendar, Shield, Users, MapPin, HelpCircle, ArrowRight, TrendingUp, Clock, AlertTriangle } from 'lucide-react';
 import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import HowToApply from '../components/Home/HowToApply';
+import StatusCheckMethods from '../components/Home/StatusCheckMethods';
+import NewsAndUpdates from '../components/Home/NewsAndUpdates';
 
 interface Update {
   id: string;
@@ -37,6 +40,34 @@ interface HomeContent {
       link: string;
     }>;
     outro: string;
+  };
+  howToApply: {
+    title: string;
+    intro: string;
+    steps: Array<{
+      id: string;
+      title: string;
+      description: string;
+    }>;
+    outro: string;
+  };
+  statusCheckMethods: {
+    title: string;
+    intro: string;
+    methods: Array<{
+      name: string;
+      description: string;
+      icon: string;
+    }>;
+  };
+  latestNews: {
+    title: string;
+    articles: Array<{
+      id: string;
+      title: string;
+      summary: string;
+      date: string;
+    }>;
   };
 }
 
@@ -450,7 +481,7 @@ const Home: React.FC = () => {
                   {homeContent.grantTypes.intro}
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {homeContent.grantTypes.grants.map((grant, index) => (
                   <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{grant.name}</h3>
@@ -464,6 +495,15 @@ const Home: React.FC = () => {
             </div>
           </section>
         )}
+
+        {/* How to Apply Section */}
+        {homeContent && homeContent.howToApply && <HowToApply content={homeContent.howToApply} />}
+
+        {/* Status Check Methods Section */}
+        {homeContent && homeContent.statusCheckMethods && <StatusCheckMethods content={homeContent.statusCheckMethods} />}
+
+        {/* Latest News Section */}
+        {homeContent && homeContent.latestNews && <NewsAndUpdates content={homeContent.latestNews} />}
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-primary-dark text-white">
