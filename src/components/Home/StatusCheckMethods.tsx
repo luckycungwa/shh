@@ -1,16 +1,16 @@
 import React from 'react';
-import { Smartphone, MessageSquare, Globe, Phone, AppWindow } from 'lucide-react';
+import { Smartphone, MessageSquare, Globe, Phone, AppWindow } from "lucide-react"
 
 interface StatusCheckMethodsProps {
   content: {
-    title: string;
-    intro: string;
+    title: string
+    intro: string
     methods: Array<{
-      name: string;
-      description: string;
-      icon: string;
-    }>;
-  };
+      name: string
+      description: string
+      icon: string
+    }>
+  }
 }
 
 const iconMap: { [key: string]: React.ReactNode } = {
@@ -19,7 +19,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
   sms: <Smartphone className="w-8 h-8" />,
   app: <AppWindow className="w-8 h-8" />,
   phone: <Phone className="w-8 h-8" />,
-};
+}
 
 const StatusCheckMethods: React.FC<StatusCheckMethodsProps> = ({ content }) => {
   return (
@@ -44,7 +44,7 @@ const StatusCheckMethods: React.FC<StatusCheckMethodsProps> = ({ content }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default StatusCheckMethods;

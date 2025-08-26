@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { Search, BookOpen, Clock, User, ExternalLink } from 'lucide-react';
 import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import RejectionMessages from '../components/Home/rejection-messages';
+import ProvincialOffices from '../components/Home/provincial-offices';
 
 interface Guide {
   id: string;
@@ -280,6 +282,11 @@ const Guides: React.FC = () => {
               ))
             )}
           </div>
+          <section>
+             {/* REJECTION MESSAGES */}
+        <RejectionMessages />
+        <ProvincialOffices />
+      </section>
 
           {/* Contact CTA */}
           <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-sm">

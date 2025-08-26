@@ -56,7 +56,7 @@ const NotFound: React.FC = () => {
             <p>Looking for something specific? Try these popular sections:</p>
             <div className="mt-2 flex flex-wrap gap-2 justify-center">
               <Link to="/payment-calendar" className="text-primary-gold hover:text-primary-gold">
-                Payment Calendar
+                Payment Date
               </Link>
               <span>•</span>
               <Link to="/scam-alert" className="text-primary-gold hover:text-primary-gold">

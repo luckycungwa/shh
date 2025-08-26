@@ -1,6 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
+// Declare process.env for TypeScript in browser environments
+declare const process: {
+  env: {
+    NODE_ENV: 'development' | 'production' | 'test' | string;
+    [key: string]: string | undefined;
+  };
+};
+
 interface Props {
   children: ReactNode;
 }

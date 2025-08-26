@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+import { ExternalLink, Phone, Mail, MapPin, Link2 } from 'lucide-react';
 import { useAppContext } from '../../contexts/AppContext';
 
 const Footer: React.FC = () => {
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
                 <span>South Africa</span>
               </div>
               <div className="text-center">
-                Built with ❤️ for SA beneficiaries
+                Created by <Link to="https://www.44tagstudios.co.za/" target="_blank" className="text-orange-400 underline hover:text-primary-gold transition-colors duration-200">44Tag Studios </Link>
               </div>
             </div>
           </div>

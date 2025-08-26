@@ -21,3 +21,9 @@ Add Updates and read page (pseudo blog)
 Fix dark/light mode
 Update resources page to include head office and local offices
 FAQ- Remove account management & travel
+
+systemPrompt - https://api.jsonbin.io/v3/b/68a9e74243b1c97be92696b3
+offices - https://api.jsonbin.io/v3/b/68a68cb3ae596e708fcfa5f5
+guides - https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421
+faqs - https://api.jsonbin.io/v3/b/68a5ea6bd0ea881f405e5846
+

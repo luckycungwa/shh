@@ -1,16 +1,16 @@
 import React from 'react';
-import { Rss } from 'lucide-react';
+import { Rss } from "lucide-react"
 
 interface NewsAndUpdatesProps {
   content: {
-    title: string;
+    title: string
     articles: Array<{
-      id: string;
-      title:string;
-      summary: string;
-      date: string;
-    }>;
-  };
+      id: string
+      title: string
+      summary: string
+      date: string
+    }>
+  }
 }
 
 const NewsAndUpdates: React.FC<NewsAndUpdatesProps> = ({ content }) => {
@@ -36,7 +36,7 @@ const NewsAndUpdates: React.FC<NewsAndUpdatesProps> = ({ content }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default NewsAndUpdates;

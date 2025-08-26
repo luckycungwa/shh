@@ -77,7 +77,7 @@ const CookieConsent: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t shadow-lg">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white/80 backdrop-blur-md bg-opacity-60 border-t shadow-lg">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-start space-x-4">
           <div className="flex-shrink-0">
