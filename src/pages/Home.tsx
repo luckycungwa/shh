@@ -65,7 +65,7 @@ interface HomeContent {
     title: string;
     intro: string;
     methods: Array<{
-      name: string;
+      name:string;
       description: string;
       icon: string;
     }>;
@@ -80,109 +80,6 @@ interface HomeContent {
     }>;
   };
 }
-
-const sassaData = {
-  // how to apply data
-  howToApply: {
-    title:
-      "Step-by-Step Guide: How to Apply for SASSA Grants",
-    intro:
-      "Learning how to apply for SASSA grants is easier with this step-by-step guide. Whether you need the SASSA SRD R370 grant, Child Support Grant, or Disability Grant, we simplify the process for financial aid in South Africa.",
-    steps: [
-      {
-        id: "step1",
-        title: "Gather Required SASSA Documents 2025",
-        description:
-          "Begin by gathering essential SASSA documents 2025 to avoid delays in your application. You'll need a 13-digit bar-coded South African ID, proof of income, proof of residence, and grant-specific items like a child's birth certificate for the Child Support Grant.",
-      },
-      {
-        id: "step2",
-        title: "Select Your SASSA Application Method",
-        description:
-          "Choose between online or in-person SASSA grant applications 2025. Apply for the SRD R370 grant online at srd.sassa.gov.za with your ID and phone number. For other grants like Older Persons or Disability, visit a SASSA office near you.",
-      },
-      {
-        id: "step3",
-        title: "Complete Your SASSA Application Form",
-        description:
-          "Accurately fill out the SASSA application form 2025 online or with help at a SASSA office. Verify details like ID number, income, and contact info to avoid rejections. SASSA staff assist in-person applicants.",
-      },
-      {
-        id: "step4",
-        title: "Submit and Secure Your SASSA Receipt",
-        description:
-          "After submission, get a dated receipt with the SASSA official's name (in-person) or reference number (online) as proof. Keep it for tracking or appeals.",
-      },
-      {
-        id: "step5",
-        title: "Wait for Your SASSA Grant Outcome",
-        description:
-          "SASSA processes applications within 90 days. Track via SASSA status tracker or call 0800 60 10 11. Approved payments begin from the application date. If declined, appeal within 90 days.",
-      },
-    ],
-    outro:
-      "Mastering how to apply for SASSA grants 2025 is simple with preparation. Use our SASSA eligibility guide for documents and appeals. Need help? Contact SASSA at 0800 60 10 11 or find a SASSA office near you.",
-  },
-  // Grant Types Data
-  grantTypes: {
-    title:
-      "Discover All SASSA Grants 2025: Eligibility, Application, and Benefits Guide",
-    intro:
-      "Navigating SASSA grants 2025 can be daunting, but finding the right SASSA grant is your key to essential financial support in South Africa. Whether you're a struggling parent, a senior citizen, or unemployed, SASSA grants cover critical needs like food, education, and healthcare.",
-    grants: [
-      {
-        name: "SRD R370 Grant (Social Relief of Distress)",
-        description:
-          "The SRD R370 Grant 2025, now increased to R370 monthly, is a vital SASSA relief fund for South African citizens, refugees, asylum seekers, and special permit holders aged 18–59 with no other income.",
-        link: "/srd-grant-guide",
-      },
-      {
-        name: "Older Persons Grant (Old Age Pension)",
-        description:
-          "The SASSA Older Persons Grant 2025 supports South Africans, permanent residents, or refugees aged 60+ unable to work. Offering R2,320/month (under 75) or R2,340/month (75+), it helps seniors with essentials like healthcare and food.",
-        link: "/old-age-grant-guide",
-      },
-      {
-        name: "Disability Grant",
-        description:
-          "The SASSA Disability Grant 2025 provides R2,320/month for citizens aged 18–59 with a physical or mental disability hindering work for over six months.",
-        link: "/disability-grant-guide",
-      },
-      {
-        name: "Child Support Grant",
-        description:
-          "The SASSA Child Support Grant 2025 offers R570/month to primary caregivers of children under 18 in low-income households.",
-        link: "/child-support-grant-guide",
-      },
-      {
-        name: "Foster Child Grant",
-        description:
-          "The SASSA Foster Child Grant 2025 pays R1,180/month to foster parents caring for court-placed children under 18, covering food, clothing, and education.",
-        link: "/foster-child-grant-guide",
-      },
-      {
-        name: "Care Dependency Grant",
-        description:
-          "The SASSA Care Dependency Grant 2025 provides R2,320/month for caregivers of children under 18 with severe, permanent disabilities needing full-time care.",
-        link: "/care-dependency-grant-guide",
-      },
-      {
-        name: "War Veterans Grant",
-        description:
-          "The SASSA War Veterans Grant 2025 offers R2,340/month for Second World War or Korean War veterans over 60 or disabled, meeting residency and means test criteria.",
-        link: "/war-veterans-grant-guide",
-      },
-      {
-        name: "Grant-In-Aid",
-        description:
-          "The SASSA Grant-In-Aid 2025 adds R570/month for Older Persons, Disability, or War Veterans Grant recipients needing full-time care, aiding caregiver costs.",
-        link: "/grant-in-aid-guide",
-      },
-    ],
-    outro:
-      "Selecting the best SASSA grant 2025 can change your life. Dive into our SASSA application guides for detailed eligibility, documents, and steps.",
-  },
-};
 
 const Home: React.FC = () => {
   const { translations, searchQuery, setSearchQuery } = useAppContext();
@@ -312,23 +209,48 @@ const Home: React.FC = () => {
           content="SASSA payment dates 2025, avoid SASSA scams, SASSA grant application, South African social security, SASSA help"
         />
         <link rel="canonical" href="https://sassahelphub.co.za" />
+
+        {/* Open Graph tags */}
+        <meta property="og:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
+        <meta property="og:description" content="Get accurate SASSA information, payment dates 2025, scam protection, and community support." />
+        <meta property="og:url" content="https://sassahelphub.co.za" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta property="og:image:alt" content="SASSA Help Hub Logo" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
+        <meta name="twitter:description" content="Get accurate SASSA information, payment dates 2025, scam protection, and community support." />
+        <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "SASSA Help Hub",
-            description:
-              "Unofficial SASSA resource for South African beneficiaries",
-            url: "https://sassahelphub.co.za",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate:
-                  "https://sassahelphub.co.za/faq?search={search_term_string}",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                name: "SASSA Help Hub",
+                description:
+                  "Unofficial SASSA resource for South African beneficiaries",
+                url: "https://sassahelphub.co.za",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate:
+                      "https://sassahelphub.co.za/faq?search={search_term_string}",
+                  },
+                  "query-input": "required name=search_term_string",
+                },
               },
-              "query-input": "required name=search_term_string",
-            },
+              {
+                "@type": "Organization",
+                name: "SASSA Help Hub",
+                url: "https://sassahelphub.co.za",
+                logo: "https://sassahelphub.co.za/logo.png",
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -455,7 +377,7 @@ const Home: React.FC = () => {
               <div>
                 <img
                   src="/status-form.png"
-                  alt="sassa status check form"
+                  alt="A form to check SASSA SRD status, with fields for South African ID number and cellphone number."
                   className="mt-4 mx-auto"
                 />
                 <span className="flex items-start p-0 m-0 text-xs text-left text-gray-400">
@@ -669,13 +591,13 @@ const Home: React.FC = () => {
         </section>
 
         {/* Grant Types Info Section */}
-        <GrantTypes grantTypes={sassaData.grantTypes} />
+        {homeContent && <GrantTypes grantTypes={homeContent.grantTypes} />}
 
         {/* Rejection messages */}
 
         
         {/* How to Apply Section */}
-        <HowToApply content={sassaData.howToApply} />
+        {homeContent && <HowToApply content={homeContent.howToApply} />}
        
 
         {/* CTA Section */}
