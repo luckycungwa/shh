@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-dark text-white">
+    <footer className="bg-primary-dark dark:bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-primary-gold">
               {translations.aboutSassaHelpHub || 'About SASSA Help Hub'}
             </h3>
-            <p className="text-secondary-gray text-sm mb-4">
+            <p className="text-secondary-gray dark:text-gray-400 text-sm mb-4">
               {translations.footerAbout || ''}
             </p>
-            <div className="flex items-start space-x-2 text-xs text-secondary-gray">
+            <div className="flex items-start space-x-2 text-xs text-secondary-gray dark:text-gray-400">
               <div className="w-1 h-1 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
               <span>
                 {translations.footerDisclaimer || 'This is an independent resource and is not affiliated with the SASSA. Always verify information directly with official SASSA channels.'}
@@ -34,27 +34,27 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/faq" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                <Link to="/faq" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
                   {translations.faq || 'FAQ'}
                 </Link>
               </li>
               <li>
-                <Link to="/guides" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                <Link to="/guides" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
                   {translations.guides || 'Guides'}
                 </Link>
               </li>
               <li>
-                <Link to="/payment-calendar" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                <Link to="/payment-calendar" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
                   {translations.paymentCalendar || 'Payment Calendar'}
                 </Link>
               </li>
               <li>
-                <Link to="/scam-alert" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                <Link to="/scam-alert" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
                   {translations.scamAlert || 'Scam Alert'}
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                <Link to="/resources" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
                   {translations.resources || 'Resources'}
                 </Link>
               </li>
@@ -110,6 +110,11 @@ const Footer: React.FC = () => {
               {translations.legalAndSupport || 'Legal & Support'}
             </h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/about" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
+                  {translations.about || 'About Us'}
+                </Link>
+              </li>
               <li>
                 <Link to="/privacy" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.privacyPolicy || 'Privacy Policy'}

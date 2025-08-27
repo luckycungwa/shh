@@ -167,14 +167,14 @@ const FAQ: React.FC = () => {
         )}
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50 py-8">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {translations.faqTitle || 'Frequently Asked Questions'}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               {translations.faqDescription || 'Find answers to the most common questions about SASSA services, payments, and eligibility requirements.'}
             </p>
           </div>
@@ -187,7 +187,7 @@ const FAQ: React.FC = () => {
                 value={localSearchQuery}
                 onChange={(e) => setLocalSearchQuery(e.target.value)}
                 placeholder={translations.searchFaqPlaceholder || 'Search FAQs...'}
-                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 pr-16 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <button
@@ -212,7 +212,7 @@ const FAQ: React.FC = () => {
                     className={`px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 ${
                       selectedCategory === category
                         ? 'bg-primary-gold text-primary-black'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                        : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600'
                     }`}
                   >
                     {category === 'all' ? translations.allCategories || 'All' : category}
@@ -224,7 +224,7 @@ const FAQ: React.FC = () => {
 
           {/* Results Count */}
           <div className="mb-6">
-            <p className="text-sm text-gray-600 text-center">
+            <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
               {filteredFaqs.length === 1
                 ? translations.oneResultFound || '1 result found'
                 : translations.resultsFound?.replace('{count}', filteredFaqs.length.toString()) || `${filteredFaqs.length} results found`}
@@ -235,7 +235,7 @@ const FAQ: React.FC = () => {
           <div className="space-y-4">
             {filteredFaqs.length === 0 ? (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">
+                <p className="text-gray-500 dark:text-gray-400 text-lg">
                   {translations.noFaqsFound || 'No FAQs found matching your search criteria.'}
                 </p>
               </div>
@@ -243,19 +243,19 @@ const FAQ: React.FC = () => {
               filteredFaqs.map((faq) => (
                 <div
                   key={faq.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden"
                 >
                   <button
                     onClick={() => toggleExpanded(faq.id)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors duration-200"
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-50 transition-colors duration-200"
                     aria-expanded={expandedItems.has(faq.id)}
                   >
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                         {faq.question}
                       </h3>
-                      <div className="flex items-center space-x-4 text-sm text-gray-500">
-                        <span className="bg-gray-100 px-2 py-1 rounded-full">
+                      <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+                        <span className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">
                           {faq.category}
                         </span>
                         <span className="flex items-center">
@@ -291,9 +291,9 @@ const FAQ: React.FC = () => {
                   </button>
 
                   {expandedItems.has(faq.id) && (
-                    <div className="px-6 pb-6 border-t border-gray-100">
+                    <div className="px-6 pb-6 border-t border-gray-100 dark:border-gray-700">
                       <div className="pt-4">
-                        <div className="prose max-w-none text-gray-700">
+                        <div className="prose max-w-none text-gray-700 dark:text-gray-300">
                           <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </div>
 
@@ -303,7 +303,7 @@ const FAQ: React.FC = () => {
                             {faq.tags.map((tag, index) => (
                               <span
                                 key={index}
-                                className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
+                                className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full"
                               >
                                 #{tag}
                               </span>
@@ -314,7 +314,7 @@ const FAQ: React.FC = () => {
                         {/* Related Links */}
                         {faq.relatedLinks && faq.relatedLinks.length > 0 && (
                           <div className="mt-4">
-                            <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
                               {translations.relatedLinks || 'Related Links:'}
                             </h4>
                             <ul className="space-y-1">
@@ -343,11 +343,11 @@ const FAQ: React.FC = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <div className="mt-12 text-center bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
               {translations.stillNeedHelp || "Still need help?"}
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               {translations.contactSassaDirectly || "Contact SASSA directly for personalized assistance."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,7 +361,7 @@ const FAQ: React.FC = () => {
                 href="https://www.sassa.gov.za"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 inline-flex items-center"
+                className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 inline-flex items-center"
               >
                 {translations.visitOfficialWebsite || "Visit Official Website"}
                 <ExternalLink className="w-4 h-4 ml-2" />

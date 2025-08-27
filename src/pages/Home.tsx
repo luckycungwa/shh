@@ -255,7 +255,7 @@ const Home: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary-black via-primary-dark to-primary-black text-white py-20 px-4">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -282,7 +282,7 @@ const Home: React.FC = () => {
                     translations.searchPlaceholder ||
                     "Search FAQs, guides, or ask a question..."
                   }
-                  className="w-full px-6 py-4 pl-14 text-gray-900 bg-white rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-primary-gold focus:ring-opacity-50"
+                  className="w-full px-6 py-4 pl-14 text-gray-900 bg-white dark:bg-gray-800 dark:text-white rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-primary-gold focus:ring-opacity-50"
                   aria-label="Search FAQs and guides"
                 />
                 <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -321,12 +321,12 @@ const Home: React.FC = () => {
         </section>
 
         {/* SASSA Status Check Section */}
-        <section className="py-16 px-4 bg-gray-100">
+        <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               SRD SASSA Status Check for R370
             </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
               Enter your South African ID number and the cell phone number you
               used during your application to see your payment dates and status
               for{" "}
@@ -340,11 +340,11 @@ const Home: React.FC = () => {
               action="https://srd.sassa.gov.za/sc19/status"
               method="get"
               target="_blank"
-              className="bg-white p-8 rounded-lg shadow-md space-y-6"
+              className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md space-y-6"
             >
               {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="id_number" className="block text-sm font-medium text-gray-700 text-left mb-1">
+                  <label htmlFor="id_number" className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">
                     ID Number
                   </label>
                   <input
@@ -355,11 +355,11 @@ const Home: React.FC = () => {
                     title="Please enter a valid 13-digit South African ID number"
                     required
                     placeholder="Your 13-digit SA ID Number"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
                   />
                 </div>
                 <div>
-                  <label htmlFor="cell_phone" className="block text-sm font-medium text-gray-700 text-left mb-1">
+                  <label htmlFor="cell_phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">
                     Cellphone Number
                   </label>
                   <input
@@ -370,7 +370,7 @@ const Home: React.FC = () => {
                     title="Please enter a valid 10-digit cellphone number"
                     required
                     placeholder="Your 10-digit cellphone number"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
                   />
                 </div>
               </div> */}
@@ -380,7 +380,7 @@ const Home: React.FC = () => {
                   alt="A form to check SASSA SRD status, with fields for South African ID number and cellphone number."
                   className="mt-4 mx-auto"
                 />
-                <span className="flex items-start p-0 m-0 text-xs text-left text-gray-400">
+                <span className="flex items-start p-0 m-0 text-xs text-left text-gray-400 dark:text-gray-500">
                   sassa status check form image
                 </span>
               </div>
@@ -391,7 +391,7 @@ const Home: React.FC = () => {
               >
                 Check Status Now
               </button>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 This will securely redirect you to the official SASSA website to
                 check your status. We do not store your personal information.
               </p>
@@ -407,13 +407,13 @@ const Home: React.FC = () => {
         </section>
 
         {/* Quick Actions */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 {translations.quickActions || "Quick Actions"}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 {translations.quickActionsDesc ||
                   "Get instant access to the most important SASSA information and tools."}
               </p>
@@ -424,17 +424,17 @@ const Home: React.FC = () => {
                 <Link
                   key={index}
                   to={action.link}
-                  className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6"
+                  className="group bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-6"
                 >
                   <div
                     className={`inline-flex items-center justify-center w-12 h-12 ${action.color} text-white rounded-lg mb-4 group-hover:scale-110 transition-transform duration-200`}
                   >
                     {action.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-black">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-black">
                     {action.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{action.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">{action.description}</p>
                   <div className="flex items-center text-primary-gold font-medium group-hover:text-primary-gold">
                     {translations.learnMore || "Learn More"}
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
@@ -446,16 +446,16 @@ const Home: React.FC = () => {
         </section>
 
         {/* Upcoming Payment Dates Section */}
-        <section className="py-16 px-4 bg-gray-100">
+        <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Upcoming SASSA Grant Dates for{" "}
                 {new Date(
                   new Date().setMonth(new Date().getMonth() + 1)
                 ).toLocaleString("default", { month: "long", year: "numeric" })}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 Here are the confirmed payment dates for the major SASSA grants.
                 SRD R370 grant dates are variable and will be paid towards the
                 end of the month.
@@ -465,15 +465,15 @@ const Home: React.FC = () => {
               {paymentDates.map((payment, index) => (
                 <div
                   key={index}
-                  className="bg-white hover:shadow-md rounded-lg shadow-sm p-6 text-center border-2 border-gray-400"
+                  className="bg-white dark:bg-gray-900 hover:shadow-md rounded-lg shadow-sm p-6 text-center border-2 border-gray-400 dark:border-gray-600"
                 >
-                  <p className="text-sm font-semibold text-gray-600">
+                  <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
                     {payment.grant}
                   </p>
-                  <p className="text-2xl font-bold text-primary-black my-2">
+                  <p className="text-2xl font-bold text-primary-black dark:text-white my-2">
                     {new Date(payment.date).getDate()}
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
                     {payment.day},{" "}
                     {new Date(payment.date).toLocaleString("default", {
                       month: "long",
@@ -495,14 +495,14 @@ const Home: React.FC = () => {
         </section>
 
         {/* Latest Updates */}
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 bg-white dark:bg-gray-900">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-12">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   {translations.latestUpdates || "Latest Updates"}
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   {translations.latestUpdatesDesc ||
                     "Stay informed with the latest SASSA news and important announcements."}
                 </p>
@@ -530,50 +530,50 @@ const Home: React.FC = () => {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {updates.map((update) => (
-                  <article
-                    key={update.id}
-                    className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-200 hover:cursor-pointer"
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <span
-                        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                          update.type === "alert"
-                            ? "bg-red-100 text-red-800"
-                            : update.type === "news"
-                            ? "bg-blue-100 text-blue-800"
-                            : "bg-green-100 text-green-800"
-                        }`}
-                      >
-                        {update.type === "alert" && (
-                          <AlertTriangle className="w-3 h-3 mr-1" />
-                        )}
-                        {update.type.toUpperCase()}
-                      </span>
-                      {update.urgent && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-500 text-primary-black">
-                          {translations.urgent || "URGENT"}
+                  <Link to={`/updates/${update.id}`} key={update.id}>
+                    <article
+                      className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 hover:cursor-pointer h-full"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <span
+                          className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                            update.type === "alert"
+                              ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300"
+                              : update.type === "news"
+                              ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+                              : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+                          }`}
+                        >
+                          {update.type === "alert" && (
+                            <AlertTriangle className="w-3 h-3 mr-1" />
+                          )}
+                          {update.type.toUpperCase()}
                         </span>
-                      )}
-                    </div>
+                        {update.urgent && (
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-500 text-primary-black">
+                            {translations.urgent || "URGENT"}
+                          </span>
+                        )}
+                      </div>
 
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {update.title}
-                    </h3>
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        {update.title}
+                      </h3>
 
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                      {update.summary}
-                    </p>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
+                        {update.summary}
+                      </p>
 
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                      <time dateTime={update.date}>
-                        {new Date(update.date).toLocaleDateString()}
-                      </time>
-                      <span className="text-primary-gold font-medium">
-                        {/* Navigate to Updates pages > {slug} */}
-                        {translations.readMore || "Read More"}
-                      </span>
-                    </div>
-                  </article>
+                      <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mt-auto">
+                        <time dateTime={update.date}>
+                          {new Date(update.date).toLocaleDateString()}
+                        </time>
+                        <span className="text-primary-gold font-medium">
+                          {translations.readMore || "Read More"}
+                        </span>
+                      </div>
+                    </article>
+                  </Link>
                 ))}
               </div>
             )}
@@ -601,7 +601,7 @@ const Home: React.FC = () => {
        
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-primary-dark text-white">
+        <section className="py-16 px-4 bg-primary-dark dark:bg-black text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
               {translations.ctaTitle || "Need Help with SASSA Services?"}

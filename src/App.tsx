@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { AppProvider } from './contexts/AppContext';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
+import UpdatePage from './pages/UpdatePage';
 import FAQ from './pages/FAQ';
 import Guides from './pages/Guides';
 import PaymentCalendar from './pages/PaymentCalendar';
@@ -12,6 +13,7 @@ import Resources from './pages/Resources';
 // import Community from './pages/Community';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import About from './pages/About';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/Common/ErrorBoundary';
 import CookieConsent from './components/Common/CookieConsent';
@@ -26,6 +28,7 @@ function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/updates/:id" element={<UpdatePage />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/guides" element={<Guides />} />
                 <Route path="/payment-calendar" element={<PaymentCalendar />} />
@@ -34,6 +37,7 @@ function App() {
                 {/* <Route path="/community" element={<Community />} /> */}
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
               <CookieConsent />

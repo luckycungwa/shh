@@ -36,7 +36,7 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-primary-black shadow-lg sticky top-0 z-50">
+    <header className="bg-primary-black dark:bg-gray-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
                     ? 'bg-primary-gold text-primary-black'
-                    : 'text-white hover:bg-primary-dark hover:text-primary-gold'
+                    : 'text-white dark:text-gray-300 hover:bg-primary-dark dark:hover:bg-gray-700 hover:text-primary-gold'
                 }`}
                 aria-current={isActive(item.path) ? 'page' : undefined}
               >
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
                 }
               </button>
               {isThemeMenuOpen && (
-                <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="absolute right-0 mt-2 py-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                   {themes.map((themeOption) => (
                     <button
                       key={themeOption.value}
@@ -92,8 +92,8 @@ const Header: React.FC = () => {
                         setTheme(themeOption.value as 'light' | 'dark' | 'high-contrast');
                         setIsThemeMenuOpen(false);
                       }}
-                      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${
-                        theme === themeOption.value ? 'bg-gray-100' : ''
+                      className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                        theme === themeOption.value ? 'bg-gray-100 dark:bg-gray-700' : ''
                       }`}
                     >
                       <themeOption.icon className="w-4 h-4 mr-2" />
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
                 <span className="text-xs uppercase">{language}</span>
               </button>
               {isLanguageMenuOpen && (
-                <div className="absolute right-0 mt-2 py-2 w-32 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="absolute right-0 mt-2 py-2 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
@@ -125,8 +125,8 @@ const Header: React.FC = () => {
                         setLanguage(lang.code);
                         setIsLanguageMenuOpen(false);
                       }}
-                      className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${
-                        language === lang.code ? 'bg-gray-100' : ''
+                      className={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                        language === lang.code ? 'bg-gray-100 dark:bg-gray-700' : ''
                       }`}
                     >
                       {lang.name}
