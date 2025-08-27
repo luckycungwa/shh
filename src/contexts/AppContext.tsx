@@ -74,17 +74,20 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     }
   }, []);
 
-  // Load theme from localStorage
+  // Load and apply theme
   useEffect(() => {
-    try {
-      const savedTheme = localStorage.getItem('sassa-theme');
-      if (savedTheme) {
-        setTheme(savedTheme as 'light' | 'dark' | 'high-contrast');
-      }
-    } catch (err) {
-      console.error('Error loading theme:', err);
+    const savedTheme = localStorage.getItem('sassa-theme') as 'light' | 'dark' | 'high-contrast' | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
     }
   }, []);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark', 'high-contrast');
+    root.classList.add(theme);
+    localStorage.setItem('sassa-theme', theme);
+  }, [theme]);
 
   const addToFavorites = (id: string) => {
     const newFavorites = [...favorites, id];
