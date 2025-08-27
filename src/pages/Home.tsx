@@ -95,7 +95,7 @@ const Home: React.FC = () => {
         const [updatesResponse, paymentDatesResponse, homeContentResponse] =
           await Promise.all([
             fetch(
-              "https://api.jsonbin.io/v3/b/68a4ad18d0ea881f405d8b0c/latest"
+              "https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4"
             ),
             fetch("/data/paymentDates.json"),
             fetch("/data/homeContent.json"),

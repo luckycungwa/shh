@@ -25,7 +25,7 @@ const UpdatesListPage: React.FC = () => {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const response = await fetch("https://api.jsonbin.io/v3/b/68a4ad18d0ea881f405d8b0c/latest");
+        const response = await fetch("https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4");
         if (!response.ok) {
           throw new Error("Failed to fetch updates");
         }
