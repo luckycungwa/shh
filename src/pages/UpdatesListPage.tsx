@@ -127,7 +127,7 @@ const UpdatesListPage: React.FC = () => {
                         {update.summary}
                       </p>
                     </div>
-                    <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-500 dark:text-gray-400">
+                    <div className="mt-4 pt-4 border-t border-black/50 dark:border-gray-700 text-sm text-gray-500 dark:text-gray-400">
                       <time dateTime={update.date}>
                         {new Date(update.date).toLocaleDateString("en-US", {
                           year: "numeric",

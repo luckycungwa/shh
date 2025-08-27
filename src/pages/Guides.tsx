@@ -221,7 +221,7 @@ const Guides: React.FC = () => {
               filteredGuides.map((guide) => (
                 <div
                   key={guide.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-lg shadow-sm border border-black/50 overflow-hidden hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-3">

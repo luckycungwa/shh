@@ -4,9 +4,8 @@ import { Bell, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths } from 'date-fns';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import SrdStatusMessages from '../components/Home/SrdStatusMessages';
-import StatusCheckMethods from '../components/Home/StatusCheckMethods';
 import RejectionMessages from '../components/Home/rejection-messages';
-import homeContent from '../../data/homeContent.json';
+
 
 interface PaymentDate {
   date: string;
@@ -279,7 +278,7 @@ const PaymentCalendar: React.FC = () => {
                   <button
                     key={day.toISOString()}
                     onClick={() => setSelectedDate(day)}
-                    className={`p-2 min-h-[80px] border-b border-r border-gray-200 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                    className={`p-2 min-h-[80px] border-b border-r border-black/50 text-left hover:bg-gray-50 transition-colors duration-200 ${
                       !isSameMonth(day, currentDate) ? 'text-gray-400 bg-gray-50' : ''
                     } ${isSelected ? 'bg-primary-gold bg-opacity-20' : ''}`}
                   >
@@ -314,7 +313,7 @@ const PaymentCalendar: React.FC = () => {
               {getPaymentForDate(selectedDate).length > 0 ? (
                 <div className="space-y-3">
                   {getPaymentForDate(selectedDate).map((payment, index) => (
-                    <div key={index} className="border border-gray-200 rounded-lg p-4">
+                    <div key={index} className="border border-black/50 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-medium text-gray-900">{payment.grantType}</h4>
                         <span className="text-lg font-semibold text-primary-gold/50">
@@ -453,7 +452,7 @@ const PaymentCalendar: React.FC = () => {
                 ))}
               </div>
             </div>
-
+            <RejectionMessages />
             {/* FAQ Section */}
             <div className="bg-white rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">{extraContent.faqs.heading}</h2>
@@ -480,9 +479,9 @@ const PaymentCalendar: React.FC = () => {
         )}
       </div>
       <div>
-        <StatusCheckMethods content={homeContent.statusCheckMethods} />
         
-        <RejectionMessages />
+        
+        
       </div>
     </>
   );

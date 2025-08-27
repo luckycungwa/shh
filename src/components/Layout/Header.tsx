@@ -18,6 +18,9 @@ const Header: React.FC = () => {
     { path: '/scam-alert', label: translations.scamAlert || 'Scam Alert' },
     { path: '/resources', label: translations.resources || 'Resources' },
    { path: '/faq', label: translations.faq || 'FAQ' },
+  //  updates & its sub routes
+  { path: '/updates', label: translations.updates || 'Updates' },
+
     // { path: '/community', label: translations.community || 'Community' },
   ];
 
@@ -25,6 +28,7 @@ const Header: React.FC = () => {
     { code: 'en', name: 'English' },
     { code: 'zu', name: 'isiZulu' },
     { code: 'xh', name: 'isiXhosa' },
+    
   ];
 
   const themes = [
