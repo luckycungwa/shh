@@ -17,4 +17,20 @@
   .high-contrast body {
     @apply bg-black text-white;
   }
+
+  .prose a {
+    @apply text-primary-gold hover:text-yellow-700;
+  }
+
+  .dark .prose a {
+    @apply text-primary-gold hover:text-yellow-300;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-gray-900;
+  }
+
+  .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4, .dark .prose h5, .dark .prose h6 {
+    @apply text-white;
+  }
 }
