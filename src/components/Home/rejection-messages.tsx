@@ -2,8 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { AlertTriangle, CreditCard, User, Phone, Briefcase } from "lucide-react"
-import { Link } from "react-router-dom"
+import { AlertTriangle, FileX, CreditCard, User, Phone } from "lucide-react"
 
 interface RejectionReason {
   id: string
@@ -19,72 +18,72 @@ interface RejectionReason {
 
 const rejectionReasons: RejectionReason[] = [
   {
+    id: "incomplete-docs",
+    title: "Incomplete Documentation",
+    description: "Missing required documents or information in your application",
+    icon: <FileX className="w-6 h-6" />,
+    phoneMessage: {
+      title: "Application Rejected",
+      details: "Your application is missing required documents. Please submit all required documentation and reapply.",
+      code: "REJ001",
+    },
+  },
+  {
     id: "income-threshold",
     title: "Income Above Threshold",
-    description: "Your monthly income or financial resources exceed the maximum threshold for this grant.",
+    description: "Your declared income exceeds the maximum allowed for this grant",
     icon: <CreditCard className="w-6 h-6" />,
     phoneMessage: {
-      title: "Application Declined",
-      details: "Your monthly income was found to be above the R624 threshold for the SRD grant. You can appeal this decision online.",
-      code: "DEC001",
+      title: "Application Rejected",
+      details: "Your monthly income of R2,500 exceeds the R350 threshold for SRD grant eligibility.",
+      code: "REJ002",
     },
   },
   {
-    id: "existing-grant",
-    title: "Existing Grant",
-    description: "You are currently receiving another SASSA grant (e.g., Child Support, Old Age), UIF, or NSFAS benefits.",
+    id: "age-requirement",
+    title: "Age Requirement Not Met",
+    description: "Applicant does not meet the minimum age requirement for this grant",
+    icon: <User className="w-6 h-6" />,
+    phoneMessage: {
+      title: "Application Rejected",
+      details: "You must be between 18-59 years old to qualify for the Social Relief of Distress grant.",
+      code: "REJ003",
+    },
+  },
+  {
+    id: "duplicate-application",
+    title: "Duplicate Application",
+    description: "Multiple applications detected for the same grant period",
     icon: <AlertTriangle className="w-6 h-6" />,
     phoneMessage: {
-      title: "Application Declined",
-      details: "You are receiving another SASSA grant, UIF, or NSFAS benefits and are not eligible for the SRD grant.",
-      code: "DEC002",
+      title: "Application Rejected",
+      details: "Our system detected multiple applications. Only one application per person is allowed.",
+      code: "REJ004",
     },
   },
   {
-    id: "identity-verification-failed",
+    id: "verification-failed",
     title: "Identity Verification Failed",
-    description: "Your personal details could not be verified with the Home Affairs database. Please check that your ID number and details are correct.",
+    description: "Unable to verify your identity with Home Affairs database",
     icon: <User className="w-6 h-6" />,
     phoneMessage: {
-      title: "Application Declined",
-      details: "Identity verification failed. Please ensure your ID number is correct and matches Home Affairs records. You can appeal this decision.",
-      code: "DEC003",
+      title: "Application Rejected",
+      details: "We could not verify your identity. Please visit your nearest SASSA office with your ID document.",
+      code: "REJ005",
     },
   },
   {
-    id: "age-requirement-not-met",
-    title: "Age Requirement Not Met",
-    description: "You are either younger than 18 or older than 59, which are outside the age criteria for the SRD grant.",
-    icon: <User className="w-6 h-6" />,
-    phoneMessage: {
-      title: "Application Declined",
-      details: "Your age does not meet the SRD grant requirements (18-59).",
-      code: "DEC004",
-    },
-  },
-  {
-    id: "alternative-contact",
-    title: "Alternative Contact Number",
-    description: "Your contact details are linked to another applicant's profile.",
+    id: "contact-details",
+    title: "Invalid Contact Details",
+    description: "Phone number or address could not be verified",
     icon: <Phone className="w-6 h-6" />,
     phoneMessage: {
-      title: "Application Declined",
-      details: "Your contact details are already used for another grant application.",
-      code: "DEC005",
+      title: "Application Rejected",
+      details: "The contact details provided could not be verified. Please update your information.",
+      code: "REJ006",
     },
   },
-  {
-    id: "govt-employee",
-    title: "Government Employee",
-    description: "You are registered as a government employee on the PERSAL system, making you ineligible.",
-    icon: <Briefcase className="w-6 h-6" />,
-    phoneMessage: {
-      title: "Application Declined",
-      details: "You are registered as a government employee and are therefore ineligible for the SRD grant.",
-      code: "DEC006",
-    },
-  },
-];
+]
 
 export default function RejectionMessages() {
   const [selectedReason, setSelectedReason] = useState<RejectionReason>(rejectionReasons[0])
@@ -159,22 +158,19 @@ export default function RejectionMessages() {
                       <p className="text-gray-700 text-center leading-relaxed">{selectedReason.phoneMessage.details}</p>
                     </div>
 
-                    <div className="mt-6 space-y-3 flex-col gap-3">
-                      <Link to="https://www.sassa.gov.za/SitePages/Head-Office-and-Regional-Contacts.aspx" target="_blank" >
-                        <button className="w-full bg-yellow-500 text-white py-3 rounded-lg font-medium  mb-3">  Contact SASSA</button>
-                      </Link>
-
-                      <Link to="https://srd.sassa.gov.za/appeals/appeal" target="_blank" >
-                        <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium">
-                          Appeal Decision
-                        </button>
-                      </Link>
+                    <div className="mt-6 space-y-3">
+                      <button className="w-full bg-yellow-500 text-white py-3 rounded-lg font-medium">
+                        View Full Details
+                      </button>
+                      <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium">
+                        Contact Support
+                      </button>
                     </div>
                    
                   </div>
                   </div>
                   
-                   <div className="flex overflow-hidden w-full bottom-0 rounded-full m">
+                   <div className="flex overflow-hidden w-full bottom-0 rounded-full mt-1">
                       <div className="flex-1 h-1.5 bg-yellow-600 "></div>
                       <div className="flex-1 h-1.5 bg-red-600"></div>
                       <div className="flex-1 h-1.5 bg-green-600"></div>

@@ -288,7 +288,7 @@ const Community: React.FC = () => {
               filteredPosts.map((post) => (
                 <div
                   key={post.id}
-                  className="bg-white rounded-lg shadow-sm border border-black/50 overflow-hidden"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">

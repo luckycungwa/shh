@@ -18,9 +18,6 @@ const Header: React.FC = () => {
     { path: '/scam-alert', label: translations.scamAlert || 'Scam Alert' },
     { path: '/resources', label: translations.resources || 'Resources' },
    { path: '/faq', label: translations.faq || 'FAQ' },
-  //  updates & its sub routes
-  { path: '/updates', label: translations.updates || 'Updates' },
-
     // { path: '/community', label: translations.community || 'Community' },
   ];
 
@@ -28,7 +25,6 @@ const Header: React.FC = () => {
     { code: 'en', name: 'English' },
     { code: 'zu', name: 'isiZulu' },
     { code: 'xh', name: 'isiXhosa' },
-    
   ];
 
   const themes = [
@@ -49,8 +45,8 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 text-primary-gold font-bold text-xl"
             aria-label="SASSA Help Hub Home"
           >
-            <div className="w-8 h-8 bg-primary-gold rounded-full flex items-center justify-center">
-              <img src="/logo.png" alt="Logo" className="rounded-full w-8 h-8" />
+            <div className="w-8 h-8 bg-primary-gold rounded-lg flex items-center justify-center">
+              <img src="/logo.png" alt="Logo" className="rounded-md w-8 h-8" />
             </div>
           </Link>
 
