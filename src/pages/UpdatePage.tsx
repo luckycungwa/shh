@@ -3,6 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Calendar, AlertTriangle } from "lucide-react";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
+import StatusCheckMethods from '../components/Home/StatusCheckMethods';
+import homeContent from '../../data/homeContent.json';
+
 
 interface Update {
   id: string;
@@ -119,6 +122,7 @@ const UpdatePage: React.FC = () => {
           </article>
         </div>
       </div>
+      <StatusCheckMethods content={homeContent.statusCheckMethods} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 # SASSA Help Hub 🇿🇦
 
-A comprehensive, production-ready React web application providing SASSA (South African Social Security Agency) beneficiaries with accurate information, guidance, and tools. This is an **unofficial resource** with prominent disclaimers throughout.
+A comprehensive, production-ready React web application providing SASSA (South African Social Security Agency) beneficiaries with accurate information, guidance, and tools. This is an **informative resource** with prominent disclaimers throughout.
 
 ![SASSA Help Hub](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![React](https://img.shields.io/badge/React-18+-blue)
@@ -415,4 +415,4 @@ See [Terms of Service](src/pages/Terms.tsx) for usage conditions and limitations
 
 **Built with ❤️ for South African SASSA beneficiaries**
 
-*Remember: Always verify SASSA information through official channels. This is an unofficial resource designed to help, not replace, official SASSA services.*
+*Remember: Always verify SASSA information through official channels. This is an informative resource designed to help, not replace, official SASSA services.*
