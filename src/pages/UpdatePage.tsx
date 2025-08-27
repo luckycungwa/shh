@@ -8,7 +8,7 @@ interface Update {
   id: string;
   title: string;
   summary: string;
-  content: string; // Assuming 'content' field exists in the JSON
+  content?: string; // Content is optional
   date: string;
   type: "news" | "alert" | "update";
   urgent: boolean;
@@ -111,8 +111,8 @@ const UpdatePage: React.FC = () => {
             </header>
             <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
               <p className="font-semibold">{update.summary}</p>
-              {/* Assuming content is a string with newlines for paragraphs */}
-              {update.content.split('\\n').map((paragraph, index) => (
+              {/* Render content if it exists, otherwise render nothing */}
+              {update.content && update.content.split('\\n').map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>

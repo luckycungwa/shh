@@ -5,6 +5,7 @@ import { AppProvider } from './contexts/AppContext';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import UpdatePage from './pages/UpdatePage';
+import UpdatesListPage from './pages/UpdatesListPage';
 import FAQ from './pages/FAQ';
 import Guides from './pages/Guides';
 import PaymentCalendar from './pages/PaymentCalendar';
@@ -28,6 +29,7 @@ function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/updates" element={<UpdatesListPage />} />
                 <Route path="/updates/:id" element={<UpdatePage />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/guides" element={<Guides />} />
