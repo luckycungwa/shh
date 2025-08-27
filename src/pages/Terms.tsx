@@ -61,7 +61,7 @@ const Terms: React.FC = () => {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-semibold mb-3">What We Provide:</h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                    <li>Relevant information and resources related to SASSA services</li>
+                    <li>Unofficial information and resources related to SASSA services</li>
                     <li>Payment calendar information compiled from official sources</li>
                     <li>Scam awareness and protection information</li>
                     <li>Community support and frequently asked questions</li>

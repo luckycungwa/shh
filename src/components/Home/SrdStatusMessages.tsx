@@ -2,8 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { CheckCircle, Clock, AlertTriangle, XCircle, CreditCard, User, Info } from "lucide-react"
-import { Link } from "react-router-dom"
+import { CheckCircle, Clock, AlertTriangle, XCircle, CreditCard, User } from "lucide-react"
 
 interface SrdStatus {
   id: string
@@ -21,88 +20,70 @@ const srdStatuses: SrdStatus[] = [
   {
     id: "approved",
     title: "Approved",
-    description:
-      "Your SASSA SRD R370 grant application is approved. A specific payment date will be assigned and will appear on your status check. Payments are typically processed in batches towards the end of the month.",
+    description: "Your SASSA SRD R370 grant application has been approved. You will receive payments on scheduled dates.",
     icon: <CheckCircle className="w-6 h-6" />,
     phoneMessage: {
       title: "Application Approved",
-      details: "Your SRD R370 grant is approved. Check your status regularly for your payment date. Ensure banking details are updated. Ref: APP123456.",
+      details: "Your SRD R370 grant is approved. Next payment: 25-31 August 2025. Reference ID: APP123456.",
       code: "APP001",
-    },
-  },
-  {
-    id: "approved-no-date",
-    title: "Approved - No Payment Date",
-    description:
-      "Your SASSA SRD R370 grant is approved, but no payment date is scheduled yet. This is common and may be due to pending banking verification or system processing delays. The payment date will appear on your status check once it is assigned.",
-    icon: <Info className="w-6 h-6" />,
-    phoneMessage: {
-      title: "Approved - Action Required",
-      details: "SRD R370 grant approved, but payment not scheduled. A payment date will be assigned soon. Check your status again later. Ref: APP002.",
-      code: "APP002",
     },
   },
   {
     id: "pending",
     title: "Pending",
-    description:
-      "Your SASSA SRD R370 application is under review. This process can take time as SASSA verifies your details with institutions like Home Affairs and banks to check eligibility. Check your status regularly for updates.",
+    description: "Your SASSA SRD status is pending verification. This may take up to 3 months; check regularly.",
     icon: <Clock className="w-6 h-6" />,
     phoneMessage: {
       title: "Application Pending",
-      details: "Your SRD R370 grant is under review. Check status on the official SASSA website. Update banking details if requested. Ref: PEN001.",
+      details: "Your SRD R370 grant application is under review. Please update banking details if needed.",
       code: "PEN001",
     },
   },
   {
     id: "declined-income",
     title: "Declined - Income Threshold",
-    description:
-      "Your SASSA SRD R370 grant was declined because your income or other financial resources exceed the current monthly threshold. You can appeal this decision online within 30 days if you believe it is incorrect.",
+    description: "SASSA SRD R370 grant declined due to income exceeding R624/month. Appeal if incorrect.",
     icon: <CreditCard className="w-6 h-6" />,
     phoneMessage: {
       title: "Application Declined",
-      details: "SRD R370 grant declined due to income exceeding the threshold. You have 30 days to appeal online. Ref: DEC001.",
+      details: "Income above threshold for SRD R370 grant. Means test identified alternative source.",
       code: "DEC001",
     },
   },
   {
     id: "declined-identity",
     title: "Declined - Identity Verification",
-    description:
-      "Your SASSA SRD R370 grant was declined because your identity could not be verified with Home Affairs. Visit a SASSA office with your ID or appeal online within 30 days.",
+    description: "SASSA SRD status check failed identity verification with Home Affairs. Visit office with ID.",
     icon: <User className="w-6 h-6" />,
     phoneMessage: {
       title: "Application Declined",
-      details: "SRD R370 grant declined due to identity verification failure. Visit a SASSA office with ID or appeal online. Ref: DEC002.",
+      details: "Identity verification failed for SRD R370 grant. Please verify at nearest SASSA office.",
       code: "DEC002",
     },
   },
   {
     id: "declined-existing",
     title: "Declined - Existing Grant",
-    description:
-      "Your SASSA SRD R370 grant was declined because you are receiving another social grant (like a Child Support or Old Age grant), or benefits from UIF or NSFAS. You are not eligible for the SRD grant if you receive other social assistance.",
+    description: "Cannot receive SRD R370 if already on another SASSA grant or UIF/NSFAS benefits.",
     icon: <AlertTriangle className="w-6 h-6" />,
     phoneMessage: {
       title: "Application Declined",
-      details: "Ineligible for SRD R370 due to existing SASSA grant/UIF/NSFAS. Contact SASSA for details. Ref: DEC003.",
+      details: "You are receiving another grant/UIF. Ineligible for SRD R370.",
       code: "DEC003",
     },
   },
   {
     id: "cancelled",
     title: "Cancelled",
-    description:
-      "Your SASSA SRD R370 grant was cancelled. This can happen if you have not collected payments, there has been a change in your circumstances, or due to a fraudulent claim. Reapply online if you are still eligible.",
+    description: "Your SASSA SRD R370 grant has been cancelled due to changes in circumstances or non-collection.",
     icon: <XCircle className="w-6 h-6" />,
     phoneMessage: {
       title: "Grant Cancelled",
-      details: "SRD R370 grant cancelled. Reapply online if you are still eligible. Ref: CAN001.",
+      details: "SRD R370 grant cancelled. Reapply if circumstances have changed.",
       code: "CAN001",
     },
   },
-];
+]
 
 export default function SrdStatusMessages() {
   const [selectedStatus, setSelectedStatus] = useState<SrdStatus>(srdStatuses[0])
@@ -178,17 +159,12 @@ export default function SrdStatusMessages() {
                       </div>
 
                       <div className="mt-6 space-y-3">
-                        {/* navigate to calender controls */}
-                        <Link to="/payment-calendar">
-                          <button className="w-full bg-yellow-500 text-white py-3 rounded-lg font-medium mb-3">
-                            Check Payment Dates
-                          </button>
-                        </Link>
-                        <Link to="https://srd.sassa.gov.za/appeals/appeal" >
+                        <button className="w-full bg-yellow-500 text-white py-3 rounded-lg font-medium">
+                          Check Payment Dates
+                        </button>
                         <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium">
                           Appeal Decision
                         </button>
-                      </Link>
                       </div>
                     </div>
                   </div>

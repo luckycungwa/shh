@@ -4,8 +4,19 @@ import { Bell, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths } from 'date-fns';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import SrdStatusMessages from '../components/Home/SrdStatusMessages';
+import StatusCheckMethods from '../components/Home/StatusCheckMethods';
 import RejectionMessages from '../components/Home/rejection-messages';
-
+interface HomeContent {
+  statusCheckMethods: {
+    title: string;
+    intro: string;
+    methods: Array<{
+      name: string;
+      description: string;
+      icon: string;
+    }>;
+  };
+}
 
 interface PaymentDate {
   date: string;
@@ -59,6 +70,7 @@ const PaymentCalendar: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [payments, setPayments] = useState<MonthlyPayments[]>([]);
   const [extraContent, setExtraContent] = useState<CalendarContent | null>(null);
+  const [homeContent, setHomeContent] = useState<HomeContent | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -66,34 +78,26 @@ const PaymentCalendar: React.FC = () => {
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
-  // Map grant types to their corresponding Tailwind CSS background colors
-  const grantColorMap: { [key: string]: string } = {
-    'Old Age Grant': 'bg-blue-500',
-    'Disability Grant': 'bg-green-600',
-    'Child Support Grant': 'bg-purple-500',
-    'Social Relief of Distress (SRD) Grant': 'bg-red-500'
-  };
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [paymentsResponse, contentResponse] = await Promise.all([
-          fetch('https://api.jsonbin.io/v3/b/68a4a9cbae596e708fce5820/latest', {
-            headers: {
-              'X-Access-Key': '$2a$10$YOUR_JSONBIN_ACCESS_KEY' // Replace with your JSONBin access key if required
-            }
-          }),
-          fetch('/data/paymentCalendarContent.json')
+        const [paymentsResponse, contentResponse, homeContentResponse] = await Promise.all([
+          fetch('https://api.jsonbin.io/v3/b/68a4ae0e43b1c97be922a4f9/latest'),
+          fetch('/data/paymentCalendarContent.json'),
+          fetch('/data/homeContent.json')
         ]);
 
-        if (!paymentsResponse.ok) throw new Error(`Failed to fetch payment data: ${paymentsResponse.statusText}`);
-        if (!contentResponse.ok) throw new Error(`Failed to fetch calendar content: ${contentResponse.statusText}`);
+        if (!paymentsResponse.ok) throw new Error('Failed to fetch payment data');
+        if (!contentResponse.ok) throw new Error('Failed to fetch calendar content');
+        if (!homeContentResponse.ok) throw new Error('Failed to fetch home content');
 
         const paymentsData = await paymentsResponse.json();
         const contentData = await contentResponse.json();
+        const homeContentData = await homeContentResponse.json();
 
         setPayments(paymentsData.record);
         setExtraContent(contentData);
+        setHomeContent(homeContentData);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
@@ -138,6 +142,7 @@ const PaymentCalendar: React.FC = () => {
     e.preventDefault();
     if (!emailReminder.trim()) return;
 
+    // In production, this would use EmailJS
     console.log('Setting up email reminder for:', emailReminder);
     alert('Email reminder set up successfully! (Demo mode)');
     setEmailReminder('');
@@ -148,6 +153,7 @@ const PaymentCalendar: React.FC = () => {
     const monthPayments = getCurrentMonthPayments();
     if (!monthPayments) return;
 
+    // Create ICS file content
     let icsContent = 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//SASSA Help Hub//Payment Calendar//EN\n';
     
     monthPayments.grants.forEach(grant => {
@@ -165,6 +171,7 @@ const PaymentCalendar: React.FC = () => {
     
     icsContent += 'END:VCALENDAR';
 
+    // Download the file
     const blob = new Blob([icsContent], { type: 'text/calendar' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -198,7 +205,7 @@ const PaymentCalendar: React.FC = () => {
       <Helmet>
         <title>SASSA Payment {format(currentDate, 'MMMM yyyy')} | SASSA Help Hub</title>
         <meta name="description" content="View SASSA payment dates for 2025. Get SRD Grant, Old Age Grant, Disability Grant, and Child Support Grant payment schedules with email reminders." />
-        <meta name="keywords" content="SASSA SRD payment dates 2025, SASSA status check, SRD R370 grant, SASSA online application, SASSA appeal process, SASSA referred status, avoid SASSA fraud, MySASSA app, South African social grants" />
+        <meta name="keywords" content="SASSA payment dates 2025, SASSA calendar, grant payment schedule, SASSA payment times" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-8">
@@ -209,12 +216,12 @@ const PaymentCalendar: React.FC = () => {
               SASSA Payment Dates {format(currentDate, 'MMMM yyyy')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              View upcoming SASSA payment dates and set up email reminders for your next grant.
+              View upcoming SASSA payment dates and set up email reminders for your grants.
             </p>
           </div>
 
           {/* Calendar Controls */}
-          <div id='calendar-controls' className="bg-white rounded-lg shadow-sm p-6 mb-6">
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
             <div className="flex items-center justify-between mb-4">
               <button
                 onClick={() => setCurrentDate(subMonths(currentDate, 1))}
@@ -278,7 +285,7 @@ const PaymentCalendar: React.FC = () => {
                   <button
                     key={day.toISOString()}
                     onClick={() => setSelectedDate(day)}
-                    className={`p-2 min-h-[80px] border-b border-r border-black/50 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                    className={`p-2 min-h-[80px] border-b border-r border-gray-200 text-left hover:bg-gray-50 transition-colors duration-200 ${
                       !isSameMonth(day, currentDate) ? 'text-gray-400 bg-gray-50' : ''
                     } ${isSelected ? 'bg-primary-gold bg-opacity-20' : ''}`}
                   >
@@ -290,7 +297,7 @@ const PaymentCalendar: React.FC = () => {
                         {dayPayments.map((payment, index) => (
                           <div
                             key={index}
-                            className={`text-xs ${grantColorMap[payment.grantType] || 'bg-primary-gold'} text-white px-1 py-0.5 rounded truncate`}
+                            className="text-xs bg-primary-gold text-primary-black px-1 py-0.5 rounded truncate"
                           >
                             {payment.grantType.split(' ')[0]} - R{payment.amount}
                           </div>
@@ -313,7 +320,7 @@ const PaymentCalendar: React.FC = () => {
               {getPaymentForDate(selectedDate).length > 0 ? (
                 <div className="space-y-3">
                   {getPaymentForDate(selectedDate).map((payment, index) => (
-                    <div key={index} className="border border-black/50 rounded-lg p-4">
+                    <div key={index} className="border border-gray-200 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-medium text-gray-900">{payment.grantType}</h4>
                         <span className="text-lg font-semibold text-primary-gold/50">
@@ -376,32 +383,32 @@ const PaymentCalendar: React.FC = () => {
 
           {/* Payment Legend */}
           <div className="mt-6 bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">{format(currentDate, 'MMMM ')} Payment Schedule Legend</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{format(currentDate, 'MMMM ')  } Payment Schedule Legend</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                <span className="text-sm">Old Age Grant - R2,310/R2,330</span>
+                <span className="text-sm">Old Age Grant - R2,090</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 bg-green-600 rounded"></div>
-                <span className="text-sm">Disability Grant - R2,310</span>
+                <span className="text-sm">Disability Grant - R2,090</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 bg-purple-500 rounded"></div>
-                <span className="text-sm">Child Support Grant - R560</span>
+                <span className="text-sm">Child Support Grant - R510</span>
               </div>
+              {/*SRD Grant */}
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 bg-red-500 rounded"></div>
                 <span className="text-sm">SRD Grant - R370</span>
               </div>
             </div>
             <p className="text-xs text-gray-500 mt-4">
-              * Amounts reflect August 2025 values; increases apply from October 2025 (R2,320/R2,340 for Old Age, R2,320 for Disability, R570 for Child Support). Payment dates may change due to weekends, public holidays, or technical issues. Always verify with SASSA at 0800 60 10 11.
+              * Payment dates may change due to weekends, public holidays, or technical issues.
+              Always verify with SASSA at 0800 60 10 11.
             </p>
           </div>
         </div>
-        {/* SRD Status Messages */}
-        <SrdStatusMessages />
 
         {extraContent && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
@@ -416,7 +423,7 @@ const PaymentCalendar: React.FC = () => {
             {/* Payment Schedule Table */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 p-6">{extraContent.paymentSchedule.heading}</h2>
-              <div  className="overflow-x-auto">
+              <div className="overflow-x-auto">
                 <table className="w-full text-left">
                   <thead className="bg-gray-50">
                     <tr>
@@ -452,7 +459,7 @@ const PaymentCalendar: React.FC = () => {
                 ))}
               </div>
             </div>
-            <RejectionMessages />
+
             {/* FAQ Section */}
             <div className="bg-white rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">{extraContent.faqs.heading}</h2>
@@ -479,9 +486,11 @@ const PaymentCalendar: React.FC = () => {
         )}
       </div>
       <div>
-        
-        
-        
+        {homeContent && <StatusCheckMethods content={homeContent.statusCheckMethods} />}
+        {/* <StatusCheckMethods content={content?.statusCheckMethods} /> */}
+        <SrdStatusMessages/>
+        <RejectionMessages/>
+
       </div>
     </>
   );

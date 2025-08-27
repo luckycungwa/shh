@@ -243,7 +243,7 @@ const FAQ: React.FC = () => {
               filteredFaqs.map((faq) => (
                 <div
                   key={faq.id}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-black/50 dark:border-gray-700 overflow-hidden"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden"
                 >
                   <button
                     onClick={() => toggleExpanded(faq.id)}

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Calendar, AlertTriangle } from "lucide-react";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
-import StatusCheckMethods from '../components/Home/StatusCheckMethods';
-import homeContent from '../../data/homeContent.json';
-
 
 interface Update {
   id: string;
@@ -112,17 +110,13 @@ const UpdatePage: React.FC = () => {
                 </div>
               </div>
             </header>
-            <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
               <p className="font-semibold">{update.summary}</p>
-              {/* Render content if it exists, otherwise render nothing */}
-              {update.content && update.content.split('\\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {update.content && <ReactMarkdown>{update.content}</ReactMarkdown>}
             </div>
           </article>
         </div>
       </div>
-      <StatusCheckMethods content={homeContent.statusCheckMethods} />
     </>
   );
 };

@@ -7,7 +7,7 @@ const About: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - SASSA Help Hub</title>
-        <meta name="description" content="Learn about the mission and team behind SASSA Help Hub, your trusted informative resource for SASSA information." />
+        <meta name="description" content="Learn about the mission and team behind SASSA Help Hub, your trusted unofficial resource for SASSA information." />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
@@ -17,7 +17,7 @@ const About: React.FC = () => {
               <Building className="w-16 h-16 text-primary-gold mx-auto mb-6" />
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About SASSA Help Hub</h1>
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                Your Accurate Guide to Navigating SASSA.
+                Your Unofficial Guide to Navigating SASSA.
               </p>
             </div>
 

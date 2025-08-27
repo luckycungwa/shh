@@ -197,12 +197,12 @@ const Home: React.FC = () => {
     <>
       <Helmet>
         <title>
-          SASSA Help Hub - Your Informative  SASSA Resource | Payment Dates, Scam
+          SASSA Help Hub - Your Unofficial SASSA Resource | Payment Dates, Scam
           Alerts & More
         </title>
         <meta
           name="description"
-          content="Get accurate SASSA information, payment dates 2025, scam protection, and community support. Informative  resource for South African Social Security Agency beneficiaries."
+          content="Get accurate SASSA information, payment dates 2025, scam protection, and community support. Unofficial resource for South African Social Security Agency beneficiaries."
         />
         <meta
           name="keywords"
@@ -211,7 +211,7 @@ const Home: React.FC = () => {
         <link rel="canonical" href="https://sassahelphub.co.za" />
 
         {/* Open Graph tags */}
-        <meta property="og:title" content="SASSA Help Hub - Your Informative  SASSA Resource" />
+        <meta property="og:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
         <meta property="og:description" content="Get accurate SASSA information, payment dates 2025, scam protection, and community support." />
         <meta property="og:url" content="https://sassahelphub.co.za" />
         <meta property="og:type" content="website" />
@@ -220,7 +220,7 @@ const Home: React.FC = () => {
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SASSA Help Hub - Your Informative  SASSA Resource" />
+        <meta name="twitter:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
         <meta name="twitter:description" content="Get accurate SASSA information, payment dates 2025, scam protection, and community support." />
         <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
 
@@ -232,7 +232,7 @@ const Home: React.FC = () => {
                 "@type": "WebSite",
                 name: "SASSA Help Hub",
                 description:
-                  "Informative  SASSA resource for South African beneficiaries",
+                  "Unofficial SASSA resource for South African beneficiaries",
                 url: "https://sassahelphub.co.za",
                 potentialAction: {
                   "@type": "SearchAction",

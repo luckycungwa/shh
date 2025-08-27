@@ -208,7 +208,7 @@ How can I help you today?`,
   /* ----------  Open state  ---------- */
   return (
     <div
-      className={`fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-2xl border border-black/50 flex flex-col z-50 ${className}`}
+      className={`fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-2xl border border-gray-200 flex flex-col z-50 ${className}`}
     >
       {/* Header */}
       <div className="bg-primary-black text-white p-4 rounded-t-lg flex items-center justify-between">
@@ -218,7 +218,7 @@ How can I help you today?`,
           </div>
           <div>
             <h3 className="font-semibold text-sm">SASSA Assistant</h3>
-            <p className="text-xs text-gray-300">Informative helper powered by Google Gemini</p>
+            <p className="text-xs text-gray-300">Unofficial helper powered by Google Gemini</p>
           </div>
         </div>
         <button
@@ -257,7 +257,7 @@ How can I help you today?`,
                 className={`p-3 rounded-lg text-sm ${
                   msg.type === 'user'
                     ? 'bg-primary-gold text-primary-black ml-2'
-                    : 'bg-white text-gray-800 border border-black/50 mr-2'
+                    : 'bg-white text-gray-800 border border-gray-200 mr-2'
                 }`}
               >
                 <div
@@ -274,7 +274,7 @@ How can I help you today?`,
               <div className="w-6 h-6 bg-primary-dark rounded-full flex items-center justify-center flex-shrink-0">
                 <Brain className="w-3 h-3 text-white" />
               </div>
-              <div className="bg-white border border-black/50 p-3 rounded-lg">
+              <div className="bg-white border border-gray-200 p-3 rounded-lg">
                 <div className="flex space-x-1">
                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
                   <div
@@ -304,7 +304,7 @@ How can I help you today?`,
       </div>
 
       {/* Input */}
-      <div className="p-3 border-t border-black/50 bg-white rounded-b-lg">
+      <div className="p-3 border-t border-gray-200 bg-white rounded-b-lg">
         <div className="flex space-x-2">
           <input
             ref={inputRef}

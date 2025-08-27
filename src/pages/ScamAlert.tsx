@@ -117,7 +117,7 @@ const ScamAlert: React.FC = () => {
       case 'medium': return 'bg-yellow-500-100 text-yellow-500-800 border-yellow-500-200';
       case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'critical': return 'bg-red-100 text-red-800 border-red-200';
-      default: return 'bg-gray-100 text-gray-800 border-black/50';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
@@ -345,7 +345,7 @@ const ScamAlert: React.FC = () => {
               filteredScams.map((scam) => (
                 <div
                   key={scam.id}
-                  className="bg-white rounded-lg shadow-sm border border-black/50 overflow-hidden"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
