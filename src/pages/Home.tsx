@@ -509,9 +509,9 @@ const Home: React.FC = () => {
               </div>
               <Link
                 to="/updates"
-                className="hidden md:inline-flex items-center text-primary-gold hover:text-primary-gold font-medium"
+                className="hidden md:inline-flex items-center text-primary-gold hover:text-yellow-700 font-medium"
               >
-                {translations.viewAll || "View All"}
+                {translations.viewAll || "View All Updates"}
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
