@@ -56,7 +56,7 @@ const HowToApply: React.FC<HowToApplyProps> = ({ content }) => {
             <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl h-96">
               <img
                 src="/sassa-office.jpeg"
-                alt="Modern workspace with laptop and plant"
+                alt="A SASSA office with people waiting to be assisted."
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>

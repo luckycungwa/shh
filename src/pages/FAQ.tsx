@@ -122,12 +122,49 @@ const FAQ: React.FC = () => {
     );
   }
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>SASSA Frequently Asked Questions | SASSA Help Hub</title>
-        <meta name="description" content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2025." />
-        <meta name="keywords" content="SASSA FAQ, SASSA questions, SASSA grant application, SASSA payment dates, SASSA help" />
+        <meta
+          name="description"
+          content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2025."
+        />
+        <meta
+          name="keywords"
+          content="SASSA FAQ, SASSA questions, SASSA grant application, SASSA payment dates, SASSA help"
+        />
+
+        {/* Open Graph tags */}
+        <meta property="og:title" content="SASSA Frequently Asked Questions | SASSA Help Hub" />
+        <meta property="og:description" content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2025." />
+        <meta property="og:url" content="https://sassahelphub.co.za/faq" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta property="og:image:alt" content="SASSA Help Hub Logo" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SASSA Frequently Asked Questions | SASSA Help Hub" />
+        <meta name="twitter:description" content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2025." />
+        <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
+
+        {faqs.length > 0 && (
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        )}
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-8">
