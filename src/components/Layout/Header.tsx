@@ -45,8 +45,8 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 text-primary-gold font-bold text-xl"
             aria-label="SASSA Help Hub Home"
           >
-            <div className="w-8 h-8 bg-primary-gold rounded-lg flex items-center justify-center">
-              <img src="/logo.png" alt="Logo" className="rounded-md w-8 h-8" />
+            <div className="w-8 h-8 bg-primary-gold rounded-full flex items-center justify-center">
+              <img src="/logo.png" alt="Logo" className="rounded-full w-8 h-8" />
             </div>
           </Link>
 

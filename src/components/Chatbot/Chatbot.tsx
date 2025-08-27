@@ -218,7 +218,7 @@ How can I help you today?`,
           </div>
           <div>
             <h3 className="font-semibold text-sm">SASSA Assistant</h3>
-            <p className="text-xs text-gray-300">Unofficial helper powered by Google Gemini</p>
+            <p className="text-xs text-gray-300">Informative helper powered by Google Gemini</p>
           </div>
         </div>
         <button
