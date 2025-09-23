@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
   const navigationItems = [
     { path: '/', label: translations.home || 'Home' },
-   
+    { path: '/updates', label: 'News' },
     { path: '/payment-calendar', label: translations.paymentCalendar || 'Payment Date' },
     { path: '/guides', label: translations.guides || 'Guides' },
     { path: '/scam-alert', label: translations.scamAlert || 'Scam Alert' },

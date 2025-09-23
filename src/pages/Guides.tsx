@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, BookOpen, Clock, User, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useAppContext } from '../contexts/AppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import RejectionMessages from '../components/Home/rejection-messages';
@@ -41,16 +42,12 @@ const Guides: React.FC = () => {
   useEffect(() => {
     const fetchGuides = async () => {
       try {
-        const [apiResponse, localResponse] = await Promise.all([
-          fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest').then(res => res.ok ? res.json() : Promise.resolve({ record: [] })),
-          fetch('/data/newGuides.json').then(res => res.ok ? res.json() : Promise.resolve([]))
-        ]);
-
-        const apiGuides: Guide[] = apiResponse.record || [];
-        const localGuides: Guide[] = localResponse || [];
-
-        const allGuides = [...apiGuides, ...localGuides];
-
+        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest');
+        if (!response.ok) {
+          throw new Error('Failed to fetch guides');
+        }
+        const data = await response.json();
+        const allGuides: Guide[] = data.record || [];
         setGuides(allGuides);
         setFilteredGuides(allGuides);
       } catch (err) {
@@ -219,50 +216,50 @@ const Guides: React.FC = () => {
               </div>
             ) : (
               filteredGuides.map((guide) => (
-                <div
-                  key={guide.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200"
-                >
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-3">
-                      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">
-                        {guide.category}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(guide.difficulty)}`}>
-                        {guide.difficulty}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {guide.title}
-                    </h3>
-
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                      {guide.description}
-                    </p>
-
-                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {guide.estimatedTime}
+                <Link to={`/guides/${guide.id}`} key={guide.id} className="block">
+                  <div
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200 h-full"
+                  >
+                    <div className="p-6 flex flex-col h-full">
+                      <div className="flex items-start justify-between mb-3">
+                        <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">
+                          {guide.category}
+                        </span>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(guide.difficulty)}`}>
+                          {guide.difficulty}
+                        </span>
                       </div>
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-1" />
-                        {guide.author}
-                      </div>
-                    </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="text-xs text-gray-500">
-                        Updated {new Date(guide.lastUpdated).toLocaleDateString()}
-                      </div>
-                      <button className="text-primary-gold hover:text-primary-gold font-medium text-sm">
-                        Read Guide →
-                      </button>
-                    </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {guide.title}
+                      </h3>
 
-                    {/* Tags */}
-                    <div className="mt-4 flex flex-wrap gap-1">
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
+                        {guide.description}
+                      </p>
+
+                      <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {guide.estimatedTime}
+                        </div>
+                        <div className="flex items-center">
+                          <User className="w-4 h-4 mr-1" />
+                          {guide.author}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between mt-auto">
+                        <div className="text-xs text-gray-500">
+                          Updated {new Date(guide.lastUpdated).toLocaleDateString()}
+                        </div>
+                        <div className="text-primary-gold hover:text-primary-gold font-medium text-sm">
+                          Read Guide →
+                        </div>
+                      </div>
+
+                      {/* Tags */}
+                      <div className="mt-4 flex flex-wrap gap-1">
                       {guide.tags.slice(0, 3).map((tag, index) => (
                         <span
                           key={index}

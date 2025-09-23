@@ -92,6 +92,9 @@ const FAQ: React.FC = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    const url = new URL(window.location.href);
+    url.searchParams.set('search', localSearchQuery);
+    window.history.pushState({}, '', url);
     setSearchQuery(localSearchQuery);
   };
 

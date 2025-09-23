@@ -61,15 +61,12 @@ const ScamAlert: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [scamsApiResponse, scamsLocalResponse, scamPreventionResponse] = await Promise.all([
-          fetch('https://api.jsonbin.io/v3/b/68a4ac2443b1c97be922a3c7/latest').then(res => res.ok ? res.json() : Promise.resolve({ record: [] })),
-          fetch('/data/newScams.json').then(res => res.ok ? res.json() : Promise.resolve([])),
+        const [scamsResponse, scamPreventionResponse] = await Promise.all([
+          fetch('https://api.jsonbin.io/v3/b/68a4a9ebae596e708fce5831').then(res => res.ok ? res.json() : Promise.resolve({ record: [] })),
           fetch('/data/scamPrevention.json').then(res => res.ok ? res.json() : Promise.resolve(null))
         ]);
 
-        const apiScams: Scam[] = scamsApiResponse.record || [];
-        const localScams: Scam[] = scamsLocalResponse || [];
-        const allScams = [...apiScams, ...localScams];
+        const allScams: Scam[] = scamsResponse.record || [];
 
         setScams(allScams);
         setFilteredScams(allScams);
