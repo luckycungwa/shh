@@ -97,7 +97,7 @@ const Home: React.FC = () => {
             fetch(
               "https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4"
             ),
-            fetch("/data/paymentDates.json"),
+            fetch("https://api.jsonbin.io/v3/b/68a4a9cbae596e708fce5820"),
             fetch("/data/homeContent.json"),
           ]);
 
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
         const homeContentJson = await homeContentResponse.json();
 
         setUpdates(updatesJson.record.slice(0, 3));
-        setPaymentDates(paymentDatesJson);
+        setPaymentDates(paymentDatesJson.record);
         setHomeContent(homeContentJson);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Unknown error");

@@ -8,6 +8,7 @@ import UpdatePage from './pages/UpdatePage';
 import UpdatesListPage from './pages/UpdatesListPage';
 import FAQ from './pages/FAQ';
 import Guides from './pages/Guides';
+import GuidePage from './pages/GuidePage';
 import PaymentCalendar from './pages/PaymentCalendar';
 import ScamAlert from './pages/ScamAlert';
 import Resources from './pages/Resources';
@@ -27,6 +28,7 @@ const routes = [
   { path: "/updates/:id" },
   { path: "/faq" },
   { path: "/guides" },
+  { path: "/guides/:id" },
   { path: "/payment-calendar" },
   { path: "/scam-alert" },
   { path: "/resources" },
@@ -51,6 +53,7 @@ const AppContent: React.FC = () => {
           <Route path="/updates/:id" element={<UpdatePage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/guides" element={<Guides />} />
+          <Route path="/guides/:id" element={<GuidePage />} />
           <Route path="/payment-calendar" element={<PaymentCalendar />} />
           <Route path="/scam-alert" element={<ScamAlert />} />
           <Route path="/resources" element={<Resources />} />
