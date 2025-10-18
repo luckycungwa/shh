@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, BookOpen, Clock, User, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../hooks/useAppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import RejectionMessages from '../components/Home/rejection-messages';
 import ProvincialOffices from '../components/Home/provincial-offices';
@@ -276,6 +276,7 @@ const Guides: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                </Link>
               ))
             )}
           </div>

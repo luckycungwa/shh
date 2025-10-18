@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Phone, Mail, MapPin, Link2 } from 'lucide-react';
-import { useAppContext } from '../../contexts/AppContext';
+import { ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+import { useAppContext } from '../../hooks/useAppContext';
 
 const Footer: React.FC = () => {
   const { translations } = useAppContext();
@@ -92,13 +92,13 @@ const Footer: React.FC = () => {
               <li>
                 <div className="flex items-center text-secondary-gray">
                   <Phone className="w-4 h-4 mr-2" />
-                  <span>SASSA Helpline: 0800 60 10 11</span>
+                  <span>SASSA Helpline: <a href="tel:0800601011" className="hover:text-primary-gold transition-colors duration-200">0800 60 10 11</a></span>
                 </div>
               </li>
               <li>
                 <div className="flex items-center text-secondary-gray">
                   <Mail className="w-4 h-4 mr-2" />
-                  <span>info@sassa.gov.za</span>
+                  <a href="mailto:info@sassa.gov.za" className="hover:text-primary-gold transition-colors duration-200">info@sassa.gov.za</a>
                 </div>
               </li>
             </ul>

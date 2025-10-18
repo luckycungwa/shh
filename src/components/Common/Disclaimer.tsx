@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AlertTriangle, X, ExternalLink } from 'lucide-react';
-import { useAppContext } from '../../contexts/AppContext';
+import { useAppContext } from '../../hooks/useAppContext';
 
 const Disclaimer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
