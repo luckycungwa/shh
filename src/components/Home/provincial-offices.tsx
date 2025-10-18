@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Users } from "lucide-react"
+import { MapPin, Phone, Clock } from "lucide-react"
 import { Link } from "react-router-dom"
 
 const provincialOffices = [
@@ -88,7 +88,7 @@ export default function ProvincialOffices() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {provincialOffices.map((office, index) => (
+        {provincialOffices.map((office) => (
           <div
             key={office.province}
             className={`${office.color} rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 justify-between`}

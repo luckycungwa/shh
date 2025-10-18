@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, Sun, Moon, Contrast } from 'lucide-react';
-import { useAppContext } from '../../contexts/AppContext';
+import { useAppContext } from '../../hooks/useAppContext';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,6 @@ const Header: React.FC = () => {
     { path: '/scam-alert', label: translations.scamAlert || 'Scam Alert' },
     { path: '/resources', label: translations.resources || 'Resources' },
    { path: '/faq', label: translations.faq || 'FAQ' },
-    // { path: '/community', label: translations.community || 'Community' },
   ];
 
   const languages = [

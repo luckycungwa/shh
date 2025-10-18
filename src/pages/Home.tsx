@@ -13,7 +13,7 @@ import {
   Clock,
   AlertTriangle,
 } from "lucide-react";
-import { useAppContext } from "../contexts/AppContext";
+import { useAppContext } from "../hooks/useAppContext";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
 import HowToApply from "../components/Home/HowToApply";
 import GrantTypes from "../components/Home/grant-types";

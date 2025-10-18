@@ -3,12 +3,34 @@ import StatusCheckMethods from './StatusCheckMethods';
 import HowToApply from './HowToApply';
 import NewsAndUpdates from './NewsAndUpdates';
 
+interface Grant {
+  name: string;
+  description: string;
+  link: string;
+}
+
+interface Step {
+  title: string;
+  description: string;
+}
+
+interface Method {
+  name: string;
+  description: string;
+  link: string;
+}
+
+interface Article {
+  title: string;
+  summary: string;
+  link: string;
+}
+
 interface Content {
-  grantTypes: { title: string; intro: string; grants: any[]; outro: string };
-  howToApply: { title: string; intro: string; steps: any[]; outro: string };
-  statusCheckMethods: { title: string; intro: string; methods: any[]; outro: string };
-  latestNews: { title: string; articles: any[]; outro: string };
-  
+  grantTypes: { title: string; intro: string; grants: Grant[]; outro: string };
+  howToApply: { title: string; intro: string; steps: Step[]; outro: string };
+  statusCheckMethods: { title: string; intro: string; methods: Method[]; outro: string };
+  latestNews: { title: string; articles: Article[]; outro: string };
 }
 
 const ContentComponent: React.FC = () => {

@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useState, useEffect, ReactNode } from 'react';
 
-interface AppContextType {
+export interface AppContextType {
   language: string;
   setLanguage: (lang: string) => void;
   theme: 'light' | 'dark' | 'high-contrast';
@@ -16,15 +16,7 @@ interface AppContextType {
   clearError: () => void;
 }
 
-const AppContext = createContext<AppContextType | undefined>(undefined);
-
-export const useAppContext = () => {
-  const context = useContext(AppContext);
-  if (context === undefined) {
-    throw new Error('useAppContext must be used within an AppProvider');
-  }
-  return context;
-};
+export const AppContext = createContext<AppContextType | undefined>(undefined);
 
 interface AppProviderProps {
   children: ReactNode;

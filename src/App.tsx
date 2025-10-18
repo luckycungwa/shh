@@ -57,7 +57,6 @@ const AppContent: React.FC = () => {
           <Route path="/payment-calendar" element={<PaymentCalendar />} />
           <Route path="/scam-alert" element={<ScamAlert />} />
           <Route path="/resources" element={<Resources />} />
-          {/* <Route path="/community" element={<Community />} /> */}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<About />} />
