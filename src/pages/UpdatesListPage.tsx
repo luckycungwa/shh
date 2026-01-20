@@ -58,17 +58,17 @@ const UpdatesListPage: React.FC = () => {
     <>
       <Helmet>
         <title>Latest SASSA News and Updates | SASSA Help Hub</title>
-        <meta name="description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2025. Get details on grant changes, payment schedules, and application deadlines." />
-        <meta name="keywords" content="SASSA news, SASSA updates, SASSA press release, social grant news, SASSA 2025" />
+        <meta name="description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2026. Get details on grant changes, payment schedules, and application deadlines." />
+        <meta name="keywords" content="SASSA news, SASSA updates, SASSA press release, social grant news, SASSA 2026" />
         <link rel="canonical" href="https://sassahelphub.co.za/updates" />
         <meta property="og:title" content="Latest SASSA News and Updates | SASSA Help Hub" />
-        <meta property="og:description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2025." />
+        <meta property="og:description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2026." />
         <meta property="og:url" content="https://sassahelphub.co.za/updates" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Latest SASSA News and Updates | SASSA Help Hub" />
-        <meta name="twitter:description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2025." />
+        <meta name="twitter:description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2026." />
         <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
         {updates.length > 0 && (
           <script type="application/ld+json">

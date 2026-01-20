@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Calendar, AlertTriangle } from "lucide-react";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
+import AdUnit from "../components/Common/AdUnit";
 
 interface Update {
   id: string;
@@ -148,7 +149,9 @@ const UpdatePage: React.FC = () => {
             </header>
             <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
               <p className="font-semibold">{update.summary}</p>
+              <AdUnit slot="5678901234" />
               {update.content && <ReactMarkdown>{update.content}</ReactMarkdown>}
+              <AdUnit slot="4321098765" />
             </div>
           </article>
         </div>

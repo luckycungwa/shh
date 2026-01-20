@@ -5,7 +5,7 @@
     "description": "Scammers send SMS messages claiming to be from SASSA, asking beneficiaries to update their banking details by clicking a link or replying with personal information. These messages often create urgency by claiming grants will be suspended.",
     "type": "SMS",
     "severity": "critical",
-    "reportedDate": "2025-01-10",
+    "reportedDate": "2026-01-10",
     "indicators": [
       "Requests banking details via SMS",
       "Creates false urgency about grant suspension",
@@ -25,7 +25,7 @@
     "description": "Fraudsters pose as SASSA officials in communities, especially rural areas, claiming they can help with grant applications for a fee. They may wear fake uniforms or carry fake identification.",
     "type": "In-Person",
     "severity": "high",
-    "reportedDate": "2025-01-08",
+    "reportedDate": "2026-01-08",
     "indicators": [
       "Requests payment for SASSA services",
       "Claims to be SASSA official without proper ID",
@@ -45,7 +45,7 @@
     "description": "Scammers create fake WhatsApp groups or contacts claiming to help with SASSA applications. They request personal documents and may ask for money to 'guarantee' approval.",
     "type": "WhatsApp",
     "severity": "high",
-    "reportedDate": "2025-01-05",
+    "reportedDate": "2026-01-05",
     "indicators": [
       "Unofficial WhatsApp numbers claiming to be SASSA",
       "Requests copies of ID documents and personal info",
@@ -65,7 +65,7 @@
     "description": "Criminals send messages offering loans against SASSA grants, claiming beneficiaries can borrow money that will be deducted from future grant payments. These are illegal and often involve identity theft.",
     "type": "SMS",
     "severity": "critical",
-    "reportedDate": "2025-01-03",
+    "reportedDate": "2026-01-03",
     "indicators": [
       "Offers loans against SASSA grants",
       "Claims no credit checks needed",
