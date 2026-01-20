@@ -17,7 +17,7 @@
       },
       {
         "title": "Income Thresholds",
-        "content": "The income threshold is the maximum amount of money you can earn per month and still qualify for a grant. As of 2025, the income thresholds for the most common grants are: <ul><li><strong>Old Age Grant:</strong> R7,920 per month for a single person, or R15,840 combined for a married couple.</li><li><strong>Disability Grant:</strong> R7,920 per month for a single person, or R15,840 combined for a married couple.</li><li><strong>Child Support Grant:</strong> R5,280 per month for a single caregiver, or R10,560 combined for a married couple.</li></ul>",
+        "content": "The income threshold is the maximum amount of money you can earn per month and still qualify for a grant. As of 2026, the income thresholds for the most common grants are: <ul><li><strong>Old Age Grant:</strong> R7,920 per month for a single person, or R15,840 combined for a married couple.</li><li><strong>Disability Grant:</strong> R7,920 per month for a single person, or R15,840 combined for a married couple.</li><li><strong>Child Support Grant:</strong> R5,280 per month for a single caregiver, or R10,560 combined for a married couple.</li></ul>",
         "tips": [
           "Income includes salaries, wages, pensions, and any other regular payments you receive.",
           "The SRD grant has a much lower income threshold of R624 per month."
@@ -25,7 +25,7 @@
       },
       {
         "title": "Asset Thresholds",
-        "content": "The asset threshold is the maximum value of assets you can own and still qualify for a grant. Assets include things like property, vehicles, and investments. As of 2025, the asset thresholds are: <ul><li><strong>Old Age Grant:</strong> R1,227,600 for a single person, or R2,455,200 for a married couple.</li><li><strong>Disability Grant:</strong> R1,227,600 for a single person, or R2,455,200 for a married couple.</li></ul>",
+        "content": "The asset threshold is the maximum value of assets you can own and still qualify for a grant. Assets include things like property, vehicles, and investments. As of 2026, the asset thresholds are: <ul><li><strong>Old Age Grant:</strong> R1,227,600 for a single person, or R2,455,200 for a married couple.</li><li><strong>Disability Grant:</strong> R1,227,600 for a single person, or R2,455,200 for a married couple.</li></ul>",
         "tips": [
           "The value of the home you live in is not included in the asset test.",
           "Child Support Grant does not have an asset test."
@@ -33,7 +33,7 @@
       }
     ],
     "tags": ["means test", "eligibility", "income", "assets", "thresholds"],
-    "lastUpdated": "2025-08-24",
+    "lastUpdated": "2026-08-24",
     "author": "SASSA Help Hub"
   },
   {
@@ -70,7 +70,7 @@
       }
     ],
     "tags": ["reinstate", "lapsed grant", "suspended grant", "grant management"],
-    "lastUpdated": "2025-08-24",
+    "lastUpdated": "2026-08-24",
     "author": "SASSA Help Hub"
   },
   {
@@ -99,7 +99,7 @@
       }
     ],
     "tags": ["fraud", "scam alert", "reporting", "crime"],
-    "lastUpdated": "2025-08-24",
+    "lastUpdated": "2026-08-24",
     "author": "SASSA Help Hub"
   }
 ]

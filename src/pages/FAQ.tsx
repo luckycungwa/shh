@@ -79,7 +79,7 @@ const FAQPage: React.FC = () => {
         <title>SASSA Frequently Asked Questions | SASSA Help Hub</title>
         <meta
           name="description"
-          content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2025."
+          content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2026."
         />
         <meta
           name="keywords"

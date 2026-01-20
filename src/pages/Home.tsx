@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useAppContext } from "../hooks/useAppContext";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
+import AdUnit from "../components/Common/AdUnit";
 import HowToApply from "../components/Home/HowToApply";
 import GrantTypes from "../components/Home/grant-types";
 
@@ -202,17 +203,17 @@ const Home: React.FC = () => {
         </title>
         <meta
           name="description"
-          content="Get accurate SASSA information, payment dates 2025, scam protection, and community support. Unofficial resource for South African Social Security Agency beneficiaries."
+          content="Get accurate SASSA information, payment dates 2026, scam protection, and community support. Unofficial resource for South African Social Security Agency beneficiaries."
         />
         <meta
           name="keywords"
-          content="SASSA payment dates 2025, avoid SASSA scams, SASSA grant application, South African social security, SASSA help"
+          content="SASSA payment dates 2026, avoid SASSA scams, SASSA grant application, South African social security, SASSA help"
         />
         <link rel="canonical" href="https://sassahelphub.co.za" />
 
         {/* Open Graph tags */}
         <meta property="og:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
-        <meta property="og:description" content="Get accurate SASSA information, payment dates 2025, scam protection, and community support." />
+        <meta property="og:description" content="Get accurate SASSA information, payment dates 2026, scam protection, and community support." />
         <meta property="og:url" content="https://sassahelphub.co.za" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
@@ -221,7 +222,7 @@ const Home: React.FC = () => {
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
-        <meta name="twitter:description" content="Get accurate SASSA information, payment dates 2025, scam protection, and community support." />
+        <meta name="twitter:description" content="Get accurate SASSA information, payment dates 2026, scam protection, and community support." />
         <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
 
         <script type="application/ld+json">
@@ -295,6 +296,8 @@ const Home: React.FC = () => {
                 </button>
               </div>
             </form>
+
+        <AdUnit slot="1234567890" />
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -595,6 +598,7 @@ const Home: React.FC = () => {
 
         {/* Rejection messages */}
 
+        <AdUnit slot="0987654321" />
         
         {/* How to Apply Section */}
         {homeContent && <HowToApply content={homeContent.howToApply} />}

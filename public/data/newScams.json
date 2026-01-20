@@ -5,7 +5,7 @@
     "description": "Scammers are creating fake websites that look very similar to the official SASSA website. These websites are designed to trick you into entering your personal information, such as your ID number, bank details, and phone number.",
     "type": "Website",
     "severity": "critical",
-    "reportedDate": "2025-08-24",
+    "reportedDate": "2026-08-24",
     "indicators": [
       "The website URL is not sassa.gov.za.",
       "The website asks for your bank account password.",
@@ -24,7 +24,7 @@
     "description": "You may receive an SMS that says your SASSA grant has been approved and you need to click a link or pay a fee to receive your payment. This is a scam. SASSA will never ask you to pay a fee to receive a grant.",
     "type": "SMS",
     "severity": "high",
-    "reportedDate": "2025-08-24",
+    "reportedDate": "2026-08-24",
     "indicators": [
       "The SMS asks you to click on a link.",
       "The SMS asks you to pay a fee.",
@@ -43,7 +43,7 @@
     "description": "Scammers may come to your home pretending to be SASSA officials. They may offer to help you with your grant application or tell you that there is a problem with your grant. They will then try to steal your personal information or ask you for money.",
     "type": "In-Person",
     "severity": "high",
-    "reportedDate": "2025-08-24",
+    "reportedDate": "2026-08-24",
     "indicators": [
       "The person does not have official SASSA identification.",
       "The person asks for money.",

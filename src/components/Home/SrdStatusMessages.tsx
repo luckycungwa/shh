@@ -24,7 +24,7 @@ const srdStatuses: SrdStatus[] = [
     icon: <CheckCircle className="w-6 h-6" />,
     phoneMessage: {
       title: "Application Approved",
-      details: "Your SRD R370 grant is approved. Next payment: 25-31 August 2025. Reference ID: APP123456.",
+      details: "Your SRD R370 grant is approved. Next payment: 25-31 August 2026. Reference ID: APP123456.",
       code: "APP001",
     },
   },

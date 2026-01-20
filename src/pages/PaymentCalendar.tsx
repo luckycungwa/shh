@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Bell, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths } from 'date-fns';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import AdUnit from '../components/Common/AdUnit';
 import SrdStatusMessages from '../components/Home/SrdStatusMessages';
 import StatusCheckMethods from '../components/Home/StatusCheckMethods';
 import RejectionMessages from '../components/Home/rejection-messages';
@@ -204,8 +205,8 @@ const PaymentCalendar: React.FC = () => {
     <>
       <Helmet>
         <title>SASSA Payment {format(currentDate, 'MMMM yyyy')} | SASSA Help Hub</title>
-        <meta name="description" content="View SASSA payment dates for 2025. Get SRD Grant, Old Age Grant, Disability Grant, and Child Support Grant payment schedules with email reminders." />
-        <meta name="keywords" content="SASSA payment dates 2025, SASSA calendar, grant payment schedule, SASSA payment times" />
+        <meta name="description" content="View SASSA payment dates for 2026. Get SRD Grant, Old Age Grant, Disability Grant, and Child Support Grant payment schedules with email reminders." />
+        <meta name="keywords" content="SASSA payment dates 2026, SASSA calendar, grant payment schedule, SASSA payment times" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-8">
@@ -262,6 +263,9 @@ const PaymentCalendar: React.FC = () => {
               </button>
             </div>
           </div>
+
+          {/* Calendar Grid */}
+          <AdUnit slot="2468135790" />
 
           {/* Calendar Grid */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
