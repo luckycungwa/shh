@@ -297,8 +297,6 @@ const Home: React.FC = () => {
               </div>
             </form>
 
-        <AdUnit slot="1234567890" />
-
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {quickStats.map((stat, index) => (
@@ -322,6 +320,8 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <AdUnit slot="1234567890" />
 
         {/* SASSA Status Check Section */}
         <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800">

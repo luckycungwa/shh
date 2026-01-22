@@ -22,7 +22,8 @@ const AdUnit: React.FC<AdUnitProps> = ({ slot, format = 'auto', style }) => {
   }, []);
 
   return (
-    <div className="ad-container my-8 overflow-hidden flex justify-center">
+    <div className="ad-container my-8 overflow-hidden flex flex-col items-center">
+      <span className="text-[10px] text-gray-400 mb-1 tracking-widest uppercase font-sans">Advertisement</span>
       <ins
         className="adsbygoogle"
         style={style || { display: 'block' }}
