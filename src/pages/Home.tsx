@@ -250,13 +250,56 @@ const Home: React.FC = () => {
                 name: "SASSA Help Hub",
                 url: "https://sassahelphub.co.za",
                 logo: "https://sassahelphub.co.za/logo.png",
+                address: {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Johannesburg",
+                  "addressRegion": "Gauteng",
+                  "addressCountry": "ZA"
+                }
               },
+              {
+                "@type": "HowTo",
+                "name": "How to Check SASSA Status in Johannesburg",
+                "description": "Step-by-step guide to checking your SASSA SRD status when the official site is down.",
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "text": "Visit SASSA Help Hub for the latest reliable alternative links.",
+                    "url": "https://sassahelphub.co.za"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "text": "Have your 13-digit South African ID and cellphone number ready.",
+                    "url": "https://sassahelphub.co.za"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "text": "Follow our redirection to the secure government portal.",
+                    "url": "https://sassahelphub.co.za"
+                  }
+                ]
+              }
             ],
           })}
         </script>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        {/* Downtime Alert Banner */}
+        <div className="bg-amber-100 border-l-4 border-amber-500 p-4 sticky top-0 z-50 shadow-md">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex items-center">
+              <AlertTriangle className="text-amber-500 w-5 h-5 mr-3" />
+              <p className="text-sm text-amber-800">
+                <span className="font-bold">Official SASSA Site Down?</span> We're here to help! Use our reliable guide and alternative status check links for Johannesburg and Gauteng.
+              </p>
+            </div>
+            <Link to="/faq" className="text-sm font-bold text-amber-900 hover:underline">
+              Learn More →
+            </Link>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary-black via-primary-dark to-primary-black text-white py-20 px-4">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
