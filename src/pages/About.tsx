@@ -38,7 +38,42 @@ const About: React.FC = () => {
                   Who We Are
                 </h2>
                 <p>
-                  We are a small team of developers and content creators passionate about social justice and technology. SASSA Help Hub was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants. We are not affiliated with SASSA or the South African government; we are an independent entity committed to serving the community. This project is developed and maintained by 44Tag Studios.
+                  We are a dedicated team of researchers and content creators passionate about financial inclusion and social support. SASSA Help Hub was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants. We are not affiliated with SASSA or the South African government; we are an independent entity committed to serving the community with transparency and integrity.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Editorial Policy & Fact-Checking
+                </h2>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-xl font-medium mb-2">Our Commitment to Accuracy</h3>
+                    <p>
+                      Accuracy is our top priority. Every guide, update, and news article published on SASSA Help Hub undergoes a rigorous review process. We verify information against official SASSA communications, government gazettes, and reputable news outlets to ensure you receive the most reliable data.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-medium mb-2">Fact-Checking Process</h3>
+                    <p>
+                      Our content is cross-referenced with official sources at least twice before publication. We monitor official SASSA channels daily to ensure our payment dates and application guides reflect the latest changes in policy or schedule.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-medium mb-2">Editorial Independence</h3>
+                    <p>
+                      While we strive to be as helpful as possible, we maintain strict editorial independence. Our goal is to provide objective information and clear instructions to help you navigate the social security system effectively.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section className="mb-8 border-l-4 border-primary-gold pl-6">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Official SASSA Disclaimer
+                </h2>
+                <p className="italic">
+                  SASSA Help Hub is an independent, unofficial information portal. We are NOT SASSA, we are NOT affiliated with the South African Social Security Agency, and we do NOT represent any government department. For official assistance, please visit the official SASSA website at <strong>srd.sassa.gov.za</strong> or call the toll-free helpline at <strong>0800 60 10 11</strong>.
                 </p>
               </section>
 
