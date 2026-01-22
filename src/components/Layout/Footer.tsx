@@ -116,6 +116,11 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/disclaimer" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
                 <Link to="/privacy" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
                   {translations.privacyPolicy || 'Privacy Policy'}
                 </Link>

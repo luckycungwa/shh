@@ -16,6 +16,7 @@ import Resources from './pages/Resources';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import Disclaimer from './pages/Disclaimer';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/Common/ErrorBoundary';
 import CookieConsent from './components/Common/CookieConsent';
@@ -35,6 +36,7 @@ const routes = [
   { path: "/privacy" },
   { path: "/terms" },
   { path: "/about" },
+  { path: "/disclaimer" },
   { path: "*" },
 ];
 
@@ -60,6 +62,7 @@ const AppContent: React.FC = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<About />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />

@@ -14,6 +14,7 @@ import {
   AlertTriangle,
   AlertCircle,
   Smartphone,
+  ExternalLink,
 } from "lucide-react";
 import { useAppContext } from "../hooks/useAppContext";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
@@ -304,8 +305,6 @@ const Home: React.FC = () => {
               </div>
             </form>
 
-        <AdUnit slot="1234567890" />
-
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {quickStats.map((stat, index) => (
@@ -353,6 +352,8 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <AdUnit slot="1234567890" />
 
         {/* SASSA Status Check Section */}
         <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800">
@@ -421,14 +422,20 @@ const Home: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full bg-yellow-500 text-primary-black px-8 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200"
+                className="w-full bg-yellow-500 text-primary-black px-8 py-3 rounded-lg font-semibold hover:bg-primary-gold transition-colors duration-200 flex items-center justify-center space-x-2"
               >
-                Check Status Now
+                <span>Check Status (Official SASSA Site)</span>
+                <ExternalLink className="w-4 h-4" />
               </button>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                This will securely redirect you to the official SASSA website to
-                check your status. We do not store your personal information.
-              </p>
+              <div className="space-y-2">
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  This will securely redirect you to the official SASSA website to
+                  check your status. We do not store your personal information.
+                </p>
+                <p className="text-xs text-red-500 font-medium">
+                  Note: This link leads to a government website that may be slow or unavailable during peak times.
+                </p>
+              </div>
             </form>
             <div className="flex overflow-hidden w-full bottom-0">
               <div className="flex-1 h-1.5 bg-yellow-600 rounded-bl-lg"></div>

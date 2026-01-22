@@ -149,8 +149,8 @@ const UpdatePage: React.FC = () => {
             </header>
             <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
               <p className="font-semibold">{update.summary}</p>
-              <AdUnit slot="5678901234" />
               {update.content && <ReactMarkdown>{update.content}</ReactMarkdown>}
+              <AdUnit slot="5678901234" />
               <AdUnit slot="4321098765" />
             </div>
           </article>

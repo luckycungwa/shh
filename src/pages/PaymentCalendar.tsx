@@ -265,9 +265,6 @@ const PaymentCalendar: React.FC = () => {
           </div>
 
           {/* Calendar Grid */}
-          <AdUnit slot="2468135790" />
-
-          {/* Calendar Grid */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             {/* Calendar Header */}
             <div className="grid grid-cols-7 bg-gray-50 border-b">
@@ -494,7 +491,7 @@ const PaymentCalendar: React.FC = () => {
         {/* <StatusCheckMethods content={content?.statusCheckMethods} /> */}
         <SrdStatusMessages/>
         <RejectionMessages/>
-
+        <AdUnit slot="2468135790" />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Building, Users, Mail, Heart } from 'lucide-react';
+import { Building, Users, Mail, Heart, ShieldCheck, Newspaper } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -39,6 +39,31 @@ const About: React.FC = () => {
                 </h2>
                 <p>
                   We are a small team of developers and content creators passionate about social justice and technology. SASSA AI Status Update was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants. We are not affiliated with SASSA or the South African government; we are an independent entity committed to serving the community. This project is developed and maintained by 44Tag Studios.
+                </p>
+                <div className="mt-4 bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <p className="text-sm italic">
+                    Helping 10,000+ monthly visitors navigate the complexities of social security in South Africa.
+                  </p>
+                </div>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                  <Newspaper className="w-6 h-6 mr-2 text-primary-gold" />
+                  Editorial Transparency
+                </h2>
+                <p>
+                  Our content is sourced from official government gazettes, SASSA press releases, and verified public announcements. We cross-reference every update with the Department of Social Development's official communications to ensure accuracy. Our goal is to provide a simplified explanation of complex legislative changes for the average citizen.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                  <ShieldCheck className="w-6 h-6 mr-2 text-primary-gold" />
+                  Independence Policy
+                </h2>
+                <p>
+                  SASSA AI Status Update operates with full editorial independence. We do not receive funding from government entities. Our operations are supported by minimal advertisement revenue, allowing us to keep our information free and accessible to everyone. We maintain a strict separation between our editorial content and advertisement placements.
                 </p>
               </section>
 
