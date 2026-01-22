@@ -148,7 +148,7 @@ const Resources: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA Offices - Find Your Nearest SASSA Office | SASSA Help Hub</title>
+        <title>SASSA Offices - Find Your Nearest SASSA Office | SASSA AI Status Update</title>
         <meta name="description" content="Find your nearest SASSA office with addresses, phone numbers, operating hours, and directions. Locate SASSA offices across South Africa." />
         <meta name="keywords" content="SASSA offices, SASSA locations, nearest SASSA office, SASSA address, SASSA contact details" />
       </Helmet>

@@ -197,7 +197,7 @@ const ScamAlert: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA Scam Alert - Protect Yourself from Fraud | SASSA Help Hub</title>
+        <title>SASSA Scam Alert - Protect Yourself from Fraud | SASSA AI Status Update</title>
         <meta name="description" content="Stay protected from SASSA scams and fraud. Learn to identify fake officials, SMS scams, and fraudulent websites targeting SASSA beneficiaries." />
         <meta name="keywords" content="SASSA scams, SASSA fraud, avoid SASSA scams, fake SASSA officials, SASSA SMS scam" />
       </Helmet>

@@ -6,8 +6,8 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - SASSA Help Hub</title>
-        <meta name="description" content="Learn about the mission and team behind SASSA Help Hub, your trusted unofficial resource for SASSA information." />
+        <title>About Us - SASSA AI Status Update</title>
+        <meta name="description" content="Learn about the mission and team behind SASSA AI Status Update, your trusted unofficial resource for SASSA information." />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
@@ -15,7 +15,7 @@ const About: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8">
             <div className="text-center mb-12">
               <Building className="w-16 h-16 text-primary-gold mx-auto mb-6" />
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About SASSA Help Hub</h1>
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About SASSA AI Status Update</h1>
               <p className="text-xl text-gray-600 dark:text-gray-400">
                 Your Unofficial Guide to Navigating SASSA.
               </p>
@@ -28,7 +28,7 @@ const About: React.FC = () => {
                   Our Mission
                 </h2>
                 <p>
-                  At SASSA Help Hub, our mission is to provide clear, accessible, and up-to-date information about the South African Social Security Agency (SASSA) grants. We understand that navigating the social security system can be challenging, and we are here to simplify the process for you. We aim to empower individuals and families by providing them with the knowledge they need to access the support they are entitled to.
+                  At SASSA AI Status Update, our mission is to provide clear, accessible, and up-to-date information about the South African Social Security Agency (SASSA) grants. We understand that navigating the social security system can be challenging, and we are here to simplify the process for you. We aim to empower individuals and families by providing them with the knowledge they need to access the support they are entitled to.
                 </p>
               </section>
 
@@ -38,7 +38,7 @@ const About: React.FC = () => {
                   Who We Are
                 </h2>
                 <p>
-                  We are a small team of developers and content creators passionate about social justice and technology. SASSA Help Hub was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants. We are not affiliated with SASSA or the South African government; we are an independent entity committed to serving the community. This project is developed and maintained by 44Tag Studios.
+                  We are a small team of developers and content creators passionate about social justice and technology. SASSA AI Status Update was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants. We are not affiliated with SASSA or the South African government; we are an independent entity committed to serving the community. This project is developed and maintained by 44Tag Studios.
                 </p>
               </section>
 

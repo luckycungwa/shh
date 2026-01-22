@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           {/* About Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-primary-gold">
-              {translations.aboutSassaHelpHub || 'About SASSA Help Hub'}
+              {translations.aboutSassaHelpHub || 'About SASSA AI Status Update'}
             </h3>
             <p className="text-secondary-gray dark:text-gray-400 text-sm mb-4">
               {translations.footerAbout || ''}
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="mailto:support@sassahelphub.co.za"
+                  href="mailto:support@sassaaistatusupdate.co.za"
                   className="text-secondary-gray hover:text-primary-gold transition-colors duration-200"
                 >
                   {translations.contactSupport || 'Contact Support'}
@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-sm text-secondary-gray text-center lg:text-left">
-              <p>© {currentYear} SASSA Help Hub. All rights reserved.</p>
+              <p>© {currentYear} SASSA AI Status Update. All rights reserved.</p>
               <p className="mt-1">
                 {translations.footerNote || 'This is an independent resource not affiliated with SASSA.'}
               </p>

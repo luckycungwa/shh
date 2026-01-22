@@ -57,43 +57,43 @@ const UpdatesListPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Latest SASSA News and Updates | SASSA Help Hub</title>
+        <title>Latest SASSA News and Updates | SASSA AI Status Update</title>
         <meta name="description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2026. Get details on grant changes, payment schedules, and application deadlines." />
         <meta name="keywords" content="SASSA news, SASSA updates, SASSA press release, social grant news, SASSA 2026" />
-        <link rel="canonical" href="https://sassahelphub.co.za/updates" />
-        <meta property="og:title" content="Latest SASSA News and Updates | SASSA Help Hub" />
+        <link rel="canonical" href="https://sassaaistatusupdate.co.za/updates" />
+        <meta property="og:title" content="Latest SASSA News and Updates | SASSA AI Status Update" />
         <meta property="og:description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2026." />
-        <meta property="og:url" content="https://sassahelphub.co.za/updates" />
+        <meta property="og:url" content="https://sassaaistatusupdate.co.za/updates" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta property="og:image" content="https://sassaaistatusupdate.co.za/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Latest SASSA News and Updates | SASSA Help Hub" />
+        <meta name="twitter:title" content="Latest SASSA News and Updates | SASSA AI Status Update" />
         <meta name="twitter:description" content="Stay informed with the latest SASSA news, press releases, and important updates for 2026." />
-        <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta name="twitter:image" content="https://sassaaistatusupdate.co.za/logo.png" />
         {updates.length > 0 && (
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Blog",
               "name": "SASSA News and Updates",
-              "description": "The latest news and updates from SASSA Help Hub.",
-              "url": "https://sassahelphub.co.za/updates",
+              "description": "The latest news and updates from SASSA AI Status Update.",
+              "url": "https://sassaaistatusupdate.co.za/updates",
               "blogPost": updates.map(update => ({
                 "@type": "BlogPosting",
                 "headline": update.title,
-                "url": `https://sassahelphub.co.za/updates/${update.id}`,
+                "url": `https://sassaaistatusupdate.co.za/updates/${update.id}`,
                 "datePublished": update.date,
                 "description": update.summary,
                 "author": {
                   "@type": "Organization",
-                  "name": "SASSA Help Hub"
+                  "name": "SASSA AI Status Update"
                 },
                 "publisher": {
                   "@type": "Organization",
-                  "name": "SASSA Help Hub",
+                  "name": "SASSA AI Status Update",
                   "logo": {
                     "@type": "ImageObject",
-                    "url": "https://sassahelphub.co.za/logo.png"
+                    "url": "https://sassaaistatusupdate.co.za/logo.png"
                   }
                 }
               }))

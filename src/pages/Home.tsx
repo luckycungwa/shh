@@ -12,6 +12,8 @@ import {
   TrendingUp,
   Clock,
   AlertTriangle,
+  AlertCircle,
+  Smartphone,
 } from "lucide-react";
 import { useAppContext } from "../hooks/useAppContext";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
@@ -198,32 +200,31 @@ const Home: React.FC = () => {
     <>
       <Helmet>
         <title>
-          SASSA Help Hub - Your Unofficial SASSA Resource | Payment Dates, Scam
-          Alerts & More
+          SASSA AI Status Update - Your Unofficial SASSA Resource | Johannesburg & Gauteng Status Updates
         </title>
         <meta
           name="description"
-          content="Get accurate SASSA information, payment dates 2026, scam protection, and community support. Unofficial resource for South African Social Security Agency beneficiaries."
+          content="Get accurate SASSA information, payment dates 2026, and status updates for Johannesburg and Gauteng. Unofficial resource for South African Social Security Agency beneficiaries."
         />
         <meta
           name="keywords"
-          content="SASSA payment dates 2026, avoid SASSA scams, SASSA grant application, South African social security, SASSA help"
+          content="SASSA status check Johannesburg, SASSA updates Gauteng, SASSA payment dates 2026, avoid SASSA scams, SASSA grant application, South African social security, SASSA Soweto"
         />
-        <link rel="canonical" href="https://sassahelphub.co.za" />
+        <link rel="canonical" href="https://sassaaistatusupdate.co.za" />
 
         {/* Open Graph tags */}
-        <meta property="og:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
+        <meta property="og:title" content="SASSA AI Status Update - Your Unofficial SASSA Resource" />
         <meta property="og:description" content="Get accurate SASSA information, payment dates 2026, scam protection, and community support." />
-        <meta property="og:url" content="https://sassahelphub.co.za" />
+        <meta property="og:url" content="https://sassaaistatusupdate.co.za" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
-        <meta property="og:image:alt" content="SASSA Help Hub Logo" />
+        <meta property="og:image" content="https://sassaaistatusupdate.co.za/logo.png" />
+        <meta property="og:image:alt" content="SASSA AI Status Update Logo" />
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SASSA Help Hub - Your Unofficial SASSA Resource" />
+        <meta name="twitter:title" content="SASSA AI Status Update - Your Unofficial SASSA Resource" />
         <meta name="twitter:description" content="Get accurate SASSA information, payment dates 2026, scam protection, and community support." />
-        <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta name="twitter:image" content="https://sassaaistatusupdate.co.za/logo.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -231,25 +232,25 @@ const Home: React.FC = () => {
             "@graph": [
               {
                 "@type": "WebSite",
-                name: "SASSA Help Hub",
+                name: "SASSA AI Status Update",
                 description:
                   "Unofficial SASSA resource for South African beneficiaries",
-                url: "https://sassahelphub.co.za",
+                url: "https://sassaaistatusupdate.co.za",
                 potentialAction: {
                   "@type": "SearchAction",
                   target: {
                     "@type": "EntryPoint",
                     urlTemplate:
-                      "https://sassahelphub.co.za/faq?search={search_term_string}",
+                      "https://sassaaistatusupdate.co.za/faq?search={search_term_string}",
                   },
                   "query-input": "required name=search_term_string",
                 },
               },
               {
                 "@type": "Organization",
-                name: "SASSA Help Hub",
-                url: "https://sassahelphub.co.za",
-                logo: "https://sassahelphub.co.za/logo.png",
+                name: "SASSA AI Status Update",
+                url: "https://sassaaistatusupdate.co.za",
+                logo: "https://sassaaistatusupdate.co.za/logo.png",
               },
             ],
           })}
@@ -257,12 +258,18 @@ const Home: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        {/* Downtime Alert Banner */}
+        <div className="bg-red-600 text-white py-3 px-4 text-center font-bold flex items-center justify-center space-x-2">
+          <AlertCircle className="w-5 h-5" />
+          <span>⚠️ Official SASSA Website is currently experiencing downtime. Please use our alternative status check methods below (WhatsApp/SMS) for immediate updates.</span>
+        </div>
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary-black via-primary-dark to-primary-black text-white py-20 px-4">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-              {translations.heroTitle || "Welcome to SASSA Help Hub"}
+              {translations.heroTitle || "Welcome to SASSA AI Status Update"}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto animate-slide-up">
               {translations.heroSubtitle ||
@@ -319,6 +326,30 @@ const Home: React.FC = () => {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Alternative Status Check Guide (AEO) */}
+        <section className="py-12 px-4 bg-primary-gold bg-opacity-10 border-b border-primary-gold">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <Smartphone className="w-6 h-6 mr-2 text-primary-gold" />
+              Quick Status Check (Alternative Methods)
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+                <h3 className="font-bold mb-2">1. WhatsApp</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Message "Status" to <strong>082 046 8553</strong>. Follow the prompts with your ID number.</p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+                <h3 className="font-bold mb-2">2. SMS</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">SMS your ID number to <strong>34548</strong>. (Cost: R1.00 per SMS).</p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-yellow-500">
+                <h3 className="font-bold mb-2">3. USSD</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Dial <strong>*120*3227#</strong> on your phone and follow the on-screen instructions.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -612,7 +643,7 @@ const Home: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               {translations.ctaDesc ||
-                "Join thousands of South Africans who trust SASSA Help Hub for accurate, up-to-date information."}
+                "Join thousands of South Africans who trust SASSA AI Status Update for accurate, up-to-date information."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {/* <Link
