@@ -6,6 +6,7 @@ import { useAppContext } from '../hooks/useAppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import RejectionMessages from '../components/Home/rejection-messages';
 import ProvincialOffices from '../components/Home/provincial-offices';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Guide {
   id: string;
@@ -195,6 +196,8 @@ const Guides: React.FC = () => {
               </div>
             </div>
           </div>
+
+          <AdUnit slot="4455667788" />
 
           {/* Results Count */}
           <div className="mb-6">

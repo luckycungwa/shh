@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Clock, User, BookOpen, ChevronLeft } from 'lucide-react';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Guide {
   id: string;
@@ -119,6 +120,7 @@ const GuidePage: React.FC = () => {
             </header>
 
             <div className="prose max-w-none">
+              <AdUnit slot="7788990011" />
               {guide.steps.map((step, index) => (
                 <section key={index} className="mb-8">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">

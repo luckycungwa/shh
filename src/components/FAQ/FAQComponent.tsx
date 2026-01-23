@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, ChevronDown, ChevronUp, Star, Heart, ExternalLink } from 'lucide-react';
 import { useAppContext } from '../../hooks/useAppContext';
+import AdUnit from '../Common/AdUnit';
 
 interface FAQ {
   id: string;
@@ -141,6 +142,8 @@ const FAQComponent: React.FC<FAQComponentProps> = ({ faqs }) => {
             </div>
           </div>
         </div>
+
+        <AdUnit slot="3344556677" />
 
         {/* Results Count */}
         <div className="mb-6">

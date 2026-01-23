@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import { AlertTriangle, Search } from 'lucide-react';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Update {
   id: string;
@@ -109,6 +110,8 @@ const UpdatesListPage: React.FC = () => {
               Stay informed with all the news and announcements.
             </p>
           </div>
+
+          <AdUnit slot="8899001122" />
 
           {/* Search and Sort Controls */}
           <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">

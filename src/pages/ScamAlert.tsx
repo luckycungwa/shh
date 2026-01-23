@@ -4,6 +4,7 @@ import { Shield, AlertTriangle, Search, Phone, Mail, MessageSquare, ExternalLink
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import CommonScamRedFlags from '../components/ScamAlert/CommonScamRedFlags';
 import ScamPreventionChecklist from '../components/ScamAlert/ScamPreventionChecklist';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Scam {
   id: string;
@@ -282,6 +283,8 @@ const ScamAlert: React.FC = () => {
               </div>
             )}
           </div>
+
+          <AdUnit slot="6677889900" />
 
           {/* Search and Filter */}
           <div className="mb-8 space-y-4">

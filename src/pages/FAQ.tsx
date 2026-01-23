@@ -63,14 +63,24 @@ const FAQPage: React.FC = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What should I do if the official SASSA website is down?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "If the official SASSA website is down, you can use SASSA Help Hub as a reliable alternative for status check guides and payment schedules for Johannesburg and Gauteng.",
+        },
       },
-    })),
+      ...faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    ],
   };
 
   return (
