@@ -1,0 +1,60 @@
+[
+  {
+    "month": "2026-01",
+    "grants": [
+      {
+        "type": "Old Age Grant",
+        "dates": [
+          "2026-01-03",
+          "2026-01-04"
+        ],
+        "amount": 2310,
+        "notes": "Dates adjusted for weekend"
+      },
+      {
+        "type": "Disability Grant",
+        "dates": [
+          "2026-01-05",
+          "2026-01-06"
+        ],
+        "amount": 2310
+      },
+      {
+        "type": "Child Support Grant",
+        "dates": [
+          "2026-01-07",
+          "2026-01-08",
+          "2026-01-09"
+        ],
+        "amount": 560
+      }
+    ]
+  },
+  {
+    "month": "2026-02",
+    "grants": [
+      {
+        "type": "Old Age Grant",
+        "dates": [
+          "2026-02-03"
+        ],
+        "amount": 2310,
+        "notes": "Standard schedule"
+      },
+      {
+        "type": "Disability Grant",
+        "dates": [
+          "2026-02-04"
+        ],
+        "amount": 2310
+      },
+      {
+        "type": "Child Support Grant",
+        "dates": [
+          "2026-02-05"
+        ],
+        "amount": 560
+      }
+    ]
+  }
+]

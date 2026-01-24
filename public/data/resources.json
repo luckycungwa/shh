@@ -1,0 +1,476 @@
+[
+  {
+    "id": "office-001",
+    "name": "SASSA Head Office",
+    "address": "SASSA House, 501 Prodinsa Building, Cnr Steve Biko and Pretorius Streets",
+    "city": "Pretoria",
+    "province": "Gauteng",
+    "postalCode": "0083",
+    "phone": "012 400 2000",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "Appeals",
+      "Medical Assessments",
+      "SRD Grant Processing",
+      "Policy Administration"
+    ],
+    "coordinates": {
+      "lat": -25.7471,
+      "lng": 28.1962
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Parking available",
+      "Air conditioning"
+    ],
+    "tags": [
+      "SASSA Head Office",
+      "Pretoria grants",
+      "SASSA services",
+      "grant appeals"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Services Guide",
+        "url": "/services",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-002",
+    "name": "SASSA Gauteng Regional Office",
+    "address": "222 Smit Street, Braamfontein",
+    "city": "Johannesburg",
+    "province": "Gauteng",
+    "postalCode": "2000",
+    "phone": "011 241 8581",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "07:30 - 16:30",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "Medical Assessments",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -26.192,
+      "lng": 28.0305
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Parking available",
+      "Security on site"
+    ],
+    "tags": [
+      "SASSA Johannesburg office",
+      "Gauteng grants",
+      "SASSA medical assessments",
+      "SRD grants"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Application Guide",
+        "url": "/how-to-apply",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-003",
+    "name": "SASSA Limpopo Regional Office",
+    "address": "43 Landros Mare Street",
+    "city": "Polokwane",
+    "province": "Limpopo",
+    "postalCode": "0699",
+    "phone": "015 291 7439",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "Foster Care Grants",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -23.9045,
+      "lng": 29.4689
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Public transport nearby"
+    ],
+    "tags": [
+      "SASSA Polokwane office",
+      "Limpopo grants",
+      "foster care grants",
+      "SASSA services"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Foster Child Grant Guide",
+        "url": "/grants/foster-child",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-004",
+    "name": "SASSA Free State Regional Office",
+    "address": "Cnr St. Andrew Street & Aliwal Street",
+    "city": "Bloemfontein",
+    "province": "Free State",
+    "postalCode": "9300",
+    "phone": "051 410 8339",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "Appeals",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -29.1167,
+      "lng": 26.2167
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Parking available",
+      "Public transport nearby"
+    ],
+    "tags": [
+      "SASSA Bloemfontein office",
+      "Free State grants",
+      "SASSA appeals",
+      "SRD grants"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Appeals Guide",
+        "url": "/appeals",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-005",
+    "name": "SASSA KwaZulu-Natal Regional Office",
+    "address": "1 Bank Street",
+    "city": "Pietermaritzburg",
+    "province": "KwaZulu-Natal",
+    "postalCode": "3201",
+    "phone": "033 846 3300",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "Foster Care Grants",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -29.6006,
+      "lng": 30.3794
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Public transport nearby",
+      "Interpreter services"
+    ],
+    "tags": [
+      "SASSA Pietermaritzburg office",
+      "KwaZulu-Natal grants",
+      "foster care grants",
+      "SASSA services"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Foster Child Grant Guide",
+        "url": "/grants/foster-child",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-006",
+    "name": "SASSA Mpumalanga Regional Office",
+    "address": "18 Ferreira Street",
+    "city": "Mbombela",
+    "province": "Mpumalanga",
+    "postalCode": "1200",
+    "phone": "013 754 9377",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -25.4658,
+      "lng": 30.9853
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Parking available"
+    ],
+    "tags": [
+      "SASSA Mbombela office",
+      "Mpumalanga grants",
+      "SASSA services",
+      "SRD grants"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA SRD Grant Guide",
+        "url": "/grants/srd",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-007",
+    "name": "SASSA North West Regional Office",
+    "address": "SASSA House ERF 3139, Corner Sekame and Dr James Moroka",
+    "city": "Mmabatho",
+    "province": "North West",
+    "postalCode": "2735",
+    "phone": "018 397 3317",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -25.8517,
+      "lng": 25.6332
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Parking available",
+      "Public transport nearby"
+    ],
+    "tags": [
+      "SASSA Mmabatho office",
+      "North West grants",
+      "SASSA services",
+      "SRD grants"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA SRD Grant Guide",
+        "url": "/grants/srd",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-008",
+    "name": "SASSA Northern Cape Regional Office",
+    "address": "Permanent 'Perm' Building, 33 Du Toitspan Road",
+    "city": "Kimberley",
+    "province": "Northern Cape",
+    "postalCode": "8300",
+    "phone": "053 065 0478",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -28.7383,
+      "lng": 24.7623
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Public transport nearby"
+    ],
+    "tags": [
+      "SASSA Kimberley office",
+      "Northern Cape grants",
+      "SASSA services",
+      "SRD grants"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA SRD Grant Guide",
+        "url": "/grants/srd",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-009",
+    "name": "SASSA Eastern Cape Regional Office",
+    "address": "BKB Building, Cnr Fitzpatrick & Merino Road, Quigney",
+    "city": "East London",
+    "province": "Eastern Cape",
+    "postalCode": "5200",
+    "phone": "043 707 6472",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -33.0153,
+      "lng": 27.9047
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Public transport nearby"
+    ],
+    "tags": [
+      "SASSA East London office",
+      "Eastern Cape grants",
+      "SASSA services",
+      "SRD grants"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA SRD Grant Guide",
+        "url": "/grants/srd",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "office-010",
+    "name": "SASSA Western Cape Regional Office",
+    "address": "Golden Acre, Adderley Street",
+    "city": "Cape Town",
+    "province": "Western Cape",
+    "postalCode": "8000",
+    "phone": "021 469 0370",
+    "email": "GrantEnquiries@sassa.gov.za",
+    "hours": {
+      "weekdays": "08:00 - 16:00",
+      "saturday": "Closed"
+    },
+    "services": [
+      "Grant Applications",
+      "Status Inquiries",
+      "Card Replacements",
+      "Appeals",
+      "SRD Grant Processing"
+    ],
+    "coordinates": {
+      "lat": -33.9218,
+      "lng": 18.4231
+    },
+    "accessibility": [
+      "Wheelchair accessible",
+      "Parking available",
+      "Public transport nearby"
+    ],
+    "tags": [
+      "SASSA Cape Town office",
+      "Western Cape grants",
+      "SASSA services",
+      "grant appeals"
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Appeals Guide",
+        "url": "/appeals",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  }
+]

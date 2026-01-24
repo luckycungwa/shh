@@ -39,12 +39,11 @@ const Resources: React.FC = () => {
   useEffect(() => {
     const fetchOffices = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a68cb3ae596e708fcfa5f5/latest');
+        const response = await fetch('/data/resources.json');
         if (!response.ok) {
           throw new Error('Failed to fetch offices');
         }
-        const jsonResponse = await response.json();
-        const data: SassaOffice[] = jsonResponse.record;
+        const data: SassaOffice[] = await response.json();
         setOffices(data);
         setFilteredOffices(data);
       } catch (err) {

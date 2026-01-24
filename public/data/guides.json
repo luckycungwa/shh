@@ -1,0 +1,116 @@
+[
+  {
+    "id": "guide-001",
+    "title": "How to Apply for the SASSA Child Support Grant in 2025",
+    "description": "A detailed, step-by-step guide to applying for the SASSA Child Support Grant, including eligibility criteria, required documents, and tips to avoid delays.",
+    "category": "Applications",
+    "difficulty": "beginner",
+    "estimatedTime": "30 minutes",
+    "steps": [
+      {
+        "title": "Check Your Eligibility",
+        "content": "Ensure you and the child meet the requirements: the child must be under 18, a South African citizen or permanent resident, and you must pass the means test.",
+        "tips": [
+          "Single caregiver income must be R5,500/month or less (2025).",
+          "Married couples’ combined income must be R11,000/month or less.",
+          "Verify eligibility on our <a href='/eligibility'>eligibility guide</a>."
+        ]
+      },
+      {
+        "title": "Gather Required Documents",
+        "content": "Collect all necessary documents before visiting a SASSA office or outreach event to streamline your application.",
+        "tips": [
+          "Include South African ID, child’s birth certificate, and 3-month bank statements.",
+          "Ensure documents are recent (not older than 3 months).",
+          "Make copies to keep for your records."
+        ]
+      },
+      {
+        "title": "Submit Application at SASSA",
+        "content": "Visit a SASSA office or ICROP event, complete the application form with staff assistance, and keep your receipt.",
+        "tips": [
+          "Check <a href='/resources'>SASSA office locations</a> for the nearest branch.",
+          "Arrive early to avoid long queues.",
+          "Applications are FREE—beware of scams charging fees."
+        ]
+      }
+    ],
+    "tags": [
+      "SASSA child support grant 2025",
+      "grant application",
+      "eligibility criteria",
+      "SASSA documents"
+    ],
+    "lastUpdated": "2025-08-20",
+    "author": "SASSA Help Hub Team",
+    "relatedLinks": [
+      {
+        "title": "Child Support Grant FAQ",
+        "url": "/faq?search=child%20support",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Child Support Info",
+        "url": "https://www.sassa.gov.za/grants/child-support-grant",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "guide-002",
+    "title": "How to Protect Yourself from SASSA Scams in 2025",
+    "description": "Learn how to identify and avoid SASSA-related scams, including fake SMS, fraudulent officials, and unauthorized deductions, with actionable steps to stay safe.",
+    "category": "Scam Protection",
+    "difficulty": "beginner",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "Identify Common Scam Tactics",
+        "content": "Recognize scams like fake SMS requesting bank details, impostors posing as SASSA officials, or fraudulent websites mimicking SASSA’s official site.",
+        "tips": [
+          "SASSA never asks for banking details via SMS or email.",
+          "Fake websites use URLs like sassa-grants.co.za, not www.sassa.gov.za.",
+          "Check our <a href='/scams'>scams page</a> for examples."
+        ]
+      },
+      {
+        "title": "Verify Official Communications",
+        "content": "Always confirm SASSA communications through official channels to avoid falling for scams.",
+        "tips": [
+          "Call SASSA at 0800 60 10 11 to verify messages.",
+          "Visit <a href='https://www.sassa.gov.za' target='_blank'>www.sassa.gov.za</a> for legitimate updates.",
+          "Report suspicious activity to fraud@sassa.gov.za."
+        ]
+      },
+      {
+        "title": "Monitor Your Payments",
+        "content": "Regularly check your grant payments for unauthorized deductions or irregularities, and report issues immediately.",
+        "tips": [
+          "SMS your ID to 34548 to check payment status (R1/SMS).",
+          "Report unauthorized deductions via SMS to 34548 with ID and provider details.",
+          "Learn more on our <a href='/payment-issues'>payment issues guide</a>."
+        ]
+      }
+    ],
+    "tags": [
+      "SASSA scams 2025",
+      "fraud prevention",
+      "grant safety",
+      "avoid scams"
+    ],
+    "lastUpdated": "2025-08-20",
+    "author": "SASSA Help Hub Team",
+    "relatedLinks": [
+      {
+        "title": "SASSA Scam Prevention Guide",
+        "url": "/scams",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Fraud Reporting",
+        "url": "https://www.sassa.gov.za/contact-us",
+        "isExternal": true
+      }
+    ]
+  }
+]

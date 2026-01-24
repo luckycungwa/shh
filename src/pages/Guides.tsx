@@ -43,12 +43,11 @@ const Guides: React.FC = () => {
   useEffect(() => {
     const fetchGuides = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest');
+        const response = await fetch('/data/guides.json');
         if (!response.ok) {
           throw new Error('Failed to fetch guides');
         }
-        const data = await response.json();
-        const allGuides: Guide[] = data.record || [];
+        const allGuides: Guide[] = await response.json();
         setGuides(allGuides);
         setFilteredGuides(allGuides);
       } catch (err) {
