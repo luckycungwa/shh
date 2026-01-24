@@ -26,12 +26,12 @@ const UpdatesListPage: React.FC = () => {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const response = await fetch("https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4");
+        const response = await fetch("/data/updates.json");
         if (!response.ok) {
           throw new Error("Failed to fetch updates");
         }
         const data = await response.json();
-        setUpdates(data.record || []);
+        setUpdates(data || []);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An unknown error occurred.");
       } finally {
