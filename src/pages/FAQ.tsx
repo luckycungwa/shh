@@ -26,10 +26,9 @@ const FAQPage: React.FC = () => {
   useEffect(() => {
     const fetchFAQs = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ea6bd0ea881f405e5846/latest');
+        const response = await fetch('/data/faqs.json');
         if (!response.ok) throw new Error('Failed to fetch FAQs');
-        const jsonResponse = await response.json();
-        const data = jsonResponse.record;
+        const data = await response.json();
         setFaqs(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');

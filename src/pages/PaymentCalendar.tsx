@@ -83,7 +83,7 @@ const PaymentCalendar: React.FC = () => {
     const fetchData = async () => {
       try {
         const [paymentsResponse, contentResponse, homeContentResponse] = await Promise.all([
-          fetch('https://api.jsonbin.io/v3/b/68a4ae0e43b1c97be922a4f9/latest'),
+          fetch('/data/payments.json'),
           fetch('/data/paymentCalendarContent.json'),
           fetch('/data/homeContent.json')
         ]);
@@ -96,7 +96,7 @@ const PaymentCalendar: React.FC = () => {
         const contentData = await contentResponse.json();
         const homeContentData = await homeContentResponse.json();
 
-        setPayments(paymentsData.record);
+        setPayments(paymentsData);
         setExtraContent(contentData);
         setHomeContent(homeContentData);
       } catch (err) {
