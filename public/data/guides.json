@@ -1,114 +1,164 @@
 [
   {
-    "id": "guide-001",
-    "title": "How to Apply for the SASSA Child Support Grant in 2025",
-    "description": "A detailed, step-by-step guide to applying for the SASSA Child Support Grant, including eligibility criteria, required documents, and tips to avoid delays.",
-    "category": "Applications",
+    "id": "srd-grant",
+    "title": "SASSA SRD R370 Grant Guide 2026: Eligibility & How to Apply",
+    "description": "Comprehensive guide for the SASSA Social Relief of Distress (SRD) R370 grant in 2026. Learn about the new income threshold, application process, and re-application requirements.",
+    "category": "SRD Grant",
     "difficulty": "beginner",
-    "estimatedTime": "30 minutes",
+    "estimatedTime": "15 minutes",
     "steps": [
       {
-        "title": "Check Your Eligibility",
-        "content": "Ensure you and the child meet the requirements: the child must be under 18, a South African citizen or permanent resident, and you must pass the means test.",
+        "title": "Understand the 2026 Eligibility Criteria",
+        "content": "To qualify for the SRD R370 grant, you must be a South African citizen, refugee, asylum seeker, or special permit holder. Your monthly income must not exceed R624. You must not be receiving any other social grant, UIF, or NSFAS support.",
         "tips": [
-          "Single caregiver income must be R5,500/month or less (2025).",
-          "Married couples’ combined income must be R11,000/month or less.",
-          "Verify eligibility on our <a href='/eligibility'>eligibility guide</a>."
+          "The income threshold is strictly monitored via bank verification.",
+          "Ensure your mobile number is active and RICA'd in your name."
         ]
       },
       {
-        "title": "Gather Required Documents",
-        "content": "Collect all necessary documents before visiting a SASSA office or outreach event to streamline your application.",
+        "title": "Submit Your Application Online",
+        "content": "The most efficient way to apply is via the official SASSA SRD website (srd.sassa.gov.za) or the SASSA WhatsApp line (082 046 8553). You will need your 13-digit ID number and mobile phone.",
         "tips": [
-          "Include South African ID, child’s birth certificate, and 3-month bank statements.",
-          "Ensure documents are recent (not older than 3 months).",
-          "Make copies to keep for your records."
+          "Follow the prompts carefully to provide your personal and contact details.",
+          "Double-check your banking details to avoid payment delays."
         ]
       },
       {
-        "title": "Submit Application at SASSA",
-        "content": "Visit a SASSA office or ICROP event, complete the application form with staff assistance, and keep your receipt.",
+        "title": "Complete the Declaration and Consent",
+        "content": "You must agree to the terms and conditions, allowing SASSA to verify your financial information with banks and government databases.",
         "tips": [
-          "Check <a href='/resources'>SASSA office locations</a> for the nearest branch.",
-          "Arrive early to avoid long queues.",
-          "Applications are FREE—beware of scams charging fees."
+          "This is a legal requirement for every new or re-application."
+        ]
+      },
+      {
+        "title": "Check Your Status Regularly",
+        "content": "After applying, use our <a href='https://sassaaistatusupdate.co.za' target='_blank'>Real-Time Status Checker</a> to track your progress.",
+        "tips": [
+          "Applications are processed monthly. You do not need to re-apply every month unless your circumstances change significantly."
         ]
       }
     ],
     "tags": [
-      "SASSA child support grant 2025",
-      "grant application",
-      "eligibility criteria",
-      "SASSA documents"
+      "SRD R370 grant 2026",
+      "SASSA application",
+      "eligibility",
+      "social relief"
     ],
-    "lastUpdated": "2025-08-20",
+    "lastUpdated": "2026-01-28",
     "author": "SASSA Help Hub Team",
     "relatedLinks": [
       {
-        "title": "Child Support Grant FAQ",
-        "url": "/faq?search=child%20support",
-        "isExternal": false
+        "title": "Check SRD Status Now",
+        "url": "https://sassaaistatusupdate.co.za",
+        "isExternal": true
       },
       {
-        "title": "Official SASSA Child Support Info",
-        "url": "https://www.sassa.gov.za/grants/child-support-grant",
+        "title": "Official SRD Portal",
+        "url": "https://srd.sassa.gov.za",
         "isExternal": true
       }
     ]
   },
   {
-    "id": "guide-002",
-    "title": "How to Protect Yourself from SASSA Scams in 2025",
-    "description": "Learn how to identify and avoid SASSA-related scams, including fake SMS, fraudulent officials, and unauthorized deductions, with actionable steps to stay safe.",
-    "category": "Scam Protection",
-    "difficulty": "beginner",
-    "estimatedTime": "15 minutes",
+    "id": "appeal-guide",
+    "title": "How to Appeal a Declined SASSA SRD Application (Step-by-Step)",
+    "description": "Was your SASSA SRD R370 application declined? Don't lose hope. Follow our 2026 guide to lodge an appeal with the Independent Tribunal.",
+    "category": "Appeals",
+    "difficulty": "intermediate",
+    "estimatedTime": "20 minutes",
     "steps": [
       {
-        "title": "Identify Common Scam Tactics",
-        "content": "Recognize scams like fake SMS requesting bank details, impostors posing as SASSA officials, or fraudulent websites mimicking SASSA’s official site.",
+        "title": "Identify the Reason for Decline",
+        "content": "Common reasons include 'UIF registered', 'NSFAS registered', or 'Alternative Income Source'. Check your exact reason on the status portal.",
         "tips": [
-          "SASSA never asks for banking details via SMS or email.",
-          "Fake websites use URLs like sassa-grants.co.za, not www.sassa.gov.za.",
-          "Check our <a href='/scams'>scams page</a> for examples."
+          "Use our <a href='https://sassaaistatusupdate.co.za' target='_blank'>status check tool</a> to find your decline code."
         ]
       },
       {
-        "title": "Verify Official Communications",
-        "content": "Always confirm SASSA communications through official channels to avoid falling for scams.",
+        "title": "Visit the ITSAA Website",
+        "content": "Appeals are NOT handled by SASSA directly. You must visit the Independent Tribunal for Social Assistance Appeals (ITSAA) portal at srd-appeals.dsd.gov.za.",
         "tips": [
-          "Call SASSA at 0800 60 10 11 to verify messages.",
-          "Visit <a href='https://www.sassa.gov.za' target='_blank'>www.sassa.gov.za</a> for legitimate updates.",
-          "Report suspicious activity to fraud@sassa.gov.za."
+          "You must lodge your appeal within 30 to 90 days of receiving the decline notification."
         ]
       },
       {
-        "title": "Monitor Your Payments",
-        "content": "Regularly check your grant payments for unauthorized deductions or irregularities, and report issues immediately.",
+        "title": "Enter Your ID and Phone Number",
+        "content": "Verify your identity on the appeal portal using the same details used in your original application.",
         "tips": [
-          "SMS your ID to 34548 to check payment status (R1/SMS).",
-          "Report unauthorized deductions via SMS to 34548 with ID and provider details.",
-          "Learn more on our <a href='/payment-issues'>payment issues guide</a>."
+          "Ensure you have access to the mobile number registered with SASSA to receive the OTP."
+        ]
+      },
+      {
+        "title": "Select the Months You Wish to Appeal",
+        "content": "Appeals are lodged for each month your application was declined. Select all applicable months and submit.",
+        "tips": [
+          "The tribunal can take up to 90 days to process and rule on your appeal."
         ]
       }
     ],
     "tags": [
-      "SASSA scams 2025",
-      "fraud prevention",
-      "grant safety",
-      "avoid scams"
+      "SASSA appeal 2026",
+      "declined SRD",
+      "ITSAA",
+      "re-application"
     ],
-    "lastUpdated": "2025-08-20",
+    "lastUpdated": "2026-01-28",
     "author": "SASSA Help Hub Team",
     "relatedLinks": [
       {
-        "title": "SASSA Scam Prevention Guide",
-        "url": "/scams",
-        "isExternal": false
+        "title": "Lodge Appeal Online",
+        "url": "https://srd-appeals.dsd.gov.za",
+        "isExternal": true
       },
       {
-        "title": "SASSA Fraud Reporting",
-        "url": "https://www.sassa.gov.za/contact-us",
+        "title": "Check Status for Decline Reason",
+        "url": "https://sassaaistatusupdate.co.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
+    "id": "guide-001",
+    "title": "How to Apply for the SASSA Child Support Grant in 2026",
+    "description": "A detailed, step-by-step guide to applying for the SASSA Child Support Grant, including updated 2026 eligibility criteria and document requirements.",
+    "category": "Applications",
+    "difficulty": "beginner",
+    "estimatedTime": "30 minutes",
+    "steps": [
+      {
+        "title": "Check Your 2026 Eligibility",
+        "content": "The child must be under 18 and living with the primary caregiver. You must pass the means test—income thresholds have been adjusted for 2026.",
+        "tips": [
+          "Single caregiver income must be R5,700/month or less.",
+          "Married couples’ combined income must be R11,400/month or less."
+        ]
+      },
+      {
+        "title": "Gather Required Documents",
+        "content": "You will need: 13-digit barcoded ID, child's birth certificate, proof of residence, and 3-month bank statement.",
+        "tips": [
+          "If you don't have an ID or birth certificate, SASSA can provide an affidavit form."
+        ]
+      },
+      {
+        "title": "Submit at your nearest SASSA Office",
+        "content": "Visit a local SASSA office. Applications are free. You will be interviewed and have your biometric data captured.",
+        "tips": [
+          "Find your <a href='/resources'>nearest SASSA office</a> here."
+        ]
+      }
+    ],
+    "tags": [
+      "SASSA child support grant 2026",
+      "grant application",
+      "eligibility"
+    ],
+    "lastUpdated": "2026-01-28",
+    "author": "SASSA Help Hub Team",
+    "relatedLinks": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
     ]
