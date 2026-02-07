@@ -85,7 +85,7 @@ const FAQPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA Frequently Asked Questions | SASSA Help Hub</title>
+        <title>SASSA Frequently Asked Questions | SASSA AI Status Update</title>
         <meta
           name="description"
           content="Find answers to common SASSA questions. Payment dates, grant applications, eligibility requirements, and more. Updated 2026."

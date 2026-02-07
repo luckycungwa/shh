@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           <Link
             to="/"
             className="flex items-center space-x-2 text-primary-gold font-bold text-xl"
-            aria-label="SASSA Help Hub Home"
+            aria-label="SASSA AI Status Update Home"
           >
             <div className="w-8 h-8 bg-primary-gold rounded-lg flex items-center justify-center">
               <img src="/logo.png" alt="Logo" className="rounded-md w-8 h-8" />
