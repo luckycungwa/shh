@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, matchRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, matchRoutes, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { AppProvider } from './contexts/AppContext';
 import Layout from './components/Layout/Layout';
@@ -60,6 +60,8 @@ const AppContent: React.FC = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Navigate to="/updates" replace />} />
+          <Route path="/blog/*" element={<Navigate to="/updates" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />

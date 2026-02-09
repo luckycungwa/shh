@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
                 <span>South Africa</span>
               </div>
               <div className="text-center">
-                Created by <Link to="https://www.44tagstudios.co.za/" target="_blank" className="text-orange-400 underline hover:text-primary-gold transition-colors duration-200">44Tag Studios </Link>
+                Created by <a href="https://www.44tagstudios.co.za/" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline hover:text-primary-gold transition-colors duration-200">44Tag Studios </a>
               </div>
             </div>
           </div>

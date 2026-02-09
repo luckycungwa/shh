@@ -128,7 +128,7 @@ export default function ProvincialOffices() {
               </ul>
             </div>
 
-            <Link to="https://www.sassa.gov.za/SitePages/Head-Office-and-Regional-Contacts.aspx" className="w-full flex text-center px-2 py-2 items-center justify-center mb-4 bg-black/90 hover:bg-gray-800 text-white rounded-lg">Contact Office</Link>
+            <a href="https://www.sassa.gov.za/SitePages/Head-Office-and-Regional-Contacts.aspx" target="_blank" rel="noopener noreferrer" className="w-full flex text-center px-2 py-2 items-center justify-center mb-4 bg-black/90 hover:bg-gray-800 text-white rounded-lg">Contact Office</a>
             </div>
              <div className="flex overflow-hidden w-full bottom-0 rounded-b-2xl">
                       <div className="flex-1 h-1.5 bg-yellow-600 rounded-bl-lg"></div>
