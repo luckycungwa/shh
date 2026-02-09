@@ -26,10 +26,9 @@ const FAQPage: React.FC = () => {
   useEffect(() => {
     const fetchFAQs = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ea6bd0ea881f405e5846/latest');
+        const response = await fetch('/data/faqs.json');
         if (!response.ok) throw new Error('Failed to fetch FAQs');
-        const jsonResponse = await response.json();
-        const data = jsonResponse.record;
+        const data = await response.json();
         setFaqs(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
@@ -63,14 +62,24 @@ const FAQPage: React.FC = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What should I do if the official SASSA website is down?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "If the official SASSA website is down, you can use SASSA Help Hub as a reliable alternative for status check guides and payment schedules for Johannesburg and Gauteng.",
+        },
       },
-    })),
+      ...faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    ],
   };
 
   return (

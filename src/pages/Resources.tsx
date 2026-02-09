@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Clock, Navigation, Search, Filter, ExternalLink } from 'lucide-react';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import AdUnit from '../components/Common/AdUnit';
 
 interface SassaOffice {
   id: string;
@@ -38,12 +39,11 @@ const Resources: React.FC = () => {
   useEffect(() => {
     const fetchOffices = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a68cb3ae596e708fcfa5f5/latest');
+        const response = await fetch('/data/resources.json');
         if (!response.ok) {
           throw new Error('Failed to fetch offices');
         }
-        const jsonResponse = await response.json();
-        const data: SassaOffice[] = jsonResponse.record;
+        const data: SassaOffice[] = await response.json();
         setOffices(data);
         setFilteredOffices(data);
       } catch (err) {
@@ -230,6 +230,8 @@ const Resources: React.FC = () => {
               </select>
             </div>
           </div>
+
+          <AdUnit slot="5566778899" />
 
           {/* Results Count */}
           <div className="mb-6">

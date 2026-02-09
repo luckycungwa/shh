@@ -66,10 +66,10 @@ How can I help you today?`,
       if (!isOpen) return;
       setIsPromptLoading(true);
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a9e74243b1c97be92696b3/latest');
+        const response = await fetch('/data/chatbot.json');
         if (!response.ok) throw new Error('Failed to load system prompt');
-        const json = await response.json();
-        setSystemPrompt(json.record.prompt);
+        const data = await response.json();
+        setSystemPrompt(data.prompt);
       } catch (error) {
         console.error("Failed to fetch system prompt:", error);
         setHasError(true);

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import { AlertTriangle, Search } from 'lucide-react';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Update {
   id: string;
@@ -25,12 +26,12 @@ const UpdatesListPage: React.FC = () => {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const response = await fetch("https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4");
+        const response = await fetch("/data/updates.json");
         if (!response.ok) {
           throw new Error("Failed to fetch updates");
         }
         const data = await response.json();
-        setUpdates(data.record || []);
+        setUpdates(data || []);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An unknown error occurred.");
       } finally {
@@ -109,6 +110,8 @@ const UpdatesListPage: React.FC = () => {
               Stay informed with all the news and announcements.
             </p>
           </div>
+
+          <AdUnit slot="8899001122" />
 
           {/* Search and Sort Controls */}
           <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">

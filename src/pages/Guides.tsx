@@ -6,6 +6,7 @@ import { useAppContext } from '../hooks/useAppContext';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import RejectionMessages from '../components/Home/rejection-messages';
 import ProvincialOffices from '../components/Home/provincial-offices';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Guide {
   id: string;
@@ -42,12 +43,11 @@ const Guides: React.FC = () => {
   useEffect(() => {
     const fetchGuides = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest');
+        const response = await fetch('/data/guides.json');
         if (!response.ok) {
           throw new Error('Failed to fetch guides');
         }
-        const data = await response.json();
-        const allGuides: Guide[] = data.record || [];
+        const allGuides: Guide[] = await response.json();
         setGuides(allGuides);
         setFilteredGuides(allGuides);
       } catch (err) {
@@ -195,6 +195,8 @@ const Guides: React.FC = () => {
               </div>
             </div>
           </div>
+
+          <AdUnit slot="4455667788" />
 
           {/* Results Count */}
           <div className="mb-6">

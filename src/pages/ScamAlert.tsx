@@ -4,6 +4,7 @@ import { Shield, AlertTriangle, Search, Phone, Mail, MessageSquare, ExternalLink
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import CommonScamRedFlags from '../components/ScamAlert/CommonScamRedFlags';
 import ScamPreventionChecklist from '../components/ScamAlert/ScamPreventionChecklist';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Scam {
   id: string;
@@ -62,11 +63,11 @@ const ScamAlert: React.FC = () => {
     const fetchData = async () => {
       try {
         const [scamsResponse, scamPreventionResponse] = await Promise.all([
-          fetch('https://api.jsonbin.io/v3/b/68a4a9ebae596e708fce5831').then(res => res.ok ? res.json() : Promise.resolve({ record: [] })),
+          fetch('/data/scams.json').then(res => res.ok ? res.json() : Promise.resolve([])),
           fetch('/data/scamPrevention.json').then(res => res.ok ? res.json() : Promise.resolve(null))
         ]);
 
-        const allScams: Scam[] = scamsResponse.record || [];
+        const allScams: Scam[] = scamsResponse || [];
 
         setScams(allScams);
         setFilteredScams(allScams);
@@ -282,6 +283,8 @@ const ScamAlert: React.FC = () => {
               </div>
             )}
           </div>
+
+          <AdUnit slot="6677889900" />
 
           {/* Search and Filter */}
           <div className="mb-8 space-y-4">

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Clock, User, BookOpen, ChevronLeft } from 'lucide-react';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
+import AdUnit from '../components/Common/AdUnit';
 
 interface Guide {
   id: string;
@@ -30,12 +31,11 @@ const GuidePage: React.FC = () => {
   useEffect(() => {
     const fetchGuide = async () => {
       try {
-        const response = await fetch('https://api.jsonbin.io/v3/b/68a5ec9a43b1c97be9237421/latest');
+        const response = await fetch('/data/guides.json');
         if (!response.ok) {
           throw new Error('Failed to fetch guides');
         }
-        const data = await response.json();
-        const guides: Guide[] = data.record || [];
+        const guides: Guide[] = await response.json();
         const foundGuide = guides.find(g => g.id === id);
         if (foundGuide) {
           setGuide(foundGuide);
@@ -119,6 +119,7 @@ const GuidePage: React.FC = () => {
             </header>
 
             <div className="prose max-w-none">
+              <AdUnit slot="7788990011" />
               {guide.steps.map((step, index) => (
                 <section key={index} className="mb-8">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">

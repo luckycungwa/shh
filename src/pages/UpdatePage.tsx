@@ -25,12 +25,12 @@ const UpdatePage: React.FC = () => {
   useEffect(() => {
     const fetchUpdate = async () => {
       try {
-        const response = await fetch("https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4");
+        const response = await fetch("/data/updates.json");
         if (!response.ok) {
           throw new Error("Failed to fetch updates");
         }
         const data = await response.json();
-        const updates = data.record || [];
+        const updates = data || [];
         const foundUpdate = updates.find((u: Update) => u.id === id);
 
         if (foundUpdate) {

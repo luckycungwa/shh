@@ -98,10 +98,8 @@ const Home: React.FC = () => {
       try {
         const [updatesResponse, paymentDatesResponse, homeContentResponse] =
           await Promise.all([
-            fetch(
-              "https://api.jsonbin.io/v3/b/68a4a96fd0ea881f405d88f4"
-            ),
-            fetch("https://api.jsonbin.io/v3/b/68a4a9cbae596e708fce5820"),
+            fetch("/data/updates.json"),
+            fetch("/data/paymentDates.json"),
             fetch("/data/homeContent.json"),
           ]);
 
@@ -115,8 +113,8 @@ const Home: React.FC = () => {
         const paymentDatesJson = await paymentDatesResponse.json();
         const homeContentJson = await homeContentResponse.json();
 
-        setUpdates(updatesJson.record.slice(0, 3));
-        setPaymentDates(paymentDatesJson.record);
+        setUpdates(updatesJson.slice(0, 3));
+        setPaymentDates(paymentDatesJson);
         setHomeContent(homeContentJson);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Unknown error");
@@ -249,10 +247,38 @@ const Home: React.FC = () => {
               },
               {
                 "@type": "Organization",
-                name: "SASSA AI Status Update",
-                url: "https://sassaaistatusupdate.co.za",
-                logo: "https://sassaaistatusupdate.co.za/logo.png",
+                name: "SASSA Help Hub",
+                url: "https://sassahelphub.co.za",
+                logo: "https://sassahelphub.co.za/logo.png",
+                address: {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Johannesburg",
+                  "addressRegion": "Gauteng",
+                  "addressCountry": "ZA"
+                }
               },
+              {
+                "@type": "HowTo",
+                "name": "How to Check SASSA Status in Johannesburg",
+                "description": "Step-by-step guide to checking your SASSA SRD status when the official site is down.",
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "text": "Visit SASSA Help Hub for the latest reliable alternative links.",
+                    "url": "https://sassahelphub.co.za"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "text": "Have your 13-digit South African ID and cellphone number ready.",
+                    "url": "https://sassahelphub.co.za"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "text": "Follow our redirection to the secure government portal.",
+                    "url": "https://sassahelphub.co.za"
+                  }
+                ]
+              }
             ],
           })}
         </script>
@@ -260,10 +286,7 @@ const Home: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
         {/* Downtime Alert Banner */}
-        <div className="bg-red-600 text-white py-3 px-4 text-center font-bold flex items-center justify-center space-x-2">
-          <AlertCircle className="w-5 h-5" />
-          <span>⚠️ Official SASSA Website is currently experiencing downtime. Please use our alternative status check methods below (WhatsApp/SMS) for immediate updates.</span>
-        </div>
+       
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary-black via-primary-dark to-primary-black text-white py-20 px-4">
