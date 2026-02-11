@@ -125,7 +125,7 @@ const Guides: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA Guides - Step-by-Step Instructions | SASSA AI Status Update</title>
+        <title>SASSA Guides - Step-by-Step Instructions | SASSA Help Hub</title>
         <meta name="description" content="Comprehensive step-by-step guides for SASSA services. Learn how to apply for grants, avoid scams, and navigate SASSA processes." />
         <meta name="keywords" content="SASSA guides, SASSA application guide, SASSA step by step, SASSA help" />
       </Helmet>

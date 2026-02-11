@@ -8,8 +8,8 @@ const Terms: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - SASSA AI Status Update</title>
-        <meta name="description" content="Terms of Service for SASSA AI Status Update. Learn about our user agreement and service conditions." />
+        <title>Terms of Service - SASSA Help Hub</title>
+        <meta name="description" content="Terms of Service for SASSA Help Hub. Learn about our user agreement and service conditions." />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
@@ -32,7 +32,7 @@ const Terms: React.FC = () => {
                     <div>
                       <h3 className="text-red-800 font-semibold text-lg mb-2">Important Disclaimer</h3>
                       <p className="text-red-700">
-                        <strong>SASSA AI Status Update is an independent resource.</strong> We are not affiliated with,
+                        <strong>SASSA Help Hub is an independent resource.</strong> We are not affiliated with,
                         endorsed by, or officially connected to the South African Social Security Agency (SASSA), 
                         the South African Government, or any government department. 
                         Always verify information through official SASSA channels.
@@ -45,7 +45,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                 <p className="text-gray-700 mb-4">
-                  By accessing and using SASSA AI Status Update ("the Website", "our Service"), you accept and agree to be bound by these Terms of Service.
+                  By accessing and using SASSA Help Hub ("the Website", "our Service"), you accept and agree to be bound by these Terms of Service.
                   If you do not agree to these terms, please do not use our website.
                 </p>
                 <p className="text-gray-700">
@@ -353,7 +353,7 @@ const Terms: React.FC = () => {
                   For questions about these Terms of Service or our website:
                 </p>
                 <div className="space-y-2 text-gray-700">
-                  <p>Email: legal@sassaaistatusupdate.co.za</p>
+                  <p>Email: legal@sassahelphub.co.za</p>
                   <p>Phone: +27 11 123 4567</p>
                   <p className="text-sm text-gray-600 mt-4">
                     For SASSA-related queries, contact SASSA directly:

@@ -1,8 +1,8 @@
-# SASSA AI Status Update 🇿🇦
+# SASSA Help Hub 🇿🇦
 
 A comprehensive, production-ready React web application providing SASSA (South African Social Security Agency) beneficiaries with accurate information, guidance, and tools. This is an **unofficial resource** with prominent disclaimers throughout.
 
-![SASSA AI Status Update](https://img.shields.io/badge/Status-Production%20Ready-green)
+![SASSA Help Hub](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![React](https://img.shields.io/badge/React-18+-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3+-blue)

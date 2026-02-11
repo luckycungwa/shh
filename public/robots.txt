@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sassaaistatusupdate.co.za/sitemap.xml
+Sitemap: https://sassahelphub.co.za/sitemap.xml

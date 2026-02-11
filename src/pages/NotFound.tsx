@@ -7,8 +7,8 @@ const NotFound: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page Not Found - SASSA AI Status Update</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to SASSA AI Status Update homepage." />
+        <title>Page Not Found - SASSA Help Hub</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to SASSA Help Hub homepage." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
