@@ -155,7 +155,7 @@ const PaymentCalendar: React.FC = () => {
     if (!monthPayments) return;
 
     // Create ICS file content
-    let icsContent = 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//SASSA AI Status Update//Payment Calendar//EN\n';
+    let icsContent = 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//SASSA Help Hub//Payment Calendar//EN\n';
     
     monthPayments.grants.forEach(grant => {
       grant.dates.forEach(dateStr => {
@@ -204,7 +204,7 @@ const PaymentCalendar: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SASSA Payment {format(currentDate, 'MMMM yyyy')} | SASSA AI Status Update</title>
+        <title>SASSA Payment {format(currentDate, 'MMMM yyyy')} | SASSA Help Hub</title>
         <meta name="description" content="View SASSA payment dates for 2026. Get SRD Grant, Old Age Grant, Disability Grant, and Child Support Grant payment schedules with email reminders." />
         <meta name="keywords" content="SASSA payment dates 2026, SASSA calendar, grant payment schedule, SASSA payment times" />
       </Helmet>

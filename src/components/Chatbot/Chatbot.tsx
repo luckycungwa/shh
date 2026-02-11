@@ -44,7 +44,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ className = '' }) => {
   const initialMessage = useMemo((): Message => ({
     id: 'initial',
     type: 'bot',
-    content: `Hello! I'm the SASSA AI Status Update assistant. I can help you with:
+    content: `Hello! I'm the SASSA Help Hub assistant. I can help you with:
 
 • SASSA payment dates and schedules
 • Grant application information

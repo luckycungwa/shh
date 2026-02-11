@@ -82,7 +82,7 @@ const GuidePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{guide.title} | SASSA AI Status Update</title>
+        <title>{guide.title} | SASSA Help Hub</title>
         <meta name="description" content={guide.description} />
       </Helmet>
 
