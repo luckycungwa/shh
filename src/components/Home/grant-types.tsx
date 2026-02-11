@@ -1,6 +1,7 @@
 
 import { DollarSign, Users, Heart, Baby, Home, Shield, Award, Plus } from "lucide-react"
 import { Link } from "react-router-dom"
+import ReactMarkdown from "react-markdown"
 
 interface Grant {
   name: string
@@ -34,10 +35,24 @@ export default function GrantTypes({ grantTypes }: GrantTypesProps) {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">SASSA Grants</h2>
-          <p className="text-gray-600 max-w-4xl mx-auto text-lg">
-            Essential grant programs that provide financial support to millions of South Africans, ensuring access to
-            basic needs and improving quality of life across communities.
-          </p>
+          <div className="text-gray-600 max-w-4xl mx-auto text-lg prose prose-lg dark:prose-invert">
+            <ReactMarkdown
+              components={{
+                a: ({ href, children }) => {
+                  if (href?.startsWith("/")) {
+                    return <Link to={href} className="text-primary-gold hover:underline">{children}</Link>
+                  }
+                  return (
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary-gold hover:underline">
+                      {children}
+                    </a>
+                  )
+                },
+              }}
+            >
+              {grantTypes.intro}
+            </ReactMarkdown>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

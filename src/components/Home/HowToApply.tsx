@@ -1,5 +1,7 @@
 import type React from "react"
 import { CheckCircle, Database, Shield, ThumbsUp } from "lucide-react"
+import ReactMarkdown from "react-markdown"
+import { Link } from "react-router-dom"
 
 interface HowToApplyProps {
   content: {
@@ -49,7 +51,24 @@ const HowToApply: React.FC<HowToApplyProps> = ({ content }) => {
                 "Hassle-free grant application services for your financial security",
               )}
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">{content.intro}</p>
+            <div className="text-lg text-gray-600 leading-relaxed prose prose-lg dark:prose-invert">
+              <ReactMarkdown
+                components={{
+                  a: ({ href, children }) => {
+                    if (href?.startsWith("/")) {
+                      return <Link to={href} className="text-primary-gold hover:underline">{children}</Link>
+                    }
+                    return (
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary-gold hover:underline">
+                        {children}
+                      </a>
+                    )
+                  },
+                }}
+              >
+                {content.intro}
+              </ReactMarkdown>
+            </div>
           </div>
 
           <div className="relative">
@@ -64,23 +83,55 @@ const HowToApply: React.FC<HowToApplyProps> = ({ content }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-start space-x-4">
+          {content.steps.map((step, index) => (
+            <div key={step.id} className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center font-bold text-blue-600">
+                  {index + 1}
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <div className="prose prose-sm dark:prose-invert">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <ReactMarkdown
+                  components={{
+                    a: ({ href, children }) => {
+                      if (href?.startsWith("/")) {
+                        return <Link to={href} className="text-primary-gold hover:underline">{children}</Link>
+                      }
+                      return (
+                        <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary-gold hover:underline">
+                          {children}
+                        </a>
+                      )
+                    },
+                  }}
+                >
+                  {step.description}
+                </ReactMarkdown>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg">{content.outro}</p>
+        <div className="text-center mt-12 prose prose-lg dark:prose-invert max-w-none">
+          <div className="text-gray-600 max-w-3xl mx-auto text-lg">
+            <ReactMarkdown
+              components={{
+                a: ({ href, children }) => {
+                  if (href?.startsWith("/")) {
+                    return <Link to={href} className="text-primary-gold hover:underline">{children}</Link>
+                  }
+                  return (
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary-gold hover:underline">
+                      {children}
+                    </a>
+                  )
+                },
+              }}
+            >
+              {content.outro}
+            </ReactMarkdown>
+          </div>
         </div>
       </div>
     </section>

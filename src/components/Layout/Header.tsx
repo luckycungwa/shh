@@ -11,13 +11,16 @@ const Header: React.FC = () => {
   const { language, setLanguage, theme, setTheme, translations } = useAppContext();
 
   const navigationItems = [
-    { path: '/', label: translations.home || 'Home' },
-    { path: '/updates', label: 'News' },
-    { path: '/payment-calendar', label: translations.paymentCalendar || 'Payment Date' },
-    { path: '/guides', label: translations.guides || 'Guides' },
-    { path: '/scam-alert', label: translations.scamAlert || 'Scam Alert' },
-    { path: '/resources', label: translations.resources || 'Resources' },
-   { path: '/faq', label: translations.faq || 'FAQ' },
+    { path: '/', label: 'Home' },
+    { path: '/payment-calendar', label: 'Payment Dates 2026' },
+    { path: '/guides/srd-grant', label: 'SRD R370 Grant' },
+    { path: '/guides', label: 'Other Grants' },
+    { path: 'https://sassaaistatusupdate.co.za', label: 'Status Checker', isExternal: true },
+    { path: '/guides/appeal-guide', label: 'Appeal Guide' },
+    { path: '/scam-alert', label: 'Scam Alerts' },
+    { path: '/faq', label: 'FAQs' },
+    { path: '/updates', label: 'Blog/News' },
+    { path: '/about', label: 'Contact' },
   ];
 
   const languages = [
@@ -52,18 +55,30 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-1" role="navigation" aria-label="Main navigation">
             {navigationItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? 'bg-primary-gold text-primary-black'
-                    : 'text-white dark:text-gray-300 hover:bg-primary-dark dark:hover:bg-gray-700 hover:text-primary-gold'
-                }`}
-                aria-current={isActive(item.path) ? 'page' : undefined}
-              >
-                {item.label}
-              </Link>
+              item.isExternal ? (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-2 rounded-md text-xs font-medium text-white dark:text-gray-300 hover:bg-primary-dark dark:hover:bg-gray-700 hover:text-primary-gold transition-colors duration-200"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`px-2 py-2 rounded-md text-xs font-medium transition-colors duration-200 ${
+                    isActive(item.path)
+                      ? 'bg-primary-gold text-primary-black'
+                      : 'text-white dark:text-gray-300 hover:bg-primary-dark dark:hover:bg-gray-700 hover:text-primary-gold'
+                  }`}
+                  aria-current={isActive(item.path) ? 'page' : undefined}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -149,22 +164,35 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-700">
+          <div className="lg:hidden py-4 border-t border-gray-700 max-h-[70vh] overflow-y-auto">
             <nav className="flex flex-col space-y-2" role="navigation" aria-label="Mobile navigation">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? 'bg-primary-gold text-primary-black'
-                      : 'text-white hover:bg-primary-dark hover:text-primary-gold'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                  aria-current={isActive(item.path) ? 'page' : undefined}
-                >
-                  {item.label}
-                </Link>
+                item.isExternal ? (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-primary-dark hover:text-primary-gold"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                      isActive(item.path)
+                        ? 'bg-primary-gold text-primary-black'
+                        : 'text-white hover:bg-primary-dark hover:text-primary-gold'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-current={isActive(item.path) ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </nav>
           </div>

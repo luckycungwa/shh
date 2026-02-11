@@ -285,8 +285,6 @@ const Home: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
-        {/* Downtime Alert Banner */}
-       
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary-black via-primary-dark to-primary-black text-white py-20 px-4">
@@ -328,6 +326,22 @@ const Home: React.FC = () => {
               </div>
             </form>
 
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
+              <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 flex items-center gap-2 text-sm font-medium">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>Updated daily</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 flex items-center gap-2 text-sm font-medium">
+                <Users className="w-4 h-4 text-blue-400" />
+                <span>Linked in 50+ Facebook groups</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 flex items-center gap-2 text-sm font-medium">
+                <TrendingUp className="w-4 h-4 text-primary-gold" />
+                <span>2000+ helped</span>
+              </div>
+            </div>
+
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {quickStats.map((stat, index) => (
@@ -348,6 +362,17 @@ const Home: React.FC = () => {
                   )}
                 </div>
               ))}
+            </div>
+
+            <div className="mt-12">
+              <a
+                href="https://sassaaistatusupdate.co.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-5 px-10 rounded-full shadow-2xl transition-all transform hover:scale-110 active:scale-95 animate-bounce hover:animate-none"
+              >
+                Check your real-time SRD status now →
+              </a>
             </div>
           </div>
         </section>
@@ -380,67 +405,24 @@ const Home: React.FC = () => {
 
         {/* SASSA Status Check Section */}
         <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              SRD SASSA Status Check for R370
+              SRD SASSA Status Check R370
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              Enter your South African ID number and the cell phone number you
-              used during your application to see your payment dates and status
-              for{" "}
-              {new Date().toLocaleString("default", {
-                month: "long",
-                year: "numeric",
-              })}
-              .
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
+              Use our fast sister tool for instant real-time SRD status checks and payment date verification.
             </p>
-            <form
-              action="https://srd.sassa.gov.za/sc19/status"
-              method="get"
-              target="_blank"
-              className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md space-y-6"
-            >
-              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="id_number" className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">
-                    ID Number
-                  </label>
-                  <input
-                    type="text"
-                    name="idnumber"
-                    id="id_number"
-                    pattern="\d{13}"
-                    title="Please enter a valid 13-digit South African ID number"
-                    required
-                    placeholder="Your 13-digit SA ID Number"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="cell_phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">
-                    Cellphone Number
-                  </label>
-                  <input
-                    type="text"
-                    name="mobile"
-                    id="cell_phone"
-                    pattern="\d{10}"
-                    title="Please enter a valid 10-digit cellphone number"
-                    required
-                    placeholder="Your 10-digit cellphone number"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
-                  />
-                </div>
-              </div> */}
-              <div>
+
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl border-2 border-primary-gold relative overflow-hidden group">
+              <div className="absolute top-0 right-0 bg-primary-gold text-primary-black px-4 py-1 rounded-bl-lg font-bold text-xs uppercase tracking-wider">
+                Recommended
+              </div>
+              <div className="mb-8">
                 <img
                   src="/status-form.png"
-                  alt="A form to check SASSA SRD status, with fields for South African ID number and cellphone number."
-                  className="mt-4 mx-auto"
+                  alt="SASSA SRD status check form preview"
+                  className="mx-auto rounded-lg shadow-inner opacity-80 group-hover:opacity-100 transition-opacity"
                 />
-                <span className="flex items-start p-0 m-0 text-xs text-left text-gray-400 dark:text-gray-500">
-                  sassa status check form image
-                </span>
               </div>
 
               <button
