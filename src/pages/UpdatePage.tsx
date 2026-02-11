@@ -86,37 +86,37 @@ const UpdatePage: React.FC = () => {
         <title>{update.title} | SASSA News</title>
         <meta name="description" content={update.summary} />
         <meta name="keywords" content={`SASSA, ${update.title}, sassa news, sassa updates`} />
-        <link rel="canonical" href={`https://sassahelphub.co.za/updates/${update.id}`} />
+        <link rel="canonical" href={`https://sassaaistatusupdate.co.za/updates/${update.id}`} />
         <meta property="og:title" content={`${update.title} | SASSA News`} />
         <meta property="og:description" content={update.summary} />
-        <meta property="og:url" content={`https://sassahelphub.co.za/updates/${update.id}`} />
+        <meta property="og:url" content={`https://sassaaistatusupdate.co.za/updates/${update.id}`} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={update.date} />
-        <meta property="article:author" content="SASSA Help Hub" />
-        <meta property="og:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta property="article:author" content="SASSA AI Status Update" />
+        <meta property="og:image" content="https://sassaaistatusupdate.co.za/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${update.title} | SASSA News`} />
         <meta name="twitter:description" content={update.summary} />
-        <meta name="twitter:image" content="https://sassahelphub.co.za/logo.png" />
+        <meta name="twitter:image" content="https://sassaaistatusupdate.co.za/logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "NewsArticle",
             "headline": update.title,
-            "url": `https://sassahelphub.co.za/updates/${update.id}`,
+            "url": `https://sassaaistatusupdate.co.za/updates/${update.id}`,
             "datePublished": update.date,
             "description": update.summary,
             "articleBody": update.content,
             "author": {
               "@type": "Organization",
-              "name": "SASSA Help Hub"
+              "name": "SASSA AI Status Update"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "SASSA Help Hub",
+              "name": "SASSA AI Status Update",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://sassahelphub.co.za/logo.png"
+                "url": "https://sassaaistatusupdate.co.za/logo.png"
               }
             }
           })}
@@ -149,8 +149,8 @@ const UpdatePage: React.FC = () => {
             </header>
             <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
               <p className="font-semibold">{update.summary}</p>
-              <AdUnit slot="5678901234" />
               {update.content && <ReactMarkdown>{update.content}</ReactMarkdown>}
+              <AdUnit slot="5678901234" />
               <AdUnit slot="4321098765" />
             </div>
           </article>

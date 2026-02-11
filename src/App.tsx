@@ -16,6 +16,7 @@ import Resources from './pages/Resources';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import Disclaimer from './pages/Disclaimer';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/Common/ErrorBoundary';
 import CookieConsent from './components/Common/CookieConsent';
@@ -35,6 +36,7 @@ const routes = [
   { path: "/privacy" },
   { path: "/terms" },
   { path: "/about" },
+  { path: "/disclaimer" },
   { path: "*" },
 ];
 

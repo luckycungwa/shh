@@ -8,8 +8,8 @@ const Privacy: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - SASSA Help Hub</title>
-        <meta name="description" content="Learn how SASSA Help Hub protects your privacy and handles your personal information." />
+        <title>Privacy Policy - SASSA AI Status Update</title>
+        <meta name="description" content="Learn how SASSA AI Status Update protects your privacy and handles your personal information." />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
@@ -248,7 +248,7 @@ const Privacy: React.FC = () => {
                 <div className="space-y-2 text-gray-700">
                   <p className="flex items-center">
                     <Mail className="w-5 h-5 mr-2 text-gray-500" />
-                    Email: privacy@sassahelphub.co.za
+                    Email: privacy@sassaaistatusupdate.co.za
                   </p>
                   <p className="flex items-center">
                     <Phone className="w-5 h-5 mr-2 text-gray-500" />
