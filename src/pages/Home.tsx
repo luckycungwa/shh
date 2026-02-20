@@ -18,6 +18,7 @@ import { useAppContext } from "../hooks/useAppContext";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
 import AdUnit from "../components/Common/AdUnit";
 import HowToApply from "../components/Home/HowToApply";
+import PaymentCountdown from "../components/Home/PaymentCountdown";
 import GrantTypes from "../components/Home/grant-types";
 
 interface Update {
@@ -183,6 +184,13 @@ const Home: React.FC = () => {
       icon: <HelpCircle className="w-8 h-8" />,
       link: "/faq",
       color: "bg-green-600",
+    },
+    {
+      title: "Eligibility Checker",
+      description: "Check if you qualify for a SASSA grant",
+      icon: <CheckCircle className="w-8 h-8" />,
+      link: "/eligibility-check",
+      color: "bg-blue-600",
     },
   ];
 
@@ -363,7 +371,31 @@ const Home: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="flex flex-col gap-4">
+                <a
+                  href="https://sassaaistatusupdate.co.za"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-5 px-10 rounded-full shadow-2xl transition-all transform hover:scale-105 active:scale-95 animate-bounce hover:animate-none"
+                >
+                  Check your real-time SRD status now →
+                </a>
+                <Link
+                  to="/eligibility-check"
+                  className="inline-flex items-center justify-center gap-2 text-primary-gold font-bold hover:underline"
+                >
+                  <CheckCircle className="w-5 h-5" />
+                  Not sure if you qualify? Use our calculator
+                </Link>
+              </div>
+
+              <div className="max-w-md mx-auto lg:mx-0 w-full">
+                <PaymentCountdown />
+              </div>
+            </div>
+
+            <div className="hidden">
               <a
                 href="https://sassaaistatusupdate.co.za"
                 target="_blank"
@@ -377,6 +409,23 @@ const Home: React.FC = () => {
         </section>
 
         <AdUnit slot="1234567890" />
+
+        {/* Eligibility CTA Banner */}
+        <section className="py-12 px-4 bg-primary-gold">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-primary-black text-center md:text-left">
+              <h2 className="text-3xl font-bold mb-2">Not sure if you qualify?</h2>
+              <p className="text-lg font-medium opacity-80">Use our 1-minute eligibility calculator to find the right grant for you.</p>
+            </div>
+            <Link
+              to="/eligibility-check"
+              className="bg-primary-black text-white px-8 py-4 rounded-xl font-bold text-xl hover:bg-gray-800 transition-all shadow-xl flex items-center gap-2"
+            >
+              <CheckCircle className="w-6 h-6" />
+              Check Eligibility Now
+            </Link>
+          </div>
+        </section>
 
         {/* SASSA Status Check Section */}
         <section className="py-16 px-4 bg-gray-100 dark:bg-gray-800">

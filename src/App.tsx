@@ -16,6 +16,8 @@ import Resources from './pages/Resources';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import CityOfficePage from './pages/CityOfficePage';
+import Eligibility from './pages/Eligibility';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/Common/ErrorBoundary';
 import CookieConsent from './components/Common/CookieConsent';
@@ -35,6 +37,8 @@ const routes = [
   { path: "/privacy" },
   { path: "/terms" },
   { path: "/about" },
+  { path: "/offices/:cityId" },
+  { path: "/eligibility-check" },
   { path: "*" },
 ];
 
@@ -60,6 +64,8 @@ const AppContent: React.FC = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<About />} />
+          <Route path="/offices/:cityId" element={<CityOfficePage />} />
+          <Route path="/eligibility-check" element={<Eligibility />} />
           <Route path="/blog" element={<Navigate to="/updates" replace />} />
           <Route path="/blog/*" element={<Navigate to="/updates" replace />} />
           <Route path="/status-check" element={<Navigate to="/" replace />} />
