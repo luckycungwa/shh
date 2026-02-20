@@ -611,6 +611,27 @@ const Home: React.FC = () => {
         {/* Grant Types Info Section */}
         {homeContent && <GrantTypes grantTypes={homeContent.grantTypes} />}
 
+        {/* Browse All Updates Section for SEO */}
+        <section className="py-12 px-4 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Explore Latest SASSA News</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {updates.map((update) => (
+                <Link
+                  key={update.id}
+                  to={`/updates/${update.id}`}
+                  className="text-sm text-primary-gold hover:underline line-clamp-1"
+                >
+                  • {update.title}
+                </Link>
+              ))}
+              <Link to="/updates" className="text-sm font-bold text-primary-gold hover:underline">
+                View All News & Updates →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Rejection messages */}
 
         <AdUnit slot="0987654321" />

@@ -62,6 +62,33 @@ const AppContent: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Navigate to="/updates" replace />} />
           <Route path="/blog/*" element={<Navigate to="/updates" replace />} />
+          <Route path="/status-check" element={<Navigate to="/" replace />} />
+          <Route path="/application-tracking" element={<Navigate to="/" replace />} />
+          <Route path="/appeals" element={<Navigate to="/guides/appeal-guide" replace />} />
+          <Route path="/offices" element={<Navigate to="/resources" replace />} />
+          <Route path="/bank-details" element={<Navigate to="/guides/srd-grant" replace />} />
+          <Route path="/srd-grant-guide" element={<Navigate to="/guides/srd-grant" replace />} />
+          <Route path="/old-age-grant-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/disability-grant-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/child-support-grant-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/foster-child-grant-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/care-dependency-grant-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/war-veterans-grant-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/grant-in-aid-guide" element={<Navigate to="/guides" replace />} />
+          <Route path="/scams" element={<Navigate to="/scam-alert" replace />} />
+          <Route path="/financial-tools" element={<Navigate to="/" replace />} />
+          <Route path="/eligibility" element={<Navigate to="/guides" replace />} />
+          <Route path="/travel" element={<Navigate to="/guides" replace />} />
+          <Route path="/account-management" element={<Navigate to="/guides" replace />} />
+          <Route path="/assistance" element={<Navigate to="/guides" replace />} />
+          <Route path="/payment-issues" element={<Navigate to="/guides" replace />} />
+          <Route path="/communication" element={<Navigate to="/guides" replace />} />
+          <Route path="/biometrics" element={<Navigate to="/guides" replace />} />
+          <Route path="/grant-reviews" element={<Navigate to="/guides" replace />} />
+          <Route path="/applications" element={<Navigate to="/guides" replace />} />
+          <Route path="/fraud-prevention" element={<Navigate to="/scam-alert" replace />} />
+          <Route path="/grant-amounts" element={<Navigate to="/guides" replace />} />
+          <Route path="/contact" element={<Navigate to="/about" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
