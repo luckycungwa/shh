@@ -2,39 +2,53 @@
   {
     "id": "srd-grant",
     "title": "SASSA SRD R370 Grant Guide 2026: Eligibility & How to Apply",
+    "title_zu": "Umhlahlandlela we-SASSA SRD R370 Grant 2026: Ukufaneleka Nokuthi Ungafaka Kanjani Isicelo",
+    "title_xh": "Isikhokelo seSibonelelo se-SASSA SRD R370 ka-2026: Ukufaneleka nendlela yokuFaka iSicelo",
     "description": "Comprehensive guide for the SASSA Social Relief of Distress (SRD) R370 grant in 2026. Learn about the new income threshold, application process, and re-application requirements.",
+    "description_zu": "Umhlahlandlela ophelele wesibonelelo se-SASSA Social Relief of Distress (SRD) R370 ngo-2026. Funda mayelana nomkhawulo omusha wemali engenayo, inqubo yokufaka isicelo, nezidingo zokuphinde ufake isicelo.",
+    "description_xh": "Isikhokelo esibanzi sesibonelelo se-SASSA Social Relief of Distress (SRD) R370 ngo-2026. Funda malunga nomda omtsha wengeniso, inkqubo yokufaka isicelo, kunye neemfuno zokuphinda ufake isicelo.",
     "category": "SRD Grant",
     "difficulty": "beginner",
     "estimatedTime": "15 minutes",
     "steps": [
       {
         "title": "Understand the 2026 Eligibility Criteria",
+        "title_zu": "Qonda Imibandela Yokufaneleka ka-2026",
+        "title_xh": "Qonda iMilinganiselo yokuFaneleka ka-2026",
         "content": "To qualify for the SRD R370 grant, you must be a South African citizen, refugee, asylum seeker, or special permit holder. Your monthly income must not exceed R624. You must not be receiving any other social grant, UIF, or NSFAS support.",
+        "content_zu": "Ukuze ufaneleke ukuthola isibonelelo se-SRD R370, kumele ube yisishayamthetho saseNingizimu Afrika, umbaleki, ofuna ukukhoseliswa, noma umnikazi wemvume ekhethekile. Imali yakho engenayo ngenyanga akumele yeqe ku-R624. Akumele ube uthola esinye isibonelelo somphakathi, i-UIF, noma uxhaso lwe-NSFAS.",
+        "content_xh": "Ukuze ufaneleke ukufumana isibonelelo se-SRD R370, kufuneka ube ngummi waseMzantsi Afrika, imbaleki, ofuna ukukhuselwa, okanye umnini wemvume ekhethekileyo. Ingeniso yakho yenyanga mayingadluli kwi-R624. Akufuneki ube ufumana nasiphi na esinye isibonelelo soluntu, i-UIF, okanye inkxaso ye-NSFAS.",
         "tips": [
           "The income threshold is strictly monitored via bank verification.",
           "Ensure your mobile number is active and RICA'd in your name."
+        ],
+        "tips_zu": [
+          "Umkhawulo wemali engenayo uqashelwa kakhulu ngokuqinisekiswa kwebhange.",
+          "Qiniseka ukuthi inombolo yakho yeselula iyasebenza futhi ibhaliswe (RICA) ngegama lakho."
+        ],
+        "tips_xh": [
+          "Umda wengeniso ubekwe esweni ngokungqongqo ngongqiniso lwebhanki.",
+          "Qinisekisa ukuba inombolo yakho yeselula iyasebenza kwaye i-RICA kwigama lakho."
         ]
       },
       {
         "title": "Submit Your Application Online",
+        "title_zu": "Faka Isicelo Sakho Ku-inthanethi",
+        "title_xh": "Faka iSicelo sakho kwi-Intanethi",
         "content": "The most efficient way to apply is via the official SASSA SRD website (srd.sassa.gov.za) or the SASSA WhatsApp line (082 046 8553). You will need your 13-digit ID number and mobile phone.",
+        "content_zu": "Indlela ephumelela kakhulu yokufaka isicelo kusebenzisa iwebhusayithi esemthethweni ye-SASSA SRD (srd.sassa.gov.za) noma inombolo ye-WhatsApp ye-SASSA (082 046 8553). Uzodinga inombolo yakho ye-ID enezinhlamvu eziyi-13 nomakhalekhukhwini wakho.",
+        "content_xh": "Eyona ndlela isebenzayo yokufaka isicelo kukusebenzisa iwebhusayithi esemthethweni ye-SASSA SRD (srd.sassa.gov.za) okanye umnxeba we-WhatsApp we-SASSA (082 046 8553). Uzofuna inombolo yakho ye-ID enamanani ali-13 kunye nemobhayili yakho.",
         "tips": [
           "Follow the prompts carefully to provide your personal and contact details.",
           "Double-check your banking details to avoid payment delays."
-        ]
-      },
-      {
-        "title": "Complete the Declaration and Consent",
-        "content": "You must agree to the terms and conditions, allowing SASSA to verify your financial information with banks and government databases.",
-        "tips": [
-          "This is a legal requirement for every new or re-application."
-        ]
-      },
-      {
-        "title": "Check Your Status Regularly",
-        "content": "After applying, use our <a href='https://sassaaistatusupdate.co.za' target='_blank'>Real-Time Status Checker</a> to track your progress.",
-        "tips": [
-          "Applications are processed monthly. You do not need to re-apply every month unless your circumstances change significantly."
+        ],
+        "tips_zu": [
+          "Landela imiyalelo ngokucophelela ukuze unikeze imininingwane yakho yomuntu siqu neyokuxhumana.",
+          "Hlola kabili imininingwane yakho yasebhange ukuze ugweme ukubambezeleka kokukhokhelwa."
+        ],
+        "tips_xh": [
+          "Landela imiyalelo ngononophelo ukuze unikeze iinkcukacha zakho kunye neenkcukacha zoqhagamshelwano.",
+          "Khangela iinkcukacha zakho zebhanki ukuze ungapheli lixesha lokuhlawulwa."
         ]
       }
     ],
@@ -62,37 +76,30 @@
   {
     "id": "appeal-guide",
     "title": "How to Appeal a Declined SASSA SRD Application (Step-by-Step)",
+    "title_zu": "Ungasidlulisa Kanjani Isicelo Se-SASSA SRD Esichithiwe (Isinyathelo Ngesinyathelo)",
+    "title_xh": "Ubungasibhena Njani iSicelo se-SASSA SRD esikhatyiweyo (Inyathelo ngenyathelo)",
     "description": "Was your SASSA SRD R370 application declined? Don't lose hope. Follow our 2026 guide to lodge an appeal with the Independent Tribunal.",
+    "description_zu": "Ingabe isicelo sakho se-SASSA SRD R370 sichithiwe? Ungalahli ithemba. Landela umhlahlandlela wethu ka-2026 ukuze ufake isicelo sokudlulisa icala ku-Tribunal Ezimele.",
+    "description_xh": "Ngaba isicelo sakho se-SASSA SRD R370 sikhaliwe? Ungalahli ithemba. Landela isikhokelo sethu sika-2026 sokufaka isibheno kwi-Tribunal e-Independent.",
     "category": "Appeals",
     "difficulty": "intermediate",
     "estimatedTime": "20 minutes",
     "steps": [
       {
         "title": "Identify the Reason for Decline",
+        "title_zu": "Thola Isizathu Sokuchithwa",
+        "title_xh": "Chaza iSizathu sokuKhatywa",
         "content": "Common reasons include 'UIF registered', 'NSFAS registered', or 'Alternative Income Source'. Check your exact reason on the status portal.",
+        "content_zu": "Izizathu ezivamile zihlanganisa 'obhaliswe ku-UIF', 'obhaliswe ku-NSFAS', noma 'Omunye Umthombo Wemali'. Hlola isizathu sakho esiqondile kungosi yesimo.",
+        "content_xh": "Izizathu eziqhelekileyo ziquka 'ubhalisiwe kwi-UIF', 'ubhalisiwe kwi-NSFAS', okanye 'Omunye uMthombo weNgeniso'. Jonga isizathu sakho esichanekileyo kwiphothali yemo.",
         "tips": [
           "Use our <a href='https://sassaaistatusupdate.co.za' target='_blank'>status check tool</a> to find your decline code."
-        ]
-      },
-      {
-        "title": "Visit the ITSAA Website",
-        "content": "Appeals are NOT handled by SASSA directly. You must visit the Independent Tribunal for Social Assistance Appeals (ITSAA) portal at srd-appeals.dsd.gov.za.",
-        "tips": [
-          "You must lodge your appeal within 30 to 90 days of receiving the decline notification."
-        ]
-      },
-      {
-        "title": "Enter Your ID and Phone Number",
-        "content": "Verify your identity on the appeal portal using the same details used in your original application.",
-        "tips": [
-          "Ensure you have access to the mobile number registered with SASSA to receive the OTP."
-        ]
-      },
-      {
-        "title": "Select the Months You Wish to Appeal",
-        "content": "Appeals are lodged for each month your application was declined. Select all applicable months and submit.",
-        "tips": [
-          "The tribunal can take up to 90 days to process and rule on your appeal."
+        ],
+        "tips_zu": [
+          "Sebenzisa ithuluzi lethu lokuhlola isimo ukuze uthole ikhodi yakho yokuchithwa."
+        ],
+        "tips_xh": [
+          "Sebenzisa isixhobo sethu sokujonga imeko ukuze ufumane ikhowudi yakho yokukhaba."
         ]
       }
     ],
@@ -109,42 +116,39 @@
         "title": "Lodge Appeal Online",
         "url": "https://srd-appeals.dsd.gov.za",
         "isExternal": true
-      },
-      {
-        "title": "Check Status for Decline Reason",
-        "url": "https://sassaaistatusupdate.co.za",
-        "isExternal": true
       }
     ]
   },
   {
     "id": "guide-001",
     "title": "How to Apply for the SASSA Child Support Grant in 2026",
+    "title_zu": "Ungasifaka Kanjani Isicelo Sesibonelelo Sokusekela Ingane se-SASSA ngo-2026",
+    "title_xh": "Indlela yokuFaka iSicelo seSibonelelo soXhaso loMntwana se-SASSA ngo-2026",
     "description": "A detailed, step-by-step guide to applying for the SASSA Child Support Grant, including updated 2026 eligibility criteria and document requirements.",
+    "description_zu": "Umhlahlandlela onemininingwane, wesinyathelo ngesinyathelo wokufaka isicelo sesibonelelo sokusekela ingane se-SASSA, kuhlanganise nemibandela yokufaneleka nezincomo zemibhalo zika-2026.",
+    "description_xh": "Isikhokelo esineenkcukacha, inyathelo ngenyathelo lokufaka isicelo sesibonelelo senkxaso yabantwana sase-SASSA, kuquka iinkqubo zokufaneleka ezihlaziyiweyo zika-2026 kunye neemfuno zamaxwebhu.",
     "category": "Applications",
     "difficulty": "beginner",
     "estimatedTime": "30 minutes",
     "steps": [
       {
         "title": "Check Your 2026 Eligibility",
+        "title_zu": "Hlola Ukufaneleka Kwakho kuka-2026",
+        "title_xh": "Khangela ukuFaneleka kwakho kuka-2026",
         "content": "The child must be under 18 and living with the primary caregiver. You must pass the means test—income thresholds have been adjusted for 2026.",
+        "content_zu": "Ingane kumele ibe ngaphansi kweminyaka eyi-18 futhi ihlale nomnakekeli oyinhloko. Kumele uphumelele ekuhlolweni kwemali engenayo (means test) — imingcele yemali engenayo isilungiswe kabusha kuka-2026.",
+        "content_xh": "Umntwana kufuneka abe ngaphantsi kweminyaka eli-18 kwaye ahlale nomkhathaleli oyintloko. Kufuneka uphumelele uvavanyo lweengeniso (means test) — imida yengeniso ilungelelaniswe ngo-2026.",
         "tips": [
           "Single caregiver income must be R5,700/month or less.",
           "Married couples’ combined income must be R11,400/month or less."
-        ]
-      },
-      {
-        "title": "Gather Required Documents",
-        "content": "You will need: 13-digit barcoded ID, child's birth certificate, proof of residence, and 3-month bank statement.",
-        "tips": [
-          "If you don't have an ID or birth certificate, SASSA can provide an affidavit form."
-        ]
-      },
-      {
-        "title": "Submit at your nearest SASSA Office",
-        "content": "Visit a local SASSA office. Applications are free. You will be interviewed and have your biometric data captured.",
-        "tips": [
-          "Find your <a href='/resources'>nearest SASSA office</a> here."
+        ],
+        "tips_zu": [
+          "Imali engenayo yomnakekeli ongashadile kumele ibe ngu-R5,700/ngenyanga noma ngaphansi.",
+          "Imali engenayo ehlanganyelwe yemibhangqwana eshadile kumele ibe ngu-R11,400/ngenyanga noma ngaphansi."
+        ],
+        "tips_xh": [
+          "Ingeniso yomkhathaleli ongatshatanga mayibe yi-R5,700 ngenyanga okanye ngaphantsi.",
+          "Ingeniso edibeneyo yesibini esitshatileyo mayibe yi-R11,400 ngenyanga okanye ngaphantsi."
         ]
       }
     ],

@@ -4,18 +4,29 @@ import { Helmet } from 'react-helmet-async';
 import { Clock, User, BookOpen, ChevronLeft } from 'lucide-react';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import AdUnit from '../components/Common/AdUnit';
+import { useAppContext } from '../hooks/useAppContext';
 
 interface Guide {
   id: string;
   title: string;
+  title_zu?: string;
+  title_xh?: string;
   description: string;
+  description_zu?: string;
+  description_xh?: string;
   category: string;
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   estimatedTime: string;
   steps: Array<{
     title: string;
+    title_zu?: string;
+    title_xh?: string;
     content: string;
+    content_zu?: string;
+    content_xh?: string;
     tips?: string[];
+    tips_zu?: string[];
+    tips_xh?: string[];
   }>;
   tags: string[];
   lastUpdated: string;
@@ -24,6 +35,7 @@ interface Guide {
 
 const GuidePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const { language } = useAppContext();
   const [guide, setGuide] = useState<Guide | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -79,14 +91,17 @@ const GuidePage: React.FC = () => {
     return null;
   }
 
+  const displayTitle = (language === 'zu' && guide.title_zu) ? guide.title_zu : (language === 'xh' && guide.title_xh) ? guide.title_xh : guide.title;
+  const displayDescription = (language === 'zu' && guide.description_zu) ? guide.description_zu : (language === 'xh' && guide.description_xh) ? guide.description_xh : guide.description;
+
   return (
     <>
       <Helmet>
-        <title>{guide.title} | SASSA Help Hub</title>
-        <meta name="description" content={guide.description} />
+        <title>{displayTitle} | SASSA Help Hub</title>
+        <meta name="description" content={displayDescription} />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50 py-8">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <Link to="/guides" className="inline-flex items-center text-primary-gold hover:text-primary-gold">
@@ -95,10 +110,10 @@ const GuidePage: React.FC = () => {
             </Link>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8">
             <header className="mb-8">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">{guide.title}</h1>
-              <p className="text-xl text-gray-600">{guide.description}</p>
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{displayTitle}</h1>
+              <p className="text-xl text-gray-600 dark:text-gray-400">{displayDescription}</p>
               <div className="mt-4 flex items-center space-x-4 text-sm text-gray-500">
                 <div className="flex items-center">
                   <Clock className="w-4 h-4 mr-1" />
@@ -118,26 +133,34 @@ const GuidePage: React.FC = () => {
               </div>
             </header>
 
-            <div className="prose max-w-none">
+            <div className="prose dark:prose-invert max-w-none">
               <AdUnit slot="7788990011" />
-              {guide.steps.map((step, index) => (
-                <section key={index} className="mb-8">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                    Step {index + 1}: {step.title}
-                  </h2>
-                  <div dangerouslySetInnerHTML={{ __html: step.content }} />
-                  {step.tips && step.tips.length > 0 && (
-                    <div className="mt-4 p-4 bg-yellow-500-50 border-l-4 border-yellow-500 rounded-r-lg">
-                      <h4 className="font-semibold text-yellow-500-800 mb-2">Tips:</h4>
-                      <ul className="list-disc list-inside space-y-1 text-yellow-500-700">
-                        {step.tips.map((tip, i) => (
-                          <li key={i}>{tip}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </section>
-              ))}
+              {guide.steps.map((step, index) => {
+                const stepTitle = (language === 'zu' && step.title_zu) ? step.title_zu : (language === 'xh' && step.title_xh) ? step.title_xh : step.title;
+                const stepContent = (language === 'zu' && step.content_zu) ? step.content_zu : (language === 'xh' && step.content_xh) ? step.content_xh : step.content;
+                const stepTips = (language === 'zu' && step.tips_zu) ? step.tips_zu : (language === 'xh' && step.tips_xh) ? step.tips_xh : step.tips;
+
+                return (
+                  <section key={index} className="mb-8">
+                    <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                      {language === 'zu' ? 'Isinyathelo' : language === 'xh' ? 'Inyathelo' : 'Step'} {index + 1}: {stepTitle}
+                    </h2>
+                    <div className="text-gray-700 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: stepContent }} />
+                    {stepTips && stepTips.length > 0 && (
+                      <div className="mt-4 p-4 bg-yellow-500 bg-opacity-10 border-l-4 border-primary-gold rounded-r-lg">
+                        <h4 className="font-semibold text-primary-black dark:text-primary-gold mb-2">
+                          {language === 'zu' ? 'Izincomo:' : language === 'xh' ? 'Ingcebiso:' : 'Tips:'}
+                        </h4>
+                        <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+                          {stepTips.map((tip, i) => (
+                            <li key={i}>{tip}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </section>
+                );
+              })}
             </div>
 
             <footer className="mt-8 border-t pt-4">

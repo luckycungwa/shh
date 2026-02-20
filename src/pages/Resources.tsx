@@ -28,6 +28,7 @@ interface SassaOffice {
 
 const Resources: React.FC = () => {
   const [offices, setOffices] = useState<SassaOffice[]>([]);
+  const [cityOffices, setCityOffices] = useState<any[]>([]);
   const [filteredOffices, setFilteredOffices] = useState<SassaOffice[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -37,15 +38,21 @@ const Resources: React.FC = () => {
   const [locationError, setLocationError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchOffices = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch('/data/resources.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch offices');
-        }
-        const data: SassaOffice[] = await response.json();
-        setOffices(data);
-        setFilteredOffices(data);
+        const [officesRes, cityOfficesRes] = await Promise.all([
+          fetch('/data/resources.json'),
+          fetch('/data/officeCities.json')
+        ]);
+
+        if (!officesRes.ok || !cityOfficesRes.ok) throw new Error('Failed to fetch offices');
+
+        const officesData: SassaOffice[] = await officesRes.json();
+        const cityOfficesData = await cityOfficesRes.json();
+
+        setOffices(officesData);
+        setCityOffices(cityOfficesData);
+        setFilteredOffices(officesData);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
@@ -53,7 +60,7 @@ const Resources: React.FC = () => {
       }
     };
 
-    fetchOffices();
+    fetchData();
   }, []);
 
   useEffect(() => {
@@ -232,6 +239,23 @@ const Resources: React.FC = () => {
           </div>
 
           <AdUnit slot="5566778899" />
+
+          {/* Major City Links for SEO */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Browse Offices by City</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {cityOffices.map((city) => (
+                <Link
+                  key={city.id}
+                  to={`/offices/${city.id}`}
+                  className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:border-primary-gold hover:text-primary-gold transition-all"
+                >
+                  <MapPin className="w-5 h-5 mx-auto mb-2 text-primary-gold" />
+                  <span className="font-medium text-sm">SASSA {city.city}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* Results Count */}
           <div className="mb-6">
