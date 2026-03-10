@@ -15,6 +15,10 @@ import Resources from './pages/Resources';
 // import Community from './pages/Community';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Disclaimer from './pages/Disclaimer';
+import Contact from './pages/Contact';
 import About from './pages/About';
 import CityOfficePage from './pages/CityOfficePage';
 import Eligibility from './pages/Eligibility';
@@ -36,6 +40,10 @@ const routes = [
   { path: "/resources" },
   { path: "/privacy" },
   { path: "/terms" },
+  { path: "/privacy-policy" },
+  { path: "/terms-of-service" },
+  { path: "/disclaimer" },
+  { path: "/contact-us" },
   { path: "/about" },
   { path: "/offices/:cityId" },
   { path: "/eligibility-check" },
@@ -63,6 +71,10 @@ const AppContent: React.FC = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/contact-us" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/offices/:cityId" element={<CityOfficePage />} />
           <Route path="/eligibility-check" element={<Eligibility />} />
@@ -94,7 +106,7 @@ const AppContent: React.FC = () => {
           <Route path="/applications" element={<Navigate to="/guides" replace />} />
           <Route path="/fraud-prevention" element={<Navigate to="/scam-alert" replace />} />
           <Route path="/grant-amounts" element={<Navigate to="/guides" replace />} />
-          <Route path="/contact" element={<Navigate to="/about" replace />} />
+          <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />

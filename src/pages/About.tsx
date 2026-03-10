@@ -38,8 +38,14 @@ const About: React.FC = () => {
                   Who We Are
                 </h2>
                 <p>
-                  We are a dedicated team of researchers and content creators passionate about financial inclusion and social support. SASSA Help Hub was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants. We are not affiliated with SASSA or the South African government; we are an independent entity committed to serving the community with transparency and integrity.
+                  We are a dedicated team of researchers and content creators passionate about financial inclusion and social support. SASSA Help Hub was born out of a desire to create a reliable, user-friendly resource for all South Africans who rely on SASSA grants.
                 </p>
+                <div className="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-lg border border-gray-100 dark:border-gray-700 mt-4">
+                  <h3 className="font-bold mb-2">Our Content Team</h3>
+                  <p className="text-sm">
+                    Our team is led by seasoned content strategists with experience in South African socio-economic research. Every piece of content is written by writers who understand the local context and have a track record of simplifying complex government policies for the general public.
+                  </p>
+                </div>
               </section>
 
               <section className="mb-8">
