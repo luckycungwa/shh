@@ -13,6 +13,10 @@ import {
   Clock,
   AlertTriangle,
   CheckCircle,
+  CreditCard,
+  Smartphone,
+  FileText,
+  UserCheck,
 } from "lucide-react";
 import { useAppContext } from "../hooks/useAppContext";
 import LoadingSpinner from "../components/Common/LoadingSpinner";
@@ -20,6 +24,7 @@ import AdUnit from "../components/Common/AdUnit";
 import HowToApply from "../components/Home/HowToApply";
 import PaymentCountdown from "../components/Home/PaymentCountdown";
 import GrantTypes from "../components/Home/grant-types";
+import SrdStatusMessages from "../components/Home/SrdStatusMessages";
 
 interface Update {
   id: string;
@@ -424,6 +429,111 @@ const Home: React.FC = () => {
               <CheckCircle className="w-6 h-6" />
               Check Eligibility Now
             </Link>
+          </div>
+        </section>
+
+        {/* SASSA Online Services & Tools */}
+        <section className="py-16 px-4 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Essential SASSA Online Tools 2026
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Quickly access the most important SASSA services. Use our guides to ensure your application or update is successful.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: "Change Banking Details",
+                  description: "Update your bank account for SRD R370 payments to avoid delays.",
+                  icon: <CreditCard className="w-8 h-8" />,
+                  link: "/guides/srd-grant",
+                  color: "border-blue-500"
+                },
+                {
+                  title: "Change Phone Number",
+                  description: "Lost your registered number? Follow our guide to update it safely.",
+                  icon: <Smartphone className="w-8 h-8" />,
+                  link: "/guides/srd-grant",
+                  color: "border-green-500"
+                },
+                {
+                  title: "Lodge an Appeal",
+                  description: "If your grant was declined, you must submit an appeal within 90 days.",
+                  icon: <FileText className="w-8 h-8" />,
+                  link: "/guides/appeal-guide",
+                  color: "border-red-500"
+                },
+                {
+                  title: "Biometric Verification",
+                  description: "New for 2026: Complete your facial recognition for enhanced security.",
+                  icon: <UserCheck className="w-8 h-8" />,
+                  link: "/guides/srd-grant",
+                  color: "border-yellow-500"
+                }
+              ].map((tool, index) => (
+                <Link
+                  key={index}
+                  to={tool.link}
+                  className={`bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border-t-4 ${tool.color} shadow-sm hover:shadow-md transition-all group`}
+                >
+                  <div className="text-gray-700 dark:text-gray-200 mb-4 group-hover:scale-110 transition-transform">{tool.icon}</div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">{tool.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{tool.description}</p>
+                  <span className="text-primary-gold font-medium flex items-center">
+                    Open Guide <ArrowRight className="w-4 h-4 ml-1" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SASSA SRD Status Meanings */}
+        <SrdStatusMessages />
+
+        {/* Why is my SASSA grant not paid? Section */}
+        <section className="py-16 px-4 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              Why is My SASSA Grant Not Paid in 2026?
+            </h2>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "My status is 'Approved' but there is no payment date.",
+                  a: "Approval is the first step. A payment date is only generated once the funds are allocated to your specific batch. This can take 7-10 working days after approval."
+                },
+                {
+                  q: "I have a payment date but the money isn't in my account.",
+                  a: "Banks can take 2-3 business days to process the transaction. If it's been longer than 5 days, contact your bank first to see if there's a pending deposit."
+                },
+                {
+                  q: "My status says 'Bank Details Pending'.",
+                  a: "SASSA cannot pay you if they don't have verified banking details. Log in to the SRD portal to submit your personal bank account details immediately."
+                },
+                {
+                  q: "I usually get paid, but this month it's 'Declined'.",
+                  a: "SASSA performs monthly checks. You may have exceeded the income threshold (R624) this month due to a temporary deposit or interest in your account."
+                }
+              ].map((faq, index) => (
+                <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
+                  <h3 className="text-lg font-bold text-primary-black dark:text-primary-gold mb-2 flex items-start gap-2">
+                    <HelpCircle className="w-5 h-5 mt-1 flex-shrink-0" />
+                    {faq.q}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 pl-7">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link to="/faq" className="text-primary-black dark:text-white font-bold hover:underline">
+                View more common questions and solutions →
+              </Link>
+            </div>
           </div>
         </section>
 
