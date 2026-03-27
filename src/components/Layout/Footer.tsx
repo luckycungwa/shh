@@ -116,22 +116,24 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
-                  {translations.privacyPolicy || 'Privacy Policy'}
+                <Link to="/disclaimer" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                  Official Disclaimer
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
-                  {translations.termsOfService || 'Terms of Service'}
+                <Link to="/privacy-policy" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <a
-                  href="mailto:support@sassahelphub.co.za"
-                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200"
-                >
-                  {translations.contactSupport || 'Contact Support'}
-                </a>
+                <Link to="/terms-of-service" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact-us" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
+                  Contact Us
+                </Link>
               </li>
               <li>
                 <a

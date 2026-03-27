@@ -450,7 +450,7 @@ const Home: React.FC = () => {
                   title: "Change Banking Details",
                   description: "Update your bank account for SRD R370 payments to avoid delays.",
                   icon: <CreditCard className="w-8 h-8" />,
-                  link: "/guides/srd-grant",
+                  link: "/guides/change-banking-details",
                   color: "border-blue-500"
                 },
                 {
@@ -471,7 +471,7 @@ const Home: React.FC = () => {
                   title: "Biometric Verification",
                   description: "New for 2026: Complete your facial recognition for enhanced security.",
                   icon: <UserCheck className="w-8 h-8" />,
-                  link: "/guides/srd-grant",
+                  link: "/guides/biometric-verification-guide",
                   color: "border-yellow-500"
                 }
               ].map((tool, index) => (

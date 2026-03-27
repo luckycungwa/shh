@@ -166,5 +166,56 @@
         "isExternal": true
       }
     ]
+  },
+  {
+    "id": "change-banking-details",
+    "title": "How to Change SASSA SRD Banking Details (2026 Updated)",
+    "description": "A detailed walkthrough on how to update your bank account for SRD R370 grant payments. Avoid 'Verification Failed' and 'Bank Detail Pending' errors.",
+    "category": "Banking",
+    "difficulty": "intermediate",
+    "estimatedTime": "10 minutes",
+    "steps": [
+      {
+        "title": "Access the Official SRD Portal",
+        "content": "Visit srd.sassa.gov.za and scroll down to 'How do I change my banking details'. Enter your 13-digit ID and click 'Submit'.",
+        "tips": ["Only use the official .gov.za portal to avoid scams."]
+      },
+      {
+        "title": "Verify via SMS",
+        "content": "SASSA will send a unique link via SMS to the cellphone number you used during registration. Click the link to access the banking update form.",
+        "tips": ["If you lost your phone number, you must first visit a SASSA office to update it."]
+      },
+      {
+        "title": "Enter Personal Bank Details",
+        "content": "Choose 'Bank Account' as your payment method. Enter your Bank Name, Branch Code, and Account Number. Ensure the account is in YOUR name.",
+        "tips": ["SASSA will NOT pay into a friend or relative's bank account."]
+      }
+    ],
+    "tags": ["change banking details", "SRD R370", "verification", "bank account"],
+    "lastUpdated": "2026-03-01",
+    "author": "Editorial Team"
+  },
+  {
+    "id": "biometric-verification-guide",
+    "title": "Mastering SASSA Biometric Verification: 2026 Troubleshooting",
+    "description": "Struggling with the new facial recognition requirement? This guide explains how to complete your biometric verification successfully.",
+    "category": "Technology",
+    "difficulty": "advanced",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "Prepare Your Environment",
+        "content": "Find a well-lit area with a plain background. Ensure your face is clearly visible and remove hats or sunglasses.",
+        "tips": ["Natural daylight is best for facial recognition systems."]
+      },
+      {
+        "title": "Using the Secure Link",
+        "content": "Open the link sent by SASSA on a smartphone with a high-quality camera. The system will guide you to move your head or blink to verify 'liveness'.",
+        "tips": ["Do not take a photo of a photo; the system will detect it as fraud."]
+      }
+    ],
+    "tags": ["biometrics", "facial recognition", "security", "SRD grant"],
+    "lastUpdated": "2026-03-05",
+    "author": "Technical Desk"
   }
 ]

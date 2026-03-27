@@ -1343,5 +1343,23 @@
         "isExternal": true
       }
     ]
+  },
+  {
+    "id": "faq-051",
+    "question": "What does 'Referred' status mean for SASSA SRD in 2026?",
+    "answer": "<p>'Referred' status means your application was flagged during the automated cross-check with internal or external databases (like SARS or Home Affairs). It requires a manual review by a SASSA official to verify that you meet the income threshold or citizenship requirements.</p>",
+    "category": "Status Meanings",
+    "tags": ["referred status", "manual review", "SRD R370"],
+    "helpful": 0,
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "faq-052",
+    "question": "Why is my SASSA status 'Bank Details Pending' for months?",
+    "answer": "<p>This usually happens because you haven't selected a payment method or the banking details provided did not pass the verification test. Ensure the account belongs to you and is a personal, active account. Log in to the SRD portal to re-submit your details if necessary.</p>",
+    "category": "Banking",
+    "tags": ["bank details pending", "payment method", "verification"],
+    "helpful": 0,
+    "lastUpdated": "2026-03-10"
   }
 ]
