@@ -1,183 +1,89 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import { useAppContext } from '../../hooks/useAppContext';
+"use client";
 
-const Footer: React.FC = () => {
-  const { translations } = useAppContext();
+import React from "react";
+import { Divider, Link } from "@nextui-org/react";
+import Image from "next/image";
+import NextLink from "next/link";
+import { FaPhoneAlt, FaEnvelope, FaExternalLinkAlt, FaMapMarkerAlt } from "react-icons/fa";
+
+export default function FooterComponent() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-dark dark:bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
-              {translations.aboutSassaHelpHub || 'About SASSA Help Hub'}
-            </h3>
-            <p className="text-secondary-gray dark:text-gray-400 text-sm mb-4">
-              {translations.footerAbout || ''}
-            </p>
-            <div className="flex items-start space-x-2 text-xs text-secondary-gray dark:text-gray-400">
-              <div className="w-1 h-1 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-              <span>
-                {translations.footerDisclaimer || 'This is an independent resource and is not affiliated with the SASSA. Always verify information directly with official SASSA channels.'}
-              </span>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
-              {translations.quickLinks || 'Quick Links'}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/faq" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
-                  {translations.faq || 'FAQ'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/guides" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
-                  {translations.guides || 'Guides'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/payment-calendar" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
-                  {translations.paymentCalendar || 'Payment Calendar'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/scam-alert" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
-                  {translations.scamAlert || 'Scam Alert'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/resources" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
-                  {translations.resources || 'Resources'}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Official Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
-              {translations.officialResources || 'Official Resources'}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="https://www.sassa.gov.za"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200 flex items-center"
-                >
-                  SASSA Official Website
-                  <ExternalLink className="w-3 h-3 ml-1" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.sanews.gov.za"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200 flex items-center"
-                >
-                  SA Government News
-                  <ExternalLink className="w-3 h-3 ml-1" />
-                </a>
-              </li>
-              <li>
-                <div className="flex items-center text-secondary-gray">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>SASSA Helpline: <a href="tel:0800601011" className="hover:text-primary-gold transition-colors duration-200">0800 60 10 11</a></span>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center text-secondary-gray">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <a href="mailto:info@sassa.gov.za" className="hover:text-primary-gold transition-colors duration-200">info@sassa.gov.za</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary-gold">
-              {translations.legalAndSupport || 'Legal & Support'}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/about" className="text-secondary-gray dark:text-gray-400 hover:text-primary-gold transition-colors duration-200">
-                  {translations.about || 'About Us'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/disclaimer" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
-                  Official Disclaimer
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms-of-service" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact-us" className="text-secondary-gray hover:text-primary-gold transition-colors duration-200">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/sitemap.xml"
-                  className="text-secondary-gray hover:text-primary-gold transition-colors duration-200"
-                >
-                  {translations.sitemap || 'Sitemap'}
-                </a>
-              </li>
-            </ul>
+    <footer className="w-full bg-primary-black text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="space-y-6">
+          <NextLink href="/" className="flex items-center gap-2">
+            <Image src="/logo.png" alt="SASSA Help Hub Logo" width={40} height={40} className="rounded" />
+            <p className="font-bold text-2xl">SASSA Help Hub</p>
+          </NextLink>
+          <p className="text-secondary-gray text-sm leading-relaxed">
+            Your independent guide to SASSA grants and social security in South Africa. We empower citizens with accurate, simplified information for 2026.
+          </p>
+          <div className="flex gap-4">
+             <Link as={NextLink} href="/about" className="text-primary-gold hover:underline">Read our Mission</Link>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <div className="text-sm text-secondary-gray text-center lg:text-left">
-              <p>© {currentYear} SASSA Help Hub. All rights reserved.</p>
-              <p className="mt-1">
-                {translations.footerNote || 'This is an independent resource not affiliated with SASSA.'}
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs text-secondary-gray">
-              <div className="flex items-center">
-                <MapPin className="w-3 h-3 mr-1" />
-                <span>South Africa</span>
-              </div>
-              <div className="text-center">
-                Created by <a href="https://www.44tagstudios.co.za/" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline hover:text-primary-gold transition-colors duration-200">44Tag Studios </a>
-              </div>
-            </div>
-          </div>
+        <div className="space-y-6">
+          <h3 className="text-lg font-bold">Quick Links</h3>
+          <ul className="space-y-4 text-secondary-gray text-sm">
+            <li><Link as={NextLink} href="/" color="foreground">Home</Link></li>
+            <li><Link as={NextLink} href="/guides/how-to-apply" color="foreground">How to Apply</Link></li>
+            <li><Link as={NextLink} href="/updates" color="foreground">News & Updates</Link></li>
+            <li><Link as={NextLink} href="/faq" color="foreground">FAQ</Link></li>
+            <li><Link as={NextLink} href="/resources" color="foreground">Office Locator</Link></li>
+            <li><Link as={NextLink} href="/contact" color="foreground">Contact Us</Link></li>
+          </ul>
+        </div>
 
-          {/* Emergency Notice */}
-          <div className="mt-6 p-4 bg-yellow-500 bg-opacity-20 border-l-4 border-yellow-500 rounded-r-lg">
-            <p className="text-sm font-medium text-yellow-500">
-              {translations.emergencyNotice || '🚨 Emergency: For urgent SASSA queries, call 0800 60 10 11 or visit your nearest SASSA office.'}
-            </p>
+        <div className="space-y-6">
+          <h3 className="text-lg font-bold">Legal</h3>
+          <ul className="space-y-4 text-secondary-gray text-sm">
+            <li><Link as={NextLink} href="/about" color="foreground">About Us</Link></li>
+            <li><Link as={NextLink} href="/privacy-policy" color="foreground">Privacy Policy</Link></li>
+            <li><Link as={NextLink} href="/terms-of-service" color="foreground">Terms of Service</Link></li>
+            <li><Link as={NextLink} href="/disclaimer" color="foreground">Disclaimer</Link></li>
+          </ul>
+        </div>
+
+        <div className="space-y-6">
+          <h3 className="text-lg font-bold">Official Contacts</h3>
+          <ul className="space-y-4 text-secondary-gray text-sm">
+            <li className="flex items-start gap-2">
+              <FaPhoneAlt className="mt-1 text-primary-gold" />
+              <div>
+                <p className="font-bold text-white">SASSA Helpline</p>
+                <a href="tel:0800601011" className="hover:text-primary-gold">0800 60 10 11</a>
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <FaEnvelope className="mt-1 text-primary-gold" />
+              <div>
+                <p className="font-bold text-white">Email</p>
+                <a href="mailto:info@sassa.gov.za" className="hover:text-primary-gold">info@sassa.gov.za</a>
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <FaExternalLinkAlt className="mt-1 text-primary-gold" />
+              <div>
+                <p className="font-bold text-white">Official Site</p>
+                <a href="https://www.sassa.gov.za" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold">www.sassa.gov.za</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 mt-16 text-center">
+        <Divider className="bg-gray-800 mb-8" />
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-secondary-gray">
+          <p>© {currentYear} SASSA Help Hub. Unofficial independent resource, not affiliated with SASSA or the South African government.</p>
+          <div className="flex gap-4">
+             <p className="flex items-center gap-1"><FaMapMarkerAlt /> Johannesburg, Gauteng, South Africa</p>
           </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
