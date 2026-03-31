@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const { id } = await params;
+  const { id } = params;
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
   const guide = guides.find((g) => g.id === id);
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 }
 
 export default async function GuidePage({ params }: { params: { id: string } }) {
-  const { id } = await params;
+  const { id } = params;
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
   const guide = guides.find((g) => g.id === id);

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'dist',
   reactStrictMode: true,
   images: {
     domains: ['www.sassahelphub.co.za', 'images.unsplash.com'],

@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const { id } = await params;
+  const { id } = params;
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
   const update = updates.find((u) => u.id === id);
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 }
 
 export default async function UpdatePage({ params }: { params: { id: string } }) {
-  const { id } = await params;
+  const { id } = params;
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
   const update = updates.find((u) => u.id === id);
