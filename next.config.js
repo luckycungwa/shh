@@ -34,7 +34,6 @@ const nextConfig = {
       { source: '/applications', destination: '/guides', permanent: true },
       { source: '/fraud-prevention', destination: '/scam-alert', permanent: true },
       { source: '/grant-amounts', destination: '/guides', permanent: true },
-      { source: '/contact', destination: '/contact-us', permanent: true },
     ];
   },
 };

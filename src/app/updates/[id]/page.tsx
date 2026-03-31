@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import React from "react";
+import { Metadata } from "next";
 import { Avatar, Card, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem } from "@nextui-org/react";
 import { FaClock, FaCalendarAlt, FaUserEdit, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaArrowLeft, FaListUl, FaLink } from "react-icons/fa";
 import NextLink from "next/link";
@@ -26,6 +27,31 @@ export async function generateStaticParams() {
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
   return updates.map((update) => ({ id: update.id }));
+}
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const { id } = await params;
+  const updatesPath = path.join(process.cwd(), "public/data/updates.json");
+  const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
+  const update = updates.find((u) => u.id === id);
+
+  if (!update) {
+    return {
+      title: "Update Not Found",
+    };
+  }
+
+  return {
+    title: update.title,
+    description: update.summary,
+    openGraph: {
+      title: update.title,
+      description: update.summary,
+      type: "article",
+      publishedTime: update.date,
+      authors: ["SASSA Help Hub Team"],
+    },
+  };
 }
 
 export default async function UpdatePage({ params }: { params: { id: string } }) {

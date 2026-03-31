@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "../index.css";
 import { Providers } from "./providers";
 import NavbarComponent from "../components/Layout/Navbar";
@@ -24,6 +25,12 @@ export const metadata: Metadata = {
     "SASSA status check",
   ],
   authors: [{ name: "SASSA Help Hub Team" }],
+  verification: {
+    google: "SKlM_MFnb6YY5C-1Ma3k5ETqJBwJSnicqxaqTYzp7HU",
+  },
+  other: {
+    "google-adsense-account": "ca-pub-8180440849942257",
+  },
 };
 
 export const viewport = {
@@ -39,6 +46,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-ZA" className="light">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8180440849942257"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={inter.className}>
         <Providers>
           <div className="relative flex flex-col min-h-screen">
