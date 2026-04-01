@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import React from "react";
+import { Metadata } from "next";
 import { Card, CardHeader, CardBody, Button, Chip, Divider } from "@nextui-org/react";
 import { FaNewspaper, FaClock, FaArrowRight } from "react-icons/fa";
 import NextLink from "next/link";
@@ -13,6 +14,11 @@ interface Update {
   type: string;
   urgent: boolean;
 }
+
+export const metadata: Metadata = {
+  title: "SASSA News & Updates 2026",
+  description: "Stay informed with the latest official SASSA announcements, grant increases, and system updates for 2026.",
+};
 
 export default function UpdatesListPage() {
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");

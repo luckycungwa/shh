@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 
 interface ChecklistProps {
@@ -62,12 +62,12 @@ const ScamPreventionChecklist: React.FC<ChecklistProps> = ({ content }) => {
                       <ExternalLink className="w-4 h-4 ml-1" />
                     </a>
                   ) : (
-                    <RouterLink
-                      to={item.link.url}
+                    <Link
+                      href={item.link.url}
                       className="text-primary-gold hover:text-primary-gold font-medium"
                     >
                       {item.link.text}
-                    </RouterLink>
+                    </Link>
                   )}
                 </span>
               )}

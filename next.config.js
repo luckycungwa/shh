@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'dist',
   reactStrictMode: true,
   images: {
     domains: ['www.sassahelphub.co.za', 'images.unsplash.com'],
@@ -34,7 +35,6 @@ const nextConfig = {
       { source: '/applications', destination: '/guides', permanent: true },
       { source: '/fraud-prevention', destination: '/scam-alert', permanent: true },
       { source: '/grant-amounts', destination: '/guides', permanent: true },
-      { source: '/contact', destination: '/contact-us', permanent: true },
     ];
   },
 };

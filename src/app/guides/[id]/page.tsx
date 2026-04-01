@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import React from "react";
+import { Metadata } from "next";
 import { Card, CardHeader, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem, Avatar } from "@nextui-org/react";
 import { FaClock, FaCalendarAlt, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaListUl, FaLink, FaLightbulb } from "react-icons/fa";
 import NextLink from "next/link";
@@ -27,8 +28,32 @@ export async function generateStaticParams() {
   return guides.map((guide) => ({ id: guide.id }));
 }
 
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const { id } = params;
+  const guidesPath = path.join(process.cwd(), "public/data/guides.json");
+  const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
+  const guide = guides.find((g) => g.id === id);
+
+  if (!guide) {
+    return {
+      title: "Guide Not Found",
+    };
+  }
+
+  return {
+    title: guide.title,
+    description: guide.description,
+    openGraph: {
+      title: guide.title,
+      description: guide.description,
+      type: "article",
+      authors: [guide.author],
+    },
+  };
+}
+
 export default async function GuidePage({ params }: { params: { id: string } }) {
-  const { id } = await params;
+  const { id } = params;
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
   const guide = guides.find((g) => g.id === id);

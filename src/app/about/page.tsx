@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
              <Card className="p-4 border border-gray-100 dark:border-gray-800">
                 <CardHeader className="flex gap-4">
-                  <Avatar showFallback src='https://images.unsplash.com/broken' />
+                  <Avatar name="EL" className="bg-primary-gold text-primary-black font-bold" />
                   <div className="flex flex-col">
                     <p className="text-md font-bold">Editorial Lead</p>
                     <p className="text-small text-default-500">Johannesburg, South Africa</p>
