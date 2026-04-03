@@ -13,7 +13,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle } from "react-icons/fa";
 import NextLink from "next/link";
 
 export default function NavbarComponent() {
@@ -21,12 +21,14 @@ export default function NavbarComponent() {
 
   const menuItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
-    { name: "SRD Grant", href: "/guides/srd-grant", icon: <FaFileAlt /> },
-    { name: "SASSA Card", href: "/guides/sassa-card", icon: <FaShieldAlt /> },
-    { name: "How to Apply", href: "/guides/how-to-apply", icon: <FaFileAlt /> },
+    { name: "Status Check", href: "/status-check", icon: <FaUserCheck /> },
+    { name: "Payment Dates", href: "/payment-calendar", icon: <FaCalendarAlt /> },
+    { name: "SRD Grant Guide", href: "/guides/srd-grant", icon: <FaFileAlt /> },
     { name: "News & Updates", href: "/updates", icon: <FaNewspaper /> },
+    { name: "Eligibility", href: "/eligibility-check", icon: <FaCheckCircle /> },
     { name: "FAQ", href: "/faq", icon: <FaQuestionCircle /> },
     { name: "Offices", href: "/resources", icon: <FaMapMarkerAlt /> },
+    { name: "Scam Alerts", href: "/scam-alert", icon: <FaShieldAlt /> },
     { name: "About", href: "/about", icon: <FaInfoCircle /> },
     { name: "Contact", href: "/contact", icon: <FaPhoneAlt /> },
   ];
@@ -48,13 +50,13 @@ export default function NavbarComponent() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link as={NextLink} href="/" color="foreground">Home</Link>
+          <Link as={NextLink} href="/status-check" color="primary" className="font-bold">Status Check</Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/updates" color="foreground">News & Updates</Link>
+          <Link as={NextLink} href="/payment-calendar" color="foreground">Payment Dates</Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/faq" color="foreground">FAQ</Link>
+          <Link as={NextLink} href="/updates" color="foreground">News</Link>
         </NavbarItem>
         <NavbarItem>
           <Link as={NextLink} href="/guides" color="foreground">Guides</Link>

@@ -75,11 +75,11 @@ export default function HomePage() {
             Your friendly, independent guide to South African social grants, payment dates, and fraud protection.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-             <Button as={NextLink} href="/guides/how-to-apply" color="primary" size="lg" className="font-bold px-10 py-8 text-xl shadow-xl hover:scale-105 transition-transform">
-                Get Started Now <FaArrowRight className="ml-2" />
+             <Button as={NextLink} href="/status-check" color="primary" size="lg" className="font-bold px-10 py-8 text-xl shadow-xl hover:scale-105 transition-transform">
+                Check SASSA Status <FaArrowRight className="ml-2" />
              </Button>
-             <Button as={NextLink} href="/updates" variant="bordered" size="lg" className="text-white border-white/30 font-bold px-10 py-8 text-xl hover:bg-white/10 transition-colors">
-                Latest News
+             <Button as={NextLink} href="/payment-calendar" variant="bordered" size="lg" className="text-white border-white/30 font-bold px-10 py-8 text-xl hover:bg-white/10 transition-colors">
+                Payment Dates 2026
              </Button>
           </div>
         </div>

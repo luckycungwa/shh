@@ -28,11 +28,11 @@ export default function FooterComponent() {
         <div className="space-y-6">
           <h3 className="text-lg font-bold">Quick Links</h3>
           <ul className="space-y-4 text-secondary-gray text-sm">
-            <li><Link as={NextLink} href="/" color="foreground">Home</Link></li>
-            <li><Link as={NextLink} href="/guides/how-to-apply" color="foreground">How to Apply</Link></li>
-            <li><Link as={NextLink} href="/updates" color="foreground">News & Updates</Link></li>
-            <li><Link as={NextLink} href="/faq" color="foreground">FAQ</Link></li>
-            <li><Link as={NextLink} href="/resources" color="foreground">Office Locator</Link></li>
+            <li><Link as={NextLink} href="/status-check" color="foreground">SASSA Status Check</Link></li>
+            <li><Link as={NextLink} href="/payment-calendar" color="foreground">2026 Payment Dates</Link></li>
+            <li><Link as={NextLink} href="/guides/srd-grant" color="foreground">SRD Grant Guide</Link></li>
+            <li><Link as={NextLink} href="/updates" color="foreground">Latest News</Link></li>
+            <li><Link as={NextLink} href="/scam-alert" color="foreground">Scam Alerts</Link></li>
             <li><Link as={NextLink} href="/contact" color="foreground">Contact Us</Link></li>
           </ul>
         </div>

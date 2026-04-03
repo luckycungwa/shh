@@ -8,7 +8,6 @@ const nextConfig = {
     return [
       { source: '/blog', destination: '/updates', permanent: true },
       { source: '/blog/:path*', destination: '/updates', permanent: true },
-      { source: '/status-check', destination: '/', permanent: true },
       { source: '/application-tracking', destination: '/', permanent: true },
       { source: '/appeals', destination: '/guides/appeal-guide', permanent: true },
       { source: '/offices', destination: '/resources', permanent: true },
