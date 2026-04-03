@@ -17,6 +17,8 @@ export default async function sitemap() {
     "/disclaimer",
     "/terms-of-service",
     "/eligibility-check",
+    "/payment-calendar",
+    "/status-check",
   ];
 
   // Fetch dynamic content
