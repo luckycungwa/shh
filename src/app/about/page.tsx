@@ -48,6 +48,29 @@ export default function AboutPage() {
 
         <Divider className="my-8" />
 
+        <section className="space-y-8">
+           <div className="flex items-center gap-3">
+             <FaShieldAlt className="text-primary-gold text-2xl" />
+             <h2 className="text-3xl font-bold">Editorial Integrity</h2>
+           </div>
+           <div className="grid md:grid-cols-2 gap-8">
+             <div className="space-y-4">
+               <h3 className="text-xl font-bold">Fact-Checking Process</h3>
+               <p className="text-gray-700 dark:text-gray-300">
+                 Our team cross-references all grant dates, eligibility criteria, and policy changes with official SASSA gazettes and government press releases. We don't publish "leaked" dates; we only share verified schedules to ensure you can plan your finances with confidence.
+               </p>
+             </div>
+             <div className="space-y-4">
+               <h3 className="text-xl font-bold">Independent Oversight</h3>
+               <p className="text-gray-700 dark:text-gray-300">
+                 We maintain strict editorial independence. While we may run advertisements to keep the service free for users, our content is never influenced by third-party sponsors or commercial interests.
+               </p>
+             </div>
+           </div>
+        </section>
+
+        <Divider className="my-8" />
+
         <section className="space-y-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Meet the Team</h2>
