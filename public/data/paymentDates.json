@@ -1,22 +1,22 @@
 [
   {
     "grant": "Older Persons Grant",
-    "date": "2026-03-03",
-    "day": "Tuesday"
+    "date": "2026-05-04",
+    "day": "Monday"
   },
   {
     "grant": "Disability Grant",
-    "date": "2026-03-04",
-    "day": "Wednesday"
+    "date": "2026-05-05",
+    "day": "Tuesday"
   },
   {
     "grant": "Children's Grants",
-    "date": "2026-03-05",
-    "day": "Thursday"
+    "date": "2026-05-06",
+    "day": "Wednesday"
   },
   {
     "grant": "SRD R370 Grant",
-    "date": "2026-03-25",
-    "day": "Wednesday"
+    "date": "2026-05-25",
+    "day": "Monday"
   }
 ]
