@@ -69,6 +69,8 @@ This strategy is designed to boost Domain Authority (DA) through topic clusters 
 ---
 
 ## 6. Implementation Checklist
-- [ ] Ensure all 404 links from legacy Vite site are redirected (Done in next.config.js).
-- [ ] Use Breadcrumbs on all sub-pages (Implemented in `GuidePage` and `UpdatePage`).
-- [ ] Maintain a 3-click depth for any article on the site.
+- [x] Ensure all 404 links from legacy Vite site are redirected (Done in next.config.js).
+- [x] Use Breadcrumbs on all sub-pages (Implemented in `GuidePage` and `UpdatePage`).
+- [x] Maintain a 3-click depth for any article on the site.
+- [x] Technical Glossary Integration (Internal linking to `/glossary` for complex terms like "Means Test").
+- [x] Comparison Silo (Linking SRD guides to `/guides/srd-vs-permanent-2026`).

@@ -1,0 +1,34 @@
+[
+  {
+    "term": "Means Test",
+    "definition": "The financial calculation SASSA uses to determine if an applicant's income and assets are low enough to qualify for a grant. For the SRD R370, the income threshold is R624 per month."
+  },
+  {
+    "term": "eKYC (Electronic Know Your Customer)",
+    "definition": "The digital process of verifying a beneficiary's identity using biometric data, such as facial recognition, to prevent fraud and identity theft."
+  },
+  {
+    "term": "UIF (Unemployment Insurance Fund)",
+    "definition": "A fund that provides short-term relief to workers when they become unemployed. Receiving UIF usually disqualifies you from receiving the SRD R370 grant."
+  },
+  {
+    "term": "NSFAS (National Student Financial Aid Scheme)",
+    "definition": "A government scheme that provides financial aid to tertiary students. SASSA cross-checks its database with NSFAS; students receiving NSFAS are ineligible for SRD grants."
+  },
+  {
+    "term": "Grant-in-Aid",
+    "definition": "An additional R500+ monthly payment given to people who are already receiving a primary grant (like Old Age or Disability) but require full-time care from another person."
+  },
+  {
+    "term": "ITSAA (Independent Tribunal for Social Assistance Appeals)",
+    "definition": "The independent body that reviews SASSA's decisions when a beneficiary lodges an appeal against a declined application."
+  },
+  {
+    "term": "SASSA Gold Card",
+    "definition": "A specialized debit card issued by Postbank specifically for SASSA beneficiaries to withdraw their grant funds at ATMs or retail stores."
+  },
+  {
+    "term": "Referred Status",
+    "definition": "A status indicating that an application has been flagged for potential fraud and requires manual intervention or biometric verification before payment can be released."
+  }
+]

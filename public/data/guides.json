@@ -135,12 +135,12 @@
         "title": "Check Your 2026 Eligibility",
         "title_zu": "Hlola Ukufaneleka Kwakho kuka-2026",
         "title_xh": "Khangela ukuFaneleka kwakho kuka-2026",
-        "content": "The child must be under 18 and living with the primary caregiver. You must pass the means test—income thresholds have been adjusted for 2026.",
-        "content_zu": "Ingane kumele ibe ngaphansi kweminyaka eyi-18 futhi ihlale nomnakekeli oyinhloko. Kumele uphumelele ekuhlolweni kwemali engenayo (means test) — imingcele yemali engenayo isilungiswe kabusha kuka-2026.",
-        "content_xh": "Umntwana kufuneka abe ngaphantsi kweminyaka eli-18 kwaye ahlale nomkhathaleli oyintloko. Kufuneka uphumelele uvavanyo lweengeniso (means test) — imida yengeniso ilungelelaniswe ngo-2026.",
+        "content": "The child must be under 18 and living with the primary caregiver. You must pass the means test\u2014income thresholds have been adjusted for 2026.",
+        "content_zu": "Ingane kumele ibe ngaphansi kweminyaka eyi-18 futhi ihlale nomnakekeli oyinhloko. Kumele uphumelele ekuhlolweni kwemali engenayo (means test) \u2014 imingcele yemali engenayo isilungiswe kabusha kuka-2026.",
+        "content_xh": "Umntwana kufuneka abe ngaphantsi kweminyaka eli-18 kwaye ahlale nomkhathaleli oyintloko. Kufuneka uphumelele uvavanyo lweengeniso (means test) \u2014 imida yengeniso ilungelelaniswe ngo-2026.",
         "tips": [
           "Single caregiver income must be R5,700/month or less.",
-          "Married couples’ combined income must be R11,400/month or less."
+          "Married couples\u2019 combined income must be R11,400/month or less."
         ],
         "tips_zu": [
           "Imali engenayo yomnakekeli ongashadile kumele ibe ngu-R5,700/ngenyanga noma ngaphansi.",
@@ -178,20 +178,31 @@
       {
         "title": "Access the Official SRD Portal",
         "content": "Visit srd.sassa.gov.za and scroll down to 'How do I change my banking details'. Enter your 13-digit ID and click 'Submit'.",
-        "tips": ["Only use the official .gov.za portal to avoid scams."]
+        "tips": [
+          "Only use the official .gov.za portal to avoid scams."
+        ]
       },
       {
         "title": "Verify via SMS",
         "content": "SASSA will send a unique link via SMS to the cellphone number you used during registration. Click the link to access the banking update form.",
-        "tips": ["If you lost your phone number, you must first visit a SASSA office to update it."]
+        "tips": [
+          "If you lost your phone number, you must first visit a SASSA office to update it."
+        ]
       },
       {
         "title": "Enter Personal Bank Details",
         "content": "Choose 'Bank Account' as your payment method. Enter your Bank Name, Branch Code, and Account Number. Ensure the account is in YOUR name.",
-        "tips": ["SASSA will NOT pay into a friend or relative's bank account."]
+        "tips": [
+          "SASSA will NOT pay into a friend or relative's bank account."
+        ]
       }
     ],
-    "tags": ["change banking details", "SRD R370", "verification", "bank account"],
+    "tags": [
+      "change banking details",
+      "SRD R370",
+      "verification",
+      "bank account"
+    ],
     "lastUpdated": "2026-03-01",
     "author": "Editorial Team"
   },
@@ -206,16 +217,72 @@
       {
         "title": "Prepare Your Environment",
         "content": "Find a well-lit area with a plain background. Ensure your face is clearly visible and remove hats or sunglasses.",
-        "tips": ["Natural daylight is best for facial recognition systems."]
+        "tips": [
+          "Natural daylight is best for facial recognition systems."
+        ]
       },
       {
         "title": "Using the Secure Link",
         "content": "Open the link sent by SASSA on a smartphone with a high-quality camera. The system will guide you to move your head or blink to verify 'liveness'.",
-        "tips": ["Do not take a photo of a photo; the system will detect it as fraud."]
+        "tips": [
+          "Do not take a photo of a photo; the system will detect it as fraud."
+        ]
       }
     ],
-    "tags": ["biometrics", "facial recognition", "security", "SRD grant"],
+    "tags": [
+      "biometrics",
+      "facial recognition",
+      "security",
+      "SRD grant"
+    ],
     "lastUpdated": "2026-03-05",
     "author": "Technical Desk"
+  },
+  {
+    "id": "srd-vs-permanent-2026",
+    "title": "SRD R370 vs. Permanent SASSA Grants: The 2026 Comparison",
+    "description": "A comprehensive breakdown of eligibility, income thresholds, and long-term benefits when choosing between SRD R370 and permanent grants.",
+    "category": "Comparison Guide",
+    "difficulty": "Intermediate",
+    "estimatedTime": "10 minutes",
+    "steps": [
+      {
+        "title": "Analyze the Income Threshold Gap",
+        "content": "In 2026, the SRD R370 has a strict R624 income limit. Permanent grants like Old Age or Disability have higher thresholds (around R8,000+ monthly) but stricter asset tests. If you are near the R624 limit, you are at high risk of SRD rejection and should investigate permanent options."
+      },
+      {
+        "title": "Evaluate the 60-Year Milestone",
+        "content": "The moment you turn 60, your eligibility for SRD R370 ends and your eligibility for the Older Persons Grant (R2,200) begins. Many beneficiaries miss out on thousands of Rands by failing to transition immediately upon their 60th birthday."
+      },
+      {
+        "title": "Assess Medical Eligibility for Disability Support",
+        "content": "If a physical or mental condition prevents you from working for more than 6 months, you qualify for the Disability Grant. While the SRD is easier to apply for, the Disability Grant pays 6 times more and provides long-term security."
+      },
+      {
+        "title": "Understand the Double Dipping Rule",
+        "content": "You cannot receive both. If you apply for a permanent grant, your SRD will continue until the permanent one is approved, at which point the SRD will be automatically terminated. This ensures a seamless transition of support."
+      }
+    ],
+    "tags": [
+      "Comparison",
+      "Eligibility",
+      "SRD R370",
+      "Old Age",
+      "Disability"
+    ],
+    "lastUpdated": "2026-03-01",
+    "author": "SASSA Help Hub Team",
+    "relatedLinks": [
+      {
+        "title": "Check Eligibility",
+        "url": "/eligibility-check",
+        "isExternal": false
+      },
+      {
+        "title": "Official SRD Portal",
+        "url": "https://srd.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
   }
 ]

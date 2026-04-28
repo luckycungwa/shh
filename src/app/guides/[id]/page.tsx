@@ -141,7 +141,10 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                  <div className="flex items-center gap-3">
                     <Avatar name="ZA" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
-                       <p className="font-bold text-gray-900">{guide.author}</p>
+                       <div className="flex items-center gap-2">
+                          <p className="font-bold text-gray-900">{guide.author}</p>
+                          <Chip size="sm" color="success" variant="flat" className="h-5 text-[10px] px-1 font-bold">VERIFIED</Chip>
+                       </div>
                        <p className="text-xs">South African Benefit Specialist</p>
                     </div>
                  </div>
@@ -155,6 +158,26 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                  </div>
               </div>
            </header>
+
+           {/* Quick Summary / Featured Snippet Box */}
+           <Card className="border-none bg-primary-gold/10 shadow-none rounded-3xl">
+              <CardBody className="p-8 space-y-4">
+                 <h2 className="text-xl font-black flex items-center gap-2">
+                    <span className="w-2 h-6 bg-primary-gold rounded-full"></span>
+                    Quick Overview
+                 </h2>
+                 <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                       <p className="text-[10px] font-black uppercase text-gray-400">Difficulty</p>
+                       <p className="font-bold">{guide.difficulty}</p>
+                    </div>
+                    <div className="space-y-2">
+                       <p className="text-[10px] font-black uppercase text-gray-400">Total Steps</p>
+                       <p className="font-bold">{guide.steps.length} Actions</p>
+                    </div>
+                 </div>
+              </CardBody>
+           </Card>
 
            {guide.steps.length > 0 && (
              <Card className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-8 shadow-2xl rounded-[2rem] lg:hidden mb-12">
@@ -262,12 +285,25 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
               </CardBody>
            </Card>
 
-           <div className="p-6 border border-gray-100 dark:border-gray-800 rounded-3xl space-y-4">
-              <h4 className="font-bold">Related Guides</h4>
+           <div className="space-y-6">
+              <h3 className="text-xl font-bold px-2 flex items-center gap-2">
+                 <span className="w-1.5 h-6 bg-primary-gold rounded-full"></span>
+                 Topic Hub
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
+                 <Button as={NextLink} href="/status-check" size="sm" variant="flat" className="font-bold text-[10px]">STATUS CHECK</Button>
+                 <Button as={NextLink} href="/payment-calendar" size="sm" variant="flat" className="font-bold text-[10px]">PAYMENT DATES</Button>
+                 <Button as={NextLink} href="/guides/srd-grant" size="sm" variant="flat" className="font-bold text-[10px]">R370 GUIDE</Button>
+                 <Button as={NextLink} href="/updates" size="sm" variant="flat" className="font-bold text-[10px]">NEWS CENTER</Button>
+              </div>
+
+              <Divider className="my-4" />
+
+              <h4 className="font-bold px-2">Related Guides</h4>
               <div className="space-y-4">
                  {guides.filter(g => g.id !== id).slice(0, 3).map(rel => (
-                    <NextLink key={rel.id} href={`/guides/${rel.id}`} className="block group">
-                       <p className="text-xs font-bold text-gray-400 group-hover:text-primary-gold transition-colors uppercase">{rel.category}</p>
+                    <NextLink key={rel.id} href={`/guides/${rel.id}`} className="block group px-2">
+                       <p className="text-[10px] font-black text-gray-400 group-hover:text-primary-gold transition-colors uppercase">{rel.category}</p>
                        <p className="font-bold text-sm leading-tight mt-1">{rel.title}</p>
                     </NextLink>
                  ))}

@@ -147,7 +147,10 @@ export default async function UpdatePage({ params }: { params: { id: string } })
                  <div className="flex items-center gap-3">
                     <Avatar name="SHH" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
-                       <p className="font-bold text-gray-900">By SASSA Help Hub Team</p>
+                       <div className="flex items-center gap-2">
+                          <p className="font-bold text-gray-900">By SASSA Help Hub Team</p>
+                          <Chip size="sm" color="success" variant="flat" className="h-5 text-[10px] px-1 font-bold">VERIFIED</Chip>
+                       </div>
                        <p className="text-xs">Expert Policy Researchers</p>
                     </div>
                  </div>
@@ -161,6 +164,24 @@ export default async function UpdatePage({ params }: { params: { id: string } })
                  </div>
               </div>
            </header>
+
+           {/* Quick Summary / Featured Snippet Box */}
+           <Card className="border-none bg-primary-gold/10 shadow-none rounded-3xl">
+              <CardBody className="p-8 space-y-4">
+                 <h2 className="text-xl font-black flex items-center gap-2">
+                    <span className="w-2 h-6 bg-primary-gold rounded-full"></span>
+                    Quick Summary (Key Highlights)
+                 </h2>
+                 <ul className="grid md:grid-cols-2 gap-4">
+                    {update.summary.split('. ').slice(0, 4).map((point, i) => (
+                       <li key={i} className="flex items-start gap-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <span className="mt-1 text-primary-gold font-bold">✓</span>
+                          {point.replace(/\.$/, '')}
+                       </li>
+                    ))}
+                 </ul>
+              </CardBody>
+           </Card>
 
            {toc.length > 0 && (
              <Card className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-8 shadow-2xl rounded-[2rem] lg:hidden mb-12">
@@ -262,13 +283,26 @@ export default async function UpdatePage({ params }: { params: { id: string } })
               </CardBody>
            </Card>
 
-           <div className="space-y-4">
-              <h3 className="text-xl font-bold px-2">Related Articles</h3>
+           <div className="space-y-6">
+              <h3 className="text-xl font-bold px-2 flex items-center gap-2">
+                 <span className="w-1.5 h-6 bg-primary-gold rounded-full"></span>
+                 Topic Hub
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
+                 <Button as={NextLink} href="/status-check" size="sm" variant="flat" className="font-bold text-[10px]">STATUS CHECK</Button>
+                 <Button as={NextLink} href="/payment-calendar" size="sm" variant="flat" className="font-bold text-[10px]">PAYMENT DATES</Button>
+                 <Button as={NextLink} href="/guides/srd-grant" size="sm" variant="flat" className="font-bold text-[10px]">R370 GUIDE</Button>
+                 <Button as={NextLink} href="/scam-alert" size="sm" variant="flat" className="font-bold text-[10px]">SECURITY</Button>
+              </div>
+
+              <Divider className="my-4" />
+
+              <h3 className="text-xl font-bold px-2">Related News</h3>
               <div className="space-y-4">
                  {updates.filter(u => u.id !== id).slice(0, 3).map(rel => (
                     <Card key={rel.id} isPressable as={NextLink} href={`/updates/${rel.id}`} className="p-4 border border-gray-100 dark:border-gray-800 hover:border-primary-gold transition-colors">
                        <p className="text-xs font-bold text-primary-gold uppercase mb-2">{rel.type}</p>
-                       <p className="font-bold leading-tight">{rel.title}</p>
+                       <p className="font-bold leading-tight text-sm">{rel.title}</p>
                        <p className="text-[10px] text-gray-500 mt-2">{new Date(rel.date).toLocaleDateString()}</p>
                     </Card>
                  ))}

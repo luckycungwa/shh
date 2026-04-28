@@ -19,6 +19,7 @@ export default async function sitemap() {
     "/eligibility-check",
     "/payment-calendar",
     "/status-check",
+    "/glossary",
   ];
 
   // Fetch dynamic content
