@@ -1,9 +1,19 @@
 import fs from "fs";
 import path from "path";
 import React from "react";
-import { Button, Card, CardBody, CardHeader, Divider, Link, Chip, Avatar } from "@nextui-org/react";
-import { FaShieldAlt, FaNewspaper, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaCheckCircle, FaUsers, FaMapMarkerAlt, FaClock, FaChartLine } from "react-icons/fa";
+import { Button, Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
+import { FaShieldAlt, FaNewspaper, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaMapMarkerAlt, FaClock, FaCheckCircle, FaRegBell } from "react-icons/fa";
 import NextLink from "next/link";
+import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
+import { buildMetadata } from "../lib/seo";
+
+export const metadata = buildMetadata({
+  title: "SASSA Help Hub - Your Unofficial SASSA Resource",
+  description: `Your friendly, independent guide to SASSA grants, payment dates, and fraud protection. Updated for ${getCurrentYearString()} with SRD R370 news, status checks, and scam alerts.`,
+  path: "",
+  ogType: "website",
+  noTemplate: true,
+});
 
 interface Update {
   id: string;
@@ -27,204 +37,265 @@ export default function HomePage() {
       description: "Update your bank account for SRD R370 payments to avoid delays.",
       icon: <FaCreditCard className="text-2xl" />,
       link: "/guides/change-banking-details",
-      color: "blue"
     },
     {
       title: "Change Phone Number",
       description: "Lost your registered number? Follow our guide to update it safely.",
       icon: <FaSmartphone className="text-2xl" />,
       link: "/guides/srd-grant",
-      color: "green"
     },
     {
       title: "Lodge an Appeal",
       description: "If your grant was declined, you must submit an appeal within 90 days.",
       icon: <FaFileSignature className="text-2xl" />,
       link: "/guides/appeal-guide",
-      color: "red"
     },
     {
       title: "Biometric Verification",
-      description: "New for 2026: Complete your facial recognition for enhanced security.",
+      description: `New for ${getCurrentYearString()}: Complete your facial recognition for enhanced security.`,
       icon: <FaUserCheck className="text-2xl" />,
       link: "/guides/biometric-verification-guide",
-      color: "yellow"
-    }
+    },
   ];
 
   const stats = [
     { label: "Beneficiaries Helped", value: "2000+", icon: <FaUsers /> },
     { label: "Scams Prevented", value: "100+", icon: <FaShieldAlt /> },
     { label: "SASSA Offices", value: "200+", icon: <FaMapMarkerAlt /> },
-    { label: "Updated Daily", value: "2026", icon: <FaClock /> }
+    { label: "Updated Daily", value: getCurrentYearString(), icon: <FaClock /> },
   ];
 
   return (
     <div className="flex flex-col w-full">
-      {/* Hero Section */}
-      <section className="relative bg-primary-black py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-gold/20 to-transparent pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <Chip color="primary" variant="flat" className="mb-6 font-bold uppercase tracking-widest px-4 py-2 border border-primary-gold/30">
-             Updated for March 2026
-          </Chip>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tighter leading-tight">
-            Navigate SASSA with <span className="text-primary-gold underline underline-offset-8">Clarity</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-secondary-gray mb-12 max-w-3xl mx-auto leading-relaxed">
-            Your friendly, independent guide to South African social grants, payment dates, and fraud protection.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-             <Button as={NextLink} href="/status-check" color="primary" size="lg" className="font-bold px-10 py-8 text-xl shadow-xl hover:scale-105 transition-transform">
-                Check SASSA Status <FaArrowRight className="ml-2" />
-             </Button>
-             <Button as={NextLink} href="/payment-calendar" variant="bordered" size="lg" className="text-white border-white/30 font-bold px-10 py-8 text-xl hover:bg-white/10 transition-colors">
-                Payment Dates 2026
-             </Button>
+
+      {/* ── Hero ── */}
+      <section className="relative bg-primary-black min-h-[85vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-gold/10 via-transparent to-primary-dark"></div>
+        <div className="absolute inset-0 bg-grid opacity-20"></div>
+        <div className="absolute inset-0 bg-shimmer"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary-gold/5 blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-primary-gold/5 blur-3xl animate-float-slow"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-gold/10 border border-primary-gold/20 text-primary-gold text-sm font-semibold mb-8 animate-fade-in-down">
+              <FaRegBell className="animate-shimmer" />
+              Updated for {getCurrentMonthLabel()}
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 tracking-tight leading-[1.05]">
+              Navigate SASSA with{" "}
+              <span className="text-gradient underline decoration-primary-gold/30 underline-offset-8 decoration-2">
+                Clarity
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-secondary-gray/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Your friendly, independent guide to South African social grants, payment dates, and fraud protection.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                as={NextLink}
+                href="/status-check"
+                size="lg"
+                className="font-bold px-10 py-7 text-lg bg-primary-gold text-primary-black hover:bg-primary-gold-light shadow-gold hover:shadow-gold-lg transition-all duration-300 hover:scale-105"
+              >
+                Check SASSA Status <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                as={NextLink}
+                href="/payment-calendar"
+                variant="bordered"
+                size="lg"
+                className="font-bold px-10 py-7 text-lg text-white border-white/20 hover:border-primary-gold/50 hover:bg-white/5 transition-all duration-300"
+              >
+                {`Payment Dates ${getCurrentYearString()}`}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Payment Dates Highlight */}
-      <section className="bg-primary-gold py-12 border-y border-primary-gold/50 shadow-inner">
-         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-1 flex flex-col justify-center">
-               <h2 className="text-2xl font-black text-primary-black uppercase tracking-tight leading-none mb-2 italic">March 2026</h2>
-               <p className="text-primary-black font-bold opacity-80 uppercase text-xs tracking-widest flex items-center gap-2">
-                  <FaCalendarAlt /> Confirmed Payment Schedule
-               </p>
+      {/* ── Payment Dates Strip ── */}
+      <section className="relative bg-gradient-to-r from-primary-gold via-primary-gold-dark to-primary-gold py-10 overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-6 mb-8 lg:mb-0 lg:absolute lg:left-6 lg:top-1/2 lg:-translate-y-1/2">
+            <div className="text-center lg:text-left">
+              <p className="text-primary-black/60 text-xs font-bold uppercase tracking-[0.2em]">Payment Schedule</p>
+              <h2 className="text-3xl lg:text-4xl font-black text-primary-black leading-tight italic">{getCurrentMonthLabel()}</h2>
             </div>
-            <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
-               {paymentDates.map((p, i) => (
-                 <div key={i} className="bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/20 flex flex-col items-center text-center shadow-sm">
-                    <p className="text-[10px] font-black uppercase text-primary-black opacity-60 mb-1">{p.grant}</p>
-                    <p className="text-xl font-black text-primary-black leading-none">{new Date(p.date).getDate()}</p>
-                    <p className="text-[10px] font-bold text-primary-black opacity-80 uppercase tracking-tighter">{p.day}</p>
-                 </div>
-               ))}
-            </div>
-         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-gray-100 dark:bg-gray-900/80 py-8 border-b border-gray-200 dark:border-gray-800">
-         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex items-center justify-center gap-4 text-gray-500 dark:text-gray-400">
-                 <div className="text-2xl opacity-50">{stat.icon}</div>
-                 <div>
-                   <p className="text-xl font-black text-gray-900 dark:text-white leading-none">{stat.value}</p>
-                   <p className="text-[10px] font-bold uppercase tracking-widest opacity-70 mt-1">{stat.label}</p>
-                 </div>
+          </div>
+          <div className="lg:ml-72 grid grid-cols-2 md:grid-cols-4 gap-3">
+            {paymentDates.map((p, i) => (
+              <div
+                key={i}
+                className="bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/20 flex flex-col items-center text-center shadow-sm hover:bg-white/30 transition-all duration-300"
+                style={{ animationDelay: `${i * 100}ms` }}
+              >
+                <p className="text-[9px] font-black uppercase text-primary-black/60 tracking-wider mb-1">{p.grant}</p>
+                <p className="text-2xl font-black text-primary-black leading-none">{new Date(p.date).getDate()}</p>
+                <p className="text-[9px] font-bold text-primary-black/70 uppercase tracking-tight mt-0.5">{p.day}</p>
               </div>
             ))}
-         </div>
-      </section>
-
-      {/* Trust Callout */}
-      <section className="max-w-7xl mx-auto px-6 -mt-10 relative z-20">
-         <Card className="bg-white dark:bg-gray-800 p-8 shadow-2xl border border-gray-100 dark:border-gray-800">
-            <CardBody className="flex flex-col md:flex-row items-center gap-8 md:text-left text-center">
-               <div className="bg-primary-gold/10 p-6 rounded-full text-4xl text-primary-gold">
-                  <FaShieldAlt />
-               </div>
-               <div className="flex-grow space-y-2">
-                 <h2 className="text-3xl font-bold">100% Unofficial & Independent</h2>
-                 <p className="text-lg text-gray-600 dark:text-gray-400">
-                   We are South Africans helping South Africans. Our goal is to simplify grant information so you never miss a payment.
-                 </p>
-               </div>
-               <Button as={NextLink} href="/about" variant="flat" color="primary" className="font-bold py-6 px-8 text-lg">
-                  Learn Our Story
-               </Button>
-            </CardBody>
-         </Card>
-      </section>
-
-      {/* Essential Tools 2026 */}
-      <section className="max-w-7xl mx-auto px-6 py-24 w-full">
-         <div className="text-center mb-16 space-y-4">
-           <h2 className="text-4xl font-bold tracking-tight">Essential SASSA Online Tools 2026</h2>
-           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-             Quickly access the most important SASSA services using our high-quality step-by-step guides.
-           </p>
-         </div>
-
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, i) => (
-              <Card key={i} isPressable as={NextLink} href={tool.link} className="p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group">
-                <CardHeader className="justify-center pb-8">
-                   <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-3xl group-hover:bg-primary-gold group-hover:text-primary-black transition-colors">
-                      {tool.icon}
-                   </div>
-                </CardHeader>
-                <CardBody className="text-center space-y-4">
-                   <h3 className="text-xl font-bold">{tool.title}</h3>
-                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{tool.description}</p>
-                </CardBody>
-                <Divider className="my-4 opacity-50" />
-                <div className="flex items-center justify-center gap-2 text-primary-gold font-bold group-hover:gap-4 transition-all">
-                   Open Guide <FaArrowRight />
-                </div>
-              </Card>
-            ))}
-         </div>
-      </section>
-
-      {/* Latest News */}
-      <section className="bg-gray-50 dark:bg-gray-900/50 py-24 w-full">
-         <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
-               <div className="md:text-left text-center">
-                 <h2 className="text-4xl font-bold flex items-center gap-3 justify-center md:justify-start">
-                    <FaNewspaper className="text-primary-gold" /> Latest News & Updates
-                 </h2>
-                 <p className="text-gray-600 mt-2">Stay informed with the latest SASSA announcements for 2026.</p>
-               </div>
-               <Button as={NextLink} href="/updates" variant="bordered" className="font-bold border-primary-gold text-primary-gold">
-                  View All Updates
-               </Button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               {updates.map((update) => (
-                 <Card key={update.id} className="p-0 border border-gray-200 dark:border-gray-800 overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
-                    <CardHeader className="bg-primary-black text-white p-6 relative">
-                       <Chip color={update.type === "alert" ? "danger" : "primary"} className="absolute top-4 right-4 font-bold uppercase text-[10px]">
-                          {update.type}
-                       </Chip>
-                       <h3 className="text-xl font-bold leading-tight mt-4">{update.title}</h3>
-                    </CardHeader>
-                    <CardBody className="p-8 flex-grow">
-                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{update.summary}</p>
-                       <div className="flex items-center justify-between text-xs font-bold text-secondary-gray mt-auto">
-                          <p className="flex items-center gap-1"><FaClock /> {new Date(update.date).toLocaleDateString()}</p>
-                          <Link as={NextLink} href={`/updates/${update.id}`} className="text-primary-gold hover:underline">Read Full Story</Link>
-                       </div>
-                    </CardBody>
-                 </Card>
-               ))}
-            </div>
-         </div>
-      </section>
-
-      {/* Help CTA */}
-      <section className="max-w-5xl mx-auto px-6 py-24 text-center space-y-12">
-          <div className="bg-primary-gold/10 p-12 rounded-[3rem] border border-primary-gold/20 shadow-2xl">
-             <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">Still Need Assistance?</h2>
-             <p className="text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-               Explore our comprehensive FAQ database or get in touch with our team for guidance on your grant application.
-             </p>
-             <div className="flex flex-wrap justify-center gap-6">
-                <Button as={NextLink} href="/faq" color="primary" size="lg" className="font-bold px-10 py-8 text-xl">
-                   Browse FAQs <FaQuestionCircle className="ml-2" />
-                </Button>
-                <Button as={NextLink} href="/contact" variant="bordered" size="lg" className="font-bold px-10 py-8 text-xl border-primary-gold text-primary-gold">
-                   Contact Our Team
-                </Button>
-             </div>
           </div>
+        </div>
       </section>
+
+      {/* ── Stats ── */}
+      <section className="bg-primary-surface dark:bg-primary-dark border-y border-primary-gold/5">
+        <div className="max-w-7xl mx-auto px-6 py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, i) => (
+              <div key={i} className="flex items-center gap-4 p-4 rounded-xl hover:bg-primary-gold/5 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-primary-gold/10 flex items-center justify-center text-primary-gold shrink-0">
+                  {stat.icon}
+                </div>
+                <div>
+                  <p className="text-2xl font-black text-primary-black dark:text-white leading-none">{stat.value}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-secondary-gray mt-1">{stat.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Trust Callout ── */}
+      <section className="max-w-7xl mx-auto px-6 -mt-8 relative z-20">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-black via-primary-black to-primary-dark border border-primary-gold/10 shadow-dark-lg glow-gold">
+          <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-primary-gold/5 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-primary-gold/5 blur-2xl"></div>
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 p-8 md:p-12">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-3xl text-primary-gold shrink-0">
+              <FaShieldAlt />
+            </div>
+            <div className="flex-grow text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-white">Independent & Trusted</h2>
+              <p className="text-secondary-gray mt-2 max-w-xl">
+                We are South Africans helping South Africans. Our goal is to simplify grant information so you never miss a payment.
+              </p>
+            </div>
+            <Button as={NextLink} href="/about" className="font-bold px-8 py-6 bg-primary-gold/10 text-primary-gold border border-primary-gold/20 hover:bg-primary-gold/20 transition-all shrink-0">
+              Learn Our Story
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Essential Tools ── */}
+      <section className="max-w-7xl mx-auto px-6 py-28 w-full">
+        <div className="text-center mb-16">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-gold mb-3">Quick Actions</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight dark:text-white">Essential SASSA Tools</h2>
+          <p className="text-lg text-secondary-gray-dark dark:text-secondary-gray mt-3 max-w-xl mx-auto">
+            Step-by-step guides for the most common SASSA tasks — all in one place.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {tools.map((tool, i) => (
+            <NextLink key={i} href={tool.link} className="group block">
+              <div className="relative h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-gold transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-gold/0 via-primary-gold/0 to-primary-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-0 left-0 w-1 h-0 bg-primary-gold group-hover:h-full transition-all duration-300 rounded-r"></div>
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <div className="w-14 h-14 rounded-2xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-xl text-primary-gold group-hover:bg-primary-gold group-hover:text-primary-black transition-all duration-300 mb-6">
+                    {tool.icon}
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 dark:text-white">{tool.title}</h3>
+                  <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">{tool.description}</p>
+                  <div className="flex items-center gap-2 mt-6 text-sm font-bold text-primary-gold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    Open Guide <FaArrowRight className="text-xs" />
+                  </div>
+                </div>
+              </div>
+            </NextLink>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Latest Updates ── */}
+      <section className="bg-primary-surface dark:bg-primary-dark/80 py-28 w-full">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-gold mb-3">Stay Informed</p>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight dark:text-white">
+                Latest Grant Updates
+              </h2>
+               <p className="text-secondary-gray-dark dark:text-secondary-gray mt-3">{`Stay informed with the latest SASSA announcements for ${getCurrentYearString()}.`}</p>
+            </div>
+            <Button as={NextLink} href="/updates" variant="bordered" className="font-bold border-primary-gold/30 text-primary-gold hover:bg-primary-gold/10 shrink-0">
+              View All Updates <FaArrowRight className="ml-2" />
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {updates.map((update) => (
+              <NextLink key={update.id} href={`/updates/${update.id}`} className="group block">
+                <div className="h-full rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 overflow-hidden">
+                  <div className={`h-2 ${update.type === "alert" ? "bg-gradient-to-r from-red-500 to-red-400" : "bg-gradient-to-r from-primary-gold to-primary-gold-light"}`}></div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <Chip
+                        variant="flat"
+                        size="sm"
+                        className={`font-bold uppercase text-[10px] ${update.type === "alert" ? "bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400" : "bg-primary-gold/10 text-primary-gold"}`}
+                      >
+                        {update.type === "alert" ? "⚠ Alert" : "Update"}
+                      </Chip>
+                      <p className="text-[11px] font-semibold text-secondary-gray flex items-center gap-1">
+                        <FaClock /> {new Date(update.date).toLocaleDateString("en-ZA", { day: "numeric", month: "short", year: "numeric" })}
+                      </p>
+                    </div>
+                    <h3 className="text-base font-bold leading-snug mb-3 group-hover:text-primary-gold transition-colors line-clamp-2 dark:text-white">
+                      {update.title}
+                    </h3>
+                    <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed line-clamp-3">
+                      {update.summary}
+                    </p>
+                    <div className="flex items-center gap-1.5 mt-5 text-sm font-bold text-primary-gold opacity-0 group-hover:opacity-100 transition-opacity">
+                      Read Full Story <FaArrowRight className="text-xs" />
+                    </div>
+                  </div>
+                </div>
+              </NextLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="max-w-5xl mx-auto px-6 py-28 w-full">
+        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary-gold via-primary-gold-dark to-primary-gold p-12 md:p-16 text-center shadow-dark-lg">
+          <div className="absolute inset-0 bg-grid opacity-10"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-5xl font-black text-primary-black mb-4 tracking-tight">Still Need Assistance?</h2>
+            <p className="text-lg text-primary-black/80 max-w-lg mx-auto mb-10">
+              Explore our comprehensive FAQ database or get in touch with our team for guidance on your grant application.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                as={NextLink}
+                href="/faq"
+                size="lg"
+                className="font-bold px-10 py-7 text-lg bg-primary-black text-white hover:bg-primary-black/90 shadow-xl hover:shadow-2xl transition-all"
+              >
+                Browse FAQs <FaQuestionCircle className="ml-2" />
+              </Button>
+              <Button
+                as={NextLink}
+                href="/contact"
+                variant="bordered"
+                size="lg"
+                className="font-bold px-10 py-7 text-lg border-primary-black/30 text-primary-black hover:bg-primary-black/10"
+              >
+                Contact Our Team
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

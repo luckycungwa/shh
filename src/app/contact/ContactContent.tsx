@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Card, CardHeader, CardBody, Input, Textarea, Select, SelectItem, Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import React, { useState, useRef } from 'react';
+import { Card, CardHeader, CardBody, Input, Textarea, Select, SelectItem, Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Spinner } from "@nextui-org/react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaShieldAlt } from "react-icons/fa";
 
 export default function ContactContent() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -12,6 +12,9 @@ export default function ContactContent() {
     subject: "",
     message: ""
   });
+  const [honeypot, setHoneypot] = useState("");
+  const [submittedAt] = useState(() => Date.now());
+  const [sending, setSending] = useState(false);
 
   const subjects = [
     { label: "General Inquiry", value: "general" },
@@ -23,8 +26,17 @@ export default function ContactContent() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onOpen();
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    // Honeypot check — bots fill hidden fields
+    if (honeypot) return;
+    // Rate limit — less than 3 seconds is bot-like
+    if (Date.now() - submittedAt < 3000) return;
+    setSending(true);
+    setTimeout(() => {
+      setSending(false);
+      onOpen();
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setHoneypot("");
+    }, 600);
   };
 
   return (
@@ -93,28 +105,36 @@ export default function ContactContent() {
                <h3 className="text-2xl font-bold">Send a Message</h3>
              </CardHeader>
              <CardBody>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                     <Input
-                        isRequired
-                        label="Full Name"
-                        placeholder="Enter your name"
-                        variant="bordered"
-                        labelPlacement="outside"
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                     />
-                     <Input
-                        isRequired
-                        label="Email Address"
-                        placeholder="you@example.com"
-                        variant="bordered"
-                        type="email"
-                        labelPlacement="outside"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                     />
-                   </div>
+                 <form onSubmit={handleSubmit} className="space-y-6">
+                    <div aria-hidden="true" className="absolute opacity-0 pointer-events-none" style={{ height: 0, overflow: "hidden" }}>
+                       <input
+                         tabIndex={-1}
+                         autoComplete="off"
+                         value={honeypot}
+                         onChange={(e) => setHoneypot(e.target.value)}
+                       />
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <Input
+                         isRequired
+                         label="Full Name"
+                         placeholder="Enter your name"
+                         variant="bordered"
+                         labelPlacement="outside"
+                         value={formData.name}
+                         onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      />
+                      <Input
+                         isRequired
+                         label="Email Address"
+                         placeholder="you@example.com"
+                         variant="bordered"
+                         type="email"
+                         labelPlacement="outside"
+                         value={formData.email}
+                         onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      />
+                    </div>
                    <Select
                       isRequired
                       label="Subject"
@@ -140,15 +160,16 @@ export default function ContactContent() {
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                    />
-                   <Button
-                      type="submit"
-                      color="primary"
-                      fullWidth
-                      className="font-bold py-6 text-lg"
-                      endContent={<FaPaperPlane />}
-                   >
-                      Send Message
-                   </Button>
+                    <Button
+                       type="submit"
+                       color="primary"
+                       fullWidth
+                       isDisabled={sending}
+                       className="font-bold py-6 text-lg"
+                       endContent={sending ? undefined : <FaPaperPlane />}
+                    >
+                       {sending ? <Spinner size="sm" color="current" /> : "Send Message"}
+                    </Button>
                 </form>
              </CardBody>
           </Card>

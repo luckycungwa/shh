@@ -1,9 +1,18 @@
 import React from 'react';
+import type { Metadata } from "next";
 import { Gavel, Scale, AlertCircle } from 'lucide-react';
 import { Card, CardBody, Divider } from "@nextui-org/react";
+import { buildMetadata } from "../../lib/seo";
+import { getCurrentMonthYearKey } from "../../lib/config";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Terms of Service",
+  description: "Terms and Conditions for using SASSA Help Hub. Your rights and obligations when using our independent SASSA resource.",
+  path: "/terms-of-service",
+});
 
 export default function TermsOfServicePage() {
-  const lastUpdated = "March 10, 2026";
+  const lastUpdated = getCurrentMonthYearKey();
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">

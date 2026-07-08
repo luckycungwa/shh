@@ -1,9 +1,18 @@
 import fs from "fs";
 import path from "path";
 import React from "react";
+import type { Metadata } from "next";
 import { Card, CardHeader, CardBody, Chip, Divider, Button } from "@nextui-org/react";
 import { FaShieldAlt, FaExclamationTriangle, FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 import NextLink from "next/link";
+import { buildMetadata } from "../../lib/seo";
+import { getCurrentYearString } from "../../lib/config";
+
+export const metadata: Metadata = buildMetadata({
+  title: `SASSA Scam Alerts ${getCurrentYearString()} — Protect Yourself from Fraud`,
+  description: `Stay informed about the latest SASSA-related scams in ${getCurrentYearString()}. Learn how to identify fake SASSA websites, SMS phishing, and fraud attempts.`,
+  path: "/scam-alert",
+});
 
 interface Scam {
   id: string;
@@ -24,7 +33,7 @@ export default function ScamAlertPage() {
         <Chip color="danger" variant="shadow" className="font-bold uppercase animate-pulse">Live Alerts</Chip>
         <h1 className="text-5xl font-black tracking-tight">SASSA Scam & Fraud Alerts</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Protect yourself from the latest fraudulent schemes targeting grant beneficiaries in 2026.
+           {`Protect yourself from the latest fraudulent schemes targeting grant beneficiaries in ${getCurrentYearString()}.`}
         </p>
       </header>
 

@@ -1,0 +1,48 @@
+# SASSA Help Hub
+
+> Your independent guide to SASSA grants, payment dates, and applications in South Africa.
+
+## Essential Pages
+
+- Home: https://www.sassahelphub.co.za/
+- SRD R370 Grant Guide: https://www.sassahelphub.co.za/grants/srd-r370-grant
+- Old Age Pension Guide: https://www.sassahelphub.co.za/grants/old-age-pension
+- Child Support Grant Guide: https://www.sassahelphub.co.za/grants/child-support-grant
+- Disability Grant Guide: https://www.sassahelphub.co.za/grants/disability-grant
+- Foster Child Grant Guide: https://www.sassahelphub.co.za/grants/foster-child-grant
+- Payment Calendar: https://www.sassahelphub.co.za/payment-calendar
+- SASSA Status Check: https://www.sassahelphub.co.za/status-check
+- FAQ: https://www.sassahelphub.co.za/faq
+- Guides: https://www.sassahelphub.co.za/guides
+- Glossary: https://www.sassahelphub.co.za/glossary
+- SASSA Offices by Province: https://www.sassahelphub.co.za/sassa-offices
+
+## Status Meanings
+
+- Application Complete: https://www.sassahelphub.co.za/status/application-complete
+- Pending: https://www.sassahelphub.co.za/status/pending
+- Bank Details Pending: https://www.sassahelphub.co.za/status/bank-details-pending
+- Identity Verification: https://www.sassahelphub.co.za/status/identity-verification
+- Referred: https://www.sassahelphub.co.za/status/referred
+- Means Test Failed: https://www.sassahelphub.co.za/status/means-test-failed
+- Approved: https://www.sassahelphub.co.za/status/approved
+- Declined: https://www.sassahelphub.co.za/status/declined
+- Appeal Pending: https://www.sassahelphub.co.za/status/appeal-pending
+- Paid: https://www.sassahelphub.co.za/status/paid
+
+## Key Information
+
+- SASSA Helpline: 0800 60 10 11
+- SRD Portal: https://srd.sassa.gov.za
+- Appeals Portal: https://srd-appeals.dsd.gov.za
+- SASSA WhatsApp: 082 046 8553
+- USSD Codes: *120*69277# (SRD status), *120*3210# (Postbank balance), *134*7737# (apply)
+
+## Policies
+
+- Editorial Policy: https://www.sassahelphub.co.za/editorial-policy
+- Fact-Checking Policy: https://www.sassahelphub.co.za/fact-checking-policy
+- Sources Policy: https://www.sassahelphub.co.za/sources-policy
+- Corrections Policy: https://www.sassahelphub.co.za/corrections-policy
+- Privacy Policy: https://www.sassahelphub.co.za/privacy-policy
+- Terms of Service: https://www.sassahelphub.co.za/terms-of-service

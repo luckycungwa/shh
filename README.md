@@ -1,6 +1,6 @@
 # SASSA Help Hub 🇿🇦
 
-A comprehensive, production-ready Next.js web application providing SASSA (South African Social Security Agency) beneficiaries with accurate information, guidance, and tools. This is an **unofficial resource** with prominent disclaimers throughout.
+A comprehensive, production-ready Next.js web application providing SASSA (South African Social Security Agency) beneficiaries with accurate information, guidance, and tools. This is an **Independent Resource** with prominent disclaimers throughout.
 
 ![SASSA Help Hub](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![Next.js](https://img.shields.io/badge/Next.js-14+-black)
@@ -10,6 +10,7 @@ A comprehensive, production-ready Next.js web application providing SASSA (South
 ## 🌟 Features
 
 ### Core Functionality
+
 - **📱 Mobile-First Design** - Optimized for South African mobile users
 - **🌍 Multilingual Support** - English, isiZulu, and isiXhosa support in guides
 - **🔍 Smart Search** - FAQ and guide search functionality
@@ -19,23 +20,27 @@ A comprehensive, production-ready Next.js web application providing SASSA (South
 - **👥 Community Support** - Curated help and eligibility tools
 
 ### Accessibility & Performance
+
 - **♿ WCAG 2.1 AA Compliant** - Screen reader compatible, keyboard navigation
 - **⚡ Next.js SSR/SSG** - Optimized for SEO and fast indexing
 - **📱 PWA Ready** - Installable progressive web app
 - **⚡ Optimized Assets** - WebP images and efficient code splitting
 
 ### Compliance & Legal
+
 - **📋 Legal Pages** - Privacy policy, terms of service, and official disclaimers
 - **💰 AdSense Integration** - Compliant monetization with account verification
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+ and npm
 
 ### Installation
 
 1. **Clone and Install**
+
 ```bash
 git clone https://github.com/yourusername/sassa-help-hub.git
 cd sassa-help-hub
@@ -43,6 +48,7 @@ npm install
 ```
 
 2. **Start Development**
+
 ```bash
 npm run dev
 ```
@@ -74,6 +80,7 @@ src/
 ## 📄 Legal & Compliance
 
 ### Disclaimer
+
 This is an **independent resource** not affiliated with SASSA or the South African Government. Users must verify all information through official SASSA channels:
 
 - **Official Website**: https://www.sassa.gov.za

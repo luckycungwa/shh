@@ -1,0 +1,58 @@
+{
+  "title": "SASSA War Veterans Grant 2026: Complete Guide",
+  "description": "Full guide to the War Veterans Grant — R2,420/month for South Africans who served in WWII or the Korean War. Eligibility, amounts, and how to apply.",
+  "slug": "war-veterans-grant",
+  "last_updated": "2026-07-07",
+  "reviewed_by": "Themba Phakathi",
+  "author": "Zanele Nkosi",
+  "sources": ["https://www.sassa.gov.za"],
+  "related": ["/grants/old-age-pension", "/grants/disability-grant"],
+  "sections": [
+    {
+      "type": "intro",
+      "title": "What Is the War Veterans Grant?",
+      "content": "The War Veterans Grant is a social grant paid by SASSA to South African citizens who served in the military during the Second World War (1939–1945) or the Korean War (1950–1953). In 2026, this grant pays <strong>{{war_veterans_grant_amount}} per month</strong> — the highest rate of any SASSA grant. As of 2026, very few beneficiaries remain due to age. The grant is paid at the same rate regardless of the veteran's age."
+    },
+    {
+      "type": "eligibility",
+      "title": "Eligibility Requirements",
+      "content": "<strong>To qualify for the War Veterans Grant, you must meet all of the following criteria:</strong><br><br>• You must have served in the South African military during World War II or the Korean War<br>• You must be a South African citizen or permanent resident<br>• You must pass the means test: income below {{war_veterans_income_threshold_single}}/month (single) or {{war_veterans_income_threshold_married}} (married couple)<br>• Assets must not exceed {{war_veterans_asset_threshold_single}} (single) or {{war_veterans_asset_threshold_married}} (married couple)<br>• You must not be receiving any other SASSA grant<br><br>Due to the advanced age of surviving veterans, SASSA fast-tracks applications for this grant. Proof of military service is the most critical requirement."
+    },
+    {
+      "type": "text",
+      "title": "Documents Required",
+      "content": "You will need: (1) Your 13-digit South African ID or Smart ID card. (2) <strong>Proof of military service</strong> — this could be a military discharge certificate, service record, or confirmation from the South African National Defence Force (SANDF) archives. (3) Proof of income and assets (payslips, bank statements, property valuations). (4) Proof of residence. If you do not have your original military documents, the SANDF archives can help locate your service record."
+    },
+    {
+      "type": "steps",
+      "title": "How to Apply",
+      "steps": [
+        { "title": "Gather Your Military Documents", "content": "Find your military service records or discharge certificate. If lost, contact the SANDF archives at 012 355 5000 to request a copy of your service record." },
+        { "title": "Visit Your Nearest SASSA Office", "content": "Apply in person at a SASSA office. Tell the officer you are applying for the War Veterans Grant. Bring all documents including proof of military service." },
+        { "title": "Submit and Wait for Processing", "content": "SASSA aims to process applications within 60 days. Due to the small number of applicants, War Veterans Grant applications are typically processed quickly." }
+      ]
+    },
+    {
+      "type": "info",
+      "title": "Grant Amount & Payment Dates 2026",
+      "content": "The War Veterans Grant is <strong>{{war_veterans_grant_amount}} per month</strong> (2026 rate). This is the highest SASSA grant amount. Payments follow the Old Age Grant schedule — the first working day of each month. Payment methods include bank deposit, Postbank Black Card, or cash collection."
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        { "q": "I lost my military service records — can I still apply?", "a": "Yes. Contact the SANDF archives at 012 355 5000 to request a copy of your service record. This may take a few weeks, but do not delay your application." },
+        { "q": "Can I receive the War Veterans Grant and Old Age Grant together?", "a": "No. You can only receive one SASSA grant at a time. The War Veterans Grant pays {{war_veterans_grant_amount}} compared to the Old Age Grant's {{old_age_pension_amount_over75}} — choose the higher amount." },
+        { "q": "Is the War Veterans Grant taxable?", "a": "No. SASSA grants are not subject to income tax in South Africa." }
+      ]
+    },
+    {
+      "type": "references",
+      "title": "Official Sources",
+      "references": [
+        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
+        { "title": "SANDF Archives", "url": "https://www.dod.mil.za" }
+      ]
+    }
+  ]
+}

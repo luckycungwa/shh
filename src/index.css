@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-white text-gray-800;
+    @apply bg-white text-gray-800 antialiased;
     transition-property: background-color, color;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
+  }
+
+  ::selection {
+    @apply bg-primary-gold/30 text-primary-black;
   }
 
   .dark body {
@@ -32,5 +40,42 @@
 
   .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4, .dark .prose h5, .dark .prose h6 {
     @apply text-white;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: linear-gradient(rgba(245, 209, 13, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 209, 13, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-shimmer {
+    background: linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(245, 209, 13, 0.04) 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.03) 75%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-gold via-primary-gold to-primary-gold-light;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(245, 209, 13, 0.15), 0 0 60px rgba(245, 209, 13, 0.05);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1 shadow-gold;
   }
 }

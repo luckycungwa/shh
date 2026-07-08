@@ -1,7 +1,16 @@
 import React from 'react';
+import type { Metadata } from "next";
 import { Card, CardHeader, CardBody, Divider, Button, Link } from "@nextui-org/react";
 import { FaExclamationTriangle, FaExternalLinkAlt, FaShieldAlt, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
+import { buildMetadata } from "../../lib/seo";
+import { getCurrentYearString, getCurrentMonthYearKey } from "../../lib/config";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Disclaimer — Independent SASSA Information Resource",
+  description: "SASSA Help Hub is an independent, unofficial information portal. We are not affiliated with SASSA or any government department.",
+  path: "/disclaimer",
+});
 
 export default function DisclaimerPage() {
   const siteUrl = "https://www.sassahelphub.co.za";
@@ -44,7 +53,7 @@ export default function DisclaimerPage() {
                This website is created and maintained for educational and informational purposes only. We aim to help South African citizens navigate the complexities of social grants by providing simplified guides, payment dates, and news summaries.
              </p>
              <p>
-               While we strive to provide the most accurate and up-to-date information for 2026, the official and final word on any SASSA grant application, status, or policy rests solely with SASSA and the Department of Social Development.
+               While we strive to provide the most accurate and up-to-date information for {getCurrentYearString()}, the official and final word on any SASSA grant application, status, or policy rests solely with SASSA and the Department of Social Development.
              </p>
            </div>
         </section>
@@ -82,7 +91,7 @@ export default function DisclaimerPage() {
         <Card className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
            <CardBody>
               <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                Last updated: March 10, 2026. By using this website, you acknowledge that you have read, understood, and agreed to this disclaimer. All content on sassahelphub.co.za is subject to change without notice.
+                 Last updated: {getCurrentMonthYearKey()}. By using this website, you acknowledge that you have read, understood, and agreed to this disclaimer. All content on sassahelphub.co.za is subject to change without notice.
               </p>
            </CardBody>
         </Card>

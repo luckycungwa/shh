@@ -1,0 +1,267 @@
+{
+  "srd_grant_amount": {
+    "value": "R370",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
+    "verified_date": "2026-07-07",
+    "verified_by": "Budget 2026 — National Treasury",
+    "confidence": "confirmed"
+  },
+  "srd_age_range_min": {
+    "value": "18",
+    "effective_date": "2020-05-01",
+    "source_url": "https://srd.sassa.gov.za",
+    "verified_date": "2026-07-07",
+    "verified_by": "SRD Official Portal — srd.sassa.gov.za",
+    "confidence": "confirmed"
+  },
+  "srd_age_range_max": {
+    "value": "59",
+    "effective_date": "2020-05-01",
+    "source_url": "https://srd.sassa.gov.za",
+    "verified_date": "2026-07-07",
+    "verified_by": "SRD Official Portal — srd.sassa.gov.za",
+    "confidence": "confirmed"
+  },
+  "srd_income_limit": {
+    "value": "R624",
+    "effective_date": "2026-04-01",
+    "source_url": "https://srd.sassa.gov.za",
+    "verified_date": "2026-07-07",
+    "verified_by": "SRD Official Portal — srd.sassa.gov.za",
+    "confidence": "confirmed"
+  },
+  "srd_extension_date": {
+    "value": "31 March 2027",
+    "effective_date": "2026-02-19",
+    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
+    "verified_date": "2026-07-07",
+    "verified_by": "Budget 2026 — National Treasury",
+    "confidence": "confirmed"
+  },
+  "child_support_grant_amount": {
+    "value": "R580",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "child_support_income_threshold_single": {
+    "value": "R5,800",
+    "effective_date": "2026-04-01",
+    "source_url": "",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — 2026 Budget Review / SASSA means test docs (R69,600/year)",
+    "confidence": "confirmed"
+  },
+  "child_support_income_threshold_married": {
+    "value": "R11,600",
+    "effective_date": "2026-04-01",
+    "source_url": "",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — 2026 Budget Review / SASSA means test docs (R139,200/year)",
+    "confidence": "confirmed"
+  },
+  "old_age_pension_amount_under75": {
+    "value": "R2,400",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "old_age_pension_amount_over75": {
+    "value": "R2,420",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "old_age_income_threshold_single": {
+    "value": "R7,190",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R86,280/year (2026/27 standard means test; applies to Old Age, Disability, War Veterans)",
+    "confidence": "confirmed"
+  },
+  "old_age_income_threshold_married": {
+    "value": "R14,380",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R172,560/year (2026/27 standard means test; no separate 75+ means test threshold exists)",
+    "confidence": "confirmed"
+  },
+  "old_age_asset_threshold_single": {
+    "value": "R1,227,600",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — 2026/27 standard means test",
+    "confidence": "confirmed"
+  },
+  "old_age_asset_threshold_married": {
+    "value": "R2,455,200",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — 2026/27 standard means test",
+    "confidence": "confirmed"
+  },
+  "disability_grant_amount": {
+    "value": "R2,400",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "disability_income_threshold_single": {
+    "value": "R7,190",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R86,280/year (same means test as Old Age)",
+    "confidence": "confirmed"
+  },
+  "disability_income_threshold_married": {
+    "value": "R14,380",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R172,560/year (same means test as Old Age)",
+    "confidence": "confirmed"
+  },
+  "foster_child_grant_amount": {
+    "value": "R1,295",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — 2026/27 fiscal year",
+    "confidence": "confirmed"
+  },
+  "war_veterans_grant_amount": {
+    "value": "R2,420",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "care_dependency_grant_amount": {
+    "value": "R2,400",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "grant_in_aid_amount": {
+    "value": "R580",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.dsd.gov.za/index.php/latest-news/21-latest-news/680-SASSA-confirms-2026-2027-social-grant-payment-schedule-and-increases",
+    "verified_date": "2026-07-07",
+    "verified_by": "DSD Official News — www.dsd.gov.za",
+    "confidence": "confirmed"
+  },
+  "sassa_gold_card": {
+    "value": "SASSA Gold Card — being phased out; will stop working after 31 August 2026. Beneficiaries must migrate to Postbank Black Card before deadline.",
+    "effective_date": "2026-08-31",
+    "source_url": "",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — Postbank card migration programme",
+    "confidence": "confirmed"
+  },
+  "postbank_black_card": {
+    "value": "Postbank Black Card — required replacement for SASSA Gold Card. All beneficiaries must migrate before 31 August 2026 to continue accessing funds.",
+    "effective_date": "2026-08-31",
+    "source_url": "",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — Postbank card migration programme",
+    "confidence": "confirmed"
+  },
+  "card_replacement_cost": {
+    "value": "Free of charge. Visit a designated Postbank service point (located in Shoprite, Checkers, Usave, Pick n Pay, Boxer, or Spar) with your valid SA ID or temporary ID. If anyone demands payment, it is a scam.",
+    "effective_date": "2026-07-08",
+    "source_url": "",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — replacement is free at Postbank service points",
+    "confidence": "confirmed"
+  },
+  "care_dependency_income_threshold_single": {
+    "value": "R18,600",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/parenting/child-care/care-dependency-grant",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R223,200/year (separate higher threshold for disabled children)",
+    "confidence": "confirmed"
+  },
+  "care_dependency_income_threshold_married": {
+    "value": "R37,200",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/parenting/child-care/care-dependency-grant",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R446,400/year (separate higher threshold for disabled children)",
+    "confidence": "confirmed"
+  },
+  "disability_asset_threshold_single": {
+    "value": "R1,227,600",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — same means test as Old Age",
+    "confidence": "confirmed"
+  },
+  "disability_asset_threshold_married": {
+    "value": "R2,455,200",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — same means test as Old Age",
+    "confidence": "confirmed"
+  },
+  "war_veterans_income_threshold_single": {
+    "value": "R7,190",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/social-benefits-retirement-and-old-age/war-veterans-grant",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R86,280/year (same means test as Old Age)",
+    "confidence": "confirmed"
+  },
+  "war_veterans_income_threshold_married": {
+    "value": "R14,380",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/social-benefits-retirement-and-old-age/war-veterans-grant",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — R172,560/year (same means test as Old Age)",
+    "confidence": "confirmed"
+  },
+  "war_veterans_asset_threshold_single": {
+    "value": "R1,227,600",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/social-benefits-retirement-and-old-age/war-veterans-grant",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — same means test as Old Age",
+    "confidence": "confirmed"
+  },
+  "war_veterans_asset_threshold_married": {
+    "value": "R2,455,200",
+    "effective_date": "2026-04-01",
+    "source_url": "https://www.gov.za/services/social-benefits-retirement-and-old-age/war-veterans-grant",
+    "verified_date": "2026-07-08",
+    "verified_by": "User confirmed — same means test as Old Age",
+    "confidence": "confirmed"
+  },
+  "foster_child_grant_amount_2025": {
+    "value": "R1,180",
+    "note": "Previous cycle 2025/2026 amount — current is R1,295",
+    "effective_date": "2025-04-01",
+    "source_url": "",
+    "verified_date": "2026-07-08",
+    "verified_by": "",
+    "confidence": "needs_human_review"
+  }
+}

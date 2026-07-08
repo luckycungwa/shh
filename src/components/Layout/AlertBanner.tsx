@@ -26,7 +26,7 @@ export default function AlertBanner() {
       <Alert
         color="warning"
         icon={<FaExclamationTriangle />}
-        title="Unofficial Resource"
+        title="Independent Resource"
         description="This is an independent help hub. Not affiliated with SASSA or the South African government."
         onClose={handleDismiss}
         variant="faded"

@@ -15,9 +15,22 @@ import {
 } from "@nextui-org/react";
 import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle } from "react-icons/fa";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
+import ThemeToggle from "../ThemeToggle";
 
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
+  const linkClass = (href: string) =>
+    isActive(href)
+      ? "text-primary-gold font-bold"
+      : "text-foreground";
 
   const menuItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
@@ -34,7 +47,14 @@ export default function NavbarComponent() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered maxWidth="xl">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isBordered
+      maxWidth="xl"
+      className="bg-white/80 dark:bg-primary-dark/80 backdrop-blur-xl backdrop-saturate-150 border-b border-primary-gold/10"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -42,52 +62,81 @@ export default function NavbarComponent() {
         />
         <NavbarBrand>
           <NextLink href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="SASSA Help Hub Logo" width={32} height={32} className="rounded" />
-            <p className="font-bold text-inherit hidden sm:block">SASSA Help Hub</p>
+            <Image src="/logo.png" alt="SASSA Help Hub Logo" width={32} height={32} className="rounded ring-2 ring-primary-gold/20" />
+            <p className="font-bold text-inherit hidden sm:block">
+              <span className="text-primary-black dark:text-white">SASSA</span>
+              <span className="text-primary-gold"> Help Hub</span>
+            </p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-1" justify="center">
         <NavbarItem>
-          <Link as={NextLink} href="/status-check" color="primary" className="font-bold">Status Check</Link>
+          <Link as={NextLink} href="/" aria-current={isActive("/") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            Home
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/payment-calendar" color="foreground">Payment Dates</Link>
+          <Link as={NextLink} href="/status-check" aria-current={isActive("/status-check") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/status-check") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            Status Check
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/updates" color="foreground">News</Link>
+          <Link as={NextLink} href="/payment-calendar" aria-current={isActive("/payment-calendar") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/payment-calendar") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            Payment Dates
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/guides" color="foreground">Guides</Link>
+          <Link as={NextLink} href="/updates" aria-current={isActive("/updates") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/updates") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            News
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/resources" color="foreground">Offices</Link>
+          <Link as={NextLink} href="/guides" aria-current={isActive("/guides") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/guides") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            Guides
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link as={NextLink} href="/resources" aria-current={isActive("/resources") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/resources") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            Offices
+          </Link>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ThemeToggle />
+        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-          <Link as={NextLink} href="/about">About</Link>
+          <Link as={NextLink} href="/about" aria-current={isActive("/about") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/about") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            About
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={NextLink} color="primary" href="/contact" variant="flat">
+          <Button as={NextLink} color="primary" href="/contact" variant="flat" className="font-semibold bg-primary-gold/10 text-primary-gold hover:bg-primary-gold/20 border border-primary-gold/20">
             Contact
           </Button>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="bg-white/95 dark:bg-primary-dark/95 backdrop-blur-xl">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.href}-${index}`}>
             <Link
               as={NextLink}
-              className="w-full flex items-center gap-2 py-2"
-              color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`w-full flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 ${
+                isActive(item.href)
+                  ? "bg-primary-gold/10 text-primary-gold font-bold"
+                  : "text-foreground hover:bg-gray-50 dark:hover:bg-white/5"
+              }`}
               href={item.href}
               size="lg"
             >
-              {item.icon}
+              <span className={`text-lg ${isActive(item.href) ? "text-primary-gold" : "text-secondary-gray"}`}>
+                {item.icon}
+              </span>
               {item.name}
             </Link>
           </NavbarMenuItem>

@@ -1,0 +1,60 @@
+{
+  "title": "SASSA Care Dependency Grant 2026: Complete Guide",
+  "description": "Full guide to the Care Dependency Grant — R2,400/month for caregivers of children with severe disabilities. Eligibility, medical assessment, application steps, and payment dates.",
+  "slug": "care-dependency-grant",
+  "last_updated": "2026-07-07",
+  "reviewed_by": "Themba Phakathi",
+  "author": "Zanele Nkosi",
+  "sources": ["https://www.sassa.gov.za"],
+  "related": ["/grants/disability-grant", "/grants/child-support-grant", "/grants/grant-in-aid"],
+  "sections": [
+    {
+      "type": "intro",
+      "title": "What Is the Care Dependency Grant?",
+      "content": "The Care Dependency Grant (CDG) is a monthly cash payment of <strong>{{care_dependency_grant_amount}}</strong> (2026 rate) from SASSA for caregivers of children under 18 who have a severe disability that requires permanent full-time care. Unlike the Child Support Grant, the CDG is specifically for children with profound disabilities — both physical and mental — that prevent them from attending school or participating in daily activities without constant assistance. This grant is not means-tested for the child's assets, but the caregiver must pass a means test."
+    },
+    {
+      "type": "eligibility",
+      "title": "Eligibility Requirements",
+      "content": "<strong>To qualify for the Care Dependency Grant, you must meet all of the following criteria:</strong><br><br><strong>Child Requirements:</strong><br>• Child must be under 18 years old<br>• Child must have a severe disability confirmed by a medical report from a SASSA-designated government doctor<br>• The disability must require permanent care or supervision at home<br>• The child must not be cared for in a state-funded institution for more than 6 months<br><br><strong>Caregiver Requirements:</strong><br>• Must be the child's parent, guardian, or primary caregiver<br>• Must be a South African citizen or permanent resident<br>• Must pass the means test (income below {{care_dependency_income_threshold_single}}/month single or {{care_dependency_income_threshold_married}}/month combined for married)<br>• Must not be receiving another grant for the same child"
+    },
+    {
+      "type": "text",
+      "title": "Documents Required",
+      "content": "You will need the following documents when applying: (1) Your 13-digit South African ID or Smart ID card. (2) The child's birth certificate or ID document. (3) A <strong>medical/assessment report</strong> from a government doctor confirming the disability and the need for permanent care. (4) Proof of income (payslips, bank statements, or an affidavit if unemployed). (5) Proof of residence (utility bill or bank statement). (6) Form SASSA 1 (available at the SASSA office). The medical assessment is the most critical document — without it, the application cannot proceed."
+    },
+    {
+      "type": "steps",
+      "title": "How to Apply",
+      "steps": [
+        { "title": "Get a Medical Assessment", "content": "Visit your nearest government hospital or clinic and request a medical assessment for the Care Dependency Grant. The doctor must complete a medical report confirming the child's disability and that they require full-time care. This is not a private doctor's note — it must be from a government-designated health professional." },
+        { "title": "Visit Your Nearest SASSA Office", "content": "Take all documents to your nearest SASSA office. You must apply in person — no online application is available. Arrive early (before 08:00) to avoid long queues. Request Form SASSA 1 and tell the officer you are applying for the Care Dependency Grant." },
+        { "title": "Submit Your Application", "content": "The SASSA officer will review your documents, take copies, and give you a receipt. Ensure you get a stamped proof of application with a reference number. The officer will explain when you can expect feedback." },
+        { "title": "Wait for SASSA to Visit Your Home", "content": "SASSA will send an official to your home to verify that the child lives with you and to assess the care environment. This home visit is mandatory for the Care Dependency Grant. The official will report back to SASSA with their findings." },
+        { "title": "Receive the Outcome", "content": "SASSA aims to process applications within 60 days. If approved, payments start from the date of application (not the date of approval). If declined, you can appeal within 90 days." }
+      ]
+    },
+    {
+      "type": "info",
+      "title": "Grant Amount & Payment Dates 2026",
+      "content": "The Care Dependency Grant is <strong>{{care_dependency_grant_amount}} per month</strong> as of April 2026. Payments are made on the second working day of each month alongside the Disability Grant. You can receive the grant via: bank deposit into your account, Postbank Black Card, or cash collection at a Post Office or retailer. The grant is paid until the child turns 18, after which they can apply for the Disability Grant for adults."
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        { "q": "Can I receive both Child Support Grant and Care Dependency Grant for the same child?", "a": "No. You cannot receive both grants for the same child. However, you can receive the Care Dependency Grant for one child and the Child Support Grant for another child in your care." },
+        { "q": "Is a private doctor's medical report accepted?", "a": "No. The medical report must be completed by a government-designated doctor at a state hospital or clinic. Private doctor reports are not accepted by SASSA for the Care Dependency Grant." },
+        { "q": "What if SASSA denies my application?", "a": "You have the right to appeal within 90 days. If the denial was due to an incomplete medical report, get a more detailed assessment from the government doctor and resubmit." }
+      ]
+    },
+    {
+      "type": "references",
+      "title": "Official Sources",
+      "references": [
+        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
+        { "title": "SASSA Helpline", "url": "tel:0800601011" }
+      ]
+    }
+  ]
+}

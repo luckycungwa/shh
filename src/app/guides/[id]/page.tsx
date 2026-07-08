@@ -2,11 +2,25 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Metadata } from "next";
-import { Card, CardHeader, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem, Avatar } from "@nextui-org/react";
-import { FaClock, FaCalendarAlt, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaListUl, FaLink, FaLightbulb } from "react-icons/fa";
+import { Card, CardHeader, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem, Avatar, Image } from "@nextui-org/react";
+import { FaClock, FaCalendarAlt, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaListUl, FaLink, FaLightbulb, FaQuestionCircle, FaMobileAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import { notFound } from "next/navigation";
-import Script from "next/script";
+import JsonLd from "../../../components/JsonLd";
+import { howToSchema, faqPageSchema, breadcrumbSchema } from "../../../lib/schema";
+import { SITE_CONFIG } from "../../../lib/config";
+import { resolveTemplates } from "../../../lib/canonical-facts";
+
+interface GuideStep {
+  title: string;
+  content: string;
+  tips?: string[];
+}
+
+interface GuideFaq {
+  q: string;
+  a: string;
+}
 
 interface Guide {
   id: string;
@@ -15,7 +29,10 @@ interface Guide {
   category: string;
   difficulty: string;
   estimatedTime: string;
-  steps: { title: string; content: string; tips?: string[] }[];
+  steps: GuideStep[];
+  faqs?: GuideFaq[];
+  image?: string;
+  imageAlt?: string;
   tags: string[];
   lastUpdated: string;
   author: string;
@@ -40,14 +57,18 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     };
   }
 
+  const url = `https://www.sassahelphub.co.za/guides/${id}`;
   return {
     title: guide.title,
     description: guide.description,
+    alternates: { canonical: url },
     openGraph: {
       title: guide.title,
       description: guide.description,
+      url,
       type: "article",
       authors: [guide.author],
+      images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
     },
   };
 }
@@ -60,64 +81,19 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
 
   if (!guide) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": guide.title,
-    "description": guide.description,
-    "step": guide.steps.map((step, i) => ({
-      "@type": "HowToStep",
-      "position": i + 1,
-      "name": step.title,
-      "text": step.content
-    })),
-    "publisher": {
-      "@type": "Organization",
-      "name": "SASSA Help Hub",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.sassahelphub.co.za/logo.png"
-      }
-    }
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.sassahelphub.co.za"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Guides",
-        "item": "https://www.sassahelphub.co.za/guides"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": guide.title,
-        "item": `https://www.sassahelphub.co.za/guides/${guide.id}`
-      }
-    ]
-  };
-
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <Script
-        id="guide-howto-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={howToSchema(guide.title, guide.description,
+        guide.steps.map(s => ({ title: s.title, text: s.content }))
+      )} />
+      {guide.faqs && guide.faqs.length > 0 && (
+        <JsonLd data={faqPageSchema(guide.faqs)} />
+      )}
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Guides", slug: "/guides" },
+        { name: guide.title, slug: `/guides/${guide.id}` },
+      ])} />
       <Breadcrumbs className="mb-8">
         <BreadcrumbItem href="/">Home</BreadcrumbItem>
         <BreadcrumbItem href="/guides">Guides</BreadcrumbItem>
@@ -133,11 +109,24 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
               <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
                  {guide.title}
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed italic">
-                 {guide.description}
-              </p>
+                <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed italic">
+                   {resolveTemplates(guide.description)}
+                </p>
 
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-y border-gray-100 py-6">
+               {guide.image && (
+                 <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden">
+                   <img
+                     src={guide.image}
+                     alt={guide.imageAlt || guide.title}
+                     width={1200}
+                     height={400}
+                     loading="lazy"
+                     className="w-full h-full object-cover"
+                   />
+                 </div>
+               )}
+
+               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-y border-gray-100 py-6">
                  <div className="flex items-center gap-3">
                     <Avatar name="ZA" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
@@ -185,11 +174,11 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                        </div>
                        <div className="space-y-4">
                           <h3 className="text-2xl font-bold">{step.title}</h3>
-                          <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                             {step.content}
-                          </div>
+                           <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                              {resolveTemplates(step.content)}
+                           </div>
                           {step.tips && step.tips.length > 0 && (
-                             <div className="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-2xl border-l-4 border-blue-500 flex items-start gap-4">
+                              <div className="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-2xl flex items-start gap-4">
                                 <FaLightbulb className="text-blue-500 mt-1 flex-shrink-0" />
                                 <div>
                                    <p className="font-bold text-blue-900 dark:text-blue-400 mb-1">Pro Tip</p>
@@ -205,11 +194,32 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
               </div>
            </section>
 
-           {guide.relatedLinks && (
-              <section className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/10 space-y-6">
-                 <h3 className="text-xl font-bold flex items-center gap-2">
-                    <FaLink className="text-primary-gold" /> Official Resources
-                 </h3>
+            {guide.faqs && guide.faqs.length > 0 && (
+               <section className="space-y-4">
+                  <h2 className="text-3xl font-black flex items-center gap-3">
+                     <FaQuestionCircle className="text-primary-gold" /> Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-3">
+                     {guide.faqs.map((faq, fi) => (
+                       <details key={fi} className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+                         <summary className="flex items-center gap-3 p-4 cursor-pointer list-none font-bold hover:bg-gray-50 dark:hover:bg-gray-800/50 [&::-webkit-details-marker]:hidden">
+                           <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
+                           <span>{faq.q}</span>
+                         </summary>
+                         <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                           <p className="text-gray-600 dark:text-gray-400">{faq.a}</p>
+                         </div>
+                       </details>
+                     ))}
+                  </div>
+               </section>
+            )}
+
+            {guide.relatedLinks && (
+               <section className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/10 space-y-6">
+                  <h3 className="text-xl font-bold flex items-center gap-2">
+                     <FaLink className="text-primary-gold" /> Official Resources
+                  </h3>
                  <ul className="space-y-4">
                     {guide.relatedLinks.map((link, i) => (
                        <li key={i} className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">

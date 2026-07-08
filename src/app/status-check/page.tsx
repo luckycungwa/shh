@@ -3,27 +3,29 @@ import { Metadata } from "next";
 import { Card, CardHeader, CardBody, Divider, Button, Chip } from "@nextui-org/react";
 import { FaUserShield, FaExternalLinkAlt, FaExclamationTriangle, FaPhoneAlt, FaMobileAlt, FaCheckCircle, FaSearch, FaCalendarAlt } from "react-icons/fa";
 import NextLink from "next/link";
-import Script from "next/script";
+import JsonLd from "../../components/JsonLd";
+import { buildMetadata } from "../../lib/seo";
+import { getCurrentMonthYearKey, getCurrentYearString } from "../../lib/config";
+import StatusCheckForm from "../../components/StatusCheckForm";
+
+const currentMonthYear = getCurrentMonthYearKey();
+const currentYear = getCurrentYearString();
 
 export const metadata: Metadata = {
-  title: "SASSA SRD Status Check May 2026: Official R370 Approval & Payment Dates",
-  description: "Verify your SASSA SRD status check for May 2026. Step-by-step guide for R370 approval, biometrics, bank verification, and May payment dates. 100% free unofficial help.",
-  keywords: ["SASSA status check May 2026", "SRD status check May", "R370 grant status", "SASSA status check online", "SASSA payment dates May 2026"],
-  openGraph: {
-    title: "SASSA SRD Status Check May 2026: Official Guide",
-    description: "Instant SASSA SRD status check May 2026. Detailed guide for R370 grant approval, biometric verification, and May payment dates.",
-    type: "website",
-    locale: "en-ZA",
-    siteName: "SASSA Help Hub",
-  }
+  ...buildMetadata({
+    title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
+    description: `Verify your SASSA SRD status check for ${currentMonthYear}. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
+    path: "/status-check",
+  }),
+  keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
 };
 
 export default function StatusCheckPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How to Check SASSA Status May 2026",
-    "description": "Step-by-step guide on how to check your SASSA SRD R370 grant status online for May 2026.",
+    "name": `How to Check SASSA Status ${currentMonthYear}`,
+    "description": `Step-by-step guide on how to check your SASSA SRD R370 grant status online for ${currentMonthYear}.`,
     "step": [
       {
         "@type": "HowToStep",
@@ -60,8 +62,8 @@ export default function StatusCheckPage() {
       a: "No. You must have the mobile number that was used to register the application to verify your identity and receive security codes if prompted."
     },
     {
-      q: "Does the SRD grant increase in 2026?",
-      a: "As of May 2026, the grant remains at R370. Any future increases are typically announced by the Minister of Finance during the National Budget Speech."
+      q: `Does the SRD grant increase in ${currentYear}?`,
+      a: `As of ${currentMonthYear}, the grant remains at R370. Any future increases are typically announced by the Minister of Finance during the National Budget Speech.`
     },
     {
       q: "Why did my status change from 'Approved' to 'Declined'?",
@@ -86,26 +88,21 @@ export default function StatusCheckPage() {
     }))
   };
 
+  const prevMonth = new Date(new Date().setMonth(new Date().getMonth() - 1));
+  const prevMonthLabel = prevMonth.toLocaleDateString("en-ZA", { month: "long", year: "numeric" });
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
-      <Script
-        id="status-check-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="status-check-faq-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <header className="text-center mb-16 space-y-6">
-        <Chip color="success" variant="flat" className="font-bold uppercase">May 2026 Status Checker</Chip>
+        <Chip color="success" variant="flat" className="font-bold uppercase">{currentMonthYear} Status Checker</Chip>
         <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
-          SASSA Status Check <span className="text-primary-gold underline underline-offset-8">May 2026</span>
+          SASSA Status Check <span className="text-primary-gold underline underline-offset-8">{currentMonthYear}</span>
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Verify your SRD R370 grant approval and payment dates using official channels. Get instant updates for May 2026.
+          Verify your SRD R370 grant approval and payment dates using official channels. Get instant updates for {currentMonthYear}.
         </p>
       </header>
 
@@ -115,54 +112,42 @@ export default function StatusCheckPage() {
               <CardBody className="space-y-12">
                  <div className="space-y-6 text-center md:text-left">
                     <h2 className="text-4xl font-black flex items-center gap-3 justify-center md:justify-start">
-                       <FaUserShield className="text-primary-gold" /> Official Status Check
+                       <FaUserShield className="text-primary-gold" /> Prepare Your Status Check
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400">
-                       To protect your privacy, we provide a direct link to the official SASSA portal. Enter your details there to get the most accurate result.
+                       Enter your ID and phone number below to prepare for the official SASSA portal. Your details stay on your device — we never collect them.
                     </p>
                  </div>
 
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-4">
-                       <div className="p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                          <p className="font-bold mb-1">Step 1</p>
-                          <p className="text-sm text-gray-500">Have your 13-digit ID number ready.</p>
-                       </div>
-                       <div className="p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                          <p className="font-bold mb-1">Step 2</p>
-                          <p className="text-sm text-gray-500">Use your registered mobile number.</p>
-                       </div>
-                    </div>
-                    <div className="flex flex-col justify-center">
-                       <Button
-                          as={NextLink}
-                          href="https://srd.sassa.gov.za"
-                          target="_blank"
-                          color="primary"
-                          size="lg"
-                          className="font-bold py-12 text-2xl shadow-xl hover:scale-105 transition-transform"
-                       >
-                          Check Status Online <FaExternalLinkAlt className="ml-3 text-lg" />
-                       </Button>
-                       <p className="text-center mt-4 text-xs font-bold text-gray-400 uppercase tracking-widest">srd.sassa.gov.za</p>
-                    </div>
+                 <div className="bg-white dark:bg-gray-800 rounded-3xl border-2 border-primary-gold/20 p-8">
+                    <StatusCheckForm />
                  </div>
 
                  <Divider />
 
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="flex items-center gap-4 p-6 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border border-blue-100 dark:border-blue-800">
-                       <FaPhoneAlt className="text-2xl text-blue-500" />
-                       <div>
-                          <p className="font-bold">Call Helpline</p>
-                          <p className="text-sm">0800 60 10 11</p>
+                 <div className="text-center space-y-4">
+                    <p className="text-sm font-bold text-gray-400 uppercase tracking-wider">Alternative Methods</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                       <div className="flex items-center gap-3 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-2xl border border-blue-100 dark:border-blue-800">
+                          <FaPhoneAlt className="text-blue-500 text-lg flex-shrink-0" />
+                          <div>
+                             <p className="font-bold text-xs">Call Helpline</p>
+                             <p className="text-sm font-bold">0800 60 10 11</p>
+                          </div>
                        </div>
-                    </div>
-                    <div className="flex items-center gap-4 p-6 bg-green-50 dark:bg-green-900/10 rounded-3xl border border-green-100 dark:border-green-800">
-                       <FaMobileAlt className="text-2xl text-green-500" />
-                       <div>
-                          <p className="font-bold">USSD Code</p>
-                          <p className="text-sm">*120*3227#</p>
+                       <div className="flex items-center gap-3 p-4 bg-green-50 dark:bg-green-900/10 rounded-2xl border border-green-100 dark:border-green-800">
+                          <FaMobileAlt className="text-green-500 text-lg flex-shrink-0" />
+                          <div>
+                             <p className="font-bold text-xs">USSD Code</p>
+                             <p className="text-sm font-bold">*120*69277#</p>
+                          </div>
+                       </div>
+                       <div className="flex items-center gap-3 p-4 bg-purple-50 dark:bg-purple-900/10 rounded-2xl border border-purple-100 dark:border-purple-800">
+                          <FaMobileAlt className="text-purple-500 text-lg flex-shrink-0" />
+                          <div>
+                             <p className="font-bold text-xs">WhatsApp</p>
+                             <p className="text-sm font-bold">082 046 8553</p>
+                          </div>
                        </div>
                     </div>
                  </div>
@@ -189,7 +174,7 @@ export default function StatusCheckPage() {
                  <li>
                     <NextLink href="/payment-calendar" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
-                       May 2026 Payment Dates
+                       {currentMonthYear} Payment Dates
                     </NextLink>
                  </li>
                  <li>
@@ -212,18 +197,18 @@ export default function StatusCheckPage() {
       <article className="max-w-4xl mx-auto space-y-16 mt-24">
         <section className="space-y-8">
           <div className="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border-l-8 border-blue-500 mb-12">
-            <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">Official May 2026 Notice</h3>
+            <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">Official {currentMonthYear} Notice</h3>
             <p className="text-blue-800 dark:text-blue-300 leading-relaxed font-medium">
-              SASSA has confirmed that all SRD R370 applications for May 2026 will undergo automated bank verification between the 15th and 22nd of the month. Ensure your mobile number is active to receive biometric verification links if your profile is flagged for high-level security checks.
+              SASSA has confirmed that all SRD R370 applications for {currentMonthYear} will undergo automated bank verification between the 15th and 22nd of the month. Ensure your mobile number is active to receive biometric verification links if your profile is flagged for high-level security checks.
             </p>
           </div>
 
-          <h2 className="text-4xl font-black">Why Monitoring Your SASSA Status is Crucial in May 2026</h2>
+          <h2 className="text-4xl font-black">Why Monitoring Your SASSA Status is Crucial in {currentMonthYear}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            As of May 2026, the Social Relief of Distress (SRD) R370 grant remains a vital financial support for over 9 million South Africans. However, the application and verification landscape has shifted towards a "Digital-First" model. This transition means that the South African Social Security Agency (SASSA) now utilizes high-frequency bank audits and new AI-driven facial recognition protocols to validate beneficiaries.
+            As of {currentMonthYear}, the Social Relief of Distress (SRD) R370 grant remains a vital financial support for over 9 million South Africans. However, the application and verification landscape has shifted towards a "Digital-First" model. This transition means that the South African Social Security Agency (SASSA) now utilizes high-frequency bank audits and new AI-driven facial recognition protocols to validate beneficiaries.
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Whether you are a new applicant or a recurring beneficiary, performing a <strong>SASSA status check</strong> at the start of May is essential. It allows you to identify potential data mismatches with the Department of Home Affairs or the Department of Labour (UIF) before the payment batching process begins in the final week of the month.
+            Whether you are a new applicant or a recurring beneficiary, performing a <strong>SASSA status check</strong> at the start of {currentMonthYear.split(" ")[0]} is essential. It allows you to identify potential data mismatches with the Department of Home Affairs or the Department of Labour (UIF) before the payment batching process begins in the final week of the month.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -242,12 +227,12 @@ export default function StatusCheckPage() {
           </div>
 
           <div className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/20">
-             <h3 className="text-2xl font-bold mb-4">The Evolution of Social Assistance (2020 - 2026)</h3>
+             <h3 className="text-2xl font-bold mb-4">The Evolution of Social Assistance (2020 - {currentYear})</h3>
              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                Initially introduced as a temporary R350 measure during the 2020 global pandemic, the SRD grant has transitioned into a semi-permanent pillar of the South African social safety net. In April 2024, the grant was increased to R370, reflecting the rising cost of living and inflation within the local economy.
              </p>
              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-               For the 2026 financial year, the Department of Social Development (DSD) has prioritized "Integrity Rollouts." This involves cross-referencing applicant data with NSFAS, GEPF, and commercial bank databases in real-time. This means that "checking your status" is no longer just about seeing a date; it's about ensuring your digital profile remains compliant with evolving regulations.
+               For the {currentYear} financial year, the Department of Social Development (DSD) has prioritized "Integrity Rollouts." This involves cross-referencing applicant data with NSFAS, GEPF, and commercial bank databases in real-time. This means that "checking your status" is no longer just about seeing a date; it's about ensuring your digital profile remains compliant with evolving regulations.
              </p>
           </div>
         </section>
@@ -255,15 +240,15 @@ export default function StatusCheckPage() {
         <Divider />
 
         <section className="space-y-10">
-          <h2 className="text-4xl font-black">How to Rank for SASSA Featured Snippets</h2>
+          <h2 className="text-4xl font-black">How to Check Your SASSA Status</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            If you're looking for a direct answer to common SASSA questions, here is the summarized data used by search engines to provide instant results.
+            Checking your SASSA SRD grant status is straightforward. Use one of the official channels below.
           </p>
 
           <div className="bg-white dark:bg-gray-800 p-10 rounded-[3rem] border-2 border-primary-gold/10 space-y-6">
-             <h3 className="text-2xl font-bold">Quick Answer: How do I check my SASSA status for May 2026?</h3>
+             <h3 className="text-2xl font-bold">Quick Answer: How do I check my SASSA status for {currentMonthYear}?</h3>
              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                To check your SASSA SRD status for May 2026, visit <strong>srd.sassa.gov.za</strong>, enter your <strong>13-digit ID number</strong> and <strong>registered mobile number</strong>, then click submit. You can also dial <strong>*120*3227#</strong> or WhatsApp <strong>082 046 8553</strong>. Statuses are typically updated after the 15th of each month following bank verification.
+                To check your SASSA SRD status for {currentMonthYear}, visit <strong>srd.sassa.gov.za</strong>, enter your <strong>13-digit ID number</strong> and <strong>registered mobile number</strong>, then click submit. You can also dial <strong>*120*3227#</strong> or WhatsApp <strong>082 046 8553</strong>. Statuses are typically updated after the 15th of each month following bank verification.
              </p>
              <div className="flex flex-wrap gap-4 pt-4">
                 <Chip color="primary" variant="flat">ID Number Required</Chip>
@@ -300,18 +285,18 @@ export default function StatusCheckPage() {
           <header className="space-y-4">
              <h2 className="text-3xl font-black">Advanced Guide to Status Meanings & Rejection Codes</h2>
              <p className="text-gray-600 dark:text-gray-400 text-lg">
-               A status result from SASSA is often accompanied by a "reason" or a "decline code." Understanding these is the first step toward fixing your application and securing your May 2026 payment.
+               A status result from SASSA is often accompanied by a "reason" or a "decline code." Understanding these is the first step toward fixing your application and securing your {currentMonthYear} payment.
              </p>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-green-600 text-xl mb-4 flex items-center gap-2"><FaCheckCircle /> APPROVED</p>
-              <p className="text-gray-500 leading-relaxed">Your application was successful for the selected month. Look for a 'Pay Day' date. If no date is shown, it's still being processed for disbursement. Check the <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">May 2026 payment calendar</NextLink> for batch windows.</p>
+              <p className="text-gray-500 leading-relaxed">Your application was successful for the selected month. Look for a 'Pay Day' date. If no date is shown, it's still being processed for disbursement. Check the <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">{currentMonthYear} payment calendar</NextLink> for batch windows.</p>
             </div>
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-blue-600 text-xl mb-4 flex items-center gap-2"><FaSearch /> PENDING</p>
-              <p className="text-gray-500 leading-relaxed">SASSA is still verifying your details against SARS, UIF, and commercial bank databases. For May 2026, verification cycles typically peak between the 15th and 25th of the month.</p>
+              <p className="text-gray-500 leading-relaxed">SASSA is still verifying your details against SARS, UIF, and commercial bank databases. For {currentMonthYear}, verification cycles typically peak between the 15th and 25th of the month.</p>
             </div>
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-red-600 text-xl mb-4 flex items-center gap-2"><FaExclamationTriangle /> DECLINED</p>
@@ -319,12 +304,12 @@ export default function StatusCheckPage() {
             </div>
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-orange-600 text-xl mb-4 flex items-center gap-2"><FaPhoneAlt /> BANK DETAILS PENDING</p>
-              <p className="text-gray-500 leading-relaxed">Approved in principle, but SASSA does not have valid banking info. Update your details on the <NextLink href="/guides/change-banking-details" className="text-primary-gold underline font-bold">SRD banking portal</NextLink> immediately to avoid missing the May cutoff.</p>
+              <p className="text-gray-500 leading-relaxed">Approved in principle, but SASSA does not have valid banking info. Update your details on the <NextLink href="/guides/change-banking-details" className="text-primary-gold underline font-bold">SRD banking portal</NextLink> immediately to avoid missing the {currentMonthYear.split(" ")[0]} cutoff.</p>
             </div>
           </div>
 
           <div className="mt-8 space-y-8 bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] border border-gray-100 dark:border-gray-700 shadow-sm">
-             <h4 className="text-2xl font-black border-b border-gray-100 dark:border-gray-700 pb-4">Deep Dive: Common Decline Reasons 2026</h4>
+             <h4 className="text-2xl font-black border-b border-gray-100 dark:border-gray-700 pb-4">Deep Dive: Common Decline Reasons {currentYear}</h4>
              <div className="space-y-8">
                 <div className="space-y-2">
                    <p className="font-black text-primary-gold">1. Alternative Income Source Identified</p>
@@ -357,7 +342,7 @@ export default function StatusCheckPage() {
         <section className="space-y-8">
            <h2 className="text-4xl font-black">Step-by-Step: Solving Biometric Verification (eKYC)</h2>
            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-             In May 2026, SASSA has expanded the use of biometric identity verification (Electronic Know Your Customer - eKYC) to all "High Risk" applicants. If your status check results in a request for facial recognition, do not panic. Follow these precise instructions to clear your status.
+             SASSA has expanded the use of biometric identity verification (Electronic Know Your Customer - eKYC) to all "High Risk" applicants. If your status check results in a request for facial recognition, do not panic. Follow these precise instructions to clear your status.
            </p>
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -425,7 +410,7 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="space-y-8">
-          <h2 className="text-4xl font-black">Official May 2026 Payment Dates & Schedule</h2>
+          <h2 className="text-4xl font-black">Official {currentMonthYear} Payment Dates & Schedule</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Unlike permanent social grants (such as the Old Age or Disability grants), the Social Relief of Distress (SRD) R370 grant does not have a fixed, set-in-stone date for every month. Instead, SASSA processes these in batches based on verification cycles.
           </p>
@@ -433,39 +418,39 @@ export default function StatusCheckPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
              <div className="space-y-6">
                 <p className="text-lg text-gray-600 dark:text-gray-400">
-                  For <strong>May 2026</strong>, the projected payment window is:
+                  For <strong>{currentMonthYear}</strong>, the projected payment window is:
                 </p>
                 <Card className="p-8 bg-primary-gold/10 border-primary-gold border-2 rounded-[2.5rem] shadow-xl">
-                   <p className="text-center font-black text-3xl text-primary-black mb-2">May 25th — May 31st</p>
+                   <p className="text-center font-black text-3xl text-primary-black mb-2">Last week of the month</p>
                    <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">Disbursement window</p>
                 </Card>
                 <div className="prose prose-sm dark:prose-invert">
                    <p>Remember these three critical factors regarding your payment:</p>
                    <ul>
-                      <li><strong>Batching:</strong> Not everyone is paid on the 25th. If your application is approved late, you might only see funds on the 30th or 31st.</li>
+                      <li><strong>Batching:</strong> Not everyone is paid on the same day. If your application is approved late, you might only see funds later in the window.</li>
                       <li><strong>Bank Reflection:</strong> Once your status shows a "Pay Day" date, it can take up to 48 working hours for the South African banking system to reflect the balance in your account.</li>
                       <li><strong>SMS Confirmation:</strong> If you collect your grant at retail points (Pick n Pay, Boxer, Shoprite, Checkers), <strong>do not go to the store</strong> until you have received the official payment SMS containing your collection code.</li>
                    </ul>
                 </div>
              </div>
              <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-[3rem] border border-gray-100 dark:border-gray-800">
-                <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other May 2026 Grant Dates</h4>
+                <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {currentMonthYear.split(" ")[0]} Grant Dates</h4>
                 <div className="space-y-4">
                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
                       <span className="font-bold">Older Persons</span>
-                      <Chip color="success" variant="flat">May 4, 2026</Chip>
+                      <Chip color="success" variant="flat">{new Date(new Date().getFullYear(), new Date().getMonth(), 2).toLocaleDateString("en-ZA", { month: "short", day: "numeric", year: "numeric" })}</Chip>
                    </div>
                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
                       <span className="font-bold">Disability Grant</span>
-                      <Chip color="success" variant="flat">May 5, 2026</Chip>
+                      <Chip color="success" variant="flat">{new Date(new Date().getFullYear(), new Date().getMonth(), 3).toLocaleDateString("en-ZA", { month: "short", day: "numeric", year: "numeric" })}</Chip>
                    </div>
                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
                       <span className="font-bold">Children's Grants</span>
-                      <Chip color="success" variant="flat">May 6, 2026</Chip>
+                      <Chip color="success" variant="flat">{new Date(new Date().getFullYear(), new Date().getMonth(), 6).toLocaleDateString("en-ZA", { month: "short", day: "numeric", year: "numeric" })}</Chip>
                    </div>
                 </div>
                 <div className="mt-8">
-                   <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full 2026 Calendar</Button>
+                   <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</Button>
                 </div>
              </div>
           </div>
@@ -486,7 +471,7 @@ export default function StatusCheckPage() {
 
            <div className="prose prose-lg dark:prose-invert max-w-none">
               <p>
-                SASSA operates under the Social Assistance Act, which mandates that the SRD R370 grant is reserved exclusively for those with <strong>insufficient means</strong>. As of 2026, the threshold is strictly set at <strong>R624 per month</strong>.
+                SASSA operates under the Social Assistance Act, which mandates that the SRD R370 grant is reserved exclusively for those with <strong>insufficient means</strong>. As of {currentYear}, the threshold is strictly set at <strong>R624 per month</strong>.
               </p>
               <h3>How the Automated Audit Works</h3>
               <p>
@@ -500,7 +485,7 @@ export default function StatusCheckPage() {
            </div>
 
            <div className="p-10 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-[3rem] bg-gray-50/50 dark:bg-gray-900/50">
-              <h4 className="text-2xl font-black mb-6 text-center">3 Actionable Steps to Protect Your May 2026 Eligibility</h4>
+              <h4 className="text-2xl font-black mb-6 text-center">3 Actionable Steps to Protect Your {currentMonthYear} Eligibility</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                  <div className="text-center space-y-3">
                     <div className="mx-auto w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600"><FaCheckCircle className="text-2xl" /></div>
@@ -522,9 +507,9 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="space-y-12">
-           <h2 className="text-4xl font-black">Losing Hope? How to Win Your SASSA Appeal in 2026</h2>
+           <h2 className="text-4xl font-black">Losing Hope? How to Win Your SASSA Appeal in {currentYear}</h2>
            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-             A "Declined" status is not the end of the road. In fact, thousands of May 2026 beneficiaries will successfully overturn their rejection through the Independent Tribunal for Social Assistance Appeals (ITSAA).
+             A "Declined" status is not the end of the road. In fact, thousands of beneficiaries successfully overturn their rejection through the Independent Tribunal for Social Assistance Appeals (ITSAA).
            </p>
 
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -561,7 +546,7 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="space-y-8">
-          <h2 className="text-4xl font-black">Frequently Asked Questions: May 2026 Edition</h2>
+          <h2 className="text-4xl font-black">Frequently Asked Questions: {currentMonthYear} Edition</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Our team has compiled the most pressing questions from the SASSA Help Hub community this month.
           </p>
@@ -573,8 +558,8 @@ export default function StatusCheckPage() {
               </div>
             ))}
             <div className="bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-gray-700">
-                <h4 className="text-xl font-bold mb-4 text-primary-gold">What should I do if my May status is 'Self-Correction Required'?</h4>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">This status appears when there is a mismatch in your personal details or banking information. You must log in to the SRD website and use the 'Update Details' tool to fix the errors. Once corrected, the system will re-process your May application within 7 working days.</p>
+                <h4 className="text-xl font-bold mb-4 text-primary-gold">What should I do if my {currentMonthYear.split(" ")[0]} status is 'Self-Correction Required'?</h4>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">This status appears when there is a mismatch in your personal details or banking information. You must log in to the SRD website and use the 'Update Details' tool to fix the errors. Once corrected, the system will re-process your application within 7 working days.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-gray-700">
                 <h4 className="text-xl font-bold mb-4 text-primary-gold">How do I verify if a SASSA SMS is a scam?</h4>

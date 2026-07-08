@@ -8,7 +8,8 @@ import NextLink from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import { notFound } from "next/navigation";
-import Script from "next/script";
+import JsonLd from "../../../components/JsonLd";
+import { resolveTemplates } from "../../../lib/canonical-facts";
 
 interface Update {
   id: string;
@@ -41,15 +42,19 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     };
   }
 
+  const url = `https://www.sassahelphub.co.za/updates/${id}`;
   return {
     title: update.title,
     description: update.summary,
+    alternates: { canonical: url },
     openGraph: {
       title: update.title,
       description: update.summary,
+      url,
       type: "article",
       publishedTime: update.date,
       authors: ["SASSA Help Hub Team"],
+      images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
     },
   };
 }
@@ -70,7 +75,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "Article",
     "headline": update.title,
     "description": update.summary,
     "datePublished": update.date,
@@ -103,7 +108,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "News & Updates",
+        "name": "Grant Updates",
         "item": "https://www.sassahelphub.co.za/updates"
       },
       {
@@ -117,19 +122,11 @@ export default async function UpdatePage({ params }: { params: { id: string } })
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <Script
-        id="news-article-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs className="mb-8">
         <BreadcrumbItem href="/">Home</BreadcrumbItem>
-        <BreadcrumbItem href="/updates">News & Updates</BreadcrumbItem>
+        <BreadcrumbItem href="/updates">Grant Updates</BreadcrumbItem>
         <BreadcrumbItem>{update.title}</BreadcrumbItem>
       </Breadcrumbs>
 
@@ -137,7 +134,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
         <div className="lg:col-span-8 space-y-8">
            <header className="space-y-6">
               <Chip color={update.type === "alert" ? "danger" : "primary"} variant="flat" className="font-bold uppercase text-xs">
-                 {update.type}
+                  {update.type === "alert" ? "Alert" : update.type === "news" ? "Update" : update.type}
               </Chip>
               <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
                  {update.title}
@@ -182,7 +179,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
            )}
 
            <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-black prose-a:text-primary-gold prose-strong:text-gray-900 dark:prose-strong:text-white leading-relaxed prose-h2:scroll-mt-32">
-              <ReactMarkdown rehypePlugins={[rehypeSlug]}>{update.content}</ReactMarkdown>
+               <ReactMarkdown rehypePlugins={[rehypeSlug]}>{resolveTemplates(update.content)}</ReactMarkdown>
            </div>
 
            {update.faqs && update.faqs.length > 0 && (

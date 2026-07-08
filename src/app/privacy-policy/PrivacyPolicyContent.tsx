@@ -3,9 +3,10 @@
 import React from 'react';
 import { Accordion, AccordionItem, Card, CardBody } from "@nextui-org/react";
 import { FaShieldAlt, FaLock, FaCookieBite, FaUserShield, FaEnvelope } from "react-icons/fa";
+import { getCurrentMonthYearKey } from "../../lib/config";
 
 export default function PrivacyPolicyContent() {
-  const lastUpdated = "March 10, 2026";
+  const lastUpdated = getCurrentMonthYearKey();
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">

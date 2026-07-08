@@ -1,0 +1,112 @@
+{
+  "title": "SASSA SRD R370 Grant 2026: Eligibility, Payment Dates & How to Apply",
+  "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, confirmed payment dates, and what to do if your application is declined.",
+  "slug": "grants/srd-r370-grant",
+  "pillar": "grant-guide",
+  "last_updated": "2026-07-07",
+  "reviewed_by": "Themba Phakathi",
+  "author": "Themba Phakathi",
+  "sources": [
+    "https://srd.sassa.gov.za",
+    "https://www.sassa.gov.za",
+    "https://www.gov.za"
+  ],
+  "related": [
+    "/status/pending",
+    "/status/declined",
+    "/guides/appeal-guide",
+    "/guides/change-banking-details",
+    "/faq",
+    "/eligibility-check"
+  ],
+  "sections": [
+    {
+      "type": "intro",
+      "title": "What is the SRD R370 Grant?",
+      "content": "The Social Relief of Distress (SRD) grant, commonly known as the SASSA SRD R370 grant, is a temporary monthly payment from the South African government to unemployed adults who are not receiving any other form of social assistance. Originally introduced as a R350 grant during the COVID-19 pandemic in 2020, it was increased to {{srd_grant_amount}} and has become a vital lifeline for millions of South Africans. As of 2026, over 9 million people depend on this grant monthly to cover basic needs like food, transport, and essentials. The grant is paid in the last week of each month."
+    },
+    {
+      "type": "eligibility",
+      "title": "Eligibility — Who Qualifies for the SRD R370?",
+      "content": "To qualify for the SASSA SRD R370 grant in 2026, you must meet all the following requirements: <ul><li><strong>South African citizenship or legal residency:</strong> You must be a South African citizen, permanent resident, refugee, asylum seeker, or special permit holder.</li><li><strong>Age:</strong> You must be between {{srd_age_range_min}} and {{srd_age_range_max}} years old. If you are 60 or older, you qualify for the Older Persons Grant instead.</li><li><strong>Income threshold:</strong> Your monthly income must be below {{srd_income_limit}}. SASSA checks your bank accounts across all major South African banks to verify this.</li><li><strong>No other grant:</strong> You must not be receiving any other social grant, UIF payments, or NSFAS funding.</li><li><strong>Not in institutional care:</strong> You must not be living in a state-funded institution.</li></ul>"
+    },
+    {
+      "type": "text",
+      "title": "Income Limits Explained",
+      "content": "The {{srd_income_limit}} income threshold is strictly enforced. SASSA has agreements with all major South African banks (Absa, FNB, Standard Bank, Capitec, Nedbank, and others) to monitor total monthly deposits into accounts linked to your ID number. This includes: <ul><li>Salary or wages from any form of employment</li><li>Money received from family or friends</li><li>Income from informal trading or small business</li><li>Interest earned on savings</li><li>Any other regular or irregular deposits</li></ul>If the total deposits in any month exceed {{srd_income_limit}}, your application for that month will be declined."
+    },
+    {
+      "type": "documents",
+      "title": "Required Documents",
+      "content": "You need the following to apply for the SRD {{srd_grant_amount}} grant: <ul><li><strong>South African ID document</strong> — green ID book, smart ID card, or temporary ID certificate</li><li><strong>Valid South African mobile number</strong> — registered in your name (RICA'd)</li><li><strong>Proof of banking details</strong> — bank statement or a screenshot of your banking app showing account holder name and account number</li><li><strong>Proof of residence</strong> (only if requested during verification)</li><li><strong>Refugee or asylum seeker permit</strong> — if applicable</li></ul>"
+    },
+    {
+      "type": "steps",
+      "title": "Application Process — Step by Step",
+      "steps": [
+        {
+          "title": "Visit the Official SRD Portal",
+          "content": "Go to srd.sassa.gov.za on your phone or computer. This is the only official application portal. Avoid third-party websites that charge fees."
+        },
+        {
+          "title": "Enter Your ID Number",
+          "content": "Type your full 13-digit South African ID number. Double-check for typos — a single wrong digit will cause identity verification to fail."
+        },
+        {
+          "title": "Enter Your Mobile Number",
+          "content": "Use the mobile number that is registered in your name. You will receive SMS updates about your application status."
+        },
+        {
+          "title": "Provide Banking Details",
+          "content": "Enter your bank account details where you want the grant paid. You can use any South African bank account, including Capitec, FNB, Absa, Standard Bank, Nedbank, TymeBank, or Postbank."
+        },
+        {
+          "title": "Submit and Wait for Confirmation",
+          "content": "After submitting, you will receive an SMS confirmation. Your application will be processed, and you can check your status on the same portal."
+        }
+      ]
+    },
+    {
+      "type": "info",
+      "title": "Payment Dates for 2026",
+      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, in May 2026, the payment window was May 25 to May 31. Once your status shows a 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day — your money is safe in your account."
+    },
+    {
+      "type": "text",
+      "title": "Payment Methods",
+      "content": "You can receive your SRD grant through: <ul><li><strong>Bank transfer</strong> — directly into your South African bank account</li><li><strong>Postbank</strong> — collect at any Postbank branch or Post Office</li><li><strong>Retail collection</strong> — collect at Pick n Pay, Boxer, Shoprite, Checkers, or USave using the SMS code sent to your phone</li></ul>To collect at a retail store, you must receive the official payment SMS containing your collection code. Do not go to the store until you have received this SMS."
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Can I apply if I am a student?",
+          "a": "Yes, you can apply if you are a student, as long as you are not receiving NSFAS funding. However, students who are registered with NSFAS may be declined automatically."
+        },
+        {
+          "q": "Can I receive SRD if I have a part-time job?",
+          "a": "Yes, but only if your total monthly income is below {{srd_income_limit}}. If your part-time income exceeds this threshold, you will not qualify for that month."
+        },
+        {
+          "q": "What happens if I do not collect my grant?",
+          "a": "If you do not collect your grant for three consecutive months, your application may be suspended. You will need to reapply."
+        },
+        {
+          "q": "Can someone collect my grant on my behalf?",
+          "a": "Yes, but only if you have registered them as an authorized proxy with SASSA. The proxy must present their ID and a letter of authorization."
+        }
+      ]
+    },
+    {
+      "type": "references",
+      "title": "Official References",
+      "references": [
+        { "title": "SRD Grant Official Portal", "url": "https://srd.sassa.gov.za" },
+        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
+        { "title": "Department of Social Development", "url": "https://www.dsd.gov.za" },
+        { "title": "South African Government Services", "url": "https://www.gov.za" }
+      ]
+    }
+  ]
+}

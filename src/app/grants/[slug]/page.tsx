@@ -1,0 +1,244 @@
+import fs from "fs";
+import path from "path";
+import React from "react";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Card, CardBody, Chip, Divider, Link } from "@nextui-org/react";
+import { FaCheckCircle, FaExternalLinkAlt, FaQuestionCircle, FaInfoCircle } from "react-icons/fa";
+import NextLink from "next/link";
+import JsonLd from "../../../components/JsonLd";
+import EditorialFooter from "../../../components/EditorialFooter";
+import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../../lib/schema";
+import { resolveTemplates } from "../../../lib/canonical-facts";
+
+interface GrantFaq {
+  q: string;
+  a: string;
+}
+
+interface GrantStep {
+  title: string;
+  content: string;
+}
+
+interface GrantSection {
+  type: string;
+  title?: string;
+  content?: string;
+  steps?: GrantStep[];
+  faqs?: GrantFaq[];
+  references?: { title: string; url: string }[];
+}
+
+interface GrantData {
+  title: string;
+  description: string;
+  slug: string;
+  last_updated: string;
+  reviewed_by: string;
+  author: string;
+  sources: string[];
+  related: string[];
+  sections: GrantSection[];
+}
+
+export async function generateStaticParams() {
+  const grantsDir = path.join(process.cwd(), "public/data/grants");
+  const files = fs.readdirSync(grantsDir).filter((f) => f.endsWith(".json"));
+  return files.map((f) => ({ slug: f.replace(".json", "") }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  try {
+    const filePath = path.join(process.cwd(), "public/data/grants", `${params.slug}.json`);
+    const data: GrantData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const url = `https://www.sassahelphub.co.za/grants/${params.slug}`;
+    return {
+      title: data.title,
+      description: data.description,
+      alternates: { canonical: url },
+      openGraph: {
+        title: data.title,
+        description: data.description,
+        url,
+        type: "article",
+        images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
+      },
+    };
+  } catch {
+    return { title: "Grant Guide Not Found" };
+  }
+}
+
+export default function GrantGuidePage({ params }: { params: { slug: string } }) {
+  let data: GrantData;
+  try {
+    const filePath = path.join(process.cwd(), "public/data/grants", `${params.slug}.json`);
+    data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch {
+    notFound();
+  }
+
+  const allFaqs = data.sections.filter((s) => s.type === "faq" && s.faqs).flatMap((s) => s.faqs || []);
+
+  return (
+    <div className="max-w-5xl mx-auto px-6 py-12">
+      <JsonLd data={articleSchema(data.title, data.description, `/grants/${data.slug}`, data.author, data.last_updated)} />
+      {allFaqs.length > 0 && (
+        <JsonLd data={faqPageSchema(allFaqs)} />
+      )}
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Grants", slug: "/grants" },
+        { name: data.title, slug: `/grants/${data.slug}` },
+      ])} />
+
+      <nav className="text-sm text-gray-500 mb-8 flex gap-2">
+        <NextLink href="/" className="hover:text-primary-gold">Home</NextLink>
+        <span>/</span>
+        <span className="text-gray-900 dark:text-white font-medium truncate max-w-[300px]">{data.title}</span>
+      </nav>
+
+      <article className="space-y-12">
+        <header className="space-y-6">
+          <Chip color="primary" variant="flat" className="font-bold uppercase text-xs">
+            Grant Guide
+          </Chip>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+            {resolveTemplates(data.title)}
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+            {resolveTemplates(data.description)}
+          </p>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-500 border-y border-gray-100 dark:border-gray-800 py-4">
+            <span>Updated: {data.last_updated}</span>
+            <span>By: {data.author}</span>
+            <span>Sources: {data.sources.length} official references</span>
+          </div>
+        </header>
+
+        <div className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-4 rounded-2xl shadow-sm lg:hidden mb-8">
+          <p className="font-bold text-sm mb-2">On this page:</p>
+          <div className="flex flex-wrap gap-2">
+            {data.sections.filter((s) => s.title).map((s, i) => (
+              <a key={i} href={`#section-${i}`} className="text-xs font-bold text-gray-500 hover:text-primary-gold px-3 py-1 bg-gray-50 dark:bg-gray-800 rounded-full">
+                {s.title}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-8 space-y-12">
+            {data.sections.map((section, index) => {
+              switch (section.type) {
+                case "intro":
+                  return (
+                    <section key={index} id={`section-${index}`} className="scroll-mt-24">
+                      <h2 className="text-3xl font-bold mb-6">{section.title}</h2>
+                      <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-4" dangerouslySetInnerHTML={{ __html: resolveTemplates(section.content || "") }} />
+                    </section>
+                  );
+                case "eligibility":
+                case "text":
+                case "info":
+                case "documents":
+                  return (
+                    <section key={index} id={`section-${index}`} className="scroll-mt-24">
+                      <h2 className="text-3xl font-bold mb-6">{section.title}</h2>
+                      <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-4" dangerouslySetInnerHTML={{ __html: resolveTemplates(section.content || "") }} />
+                    </section>
+                  );
+                case "steps":
+                  return (
+                    <section key={index} id={`section-${index}`} className="scroll-mt-24">
+                      <h2 className="text-3xl font-bold mb-8">{section.title}</h2>
+                      <div className="space-y-8">
+                        {(section.steps || []).map((step, si) => (
+                          <div key={si} className="relative pl-12 border-l-2 border-gray-100 dark:border-gray-800 pb-6 last:pb-0">
+                            <div className="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-lg">
+                              {si + 1}
+                            </div>
+                            <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                            <p className="text-gray-700 dark:text-gray-300">{resolveTemplates(step.content)}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  );
+                case "faq":
+                  return (
+                    <section key={index} id={`section-${index}`} className="scroll-mt-24">
+                      <h2 className="text-3xl font-bold mb-8">{section.title}</h2>
+                      <div className="space-y-4">
+                        {(section.faqs || []).map((faq, fi) => (
+                          <details key={fi} className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+                            <summary className="flex items-center gap-3 p-4 cursor-pointer list-none font-bold hover:bg-gray-50 dark:hover:bg-gray-800/50 [&::-webkit-details-marker]:hidden">
+                              <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
+                              <span>{faq.q}</span>
+                            </summary>
+                            <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                              <p className="text-gray-600 dark:text-gray-400">{resolveTemplates(faq.a)}</p>
+                            </div>
+                          </details>
+                        ))}
+                      </div>
+                    </section>
+                  );
+                case "references":
+                  return (
+                    <section key={index} id={`section-${index}`} className="scroll-mt-24">
+                      <h2 className="text-3xl font-bold mb-8">{section.title}</h2>
+                      <div className="space-y-3">
+                        {(section.references || []).map((ref, ri) => (
+                          <div key={ri} className="flex items-center justify-between bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                            <span className="font-medium">{ref.title}</span>
+                            <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-primary-gold font-bold text-sm flex items-center gap-1">
+                              Visit <FaExternalLinkAlt className="text-xs" />
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </div>
+
+          <aside className="lg:col-span-4 space-y-8">
+            <div className="sticky top-24 hidden lg:block space-y-8">
+              <div className="p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800">
+                <p className="font-bold text-lg mb-4">On this page</p>
+                <div className="flex flex-col gap-3">
+                  {data.sections.filter((s) => s.title).map((s, i) => (
+                    <a key={i} href={`#section-${i}`} className="text-sm font-medium text-gray-500 hover:text-primary-gold transition-colors">
+                      {s.title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {data.related.length > 0 && (
+                <div className="p-6 border border-gray-100 dark:border-gray-800 rounded-2xl">
+                  <p className="font-bold text-lg mb-4">Related</p>
+                  <div className="flex flex-col gap-3">
+                    {data.related.map((slug, i) => (
+                      <NextLink key={i} href={slug} className="text-sm font-medium text-primary-gold hover:underline">
+                        {slug.split("/").pop()?.replace(/-/g, " ") || slug}
+                      </NextLink>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </aside>
+        </div>
+
+        <Divider />
+        <EditorialFooter lastUpdated={data.last_updated} author={data.reviewed_by} />
+      </article>
+    </div>
+  );
+}

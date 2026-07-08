@@ -15,9 +15,9 @@
         "title": "Understand the 2026 Eligibility Criteria",
         "title_zu": "Qonda Imibandela Yokufaneleka ka-2026",
         "title_xh": "Qonda iMilinganiselo yokuFaneleka ka-2026",
-        "content": "To qualify for the SRD R370 grant, you must be a South African citizen, refugee, asylum seeker, or special permit holder. Your monthly income must not exceed R624. You must not be receiving any other social grant, UIF, or NSFAS support.",
-        "content_zu": "Ukuze ufaneleke ukuthola isibonelelo se-SRD R370, kumele ube yisishayamthetho saseNingizimu Afrika, umbaleki, ofuna ukukhoseliswa, noma umnikazi wemvume ekhethekile. Imali yakho engenayo ngenyanga akumele yeqe ku-R624. Akumele ube uthola esinye isibonelelo somphakathi, i-UIF, noma uxhaso lwe-NSFAS.",
-        "content_xh": "Ukuze ufaneleke ukufumana isibonelelo se-SRD R370, kufuneka ube ngummi waseMzantsi Afrika, imbaleki, ofuna ukukhuselwa, okanye umnini wemvume ekhethekileyo. Ingeniso yakho yenyanga mayingadluli kwi-R624. Akufuneki ube ufumana nasiphi na esinye isibonelelo soluntu, i-UIF, okanye inkxaso ye-NSFAS.",
+        "content": "To qualify for the SRD {{srd_grant_amount}} grant, you must be a South African citizen, refugee, asylum seeker, or special permit holder. Your monthly income must not exceed {{srd_income_limit}}. You must not be receiving any other social grant, UIF, or NSFAS support.",
+        "content_zu": "Ukuze ufaneleke ukuthola isibonelelo se-SRD {{srd_grant_amount}}, kumele ube yisishayamthetho saseNingizimu Afrika, umbaleki, ofuna ukukhoseliswa, noma umnikazi wemvume ekhethekile. Imali yakho engenayo ngenyanga akumele yeqe ku-{{srd_income_limit}}. Akumele ube uthola esinye isibonelelo somphakathi, i-UIF, noma uxhaso lwe-NSFAS.",
+        "content_xh": "Ukuze ufaneleke ukufumana isibonelelo se-SRD {{srd_grant_amount}}, kufuneka ube ngummi waseMzantsi Afrika, imbaleki, ofuna ukukhuselwa, okanye umnini wemvume ekhethekileyo. Ingeniso yakho yenyanga mayingadluli kwi-{{srd_income_limit}}. Akufuneki ube ufumana nasiphi na esinye isibonelelo soluntu, i-UIF, okanye inkxaso ye-NSFAS.",
         "tips": [
           "The income threshold is strictly monitored via bank verification.",
           "Ensure your mobile number is active and RICA'd in your name."
@@ -62,8 +62,8 @@
     "author": "SASSA Help Hub Team",
     "relatedLinks": [
       {
-        "title": "Check SRD Status Now",
-        "url": "https://sassaaistatusupdate.co.za",
+        "title": "Check SRD Status on Official Portal",
+        "url": "https://srd.sassa.gov.za",
         "isExternal": true
       },
       {
@@ -93,7 +93,7 @@
         "content_zu": "Izizathu ezivamile zihlanganisa 'obhaliswe ku-UIF', 'obhaliswe ku-NSFAS', noma 'Omunye Umthombo Wemali'. Hlola isizathu sakho esiqondile kungosi yesimo.",
         "content_xh": "Izizathu eziqhelekileyo ziquka 'ubhalisiwe kwi-UIF', 'ubhalisiwe kwi-NSFAS', okanye 'Omunye uMthombo weNgeniso'. Jonga isizathu sakho esichanekileyo kwiphothali yemo.",
         "tips": [
-          "Use our <a href='https://sassaaistatusupdate.co.za' target='_blank'>status check tool</a> to find your decline code."
+          "Check your status on the official SRD portal at srd.sassa.gov.za to find your decline code."
         ],
         "tips_zu": [
           "Sebenzisa ithuluzi lethu lokuhlola isimo ukuze uthole ikhodi yakho yokuchithwa."
@@ -138,17 +138,17 @@
         "content": "The child must be under 18 and living with the primary caregiver. You must pass the means test—income thresholds have been adjusted for 2026.",
         "content_zu": "Ingane kumele ibe ngaphansi kweminyaka eyi-18 futhi ihlale nomnakekeli oyinhloko. Kumele uphumelele ekuhlolweni kwemali engenayo (means test) — imingcele yemali engenayo isilungiswe kabusha kuka-2026.",
         "content_xh": "Umntwana kufuneka abe ngaphantsi kweminyaka eli-18 kwaye ahlale nomkhathaleli oyintloko. Kufuneka uphumelele uvavanyo lweengeniso (means test) — imida yengeniso ilungelelaniswe ngo-2026.",
-        "tips": [
-          "Single caregiver income must be R5,700/month or less.",
-          "Married couples’ combined income must be R11,400/month or less."
+"tips": [
+          "Single caregiver income must be {{child_support_income_threshold_single}}/month or less.",
+          "Married couples' combined income must be {{child_support_income_threshold_married}}/month or less."
         ],
         "tips_zu": [
-          "Imali engenayo yomnakekeli ongashadile kumele ibe ngu-R5,700/ngenyanga noma ngaphansi.",
-          "Imali engenayo ehlanganyelwe yemibhangqwana eshadile kumele ibe ngu-R11,400/ngenyanga noma ngaphansi."
+          "Imali engenayo yomnakekeli ongashadile kumele ibe ngu-{{child_support_income_threshold_single}}/ngenyanga noma ngaphansi.",
+          "Imali engenayo ehlanganyelwe yemibhangqwana eshadile kumele ibe ngu-{{child_support_income_threshold_married}}/ngenyanga noma ngaphansi."
         ],
         "tips_xh": [
-          "Ingeniso yomkhathaleli ongatshatanga mayibe yi-R5,700 ngenyanga okanye ngaphantsi.",
-          "Ingeniso edibeneyo yesibini esitshatileyo mayibe yi-R11,400 ngenyanga okanye ngaphantsi."
+          "Ingeniso yomkhathaleli ongatshatanga mayibe yi-{{child_support_income_threshold_single}} ngenyanga okanye ngaphantsi.",
+          "Ingeniso edibeneyo yesibini esitshatileyo mayibe yi-{{child_support_income_threshold_married}} ngenyanga okanye ngaphantsi."
         ]
       }
     ],
@@ -217,5 +217,996 @@
     "tags": ["biometrics", "facial recognition", "security", "SRD grant"],
     "lastUpdated": "2026-03-05",
     "author": "Technical Desk"
+  },
+  {
+    "id": "guide-means-test",
+    "title": "A Comprehensive Guide to the SASSA Means Test",
+    "description": "The SASSA means test is a crucial part of the grant application process. This guide will help you understand what it is, how it works, and whether you qualify.",
+    "category": "Eligibility",
+    "difficulty": "intermediate",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "What is the Means Test?",
+        "content": "The means test is an assessment used by SASSA to determine if your income and assets are below a certain limit. This limit is called the 'threshold'. If your means are above the threshold, you will not qualify for a grant. The means test ensures that only those who are truly in need receive financial assistance from the government.",
+        "tips": [
+          "The means test is different for each type of grant.",
+          "Your spouse's income and assets may also be considered."
+        ]
+      },
+      {
+        "title": "Income Thresholds",
+        "content": "The income threshold is the maximum amount of money you can earn per month and still qualify for a grant. As of 2026, the income thresholds for the most common grants are: <ul><li><strong>Old Age Grant:</strong> {{old_age_income_threshold_single}} per month for a single person, or {{old_age_income_threshold_married}} combined for a married couple.</li><li><strong>Disability Grant:</strong> {{disability_income_threshold_single}} per month for a single person, or {{disability_income_threshold_married}} combined for a married couple.</li><li><strong>Child Support Grant:</strong> {{child_support_income_threshold_single}} per month for a single caregiver, or {{child_support_income_threshold_married}} combined for a married couple.</li></ul>",
+        "tips": [
+          "Income includes salaries, wages, pensions, and any other regular payments you receive.",
+          "The SRD grant has a much lower income threshold of R624 per month."
+        ]
+      },
+      {
+        "title": "Asset Thresholds",
+        "content": "The asset threshold is the maximum value of assets you can own and still qualify for a grant. Assets include things like property, vehicles, and investments. As of 2026, the asset thresholds are: <ul><li><strong>Old Age Grant:</strong> {{old_age_asset_threshold_single}} for a single person, or {{old_age_asset_threshold_married}} for a married couple.</li><li><strong>Disability Grant:</strong> {{disability_asset_threshold_single}} for a single person, or {{disability_asset_threshold_married}} for a married couple.</li></ul>",
+        "tips": [
+          "The value of the home you live in is not included in the asset test.",
+          "Child Support Grant does not have an asset test."
+        ]
+      }
+    ],
+    "tags": ["means test", "eligibility", "income", "assets", "thresholds"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi"
+  },
+  {
+    "id": "guide-reinstate-grant",
+    "title": "How to Reinstate a Lapsed or Suspended Grant",
+    "description": "If your SASSA grant has been suspended or has lapsed, this guide walks you through the steps to get it reinstated and recover back payments.",
+    "category": "Grant Management",
+    "difficulty": "intermediate",
+    "estimatedTime": "20 minutes",
+    "steps": [
+      {
+        "title": "Why was my grant suspended?",
+        "content": "A grant can be suspended for several reasons, including: <ul><li>A change in your financial circumstances.</li><li>Failure to collect the grant for three consecutive months.</li><li>You were admitted to a state institution for more than three months.</li><li>You are no longer eligible for the grant.</li></ul>",
+        "tips": [
+          "SASSA should send you a letter explaining why your grant was suspended.",
+          "You can also check your status online or by calling the SASSA helpline."
+        ]
+      },
+      {
+        "title": "How to apply for restoration",
+        "content": "To have your grant reinstated, you must apply for restoration within 90 days of the suspension. You will need to visit your nearest SASSA office and bring the following documents: <ul><li>Your 13-digit bar-coded ID.</li><li>Proof of your current address.</li><li>Any documents that prove you are still eligible for the grant (e.g., a recent payslip, a doctor's letter).</li></ul>",
+        "tips": [
+          "There is no fee to apply for restoration.",
+          "If you are too sick to visit a SASSA office, you can have someone apply on your behalf."
+        ]
+      },
+      {
+        "title": "What happens next?",
+        "content": "SASSA will review your application for restoration. If your application is successful, your grant will be reinstated and you will receive back payments from the date it was suspended. If your application is denied, you have the right to appeal the decision.",
+        "tips": [
+          "The restoration process can take up to three months.",
+          "Keep your receipt as proof of your application."
+        ]
+      }
+    ],
+    "tags": ["reinstate", "lapsed grant", "suspended grant", "grant restoration"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi"
+  },
+  {
+    "id": "guide-report-fraud",
+    "title": "Understanding and Reporting SASSA Fraud",
+    "description": "SASSA fraud affects everyone. Learn how to identify, prevent, and report grant-related fraud to protect yourself and your community.",
+    "category": "Scam Alert",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "steps": [
+      {
+        "title": "What is SASSA fraud?",
+        "content": "SASSA fraud is any act that is intended to deceive SASSA into paying a grant to someone who is not entitled to it. This includes: <ul><li>Applying for a grant with false information.</li><li>Not telling SASSA about changes in your circumstances.</li><li>Someone else using your SASSA card without your permission.</li><li>Moneylenders taking your SASSA card as security for a loan.</li></ul>",
+        "tips": [
+          "If you are not sure if something is fraud, it is better to report it.",
+          "You can report fraud anonymously."
+        ]
+      },
+      {
+        "title": "How to report fraud",
+        "content": "If you suspect that someone is committing SASSA fraud, you should report it immediately. You can report fraud in any of the following ways: <ul><li>Call the SASSA toll-free fraud hotline on 0800 60 10 11.</li><li>Report it to your nearest police station.</li><li>Report it to your nearest SASSA office.</li></ul>",
+        "tips": [
+          "Provide as much information as possible when you report fraud.",
+          "You do not have to give your name when you report fraud."
+        ]
+      }
+    ],
+    "tags": ["fraud", "scam alert", "reporting", "crime prevention"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi"
+  },
+  {
+    "id": "lost-phone-number",
+    "title": "Lost or Changed Your SASSA Phone Number? How to Update It in 2026",
+    "description": "If you lost access to the phone number registered with SASSA, you cannot check your status, receive OTPs, or change banking details. This guide shows you how to update your number.",
+    "category": "Account Management",
+    "difficulty": "intermediate",
+    "estimatedTime": "2 to 7 days",
+    "image": "https://images.unsplash.com/photo-1598965402089-897ce52e4fd4?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Person holding a smartphone with a lost SIM card next to it",
+    "steps": [
+      {
+        "title": "Understand Why a Lost Number Blocks Your Grant",
+        "content": "Your SASSA SRD account is linked to the cellphone number you used when applying. Every time you log into the SRD portal, SASSA sends a one-time PIN (OTP) via SMS to that number. If you lost the number, you cannot log in. You also cannot change your banking details, submit an appeal, or check your status online. This is the most common reason people get stuck with a 'Bank Details Pending' status and cannot fix it.",
+        "tips": [
+          "SASSA will not send OTPs to a new number automatically — you must request the change.",
+          "If you still have your old SIM card but no network, try inserting it into another phone to receive OTPs."
+        ]
+      },
+      {
+        "title": "Visit Your Nearest SASSA Office in Person",
+        "content": "There is currently no online method to change your registered phone number for the SRD grant. You must visit a SASSA office in person. Bring your original 13-digit South African ID book or smart ID card. If you have a SIM swap confirmation from your mobile network provider, bring that as well. Explain to the SASSA officer that you need your phone number updated on the SRD system.",
+        "tips": [
+          "Go early in the morning to avoid long queues (offices open at 08:00).",
+          "Bring a pen — you may need to fill out a change of details form."
+        ]
+      },
+      {
+        "title": "Complete the Change of Contact Details Form",
+        "content": "The SASSA officer will give you a form to fill in. You need to write your full name, ID number, old phone number (if you remember it), and the new cellphone number you want to register. The new number must be a valid South African number that is RICA-compliant and registered in your name. Keep a copy of the completed form with the SASSA stamp as proof of your visit.",
+        "tips": [
+          "Write clearly and check your new number three times before submitting.",
+          "Ask the officer for a case reference number so you can follow up."
+        ]
+      },
+      {
+        "title": "Wait for the Update to Be Processed",
+        "content": "After submitting the form, SASSA takes 3 to 7 working days to update your phone number in the system. Once the update is complete, you will receive a confirmation SMS on your new number. You can then log into the SRD portal using your new number. If after 10 working days you still have not received the SMS, call the SASSA helpline at 0800 60 10 11.",
+        "tips": [
+          "Do not ask SASSA to update a number that is not RICA-registered in your name.",
+          "If you urgently need to check your status, use the WhatsApp line (082 046 8553) — it uses your WhatsApp number, not your SASSA registered number."
+        ]
+      },
+      {
+        "title": "Update Your Number on the Moya App (Alternative)",
+        "content": "If you have access to the Moya App, you can sometimes update your contact information through its SASSA service channel. Open Moya, find the SASSA SRD section, and look for 'Update Profile Details'. However, this does not always work — the in-person SASSA office visit remains the most reliable method for a phone number change.",
+        "tips": [
+          "The Moya App method works only if you are already logged into your SASSA profile on another device.",
+          "If you lost your phone entirely, the SASSA office visit is your only option."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I change my SASSA phone number online?",
+        "a": "No. There is no online self-service option to change your registered phone number for the SRD grant. You must visit a SASSA office in person with your ID document."
+      },
+      {
+        "q": "How long does it take for SASSA to update my phone number?",
+        "a": "SASSA typically processes phone number changes within 3 to 7 working days. You will receive an SMS confirmation on your new number once the update is complete."
+      }
+    ],
+    "tags": ["lost phone number", "change phone number", "SASSA phone update", "SRD account"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
+    ]
+  },
+  {
+    "id": "moya-app-sassa",
+    "title": "How to Use the Moya App for SASSA SRD: Status Checks & Banking Updates",
+    "description": "The Moya App is a free data-free messaging platform that now offers SASSA SRD services. Learn how to check your status, update banking details, and appeal using Moya.",
+    "category": "Technology",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Smartphone displaying app icons including a messaging app",
+    "steps": [
+      {
+        "title": "Download and Install the Moya App",
+        "content": "Go to the Google Play Store (Android) or Apple App Store (iOS) and search for 'Moya App'. The app is developed by biNu and is free to download. Moya offers free data for certain services, including SASSA SRD, meaning you can check your status without using your mobile data. This makes it especially useful for users who cannot afford data or have run out of airtime.",
+        "tips": [
+          "The Moya App is about 15MB to download — use WiFi if you are worried about data costs.",
+          "Make sure your phone number is the same one you registered with SASSA."
+        ]
+      },
+      {
+        "title": "Find the SASSA SRD Section",
+        "content": "Once installed, open Moya and look for the 'SASSA SRD' or 'SRD Grant' section on the home screen or in the services menu. The app has a simple, icon-based interface. Tap on the SASSA SRD icon to open the service. If you do not see it immediately, use the search bar at the top and type 'SASSA'.",
+        "tips": [
+          "The Moya App interface may change with updates — the SASSA section is usually near the top.",
+          "Do not use any other app claiming to offer SASSA services — only Moya is officially partnered."
+        ]
+      },
+      {
+        "title": "Check Your SRD Grant Status",
+        "content": "Inside the SASSA section, select 'Check Status'. You will be prompted to enter your 13-digit South African ID number. After entering it, your current SRD status for the most recent month will be displayed. The app shows the same information as the official srd.sassa.gov.za portal but in a simpler, mobile-friendly format.",
+        "tips": [
+          "The Moya App shows only the latest month's status — use the SRD portal for your full history.",
+          "You do not need to re-enter your ID every time — Moya saves it securely."
+        ]
+      },
+      {
+        "title": "Update Your Banking Details via Moya",
+        "content": "A key feature of the Moya App is the ability to update your SASSA banking details directly. Select 'Update Banking Details' from the menu. Enter your new bank name, account number, and branch code. The account must be registered in your name. Submit the update and wait for confirmation. This is often faster than using the SRD portal for banking changes.",
+        "tips": [
+          "Double-check your account number — a single wrong digit will cause payment failures.",
+          "Bank updates via Moya usually take 3 to 5 working days to be verified."
+        ]
+      },
+      {
+        "title": "Submit an Appeal Through Moya",
+        "content": "You can also submit a SASSA SRD appeal using the Moya App. Go to the 'Appeals' section in the SASSA menu. Select the month you want to appeal, choose the reason for your decline, and write a short explanation. The app submits your appeal directly to the Independent Tribunal (ITSAA). You will receive a reference number for tracking.",
+        "tips": [
+          "Keep your reference number — you need it to check your appeal status.",
+          "The Moya App appeal process is identical to using the ITSAA website."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is the Moya App safe for SASSA SRD services?",
+        "a": "Yes. The Moya App is officially partnered with SASSA and the Department of Social Development. Your ID number and personal details are encrypted and protected. Always download Moya from the official Google Play or Apple App Store."
+      },
+      {
+        "q": "Do I need internet data for the Moya App SASSA services?",
+        "a": "No. Moya offers free data for SASSA SRD services. You can check your status, update banking details, and submit appeals without using your mobile data allowance."
+      }
+    ],
+    "tags": ["moya app", "moya sassa", "free data sassa", "sassa status check app"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "Download Moya App", "url": "https://moya.app", "isExternal": true },
+      { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "ussd-codes",
+    "title": "SASSA USSD Codes: Check Your Grant Status Without Internet (2026)",
+    "description": "You do not need a smartphone or data to check your SASSA status. Use these free USSD codes from any cellphone to check your SRD R370 grant, balance, and payment status.",
+    "category": "Technology",
+    "difficulty": "beginner",
+    "estimatedTime": "2 minutes",
+    "image": "https://images.unsplash.com/photo-1589496931914-67f415f2e85f?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Old-style mobile phone keypad showing keypad dialing",
+    "steps": [
+      {
+        "title": "What Are USSD Codes and Why Use Them?",
+        "content": "USSD (Unstructured Supplementary Service Data) codes work like instant commands for your phone. You dial a short code, press send, and information appears on your screen within seconds. Unlike apps or websites, USSD does not need internet data. It works on any phone — including old Nokia and feature phones — on any South African mobile network. SASSA provides several USSD codes for checking grant status, application status, and payment balances.",
+        "tips": [
+          "USSD codes are free from all major South African networks (Vodacom, MTN, Cell C, Telkom).",
+          "You do not need airtime or data to use SASSA USSD codes."
+        ]
+      },
+      {
+        "title": "Use *120*3210# for SASSA Grant Status (Postbank)",
+        "content": "Dial *120*3210# on your cellphone and press the call button. This code connects you to the Postbank SASSA balance check service. You will see a menu with options. Select the option for 'SASSA Grant Balance' or 'SASSA Status Check'. Enter your 13-digit ID number when prompted. The system will display your current grant status and any available balance. This code is best for checking whether a payment has been made to your Postbank account.",
+        "tips": [
+          "Write down your balance after the session ends — USSD sessions time out after 60 seconds.",
+          "This code works best for Postbank/SASSA Gold Card holders."
+        ]
+      },
+      {
+        "title": "Use *120*69277# for SRD R370 Status Check",
+        "content": "Dial *120*69277# and press call. This is the dedicated USSD code for SRD R370 grant status checks. After dialing, you will see a menu. Select 'Check Status'. Enter your 13-digit ID number when prompted. The system will tell you your status for the current month — Approved, Pending, Declined, or other statuses. This code accesses the same database as the online SRD portal.",
+        "tips": [
+          "This code is specifically for the SRD R370 grant, not for permanent grants.",
+          "Check your status after the 15th of each month for the most accurate result."
+        ]
+      },
+      {
+        "title": "Use *134*7737# to Apply for SRD (Limited Use)",
+        "content": "Dial *134*7737# to access the SASSA application menu. This code was originally designed for applying to the SRD grant via USSD. It can still be used to check your application status and in some cases to reapply. However, the full application process is better done online at srd.sassa.gov.za because the USSD version asks for fewer details and may result in incomplete applications.",
+        "tips": [
+          "If you applied via USSD, always verify your application status on the SRD portal later.",
+          "The USSD application method does not work for all phone numbers — use the portal if you can."
+        ]
+      },
+      {
+        "title": "Troubleshooting USSD Issues",
+        "content": "If a USSD code does not work, try the following: ensure you are dialing exactly the right number (including the asterisks and hash), check that you have network signal, try switching your phone off and on, or insert your SIM into a different phone. If the code still does not work, call the SASSA helpline at 0800 60 10 11 to confirm which code works for your situation. Some networks may block certain USSD codes — ask your network provider to unblock them.",
+        "tips": [
+          "Do not add any extra numbers before or after the USSD code — it must be exactly as shown.",
+          "If you get a 'Service Not Available' message, try again in an hour."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are SASSA USSD codes free?",
+        "a": "Yes. All SASSA USSD codes (*120*3210#, *120*69277#, *134*7737#) are free from Vodacom, MTN, Cell C, and Telkom. You do not need airtime or data."
+      },
+      {
+        "q": "Which USSD code shows my SRD payment date?",
+        "a": "*120*69277# shows your current SRD status, including whether you are approved and any available payment information. For specific payment dates, check the SRD portal or your SMS notifications."
+      }
+    ],
+    "tags": ["ussd codes", "sassa ussd", "check status without internet", "*120*3210#", "*120*69277#"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
+    ]
+  },
+  {
+    "id": "sassa-whatsapp",
+    "title": "SASSA WhatsApp Number 082 046 8553: Complete Guide 2026",
+    "description": "SASSA offers a 24/7 WhatsApp service for SRD grant applications, status checks, and appeals. Learn exactly how to use the SASSA WhatsApp line step by step.",
+    "category": "Technology",
+    "difficulty": "beginner",
+    "estimatedTime": "3 minutes",
+    "image": "https://images.unsplash.com/photo-1611605698335-8b156f7f3b8a?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "WhatsApp chat interface on a smartphone screen",
+    "steps": [
+      {
+        "title": "Save the Official SASSA WhatsApp Number",
+        "content": "Open your phone contacts and save the number 082 046 8553 as 'SASSA SRD'. This is the ONLY official SASSA WhatsApp number. There are many fake SASSA WhatsApp numbers in circulation — always verify you are using 082 046 8553. SASSA will never ask you to pay for any WhatsApp service. If someone contacts you pretending to be SASSA on WhatsApp asking for money, block and report them.",
+        "tips": [
+          "Do not search Google for 'SASSA WhatsApp number' — you may find scam numbers.",
+          "The SASSA WhatsApp number is 082 046 8553, not any other number."
+        ]
+      },
+      {
+        "title": "Send a Message to Start the Chatbot",
+        "content": "Open WhatsApp, find the SASSA contact you saved, and type 'Hi' or 'Hello'. Send the message. The SASSA chatbot will automatically reply within seconds. The chatbot is automated, not a human. It will show you a menu of options, including: Check Status, Apply for SRD Grant, Update Banking Details, and Appeal a Decision. Select the option you need by replying with the corresponding number.",
+        "tips": [
+          "Reply with the number shown in the menu (e.g., type '1' for Check Status).",
+          "The chatbot can be slow during peak hours — wait 30 seconds for each reply."
+        ]
+      },
+      {
+        "title": "Check Your SRD Status via WhatsApp",
+        "content": "Select 'Check Status' from the menu. The chatbot will ask for your 13-digit South African ID number. Type it and send. The system will look up your SRD grant status and reply with your current status for the most recent month. The reply will show whether you are Approved, Pending, or Declined. If you are approved, it may also show your payment date.",
+        "tips": [
+          "Type only numbers — do not add spaces or dashes to your ID number.",
+          "The WhatsApp status check uses the same database as the SRD portal."
+        ]
+      },
+      {
+        "title": "Update Banking Details via WhatsApp",
+        "content": "Select 'Update Banking Details' from the chatbot menu. The chatbot will ask for your ID number and then your new banking details. You need to provide your bank name, account number, and branch code. The chatbot will confirm the details before submitting. SASSA will verify the new account within 3 to 7 working days.",
+        "tips": [
+          "The bank account must be in your name — SASSA does not pay into third-party accounts.",
+          "Take a screenshot of the confirmation message as proof."
+        ]
+      },
+      {
+        "title": "Submit an Appeal via WhatsApp",
+        "content": "Select the 'Appeal' option from the chatbot menu. You will be asked for your ID number and the month you want to appeal. The chatbot will ask you to choose the reason for the decline and provide a brief explanation. Your appeal is submitted directly to the Independent Tribunal (ITSAA). You will receive a reference number — write it down.",
+        "tips": [
+          "You can appeal one month at a time — repeat the process for each declined month.",
+          "Keep your reference number to check the appeal status later."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is the SASSA WhatsApp service available 24/7?",
+        "a": "Yes, the SASSA WhatsApp chatbot operates 24 hours a day, 7 days a week. However, if your query requires human assistance, you can only reach an agent during business hours (Monday to Friday, 08:00 to 16:00)."
+      },
+      {
+        "q": "Can I apply for the SRD grant via WhatsApp?",
+        "a": "Yes. You can submit a new SRD application through the SASSA WhatsApp chatbot. Select 'Apply for SRD' from the menu and follow the prompts. The application uses the same system as the online portal."
+      }
+    ],
+    "tags": ["sassa whatsapp", "whatsapp sassa", "082 046 8553", "sassa chatbot"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "SASSA WhatsApp Line", "url": "https://wa.me/27820468553", "isExternal": true },
+      { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "grant-amounts-history",
+    "title": "SASSA Grant Amounts 2020–2026: Complete History & Annual Increases",
+    "description": "See how every SASSA grant has changed from 2020 to 2026. Complete table of Old Age, Disability, Child Support, Foster Care, and SRD grant amounts year by year.",
+    "category": "Reference",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Bar chart showing financial growth over time",
+    "steps": [
+      {
+        "title": "SRD R370 Grant Amount History (2020–2026)",
+        "content": "The SRD grant started in May 2020 at R350 per month during the COVID-19 lockdown. It remained at R350 for four years. In April 2024, the grant increased to R370. It has stayed at R370 through 2025 and 2026. The 2026 Budget confirmed the grant continues until 31 March 2027 at R370. A planned transition to a Basic Income Support (BIS) grant may happen after March 2027, but no amount has been confirmed.",
+        "tips": [
+          "The SRD is the only SASSA grant that has not increased since 2024.",
+          "Government spent R36.4 billion on the SRD grant in the 2026/27 financial year."
+        ]
+      },
+      {
+        "title": "Old Age Grant Amount History",
+        "content": "The Old Age Grant (also called the SASSA pension) has increased every year. In 2020, the maximum amount was R1,860 per month (60-74 years) and R1,880 (75+). By 2024, it had risen to R2,180 (60-74) and R2,200 (75+). In April 2026, the grant increased to R2,400 (60-74) and R2,420 (75+). The 75+ top-up has been R20 above the standard rate since 2020.",
+        "tips": [
+          "The Old Age Grant increased by R85 in 2026 — one of the largest annual increases.",
+          "If you turned 75 during the year, your grant automatically increases."
+        ]
+      },
+      {
+        "title": "Disability Grant Amount History",
+        "content": "The Disability Grant has matched the Old Age Grant amount since 2020. It was R1,860 in 2020 and increased to R2,400 in April 2026. The grant is paid at the same rate regardless of age. Unlike Old Age, there is no higher rate for older recipients. The grant is reviewed every 6 to 12 months to confirm the disability condition persists.",
+        "tips": [
+          "The Disability Grant amount is identical to the Old Age Grant (60-74 rate).",
+          "You can receive both the Disability Grant and a caregiver allowance in some cases."
+        ]
+      },
+      {
+        "title": "Child Support Grant Amount History",
+        "content": "The Child Support Grant (CSG) was R460 per month in 2020. It increased to R530 in 2024, then R560 in 2025, and reached R580 in April 2026. A R280 top-up is available for orphaned children living with relatives. The CSG is paid to the primary caregiver, not necessarily the biological parent. It covers children under 18 who meet the means test.",
+        "tips": [
+          "The CSG increased by R20 in 2026 — smaller than the Old Age increase.",
+          "The R280 top-up does not count toward the means test income threshold."
+        ]
+      },
+      {
+        "title": "Foster Child Grant Amount History",
+        "content": "The Foster Child Grant was R1,070 per month in 2020. It increased to R1,250 in 2024, then R1,290 in April 2026. This grant is paid for children placed in foster care by a children's court. Unlike the Child Support Grant which continues until age 18, the Foster Child Grant can continue until age 21 if the child is still in education or training.",
+        "tips": [
+          "Foster Child Grant increased by R40 in 2026.",
+          "This grant is separate from and cannot be combined with the Child Support Grant."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "When do SASSA grant increases take effect?",
+        "a": "SASSA grant increases are announced in the national Budget (usually February) and take effect on 1 April each year. The SRD grant has not increased since April 2024."
+      },
+      {
+        "q": "Will the SRD R370 grant increase in 2026?",
+        "a": "No. The SRD grant remains at R370 throughout 2026. The 2026 Budget confirmed no increase for the SRD, while permanent grants received a 3.6% increase."
+      }
+    ],
+    "tags": ["sassa grant amounts", "grant history", "sassa increases", "old age grant amount", "child support grant"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "National Treasury Budget", "url": "https://www.treasury.gov.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "stokvel-e-wallet",
+    "title": "Stokvel Payouts & e-Wallet Transfers: Why They Cause SASSA SRD Declines",
+    "description": "Thousands of SRD applications are declined because stokvel payouts and e-wallet transfers are counted as income. Learn how to prevent and fix this.",
+    "category": "Eligibility",
+    "difficulty": "intermediate",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Group of hands contributing money to a central pile representing a stokvel",
+    "steps": [
+      {
+        "title": "Understand How SASSA Detects Income",
+        "content": "Every month, SASSA's automated system scans your bank accounts for deposits. The system looks at all money coming into your account, regardless of where it comes from or why it was sent. If your total deposits in a calendar month exceed R624, your SRD application will be declined for that month. The system does not distinguish between salary, gifts, stokvel payouts, e-wallet transfers, or refunds — any deposit counts as income.",
+        "tips": [
+          "SASSA scans all bank accounts linked to your ID number, not just one account.",
+          "Even a once-off deposit of R50 over the limit can trigger a decline."
+        ]
+      },
+      {
+        "title": "Why Stokvel Payouts Trigger Declines",
+        "content": "A stokvel is a community savings group where members contribute monthly and receive a lump sum payout in rotation. SASSA's system sees this payout as 'income' because it appears as a deposit in your bank account. A single stokvel payout of R3,000 or R5,000 will push your monthly total well over the R624 threshold. The system has no way of knowing it is a savings payout, not a salary. This is one of the most under-reported causes of SRD declines.",
+        "tips": [
+          "Ask your stokvel to pay you in cash rather than bank transfer during months you need SRD.",
+          "If you received a stokvel payout, appeal and explain it was a savings withdrawal."
+        ]
+      },
+      {
+        "title": "Why e-Wallet Transfers Trigger Declines",
+        "content": "e-Wallet transfers (FNB eWallet, Capitec CashSend, Standard Bank InstantMoney) are treated as deposits by SASSA's system. If a family member sends you R700 via eWallet and you already have R200 in other deposits, your total for the month is R900 — exceeding R624 and causing a decline. The system cannot distinguish between 'family support' and 'income'.",
+        "tips": [
+          "Ask family to send money via cash instead of e-Wallet during grant months.",
+          "Set up a dedicated savings account with no deposits from other people."
+        ]
+      },
+      {
+        "title": "How to Appeal a Stokvel or e-Wallet Decline",
+        "content": "Go to srd-appeals.dsd.gov.za and select the month that was declined. Choose 'Income Source Detected' as the reason. In your explanation, state clearly: 'This deposit was not income. It was a stokvel savings payout from [group name].' or 'This was a once-off family e-wallet transfer, not regular income.' Attach a bank statement showing the deposit and a letter from your stokvel group explaining the payout structure (if applicable).",
+        "tips": [
+          "Be specific about the date and amount of the deposit.",
+          "If possible, get a written statement from your stokvel members confirming it was savings."
+        ]
+      },
+      {
+        "title": "Prevent Future Declines from Stokvel/e-Wallet",
+        "content": "The safest way to avoid this problem is to isolate your SRD income. Open a separate bank account that receives ONLY your SRD grant. Do not give this account number to anyone. Use a different account (or cash) for stokvel contributions, family transfers, and other financial activities. If this is not possible, ask people to send you money via cash rather than electronic transfer during the months you are receiving SRD.",
+        "tips": [
+          "Many banks offer free zero-balance savings accounts — use one exclusively for SRD.",
+          "Avoid having more than one bank account active during SRD assessment months."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does SASSA count stokvel payouts as income?",
+        "a": "Yes. SASSA's automated system counts any deposit into your bank account as income, including stokvel payouts, e-wallet transfers, and family gifts. You must appeal if your SRD was declined due to a non-income deposit."
+      },
+      {
+        "q": "Can I receive both stokvel income and SRD grant?",
+        "a": "Only if your total monthly deposits in your bank account remain below R624. If your stokvel payout pushes you over R624, you will be declined for that month. Consider receiving stokvel payouts in cash to avoid this."
+      }
+    ],
+    "tags": ["stokvel", "e-wallet", "srd declined", "income source detected", "bank deposits"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "Submit SRD Appeal", "url": "https://srd-appeals.dsd.gov.za", "isExternal": true },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
+    ]
+  },
+  {
+    "id": "appeal-timeline",
+    "title": "How Long Does a SASSA Appeal Take? Full 2026 Timeline & Tracking Guide",
+    "description": "SASSA SRD appeals take 60 to 90 days. This guide explains the full process, what happens at each stage, how to check your appeal status, and what to do if it is taking too long.",
+    "category": "Appeals",
+    "difficulty": "intermediate",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Calendar with papers and a pen showing a timeline",
+    "steps": [
+      {
+        "title": "Submit Your Appeal (Day 0)",
+        "content": "The appeal process starts when you submit your appeal on the ITSAA portal at srd-appeals.dsd.gov.za. You can also appeal via the SASSA WhatsApp line or Moya App. Your appeal must be submitted within 90 days of the decline. After submission, you will receive a reference number. Write this down — you need it to track your appeal. One appeal per month, one month at a time.",
+        "tips": [
+          "Submit your appeal as early as possible — do not wait until the 90-day deadline.",
+          "Take a screenshot of the confirmation page showing your reference number."
+        ]
+      },
+      {
+        "title": "Acknowledgment Receipt (Day 1–3)",
+        "content": "Within 1 to 3 working days, you should receive an SMS or email confirming that the Independent Tribunal for Social Assistance Appeals (ITSAA) has received your appeal. This acknowledgment includes your appeal reference number. If you do not receive this within 5 days, contact the SASSA helpline to confirm your appeal was logged correctly.",
+        "tips": [
+          "The acknowledgment SMS comes from ITSAA, not from SASSA.",
+          "If you changed your phone number, the SMS will go to your old number — check the portal instead."
+        ]
+      },
+      {
+        "title": "Case Assignment & Review (Day 7–30)",
+        "content": "Your appeal is assigned to an independent tribunal member. The tribunal member reviews: your original application, SASSA's reason for decline, and any evidence you submitted with your appeal. The tribunal may request additional information from SASSA. During this period, your appeal status on the ITSAA portal will show as 'Appeal Pending'. No action is needed from you — you are waiting for the tribunal's decision.",
+        "tips": [
+          "Do not submit a second appeal during this period — it slows down the process.",
+          "The tribunal is independent of SASSA, so they can overrule SASSA's decision."
+        ]
+      },
+      {
+        "title": "Decision Issued (Day 30–60)",
+        "content": "The tribunal makes a decision: Appeal Approved or Appeal Declined. If approved, ITSAA notifies SASSA to process payment. If declined, the letter explains why. You will receive an SMS with the outcome. You can also check the ITSAA portal using your reference number. If your appeal is approved, SASSA will pay you for the declined month within 7 to 14 working days.",
+        "tips": [
+          "An approved appeal means you receive back pay for that specific declined month.",
+          "If your appeal is declined, you can request reasons in writing from ITSAA."
+        ]
+      },
+      {
+        "title": "What If Your Appeal Exceeds 90 Days?",
+        "content": "If your appeal has been pending for more than 90 days, you can escalate. Call the SASSA helpline at 0800 60 10 11 and ask for a status update on your appeal. You can also contact the Department of Social Development directly at 012 312 7726. If the delay continues, visit your nearest SASSA office with your reference number and ask them to follow up with ITSAA.",
+        "tips": [
+          "Keep a log of every call — note the date, time, and who you spoke to.",
+          "Legal Aid South Africa (0800 110 110) can assist if your appeal is unreasonably delayed."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why is my SASSA appeal taking more than 90 days?",
+        "a": "High volumes of appeals (over 1.2 million applications were declined in early 2026) cause delays. The tribunal processes appeals in order of receipt. If yours is taking longer, call 0800 60 10 11 and ask for a status update."
+      },
+      {
+        "q": "Can I check my SASSA appeal status online?",
+        "a": "Yes. Go to srd-appeals.dsd.gov.za, enter your ID number and reference number, and you will see whether your appeal is Pending, Approved, or Declined."
+      }
+    ],
+    "tags": ["sassa appeal timeline", "appeal waiting time", "ITSAA", "srd appeal pending", "appeal status"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "ITSAA Appeals Portal", "url": "https://srd-appeals.dsd.gov.za", "isExternal": true },
+      { "title": "Legal Aid South Africa", "url": "https://www.legal-aid.co.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "sassa-grant-renewal",
+    "title": "Why Your SASSA Grant Is Checked Every Month (Reassessment Guide 2026)",
+    "description": "Unlike permanent grants, the SRD R370 is reassessed every month. Learn what changes each month, what triggers a decline, and how to keep your grant active.",
+    "category": "Eligibility",
+    "difficulty": "beginner",
+    "estimatedTime": "8 minutes",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Calendar showing monthly cycles marked with approval stamps",
+    "steps": [
+      {
+        "title": "How Monthly Reassessment Works",
+        "content": "Every month, SASSA runs an automated check on every SRD grant recipient. The system scans government databases to see if your situation has changed. It checks: Department of Home Affairs (identity still valid), your bank accounts (deposits still under R624), SARS (no new income), UIF (no unemployment benefits), and NSFAS (no student funding). If everything is fine, you stay approved. If anything changed, you may be declined for that month — even if you were approved the month before.",
+        "tips": [
+          "You do not need to reapply each month — SASSA automatically reassesses you.",
+          "A decline in one month does not affect the next month — you can be approved again."
+        ]
+      },
+      {
+        "title": "What Triggers a Decline During Reassessment",
+        "content": "The most common trigger is a bank deposit that pushes your total over R624. Other triggers include: UIF records showing you received a payment, NSFAS records showing active funding, SARS records showing new employment, Home Affairs records showing identity issues, or you started receiving another SASSA grant. The system runs these checks automatically — no human reviews your application unless it is 'Referred'.",
+        "tips": [
+          "Over 1.2 million applications were declined in February 2026 alone, mostly due to bank deposits.",
+          "A single deposit of R625 or more in a month will trigger a decline."
+        ]
+      },
+      {
+        "title": "How to Keep Your Grant Approved Every Month",
+        "content": "To maintain continuous approval: use only one bank account and ensure no one else deposits money into it, keep your total monthly deposits under R624, do not register for UIF or NSFAS while receiving SRD, complete any biometric verification within 72 hours if prompted, and keep your phone number active and up to date. If your circumstances change (you get a job, receive UIF, or start studying), update your details with SASSA honestly.",
+        "tips": [
+          "Ask family and friends not to send money to your bank account during months you need SRD.",
+          "If someone must send you money, ask them to give you cash instead."
+        ]
+      },
+      {
+        "title": "What to Do If You Are Declined After Being Approved",
+        "content": "Getting declined after months of approval does not mean you did anything wrong. It may mean the system detected something new. Check your status on the SRD portal to see the specific reason. If you believe the decline is incorrect, submit an appeal within 90 days. Your grant can be reinstated for future months even without an appeal — the assessment resets each month — but an appeal is needed to get back pay for the declined month.",
+        "tips": [
+          "You can be approved in January, declined in February, and approved again in March.",
+          "Always appeal declined months — you are entitled to the money if you qualify."
+        ]
+      },
+      {
+        "title": "When Does Monthly Reassessment Happen?",
+        "content": "SASSA runs assessments continuously throughout the month, but most assessments happen in the first two weeks. If you apply in the middle of the month, you will be assessed for the following month. The payment window for approved applicants is usually the last 7 to 10 days of the month. Check your status after the 15th of each month for the most reliable result.",
+        "tips": [
+          "If you applied late in the month, your first payment may take 4 to 6 weeks.",
+          "Check your status on the SRD portal or via WhatsApp between the 15th and 25th of each month."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need to reapply for SRD every month?",
+        "a": "No. You apply once and SASSA reassesses you automatically every month. If your circumstances change, you can update your details on the SRD portal, but you do not need to submit a new application."
+      },
+      {
+        "q": "Why was I approved last month but declined this month?",
+        "a": "SASSA checks your eligibility fresh every month. A deposit into your bank account, a change in UIF or NSFAS status, or a Home Affairs data update could have triggered the decline for this month."
+      }
+    ],
+    "tags": ["sassa reassessment", "monthly check", "srd renewal", "sassa reapplication", "grant review"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "Check Your SRD Status", "url": "https://srd.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
+    ]
+  },
+  {
+    "id": "grant-comparison-overview",
+    "title": "SASSA Grants Compared: SRD vs Old Age vs Disability vs Child Support (2026)",
+    "description": "Not sure which SASSA grant you qualify for? Compare all grants side by side — amounts, eligibility, age limits, means test thresholds, and how to apply.",
+    "category": "Reference",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Side-by-side comparison chart showing different grant options",
+    "steps": [
+      {
+        "title": "Grant Comparison at a Glance (2026)",
+        "content": "SASSA administers eight main grant types in 2026. The SRD {{srd_grant_amount}} is for unemployed 18-59 year olds with income under {{srd_income_limit}}/month. The Old Age Grant pays {{old_age_pension_amount_under75}} (60-74) or {{old_age_pension_amount_over75}} (75+) for seniors who pass the means test. The Disability Grant pays {{disability_grant_amount}} for adults with a medical disability. The Child Support Grant pays {{child_support_grant_amount}} per child for caregivers earning under {{child_support_income_threshold_single}} (single) or {{child_support_income_threshold_married}} (couple). The Foster Child Grant pays {{foster_child_grant_amount}} per foster child. Each grant has different rules and application processes.",
+        "tips": [
+          "You can only receive one SASSA grant at a time — choose the highest one you qualify for.",
+          "The SRD is the only grant that is reassessed every single month."
+        ]
+      },
+      {
+        "title": "Who Should Apply for the SRD R370 Grant?",
+        "content": "The SRD grant is best for unemployed South Africans aged 18 to 59 who have no income, no other social grant, and are not receiving UIF or NSFAS. It is the easiest grant to apply for — entirely online, no office visit needed. However, it pays the least (R370) and is not guaranteed month to month. If you are eligible for a permanent grant instead, apply for that. The SRD should be your option only if you do not qualify for any other grant.",
+        "tips": [
+          "The SRD is the only grant that does not require a SASSA office visit.",
+          "If you are over 60, apply for the Old Age Grant instead — it pays R2,400."
+        ]
+      },
+      {
+        "title": "Who Should Apply for the Old Age Grant?",
+        "content": "The Old Age Grant is for South African citizens or permanent residents aged 60 and older who pass the means test. The income threshold is {{old_age_income_threshold_single}} per month (single) or {{old_age_income_threshold_married}} (married couple). The asset threshold is {{old_age_asset_threshold_single}} (single) or {{old_age_asset_threshold_married}} (married). You must apply in person at a SASSA office. If you are already receiving SRD and turn 60, you must switch to Old Age Grant — you cannot receive both.",
+        "tips": [
+          "Apply three months before your 60th birthday to avoid a gap in payments.",
+          "The grant increases to {{old_age_pension_amount_over75}}/month when you turn 75."
+        ]
+      },
+      {
+        "title": "Who Should Apply for the Disability Grant?",
+        "content": "The Disability Grant is for adults aged 18 to 59 who have a permanent or long-term medical disability that makes them unable to work. You need a medical report from a government doctor confirming the disability. The grant pays R2,400 per month — same as Old Age. The means test thresholds are the same as Old Age. Your disability is reviewed every 6 to 12 months to confirm it still prevents you from working.",
+        "tips": [
+          "Temporary disabilities (less than 6 months) do not qualify — apply for SRD instead.",
+          "If you are assessed as permanently disabled, the grant is not reviewed annually."
+        ]
+      },
+      {
+        "title": "Who Should Apply for Child Support Grant?",
+        "content": "The Child Support Grant (CSG) is for primary caregivers of children under 18 who pass the means test. The income threshold is {{child_support_income_threshold_single}} per month (single caregiver) or {{child_support_income_threshold_married}} (married couple). The grant pays {{child_support_grant_amount}} per child per month. You can claim for multiple children. If you are a caregiver for an orphaned child, you may qualify for the R280 top-up on top of the standard {{child_support_grant_amount}}.",
+        "tips": [
+          "The grant is paid to the primary caregiver, which can be a grandparent, aunt, or older sibling.",
+          "You do not need to be the biological parent to receive the Child Support Grant."
+        ]
+      },
+      {
+        "title": "Which Grant Should You Choose? Decision Guide",
+        "content": "Follow this decision tree: If you are over 60, apply for Old Age Grant. If you are 18-59 with a medical disability, apply for Disability Grant (R2,400 > R370). If you are caring for a child under 18, apply for Child Support Grant. If you are a foster parent, apply for Foster Child Grant. If none of the above apply and you are unemployed with no income, apply for SRD R370. You cannot receive two grants simultaneously, so choose the highest-value one you qualify for.",
+        "tips": [
+          "If you qualify for both Disability and Old Age (over 60 with a disability), take Old Age.",
+          "The Foster Child Grant can overlap with other grants — it is the only exception to the one-grant rule."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I receive two SASSA grants at the same time?",
+        "a": "No. You can only receive one SASSA grant at a time, with one exception: a foster parent can receive the Foster Child Grant for a foster child and also receive another grant for themselves."
+      },
+      {
+        "q": "Which SASSA grant pays the most in 2026?",
+        "a": "The War Veterans Grant pays the most at R2,420 per month, followed by the Old Age Grant (75+) and Disability Grant at R2,400. The SRD pays the least at R370."
+      }
+    ],
+    "tags": ["sassa grant comparison", "which grant", "srd vs old age", "grant types", "sassa grants 2026"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "Official SASSA Grants Page", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "Apply for SRD Grant", "url": "https://srd.sassa.gov.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "sassa-online-security",
+    "title": "How to Stay Safe on SASSA Websites: Avoiding Scams & Phishing in 2026",
+    "description": "Hundreds of fake SASSA websites steal ID numbers and banking details. Learn how to identify the real SASSA website and protect yourself from grant scammers.",
+    "category": "Scam Alert",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Shield icon representing online security and fraud protection",
+    "steps": [
+      {
+        "title": "Know the Official SASSA Websites",
+        "content": "SASSA has only a few official websites. Committing these URLs to memory will protect you from 90% of scams: srd.sassa.gov.za (SRD applications and status), www.sassa.gov.za (main SASSA site), srd-appeals.dsd.gov.za (appeals), and srd.dsd.gov.za (additional SRD services). Any website that looks similar but uses a different domain — like sassa-status-check.co.za, srd-sassa-gov.za, or sassahelp.co.za — is fake. Scammers buy domains that look like the real one to trick you.",
+        "tips": [
+          "The real SASSA websites all end in .gov.za — no exceptions.",
+          "Bookmark the official URLs in your browser so you never type them from memory."
+        ]
+      },
+      {
+        "title": "Never Pay to Apply for a Grant",
+        "content": "SASSA grant applications are 100% free. No one should ever ask you to pay to apply, check your status, or appeal a decline. Scammers often ask for 'application fees', 'processing fees', or 'expedite fees' of R50 to R200. SASSA does not charge for any of its services. If someone asks you for money, they are a scammer. Report them to the SASSA fraud hotline on 0800 60 10 11.",
+        "tips": [
+          "If it sounds too good to be true (like a 'R700 grant'), it is a scam.",
+          "No SASSA employee will ever ask for your bank PIN or password."
+        ]
+      },
+      {
+        "title": "Protect Your ID Number and Banking Details",
+        "content": "Your 13-digit South African ID number is the most valuable piece of information scammers want. Never enter it on any website unless you are 100% sure it is an official .gov.za domain. Scammers use your ID number combined with your banking details to steal money. If a website asks for your ID number AND your banking details, verify its URL carefully before proceeding. Real SASSA sites only ask for this information on srd.sassa.gov.za and sassa.gov.za.",
+        "tips": [
+          "Do not share your ID number on social media, WhatsApp groups, or with strangers.",
+          "If you entered your details on a fake site, contact your bank immediately to secure your accounts."
+        ]
+      },
+      {
+        "title": "Spot Fake WhatsApp Numbers and SMS Messages",
+        "content": "SASSA's only official WhatsApp number is 082 046 8553. Scammers use similar numbers like 082 046 8554 or 082 046 8552. Always check the number carefully. SASSA sends SMS messages from short codes, not from regular cellphone numbers. If you receive an SMS asking you to click a link and 'verify your grant', check the URL before clicking. Fake SMS messages often have spelling errors and create urgency ('your grant will be cancelled').",
+        "tips": [
+          "SASSA will never ask you to send money via eWallet or airtime.",
+          "If an SMS says 'click here to receive your grant', it is a scam — SASSA deposits automatically."
+        ]
+      },
+      {
+        "title": "What to Do If You Are Scammed",
+        "content": "If you shared your ID or banking details with a fake SASSA website, take action immediately: call your bank to freeze your accounts and reverse any unauthorized transactions, report the scam website to the SASSA fraud hotline at 0800 60 10 11, open a case at your nearest police station, and change your banking details on the real srd.sassa.gov.za portal. If scammers used your ID number to apply for grants fraudulently, report this to SASSA so they can flag your ID.",
+        "tips": [
+          "The SASSA fraud hotline is free and you can report anonymously.",
+          "Keep records of any fraudulent messages or websites as evidence for the police."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How do I know if a SASSA website is real?",
+        "a": "The URL must end in .gov.za. The official SRD portal is srd.sassa.gov.za. The official SASSA site is www.sassa.gov.za. If the domain ends in .co.za, .org, .com, or any other extension, it is not an official SASSA website."
+      },
+      {
+        "q": "Someone asked me to pay R50 to check my SRD status — is this normal?",
+        "a": "No. SASSA does not charge for any service. Status checks are free on the SRD portal, via USSD, and via WhatsApp. Anyone asking you to pay is a scammer."
+      }
+    ],
+    "tags": ["sassa scams", "fake sassa websites", "phishing", "sassa fraud", "online security"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "SASSA Fraud Hotline", "url": "tel:0800601011", "isExternal": false },
+      { "title": "Official SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "life-certification",
+    "title": "SASSA Life Certification 2026: How to Complete Your Annual Verification Online",
+    "description": "SASSA requires all grant beneficiaries to complete life certification annually. Learn how to verify using the new 2026 self-service portal, WhatsApp, or at a SASSA office.",
+    "category": "Grant Management",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1573497491765-dccce02aac4b?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Person using a tablet for online identity verification",
+    "steps": [
+      {
+        "title": "What Is Life Certification and Why Is It Required?",
+        "content": "Life certification is an annual process where SASSA confirms that grant beneficiaries are still alive and eligible. You must complete it once every 12 months to keep receiving your grant. Failure to complete life certification will result in your grant being suspended until you verify. In 2026, SASSA introduced a digital self-service portal that allows you to complete life certification online without visiting a SASSA office.",
+        "tips": [
+          "SASSA will send you an SMS reminder when your life certification is due.",
+          "If your grant is suspended due to non-verification, it can be reinstated once you complete certification."
+        ]
+      },
+      {
+        "title": "Complete Life Certification Online (Self-Service Portal)",
+        "content": "The easiest method in 2026 is the SASSA self-service portal. Go to sassa.gov.za and look for the 'Life Certification' or 'e-Life Certification' section. You will need your 13-digit ID number and the cellphone number registered with SASSA. The system may ask you to complete a facial recognition scan (take a selfie) to confirm your identity. The entire process takes about 2 minutes.",
+        "tips": [
+          "Make sure you have good lighting for the facial recognition scan.",
+          "The self-service portal is available 24/7 — complete it at any time."
+        ]
+      },
+      {
+        "title": "Complete Life Certification via WhatsApp",
+        "content": "You can also complete life certification through the SASSA WhatsApp line at 082 046 8553. Send 'Hi' to start the chatbot, then select 'Life Certification' from the menu. Follow the prompts to verify your identity. The WhatsApp method is ideal if you have a smartphone but limited data — WhatsApp uses minimal data.",
+        "tips": [
+          "Save 082 046 8553 in your phone contacts to find it easily.",
+          "The WhatsApp method does not require facial recognition — you answer verification questions instead."
+        ]
+      },
+      {
+        "title": "Complete Life Certification at a SASSA Office",
+        "content": "If you do not have a smartphone or internet access, visit your nearest SASSA office in person. Bring your ID document and your SASSA card (Postbank Black Card or Gold Card). The SASSA officer will verify your identity and complete the life certification on their system. This option is available to all beneficiaries regardless of digital access.",
+        "tips": [
+          "Go early in the morning (before 08:00) to avoid queues.",
+          "You can combine your life certification visit with other SASSA enquiries."
+        ]
+      },
+      {
+        "title": "What to Do If Your Grant Was Suspended",
+        "content": "If you missed the life certification deadline, your grant may be suspended. Do not panic — it can be reinstated. Complete the life certification using any of the methods above. Once the system confirms your verification, your grant will be reinstated and you will receive any back payments owed. Contact SASSA at 0800 60 10 11 if your grant is not reinstated within 14 days of completing certification.",
+        "tips": [
+          "SASSA sends multiple SMS reminders before suspending a grant — check your messages regularly.",
+          "Reinstated grants are paid with back pay from the date of suspension."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "How often do I need to complete SASSA life certification?", "a": "Once every 12 months. SASSA will send you an SMS reminder when your certification is due. You do not need to complete it more frequently." },
+      { "q": "Can a family member complete life certification on my behalf?", "a": "If you are too ill or frail to visit a SASSA office or use the online portal, a family member can arrange a SASSA home visit by calling 0800 60 10 11. The SASSA official will visit your home to complete the verification." }
+    ],
+    "tags": ["life certification", "e-life certification", "sassa verification", "grant suspension", "annual verification"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
+    ]
+  },
+  {
+    "id": "document-checklist",
+    "title": "SASSA Grant Documents Checklist: What You Need for Every Grant Type 2026",
+    "description": "Complete checklist of documents required for every SASSA grant. Print this list before visiting your SASSA office to avoid being turned away.",
+    "category": "Applications",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Checklist on a clipboard with a pen",
+    "steps": [
+      {
+        "title": "Documents Required for ALL Grant Types",
+        "content": "These documents are required for every SASSA grant application, regardless of which grant you are applying for: (1) Your 13-digit South African ID book or Smart ID card (original + copy). (2) Proof of residence — a utility bill, bank statement, or lease agreement dated within the last 3 months. (3) Your cellphone number (must be RICA-registered in your name). (4) Proof of income — payslips, bank statements, or an affidavit if you are unemployed. Have these ready before your appointment.",
+        "tips": [
+          "Make copies of every document before going to the SASSA office — not all offices offer copying services.",
+          "Keep your original documents in a separate folder from copies to avoid losing them."
+        ]
+      },
+      {
+        "title": "Additional Documents for SRD R370 Grant",
+        "content": "The SRD grant is applied for online, so you do not need physical documents. However, you need: (1) Your 13-digit ID number (you do not need to upload the ID document). (2) A valid, active cellphone number registered in your name (for OTP verification). (3) Your banking details — bank name, account number, branch code. If you do not have a bank account, you can select Cash Send collection at Pick n Pay or Boxer.",
+        "tips": [
+          "The SRD is the only SASSA grant that does not require any physical document submission.",
+          "Your banking details must match your ID exactly — a single digit error will delay payment."
+        ]
+      },
+      {
+        "title": "Additional Documents for Old Age Grant",
+        "content": "For the Old Age Pension (R2,400/month), bring: (1) Your 13-digit ID book or Smart ID card (original). (2) Proof of residence (utility bill in your name). (3) Proof of marital status (marriage certificate, divorce decree, or death certificate of spouse if applicable). (4) Proof of income and assets — pension statements, bank statements, property valuations. (5) Your spouse's ID copy if married (their income is included in the means test).",
+        "tips": [
+          "Apply 3 months before your 60th birthday to avoid a payment gap.",
+          "If you are married, your spouse's income affects your eligibility — bring their documents too."
+        ]
+      },
+      {
+        "title": "Additional Documents for Disability Grant",
+        "content": "For the Disability Grant (R2,400/month), you need: (1) Your 13-digit ID document. (2) A <strong>medical assessment report</strong> from a government doctor (not a private doctor) confirming the disability. (3) Proof of residence. (4) Proof of income and assets. The medical report is the most critical document — without it, the application cannot proceed. The report must be dated within 3 months of your application.",
+        "tips": [
+          "The medical assessment must be done at a government hospital or clinic — private doctor reports are not accepted.",
+          "If your disability is temporary (less than 6 months), apply for the SRD instead."
+        ]
+      },
+      {
+        "title": "Additional Documents for Child Support & Foster Child Grants",
+        "content": "For the Child Support Grant (R580/month per child): the child's birth certificate, your ID, proof of residence, proof of income. For the Foster Child Grant (R1,290/month): the child's birth certificate, the <strong>children's court order</strong> placing the child in your care, your ID, proof of residence, proof of income. The court order is mandatory for the Foster Child Grant — a letter from the child's parent is not sufficient.",
+        "tips": [
+          "You can apply for the Child Support Grant while pregnant — the grant starts after the child is born.",
+          "The Foster Child Grant court order must be issued by a children's court, not a maintenance court."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "Do I need to bring original documents or copies?", "a": "Bring both. SASSA staff need to see the original documents and will keep copies. Some SASSA offices offer copying services, but not all — make copies before you arrive." },
+      { "q": "Can I apply for a grant if I have lost my ID document?", "a": "No. You need your original ID book or Smart ID card to apply. If you lost your ID, apply for a replacement at the Department of Home Affairs first. This can take 2 to 8 weeks." }
+    ],
+    "tags": ["sassa documents", "grant checklist", "what to bring", "id document", "proof of residence"],
+    "lastUpdated": "2026-07-07",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "Home Affairs ID Application", "url": "https://www.dha.gov.za", "isExternal": true }
+    ]
+  },
+  {
+    "id": "sassa-payment-methods",
+    "title": "SASSA Payment Methods 2026: Bank Transfer vs Postbank vs Cash Send vs Retail",
+    "description": "Compare all SASSA payment methods: bank account deposit, Postbank Black Card, Cash Send at Pick n Pay/Boxer, and Post Office collection. Find the fastest and safest option.",
+    "category": "Banking",
+    "difficulty": "beginner",
+    "estimatedTime": "8 minutes",
+    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Various payment methods: cash, card, and phone showing payment options",
+    "steps": [
+      {
+        "title": "Bank Account Deposit (Fastest & Safest)",
+        "content": "Having your SASSA grant paid directly into your bank account is the fastest and safest method. The money is deposited directly by SASSA into your account on your Pay Day date. You can withdraw it immediately without waiting for an SMS code or visiting a collection point. Your bank account must be registered in your own name — SASSA does not pay into third-party accounts. Major South African banks (Capitec, FNB, Standard Bank, Nedbank, Absa, Bank Zero, TymeBank, Discovery Bank) all accept SASSA deposits.",
+        "tips": [
+          "Bank transfers reflect faster at Capitec and FNB (often same day) vs traditional banks (next day).",
+          "Never close your bank account while waiting for a SASSA payment — it will cause delays."
+        ]
+      },
+      {
+        "title": "Postbank Black Card (Formerly SASSA Gold Card)",
+        "content": "The Postbank Black Card replaced the old SASSA Gold Card in 2025/2026. If you do not have a personal bank account, SASSA will issue you a Postbank Black Card. Your grant is loaded onto this card and you can withdraw cash at any Post Office branch, any ATM (fees may apply), or participating retailers. The card is free and there are no monthly account fees. You can check your balance by dialing *120*3210# from any cellphone.",
+        "tips": [
+          "Keep your PIN secret — never write it on the card or share it with anyone.",
+          "If your card is lost or stolen, call Postbank immediately at 0800 53 54 55 to block it."
+        ]
+      },
+      {
+        "title": "Cash Send at Pick n Pay or Boxer (No Bank Account Needed)",
+        "content": "Cash Send is a payment method for SRD grant recipients who do not have a bank account. SASSA sends a unique SMS code to your cellphone. You take this code to any Pick n Pay or Boxer store and the cashier gives you your R370 in cash. You do not need any card or bank account. The SMS code expires after a certain period, so collect your money promptly.",
+        "tips": [
+          "The SMS code is unique to you — do not share it with anyone.",
+          "Cash Send is available only for the SRD R370 grant, not for permanent grants."
+        ]
+      },
+      {
+        "title": "Post Office Cash Collection",
+        "content": "You can collect your SASSA grant in cash at any South African Post Office branch. This method is available for all grant types. Bring your ID document and your SASSA card (Postbank Black Card). Post Office collection is free — no fees are charged. Post Office branches are open Monday to Friday 08:00 to 16:30 and Saturday 08:00 to 13:00. Avoid collection on the first few days of the month when queues are longest.",
+        "tips": [
+          "Post Office branches are busiest on the first 3 working days of the month.",
+          "Some Post Office branches have limited cash availability — go early in the day."
+        ]
+      },
+      {
+        "title": "Comparing Payment Methods: Which Is Best for You?",
+        "content": "Choose the method that fits your situation: Bank account deposit is best if you have a bank account (fastest, safest, access your money anytime). Postbank Black Card is best if you do not have a bank account (free, works anywhere). Cash Send is best for SRD-only recipients without a bank account who live near a Pick n Pay or Boxer. Post Office collection is best for beneficiaries who prefer cash and live near a Post Office. You can switch methods by updating your payment choice on the SRD portal or at a SASSA office.",
+        "tips": [
+          "You can change your payment method at any time — updates take effect the following month.",
+          "Bank deposit is strongly recommended if you can open a free savings account."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "Can I switch from Cash Send to bank account?", "a": "Yes. Log into the SRD portal at srd.sassa.gov.za and update your banking details. The change will take effect from the following month's payment cycle." },
+      { "q": "How long does a SASSA bank transfer take?", "a": "Once your status shows 'Paid', the money usually reflects within 1 to 3 business days depending on your bank. Capitec and FNB are typically fastest." },
+      { "q": "Is there a fee for using the Postbank Black Card at ATMs?", "a": "Postbank ATMs are free. If you use other bank ATMs (Capitec, FNB, Absa, etc.), a withdrawal fee of approximately R2 to R8 may apply depending on the ATM owner." }
+    ],
+    "tags": ["sassa payment methods", "bank transfer", "postbank black card", "cash send", "post office collection"],
+    "lastUpdated": "2026-07-07",
+    "author": "Zanele Nkosi",
+    "relatedLinks": [
+      { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
+      { "title": "Postbank Contact", "url": "tel:0800535455", "isExternal": false }
+    ]
   }
 ]
