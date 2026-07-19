@@ -39,7 +39,7 @@
     "relatedLinks": [
       {
         "title": "SASSA Services Guide",
-        "url": "/services",
+        "url": "/grants",
         "isExternal": false
       },
       {
@@ -87,7 +87,7 @@
     "relatedLinks": [
       {
         "title": "SASSA Application Guide",
-        "url": "/how-to-apply",
+        "url": "/guides/document-checklist",
         "isExternal": false
       },
       {
@@ -134,7 +134,7 @@
     "relatedLinks": [
       {
         "title": "SASSA Foster Child Grant Guide",
-        "url": "/grants/foster-child",
+        "url": "/grants/foster-child-grant",
         "isExternal": false
       },
       {
@@ -182,7 +182,7 @@
     "relatedLinks": [
       {
         "title": "SASSA Appeals Guide",
-        "url": "/appeals",
+        "url": "/guides/appeal-guide",
         "isExternal": false
       },
       {
@@ -230,7 +230,7 @@
     "relatedLinks": [
       {
         "title": "SASSA Foster Child Grant Guide",
-        "url": "/grants/foster-child",
+        "url": "/grants/foster-child-grant",
         "isExternal": false
       },
       {
@@ -276,7 +276,7 @@
     "relatedLinks": [
       {
         "title": "SASSA SRD Grant Guide",
-        "url": "/grants/srd",
+        "url": "/grants/srd-r370-grant",
         "isExternal": false
       },
       {
@@ -323,7 +323,7 @@
     "relatedLinks": [
       {
         "title": "SASSA SRD Grant Guide",
-        "url": "/grants/srd",
+        "url": "/grants/srd-r370-grant",
         "isExternal": false
       },
       {
@@ -369,7 +369,7 @@
     "relatedLinks": [
       {
         "title": "SASSA SRD Grant Guide",
-        "url": "/grants/srd",
+        "url": "/grants/srd-r370-grant",
         "isExternal": false
       },
       {
@@ -415,7 +415,7 @@
     "relatedLinks": [
       {
         "title": "SASSA SRD Grant Guide",
-        "url": "/grants/srd",
+        "url": "/grants/srd-r370-grant",
         "isExternal": false
       },
       {
@@ -463,7 +463,7 @@
     "relatedLinks": [
       {
         "title": "SASSA Appeals Guide",
-        "url": "/appeals",
+        "url": "/guides/appeal-guide",
         "isExternal": false
       },
       {
