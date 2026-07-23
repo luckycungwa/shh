@@ -121,7 +121,7 @@
     "tags": ["existing grant", "duplicate grant", "one grant rule", "sassa fraud"],
     "last_updated": "2026-07-07",
     "author": "Themba Phakathi",
-    "related_statuses": ["/status/declined", "/grants/grant-comparison-overview"]
+    "related_statuses": ["/status/declined", "/guides/grant-comparison-overview"]
   },
   {
     "slug": "government-payroll",
