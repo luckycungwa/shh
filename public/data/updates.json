@@ -1,5 +1,31 @@
 [
     {
+        "id": "update-2026-027",
+        "title": "SASSA Confirms August 2026 Payment Schedule — Older Persons Paid 4 August",
+        "summary": "SASSA has released the official payment dates for August 2026. Older Persons Grants on 4 August, Disability on 5 August, Children's Grants on 6 August, and SRD R370 batch from 25 August.",
+        "content": "# SASSA Confirms August 2026 Payment Schedule — Older Persons Paid 4 August\n\nThe South African Social Security Agency (SASSA) has confirmed the **August 2026 payment schedule**. As with every month, Older Persons Grants will be paid first, followed by Disability and Children's Grants, with the SRD {{srd_grant_amount}} batch at month-end.\n\n## August 2026 Payment Dates\n\n| Grant Type | Payment Date |\n|---|---|\n| **Older Persons Grant** | Tuesday, 4 August 2026 |\n| **Disability Grant** | Wednesday, 5 August 2026 |\n| **Children's Grants** | Thursday, 6 August 2026 |\n| **SRD R370 Grant** | 25 August – 29 August 2026 (batch window) |\n\n## Key Changes for August 2026\n\n### Bank Verification Cycle\nSASSA will conduct its automated bank verification between **15 and 22 August**. Ensure your registered mobile number is active and your banking details are up to date on the SRD portal to avoid delays.\n\n### Biometric Verification (eKYC)\nBeneficiaries flagged for enhanced security checks will receive an SMS with a biometric verification link. Complete the facial recognition process within the link's validity window to prevent your status from changing to \"Self-Correction Required.\"\n\n## Payment Collection Tips\n- **No rush to withdraw:** Your money is safe in your account. Avoid queues by waiting 2-3 days after the payment date.\n- **Retail collection:** If collecting at Pick n Pay, Boxer, Shoprite, or Checkers, wait for the SMS containing your collection code before going to the store.\n- **SRD beneficiaries:** The {{srd_grant_amount}} grant is paid in batches. Not everyone is paid on the same day. Check your status for a \"Pay Day\" date.\n\n## Check Your Status\nAlways verify your grant status before heading out to collect. Use the [SRD portal](https://srd.sassa.gov.za) for SRD grants or visit your nearest SASSA office for permanent grants.\n\n[View Full 2026 Calendar](/payment-calendar) | [Check Your Status](/status-check)",
+        "date": "2026-07-23",
+        "type": "news",
+        "urgent": true,
+        "sources": [
+            "https://www.sassa.gov.za",
+            "https://srd.sassa.gov.za"
+        ]
+    },
+    {
+        "id": "update-2026-026",
+        "title": "July 2026 SRD R370 Payments Rolling Out — Check Your Status Now",
+        "summary": "SASSA is processing the July 2026 SRD R370 grant batch from 27 July. Beneficiaries should check their status for 'Approved' with a 'Pay Day' date. Here's what to do if yours is delayed.",
+        "content": "# July 2026 SRD R370 Payments Rolling Out — Check Your Status Now\n\nThe **July 2026 SRD {{srd_grant_amount}} grant batch** is being processed from Monday, **27 July 2026**, with payments rolling out through the end of the month. Beneficiaries are urged to check their status on the SRD portal to confirm approval and look for a 'Pay Day' date.\n\n## Payment Schedule This Week\n\n| Day | Expected Activity |\n|---|---|\n| **Mon 27 Jul** | Batch processing begins — early approvals paid |\n| **Tue 28 Jul – Thu 30 Jul** | Main payment window — most beneficiaries paid |\n| **Fri 31 Jul** | Final batch — late approvals and corrections |\n\n## Why Your Status May Still Say \"Pending\"\nIf your status has not changed from \"Pending\" to \"Approved\" yet, this is normal. SASSA's verification cycle runs from the **15th to the 22nd** of each month. Applications that passed verification are still being batched for payment. Check back after the 27th if you see no change.\n\n## Common July Issues to Watch For\n\n### 1. Bank Details Pending\nIf your status shows \"Bank Details Pending,\" your application is approved but SASSA cannot pay you. Update your banking details on the [SRD portal](https://srd.sassa.gov.za) immediately to be included in the next batch.\n\n### 2. Identity Verification Required\nSome applicants have been flagged for biometric (eKYC) verification in July. If you received an SMS with a verification link, complete it within **72 hours**. Failure to do so will change your status to \"Self-Correction Required.\"\n\n### 3. Income Source Detected\nSASSA's automated system flagged bank deposits exceeding the {{srd_income_limit}} threshold. If a family member sent you money or a stokvel payout was deposited, you must [lodge an appeal](/guides/appeal-guide) with proof that it was not income.\n\n## What to Do If You Haven't Been Paid\n1. **Check your status** on the [SRD portal](https://srd.sassa.gov.za)\n2. **Verify your banking details** are correct\n3. **Complete biometric verification** if prompted\n4. **Wait 1-3 business days** after a \"Pay Day\" date for the money to reflect\n5. **Contact SASSA** at 0800 60 10 11 if no payment after 5 business days\n\n## Looking Ahead: August 2026\nThe August 2026 payment schedule has also been confirmed: Older Persons on 4 August, Disability on 5 August, Children's on 6 August, and the next SRD batch starting 25 August. [View the full August schedule](/updates/update-2026-027).\n\n[Check Your Status Now](/status-check) | [View Full Payment Calendar](/payment-calendar) | [Update Bank Details](/guides/change-banking-details)",
+        "date": "2026-07-23",
+        "type": "alert",
+        "urgent": true,
+        "sources": [
+            "https://srd.sassa.gov.za",
+            "https://www.sassa.gov.za"
+        ]
+    },
+    {
         "id":  "update-2026-013",
         "title":  "SASSA Confirms March 2026 Payment Schedule - Older Persons Paid First",
         "summary":  "SASSA has officially released the payment dates for March 2026. Older Persons Grants will be paid on March 3, followed by Disability and Children\u0027s Grants.",

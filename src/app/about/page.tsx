@@ -18,9 +18,9 @@ import type { Metadata } from "next";
 import { buildMetadata } from "../../lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us",
+  title: "About SASSA Help Hub \u2014 Independent Grant Resource Since 2024",
   description:
-    "Learn about the publisher, editorial standards, and free resources behind SASSA Help Hub — your trusted unofficial guide to South African social security.",
+    "Learn about the publisher, editorial standards, and free resources behind SASSA Help Hub \u2014 your trusted unofficial guide to South African social security.",
   path: "/about",
 });
 

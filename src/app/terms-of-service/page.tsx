@@ -6,8 +6,8 @@ import { buildMetadata } from "../../lib/seo";
 import { getCurrentMonthYearKey } from "../../lib/config";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms of Service",
-  description: "Terms and Conditions for using SASSA Help Hub. Your rights and obligations when using our independent SASSA resource.",
+  title: "Terms of Service \u2014 Using SASSA Help Hub's Free Resources",
+  description: "Terms and conditions for using SASSA Help Hub. Your rights and obligations when accessing our independent, free SASSA grant information resource.",
   path: "/terms-of-service",
 });
 

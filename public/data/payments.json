@@ -27,19 +27,19 @@
         "type": "Old Age Grant",
         "dates": ["2026-02-03"],
         "amount": 2310,
-        "notes": "Official Confirmed Date"
+        "notes": "Confirmed Date"
       },
       {
         "type": "Disability Grant",
         "dates": ["2026-02-04"],
         "amount": 2310,
-        "notes": "Official Confirmed Date"
+        "notes": "Confirmed Date"
       },
       {
         "type": "Child Support Grant",
         "dates": ["2026-02-05"],
         "amount": 560,
-        "notes": "Official Confirmed Date"
+        "notes": "Confirmed Date"
       },
       {
         "type": "SRD R370 Grant",
@@ -95,6 +95,106 @@
       {
         "type": "SRD R370 Grant",
         "dates": ["2026-04-22", "2026-04-23", "2026-04-24", "2026-04-28", "2026-04-29", "2026-04-30"],
+        "amount": 370
+      }
+    ]
+  },
+  {
+    "month": "2026-05",
+    "grants": [
+      {
+        "type": "Old Age Grant",
+        "dates": ["2026-05-05"],
+        "amount": 2310
+      },
+      {
+        "type": "Disability Grant",
+        "dates": ["2026-05-06"],
+        "amount": 2310
+      },
+      {
+        "type": "Child Support Grant",
+        "dates": ["2026-05-07"],
+        "amount": 560
+      },
+      {
+        "type": "SRD R370 Grant",
+        "dates": ["2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29"],
+        "amount": 370
+      }
+    ]
+  },
+  {
+    "month": "2026-06",
+    "grants": [
+      {
+        "type": "Old Age Grant",
+        "dates": ["2026-06-02"],
+        "amount": 2310
+      },
+      {
+        "type": "Disability Grant",
+        "dates": ["2026-06-03"],
+        "amount": 2310
+      },
+      {
+        "type": "Child Support Grant",
+        "dates": ["2026-06-04"],
+        "amount": 560
+      },
+      {
+        "type": "SRD R370 Grant",
+        "dates": ["2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30"],
+        "amount": 370
+      }
+    ]
+  },
+  {
+    "month": "2026-07",
+    "grants": [
+      {
+        "type": "Old Age Grant",
+        "dates": ["2026-07-02"],
+        "amount": 2310
+      },
+      {
+        "type": "Disability Grant",
+        "dates": ["2026-07-03"],
+        "amount": 2310
+      },
+      {
+        "type": "Child Support Grant",
+        "dates": ["2026-07-06"],
+        "amount": 560
+      },
+      {
+        "type": "SRD R370 Grant",
+        "dates": ["2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31"],
+        "amount": 370
+      }
+    ]
+  },
+  {
+    "month": "2026-08",
+    "grants": [
+      {
+        "type": "Old Age Grant",
+        "dates": ["2026-08-04"],
+        "amount": 2310
+      },
+      {
+        "type": "Disability Grant",
+        "dates": ["2026-08-05"],
+        "amount": 2310
+      },
+      {
+        "type": "Child Support Grant",
+        "dates": ["2026-08-06"],
+        "amount": 560
+      },
+      {
+        "type": "SRD R370 Grant",
+        "dates": ["2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29"],
         "amount": 370
       }
     ]

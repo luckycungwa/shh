@@ -18,7 +18,7 @@ export default function DisclaimerPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <header className="text-center mb-16">
-        <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Official Disclaimer</h1>
+        <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Legal Disclaimer</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Important notice regarding our relationship with SASSA.
         </p>

@@ -3,6 +3,18 @@ import path from "path";
 
 const BASE_URL = "https://www.sassahelphub.co.za";
 
+function mostRecentDate(dates: string[]): string {
+  return dates.filter(Boolean).sort().reverse()[0] || new Date().toISOString().split("T")[0];
+}
+
+function readJson(filePath: string): any[] {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch {
+    return [];
+  }
+}
+
 export default async function sitemap() {
   const eaatPages = [
     "/editorial-policy",
@@ -30,59 +42,93 @@ export default async function sitemap() {
     "/sassa-offices",
     "/grants",
     "/status",
+    "/common-problems",
+    "/authors",
     ...eaatPages,
   ];
 
-  // Fetch dynamic content
-  const updatesPath = path.join(process.cwd(), "public/data/updates.json");
-  const guidesPath = path.join(process.cwd(), "public/data/guides.json");
+  const updates = readJson(path.join(process.cwd(), "public/data/updates.json"));
+  const guides = readJson(path.join(process.cwd(), "public/data/guides.json"));
+  const grantsDir = path.join(process.cwd(), "public/data/grants");
+  let grantFiles: string[] = [];
+  try { grantFiles = fs.readdirSync(grantsDir).filter((f) => f.endsWith(".json")); } catch { grantFiles = []; }
 
-  const updates = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
-  const guides = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
+  // Extract lastmod dates from data
+  const updateDates = updates.map((u: any) => u.date).filter(Boolean);
+  const guideDates = guides.map((g: any) => g.lastUpdated).filter(Boolean);
+  const grantDates = grantFiles.map((f: string) => {
+    try {
+      const d = JSON.parse(fs.readFileSync(path.join(grantsDir, f), "utf8"));
+      return d.last_updated;
+    } catch { return null; }
+  }).filter(Boolean);
+  const updateListDate = mostRecentDate(updateDates);
+  const guideListDate = mostRecentDate(guideDates);
+  const allContentDates = [...updateDates, ...guideDates, ...grantDates];
 
-  const updateUrls = updates.map((u: any) => `/updates/${u.id}`);
-  const guideUrls = guides.map((g: any) => `/guides/${g.id}`);
+  const updateUrls = updates.map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate }));
+  const guideUrls = guides.map((g: any) => ({ path: `/guides/${g.id}`, lastMod: g.lastUpdated || guideListDate }));
 
-  // Grant guides
   const grantSlugs = [
-    "srd-r370-grant",
-    "old-age-pension",
-    "child-support-grant",
-    "disability-grant",
-    "foster-child-grant",
-    "care-dependency-grant",
-    "grant-in-aid",
-    "war-veterans-grant",
+    "srd-r370-grant", "old-age-pension", "child-support-grant", "disability-grant",
+    "foster-child-grant", "care-dependency-grant", "grant-in-aid", "war-veterans-grant",
   ];
-  const grantUrls = grantSlugs.map((s) => `/grants/${s}`);
+  const grantMods: Record<string, string> = {};
+  grantFiles.forEach((f) => {
+    try {
+      const d = JSON.parse(fs.readFileSync(path.join(grantsDir, f), "utf8"));
+      if (d.last_updated) grantMods[d.slug?.replace("grants/", "") || f.replace(".json", "")] = d.last_updated;
+    } catch {}
+  });
+  const grantUrls = grantSlugs.map((s) => ({
+    path: `/grants/${s}`,
+    lastMod: grantMods[s] || mostRecentDate(grantDates),
+  }));
 
-  // Status meanings
   const statusSlugs = [
     "application-complete", "pending", "bank-details-pending", "identity-verification",
     "referred", "means-test-failed", "approved", "declined", "appeal-pending", "paid",
   ];
-  const statusUrls = statusSlugs.map((s) => `/status/${s}`);
+  const statusMod = mostRecentDate(allContentDates);
 
-  // Province pages
   const provinceSlugs = [
     "eastern-cape", "free-state", "gauteng", "kwazulu-natal", "limpopo",
     "mpumalanga", "north-west", "northern-cape", "western-cape",
   ];
-  const provinceUrls = provinceSlugs.map((s) => `/province/${s}`);
+  let provinceMod = statusMod;
+  try {
+    const provinces = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/provinces.json"), "utf8"));
+    const pDates = provinces.map((p: any) => p.last_updated).filter(Boolean);
+    if (pDates.length) provinceMod = mostRecentDate(pDates);
+  } catch {}
 
-  // Decline reason pages
   const declineSlugs = [
     "income-source-detected", "identity-verification-failed", "uif-registered",
     "nsfas-registered", "existing-sassa-grant", "government-payroll",
     "age-outside-range", "deceased-dha-record",
   ];
-  const declineUrls = declineSlugs.map((s) => `/decline-reason/${s}`);
 
-  const allPaths = [...staticPages, ...updateUrls, ...guideUrls, ...grantUrls, ...statusUrls, ...provinceUrls, ...declineUrls];
+  // Build final URL list with lastmod
+  const staticUrls = staticPages.map((p) => {
+    let lastMod = mostRecentDate(allContentDates);
+    if (p === "/updates" && updateListDate) lastMod = updateListDate;
+    else if (p === "/guides" && guideListDate) lastMod = guideListDate;
+    return { path: p, lastMod };
+  });
 
-  return allPaths.map((p) => ({
+  const allEntries = [
+    ...staticUrls,
+    ...updateUrls,
+    ...guideUrls,
+    ...grantUrls,
+    ...statusSlugs.map((s) => ({ path: `/status/${s}`, lastMod: statusMod })),
+    ...provinceSlugs.map((s) => ({ path: `/province/${s}`, lastMod: provinceMod })),
+    ...declineSlugs.map((s) => ({ path: `/decline-reason/${s}`, lastMod: statusMod })),
+  ];
+
+  return allEntries.map(({ path: p, lastMod }) => ({
     url: `${BASE_URL}${p}`,
-    lastModified: new Date().toISOString().split("T")[0],
+    lastModified: lastMod,
     changeFrequency: p === "" || p === "/updates" ? "daily" : "weekly",
     priority: p === "" ? 1 : p.startsWith("/grants") || p.startsWith("/status") || p.startsWith("/updates") || p.startsWith("/guides") || p.startsWith("/province") || p.startsWith("/decline-reason") ? 0.8 : 0.5,
   }));

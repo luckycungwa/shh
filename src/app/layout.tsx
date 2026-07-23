@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "South African social security",
     "SASSA status check",
   ],
-  authors: [{ name: "SASSA Help Hub Team" }],
+  authors: [{ name: "Themba Phakathi" }, { name: "Zanele Nkosi" }],
   verification: {
     google: "SKlM_MFnb6YY5C-1Ma3k5ETqJBwJSnicqxaqTYzp7HU",
   },

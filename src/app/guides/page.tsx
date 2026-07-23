@@ -38,6 +38,7 @@ const guideCategories = [
   { label: "Scam Alert", value: "Scam Alert" },
   { label: "Reference", value: "Reference" },
   { label: "Account Management", value: "Account Management" },
+  { label: "Card Services", value: "Card Services" },
 ];
 
 const faqs = [

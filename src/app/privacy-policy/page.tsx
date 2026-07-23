@@ -4,8 +4,8 @@ import PrivacyPolicyContent from './PrivacyPolicyContent';
 import { buildMetadata } from "../../lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy Policy",
-  description: "Learn how SASSA Help Hub protects your data and handles your privacy while using our informational resource.",
+  title: "Privacy Policy \u2014 How We Protect Your Data",
+  description: "How SASSA Help Hub collects, uses, and protects your data when you use our free informational resource about SASSA grants.",
   path: "/privacy-policy",
 });
 

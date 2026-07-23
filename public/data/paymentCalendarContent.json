@@ -4,11 +4,11 @@
     "heading": "Understanding Your SASSA Payment Dates",
     "paragraphs": [
       "Staying informed about your SASSA payment dates is crucial for managing your finances. SASSA typically disburses grants during the first week of each month, but these dates can vary. It's important to note that the Older Persons Grant is always paid first, followed by the Disability Grant, and then all other grants, including the Child Support Grant.",
-      "The SRD R370 Grant does not have a fixed payment date. Beneficiaries are advised to wait for an SMS notification confirming their payment and should only then proceed to collect their funds. This page provides the official payment schedule for all major grants to help you plan accordingly."
+      "The SRD R370 Grant does not have a fixed payment date. Beneficiaries are advised to wait for an SMS notification confirming their payment and should only then proceed to collect their funds. This page provides the payment schedule for all major grants to help you plan accordingly."
     ]
   },
   "paymentSchedule": {
-    "heading": "Official SASSA Grant Payment Schedule (April 2026 - March 2027)",
+    "heading": "SASSA Grant Payment Schedule (April 2026 - March 2027)",
     "months": [
       { "month": "April 2026", "olderPersons": "Thu, 2 Apr", "disability": "Tue, 7 Apr", "childrens": "Wed, 8 Apr" },
       { "month": "May 2026", "olderPersons": "Tue, 5 May", "disability": "Wed, 6 May", "childrens": "Thu, 7 May" },

@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Metadata } from "next";
-import { Card, CardHeader, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem, Avatar, Image } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem, Avatar } from "@nextui-org/react";
+import Image from "next/image";
 import { FaClock, FaCalendarAlt, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaListUl, FaLink, FaLightbulb, FaQuestionCircle, FaMobileAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import { notFound } from "next/navigation";
@@ -113,24 +114,24 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                    {resolveTemplates(guide.description)}
                 </p>
 
-               {guide.image && (
-                 <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden">
-                   <img
-                     src={guide.image}
-                     alt={guide.imageAlt || guide.title}
-                     width={1200}
-                     height={400}
-                     loading="lazy"
-                     className="w-full h-full object-cover"
-                   />
-                 </div>
-               )}
+                {guide.image && (
+                  <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden">
+                    <Image
+                      src={guide.image}
+                      alt={guide.imageAlt || guide.title}
+                      width={1200}
+                      height={400}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
 
                <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-y border-gray-100 py-6">
                  <div className="flex items-center gap-3">
                     <Avatar name="ZA" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
-                       <p className="font-bold text-gray-900">{guide.author}</p>
+                        <NextLink href="/authors" className="font-bold text-gray-900 hover:text-primary-gold transition-colors">{guide.author}</NextLink>
                        <p className="text-xs">South African Benefit Specialist</p>
                     </div>
                  </div>
@@ -218,7 +219,7 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
             {guide.relatedLinks && (
                <section className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/10 space-y-6">
                   <h3 className="text-xl font-bold flex items-center gap-2">
-                     <FaLink className="text-primary-gold" /> Official Resources
+                      <FaLink className="text-primary-gold" /> Related Resources
                   </h3>
                  <ul className="space-y-4">
                     {guide.relatedLinks.map((link, i) => (

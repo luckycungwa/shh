@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       url,
       type: "article",
       publishedTime: update.date,
-      authors: ["SASSA Help Hub Team"],
+      authors: [update.author || "Themba Phakathi"],
       images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
     },
   };
@@ -81,9 +81,8 @@ export default async function UpdatePage({ params }: { params: { id: string } })
     "datePublished": update.date,
     "dateModified": update.date,
     "author": {
-      "@type": "Organization",
-      "name": "SASSA Help Hub Team",
-      "url": "https://www.sassahelphub.co.za"
+      "@type": "Person",
+      "name": update.author || "Themba Phakathi"
     },
     "publisher": {
       "@type": "Organization",
@@ -199,11 +198,11 @@ export default async function UpdatePage({ params }: { params: { id: string } })
 
            <section className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/10 space-y-6">
               <h3 className="text-xl font-bold flex items-center gap-2">
-                 <FaLink className="text-primary-gold" /> Sources & Official References
+                 <FaLink className="text-primary-gold" /> Sources & References
               </h3>
               <ul className="space-y-4">
                  <li className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
-                    <span>Official SASSA SRD Portal</span>
+                     <span>SASSA SRD Portal</span>
                     <Button as={NextLink} href="https://srd.sassa.gov.za" target="_blank" size="sm" variant="flat" color="primary">
                        Verify Source <FaExternalLinkAlt className="ml-2 text-xs" />
                     </Button>

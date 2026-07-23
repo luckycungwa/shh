@@ -44,6 +44,8 @@ export default function FooterComponent() {
                 { label: "SRD Grant Guide", href: "/guides/srd-grant" },
                 { label: "Latest News", href: "/updates" },
                 { label: "Scam Alerts", href: "/scam-alert" },
+                { label: "Common Problems", href: "/common-problems" },
+                { label: "Glossary", href: "/glossary" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -60,6 +62,11 @@ export default function FooterComponent() {
             <ul className="space-y-3">
               {[
                 { label: "About Us", href: "/about" },
+                { label: "Our Authors", href: "/authors" },
+                { label: "Editorial Policy", href: "/editorial-policy" },
+                { label: "Fact-Checking Policy", href: "/fact-checking-policy" },
+                { label: "Sources Policy", href: "/sources-policy" },
+                { label: "Corrections Policy", href: "/corrections-policy" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Terms of Service", href: "/terms-of-service" },
                 { label: "Disclaimer", href: "/disclaimer" },
@@ -73,8 +80,11 @@ export default function FooterComponent() {
             </ul>
           </div>
 
-          <div className="space-y-5">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-primary-gold/80">Official Contacts</h3>
+          <div className="space-y-5 pt-6 border-t-2 border-dashed border-white/10">
+            <div className="space-y-1">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-primary-gold/80">SASSA Official Channels</h3>
+              <p className="text-[10px] text-secondary-gray/60 uppercase tracking-wider">Not us — these are SASSA's official contacts</p>
+            </div>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-primary-gold/10 flex items-center justify-center shrink-0">
@@ -99,7 +109,7 @@ export default function FooterComponent() {
                   <FaExternalLinkAlt className="text-primary-gold text-xs" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-white">Official Site</p>
+                  <p className="text-xs font-semibold text-white">Government Site</p>
                   <a href="https://www.sassa.gov.za" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary-gray hover:text-primary-gold transition-colors">www.sassa.gov.za</a>
                 </div>
               </li>

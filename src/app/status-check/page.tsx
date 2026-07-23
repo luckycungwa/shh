@@ -30,7 +30,7 @@ export default function StatusCheckPage() {
       {
         "@type": "HowToStep",
         "position": 1,
-        "name": "Visit Official Portal",
+        "name": "Visit the SRD Portal",
         "text": "Go to srd.sassa.gov.za on your browser."
       },
       {
@@ -197,7 +197,7 @@ export default function StatusCheckPage() {
       <article className="max-w-4xl mx-auto space-y-16 mt-24">
         <section className="space-y-8">
           <div className="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border-l-8 border-blue-500 mb-12">
-            <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">Official {currentMonthYear} Notice</h3>
+            <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">{currentMonthYear} Notice</h3>
             <p className="text-blue-800 dark:text-blue-300 leading-relaxed font-medium">
               SASSA has confirmed that all SRD R370 applications for {currentMonthYear} will undergo automated bank verification between the 15th and 22nd of the month. Ensure your mobile number is active to receive biometric verification links if your profile is flagged for high-level security checks.
             </p>
@@ -213,15 +213,15 @@ export default function StatusCheckPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
             <Card className="p-8 border-none shadow-sm bg-gray-50 dark:bg-gray-900 rounded-[2rem]">
-               <h3 className="text-xl font-bold mb-4">Real-Life Case Study: Thabo's Fix</h3>
-               <p className="text-sm text-gray-500 leading-relaxed italic">
-                 "Last month, my status was 'Declined' because of 'Alternative Income'. I realized a friend had sent me R700 to help with rent. Because this put me over the R624 limit, SASSA's automated system rejected me. I had to appeal and provide proof that it wasn't a regular salary. Always check your bank statements before the 15th of the month!"
+               <h3 className="text-xl font-bold mb-4">Example: How a Gift Can Trigger a Decline</h3>
+               <p className="text-sm text-gray-500 leading-relaxed">
+                 Suppose a friend sends you R700 to help with rent. This would put you over the R624 income threshold, and SASSA's automated system would flag it as "Alternative Income." You would need to appeal and provide proof that the deposit was a gift, not regular income. This is one of the most common reasons for unexpected declines.
                </p>
             </Card>
             <Card className="p-8 border-none shadow-sm bg-gray-50 dark:bg-gray-900 rounded-[2rem]">
-               <h3 className="text-xl font-bold mb-4">Expert Insight: The 72-Hour Rule</h3>
+               <h3 className="text-xl font-bold mb-4">Biometric Link Expiry</h3>
                <p className="text-sm text-gray-500 leading-relaxed">
-                 Beneficiaries flagged for biometric verification only have 72 hours to complete the process once the SMS link is received. Failure to act within this window results in an automatic "Self-Correction Required" status, delaying payments by up to 30 days.
+                 Based on beneficiary reports, the biometric verification link sent via SMS typically expires within a few days. If you do not complete the process in time, your status may change to "Self-Correction Required," which can delay your payment. Always complete the verification as soon as you receive the SMS.
                </p>
             </Card>
           </div>
@@ -242,7 +242,7 @@ export default function StatusCheckPage() {
         <section className="space-y-10">
           <h2 className="text-4xl font-black">How to Check Your SASSA Status</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Checking your SASSA SRD grant status is straightforward. Use one of the official channels below.
+            Checking your SASSA SRD grant status is straightforward.            Use one of the available channels below.
           </p>
 
           <div className="bg-white dark:bg-gray-800 p-10 rounded-[3rem] border-2 border-primary-gold/10 space-y-6">
@@ -259,7 +259,7 @@ export default function StatusCheckPage() {
 
           <h2 className="text-4xl font-black mt-16">Choosing the Right Channel for Your Status Update</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            SASSA has diversified the ways beneficiaries can access their information. Depending on your location, data availability, and type of device, certain methods may be more efficient for you than others. Below is an in-depth comparison of the official channels.
+            SASSA has diversified the ways beneficiaries can access their information. Depending on your location, data availability, and type of device, certain methods may be more efficient for you than others.              Below is an in-depth comparison of the available channels.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -350,7 +350,7 @@ export default function StatusCheckPage() {
                  <div className="flex gap-6">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-md">1</div>
                     <div>
-                       <p className="font-bold text-xl mb-1">Receive the Official Link</p>
+                        <p className="font-bold text-xl mb-1">Receive Your Verification Link</p>
                        <p className="text-sm text-gray-500 leading-relaxed">SASSA will send a unique, secure URL via SMS to the mobile number used during registration. This link is encrypted and will expire exactly <strong>72 hours</strong> after it is generated.</p>
                     </div>
                  </div>
@@ -410,7 +410,7 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="space-y-8">
-          <h2 className="text-4xl font-black">Official {currentMonthYear} Payment Dates & Schedule</h2>
+          <h2 className="text-4xl font-black">{currentMonthYear} Payment Dates & Schedule</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Unlike permanent social grants (such as the Old Age or Disability grants), the Social Relief of Distress (SRD) R370 grant does not have a fixed, set-in-stone date for every month. Instead, SASSA processes these in batches based on verification cycles.
           </p>
@@ -429,7 +429,7 @@ export default function StatusCheckPage() {
                    <ul>
                       <li><strong>Batching:</strong> Not everyone is paid on the same day. If your application is approved late, you might only see funds later in the window.</li>
                       <li><strong>Bank Reflection:</strong> Once your status shows a "Pay Day" date, it can take up to 48 working hours for the South African banking system to reflect the balance in your account.</li>
-                      <li><strong>SMS Confirmation:</strong> If you collect your grant at retail points (Pick n Pay, Boxer, Shoprite, Checkers), <strong>do not go to the store</strong> until you have received the official payment SMS containing your collection code.</li>
+                      <li><strong>SMS Confirmation:</strong> If you collect your grant at retail points (Pick n Pay, Boxer, Shoprite, Checkers), <strong>do not go to the store</strong> until you have received the payment SMS containing your collection code.</li>
                    </ul>
                 </div>
              </div>
@@ -458,7 +458,7 @@ export default function StatusCheckPage() {
           <div className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-3xl border-l-8 border-blue-500">
             <p className="font-black text-blue-900 dark:text-blue-400 mb-2 text-xl">Pro Tip for Quick Access:</p>
             <p className="text-blue-800 dark:text-blue-300 leading-relaxed">
-              If your bank account supports it, use the official banking app to check your balance before traveling to an ATM. This saves you transport costs and avoids long, unnecessary queues at Postbank or retail outlets.
+               If your bank account supports it, use your banking app to check your balance before traveling to an ATM. This saves you transport costs and avoids long, unnecessary queues at Postbank or retail outlets.
             </p>
           </div>
         </section>
@@ -521,10 +521,10 @@ export default function StatusCheckPage() {
                        <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
                        <p className="text-sm">Lodge your appeal within <strong>30 days</strong> of receiving your decline status. While the legal limit is 90 days, early action is prioritized.</p>
                     </li>
-                    <li className="flex gap-3">
-                       <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
-                       <p className="text-sm">Use the official DSD portal: <a href="https://srd-appeals.dsd.gov.za" className="text-primary-gold underline">srd-appeals.dsd.gov.za</a>.</p>
-                    </li>
+                     <li className="flex gap-3">
+                        <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
+                        <p className="text-sm">Use the DSD appeals portal: <a href="https://srd-appeals.dsd.gov.za" className="text-primary-gold underline">srd-appeals.dsd.gov.za</a>.</p>
+                     </li>
                     <li className="flex gap-3">
                        <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
                        <p className="text-sm">Select the <strong>specific months</strong> you were declined. You must appeal each month individually.</p>
@@ -563,7 +563,7 @@ export default function StatusCheckPage() {
             </div>
             <div className="bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-gray-700">
                 <h4 className="text-xl font-bold mb-4 text-primary-gold">How do I verify if a SASSA SMS is a scam?</h4>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Official SASSA SMS messages will never ask for your bank PIN, full CVV number, or a "processing fee." If an SMS asks you to pay money to receive your grant, it is 100% a scam. Report such messages to the SAPS or the official SASSA fraud line.</p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">SASSA SMS messages will never ask for your bank PIN, full CVV number, or a "processing fee." If an SMS asks you to pay money to receive your grant, it is 100% a scam. Report such messages to the SAPS or the SASSA fraud line.</p>
             </div>
           </div>
         </section>

@@ -59,15 +59,20 @@
       "social relief"
     ],
     "lastUpdated": "2026-01-28",
-    "author": "SASSA Help Hub Team",
+    "author": "Themba Phakathi",
     "relatedLinks": [
+      {
+        "title": "Common SASSA Problems Hub",
+        "url": "/common-problems",
+        "isExternal": false
+      },
       {
         "title": "Check SRD Status on Official Portal",
         "url": "https://srd.sassa.gov.za",
         "isExternal": true
       },
       {
-        "title": "Official SRD Portal",
+        "title": "SRD Portal",
         "url": "https://srd.sassa.gov.za",
         "isExternal": true
       }
@@ -110,8 +115,13 @@
       "re-application"
     ],
     "lastUpdated": "2026-01-28",
-    "author": "SASSA Help Hub Team",
+    "author": "Themba Phakathi",
     "relatedLinks": [
+      {
+        "title": "Common SASSA Problems Hub",
+        "url": "/common-problems",
+        "isExternal": false
+      },
       {
         "title": "Lodge Appeal Online",
         "url": "https://srd-appeals.dsd.gov.za",
@@ -158,10 +168,10 @@
       "eligibility"
     ],
     "lastUpdated": "2026-01-28",
-    "author": "SASSA Help Hub Team",
+    "author": "Zanele Nkosi",
     "relatedLinks": [
       {
-        "title": "Official SASSA Website",
+        "title": "SASSA Website",
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
@@ -193,7 +203,7 @@
     ],
     "tags": ["change banking details", "SRD R370", "verification", "bank account"],
     "lastUpdated": "2026-03-01",
-    "author": "Editorial Team"
+    "author": "Zanele Nkosi"
   },
   {
     "id": "biometric-verification-guide",
@@ -216,7 +226,7 @@
     ],
     "tags": ["biometrics", "facial recognition", "security", "SRD grant"],
     "lastUpdated": "2026-03-05",
-    "author": "Technical Desk"
+    "author": "Themba Phakathi"
   },
   {
     "id": "guide-means-test",
@@ -253,7 +263,14 @@
     ],
     "tags": ["means test", "eligibility", "income", "assets", "thresholds"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi"
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      {
+        "title": "Common SASSA Problems Hub",
+        "url": "/common-problems",
+        "isExternal": false
+      }
+    ]
   },
   {
     "id": "guide-reinstate-grant",
@@ -662,7 +679,7 @@
     "lastUpdated": "2026-07-07",
     "author": "Themba Phakathi",
     "relatedLinks": [
-      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Website", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "National Treasury Budget", "url": "https://www.treasury.gov.za", "isExternal": true }
     ]
   },
@@ -946,7 +963,7 @@
     "lastUpdated": "2026-07-07",
     "author": "Themba Phakathi",
     "relatedLinks": [
-      { "title": "Official SASSA Grants Page", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Grants Page", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "Apply for SRD Grant", "url": "https://srd.sassa.gov.za", "isExternal": true }
     ]
   },
@@ -1016,7 +1033,7 @@
     "author": "Zanele Nkosi",
     "relatedLinks": [
       { "title": "SASSA Fraud Hotline", "url": "tel:0800601011", "isExternal": false },
-      { "title": "Official SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
+      { "title": "SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
     ]
   },
   {
@@ -1078,7 +1095,7 @@
     "lastUpdated": "2026-07-07",
     "author": "Zanele Nkosi",
     "relatedLinks": [
-      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Website", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
     ]
   },
@@ -1141,7 +1158,7 @@
     "lastUpdated": "2026-07-07",
     "author": "Themba Phakathi",
     "relatedLinks": [
-      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Website", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "Home Affairs ID Application", "url": "https://www.dha.gov.za", "isExternal": true }
     ]
   },
@@ -1207,6 +1224,91 @@
     "relatedLinks": [
       { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
       { "title": "Postbank Contact", "url": "tel:0800535455", "isExternal": false }
+    ]
+  },
+  {
+    "id": "postbank-black-card",
+    "title": "SASSA Gold Card to Postbank Black Card: How to Switch Before 31 August 2026",
+    "title_zu": "I-Gold Card ye-SASSA iye ku-Postbank Black Card: Ungashintsha Kanjani Ngaphambi Komhla ka-31 Agasti 2026",
+    "title_xh": "Ikhadi leGolide le-SASSA ukuya kwiKhadi eliMnyama le-Postbank: Indlela yokuTshintsha ngaphambi ko-31 Agasti 2026",
+    "description": "Your SASSA Gold Card stops working on 31 August 2026. Step-by-step guide to get your free Postbank Black Card replacement — where to go, what documents to bring, and how to avoid scams during the migration.",
+    "description_zu": "I-Gold Card yakho ye-SASSA iyekwa ukusebenza ngomhla ka-31 Agasti 2026. Umhlahlandlela wesinyathelo ngesinyathelo wokuthola i-Postbank Black Card yakho yamahhala — ukuthi ungaya kuphi, yimaphi amadokhumenti okumele uwaphathe, nokuthi ungazigwema kanjani izinkohliso ngesikhathi sokudluliselwa.",
+    "description_xh": "Ikhadi lakho leGolide le-SASSA liyayeka ukusebenza nge-31 Agasti 2026. Isikhokelo esinyathelo ngesinyathelo sokufumana i-Postbank Black Card yakho yasimahla — ukuba uye phi, amaphepha amalungiselelo omele uwaphathe, nendlela yokuphepha ubuxoki ngexesha lokufuduka.",
+    "category": "Card Services",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1607860103767-428e663d0e2a?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Postbank Black Card and SASSA Gold Card side by side",
+    "steps": [
+      {
+        "title": "Understand Why the Gold Card Is Being Replaced",
+        "title_zu": "Qonda Ukuthi Kungani I-Gold Card Ithathwa",
+        "title_xh": "Qonda ukuba kutheni iKhadi leGolide litshintshwa",
+        "content": "The SASSA Gold Card is being retired because of a security breach in 2021 that compromised the card's encryption. Around 2.9 million Gold Card holders must switch to the new Postbank Black Card. As of April 2026, about 600,000 beneficiaries still had not made the switch. The new Black Card has stronger security, is valid for 4 years, and protects against unauthorised deductions. Postbank has confirmed that after 31 August 2026, Gold Cards will stop working entirely.",
+        "tips": [
+          "This is the fourth and final deadline — previous extensions will not be repeated.",
+          "The South African Reserve Bank (SARB) is enforcing this deadline as part of Postbank's banking license requirements."
+        ]
+      },
+      {
+        "title": "Collect Your Free Postbank Black Card",
+        "title_zu": "Thola I-Postbank Black Card Yakho Yamahhala",
+        "title_xh": "Fumana iPostbank Black Card yakho yasimahla",
+        "content": "The replacement is completely free. Go to any Postbank service point with your South African ID document (Smart ID card or green ID book). A temporary ID is also accepted. No forms are needed. The new Black Card is activated immediately when issued, and any money remaining on your old Gold Card transfers automatically. You can collect the card at any Postbank location in any province — it does not have to be where you originally registered.",
+        "tips": [
+          "Call Postbank on 0800 53 54 55 to find your nearest service point.",
+          "Avoid going in the last week of August — queues will be longest then."
+        ]
+      },
+      {
+        "title": "What the Black Card Gives You",
+        "title_zu": "I-Black Card Ikunika Yini",
+        "title_xh": "Into oyifumana kwiKhadi eliMnyama",
+        "content": "The Postbank Black Card works like a standard bank card. You get 3 free withdrawals per month at any ATM, 1 free card replacement per year, and free monthly statements at Postbank branches. You can use it at ATMs, retail stores (Pick n Pay, Shoprite, Boxer, Checkers), and any payment system in South Africa. The card is issued by Postbank, not SASSA, and carries Postbank branding. Your grant is still paid monthly into your Postbank account — nothing changes about how you receive your money, only the card you use to access it.",
+        "tips": [
+          "The Black Card has no monthly banking fees — keep your old Gold Card's PIN as your Black Card PIN.",
+          "Postbank ATMs are free to use; other bank ATMs charge R2 to R8 per withdrawal."
+        ]
+      },
+      {
+        "title": "What Happens If You Miss the 31 August Deadline",
+        "title_zu": "Kwenzekani Uma Uphuthelwa Umnqamulajuqu Wangomhla ka-31 Agasti",
+        "title_xh": "Kwenzeka ntoni ukuba ulahlekelwe ngumhla wokugqibela we-31 Agasti",
+        "content": "After 31 August 2026, your Gold Card will stop working at ATMs, retail stores, and payment points. Your grant does not stop — the money is still paid into your Postbank account — but you will have no way to access it until you collect a Black Card. If you miss the deadline, you must go to a Postbank service point as soon as possible to get a Black Card. There will be no way to access your money until you do. Postbank has repeatedly said no further extensions will be granted.",
+        "tips": [
+          "Your grant does not expire — but you cannot access it without a working card.",
+          "If you help an elderly or disabled family member, assist them before the deadline — they are most at risk."
+        ]
+      },
+      {
+        "title": "Avoid Scams During the Migration",
+        "title_zu": "Gwema Izinkohliso Ngesikhathi Sokudluliselwa",
+        "title_xh": "Phepha ubuQhetseba ngexesha loFuduko",
+        "content": "Scammers target SASSA beneficiaries during card migrations. Remember: SASSA and Postbank will never ask for your PIN, OTP, or banking password. The card swap is completely free — anyone asking for payment is running a scam. Never give your Gold Card to anyone claiming to be an official. Destroy your old Gold Card yourself once you have collected the Black Card. Do not trust Facebook posts or WhatsApp messages claiming you need to pay to 'unlock' or 'activate' your new card.",
+        "tips": [
+          "Only trust official sources: www.postbank.co.za, www.sassa.gov.za, or call 0800 53 54 55.",
+          "Report suspected fraud to the SASSA fraud line on 0800 60 10 11."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "Is the Postbank Black Card replacement really free?", "a": "Yes. The card is completely free. No fees, no forms to pay for, no hidden costs. If anyone asks you for money to process the replacement, it is a scam." },
+      { "q": "What documents do I need to bring?", "a": "You need your South African ID document — either the Smart ID card or the green ID book. A temporary ID is also accepted. No other documents or forms are required." },
+      { "q": "Will my grant money be affected during the switch?", "a": "No. Your grant continues to be paid into your Postbank account as normal. The balance on your old Gold Card transfers automatically to the new Black Card when you collect it." },
+      { "q": "Can I collect my Black Card in a different province?", "a": "Yes. You can collect your Black Card at any Postbank service point in any province, regardless of where your grant was originally approved." },
+      { "q": "What if I cannot travel to a Postbank service point?", "a": "If you are elderly, disabled, or cannot reach a service point, ask a trusted family member to help you. You can also call Postbank on 0800 53 54 55 to ask about alternative arrangements." },
+      { "q": "What happens to my old Gold Card after I get the Black Card?", "a": "Destroy your old Gold Card by cutting through the chip and magnetic strip. Do not give it to anyone — even if they claim to be from Postbank." }
+    ],
+    "tags": ["postbank black card", "sassa gold card", "card migration", "august 2026 deadline", "sassa card replacement"],
+    "lastUpdated": "2026-07-23",
+    "author": "Themba Phakathi",
+    "relatedLinks": [
+      { "title": "Postbank Official Website", "url": "https://www.postbank.co.za", "isExternal": true },
+      { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
+      { "title": "Postbank Helpline", "url": "tel:0800535455", "isExternal": false },
+      { "title": "SASSA Fraud Hotline", "url": "tel:0800601011", "isExternal": false },
+      { "title": "SASSA Offices & Service Points", "url": "/sassa-offices", "isExternal": false },
+      { "title": "SASSA Payment Methods Guide", "url": "/guides/sassa-payment-methods", "isExternal": false }
     ]
   }
 ]

@@ -82,7 +82,7 @@ const statusMeanings: StatusMeaning[] = [
       { label: "WhatsApp Line", value: "082 046 8553" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
-    related: ["/status/application-complete", "/status/approved", "/status/declined", "/faq/why-is-my-status-still-pending"],
+    related: ["/status/application-complete", "/status/approved", "/status/declined", "/faq"],
     last_updated: todayStr(),
     author: "Themba Phakathi"
   },
@@ -142,7 +142,7 @@ const statusMeanings: StatusMeaning[] = [
       { label: "Home Affairs", value: "0800 60 11 90" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.dha.gov.za"],
-    related: ["/status/pending", "/status/declined", "/guides/biometric-verification-guide", "/faq/identity-verification-failed"],
+    related: ["/status/pending", "/status/declined", "/guides/biometric-verification-guide", "/faq"],
     last_updated: todayStr(),
     author: "Zanele Nkosi"
   },
@@ -259,7 +259,7 @@ const statusMeanings: StatusMeaning[] = [
       { label: "SASSA Office", value: "Visit our offices page" }
     ],
     sources: ["https://srd-appeals.dsd.gov.za", "https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
-    related: ["/status/means-test-failed", "/guides/appeal-guide", "/grants/srd-r370-grant", "/faq"],
+    related: ["/status/means-test-failed", "/guides/appeal-guide", "/grants/srd-r370-grant", "/decline-reason/income-source-detected", "/faq"],
     last_updated: todayStr(),
     author: "Themba Phakathi"
   },

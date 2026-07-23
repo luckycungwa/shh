@@ -22,9 +22,10 @@ export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
-  const isActive = (href: string) => {
+  const isActive = (href: string, altPaths?: string[]) => {
     if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+    if (altPaths?.some(p => pathname === p || pathname.startsWith(p + "/") || pathname.startsWith(p + "?"))) return true;
+    return pathname === href || pathname.startsWith(href + "/") || pathname.startsWith(href + "?");
   };
 
   const linkClass = (href: string) =>
@@ -32,9 +33,10 @@ export default function NavbarComponent() {
       ? "text-primary-gold font-bold"
       : "text-foreground";
 
-  const menuItems = [
+  type MenuItem = { name: string; href: string; icon: React.ReactNode; altPaths?: string[] };
+  const menuItems: MenuItem[] = [
     { name: "Home", href: "/", icon: <FaHome /> },
-    { name: "Status Check", href: "/status-check", icon: <FaUserCheck /> },
+    { name: "Status Check", href: "/status-check", icon: <FaUserCheck />, altPaths: ["/status"] },
     { name: "Payment Dates", href: "/payment-calendar", icon: <FaCalendarAlt /> },
     { name: "SRD Grant Guide", href: "/guides/srd-grant", icon: <FaFileAlt /> },
     { name: "News & Updates", href: "/updates", icon: <FaNewspaper /> },
@@ -78,7 +80,7 @@ export default function NavbarComponent() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link as={NextLink} href="/status-check" aria-current={isActive("/status-check") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/status-check") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+          <Link as={NextLink} href="/status-check" aria-current={isActive("/status-check", ["/status"]) ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/status-check", ["/status"]) ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
             Status Check
           </Link>
         </NavbarItem>
@@ -125,16 +127,16 @@ export default function NavbarComponent() {
           <NavbarMenuItem key={`${item.href}-${index}`}>
             <Link
               as={NextLink}
-              aria-current={isActive(item.href) ? "page" : undefined}
+              aria-current={isActive(item.href, item.altPaths) ? "page" : undefined}
               className={`w-full flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 ${
-                isActive(item.href)
+                isActive(item.href, item.altPaths)
                   ? "bg-primary-gold/10 text-primary-gold font-bold"
                   : "text-foreground hover:bg-gray-50 dark:hover:bg-white/5"
               }`}
               href={item.href}
               size="lg"
             >
-              <span className={`text-lg ${isActive(item.href) ? "text-primary-gold" : "text-secondary-gray"}`}>
+              <span className={`text-lg ${isActive(item.href, item.altPaths) ? "text-primary-gold" : "text-secondary-gray"}`}>
                 {item.icon}
               </span>
               {item.name}
