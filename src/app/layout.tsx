@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "South African social security",
     "SASSA status check",
   ],
-  authors: [{ name: "Themba Phakathi" }, { name: "Zanele Nkosi" }],
+  authors: [{ name: "Lucky Cungwa" }],
   verification: {
     google: "SKlM_MFnb6YY5C-1Ma3k5ETqJBwJSnicqxaqTYzp7HU",
   },
@@ -94,6 +94,19 @@ export default function RootLayout({
                 urlTemplate: "https://www.sassahelphub.co.za/search?q={search_term_string}",
               },
               "query-input": "required name=search_term_string",
+            },
+          }),
+        }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "SASSA Help Hub",
+            url: "https://www.sassahelphub.co.za",
+            description: "Independent guide to SASSA grants, payment dates, and applications in South Africa.",
+            founder: {
+              "@type": "Person",
+              name: "Lucky Cungwa",
             },
           }),
         }} />

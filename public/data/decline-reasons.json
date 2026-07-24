@@ -22,7 +22,7 @@
     "success_rate": "Most appeals succeed if the deposit was genuinely not income (family gift, stokvel, refund). Be honest and specific in your explanation.",
     "tags": ["income source detected", "means test failed", "bank deposits", "appeal"],
     "last_updated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/means-test-failed", "/status/declined"]
   },
   {
@@ -48,7 +48,7 @@
     "success_rate": "High if the cause is a simple typo or name mismatch — fix the details and reapply. Lower if Home Affairs records themselves need correction.",
     "tags": ["identity verification", "home affairs mismatch", "name error", "ID verification failed"],
     "last_updated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/identity-verification", "/status/declined"]
   },
   {
@@ -72,7 +72,7 @@
     "success_rate": "High if you provide a UIF deregistration letter or confirmation that you are not receiving payments.",
     "tags": ["uif registered", "uif detected", "unemployment fund", "appeal"],
     "last_updated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/declined", "/status/means-test-failed"]
   },
   {
@@ -96,7 +96,7 @@
     "success_rate": "Very high with a proper clearance letter from the university financial aid office.",
     "tags": ["nsfas", "student funding", "university", "appeal"],
     "last_updated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/declined", "/status/means-test-failed"]
   },
   {
@@ -120,7 +120,7 @@
     "success_rate": "This decline is usually accurate. Only appeal if you believe a grant is fraudulently linked to your ID.",
     "tags": ["existing grant", "duplicate grant", "one grant rule", "sassa fraud"],
     "last_updated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/declined", "/guides/grant-comparison-overview"]
   },
   {
@@ -144,7 +144,7 @@
     "success_rate": "Good if you provide a formal letter from the government department confirming you are no longer employed.",
     "tags": ["government payroll", "government employee", "gepf", "public service"],
     "last_updated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/declined", "/status/means-test-failed"]
   },
   {
@@ -167,7 +167,7 @@
     "success_rate": "High if you are appealing because the date of birth was entered incorrectly. If you genuinely do not meet the age requirement, apply for the correct grant type.",
     "tags": ["age outside range", "under 18", "over 60", "old age grant", "child support"],
     "last_updated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/declined", "/grants/old-age-pension", "/grants/child-support-grant"]
   },
   {
@@ -191,7 +191,7 @@
     "success_rate": "High once the Home Affairs record is corrected. Expect delays — this process can take 2 to 4 weeks.",
     "tags": ["deceased record", "home affairs error", "identity theft", "living confirmation"],
     "last_updated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "related_statuses": ["/status/identity-verification", "/status/declined"]
   }
 ]

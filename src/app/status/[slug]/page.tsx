@@ -54,7 +54,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/grants/srd-r370-grant", "/status/pending", "/status/declined"],
     last_updated: todayStr(),
-    author: "Themba Phakathi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "pending",
@@ -84,7 +84,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/application-complete", "/status/approved", "/status/declined", "/faq"],
     last_updated: todayStr(),
-    author: "Themba Phakathi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "bank-details-pending",
@@ -114,7 +114,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/guides/change-banking-details", "/status/approved", "/payment-calendar"],
     last_updated: todayStr(),
-    author: "Zanele Nkosi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "identity-verification",
@@ -144,7 +144,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.dha.gov.za"],
     related: ["/status/pending", "/status/declined", "/guides/biometric-verification-guide", "/faq"],
     last_updated: todayStr(),
-    author: "Zanele Nkosi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "referred",
@@ -173,7 +173,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/pending", "/status/means-test-failed", "/status/declined", "/guides/appeal-guide"],
     last_updated: todayStr(),
-    author: "Themba Phakathi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "means-test-failed",
@@ -202,7 +202,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd-appeals.dsd.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/declined", "/guides/appeal-guide", "/grants/srd-r370-grant", "/eligibility-check"],
     last_updated: todayStr(),
-    author: "Themba Phakathi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "approved",
@@ -230,7 +230,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/approved", "/status/paid", "/payment-calendar", "/guides/change-banking-details"],
     last_updated: todayStr(),
-    author: "Zanele Nkosi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "declined",
@@ -261,7 +261,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd-appeals.dsd.gov.za", "https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/means-test-failed", "/guides/appeal-guide", "/grants/srd-r370-grant", "/decline-reason/income-source-detected", "/faq"],
     last_updated: todayStr(),
-    author: "Themba Phakathi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "appeal-pending",
@@ -289,7 +289,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd-appeals.dsd.gov.za", "https://www.dsd.gov.za"],
     related: ["/guides/appeal-guide", "/status/declined", "/status/approved", "/status/declined"],
     last_updated: todayStr(),
-    author: "Zanele Nkosi"
+    author: "Lucky Cungwa"
   },
   {
     slug: "paid",
@@ -317,7 +317,7 @@ const statusMeanings: StatusMeaning[] = [
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/approved", "/payment-calendar", "/faq"],
     last_updated: todayStr(),
-    author: "Zanele Nkosi"
+    author: "Lucky Cungwa"
   }
 ];
 

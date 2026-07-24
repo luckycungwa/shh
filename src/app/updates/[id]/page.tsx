@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       url,
       type: "article",
       publishedTime: update.date,
-      authors: [update.author || "Themba Phakathi"],
+      authors: [update.author || "Lucky Cungwa"],
       images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
     },
   };
@@ -82,7 +82,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
     "dateModified": update.date,
     "author": {
       "@type": "Person",
-      "name": update.author || "Themba Phakathi"
+      "name": update.author || "Lucky Cungwa"
     },
     "publisher": {
       "@type": "Organization",

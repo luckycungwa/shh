@@ -97,7 +97,7 @@ export default function GlossaryPage() {
         </div>
 
         <Divider className="my-12" />
-        <EditorialFooter lastUpdated={getCurrentMonthYearKey()} author="Themba Phakathi" />
+        <EditorialFooter lastUpdated={getCurrentMonthYearKey()} author="Lucky Cungwa" />
       </article>
     </div>
   );

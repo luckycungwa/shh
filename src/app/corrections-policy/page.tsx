@@ -46,7 +46,7 @@ export default function CorrectionsPolicyPage() {
           <ul className="space-y-4 text-gray-700 dark:text-gray-300">
             <li className="flex gap-3">
               <span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>
-              <p><strong>Email:</strong> Send details of the error to our team via our <NextLink href="/contact" className="text-primary-gold underline">contact page</NextLink> with the subject line &quot;Correction Request.&quot;</p>
+              <p><strong>Email:</strong> Send details of the error via our <NextLink href="/contact" className="text-primary-gold underline">contact page</NextLink> with the subject line &quot;Correction Request.&quot;</p>
             </li>
             <li className="flex gap-3">
               <span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -67,7 +67,7 @@ export default function CorrectionsPolicyPage() {
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-md">1</div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Investigation</h3>
-                <p className="text-gray-600 dark:text-gray-400">We investigate all correction requests within 48 hours. Our team verifies the claim against official sources.</p>
+                <p className="text-gray-600 dark:text-gray-400">I investigate all correction requests within 48 hours and verify the claim against official sources.</p>
               </div>
             </div>
             <div className="flex gap-6">

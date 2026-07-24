@@ -112,7 +112,7 @@ export default function FAQPage() {
           <CardBody className="flex flex-col items-center text-center gap-4">
             <FaQuestionCircle className="text-4xl text-primary-gold" />
             <h3 className="text-xl font-bold">Did not find your answer?</h3>
-            <p className="text-secondary-gray">Our team is constantly updating this database with new {curYear} policy changes.</p>
+            <p className="text-secondary-gray">I'm constantly updating this database with new {curYear} policy changes.</p>
             <a
               href="/contact"
               className="bg-primary-gold text-primary-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform"

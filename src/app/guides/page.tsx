@@ -143,7 +143,7 @@ export default function GuidesListPage() {
         <Card className="bg-primary-black text-white p-12 rounded-[3rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Need More Help?</h2>
-            <p className="text-secondary-gray max-w-xl mx-auto">Every SASSA situation is different. If you cannot find the guide you need, reach out to our team or visit the official SASSA website.</p>
+            <p className="text-secondary-gray max-w-xl mx-auto">Every SASSA situation is different. If you cannot find the guide you need, drop me a message or visit the official SASSA website.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button as={NextLink} href="/contact" color="primary" className="font-bold px-8 py-6">Contact Us</Button>
               <Button as={NextLink} href="/faq" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">Browse All FAQs</Button>

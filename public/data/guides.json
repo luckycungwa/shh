@@ -59,7 +59,7 @@
       "social relief"
     ],
     "lastUpdated": "2026-01-28",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       {
         "title": "Common SASSA Problems Hub",
@@ -115,7 +115,7 @@
       "re-application"
     ],
     "lastUpdated": "2026-01-28",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       {
         "title": "Common SASSA Problems Hub",
@@ -168,7 +168,7 @@
       "eligibility"
     ],
     "lastUpdated": "2026-01-28",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       {
         "title": "SASSA Website",
@@ -203,7 +203,7 @@
     ],
     "tags": ["change banking details", "SRD R370", "verification", "bank account"],
     "lastUpdated": "2026-03-01",
-    "author": "Zanele Nkosi"
+    "author": "Lucky Cungwa"
   },
   {
     "id": "biometric-verification-guide",
@@ -226,7 +226,7 @@
     ],
     "tags": ["biometrics", "facial recognition", "security", "SRD grant"],
     "lastUpdated": "2026-03-05",
-    "author": "Themba Phakathi"
+    "author": "Lucky Cungwa"
   },
   {
     "id": "guide-means-test",
@@ -263,7 +263,7 @@
     ],
     "tags": ["means test", "eligibility", "income", "assets", "thresholds"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       {
         "title": "Common SASSA Problems Hub",
@@ -307,7 +307,7 @@
     ],
     "tags": ["reinstate", "lapsed grant", "suspended grant", "grant restoration"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi"
+    "author": "Lucky Cungwa"
   },
   {
     "id": "guide-report-fraud",
@@ -336,7 +336,7 @@
     ],
     "tags": ["fraud", "scam alert", "reporting", "crime prevention"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi"
+    "author": "Lucky Cungwa"
   },
   {
     "id": "lost-phone-number",
@@ -401,7 +401,7 @@
     ],
     "tags": ["lost phone number", "change phone number", "SASSA phone update", "SRD account"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
       { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
@@ -470,7 +470,7 @@
     ],
     "tags": ["moya app", "moya sassa", "free data sassa", "sassa status check app"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "Download Moya App", "url": "https://moya.app", "isExternal": true },
       { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
@@ -539,7 +539,7 @@
     ],
     "tags": ["ussd codes", "sassa ussd", "check status without internet", "*120*3210#", "*120*69277#"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
       { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
@@ -608,7 +608,7 @@
     ],
     "tags": ["sassa whatsapp", "whatsapp sassa", "082 046 8553", "sassa chatbot"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA WhatsApp Line", "url": "https://wa.me/27820468553", "isExternal": true },
       { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
@@ -677,7 +677,7 @@
     ],
     "tags": ["sassa grant amounts", "grant history", "sassa increases", "old age grant amount", "child support grant"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA Website", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "National Treasury Budget", "url": "https://www.treasury.gov.za", "isExternal": true }
@@ -746,7 +746,7 @@
     ],
     "tags": ["stokvel", "e-wallet", "srd declined", "income source detected", "bank deposits"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "Submit SRD Appeal", "url": "https://srd-appeals.dsd.gov.za", "isExternal": true },
       { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
@@ -815,7 +815,7 @@
     ],
     "tags": ["sassa appeal timeline", "appeal waiting time", "ITSAA", "srd appeal pending", "appeal status"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "ITSAA Appeals Portal", "url": "https://srd-appeals.dsd.gov.za", "isExternal": true },
       { "title": "Legal Aid South Africa", "url": "https://www.legal-aid.co.za", "isExternal": true }
@@ -884,7 +884,7 @@
     ],
     "tags": ["sassa reassessment", "monthly check", "srd renewal", "sassa reapplication", "grant review"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "Check Your SRD Status", "url": "https://srd.sassa.gov.za", "isExternal": true },
       { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
@@ -961,7 +961,7 @@
     ],
     "tags": ["sassa grant comparison", "which grant", "srd vs old age", "grant types", "sassa grants 2026"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA Grants Page", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "Apply for SRD Grant", "url": "https://srd.sassa.gov.za", "isExternal": true }
@@ -1030,7 +1030,7 @@
     ],
     "tags": ["sassa scams", "fake sassa websites", "phishing", "sassa fraud", "online security"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA Fraud Hotline", "url": "tel:0800601011", "isExternal": false },
       { "title": "SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true }
@@ -1093,7 +1093,7 @@
     ],
     "tags": ["life certification", "e-life certification", "sassa verification", "grant suspension", "annual verification"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA Website", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
@@ -1156,7 +1156,7 @@
     ],
     "tags": ["sassa documents", "grant checklist", "what to bring", "id document", "proof of residence"],
     "lastUpdated": "2026-07-07",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA Website", "url": "https://www.sassa.gov.za", "isExternal": true },
       { "title": "Home Affairs ID Application", "url": "https://www.dha.gov.za", "isExternal": true }
@@ -1220,7 +1220,7 @@
     ],
     "tags": ["sassa payment methods", "bank transfer", "postbank black card", "cash send", "post office collection"],
     "lastUpdated": "2026-07-07",
-    "author": "Zanele Nkosi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
       { "title": "Postbank Contact", "url": "tel:0800535455", "isExternal": false }
@@ -1301,7 +1301,7 @@
     ],
     "tags": ["postbank black card", "sassa gold card", "card migration", "august 2026 deadline", "sassa card replacement"],
     "lastUpdated": "2026-07-23",
-    "author": "Themba Phakathi",
+    "author": "Lucky Cungwa",
     "relatedLinks": [
       { "title": "Postbank Official Website", "url": "https://www.postbank.co.za", "isExternal": true },
       { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za", "isExternal": true },
@@ -1309,6 +1309,215 @@
       { "title": "SASSA Fraud Hotline", "url": "tel:0800601011", "isExternal": false },
       { "title": "SASSA Offices & Service Points", "url": "/sassa-offices", "isExternal": false },
       { "title": "SASSA Payment Methods Guide", "url": "/guides/sassa-payment-methods", "isExternal": false }
+    ]
+  },
+  {
+    "id": "bank-details-pending-fix",
+    "title": "How to Fix 'Bank Details Pending' on SASSA SRD in 2026",
+    "description": "Your SRD status says 'Approved' but you see 'Bank Details Pending' and no payment has arrived. Follow this step-by-step guide to fix it and get your R370 paid.",
+    "category": "SRD Grant",
+    "difficulty": "intermediate",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Bank account and phone showing successful money transfer",
+    "steps": [
+      {
+        "title": "Understand What 'Bank Details Pending' Means",
+        "content": "When your SASSA SRD status shows 'Bank Details Pending', it means SASSA has approved your grant application for the month but cannot pay you because they do not have valid banking information linked to your application. Your money exists in the system but cannot be released. This is not the same as 'Pending' (which means your application is still being reviewed). 'Bank Details Pending' is a payment block, not an application review block. You must fix it before the payment batch closes for the month.",
+        "tips": [
+          "Check your status on srd.sassa.gov.za first — if it says 'Approved' + 'Bank Details Pending', this guide applies.",
+          "The payment batch runs in the last week of each month — fix this before the 25th to get paid that month."
+        ]
+      },
+      {
+        "title": "Fix via the Official SRD Portal (Fastest Method)",
+        "content": "Go to srd.sassa.gov.za on your phone or computer browser. Scroll down to the section that says 'How do I change my banking details?'. Enter your 13-digit South African ID number and click Submit. SASSA will send a secure link via SMS to your registered cellphone number. Click the link, enter your bank name, account number, and branch code. The account must be in your name. Click Submit. You will see a confirmation message. Your banking details are now updated.",
+        "tips": [
+          "Use a personal bank account in your name — SASSA does not pay into third-party accounts.",
+          "Double-check your account number before submitting — one wrong digit delays your payment by another month."
+        ]
+      },
+      {
+        "title": "Fix via the Moya App (No Data Needed)",
+        "content": "Download the Moya App from the Google Play Store or Apple App Store. Open the app and look for the 'SASSA SRD' section. Select 'Update Banking Details'. Enter your 13-digit ID number. Enter your bank name, account number, and branch code. Submit the update. The Moya App uses free data for SASSA services, so you do not need to buy airtime or data. The Moya App method is often faster than the web portal because it does not require an SMS OTP link.",
+        "tips": [
+          "The Moya App is the only third-party app officially partnered with SASSA — do not use any other app.",
+          "If you updated your details on the portal already, do not update again on Moya — it may create a conflict."
+        ]
+      },
+      {
+        "title": "Fix via SASSA WhatsApp Line",
+        "content": "Open WhatsApp and send a message to 082 046 8553. Type 'Hi' to start the chatbot. Select 'Update Banking Details' from the menu. Enter your 13-digit ID number when prompted. Enter your bank name, account number, and branch code. The chatbot will confirm the details before submitting. Take a screenshot of the confirmation message as proof. The WhatsApp method works well if you have limited data — WhatsApp uses very little data compared to a web browser.",
+        "tips": [
+          "082 046 8553 is the ONLY official SASSA WhatsApp number — verify it carefully.",
+          "SASSA will never ask for your banking PIN or password on WhatsApp."
+        ]
+      },
+      {
+        "title": "Call the SASSA Helpline If Nothing Works",
+        "content": "If you have tried all three methods above and your status still shows 'Bank Details Pending', call the SASSA helpline on 0800 60 10 11. Explain that you have updated your banking details but the status has not changed. The helpline agent may need to escalate your case to a supervisor. Ask for a reference number for your call. If the helpline cannot resolve it, visit your nearest SASSA office in person with your ID document and bank confirmation letter.",
+        "tips": [
+          "The helpline is toll-free — you do not need airtime to call from any South African network.",
+          "Call early in the morning (08:00) to avoid long wait times — afternoons are busiest."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "How long does it take for 'Bank Details Pending' to change after I update?", "a": "It usually takes 3 to 7 working days for SASSA to verify your new banking details. If you updated before the 25th of the month, you should be included in that month's payment batch." },
+      { "q": "Can I use a Capitec or TymeBank account for SASSA?", "a": "Yes. SASSA pays into all major South African banks including Capitec, FNB, Standard Bank, Nedbank, Absa, TymeBank, Bank Zero, and Discovery Bank. The account must be registered in your name." },
+      { "q": "What if I updated my details but still did not receive payment?", "a": "If your status changed from 'Bank Details Pending' to 'Approved' but you still have not received money, the payment may have been processed in the next batch. Check your status again after the next payment window (last week of the month)." },
+      { "q": "Can I collect my grant at Pick n Pay instead while fixing my bank details?", "a": "No. 'Bank Details Pending' means SASSA does not have valid payment information at all. You must first update your banking details. Once updated, you can switch your payment method to Cash Send on the SRD portal for future months." }
+    ],
+    "tags": ["bank details pending", "sassa bank details", "srd payment pending", "fix banking details sassa", "sassa payment not received"],
+    "lastUpdated": "2026-07-24",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      { "title": "SRD Portal — Update Banking Details", "url": "https://srd.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Payment Methods Guide", "url": "/guides/sassa-payment-methods", "isExternal": false },
+      { "title": "Moya App Guide for SASSA", "url": "/guides/moya-app-sassa", "isExternal": false },
+      { "title": "SASSA WhatsApp Guide", "url": "/guides/sassa-whatsapp", "isExternal": false },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
+    ]
+  },
+  {
+    "id": "biometric-fix-guide",
+    "title": "SASSA Biometric Verification Not Working? 7 Common Fixes for 2026",
+    "description": "Your SASSA biometric (eKYC) verification keeps failing? Fix liveness detection errors, link expiry issues, camera problems, and clear your 'Self-Correction Required' status.",
+    "category": "Technology",
+    "difficulty": "intermediate",
+    "estimatedTime": "10 minutes",
+    "image": "https://images.unsplash.com/photo-1573497491765-dccce02aac4b?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Smartphone showing facial recognition verification screen",
+    "steps": [
+      {
+        "title": "Why Your Biometric Verification Is Failing",
+        "content": "SASSA's biometric (eKYC) system uses facial recognition to verify your identity against the Department of Home Affairs database. When it fails, the most common causes are: poor lighting creating shadows on your face, a dirty or smudged phone camera lens, slow internet causing the upload to time out, the SMS verification link has expired (links typically expire within 72 hours), or you are using an old photo instead of a live selfie. The system uses 'liveness detection' — it can tell if you are holding a photo or video up to the camera.",
+        "tips": [
+          "90% of biometric failures are caused by lighting or camera issues — fix these first.",
+          "The system does NOT store your photo — it only compares it to Home Affairs records and discards it."
+        ]
+      },
+      {
+        "title": "Fix 1: Improve Your Lighting and Background",
+        "content": "Good lighting is the single most important factor for successful biometric verification. Sit facing a window during daylight hours — natural light gives the best result. Avoid having a bright light or window behind you (backlighting creates dark shadows on your face). Use a plain, light-coloured wall as your background. Remove hats, sunglasses, and masks. If you wear prescription glasses, keep them on — the system is designed to work with glasses.",
+        "tips": [
+          "Natural daylight from a window is better than room lighting.",
+          "If you must do it at night, sit under a bright overhead light facing directly toward you."
+        ]
+      },
+      {
+        "title": "Fix 2: Clean Your Phone Camera Lens",
+        "content": "A smudged camera lens is one of the most overlooked causes of biometric failure. Wipe your phone's front camera (selfie camera) with a clean, dry cloth. Many people do not realise their camera lens has fingerprints, dust, or grease on it. After cleaning, test the camera by taking a normal selfie — if it looks clear, the lens is clean enough for biometric verification.",
+        "tips": [
+          "Use a microfiber cloth if available — tissue paper can leave fibers on the lens.",
+          "Remove your phone case — some cases partially cover or smudge the camera lens."
+        ]
+      },
+      {
+        "title": "Fix 3: Use a Strong Internet Connection",
+        "content": "The biometric verification process uploads a photo to SASSA's servers. If your internet connection is weak, the upload may time out or fail silently. Switch from mobile data to WiFi if available. If you must use mobile data, move to an area with strong signal (preferably 4G or 5G). Do not move around during the verification process — stay still until you see the confirmation screen.",
+        "tips": [
+          "If you have low signal, try going outside or near a window.",
+          "Free SASSA services on the Moya App do not cover biometric uploads — you need your own data for this."
+        ]
+      },
+      {
+        "title": "Fix 4: Request a New Verification Link",
+        "content": "SASSA's biometric verification links expire within 72 hours. If your link has expired, you will see 'Link Expired' or 'Session Timeout' when you click it. To get a new link, log into the SRD portal at srd.sassa.gov.za. If your status shows 'Biometric Pending' or 'Self-Correction Required', the system should generate a new link within 24 to 48 hours. If it does not, call the SASSA helpline at 0800 60 10 11 and ask them to resend the biometric link.",
+        "tips": [
+          "Complete the verification as soon as you receive the SMS — do not wait.",
+          "The SMS link is unique to you — do not share it with anyone."
+        ]
+      },
+      {
+        "title": "Fix 5: Complete Liveness Detection Correctly",
+        "content": "The system uses 'liveness detection' to confirm you are a real person, not a photo or video. When prompted: blink both eyes naturally (do not squint), turn your head slowly left and right as instructed, and keep your face centred in the on-screen oval guide. If you fail the liveness check, the system will let you try again — usually up to 3 attempts. After 3 failures, you must request a new link.",
+        "tips": [
+          "Move your head slowly — fast movements confuse the liveness detection AI.",
+          "Look directly at the camera, not at the screen showing your own face."
+        ]
+      },
+      {
+        "title": "Fix 6: Visit a SASSA Office as Last Resort",
+        "content": "If you have tried all the fixes above and the biometric verification still fails, visit your nearest SASSA office in person. Bring your ID document. Explain that you are unable to complete the online biometric verification. The SASSA officer will verify your identity manually using your fingerprints or by comparing your ID photo to your face. This takes longer but is guaranteed to work.",
+        "tips": [
+          "Go early in the morning (before 08:00) to avoid long queues.",
+          "If you cannot travel due to disability or illness, call 0800 60 10 11 to request a home visit."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "How many times can I retry the biometric verification?", "a": "You typically get 3 attempts per verification link. After 3 failures, the link expires and you must request a new one via the SRD portal or by calling SASSA." },
+      { "q": "Will my biometric data be stored by SASSA?", "a": "SASSA states that facial recognition data is compared against Home Affairs records and then discarded. It is not stored permanently. The process complies with POPIA (South Africa's data protection law)." },
+      { "q": "What does 'Self-Correction Required' mean on my status?", "a": "This means your biometric verification failed or the link expired. You need to complete the biometric process before your application can proceed to approval. Follow the steps in this guide to fix it." },
+      { "q": "Can I use my ID photo instead of taking a selfie?", "a": "No. The system requires a live selfie for 'liveness detection'. Taking a photo of your ID or a printed photo will be detected as fraud and your verification will fail." }
+    ],
+    "tags": ["sassa biometric", "biometric verification failed", "ekyc sassa", "facial recognition sassa", "self-correction required", "liveness detection failed"],
+    "lastUpdated": "2026-07-24",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      { "title": "SASSA Biometric Verification Guide", "url": "/guides/biometric-verification-guide", "isExternal": false },
+      { "title": "SASSA SRD Portal", "url": "https://srd.sassa.gov.za", "isExternal": true },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false },
+      { "title": "SASSA Online Security Guide", "url": "/guides/sassa-online-security", "isExternal": false }
+    ]
+  },
+  {
+    "id": "status-check-no-phone",
+    "title": "How to Check SASSA Status Without a Smartphone or Internet in 2026",
+    "description": "No smartphone? No data? No problem. Use these methods to check your SASSA grant status from any phone — USSD codes, toll-free helpline, or asking a family member to help.",
+    "category": "Technology",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1589496931914-67f415f2e85f?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Old-style mobile phone keypad showing keypad dialing",
+    "steps": [
+      {
+        "title": "Method 1: Use USSD Codes (Best for Feature Phones)",
+        "content": "USSD codes work on any cellphone — including old Nokia and feature phones — without needing data or airtime. Dial *120*69277# and press call. This is the dedicated code for SRD R370 grant status checks. After dialing, you will see a menu on your screen. Select 'Check Status', enter your 13-digit ID number when prompted, and your current status will appear. You can also dial *120*3210# to check your Postbank balance if you have a SASSA Gold Card or Postbank Black Card.",
+        "tips": [
+          "USSD codes are free from Vodacom, MTN, Cell C, and Telkom.",
+          "Write down your result — the screen times out after 30 to 60 seconds."
+        ]
+      },
+      {
+        "title": "Method 2: Call the Toll-Free SASSA Helpline",
+        "content": "Call the SASSA helpline on 0800 60 10 11 from any phone. The call is toll-free — you do not need airtime. Follow the voice prompts to check your grant status. You will need your 13-digit ID number ready. The automated system will tell you your current status. If you need to speak to a human agent, stay on the line or select the option to speak to an operator. The helpline is open Monday to Friday from 08:00 to 16:00.",
+        "tips": [
+          "Call early in the morning (08:00) to avoid long wait times.",
+          "Have your ID number written down before you call so you do not forget it."
+        ]
+      },
+      {
+        "title": "Method 3: Ask a Family Member to Check for You",
+        "content": "If you cannot use USSD codes or the helpline, ask a trusted family member, neighbour, or community worker to check your status on your behalf. Give them your 13-digit ID number. They can check online at srd.sassa.gov.za, via the Moya App, or via the SASSA WhatsApp line (082 046 8553). Important: Only share your ID number with someone you trust completely. Never share your banking PIN or SASSA card PIN.",
+        "tips": [
+          "Do not ask strangers or WhatsApp group admins to check your status — they may steal your ID.",
+          "Your family member can also check via WhatsApp by sending 'Status' to 082 046 8553."
+        ]
+      },
+      {
+        "title": "Method 4: Visit a SASSA Office or Mobile Unit",
+        "content": "If all other methods fail, visit your nearest SASSA office in person. Bring your ID document. The SASSA officer will look up your status on their system and tell you the result. If you live in a rural area, check if a SASSA mobile unit is visiting your area — these 'offices on wheels' serve communities in Limpopo, Eastern Cape, KwaZulu-Natal, and Northern Cape. Find your nearest office on our [SASSA offices page](/sassa-offices) or call 0800 60 10 11.",
+        "tips": [
+          "Go early in the morning (before 08:00) to avoid queues.",
+          "If you are elderly or disabled, ask a family member to go on your behalf with a letter of consent."
+        ]
+      }
+    ],
+    "faqs": [
+      { "q": "Is there a fee for checking SASSA status via USSD?", "a": "No. All SASSA USSD codes are free from Vodacom, MTN, Cell C, and Telkom. You do not need airtime or data." },
+      { "q": "Can I check someone else's SASSA status for them?", "a": "Yes, if you have their ID number and permission. You can check online at srd.sassa.gov.za or via WhatsApp at 082 046 8553. Never check a stranger's status — you could be helping a scammer." },
+      { "q": "What if the USSD code does not work on my phone?", "a": "Make sure you dial the code exactly as shown — including the asterisks (*) and hash (#). If it still does not work, try switching your phone off and on, or insert your SIM into a different phone. Some networks block certain codes — call your network provider to unblock them." }
+    ],
+    "tags": ["sassa status check no phone", "sassa without smartphone", "ussd code sassa", "check sassa status offline", "sassa feature phone"],
+    "lastUpdated": "2026-07-24",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      { "title": "SASSA USSD Codes Guide", "url": "/guides/ussd-codes", "isExternal": false },
+      { "title": "SASSA WhatsApp Guide", "url": "/guides/sassa-whatsapp", "isExternal": false },
+      { "title": "SASSA Offices & Resources", "url": "/sassa-offices", "isExternal": false },
+      { "title": "SASSA Helpline", "url": "tel:0800601011", "isExternal": false }
     ]
   }
 ]

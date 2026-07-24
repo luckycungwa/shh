@@ -126,7 +126,7 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
         </section>
 
         <Divider />
-        <EditorialFooter lastUpdated={province.last_updated} author="Zanele Nkosi" />
+        <EditorialFooter lastUpdated={province.last_updated} author="Lucky Cungwa" />
       </article>
     </div>
   );

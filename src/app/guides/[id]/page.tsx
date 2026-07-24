@@ -266,7 +266,7 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
            <Card className="p-8 bg-primary-black text-white border-none shadow-2xl rounded-[2.5rem] relative overflow-hidden group">
               <CardBody className="p-0 space-y-6">
                  <h3 className="text-2xl font-black text-primary-gold">Need Help?</h3>
-                 <p className="text-sm text-secondary-gray">If you're still unsure about this process, you can contact our community team or the official SASSA helpline.</p>
+                 <p className="text-sm text-secondary-gray">If you're still unsure about this process, you can contact me or the official SASSA helpline.</p>
                  <Button as={NextLink} href="/contact" fullWidth color="primary" className="font-bold">
                     Get in Touch
                  </Button>

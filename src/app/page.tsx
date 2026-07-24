@@ -270,8 +270,8 @@ export default function HomePage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-black text-primary-black mb-4 tracking-tight">Still Need Assistance?</h2>
-            <p className="text-lg text-primary-black/80 max-w-lg mx-auto mb-10">
-              Explore our comprehensive FAQ database or get in touch with our team for guidance on your grant application.
+<p className="text-lg text-primary-black/80 max-w-lg mx-auto mb-10">
+               Browse the FAQ or get in touch if you need help with your grant application.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
@@ -289,7 +289,7 @@ export default function HomePage() {
                 size="lg"
                 className="font-bold px-10 py-7 text-lg border-primary-black/30 text-primary-black hover:bg-primary-black/10"
               >
-                Contact Our Team
+                Contact Me
               </Button>
             </div>
           </div>

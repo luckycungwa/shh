@@ -203,12 +203,12 @@ export default function StatusCheckPage() {
             </p>
           </div>
 
-          <h2 className="text-4xl font-black">Why Monitoring Your SASSA Status is Crucial in {currentMonthYear}</h2>
+          <h2 className="text-4xl font-black">Why Checking Your Status Matters in {currentMonthYear}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            As of {currentMonthYear}, the Social Relief of Distress (SRD) R370 grant remains a vital financial support for over 9 million South Africans. However, the application and verification landscape has shifted towards a "Digital-First" model. This transition means that the South African Social Security Agency (SASSA) now utilizes high-frequency bank audits and new AI-driven facial recognition protocols to validate beneficiaries.
+            The SRD R370 grant is helping over 9 million South Africans right now. But SASSA has moved to a digital-first system — more automated checks, more bank verification, and new facial recognition for some applicants. If something's wrong with your details, you want to catch it before payment day passes you by.
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Whether you are a new applicant or a recurring beneficiary, performing a <strong>SASSA status check</strong> at the start of {currentMonthYear.split(" ")[0]} is essential. It allows you to identify potential data mismatches with the Department of Home Affairs or the Department of Labour (UIF) before the payment batching process begins in the final week of the month.
+            Whether you're applying for the first time or you've been getting the grant for months, doing a status check at the start of {currentMonthYear.split(" ")[0]} helps you spot any mismatches — with Home Affairs, UIF, or your bank details — before the payment batch runs at the end of the month.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -227,12 +227,12 @@ export default function StatusCheckPage() {
           </div>
 
           <div className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/20">
-             <h3 className="text-2xl font-bold mb-4">The Evolution of Social Assistance (2020 - {currentYear})</h3>
+<h3 className="text-2xl font-bold mb-4">How We Got Here: The SRD Grant's Story</h3>
              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-               Initially introduced as a temporary R350 measure during the 2020 global pandemic, the SRD grant has transitioned into a semi-permanent pillar of the South African social safety net. In April 2024, the grant was increased to R370, reflecting the rising cost of living and inflation within the local economy.
+                The SRD started as a temporary R350 payment during the 2020 pandemic. Back then nobody knew if it would last more than a few months. Fast forward to today, and it's become a key part of South Africa's support system — raised to R370 in 2024 as prices kept climbing.
              </p>
              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-               For the {currentYear} financial year, the Department of Social Development (DSD) has prioritized "Integrity Rollouts." This involves cross-referencing applicant data with NSFAS, GEPF, and commercial bank databases in real-time. This means that "checking your status" is no longer just about seeing a date; it's about ensuring your digital profile remains compliant with evolving regulations.
+                What's changed most is how SASSA checks who qualifies. They now run automated checks against other databases — NSFAS, UIF, SARS, and the banks — in real time. This means checking your status isn't just about seeing a payment date anymore. It's about making sure your information lines up across all these systems.
              </p>
           </div>
         </section>
@@ -282,10 +282,10 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="bg-gray-50 dark:bg-gray-900 p-12 rounded-[3rem] border border-gray-100 dark:border-gray-800 space-y-12">
-          <header className="space-y-4">
-             <h2 className="text-3xl font-black">Advanced Guide to Status Meanings & Rejection Codes</h2>
+<header className="space-y-4">
+             <h2 className="text-3xl font-black">Understanding Status Meanings & Rejection Codes</h2>
              <p className="text-gray-600 dark:text-gray-400 text-lg">
-               A status result from SASSA is often accompanied by a "reason" or a "decline code." Understanding these is the first step toward fixing your application and securing your {currentMonthYear} payment.
+                Your status result usually comes with a reason code. Here's what each one means and what to do next.
              </p>
           </header>
 
@@ -309,7 +309,7 @@ export default function StatusCheckPage() {
           </div>
 
           <div className="mt-8 space-y-8 bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] border border-gray-100 dark:border-gray-700 shadow-sm">
-             <h4 className="text-2xl font-black border-b border-gray-100 dark:border-gray-700 pb-4">Deep Dive: Common Decline Reasons {currentYear}</h4>
+             <h3 className="text-2xl font-black border-b border-gray-100 dark:border-gray-700 pb-4">Common Decline Reasons</h3>
              <div className="space-y-8">
                 <div className="space-y-2">
                    <p className="font-black text-primary-gold">1. Alternative Income Source Identified</p>
@@ -351,7 +351,7 @@ export default function StatusCheckPage() {
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-md">1</div>
                     <div>
                         <p className="font-bold text-xl mb-1">Receive Your Verification Link</p>
-                       <p className="text-sm text-gray-500 leading-relaxed">SASSA will send a unique, secure URL via SMS to the mobile number used during registration. This link is encrypted and will expire exactly <strong>72 hours</strong> after it is generated.</p>
+                       <p className="text-sm text-gray-500 leading-relaxed">SASSA will send a unique, secure URL via SMS to the mobile number used during registration. This link is encrypted and typically expires within a few days of being generated.</p>
                     </div>
                  </div>
                  <div className="flex gap-6">
@@ -365,7 +365,7 @@ export default function StatusCheckPage() {
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-md">3</div>
                     <div>
                        <p className="font-bold text-xl mb-1">Liveness Interaction</p>
-                       <p className="text-sm text-gray-500 leading-relaxed">The system will ask you to perform simple actions: blink twice, move your head slowly from left to right, or speak a 4-digit code. This "Liveness Detection" prevents fraudsters from using photographs or pre-recorded videos.</p>
+                       <p className="text-sm text-gray-500 leading-relaxed">The system will ask you to perform simple actions: blink twice, move your head slowly from left to right, or follow a prompt on screen. This "Liveness Detection" prevents fraudsters from using photographs or pre-recorded videos.</p>
                     </div>
                  </div>
                  <div className="flex gap-6">
@@ -399,11 +399,11 @@ export default function StatusCheckPage() {
                    <p className="text-sm text-blue-800 dark:text-blue-300 leading-relaxed">
                      SASSA's integrity system triggers eKYC if:
                    </p>
-                   <ul className="text-sm text-blue-800 dark:text-blue-300 mt-2 space-y-2 list-disc pl-4">
-                      <li>You recently changed your mobile number or banking details.</li>
-                      <li>Multiple applications were linked to your specific bank account.</li>
-                      <li>Your ID was previously flagged by the SAFPS for suspected identity theft.</li>
-                   </ul>
+<ul className="text-sm text-blue-800 dark:text-blue-300 mt-2 space-y-2 list-disc pl-4">
+                       <li>You recently changed your mobile number or banking details.</li>
+                       <li>Multiple applications were linked to your specific bank account.</li>
+                       <li>Your ID may have been flagged by SASSA's internal fraud detection system.</li>
+                    </ul>
                 </div>
               </div>
            </div>
@@ -456,26 +456,26 @@ export default function StatusCheckPage() {
           </div>
 
           <div className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-3xl border-l-8 border-blue-500">
-            <p className="font-black text-blue-900 dark:text-blue-400 mb-2 text-xl">Pro Tip for Quick Access:</p>
+            <p className="font-black text-blue-900 dark:text-blue-400 mb-2 text-xl">Handy Tip:</p>
             <p className="text-blue-800 dark:text-blue-300 leading-relaxed">
-               If your bank account supports it, use your banking app to check your balance before traveling to an ATM. This saves you transport costs and avoids long, unnecessary queues at Postbank or retail outlets.
+               If your bank app lets you check your balance without going to an ATM, use it. Saves you transport money and keeps you out of those long Postbank queues.
             </p>
           </div>
         </section>
 
         <section className="space-y-12">
-           <h2 className="text-4xl font-black">The "Means Test" Deep Dive: How SASSA Audits Your Finances</h2>
+<h2 className="text-4xl font-black">The "Means Test" Deep Dive: How SASSA Audits Your Finances</h2>
            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-             Understanding the "Means Test" is perhaps the most technical aspect of social assistance in South Africa. For anyone who performs a <strong>SASSA status check</strong> and finds a sudden shift from "Approved" to "Declined," the means test is usually the culprit.
+              If you've ever seen your status suddenly flip from "Approved" to "Declined" without warning, the means test is probably why. Let's break down how it actually works.
            </p>
 
            <div className="prose prose-lg dark:prose-invert max-w-none">
               <p>
-                SASSA operates under the Social Assistance Act, which mandates that the SRD R370 grant is reserved exclusively for those with <strong>insufficient means</strong>. As of {currentYear}, the threshold is strictly set at <strong>R624 per month</strong>.
+                SASSA follows the Social Assistance Act — the SRD R370 grant is meant for people with <strong>very little to no income</strong>. The current cutoff is <strong>R624 per month</strong>. Go over that, and the system flags you.
               </p>
-              <h3>How the Automated Audit Works</h3>
+              <h3>What the Automated Check Actually Looks At</h3>
               <p>
-                Through a Memorandum of Understanding (MoU) with the major commercial banks (Absa, FNB, Standard Bank, Capitec, Nedbank, etc.), SASSA's systems perform an automated lookup against your 13-digit ID number. This audit looks at:
+                Through SASSA's data-sharing agreements with major South African banks, their systems perform automated lookups against your 13-digit ID number. Based on publicly available information and beneficiary reports, this audit looks at:
               </p>
               <ul>
                 <li><strong>Total Monthly Credits:</strong> Every single cent that enters your account is counted. This includes salary, gifts, airtime transfers, and even interest earned.</li>
@@ -507,9 +507,9 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="space-y-12">
-           <h2 className="text-4xl font-black">Losing Hope? How to Win Your SASSA Appeal in {currentYear}</h2>
+<h2 className="text-4xl font-black">Declined? Here's How to Appeal in {currentYear}</h2>
            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-             A "Declined" status is not the end of the road. In fact, thousands of beneficiaries successfully overturn their rejection through the Independent Tribunal for Social Assistance Appeals (ITSAA).
+              Getting a "Declined" status is frustrating, but it's not the end. Thousands of people successfully overturn their rejections through the appeals process every month.
            </p>
 
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -548,7 +548,7 @@ export default function StatusCheckPage() {
         <section className="space-y-8">
           <h2 className="text-4xl font-black">Frequently Asked Questions: {currentMonthYear} Edition</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Our team has compiled the most pressing questions from the SASSA Help Hub community this month.
+            I've compiled the most pressing questions from the SASSA Help Hub community this month.
           </p>
           <div className="space-y-4">
             {fullFaqData.map((faq, i) => (
@@ -569,16 +569,16 @@ export default function StatusCheckPage() {
         </section>
 
         <section className="text-center space-y-8 pt-12 pb-24 border-t border-gray-100 dark:border-gray-800">
-          <h2 className="text-4xl font-black">Still Need Professional Assistance?</h2>
+          <h2 className="text-4xl font-black">Need More Help?</h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Navigating social security can be overwhelming. Our team of independent South African grant specialists is committed to providing clarity for every beneficiary.
+            I've put together detailed guides on appeals, banking details, and common SASSA problems. Browse them below or check the official SASSA website for application-specific issues.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Button as={NextLink} href="/guides" color="primary" size="lg" className="font-bold px-12 py-8 text-xl shadow-2xl rounded-3xl">Explore Detailed Guides</Button>
-            <Button as={NextLink} href="/contact" variant="flat" size="lg" className="font-bold px-12 py-8 text-xl border-2 border-primary-gold rounded-3xl">Speak to Our Team</Button>
+            <Button as={NextLink} href="/guides" color="primary" size="lg" className="font-bold px-12 py-8 text-xl shadow-2xl rounded-3xl">Browse Detailed Guides</Button>
+            <Button as={NextLink} href="/contact" variant="flat" size="lg" className="font-bold px-12 py-8 text-xl border-2 border-primary-gold rounded-3xl">Contact Me</Button>
           </div>
           <p className="text-xs text-gray-400 max-w-lg mx-auto pt-8 leading-relaxed">
-            *SASSA Help Hub is an independent info portal. We provide expert analysis based on DSD and SASSA regulations. We are not a government agency. For official services, always visit www.sassa.gov.za.
+            * SASSA Help Hub is an independent info site. I'm not a government agency. For official services, always visit <a href="https://www.sassa.gov.za" className="underline hover:text-primary-gold">www.sassa.gov.za</a>.
           </p>
         </section>
       </article>

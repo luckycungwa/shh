@@ -6,29 +6,20 @@ import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Authors — SASSA Grant Specialists",
-  description: "Meet the team behind SASSA Help Hub: Themba Phakathi and Zanele Nkosi, South African benefit specialists with years of experience covering SASSA grants, payments, and applications.",
+  title: "About the Author — Lucky Cungwa",
+  description: "SASSA Help Hub is created by Lucky Cungwa, an independent researcher and writer covering South Africa's social grant system, SASSA payments, and application processes.",
   path: "/authors",
 });
 
 const authors = [
   {
-    name: "Themba Phakathi",
-    role: "Senior SASSA Grant Specialist",
-    initials: "TP",
-    bio: "Themba Phakathi has been covering South Africa's social grant system since 2019. He specialises in the SRD R370 grant, application processes, appeals, and eligibility requirements. Themba has written extensively about the monthly means test, income thresholds, and the ITSAA appeals process. His work focuses on helping unemployed South Africans navigate the SRD system and successfully appeal declined applications. He also covers SASSA technology tools including USSD codes, the Moya App, and biometric verification.",
-    topics: ["SRD R370 Grant", "Appeals & Declined Applications", "Eligibility & Means Test", "Technology Tools (USSD, Moya, Biometrics)", "Grant Comparisons", "Document Checklists", "Postbank Card Migration"],
-    contentCount: "20+ grant guides, 4 decline reason analyses, 4 grant detail pages",
-    color: "bg-blue-500",
-  },
-  {
-    name: "Zanele Nkosi",
-    role: "SASSA Benefits & Banking Specialist",
-    initials: "ZN",
-    bio: "Zanele Nkosi specialises in SASSA payment methods, banking details, account management, and grant-specific guides. She has deep knowledge of how SASSA's payment system works — from bank verification to Postbank Black Cards, Cash Send, and retail collection. Zanele writes step-by-step guides for lost phone numbers, life certification, grant reinstatement, and fraud protection. She also covers child-specific grants including Child Support, Foster Child, and Care Dependency grants, as well as province-specific SASSA challenges.",
-    topics: ["Banking Details & Payment Methods", "Account Management (Phone, Life Cert, Reinstatement)", "Child Support, Foster Child & Care Dependency Grants", "SRD Monthly Reassessment", "Scam Prevention & Online Security", "Province-Specific SASSA Guides", "Grant Suspension & Reinstatement"],
-    contentCount: "10+ user guides, 4 grant detail pages, 4 decline reason analyses, 9 province guides",
-    color: "bg-green-500",
+    name: "Lucky Cungwa",
+    role: "SASSA Grant Researcher & Writer",
+    initials: "LC",
+    bio: "Lucky Cungwa is an independent researcher and writer who has been tracking and documenting South Africa's social grant system since 2020. He created SASSA Help Hub to provide clear, practical guidance for grant applicants navigating the SRD R370, Child Support Grant, Old Age Pension, and other SASSA programmes. Lucky's work involves monitoring SASSA announcements, analysing payment trends, compiling province-specific information, and breaking down complex eligibility rules into straightforward steps. He is committed to helping South Africans access the social grants they are entitled to.",
+    topics: ["SRD R370 Grant", "Appeals & Declined Applications", "Eligibility & Means Test", "Payment Schedules & Banking", "All SASSA Grant Types", "Province-Specific Guides", "Scam Prevention"],
+    contentCount: "30+ grant guides, 4 decline reason analyses, 9 province guides",
+    color: "bg-primary-gold",
   },
 ];
 
@@ -37,13 +28,13 @@ export default function AuthorsPage() {
     <div className="max-w-4xl mx-auto px-6 py-16">
       <header className="text-center mb-16">
         <Chip color="primary" variant="flat" className="font-bold uppercase text-xs mb-4">
-          Meet the Team
+          About
         </Chip>
         <h1 className="text-5xl font-black tracking-tight mb-6">
-          Our Authors
+          About the Author
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Every guide on SASSA Help Hub is written by a real person with years of experience covering South Africa's social grant system. Our authors are independent specialists who verify every fact against official SASSA and government sources.
+          Every guide on SASSA Help Hub is written by me, with information checked against official SASSA and government sources.
         </p>
       </header>
 
@@ -80,7 +71,7 @@ export default function AuthorsPage() {
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <p className="text-sm text-gray-500">
                   <FaShieldAlt className="inline mr-1 text-primary-gold" />
-                  All content is fact-checked against official SASSA and government sources. See our <NextLink href="/editorial-policy" className="text-primary-gold underline">Editorial Policy</NextLink>.
+                  All content is fact-checked against official SASSA and government sources. See my <NextLink href="/editorial-policy" className="text-primary-gold underline">Editorial Policy</NextLink>.
                 </p>
               </div>
             </div>

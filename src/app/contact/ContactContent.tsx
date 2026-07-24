@@ -53,7 +53,7 @@ export default function ContactContent() {
           <section className="space-y-6">
             <h2 className="text-3xl font-bold">Get in Touch</h2>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-              Our team is dedicated to providing the best unofficial SASSA resource for South Africans.
+              I'm dedicated to providing the best unofficial SASSA resource for South Africans.
             </p>
           </section>
 

@@ -173,7 +173,7 @@ export default function SassaOfficesPage() {
         </div>
 
         <Divider className="my-12" />
-        <EditorialFooter lastUpdated={getCurrentMonthYearKey()} author="Zanele Nkosi" />
+        <EditorialFooter lastUpdated={getCurrentMonthYearKey()} author="Lucky Cungwa" />
       </article>
     </div>
   );
