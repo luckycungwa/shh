@@ -12,7 +12,22 @@
       { "town": "East London", "address": "3 Hill Street, East London", "phone": "043 705 8000" },
       { "town": "Mthatha", "address": "Victoria Street, Mthatha", "phone": "047 532 6001" }
     ],
+    "district_offices": [
+      { "town": "Port Alfred", "address": "5 Victoria Drive, Port Alfred", "phone": "046 604 1100" },
+      { "town": "Queenstown", "address": "56 Ebden Street, Queenstown", "phone": "045 808 4000" },
+      { "town": "Graaff-Reinet", "address": "40 Church Street, Graaff-Reinet", "phone": "049 807 5000" },
+      { "town": "Mount Frere", "address": "Main Street, Mount Frere", "phone": "039 255 3000" },
+      { "town": "Libode", "address": "SASSA Building, Libode", "phone": "047 553 8000" }
+    ],
     "districts": ["Sarah Baartman", "Amathole", "Chris Hani", "Joe Gqabi", "OR Tambo", "Alfred Nzo"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Gqeberha", "East London", "Mthatha", "King William's Town"] },
+      { "retailer": "Shoprite", "towns": ["Gqeberha", "East London", "Queenstown", "Umtata"] },
+      { "retailer": "Boxer", "towns": ["East London", "Mthatha", "Butterworth"] },
+      { "retailer": "Spar", "towns": ["Graaff-Reinet", "Port Alfred", "Stutterheim"] }
+    ],
+    "regional_office": { "town": "Bhisho", "address": "Independence Avenue, Bhisho", "phone": "040 608 7100", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -32.8482, "lng": 27.4427 },
     "payment_collection": "SASSA grants can be collected at Post Office branches, Pick n Pay, Boxer, Shoprite, and Spar stores across all Eastern Cape districts. Postbank Black Card holders can use any ATM.",
     "last_updated": "2026-07-07"
   },
@@ -29,7 +44,19 @@
       { "town": "Bethlehem", "address": "Cnr Church & Muller Street, Bethlehem", "phone": "058 303 5600" },
       { "town": "Sasolburg", "address": "Cnr Steen & Kokerboom Street, Sasolburg", "phone": "016 970 7000" }
     ],
+    "district_offices": [
+      { "town": "Kroonstad", "address": "24 Charlotte Street, Kroonstad", "phone": "056 216 1000" },
+      { "town": "Phuthaditjhaba", "address": "Government Building, Phuthaditjhaba", "phone": "058 713 1000" }
+    ],
     "districts": ["Fezile Dabi", "Lejweleputswa", "Thabo Mofutsanyane", "Xhariep"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Bloemfontein", "Welkom", "Bethlehem"] },
+      { "retailer": "Shoprite", "towns": ["Bloemfontein", "Welkom", "Sasolburg", "Kroonstad"] },
+      { "retailer": "Checkers", "towns": ["Bloemfontein", "Welkom"] },
+      { "retailer": "Boxer", "towns": ["Bloemfontein", "Bethlehem", "Phuthaditjhaba"] }
+    ],
+    "regional_office": { "town": "Bloemfontein", "address": "61 St Andrew Street, Bloemfontein", "phone": "051 410 4000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -29.1201, "lng": 26.2299 },
     "payment_collection": "Post Office branches are the primary collection points. Checkers, Shoprite, and Pick n Pay stores across the Free State also offer cash collection for SRD grant recipients.",
     "last_updated": "2026-07-07"
   },
@@ -47,7 +74,21 @@
       { "town": "Tembisa", "address": "3278 Reverend Naude Street, Tembisa", "phone": "011 921 6600" },
       { "town": "Vereeniging", "address": "32 Beaconsfield Road, Vereeniging", "phone": "016 430 0500" }
     ],
+    "district_offices": [
+      { "town": "Krugersdorp", "address": "46 Luipaard Street, Krugersdorp", "phone": "011 663 1000" },
+      { "town": "Midrand", "address": "Cnr Old Pretoria Road & New Road, Midrand", "phone": "011 315 5000" },
+      { "town": "Centurion", "address": "123 Gerhard Street, Centurion", "phone": "012 645 1000" }
+    ],
     "districts": ["City of Johannesburg", "City of Tshwane", "Ekurhuleni", "Sedibeng", "West Rand"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Johannesburg", "Pretoria", "Soweto", "Tembisa", "Midrand"] },
+      { "retailer": "Shoprite", "towns": ["Johannesburg", "Pretoria", "Soweto", "Vereeniging", "Krugersdorp"] },
+      { "retailer": "Boxer", "towns": ["Soweto", "Tembisa", "Vosloorus", "Katlehong"] },
+      { "retailer": "Spar", "towns": ["Pretoria", "Centurion", "Randburg", "Roodepoort"] },
+      { "retailer": "Checkers", "towns": ["Johannesburg", "Pretoria", "Sandton", "Centurion"] }
+    ],
+    "regional_office": { "town": "Johannesburg", "address": "78 Marshall Street, Johannesburg", "phone": "011 241 8000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -26.2041, "lng": 28.0473 },
     "payment_collection": "All major retailers participate in cash collection: Pick n Pay, Shoprite, Boxer, Spar, and Checkers. Postbank Black Card holders can use any ATM. Gauteng has the highest density of collection points in the country.",
     "last_updated": "2026-07-07"
   },
@@ -65,7 +106,23 @@
       { "town": "Ladysmith", "address": "125 Murchison Street, Ladysmith", "phone": "036 637 7000" },
       { "town": "Port Shepstone", "address": "182 Bisset Street, Port Shepstone", "phone": "039 688 9000" }
     ],
+    "district_offices": [
+      { "town": "Stanger (KwaDukuza)", "address": "25 King Shaka Street, Stanger", "phone": "032 437 5000" },
+      { "town": "Eshowe", "address": "Main Road, Eshowe", "phone": "035 474 2000" },
+      { "town": "Vryheid", "address": "Cnr Landros & Mark Street, Vryheid", "phone": "034 980 8000" },
+      { "town": "Dundee", "address": "52 Victoria Road, Dundee", "phone": "034 212 3000" },
+      { "town": "Mtubatuba", "address": "Main Street, Mtubatuba", "phone": "035 550 1000" }
+    ],
     "districts": ["eThekwini", "Ugu", "iLembe", "uMgungundlovu", "uThukela", "uMzinyathi", "Amajuba", "Zululand", "uMkhanyakude", "King Cetshwayo", "Harry Gwala"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Durban", "Pietermaritzburg", "Richards Bay", "Ladysmith", "Port Shepstone"] },
+      { "retailer": "Shoprite", "towns": ["Durban", "Pietermaritzburg", "Stanger", "Eshowe", "Vryheid"] },
+      { "retailer": "Boxer", "towns": ["Durban", "Tongaat", "Mtubatuba", "Mpumalanga"] },
+      { "retailer": "Spar", "towns": ["Dundee", "Harding", "Kokstad", "Mooi River"] },
+      { "retailer": "Checkers", "towns": ["Durban", "Pietermaritzburg", "Richards Bay"] }
+    ],
+    "regional_office": { "town": "Pietermaritzburg", "address": "181 Church Street, Pietermaritzburg", "phone": "033 341 8000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -29.6168, "lng": 30.3928 },
     "payment_collection": "Post Office branches and retailer collection points available in all districts. Mobile collection units serve deep rural areas in northern KZN. Cardholders can use SASSA ATMs in Durban and Pietermaritzburg.",
     "last_updated": "2026-07-07"
   },
@@ -82,7 +139,20 @@
       { "town": "Lebowakgomo", "address": "Block A, Lebowakgomo", "phone": "015 632 4000" },
       { "town": "Thohoyandou", "address": "Old Parliamentary Building, Thohoyandou", "phone": "015 963 2000" }
     ],
+    "district_offices": [
+      { "town": "Mokopane", "address": "Cnr Thabo Mbeki & Church Street, Mokopane", "phone": "015 491 3000" },
+      { "town": "Giyani", "address": "Government Building, Giyani", "phone": "015 812 1000" },
+      { "town": "Modimolle", "address": "Cnr Chris Hani & Rooiberg Road, Modimolle", "phone": "014 717 4000" }
+    ],
     "districts": ["Capricorn", "Mopani", "Sekhukhune", "Vhembe", "Waterberg"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Polokwane", "Tzaneen", "Thohoyandou"] },
+      { "retailer": "Shoprite", "towns": ["Polokwane", "Lebowakgomo", "Giyani"] },
+      { "retailer": "Boxer", "towns": ["Mokopane", "Modimolle", "Thohoyandou"] },
+      { "retailer": "Spar", "towns": ["Tzaneen", "Phalaborwa", "Makhado"] }
+    ],
+    "regional_office": { "town": "Polokwane", "address": "95 Marshall Street, Polokwane", "phone": "015 230 2000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -23.8969, "lng": 29.4484 },
     "payment_collection": "Post Office branches are the main collection points. Mobile SASSA pay points operate in remote villages on scheduled dates. Pick n Pay and Shoprite in town centres offer cash collection.",
     "last_updated": "2026-07-07"
   },
@@ -98,7 +168,19 @@
       { "town": "Witbank (eMalahleni)", "address": "Cnr Mandela & Oos Streets, eMalahleni", "phone": "013 690 8000" },
       { "town": "Secunda", "address": "Cnr FW De Klerk & Syfer Road, Secunda", "phone": "017 634 9000" }
     ],
+    "district_offices": [
+      { "town": "Ermelo", "address": "Cnr Kerk & Joubert Street, Ermelo", "phone": "017 819 2000" },
+      { "town": "Piet Retief", "address": "69 Kerk Street, Piet Retief", "phone": "017 829 1000" }
+    ],
     "districts": ["Ehlanzeni", "Gert Sibande", "Nkangala"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Mbombela", "Witbank", "Secunda", "Ermelo"] },
+      { "retailer": "Shoprite", "towns": ["Mbombela", "Witbank", "Piet Retief"] },
+      { "retailer": "Boxer", "towns": ["Witbank", "Secunda", "Ermelo"] },
+      { "retailer": "Spar", "towns": ["Mbombela", "White River", "Malelane"] }
+    ],
+    "regional_office": { "town": "Mbombela", "address": "30 Branders Street, Mbombela", "phone": "013 754 5000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -25.4667, "lng": 30.9667 },
     "payment_collection": "Post Office branches available in all district towns. Boxer and Shoprite stores offer cash collection in urban centres. Mobile pay points serve deep rural areas on scheduled dates.",
     "last_updated": "2026-07-07"
   },
@@ -114,7 +196,19 @@
       { "town": "Rustenburg", "address": "80 Nelson Mandela Drive, Rustenburg", "phone": "014 590 6000" },
       { "town": "Klerksdorp", "address": "Cnr Margaretha & CR Swart Street, Klerksdorp", "phone": "018 468 7000" }
     ],
+    "district_offices": [
+      { "town": "Brits", "address": "Cnr Tom Street & R511, Brits", "phone": "012 259 1000" },
+      { "town": "Zeerust", "address": "36 Kerk Street, Zeerust", "phone": "018 642 1000" },
+      { "town": "Vryburg", "address": "73 Market Street, Vryburg", "phone": "053 927 3000" }
+    ],
     "districts": ["Bojanala Platinum", "Dr Ruth Segomotsi Mompati", "Dr Kenneth Kaunda", "Ngaka Modiri Molema"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Rustenburg", "Klerksdorp", "Mahikeng", "Brits"] },
+      { "retailer": "Shoprite", "towns": ["Rustenburg", "Klerksdorp", "Mahikeng", "Zeerust", "Vryburg"] },
+      { "retailer": "Boxer", "towns": ["Rustenburg", "Klerksdorp", "Brits"] }
+    ],
+    "regional_office": { "town": "Mahikeng", "address": "Cnr University & Albert Luthuli Drive, Mahikeng", "phone": "018 397 3000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -25.8652, "lng": 25.6413 },
     "payment_collection": "Post Office branches in all district towns. Boxer, Shoprite, and Pick n Pay available in urban centres. Mobile pay points serve farming communities.",
     "last_updated": "2026-07-07"
   },
@@ -130,7 +224,18 @@
       { "town": "Upington", "address": "Cnr Scott & Mark Street, Upington", "phone": "054 331 9000" },
       { "town": "Springbok", "address": "Hospital Street, Springbok", "phone": "027 718 2000" }
     ],
+    "district_offices": [
+      { "town": "Kuruman", "address": "34 Main Street, Kuruman", "phone": "053 712 4000" },
+      { "town": "De Aar", "address": "Cnr Church & Circular Road, De Aar", "phone": "053 631 2000" }
+    ],
     "districts": ["Frances Baard", "John Taolo Gaetsewe", "Namakwa", "Pixley ka Seme", "ZF Mgcawu"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Kimberley", "Upington", "Springbok"] },
+      { "retailer": "Shoprite", "towns": ["Kimberley", "Upington", "Kuruman", "De Aar"] },
+      { "retailer": "Spar", "towns": ["Kimberley", "Springbok", "Calvinia"] }
+    ],
+    "regional_office": { "town": "Kimberley", "address": "1 Compound Road, Kimberley", "phone": "053 831 6000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -28.7307, "lng": 24.7621 },
     "payment_collection": "Post Office branches are the primary collection points. Mobile SASSA pay points visit remote towns on scheduled dates. Limited retailer participation in deep rural areas.",
     "last_updated": "2026-07-07"
   },
@@ -148,7 +253,22 @@
       { "town": "Worcester", "address": "54 High Street, Worcester", "phone": "023 348 3000" },
       { "town": "Khayelitsha", "address": "Cnr Spine & Bonga Road, Khayelitsha", "phone": "021 361 2400" }
     ],
+    "district_offices": [
+      { "town": "Paarl", "address": "155 Main Street, Paarl", "phone": "021 860 1000" },
+      { "town": "Oudtshoorn", "address": "94 High Street, Oudtshoorn", "phone": "044 279 1000" },
+      { "town": "Vredenburg", "address": "6 Kerk Street, Vredenburg", "phone": "022 701 1000" },
+      { "town": "Beaufort West", "address": "60 Donkin Street, Beaufort West", "phone": "023 416 1000" }
+    ],
     "districts": ["City of Cape Town", "Cape Winelands", "Central Karoo", "Garden Route", "Overberg", "West Coast"],
+    "collection_points": [
+      { "retailer": "Pick n Pay", "towns": ["Cape Town", "Stellenbosch", "George", "Khayelitsha", "Paarl"] },
+      { "retailer": "Shoprite", "towns": ["Cape Town", "Khayelitsha", "Worcester", "Vredenburg", "Oudtshoorn"] },
+      { "retailer": "Boxer", "towns": ["Cape Town", "Khayelitsha", "George", "Beaufort West"] },
+      { "retailer": "Checkers", "towns": ["Cape Town", "Stellenbosch", "Somerset West", "Paarl"] },
+      { "retailer": "Spar", "towns": ["Cape Town", "George", "Hermanus", "Swellendam"] }
+    ],
+    "regional_office": { "town": "Cape Town", "address": "9 Dorp Street, Cape Town", "phone": "021 469 7000", "hours": "Mon-Fri 8:00-16:00" },
+    "coordinates": { "lat": -33.9249, "lng": 18.4241 },
     "payment_collection": "All major retailers participate in the Western Cape. Post Office branches are well-distributed. Cash Send collection at Pick n Pay and Boxer available for SRD recipients without bank accounts.",
     "last_updated": "2026-07-07"
   }

@@ -29,13 +29,16 @@ export default function UpdatesListPage() {
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
 
-  const alerts = updates.filter(u => u.type === "alert");
-  const news = updates.filter(u => u.type !== "alert");
+  const filtered = updates
+    .filter((u: any) => u.tag !== "monthly-payment-schedule")
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const alerts = filtered.filter(u => u.type === "alert");
+  const news = filtered.filter(u => u.type !== "alert");
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <header className="text-center mb-16 space-y-4">
-        <Chip color="primary" variant="flat" className="font-bold uppercase text-xs">{updates.length} Articles</Chip>
+        <Chip color="primary" variant="flat" className="font-bold uppercase text-xs">{filtered.length} Articles</Chip>
         <h1 className="text-5xl font-black tracking-tight">SASSA Grant Updates & Information {curYear}</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
           Stay informed with the latest SASSA announcements, grant increases, payment schedule changes, and system updates. We track and explain every important development so you never miss what matters.

@@ -5,6 +5,7 @@ import { Chip, Divider } from "@nextui-org/react";
 import { FaClock, FaPhone, FaExternalLinkAlt } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
+import EditorialMeta from "../../../components/EditorialMeta";
 import { articleSchema, breadcrumbSchema } from "../../../lib/schema";
 import { getCurrentYearString } from "../../../lib/config";
 
@@ -373,6 +374,7 @@ export default function StatusMeaningPage({ params }: { params: { slug: string }
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
             {status.description}
           </p>
+          <EditorialMeta lastVerified={status.last_updated} author={status.author} />
         </header>
 
         <section className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-2xl border-l-8 border-blue-500">

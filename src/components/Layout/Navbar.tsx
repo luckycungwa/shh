@@ -50,6 +50,7 @@ export default function NavbarComponent() {
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       maxWidth="xl"
@@ -135,6 +136,7 @@ export default function NavbarComponent() {
               }`}
               href={item.href}
               size="lg"
+              onClick={() => setIsMenuOpen(false)}
             >
               <span className={`text-lg ${isActive(item.href, item.altPaths) ? "text-primary-gold" : "text-secondary-gray"}`}>
                 {item.icon}

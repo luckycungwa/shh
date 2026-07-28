@@ -2,21 +2,26 @@
   {
     "id": "scam-001",
     "title": "Fake News and Misinformation About Grant Changes",
-    "description": "Circulating false claims about new rules affecting pensions or grant suspensions starting from dates like 10 June 2025, designed to panic beneficiaries into sharing personal details.",
+    "description": "SASSA has dismissed false claims circulating on social media that double grant payments will be made in June. SASSA National Spokesperson Paseka Letsatsi called the reports 'untrue' and urged the public to reject them. SASSA also disputed claims that 'new rules could affect your pension' from 10 June 2025. Grant increases only happen when announced by the Ministry of Finance — the last increase took effect in April 2025 and the next is scheduled for October 2025. Any other increase claims are lies. The purpose of these rumours is to panic beneficiaries into sharing personal details or visiting fake websites.",
     "type": "Online/SMS",
     "severity": "high",
     "reportedDate": "2025-05-16",
     "indicators": [
       "Claims of urgent rule changes or suspensions",
-      "Directs to fake websites or numbers",
-      "No official SASSA branding",
-      "Spreads via social media or WhatsApp"
+      "Promises of extra or double payments",
+      "Directs to fake websites or phone numbers",
+      "Spreads via WhatsApp groups and Facebook",
+      "No official SASSA branding or .gov.za links",
+      "Creates false urgency with specific dates"
     ],
-    "prevention": "Verify all information on the official SASSA website or contact centers. SASSA does not announce changes via unofficial channels.",
+    "prevention": "Verify all information on the official SASSA website (www.sassa.gov.za), official SASSA Facebook page (SASSANewsZA), or call the SASSA helpline on 0800 60 10 11. SASSA never announces grant increases or rule changes through unofficial social media channels. Only the Ministry of Finance and SASSA official pages are credible sources.",
     "examples": [
-      "New SASSA rules from June 2025: Update your details or lose your pension",
-      "SASSA alert: Grants suspended unless you verify now"
-    ]
+      "SASSA will pay double grants in June 2025 — check your status now",
+      "New SASSA rules from 10 June 2025: Update your details or lose your pension",
+      "SASSA alert: Grants suspended unless you verify now at this link",
+      "Extra R500 grant payment for seniors — apply before the deadline"
+    ],
+    "officialResponse": "SASSA National Spokesperson Paseka Letsatsi said: 'These reports are untrue and should be rejected with the contempt they deserve. Any other increase not announced by credible and relevant authorities should be treated as lies.' Beneficiaries should only rely on credible sources on SASSA's official social media pages."
   },
   {
     "id": "scam-002",

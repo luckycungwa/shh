@@ -110,6 +110,17 @@ export default function RootLayout({
             },
           }),
         }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Lucky Cungwa",
+            url: "https://www.sassahelphub.co.za/authors",
+            jobTitle: "South African Benefit Specialist",
+            description: "Independent SASSA benefits specialist and researcher, providing accurate, accessible information to South African social grant beneficiaries.",
+            sameAs: [],
+          }),
+        }} />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8180440849942257"

@@ -8,6 +8,7 @@ import { FaClock, FaCalendarAlt, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, Fa
 import NextLink from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
+import EditorialMeta from "../../../components/EditorialMeta";
 import { howToSchema, faqPageSchema, breadcrumbSchema } from "../../../lib/schema";
 import { SITE_CONFIG } from "../../../lib/config";
 import { resolveTemplates } from "../../../lib/canonical-facts";
@@ -144,10 +145,12 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                     <span>{guide.estimatedTime}</span>
                  </div>
               </div>
-           </header>
+            </header>
 
-           {guide.steps.length > 0 && (
-             <Card className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-8 shadow-2xl rounded-[2rem] lg:hidden mb-12">
+            <EditorialMeta lastVerified={guide.lastUpdated} author={guide.author} />
+
+            {guide.steps.length > 0 && (
+             <Card className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-8 shadow-2xl rounded-[2rem] lg:hidden mb-12">
                 <CardBody className="p-0 space-y-6">
                    <p className="font-black text-xl flex items-center gap-3"><FaListUl className="text-primary-gold" /> Guide Contents</p>
                    <div className="flex flex-col gap-4">

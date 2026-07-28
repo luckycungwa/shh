@@ -853,7 +853,7 @@
   {
     "id": "faq-032",
     "question": "Is my biometric data safe with SASSA in 2026?",
-    "answer": "<p>SASSA assures that biometric data (fingerprints, facial scans) collected from 1 September 2026 is stored securely under strict privacy protocols. However, concerns exist due to the sensitivity of biometric information.</p><h4>Safety Measures:</h4><ul><li><strong>Encryption:</strong> Data is encrypted and stored in secure databases.</li><li><strong>Access Control:</strong> Only authorized staff access biometric records.</li><li><strong>Compliance:</strong> Aligns with South Africa’s POPIA (Protection of Personal Information Act).</li></ul><p><strong>Concerns:</strong> Some experts warn of potential hacking risks. Report suspicious activity to SASSA at 0800 60 10 11. Visit our <a href='/privacy'>privacy guide</a> for tips on protecting your data.</p>",
+    "answer": "<p>SASSA assures that biometric data (fingerprints, facial scans) collected from 1 September 2026 is stored securely under strict privacy protocols. However, concerns exist due to the sensitivity of biometric information.</p><h4>Safety Measures:</h4><ul><li><strong>Encryption:</strong> Data is encrypted and stored in secure databases.</li><li><strong>Access Control:</strong> Only authorized staff access biometric records.</li><li><strong>Compliance:</strong> Aligns with South Africa’s POPIA (Protection of Personal Information Act).</li></ul><p><strong>Concerns:</strong> Some experts warn of potential hacking risks. Report suspicious activity to SASSA at 0800 60 10 11. Visit our <a href='/privacy-policy'>privacy guide</a> for tips on protecting your data.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric safety 2026",

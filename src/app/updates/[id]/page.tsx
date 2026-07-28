@@ -67,6 +67,11 @@ export default async function UpdatePage({ params }: { params: { id: string } })
 
   if (!update) notFound();
 
+  if ((update as any).tag === "monthly-payment-schedule") {
+    const { redirect } = await import("next/navigation");
+    redirect("/payment-calendar");
+  }
+
   const readingTime = Math.ceil(update.content.split(/\s+/).length / 200);
 
   // Extract TOC (H2s)

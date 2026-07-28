@@ -31,6 +31,8 @@ const categories = [
       { href: "/status/bank-details-pending", label: "Bank Details Pending — Payment Blocked", desc: "How to fix this status and get paid" },
       { href: "/status/identity-verification", label: "Identity Verification Required", desc: "Why SASSA needs to verify you and how to do it" },
       { href: "/status/referred", label: "Application Referred for Manual Review", desc: "What it means and how long it takes" },
+      { href: "/updates/update-2026-028", label: "Grants Under Review — Paid 7 August 2026", desc: "Beneficiaries flagged for review are paid on the fourth day" },
+      { href: "/guides/fourth-payment-day-guide", label: "Fourth Payment Day Explained", desc: "What it means when you are paid on a different day" },
       { href: "/status/means-test-failed", label: "Means Test Failed", desc: "Why income threshold was exceeded and how to appeal" },
       { href: "/status/approved", label: "Approved — When Do I Get Paid?", desc: "What happens after approval and payment timelines" },
       { href: "/status/declined", label: "Application Declined", desc: "Common decline reasons and how to appeal" },
@@ -73,9 +75,12 @@ const categories = [
       { href: "/payment-calendar", label: "SASSA Payment Dates 2026", desc: "Full payment schedule for all grants" },
       { href: "/guides/sassa-payment-methods", label: "Payment Methods Compared", desc: "Bank vs Postbank vs Cash Send vs Retail" },
       { href: "/guides/change-banking-details", label: "How to Change Banking Details", desc: "Update your bank account for grant payments" },
-      { href: "/guides/postbank-black-card", label: "Gold Card to Black Card Migration", desc: "Switch before 31 August 2026 deadline" },
+      { href: "/guides/postbank-black-card-guide", label: "Gold Card to Black Card Migration", desc: "Switch before 31 August 2026 deadline" },
       { href: "/guides/grant-amounts-history", label: "Grant Amounts History 2020-2026", desc: "Historical grant amounts and increases" },
       { href: "/updates/update-2026-027", label: "August 2026 Payment Schedule", desc: "Latest confirmed payment dates" },
+      { href: "/updates/update-2026-028", label: "Grants Under Review — Paid 7 August", desc: "Fourth payment day for flagged beneficiaries" },
+      { href: "/guides/missing-grant-payment-guide", label: "Grant Approved but Not Paid", desc: "7-step guide to find missing payments" },
+      { href: "/guides/sassa-deductions-explained", label: "Grant Deductions Explained", desc: "Why money is taken and how to stop wrong deductions" },
     ],
   },
   {
@@ -86,6 +91,7 @@ const categories = [
     links: [
       { href: "/guides/lost-phone-number", label: "Lost or Changed Your Phone Number", desc: "How to update your SASSA phone number" },
       { href: "/guides/life-certification", label: "SASSA Life Certification 2026", desc: "Complete annual verification online" },
+      { href: "/guides/elife-certification-troubleshooting", label: "eLife Certification Troubleshooting", desc: "Fix portal problems and complete your review" },
       { href: "/guides/guide-reinstate-grant", label: "Reinstate a Lapsed or Suspended Grant", desc: "How to get your grant reinstated" },
       { href: "/guides/guide-report-fraud", label: "Report SASSA Fraud", desc: "How to report fraud and protect your grant" },
     ],
@@ -151,7 +157,7 @@ const categories = [
 const urgentAlert = {
   title: "Gold Card Deadline: 31 August 2026",
   desc: "Your SASSA Gold Card stops working on 31 August 2026. Over 600,000 beneficiaries still need to switch to the Postbank Black Card. The replacement is free.",
-  href: "/guides/postbank-black-card",
+  href: "/guides/postbank-black-card-guide",
 };
 
 export default function CommonProblemsPage() {

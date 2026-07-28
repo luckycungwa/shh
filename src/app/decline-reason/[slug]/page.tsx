@@ -7,6 +7,7 @@ import { Chip, Divider } from "@nextui-org/react";
 import { FaExclamationTriangle, FaCheckCircle, FaClock } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
+import EditorialMeta from "../../../components/EditorialMeta";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 
@@ -74,6 +75,7 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">{reason.title}</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">{reason.description}</p>
+          <EditorialMeta lastVerified={reason.last_updated} author={reason.author} />
         </header>
 
         <section className="bg-red-50 dark:bg-red-900/10 p-8 rounded-2xl border-l-8 border-red-500">

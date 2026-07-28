@@ -26,7 +26,8 @@ interface Update {
 
 export default function HomePage() {
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
-  const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8")).slice(0, 3);
+  const allUpdates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
+  const updates = allUpdates.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
   const paymentDatesPath = path.join(process.cwd(), "public/data/paymentDates.json");
   const paymentDates: { grant: string; date: string; day: string }[] = JSON.parse(fs.readFileSync(paymentDatesPath, "utf8"));

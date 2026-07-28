@@ -33,6 +33,12 @@ const nextConfig = {
       { source: '/applications', destination: '/guides', permanent: true },
       { source: '/fraud-prevention', destination: '/scam-alert', permanent: true },
       { source: '/grant-amounts', destination: '/guides', permanent: true },
+      { source: '/updates/update-2026-027', destination: '/payment-calendar', permanent: true },
+      { source: '/updates/update-2026-022', destination: '/payment-calendar', permanent: true },
+      { source: '/updates/update-2026-018', destination: '/payment-calendar', permanent: true },
+      { source: '/updates/update-2026-015', destination: '/payment-calendar', permanent: true },
+      { source: '/updates/update-2026-013', destination: '/payment-calendar', permanent: true },
+      { source: '/updates/update-2026-001', destination: '/payment-calendar', permanent: true },
     ];
   },
 };

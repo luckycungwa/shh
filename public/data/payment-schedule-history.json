@@ -1,0 +1,102 @@
+[
+  {
+    "month_key": "2026-02",
+    "label": "February 2026",
+    "older_persons": "2026-02-03",
+    "disability": "2026-02-04",
+    "children": "2026-02-05",
+    "srd_start": "2026-02-23",
+    "srd_end": "2026-02-27",
+    "note": "Shifted due to 1 Feb falling on Sunday"
+  },
+  {
+    "month_key": "2026-03",
+    "label": "March 2026",
+    "older_persons": "2026-03-03",
+    "disability": "2026-03-04",
+    "children": "2026-03-05",
+    "srd_start": "2026-03-25",
+    "srd_end": "2026-03-31",
+    "note": "Easter season — high volumes expected"
+  },
+  {
+    "month_key": "2026-05",
+    "label": "May 2026",
+    "older_persons": "2026-05-05",
+    "disability": "2026-05-06",
+    "children": "2026-05-07",
+    "srd_start": "2026-05-25",
+    "srd_end": "2026-05-30",
+    "note": ""
+  },
+  {
+    "month_key": "2026-06",
+    "label": "June 2026",
+    "older_persons": "2026-06-02",
+    "disability": "2026-06-03",
+    "children": "2026-06-04",
+    "srd_start": "2026-06-24",
+    "srd_end": "2026-06-30",
+    "note": "Winter payment schedule"
+  },
+  {
+    "month_key": "2026-07",
+    "label": "July 2026",
+    "older_persons": "2026-07-02",
+    "disability": "2026-07-03",
+    "children": "2026-07-06",
+    "srd_start": "2026-07-25",
+    "srd_end": "2026-07-31",
+    "note": "Mid-year — biometric verification in effect"
+  },
+  {
+    "month_key": "2026-08",
+    "label": "August 2026",
+    "older_persons": "2026-08-04",
+    "disability": "2026-08-05",
+    "children": "2026-08-06",
+    "srd_start": "2026-08-25",
+    "srd_end": "2026-08-29",
+    "note": "Grants under review paid Fri 7 Aug. Bank verification cycle 15-22 Aug."
+  },
+  {
+    "month_key": "2026-09",
+    "label": "September 2026",
+    "older_persons": "2026-09-02",
+    "disability": "2026-09-03",
+    "children": "2026-09-04",
+    "srd_start": "2026-09-25",
+    "srd_end": "2026-09-30",
+    "note": "Spring payment cycle — dates confirmed per SASSA"
+  },
+  {
+    "month_key": "2026-10",
+    "label": "October 2026",
+    "older_persons": "2026-10-02",
+    "disability": "2026-10-05",
+    "children": "2026-10-06",
+    "srd_start": "2026-10-26",
+    "srd_end": "2026-10-31",
+    "note": "Grant increase expected per Ministry of Finance schedule"
+  },
+  {
+    "month_key": "2026-11",
+    "label": "November 2026",
+    "older_persons": "2026-11-03",
+    "disability": "2026-11-04",
+    "children": "2026-11-05",
+    "srd_start": "2026-11-25",
+    "srd_end": "2026-11-30",
+    "note": "Dates follow standard first-week pattern — check back for SASSA confirmation"
+  },
+  {
+    "month_key": "2026-12",
+    "label": "December 2026",
+    "older_persons": "2026-12-02",
+    "disability": "2026-12-03",
+    "children": "2026-12-04",
+    "srd_start": "2026-12-23",
+    "srd_end": "2026-12-31",
+    "note": "Holiday season — payment may shift earlier if dates fall near Christmas"
+  }
+]

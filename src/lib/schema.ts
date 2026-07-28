@@ -1,5 +1,30 @@
 import { SITE_CONFIG } from "./config";
 
+export function personSchema(name: string, url: string, jobTitle: string, description: string, sameAs: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name,
+    url,
+    jobTitle,
+    description,
+    sameAs,
+  };
+}
+
+export function governmentServiceSchema(name: string, description: string, phone: string, url: string, areaServed: string, serviceType: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    name,
+    description,
+    telephone: phone,
+    url,
+    areaServed: { "@type": "Country", name: areaServed },
+    serviceType,
+  };
+}
+
 export interface Breadcrumb {
   name: string;
   slug: string;

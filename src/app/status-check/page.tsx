@@ -183,13 +183,25 @@ export default function StatusCheckPage() {
                        How to Appeal Declined Status
                     </NextLink>
                  </li>
-                 <li>
-                    <NextLink href="/guides/change-banking-details" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
-                       <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
-                       Update Bank Details
-                    </NextLink>
-                 </li>
-              </ul>
+                  <li>
+                     <NextLink href="/guides/change-banking-details" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        Update Bank Details
+                     </NextLink>
+                  </li>
+                  <li>
+                     <NextLink href="/guides/missing-grant-payment-guide" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        Grant Not Paid? Fix It
+                     </NextLink>
+                  </li>
+                  <li>
+                     <NextLink href="/guides/fourth-payment-day-guide" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        Fourth Payment Day Guide
+                     </NextLink>
+                  </li>
+               </ul>
            </div>
         </aside>
       </div>

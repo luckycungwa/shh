@@ -8,6 +8,7 @@ import { FaCheckCircle, FaExternalLinkAlt, FaQuestionCircle, FaInfoCircle } from
 import NextLink from "next/link";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
+import EditorialMeta from "../../../components/EditorialMeta";
 import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 
@@ -110,11 +111,7 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
             {resolveTemplates(data.description)}
           </p>
-          <div className="flex flex-wrap gap-4 text-sm text-gray-500 border-y border-gray-100 dark:border-gray-800 py-4">
-            <span>Updated: {data.last_updated}</span>
-            <span>By: {data.author}</span>
-            <span>Sources: {data.sources.length} official references</span>
-          </div>
+          <EditorialMeta lastVerified={data.last_updated} author={data.author} />
         </header>
 
         <div className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-4 rounded-2xl shadow-sm lg:hidden mb-8">
