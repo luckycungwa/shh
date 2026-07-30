@@ -4,6 +4,8 @@ import { Gavel, Scale, AlertCircle } from 'lucide-react';
 import { Card, CardBody, Divider } from "@nextui-org/react";
 import { buildMetadata } from "../../lib/seo";
 import { getCurrentMonthYearKey } from "../../lib/config";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Service \u2014 Using SASSA Help Hub's Free Resources",
@@ -16,6 +18,10 @@ export default function TermsOfServicePage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Terms of Service", slug: "/terms-of-service" },
+      ])} />
       <header className="text-center mb-16">
         <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Terms of Service</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">

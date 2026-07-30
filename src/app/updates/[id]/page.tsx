@@ -47,14 +47,23 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     title: update.title,
     description: update.summary,
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
       title: update.title,
       description: update.summary,
       url,
       type: "article",
+      siteName: "SASSA Help Hub",
+      locale: "en_ZA",
       publishedTime: update.date,
       authors: [update.author || "Lucky Cungwa"],
       images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: update.title,
+      description: update.summary,
+      images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };
 }

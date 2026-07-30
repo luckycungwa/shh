@@ -5,6 +5,8 @@ import { FaBug, FaCheckCircle, FaEnvelope, FaHistory } from "react-icons/fa";
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
 import { getCurrentMonthYearKey } from "../../lib/config";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "Corrections Policy — How Errors Are Fixed",
@@ -15,6 +17,10 @@ export const metadata: Metadata = buildMetadata({
 export default function CorrectionsPolicyPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Corrections Policy", slug: "/corrections-policy" },
+      ])} />
       <header className="text-center mb-16">
         <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Corrections Policy</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">

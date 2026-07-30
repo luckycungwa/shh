@@ -2,6 +2,8 @@ import React from 'react';
 import type { Metadata } from "next";
 import ContactContent from './ContactContent';
 import { buildMetadata } from "../../lib/seo";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us",
@@ -10,5 +12,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function ContactPage() {
-  return <ContactContent />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Contact", slug: "/contact" },
+      ])} />
+      <ContactContent />
+    </>
+  );
 }

@@ -4,6 +4,8 @@ import { Chip } from "@nextui-org/react";
 import { FaBook, FaPenFancy, FaShieldAlt, FaPhoneAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "About the Author — Lucky Cungwa",
@@ -26,6 +28,10 @@ const authors = [
 export default function AuthorsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Authors", slug: "/authors" },
+      ])} />
       <header className="text-center mb-16">
         <Chip color="primary" variant="flat" className="font-bold uppercase text-xs mb-4">
           About

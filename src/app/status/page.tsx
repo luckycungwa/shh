@@ -6,7 +6,7 @@ import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
 import { getCurrentYearString } from "../../lib/config";
-import { faqPageSchema } from "../../lib/schema";
+import { faqPageSchema, breadcrumbSchema } from "../../lib/schema";
 
 const curYear = getCurrentYearString();
 
@@ -41,6 +41,10 @@ const faqs = [
 export default function StatusListingPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Status Meanings", slug: "/status" },
+      ])} />
       <JsonLd data={faqPageSchema(faqs)} />
 
       <nav className="text-sm text-gray-500 mb-8 flex gap-2">

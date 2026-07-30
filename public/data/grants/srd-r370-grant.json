@@ -69,7 +69,7 @@
     {
       "type": "info",
       "title": "Payment Dates for 2026",
-      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, in May 2026, the payment window was May 25 to May 31. Once your status shows a 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day — your money is safe in your account."
+      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, in July 2026, the payment window was 25–29 July. Once your status shows a 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day — your money is safe in your account."
     },
     {
       "type": "text",

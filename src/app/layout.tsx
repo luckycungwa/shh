@@ -49,11 +49,12 @@ export const metadata: Metadata = {
       "SASSA Help Hub - Your trusted unofficial guide for SASSA beneficiaries. Get daily updates for 2026, payment dates, SRD R370 news, and scam alerts.",
     images: ["https://www.sassahelphub.co.za/logo.png"],
   },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   alternates: {
     canonical: "https://www.sassahelphub.co.za",
-    languages: {
-      "en-ZA": "https://www.sassahelphub.co.za",
-    },
   },
 };
 
@@ -91,7 +92,7 @@ export default function RootLayout({
               "@type": "SearchAction",
               target: {
                 "@type": "EntryPoint",
-                urlTemplate: "https://www.sassahelphub.co.za/search?q={search_term_string}",
+                urlTemplate: "https://www.google.com/search?q=site%3Asassahelphub.co.za+{search_term_string}",
               },
               "query-input": "required name=search_term_string",
             },

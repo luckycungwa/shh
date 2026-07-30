@@ -7,6 +7,8 @@ import { FaShieldAlt, FaExclamationTriangle, FaCheckCircle, FaExclamationCircle 
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
 import { getCurrentYearString } from "../../lib/config";
+import { breadcrumbSchema } from "../../lib/schema";
+import JsonLd from "../../components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: `SASSA Scam Alerts ${getCurrentYearString()} — Protect Yourself from Fraud`,
@@ -29,6 +31,10 @@ export default function ScamAlertPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Scam Alerts", slug: "/scam-alert" },
+      ])} />
       <header className="text-center mb-16 space-y-4">
         <Chip color="danger" variant="shadow" className="font-bold uppercase animate-pulse">Live Alerts</Chip>
         <h1 className="text-5xl font-black tracking-tight">SASSA Scam & Fraud Alerts</h1>

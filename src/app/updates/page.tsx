@@ -7,6 +7,8 @@ import { Card, CardHeader, CardBody, Button, Chip, Divider } from "@nextui-org/r
 import { FaNewspaper, FaClock, FaArrowRight, FaRss, FaBell, FaInfoCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentYearString } from "../../lib/config";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 const curYear = getCurrentYearString();
 
@@ -37,6 +39,10 @@ export default function UpdatesListPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Updates", slug: "/updates" },
+      ])} />
       <header className="text-center mb-16 space-y-4">
         <Chip color="primary" variant="flat" className="font-bold uppercase text-xs">{filtered.length} Articles</Chip>
         <h1 className="text-5xl font-black tracking-tight">SASSA Grant Updates & Information {curYear}</h1>

@@ -16,6 +16,8 @@ import {
 import NextLink from "next/link";
 import type { Metadata } from "next";
 import { buildMetadata } from "../../lib/seo";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "About SASSA Help Hub \u2014 Independent Grant Resource Since 2024",
@@ -27,6 +29,10 @@ export const metadata: Metadata = buildMetadata({
 export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "About", slug: "/about" },
+      ])} />
       <header className="text-center mb-16">
         <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
           About SASSA Help Hub

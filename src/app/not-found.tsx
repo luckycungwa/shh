@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import NextLink from "next/link";
 import { FaHome } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  robots: { index: false },
+  alternates: {
+    canonical: "https://www.sassahelphub.co.za/404",
+  },
+};
 
 export default function NotFound() {
   return (

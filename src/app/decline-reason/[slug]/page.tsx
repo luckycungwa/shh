@@ -41,7 +41,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: reason.title,
     description: reason.description,
     alternates: { canonical: url },
-    openGraph: { title: reason.title, description: reason.description, url, type: "article", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
+    robots: { index: true, follow: true },
+    openGraph: { title: reason.title, description: reason.description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
+    twitter: {
+      card: "summary_large_image",
+      title: reason.title,
+      description: reason.description,
+      images: ["https://www.sassahelphub.co.za/logo.png"],
+    },
   };
 }
 
@@ -55,7 +62,8 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
       <JsonLd data={articleSchema(reason.title, reason.description, `/decline-reason/${reason.slug}`, reason.author, reason.last_updated)} />
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
-        { name: "Decline Reasons", slug: "/status/declined" },
+        { name: "SRD Grant", slug: "/grants/srd-r370-grant" },
+        { name: "Declined", slug: "/status/declined" },
         { name: reason.decline_code, slug: `/decline-reason/${reason.slug}` },
       ])} />
 

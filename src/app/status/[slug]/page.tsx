@@ -334,12 +334,21 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: status.title,
     description: status.description,
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
       title: status.title,
       description: status.description,
       url,
       type: "article",
+      siteName: "SASSA Help Hub",
+      locale: "en_ZA",
       images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: status.title,
+      description: status.description,
+      images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };
 }

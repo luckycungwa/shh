@@ -10,6 +10,7 @@ export function buildMetadata(
     ogDescription?: string;
     ogType?: "website" | "article";
     noTemplate?: boolean;
+    robots?: { index?: boolean; follow?: boolean };
   }
 ): Partial<Metadata> {
   const url = `${SITE_CONFIG.url}${overrides.path}`;
@@ -21,6 +22,7 @@ export function buildMetadata(
     }),
     ...(overrides.description && { description: overrides.description }),
     alternates: { canonical: url },
+    robots: overrides.robots ?? { index: true, follow: true },
     openGraph: {
       title: overrides.ogTitle || overrides.title || SITE_CONFIG.name,
       description: overrides.ogDescription || overrides.description || SITE_CONFIG.description,

@@ -8,7 +8,7 @@ This strategy is designed to boost Domain Authority (DA) through topic clusters 
 **URL:** `/status-check`
 **Role:** High-intent entry point.
 **Outbound Internal Links:**
-- `/payment-calendar` (Anchor: "May 2026 payment dates")
+- `/payment-calendar` (Anchor: "August 2026 payment dates")
 - `/guides/appeal-guide` (Anchor: "lodge a SASSA appeal")
 - `/guides/change-banking-details` (Anchor: "update bank account details")
 - `/scam-alert` (Anchor: "avoid SASSA scams")
@@ -42,7 +42,7 @@ This strategy is designed to boost Domain Authority (DA) through topic clusters 
 
 | Target Page | Recommended Anchor Text |
 |-------------|-------------------------|
-| `/status-check` | "SASSA status check May 2026", "check SRD approval", "SASSA status online" |
+| `/status-check` | "SASSA status check August 2026", "check SRD approval", "SASSA status online" |
 | `/payment-calendar` | "SASSA payment dates", "grant payment schedule 2026", "when is my next pay day" |
 | `/guides/appeal-guide` | "appeal declined SASSA grant", "ITSAA portal guide", "fix rejected SRD" |
 | `/eligibility-check` | "SASSA grant qualifier", "do I qualify for SASSA", "grant eligibility tool" |

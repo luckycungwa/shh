@@ -4,6 +4,8 @@ import React from "react";
 import type { Metadata } from "next";
 import { buildMetadata } from "../../lib/seo";
 import PaymentCalendarClient from "./PaymentCalendarClient";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 const curYear = new Date().getFullYear().toString();
 
@@ -11,6 +13,7 @@ export const metadata: Metadata = buildMetadata({
   title: `SASSA Payment Dates ${curYear} — Independent Grant Payment Schedule`,
   description: `View the SASSA grant payment schedule for ${curYear} including SRD R370, Old Age Pension, Disability Grant, and Child Support Grant payment dates. Independent guide.`,
   path: "/payment-calendar",
+  ogType: "website",
 });
 
 interface ScheduleMonth {
@@ -34,5 +37,13 @@ export default function PaymentCalendarPage() {
     historyData = JSON.parse(fs.readFileSync(historyPath, "utf8"));
   } catch {}
 
-  return <PaymentCalendarClient paymentDates={paymentDates} historyData={historyData} />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Payment Calendar", slug: "/payment-calendar" },
+      ])} />
+      <PaymentCalendarClient paymentDates={paymentDates} historyData={historyData} />
+    </>
+  );
 }

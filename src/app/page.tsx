@@ -27,7 +27,11 @@ interface Update {
 export default function HomePage() {
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const allUpdates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
-  const updates = allUpdates.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+  const updates = allUpdates.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter(u => new Date(u.date) >= new Date(new Date().getFullYear(), new Date().getMonth() - 2, 1)).slice(0, 3);
+  if (updates.length < 3) {
+    const allSorted = allUpdates.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+    updates.push(...allSorted.filter(u => !updates.find(x => x.id === u.id)).slice(0, 3 - updates.length));
+  }
 
   const paymentDatesPath = path.join(process.cwd(), "public/data/paymentDates.json");
   const paymentDates: { grant: string; date: string; day: string }[] = JSON.parse(fs.readFileSync(paymentDatesPath, "utf8"));

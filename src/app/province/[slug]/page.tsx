@@ -66,12 +66,21 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: `SASSA Grants in ${province.name}: Offices, Payments & SRD Guide ${getCurrentYearString()}`,
     description: `Complete guide to SASSA grants in ${province.name}. ${province.population_served}. Office addresses, SRD challenges, payment collection points across ${province.districts.length} districts.`,
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
     openGraph: {
       title: `SASSA Grants in ${province.name}: Offices, Payments & SRD Guide ${getCurrentYearString()}`,
       description: `Complete guide to SASSA grants in ${province.name}. ${province.population_served}.`,
       url,
       type: "article",
+      siteName: "SASSA Help Hub",
+      locale: "en_ZA",
       images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `SASSA Grants in ${province.name}: Offices, Payments & SRD Guide ${getCurrentYearString()}`,
+      description: `Complete guide to SASSA grants in ${province.name}. ${province.population_served}.`,
+      images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };
 }

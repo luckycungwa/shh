@@ -24,27 +24,27 @@ export default async function sitemap() {
   ];
 
   const staticPages = [
-    "",
-    "/updates",
-    "/faq",
-    "/guides",
-    "/scam-alert",
-    "/resources",
-    "/about",
-    "/privacy-policy",
-    "/contact",
-    "/disclaimer",
-    "/terms-of-service",
-    "/eligibility-check",
-    "/payment-calendar",
-    "/status-check",
-    "/glossary",
-    "/sassa-offices",
-    "/grants",
-    "/status",
-    "/common-problems",
-    "/authors",
-    ...eaatPages,
+    { path: "", priority: 1, changeFreq: "daily" as const },
+    { path: "/updates", priority: 0.9, changeFreq: "daily" as const },
+    { path: "/payment-calendar", priority: 0.9, changeFreq: "weekly" as const },
+    { path: "/status-check", priority: 0.9, changeFreq: "weekly" as const },
+    { path: "/faq", priority: 0.8, changeFreq: "weekly" as const },
+    { path: "/guides", priority: 0.8, changeFreq: "weekly" as const },
+    { path: "/grants", priority: 0.8, changeFreq: "weekly" as const },
+    { path: "/status", priority: 0.8, changeFreq: "weekly" as const },
+    { path: "/scam-alert", priority: 0.7, changeFreq: "weekly" as const },
+    { path: "/resources", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/about", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/privacy-policy", priority: 0.3, changeFreq: "yearly" as const },
+    { path: "/contact", priority: 0.5, changeFreq: "monthly" as const },
+    { path: "/disclaimer", priority: 0.3, changeFreq: "yearly" as const },
+    { path: "/terms-of-service", priority: 0.3, changeFreq: "yearly" as const },
+    { path: "/eligibility-check", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/glossary", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/sassa-offices", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/common-problems", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/authors", priority: 0.5, changeFreq: "monthly" as const },
+    ...eaatPages.map((p) => ({ path: p, priority: 0.5 as const, changeFreq: "yearly" as const })),
   ];
 
   const updates = readJson(path.join(process.cwd(), "public/data/updates.json"));
@@ -53,7 +53,8 @@ export default async function sitemap() {
   let grantFiles: string[] = [];
   try { grantFiles = fs.readdirSync(grantsDir).filter((f) => f.endsWith(".json")); } catch { grantFiles = []; }
 
-  // Extract lastmod dates from data
+  const faqs = readJson(path.join(process.cwd(), "public/data/faqs.json"));
+
   const updateDates = updates.map((u: any) => u.date).filter(Boolean);
   const guideDates = guides.map((g: any) => g.lastUpdated).filter(Boolean);
   const grantDates = grantFiles.map((f: string) => {
@@ -62,12 +63,13 @@ export default async function sitemap() {
       return d.last_updated;
     } catch { return null; }
   }).filter(Boolean);
+  const faqDates = faqs.map((f: any) => f.lastUpdated).filter(Boolean);
   const updateListDate = mostRecentDate(updateDates);
   const guideListDate = mostRecentDate(guideDates);
-  const allContentDates = [...updateDates, ...guideDates, ...grantDates];
+  const allContentDates = [...updateDates, ...guideDates, ...grantDates, ...faqDates];
 
-  const updateUrls = updates.filter((u: any) => u.tag !== "monthly-payment-schedule").map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate }));
-  const guideUrls = guides.map((g: any) => ({ path: `/guides/${g.id}`, lastMod: g.lastUpdated || guideListDate }));
+  const updateUrls = updates.filter((u: any) => u.tag !== "monthly-payment-schedule").map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate, priority: 0.7, changeFreq: "monthly" as const }));
+  const guideUrls = guides.map((g: any) => ({ path: `/guides/${g.id}`, lastMod: g.lastUpdated || guideListDate, priority: 0.8, changeFreq: "monthly" as const }));
 
   const grantSlugs = [
     "srd-r370-grant", "old-age-pension", "child-support-grant", "disability-grant",
@@ -83,6 +85,8 @@ export default async function sitemap() {
   const grantUrls = grantSlugs.map((s) => ({
     path: `/grants/${s}`,
     lastMod: grantMods[s] || mostRecentDate(grantDates),
+    priority: 0.8,
+    changeFreq: "monthly" as const,
   }));
 
   const statusSlugs = [
@@ -108,12 +112,11 @@ export default async function sitemap() {
     "age-outside-range", "deceased-dha-record",
   ];
 
-  // Build final URL list with lastmod
   const staticUrls = staticPages.map((p) => {
     let lastMod = mostRecentDate(allContentDates);
-    if (p === "/updates" && updateListDate) lastMod = updateListDate;
-    else if (p === "/guides" && guideListDate) lastMod = guideListDate;
-    return { path: p, lastMod };
+    if (p.path === "/updates" && updateListDate) lastMod = updateListDate;
+    else if (p.path === "/guides" && guideListDate) lastMod = guideListDate;
+    return { path: p.path, lastMod, priority: p.priority, changeFreq: p.changeFreq };
   });
 
   const allEntries = [
@@ -121,15 +124,15 @@ export default async function sitemap() {
     ...updateUrls,
     ...guideUrls,
     ...grantUrls,
-    ...statusSlugs.map((s) => ({ path: `/status/${s}`, lastMod: statusMod })),
-    ...provinceSlugs.map((s) => ({ path: `/province/${s}`, lastMod: provinceMod })),
-    ...declineSlugs.map((s) => ({ path: `/decline-reason/${s}`, lastMod: statusMod })),
+    ...statusSlugs.map((s) => ({ path: `/status/${s}`, lastMod: statusMod, priority: 0.7, changeFreq: "monthly" as const })),
+    ...provinceSlugs.map((s) => ({ path: `/province/${s}`, lastMod: provinceMod, priority: 0.6, changeFreq: "monthly" as const })),
+    ...declineSlugs.map((s) => ({ path: `/decline-reason/${s}`, lastMod: statusMod, priority: 0.7, changeFreq: "monthly" as const })),
   ];
 
-  return allEntries.map(({ path: p, lastMod }) => ({
+  return allEntries.map(({ path: p, lastMod, priority, changeFreq }) => ({
     url: `${BASE_URL}${p}`,
     lastModified: lastMod,
-    changeFrequency: p === "" || p === "/updates" ? "daily" : "weekly",
-    priority: p === "" ? 1 : p.startsWith("/grants") || p.startsWith("/status") || p.startsWith("/updates") || p.startsWith("/guides") || p.startsWith("/province") || p.startsWith("/decline-reason") ? 0.8 : 0.5,
+    changeFrequency: changeFreq,
+    priority,
   }));
 }
