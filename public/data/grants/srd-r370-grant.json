@@ -77,6 +77,11 @@
       "content": "You can receive your SRD grant through: <ul><li><strong>Bank transfer</strong> — directly into your South African bank account</li><li><strong>Postbank</strong> — collect at any Postbank branch or Post Office</li><li><strong>Retail collection</strong> — collect at Pick n Pay, Boxer, Shoprite, Checkers, or USave using the SMS code sent to your phone</li></ul>To collect at a retail store, you must receive the official payment SMS containing your collection code. Do not go to the store until you have received this SMS."
     },
     {
+      "type": "text",
+      "title": "How to Reapply for the SRD Grant",
+      "content": "If your SRD application was declined or your grant was suspended, you can reapply in a few minutes — and it is completely free. Go to <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a> and submit a new application with your 13-digit ID number, or reapply through the official SASSA WhatsApp line (<a href=\"https://wa.me/27820468553\">082 046 8553</a>) or the Moya App. If your grant was lapsed or suspended as a permanent grant recipient, see our guide on <a href=\"/guides/guide-reinstate-grant\">reinstating a lapsed or suspended grant</a> for the steps to follow. After reapplying, check your status after the 15th of the month — reapplications are assessed on the same monthly cycle as new applications."
+    },
+    {
       "type": "faq",
       "title": "Frequently Asked Questions",
       "faqs": [
@@ -90,7 +95,11 @@
         },
         {
           "q": "What happens if I do not collect my grant?",
-          "a": "If you do not collect your grant for three consecutive months, your application may be suspended. You will need to reapply."
+          "a": "If you do not collect your grant for three consecutive months, your application may be suspended. You will need to reapply by visiting srd.sassa.gov.za and submitting a fresh application. Your banking details are usually kept, but you should verify your details after reapplying."
+        },
+        {
+          "q": "How do I reapply for the SRD grant?",
+          "a": "To reapply, go to the official SRD portal at srd.sassa.gov.za and submit a new application with your 13-digit ID number. You can also reapply via the SASSA WhatsApp line (082 046 8553) or the Moya App. Reapplication is free and does not require visiting a SASSA office."
         },
         {
           "q": "Can someone collect my grant on my behalf?",

@@ -38,8 +38,8 @@
           "content": "Visit a doctor or clinic to obtain a medical report. SASSA provides a specific form (the MED 1 form) that your doctor must complete."
         },
         {
-          "title": "Visit Your Nearest SASSA Office",
-          "content": "Take all your documents, including the medical report, to your nearest SASSA office."
+          "title": "Submit Your Application (Online or In Person)",
+          "content": "You can start your Disability Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, take all your documents, including the medical report, to your nearest SASSA office."
         },
         {
           "title": "Complete the Application",
@@ -75,6 +75,10 @@
         {
           "q": "What if my disability improves?",
           "a": "If your grant was awarded for a temporary period, you will need to be reassessed when it expires. If it improves permanently, you should inform SASSA."
+        },
+        {
+          "q": "Can I apply for the Disability Grant online?",
+          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. However, the medical assessment process still requires you to obtain a medical report and attend a state medical assessment."
         },
         {
           "q": "Can I apply if I have a private doctor's report?",

@@ -1,5 +1,135 @@
 [
   {
+    "id": "apply-sassa-grants",
+    "title": "How to Apply for SASSA Grants (Online & In Person) in 2026",
+    "description": "Step-by-step guide to applying for any SASSA grant in 2026 — SRD R370 online, permanent grants online via the SASSA Services Portal, or in person at a SASSA office. Includes required documents and what happens after you apply.",
+    "category": "Applications",
+    "difficulty": "beginner",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "Choose the Right Grant for Your Situation",
+        "content": "Before applying, confirm which SASSA grant fits your circumstances. The main options are: <ul><li><strong>SRD R370 grant</strong> — for unemployed South Africans aged 18–59 with income below {{srd_income_limit}}/month. Applied for online only.</li><li><strong>Older Persons (Old Age) Grant</strong> — for citizens aged 60+ who pass the means test. Pays {{old_age_pension_amount_under75}}/month (under 75) or {{old_age_pension_amount_over75}} (75+).</li><li><strong>Disability Grant</strong> — for adults aged 18–59 with a medical disability preventing employment. Pays {{disability_grant_amount}}/month.</li><li><strong>Child Support Grant</strong> — for primary caregivers of children under 18. Pays {{child_support_grant_amount}}/month per child.</li><li><strong>Foster Child Grant</strong> — for foster parents with a children's court order. Pays {{foster_child_grant_amount}}/month.</li><li><strong>Care Dependency Grant</strong> — for caregivers of children with severe disabilities. Pays {{care_dependency_grant_amount}}/month.</li><li><strong>Grant-in-Aid</strong> — a {{grant_in_aid_amount}}/month top-up for Old Age or Disability recipients who need full-time care.</li><li><strong>War Veterans Grant</strong> — for WWII or Korean War veterans. Pays {{war_veterans_grant_amount}}/month.</li></ul>You can only receive one primary grant at a time (plus the Grant-in-Aid top-up). Use our <a href=\"/eligibility-check\">eligibility checker</a> and browse the <a href=\"/grants\">grant guides</a> to compare options.",
+        "tips": [
+          "The SRD grant is the only grant you can apply for entirely online via srd.sassa.gov.za.",
+          "Permanent grants can now be started online via the SASSA Services Portal, but you may still be asked to visit an office for documents."
+        ]
+      },
+      {
+        "title": "Gather Your Required Documents",
+        "content": "Every SASSA grant application needs the same core documents: <ul><li><strong>Your 13-digit South African ID</strong> — green ID book, smart ID card, or temporary ID certificate. Refugees and asylum seekers need their permit.</li><li><strong>Proof of income</strong> — payslips, pension slips, or bank statements for the last 3 months. If you have no income, bring an affidavit.</li><li><strong>Proof of residence</strong> — utility bill or affidavit confirming your address.</li><li><strong>Proof of marital status</strong> — marriage certificate, divorce decree, or spousal death certificate if applicable (for means-tested grants).</li><li><strong>A valid bank account in your name</strong> — for grant payments, or collect via Postbank/retail.</li><li><strong>Grant-specific documents</strong> — medical assessment reports for Disability/Care Dependency, a children's court order for Foster Child, or proof of military service for the War Veterans Grant.</li></ul>See our <a href=\"/guides/document-checklist\">complete document checklist</a> for details.",
+        "tips": [
+          "If you lost your ID book, apply for a replacement from the Department of Home Affairs before starting your SASSA application.",
+          "Certified copies of documents are generally accepted — get them certified at any police station."
+        ]
+      },
+      {
+        "title": "Apply Online (Fastest Option)",
+        "content": "Two official online portals are used for SASSA applications in 2026: <ul><li><strong>SRD grant:</strong> go to <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a>, enter your 13-digit ID number and mobile number, provide banking details, and submit. You can also apply via the official SASSA WhatsApp line (<a href=\"https://wa.me/27820468553\">082 046 8553</a>) or the Moya App.</li><li><strong>Permanent grants:</strong> go to <a href=\"https://services.sassa.gov.za\">services.sassa.gov.za</a>, the official SASSA Services Portal. Register an account, log in, and complete the online application for the Older Persons, Disability, Child Support, Foster Child, Care Dependency, Grant-in-Aid, or War Veterans Grant. You will be guided through the steps and may need to upload supporting documents.</li></ul>Always check that you are on the official .gov.za domain — never pay anyone to apply on your behalf. SASSA applications are free.",
+        "tips": [
+          "For the SRD application you will receive an SMS confirmation once submitted — keep it as proof.",
+          "The SASSA Services Portal requires you to register and verify your identity the first time you log in."
+        ]
+      },
+      {
+        "title": "Apply In Person at a SASSA Office (If You Prefer)",
+        "content": "You can still apply in person at your nearest SASSA office. Bring your ID and all supporting documents listed in step 2. At the office: <ol><li>Take a queue ticket for the application counter.</li><li>Tell the officer which grant you are applying for.</li><li>Complete the application form with their help — check that every detail matches your ID.</li><li>Submit your documents and receive a receipt with a reference number.</li></ol>Go early (offices open at 08:00) to avoid long queues, especially at month-end. Find your nearest office on our <a href=\"/resources\">offices page</a>.",
+        "tips": [
+          "Bring a pen and write your phone number clearly so SASSA can reach you.",
+          "Ask for a case reference number and keep the stamped receipt — it is your proof of application."
+        ]
+      },
+      {
+        "title": "What Happens After You Apply",
+        "content": "After submitting your application: <ul><li><strong>Processing time:</strong> SASSA aims to process most grant applications within 30 to 90 days. The SRD grant is assessed on a monthly cycle, with status updates typically available after the 15th of each month.</li><li><strong>Means test:</strong> SASSA will verify your income and assets against the threshold for your grant. For the SRD, bank accounts are checked for monthly deposits over {{srd_income_limit}}.</li><li><strong>Possible assessments:</strong> For the Disability and Care Dependency Grants, a state medical assessment is required. A SASSA official may also visit your home for Grant-in-Aid or Foster Child verification.</li><li><strong>Check your status:</strong> Use our <a href=\"/status-check\">status check tool</a>, the official SRD portal, the WhatsApp line, or call the SASSA helpline on 0800 60 10 11.</li><li><strong>If declined:</strong> You can appeal the decision via the Independent Tribunal. See our <a href=\"/guides/appeal-guide\">appeal guide</a>.</li></ul>",
+        "tips": [
+          "Your grant is paid from the date of application, not the approval date — so apply as soon as you qualify.",
+          "If your status shows 'Pending' for more than 90 days, contact your local SASSA office with your reference number."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I apply for a SASSA grant online in 2026?",
+        "a": "Yes. The SRD grant is applied for online at srd.sassa.gov.za. Most permanent grants can now also be started online via the official SASSA Services Portal at services.sassa.gov.za. You may still be asked to visit a SASSA office to submit physical documents."
+      },
+      {
+        "q": "How long does a SASSA grant application take?",
+        "a": "Submitting the application takes about 15 minutes online. SASSA then processes it within 30 to 90 days. The SRD grant is assessed on a monthly cycle with status updates usually available after the 15th of each month."
+      },
+      {
+        "q": "Is there a fee to apply for a SASSA grant?",
+        "a": "No. All SASSA grant applications are completely free. Anyone who asks you to pay to apply or to 'speed up' your application is a scammer. Report them to the SASSA fraud hotline on 0800 60 10 11."
+      },
+      {
+        "q": "What documents do I need to apply for a SASSA grant?",
+        "a": "You need your 13-digit South African ID, proof of income (or an affidavit if you have none), proof of residence, and a bank account in your name. Grant-specific documents like medical reports or court orders may also be required."
+      },
+      {
+        "q": "Can I apply for more than one SASSA grant?",
+        "a": "No. You can only receive one primary SASSA grant at a time. The only exception is the Grant-in-Aid, which is a supplementary top-up for people already receiving the Old Age or Disability Grant."
+      }
+    ],
+    "tags": [
+      "how to apply for sassa grant",
+      "sassa application process",
+      "apply for sassa online",
+      "sassa application documents"
+    ],
+    "lastUpdated": "2026-07-07",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SASSA SRD Grant Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "SASSA Services Portal (Online Applications)",
+        "url": "https://services.sassa.gov.za"
+      },
+      {
+        "title": "Department of Social Development",
+        "url": "https://www.dsd.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Browse All SASSA Grants",
+        "url": "/grants",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA SRD Grant Guide",
+        "url": "/guides/srd-grant",
+        "isExternal": false
+      },
+      {
+        "title": "Child Support Grant Application Guide",
+        "url": "/guides/guide-001",
+        "isExternal": false
+      },
+      {
+        "title": "Document Checklist",
+        "url": "/guides/document-checklist",
+        "isExternal": false
+      },
+      {
+        "title": "How to Appeal a Declined Application",
+        "url": "/guides/appeal-guide",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Services Portal (Online Applications)",
+        "url": "https://services.sassa.gov.za",
+        "isExternal": true
+      }
+    ]
+  },
+  {
     "id": "srd-grant",
     "title": "SASSA SRD R370 Grant Guide 2026: Eligibility & How to Apply",
     "title_zu": "Umhlahlandlela we-SASSA SRD R370 Grant 2026: Ukufaneleka Nokuthi Ungafaka Kanjani Isicelo",
@@ -60,7 +190,26 @@
     ],
     "lastUpdated": "2026-01-28",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SASSA SRD Grant Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "Department of Social Development",
+        "url": "https://www.dsd.gov.za"
+      }
+    ],
     "relatedLinks": [
+      {
+        "title": "How to Apply for SASSA Grants",
+        "url": "/guides/apply-sassa-grants",
+        "isExternal": false
+      },
       {
         "title": "Common SASSA Problems Hub",
         "url": "/common-problems",
@@ -116,6 +265,20 @@
     ],
     "lastUpdated": "2026-01-28",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SASSA SRD Grant Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "SRD Appeals Portal (Independent Tribunal)",
+        "url": "https://srd-appeals.dsd.gov.za"
+      }
+    ],
     "relatedLinks": [
       {
         "title": "Common SASSA Problems Hub",
@@ -169,7 +332,26 @@
     ],
     "lastUpdated": "2026-01-28",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SASSA Services Portal (Online Applications)",
+        "url": "https://services.sassa.gov.za"
+      },
+      {
+        "title": "Children's Act 2005",
+        "url": "https://www.gov.za/documents/childrens-act"
+      }
+    ],
     "relatedLinks": [
+      {
+        "title": "How to Apply for SASSA Grants",
+        "url": "/guides/apply-sassa-grants",
+        "isExternal": false
+      },
       {
         "title": "SASSA Website",
         "url": "https://www.sassa.gov.za",
@@ -1396,6 +1578,15 @@
           "You can apply for the Child Support Grant while pregnant — the grant starts after the child is born.",
           "The Foster Child Grant court order must be issued by a children's court, not a maintenance court."
         ]
+      },
+      {
+        "title": "Documents Required for a Grant Review Appointment",
+        "content": "If SASSA has asked you to attend a grant review, bring these documents to your appointment: (1) Your original 13-digit South African ID book or Smart ID card. If you use alternative ID, bring your original refugee permit, asylum seeker document, or special permit. (2) Proof of residence — a utility bill, bank statement, or lease agreement dated within the last 3 months. (3) Your SASSA card (Postbank Black Card or old Gold Card) if you have it. (4) Proof of any income you receive — payslips if employed, pension statements, bank statements showing deposits, or an affidavit if you are unemployed. (5) Any documents SASSA specifically asked for in their SMS or letter. Bring original documents plus photocopies. Some SASSA offices offer copying services, but not all. For a full walkthrough of what happens during a grant review, see our [grant review and verification guide](/guides/grant-verification-process).",
+        "tips": [
+          "Make photocopies of all documents before leaving home — keep originals in a safe folder.",
+          "If you were asked to bring a specific document and you do not have it, go anyway and explain — the officer may accept an alternative.",
+          "Call the SASSA office ahead of time to confirm which documents are needed for your specific review type."
+        ]
       }
     ],
     "faqs": [
@@ -1406,6 +1597,10 @@
       {
         "q": "Can I apply for a grant if I have lost my ID document?",
         "a": "No. You need your original ID book or Smart ID card to apply. If you lost your ID, apply for a replacement at the Department of Home Affairs first. This can take 2 to 8 weeks."
+      },
+      {
+        "q": "What documents do I need specifically for a grant review appointment?",
+        "a": "You need your original South African ID (or alternative ID document), proof of residence dated within 3 months, your SASSA card if you have one, proof of income (payslips, bank statements, or an affidavit if unemployed), and any documents SASSA specifically asked for in their SMS or letter. Bring originals plus photocopies. See our [grant review and verification guide](/guides/grant-verification-process) for a full walkthrough of the review process."
       }
     ],
     "tags": [
@@ -1413,11 +1608,41 @@
       "grant checklist",
       "what to bring",
       "id document",
-      "proof of residence"
+      "proof of residence",
+      "grant review documents",
+      "review appointment checklist"
     ],
-    "lastUpdated": "2026-07-07",
+    "lastUpdated": "2026-07-29",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SASSA SRD Grant Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "Department of Social Development",
+        "url": "https://www.dsd.gov.za"
+      },
+      {
+        "title": "Department of Home Affairs",
+        "url": "https://www.dha.gov.za"
+      }
+    ],
     "relatedLinks": [
+      {
+        "title": "How to Apply for SASSA Grants",
+        "url": "/guides/apply-sassa-grants",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Grant Reviews & Verification Process",
+        "url": "/guides/grant-verification-process",
+        "isExternal": false
+      },
       {
         "title": "SASSA Website",
         "url": "https://www.sassa.gov.za",
@@ -2406,8 +2631,8 @@
   },
   {
     "id": "grant-verification-process",
-    "title": "SASSA Grant Verification Process: What Happens and What Documents to Bring",
-    "description": "SASSA has announced a targeted verification process for specific grant beneficiaries. If you received an SMS or letter asking you to visit a SASSA office, this guide explains exactly what will happen and what you need to bring.",
+    "title": "SASSA Grant Reviews & Verification Process (Complete Guide)",
+    "description": "Complete guide to SASSA grant reviews and verification. If you received an SMS or letter asking you to visit a SASSA office, here is exactly what will happen, what documents to bring, and what to do if you miss your appointment.",
     "category": "Grant Management",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
@@ -2422,10 +2647,20 @@
       },
       {
         "title": "How Will You Know If You Are Selected?",
-        "content": "If you are selected for verification, SASSA will contact you through official channels. This may be: an SMS from a SASSA-registered short code asking you to visit your nearest SASSA office, a formal letter delivered to your address on SASSA letterhead, or a phone call from your local SASSA office. The communication will tell you which documents to bring and which office to visit. Important: SASSA will never ask for your banking PIN, SASSA card PIN, or passwords over the phone or SMS. If someone contacts you asking for this information, it is a scam. If you are unsure whether the contact is real, call the SASSA helpline on 0800 60 10 11 to verify before taking any action.",
+        "content": "If you are selected for verification or a grant review, SASSA will contact you through official channels. This may be: an SMS from a SASSA-registered short code asking you to visit your nearest SASSA office, a formal letter delivered to your address on SASSA letterhead, or a phone call from your local SASSA office.\n\n**Review SMS Notifications:** SASSA sends SMS messages to beneficiaries selected for review before the payment cycle begins. A genuine review SMS will tell you that your grant has been flagged for review, instruct you to visit a SASSA office, and include the documents you need to bring. Genuine SASSA SMS messages come from registered short codes — not regular cellphone numbers or WhatsApp. They will never ask for your banking PIN, SASSA card PIN, or passwords. If you receive a message asking for this information, it is a scam. Check your phone messages carefully — if your contact details are outdated, you may miss the notification and only discover you are under review when your payment does not arrive on the normal day.\n\nThe communication will tell you which documents to bring and which office to visit. Important: SASSA will never ask for your banking PIN, SASSA card PIN, or passwords over the phone or SMS. If someone contacts you asking for this information, it is a scam. If you are unsure whether the contact is real, call the SASSA helpline on 0800 60 10 11 to verify before taking any action.",
         "tips": [
           "SASSA does not have the capacity to call every beneficiary — if you are selected, the contact will be official and verifiable.",
-          "If you receive an SMS with a link to click, check the URL carefully — real SASSA links end in .gov.za."
+          "If you receive an SMS with a link to click, check the URL carefully — real SASSA links end in .gov.za.",
+          "Keep your cellphone number updated — if you changed your number recently, visit SASSA to update it immediately."
+        ]
+      },
+      {
+        "title": "Review Appointments: What to Expect",
+        "content": "When SASSA contacts you for a review, they will ask you to visit your nearest SASSA office for an appointment. Here is what you need to know:\n\n**How Appointments Work:** Review appointments are not pre-scheduled with a specific time. You visit the SASSA office during working hours (08:00 to 15:00, Monday to Friday), take a queue ticket, and wait for your number to be called. There is no online booking system for review appointments.\n\n**What Happens During the Appointment:** The SASSA officer will review your documents, compare them against the information in the SASSA system, update your contact details and income declaration as needed, and confirm whether your information is correct. The actual document review takes 15 to 30 minutes, not including waiting time.\n\n**How to Reschedule:** If you cannot attend on the date SMSsed to you, call the SASSA helpline on 0800 60 10 11 to reschedule. Do not simply skip the appointment — failing to attend may result in suspension. If you are too ill or disabled to visit an office, request a home visit when you call.\n\n**What If You Missed the SMS?** If you lost the SMS or letter asking you to come for a review, go to your nearest SASSA office with your ID document and explain that you received a review request. The officer can look up your record and proceed without the original message.",
+        "tips": [
+          "Go early in the morning (before 08:00) to avoid the longest queues.",
+          "Tuesday to Thursday are generally less busy than Monday and Friday.",
+          "Bring a pen and water — wait times can be 2 to 3 hours at busy offices."
         ]
       },
       {
@@ -2445,11 +2680,12 @@
         ]
       },
       {
-        "title": "What Happens If You Do Not Attend the Verification?",
-        "content": "If SASSA asks you to attend a verification and you do not go, your grant may be suspended or declined. SASSA cannot continue paying a grant without verifying that the beneficiary's information is current and accurate. If your grant is suspended due to non-attendance, it can be reinstated once you visit a SASSA office with your documents. You will also receive any back payments owed from the date of suspension. The key message: do not ignore the request. Even if you think your information is correct, attend the verification to confirm it officially. Failure to attend creates unnecessary problems that take time to resolve.\n\n**August 2026 note:** SASSA has confirmed that beneficiaries flagged for review will be paid on Friday, 07 August 2026 — the fourth payment day — not the normal three-day cycle. After receiving payment, you must still complete the review at a SASSA office before the end of August. [Read the full announcement](/updates/update-2026-028).",
+        "title": "What Happens If You Do Not Attend the Review or Verification?",
+        "content": "If SASSA asks you to attend a review or verification and you do not go, your grant may be suspended or declined. SASSA cannot continue paying a grant without verifying that the beneficiary's information is current and accurate.\n\n**Suspension Timeline:** If you miss the review, your grant may be suspended in the next payment cycle. You will not receive payments until the review is completed. If you continue to ignore the request, your grant may lapse entirely under the Social Assistance Act. A lapsed grant requires reapplying from scratch — your old application cannot be reinstated.\n\n**How to Reinstate:** If your grant is suspended due to non-attendance, it can be reinstated once you visit a SASSA office with your documents. You will also receive any back payments owed from the date of suspension. Visit your SASSA office as soon as possible — do not wait for another SMS.\n\nThe key message: do not ignore the request. Even if you think your information is correct, attend the review to confirm it officially. Failure to attend creates unnecessary problems that take time to resolve.\n\n**August 2026 note:** SASSA has confirmed that beneficiaries flagged for review will be paid on Friday, 07 August 2026 — the fourth payment day — not the normal three-day cycle. After receiving payment, you must still complete the review at a SASSA office before the end of August. [Read the full announcement](/updates/update-2026-028).",
         "tips": [
           "If you cannot attend on the scheduled date, call the SASSA helpline to reschedule — do not just skip it.",
-          "If you are too ill or disabled to visit an office, call 0800 60 10 11 to request a home visit."
+          "If you are too ill or disabled to visit an office, call 0800 60 10 11 to request a home visit.",
+          "A suspension can be reversed by completing the review, but a lapse cannot."
         ]
       },
       {
@@ -2472,24 +2708,59 @@
       },
       {
         "q": "Can I send someone else to the verification appointment for me?",
-        "a": "No. The verification requires you to attend in person because SASSA needs to see your original documents and compare them to you. If you are too ill or disabled to attend, call 0800 60 10 11 to request a home visit."
+        "a": "No. The verification requires you to attend in person because SASSA needs to see your original documents and compare them to you. If you are too ill or disabled to attend, call 0800 60 10 11 to request a home visit. Alternatively, you can authorise a trusted family member with a signed letter — they must bring their own ID and copies of your documents."
       },
       {
         "q": "What if I lost the SMS or letter asking me to come for verification?",
-        "a": "Go to your nearest SASSA office with your ID document and explain that you received a verification request. The officer can look up your record and proceed with the verification without the original message."
+        "a": "Go to your nearest SASSA office with your ID document and explain that you received a review request. The officer can look up your record and proceed without the original message."
+      },
+      {
+        "q": "I received an SMS about a grant review — is it real and what do I do?",
+        "a": "Genuine SASSA review SMS messages come from registered short codes and tell you to visit a SASSA office. They never ask for your PIN, OTP, or banking password. If you are unsure, call 0800 60 10 11 to verify. For detailed guidance on identifying real vs fake SMS messages, see our guide on [what to do if SASSA asks you to update your information](/guides/sassa-update-information)."
+      },
+      {
+        "q": "Can I reschedule my review appointment?",
+        "a": "Yes. If you cannot attend on the date given, call the SASSA helpline on 0800 60 10 11 to reschedule. Do not simply skip the appointment — failing to attend may result in your grant being suspended."
       }
     ],
     "tags": [
-      "sassa verification",
+      "sassa grant review",
       "grant verification",
       "sassa office visit",
       "sassa document check",
-      "sasa verify information",
-      "sassa integrity check"
+      "sassa integrity check",
+      "grant review appointment",
+      "sassa review sms",
+      "suspension risk",
+      "sassa verification process"
     ],
-    "lastUpdated": "2026-07-28",
+    "lastUpdated": "2026-07-29",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SASSA SRD Grant Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "Department of Social Development",
+        "url": "https://www.dsd.gov.za"
+      }
+    ],
     "relatedLinks": [
+      {
+        "title": "Grant Under Review? Fourth Payment Day Guide",
+        "url": "/guides/fourth-payment-day-guide",
+        "isExternal": false
+      },
+      {
+        "title": "What to Do If SASSA Asks You to Update Your Information",
+        "url": "/guides/sassa-update-information",
+        "isExternal": false
+      },
       {
         "title": "SASSA Life Certification 2026",
         "url": "/guides/life-certification",
@@ -2498,6 +2769,11 @@
       {
         "title": "SASSA Grant Documents Checklist",
         "url": "/guides/document-checklist",
+        "isExternal": false
+      },
+      {
+        "title": "Lost or Changed Your SASSA Phone Number?",
+        "url": "/guides/lost-phone-number",
         "isExternal": false
       },
       {
@@ -2532,10 +2808,11 @@
     "steps": [
       {
         "title": "Step 1: Verify the Request Is Genuine",
-        "content": "Before doing anything, confirm the request is really from SASSA. Scammers frequently send fake SMS messages and make fake calls pretending to be SASSA. Signs of a genuine SASSA request: the SMS comes from a recognised short code (not a regular cellphone number), the message tells you to visit a SASSA office (not a website link), the letter is on official SASSA letterhead with contact details, and the caller identifies themselves with their name and office location. Red flags: the message asks you to click a link to 'verify now', asks for your banking PIN or card PIN, demands payment to 'process' the update, or creates urgency ('update within 24 hours or your grant stops'). If you are unsure, call the SASSA helpline on 0800 60 10 11 to confirm before taking any action.\n\n**August 2026:** Beneficiaries flagged for grant review will receive an SMS from SASSA about their review appointment. These SMS messages asking you to visit a SASSA office are genuine — SASSA does not send review notifications via WhatsApp or social media. [Read the full announcement](/updates/update-2026-028).",
+        "content": "Before doing anything, confirm the request is really from SASSA. Scammers frequently send fake SMS messages and make fake calls pretending to be SASSA.\n\n**How to Identify a Genuine SASSA Review SMS:** A legitimate SASSA review SMS comes from a recognised registered short code (not a regular cellphone number or WhatsApp). It tells you to visit a SASSA office and lists the documents you need to bring. It does NOT contain a clickable link to \"verify now\" or ask for your banking PIN or card PIN.\n\n**What a Genuine Review SMS Looks Like:** \"SASSA: Your grant has been flagged for review. Visit your nearest SASSA office with your ID and proof of residence to complete the review. For enquiries call 0800 60 10 11.\" The message will be in plain text with no URLs, no payment demands, and no threats.\n\n**Red Flags That Mean It Is a Scam:** The message asks you to click a link to \"verify now\", asks for your banking PIN or card PIN, demands payment to \"process\" the update, creates urgency (\"update within 24 hours or your grant stops\"), or comes from WhatsApp or a regular cellphone number.\n\n**What If You Did Not Receive an SMS?** If you think you are due for a review but never received an SMS, it may be because your contact details are out of date. Visit your nearest SASSA office with your ID to check your review status. Update your phone number if it has changed — see our guide on [changing your registered phone number](/guides/lost-phone-number).\n\n**August 2026:** Beneficiaries flagged for grant review will receive an SMS from SASSA about their review appointment. These SMS messages asking you to visit a SASSA office are genuine — SASSA does not send review notifications via WhatsApp or social media. [Read the full announcement](/updates/update-2026-028).\n\nSigns of a genuine SASSA request: the SMS comes from a recognised short code (not a regular cellphone number), the message tells you to visit a SASSA office (not a website link), the letter is on official SASSA letterhead with contact details, and the caller identifies themselves with their name and office location. If you are unsure, call the SASSA helpline on 0800 60 10 11 to confirm before taking any action.",
         "tips": [
           "SASSA will never ask for your PIN, OTP, or banking password — never give these to anyone.",
-          "If the message has spelling errors or comes from a WhatsApp number, it is almost certainly a scam."
+          "If the message has spelling errors or comes from a WhatsApp number, it is almost certainly a scam.",
+          "When in doubt, call 0800 60 10 11 — do not use any phone number provided in the suspicious message."
         ]
       },
       {
@@ -2585,6 +2862,10 @@
         "a": "It depends. Genuine SASSA SMS messages come from registered short codes and ask you to visit a SASSA office. Fake SMS messages usually contain a link to click, ask for personal information, or demand payment. When in doubt, call 0800 60 10 11 to verify."
       },
       {
+        "q": "What does a genuine SASSA review SMS look like?",
+        "a": "A genuine review SMS comes from a registered SASSA short code, tells you to visit a SASSA office with specific documents, and does NOT contain clickable links. It will never ask for your PIN or banking details. Example: 'SASSA: Your grant has been flagged for review. Visit your nearest SASSA office with your ID and proof of residence. Call 0800 60 10 11 for enquiries.' Any message demanding immediate payment or asking you to click a link is a scam."
+      },
+      {
         "q": "Can I update my SASSA information online instead of visiting an office?",
         "a": "Some updates can be done online. Phone number changes, banking details, and address updates may be done through the SASSA Self-Service Portal at www.sassa.gov.za. However, if SASSA specifically asked you to visit an office, you must go in person — the online portal may not allow the type of update needed."
       },
@@ -2599,15 +2880,22 @@
     ],
     "tags": [
       "sassa update information",
+      "sassa review sms",
       "sassa sms request",
       "sassa office visit",
       "update sassa details",
       "sassa information update",
-      "sasa contact update"
+      "genuine sassa sms",
+      "sassa scam identification"
     ],
-    "lastUpdated": "2026-07-28",
+    "lastUpdated": "2026-07-29",
     "author": "Lucky Cungwa",
     "relatedLinks": [
+      {
+        "title": "SASSA Grant Reviews & Verification Process",
+        "url": "/guides/grant-verification-process",
+        "isExternal": false
+      },
       {
         "title": "SASSA Offices by Province",
         "url": "/sassa-offices",
@@ -3101,6 +3389,10 @@
       {
         "q": "Can I complete the review online instead of visiting an office?",
         "a": "Some beneficiaries can use the eLife Certification portal to complete the review online via facial recognition. However, the portal has known technical issues. If the online method fails after several attempts, you must visit a SASSA office in person. Green ID book holders should plan to visit an office directly."
+      },
+      {
+        "q": "Will I need a review appointment even if I received my payment on the fourth day?",
+        "a": "Yes. Receiving your payment on the fourth day does NOT complete the review. You must still visit a SASSA office to complete the review process. Once the review is complete, your grant will return to the normal three-day payment cycle from the following month. See our full guide on the [grant review and verification process](/guides/grant-verification-process) for what to expect at your appointment."
       }
     ],
     "tags": [
@@ -3110,9 +3402,14 @@
       "grant under review",
       "elife certification"
     ],
-    "lastUpdated": "2026-07-28",
+    "lastUpdated": "2026-07-29",
     "author": "Lucky Cungwa",
     "relatedLinks": [
+      {
+        "title": "SASSA Grant Reviews & Verification Process",
+        "url": "/guides/grant-verification-process",
+        "isExternal": false
+      },
       {
         "title": "SASSA Payment Calendar",
         "url": "/payment-calendar",

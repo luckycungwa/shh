@@ -25,7 +25,8 @@
         { "title": "Get a Medical Report", "content": "Visit a government hospital or clinic and ask for a medical assessment confirming that you require full-time attendance from another person. The medical report must specifically state that you cannot be left alone and need a caregiver." },
         { "title": "Visit Your SASSA Office", "content": "Go to your nearest SASSA office with your ID document and the medical report. Inform the officer that you want to apply for the Grant-in-Aid. You will need to complete the application form." },
         { "title": "SASSA Home Visit", "content": "SASSA will send an official to your home to verify your living situation and confirm that you need a caregiver. The official will also speak to your caregiver." },
-        { "title": "Receive the Outcome", "content": "SASSA aims to process Grant-in-Aid applications within 60 days. If approved, the {{grant_in_aid_amount}} is added to your existing grant payment from the date of application." }
+        { "title": "Submit Your Application and Get a Receipt", "content": "After completing the application form and handing in your documents, SASSA will give you a stamped receipt with a reference number. Keep it as proof of your application." },
+        { "title": "Receive the Outcome", "content": "SASSA aims to process Grant-in-Aid applications within 60 days. If approved, the {{grant_in_aid_amount}} is added to your existing grant payment from the date of application. You can track progress using your reference number at the SASSA office or by calling 0800 60 10 11." }
       ]
     },
     {
@@ -37,7 +38,7 @@
       "type": "faq",
       "title": "Frequently Asked Questions",
       "faqs": [
-        { "q": "Can I apply for the Grant-in-Aid online?", "a": "No. You must apply in person at a SASSA office. The Grant-in-Aid requires a medical assessment and home visit that cannot be completed online." },
+        { "q": "Can I apply for the Grant-in-Aid online?", "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. However, the Grant-in-Aid still requires a medical assessment and home visit, so you may need to visit a SASSA office to complete the process." },
         { "q": "Does the Grant-in-Aid affect my other grants?", "a": "No. The Grant-in-Aid is a supplementary payment and does not affect your Old Age or Disability Grant. It is paid in addition to your existing grant." },
         { "q": "What if I am already receiving a Care Dependency Grant?", "a": "The Grant-in-Aid is for adults who already receive Old Age or Disability grants. The Care Dependency Grant is for children under 18. These are different grants for different situations." }
       ]

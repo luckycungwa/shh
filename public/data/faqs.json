@@ -1361,5 +1361,23 @@
     "tags": ["bank details pending", "payment method", "verification"],
     "helpful": 0,
     "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "faq-053",
+    "question": "I received an SMS about a SASSA grant review — is it real?",
+    "answer": "<p>Genuine SASSA review SMS messages come from registered short codes (not regular cellphone numbers or WhatsApp). They tell you to visit a SASSA office and list the documents you need to bring. They never ask for your PIN, OTP, or banking password. If the message contains a clickable link, demands payment, or creates false urgency, it is a scam. When in doubt, call the SASSA helpline on <strong>0800 60 10 11</strong> to verify. For detailed guidance, see our guide on <a href='/guides/sassa-update-information'>what to do if SASSA asks you to update your information</a>.</p>",
+    "category": "Scams & Fraud",
+    "tags": ["review sms", "genuine sassa message", "scam identification"],
+    "helpful": 0,
+    "lastUpdated": "2026-07-29"
+  },
+  {
+    "id": "faq-054",
+    "question": "What documents do I need for a SASSA grant review appointment?",
+    "answer": "<p>For a grant review appointment, bring: your original South African ID (or alternative ID document), proof of residence dated within 3 months, your SASSA card if you have one, proof of income (payslips, bank statements, or an affidavit if unemployed), and any documents SASSA specifically requested in their SMS or letter. Bring originals plus photocopies. For a full walkthrough, see our <a href='/guides/grant-verification-process'>grant review and verification guide</a>.</p>",
+    "category": "Grant Management",
+    "tags": ["grant review documents", "review appointment", "what to bring"],
+    "helpful": 0,
+    "lastUpdated": "2026-07-29"
   }
 ]

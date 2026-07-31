@@ -29,8 +29,8 @@
       "title": "How to Apply",
       "steps": [
         {
-          "title": "Visit Your Nearest SASSA Office",
-          "content": "Child Support Grant applications must be made in person at a SASSA office. Locate your nearest office on our resources page."
+          "title": "Start Your Application (Online or In Person)",
+          "content": "You can start your Child Support Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, apply in person at a SASSA office. Locate your nearest office on our resources page."
         },
         {
           "title": "Bring the Child and All Documents",
@@ -70,6 +70,10 @@
         {
           "q": "Can a grandmother apply for the Child Support Grant?",
           "a": "Yes, grandparents who are the primary caregivers of their grandchildren can apply. You will need to provide an affidavit explaining the circumstances."
+        },
+        {
+          "q": "Can I apply for the Child Support Grant online?",
+          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. You may still need to visit a SASSA office to submit supporting documents."
         },
         {
           "q": "Can I receive the grant for a child who is not my biological child?",

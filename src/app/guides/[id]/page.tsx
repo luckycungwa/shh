@@ -39,6 +39,7 @@ interface Guide {
   lastUpdated: string;
   author: string;
   relatedLinks?: { title: string; url: string; isExternal: boolean }[];
+  sources?: { title: string; url: string }[];
 }
 
 export async function generateStaticParams() {
@@ -187,9 +188,7 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                        </div>
                        <div className="space-y-4">
                           <h3 className="text-2xl font-bold">{step.title}</h3>
-                           <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                              {resolveTemplates(step.content)}
-                           </div>
+                            <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed" dangerouslySetInnerHTML={{ __html: resolveTemplates(step.content) }} />
                           {step.tips && step.tips.length > 0 && (
                               <div className="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-2xl flex items-start gap-4">
                                 <FaLightbulb className="text-blue-500 mt-1 flex-shrink-0" />
@@ -225,6 +224,56 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                        </details>
                      ))}
                   </div>
+               </section>
+            )}
+
+            {guide.sources && guide.sources.length > 0 ? (
+               <section className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 space-y-6">
+                  <h3 className="text-xl font-bold flex items-center gap-2">
+                      <FaLink className="text-primary-gold" /> Sources & References
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                     This guide was researched and verified against the following official sources:
+                  </p>
+                  <ul className="space-y-4">
+                     {guide.sources.map((source, i) => (
+                        <li key={i} className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+                           <span>{source.title}</span>
+                           <Button as="a" href={source.url} target="_blank" rel="noopener noreferrer" size="sm" variant="flat" color="primary">
+                              Visit Website <FaExternalLinkAlt className="ml-2 text-xs" />
+                           </Button>
+                        </li>
+                     ))}
+                  </ul>
+               </section>
+            ) : (
+               <section className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 space-y-6">
+                  <h3 className="text-xl font-bold flex items-center gap-2">
+                      <FaLink className="text-primary-gold" /> Sources & References
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                     This guide was researched and verified against the following official sources:
+                  </p>
+                  <ul className="space-y-4">
+                     <li className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+                        <span>Official SASSA Website</span>
+                        <Button as="a" href="https://www.sassa.gov.za" target="_blank" rel="noopener noreferrer" size="sm" variant="flat" color="primary">
+                           Visit Website <FaExternalLinkAlt className="ml-2 text-xs" />
+                        </Button>
+                     </li>
+                     <li className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+                        <span>SRD Grant Official Portal</span>
+                        <Button as="a" href="https://srd.sassa.gov.za" target="_blank" rel="noopener noreferrer" size="sm" variant="flat" color="primary">
+                           Visit Website <FaExternalLinkAlt className="ml-2 text-xs" />
+                        </Button>
+                     </li>
+                     <li className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+                        <span>Department of Social Development</span>
+                        <Button as="a" href="https://www.dsd.gov.za" target="_blank" rel="noopener noreferrer" size="sm" variant="flat" color="primary">
+                           Visit Website <FaExternalLinkAlt className="ml-2 text-xs" />
+                        </Button>
+                     </li>
+                  </ul>
                </section>
             )}
 

@@ -7,7 +7,7 @@ import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "SASSA Grant Eligibility Checker \u2014 Do You Qualify?",
-  description: `Check if you qualify for SASSA grants in ${getCurrentYearString()} including SRD R370, Old Age Pension, Disability Grant, and Child Support Grant.`,
+  description: `Quick SRD R370 eligibility check for ${getCurrentYearString()}, plus guidance on which other SASSA grants (Old Age Pension, Disability Grant, Child Support Grant) may apply to your age group.`,
   path: "/eligibility-check",
 });
 

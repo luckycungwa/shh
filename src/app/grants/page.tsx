@@ -140,6 +140,7 @@ export default function GrantsListingPage() {
             <p className="text-secondary-gray max-w-xl mx-auto">Take our eligibility check or browse the detailed guide for each grant type.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button as={NextLink} href="/eligibility-check" color="primary" className="font-bold px-8 py-6">Check Eligibility</Button>
+              <Button as={NextLink} href="/guides/apply-sassa-grants" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">How to Apply</Button>
               <Button as={NextLink} href="/guides" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">View All Guides</Button>
             </div>
           </CardBody>

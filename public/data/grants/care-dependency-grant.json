@@ -28,7 +28,7 @@
       "title": "How to Apply",
       "steps": [
         { "title": "Get a Medical Assessment", "content": "Visit your nearest government hospital or clinic and request a medical assessment for the Care Dependency Grant. The doctor must complete a medical report confirming the child's disability and that they require full-time care. This is not a private doctor's note — it must be from a government-designated health professional." },
-        { "title": "Visit Your Nearest SASSA Office", "content": "Take all documents to your nearest SASSA office. You must apply in person — no online application is available. Arrive early (before 08:00) to avoid long queues. Request Form SASSA 1 and tell the officer you are applying for the Care Dependency Grant." },
+        { "title": "Start Your Application (Online or In Person)", "content": "You can start your Care Dependency Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, take all documents to your nearest SASSA office. Arrive early (before 08:00) to avoid long queues. Request Form SASSA 1 and tell the officer you are applying for the Care Dependency Grant." },
         { "title": "Submit Your Application", "content": "The SASSA officer will review your documents, take copies, and give you a receipt. Ensure you get a stamped proof of application with a reference number. The officer will explain when you can expect feedback." },
         { "title": "Wait for SASSA to Visit Your Home", "content": "SASSA will send an official to your home to verify that the child lives with you and to assess the care environment. This home visit is mandatory for the Care Dependency Grant. The official will report back to SASSA with their findings." },
         { "title": "Receive the Outcome", "content": "SASSA aims to process applications within 60 days. If approved, payments start from the date of application (not the date of approval). If declined, you can appeal within 90 days." }
@@ -44,6 +44,7 @@
       "title": "Frequently Asked Questions",
       "faqs": [
         { "q": "Can I receive both Child Support Grant and Care Dependency Grant for the same child?", "a": "No. You cannot receive both grants for the same child. However, you can receive the Care Dependency Grant for one child and the Child Support Grant for another child in your care." },
+        { "q": "Can I apply for the Care Dependency Grant online?", "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. The medical assessment from a government-designated doctor and the mandatory home visit are still required." },
         { "q": "Is a private doctor's medical report accepted?", "a": "No. The medical report must be completed by a government-designated doctor at a state hospital or clinic. Private doctor reports are not accepted by SASSA for the Care Dependency Grant." },
         { "q": "What if SASSA denies my application?", "a": "You have the right to appeal within 90 days. If the denial was due to an incomplete medical report, get a more detailed assessment from the government doctor and resubmit." }
       ]

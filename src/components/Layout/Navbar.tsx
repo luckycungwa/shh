@@ -13,7 +13,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins } from "react-icons/fa";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "../ThemeToggle";
@@ -38,6 +38,7 @@ export default function NavbarComponent() {
     { name: "Home", href: "/", icon: <FaHome /> },
     { name: "Status Check", href: "/status-check", icon: <FaUserCheck />, altPaths: ["/status"] },
     { name: "Payment Dates", href: "/payment-calendar", icon: <FaCalendarAlt /> },
+    { name: "Grants", href: "/grants", icon: <FaCoins /> },
     { name: "SRD Grant Guide", href: "/guides/srd-grant", icon: <FaFileAlt /> },
     { name: "News & Updates", href: "/updates", icon: <FaNewspaper /> },
     { name: "Eligibility", href: "/eligibility-check", icon: <FaCheckCircle /> },
@@ -98,6 +99,11 @@ export default function NavbarComponent() {
         <NavbarItem>
           <Link as={NextLink} href="/guides" aria-current={isActive("/guides") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/guides") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
             Guides
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link as={NextLink} href="/grants" aria-current={isActive("/grants") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/grants") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            Grants
           </Link>
         </NavbarItem>
         <NavbarItem>

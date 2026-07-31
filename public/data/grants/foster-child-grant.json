@@ -38,8 +38,8 @@
           "content": "Before you can apply for the grant, you must have a valid court order placing the child in your foster care. This involves going through the children's court process with the help of a social worker."
         },
         {
-          "title": "Visit a SASSA Office",
-          "content": "Take the court order and all supporting documents to your nearest SASSA office."
+          "title": "Start Your Application (Online or In Person)",
+          "content": "You can start your Foster Child Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, take the court order and all supporting documents to your nearest SASSA office."
         },
         {
           "title": "Submit the Application",
@@ -75,6 +75,10 @@
         {
           "q": "What happens when the foster child turns 18?",
           "a": "The court order usually expires when the child turns 18. The grant will stop unless the court extends the foster care order."
+        },
+        {
+          "q": "Can I apply for the Foster Child Grant online?",
+          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. You will still need to present the children's court order and supporting documents to SASSA."
         },
         {
           "q": "Is the foster parent's income checked?",

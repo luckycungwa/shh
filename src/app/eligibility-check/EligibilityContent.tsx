@@ -24,12 +24,19 @@ export default function EligibilityContent() {
     parseInt(answers.income) < 624 &&
     answers.otherGrants === "no";
 
+  const age = parseInt(answers.age);
+  const ageGroup =
+    isNaN(age) ? null
+    : age >= 60 ? { label: "Older Persons (Old Age) Grant", href: "/grants/old-age-pension" }
+    : age >= 18 ? { label: "SRD R370 or a permanent grant", href: "/grants" }
+    : { label: "Child Support Grant (if you are a primary caregiver)", href: "/grants/child-support-grant" };
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <header className="text-center mb-16 space-y-4">
         <h1 className="text-5xl font-black tracking-tight">Grant Eligibility Checker</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">
-           Find out if you qualify for the SRD R370 or other SASSA grants in 1 minute.
+           Quickly check if you meet the SRD R370 criteria, then discover which other SASSA grants may apply to your age group.
         </p>
       </header>
 
@@ -123,21 +130,33 @@ export default function EligibilityContent() {
 
             {step === 5 && (
               <div className="text-center space-y-8 animate-fade-in">
-                 {isEligible ? (
-                   <>
+                  {isEligible ? (
+                    <>
                       <FaCheckCircle className="text-8xl text-success mx-auto" />
                       <h2 className="text-4xl font-black">You Likely Qualify!</h2>
-                      <p className="text-xl text-gray-600">Based on your answers, you meet the 2026 criteria for the SRD R370 grant.</p>
+                      <p className="text-xl text-gray-600">Based on your answers, you meet the income and eligibility criteria for the SRD R370 grant in 2026.</p>
                       <Button as="a" href="/guides/srd-grant" color="primary" size="lg" className="font-bold px-12 py-8 text-xl">How to Apply <FaArrowRight className="ml-2" /></Button>
-                   </>
-                 ) : (
-                   <>
+                    </>
+                  ) : (
+                    <>
                       <FaTimesCircle className="text-8xl text-danger mx-auto" />
-                      <h2 className="text-4xl font-black">You May Not Qualify</h2>
-                      <p className="text-xl text-gray-600">SASSA has strict thresholds for income (R624) and other social support.</p>
-                      <Button variant="bordered" color="primary" size="lg" className="font-bold" onClick={() => setStep(1)}>Try Again</Button>
-                   </>
-                 )}
+                      <h2 className="text-4xl font-black">You May Not Qualify for SRD</h2>
+                      <p className="text-xl text-gray-600">This checker evaluates the SRD R370 criteria only, which require income below R624/month and no other grant, UIF, or NSFAS support.</p>
+                      {ageGroup && (
+                        <div className="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-2xl max-w-lg mx-auto">
+                          <p className="text-gray-700 dark:text-gray-300">
+                            Based on your age, you may still qualify for a different grant. Read the{" "}
+                            <a href={ageGroup.href} className="text-primary-gold font-bold hover:underline">{ageGroup.label}</a>{" "}
+                            guide to check the criteria.
+                          </p>
+                        </div>
+                      )}
+                      <div className="flex flex-wrap justify-center gap-4">
+                        <Button variant="bordered" color="primary" size="lg" className="font-bold" onClick={() => setStep(1)}>Try Again</Button>
+                        <Button as="a" href="/grants" color="primary" size="lg" className="font-bold">Browse All Grants</Button>
+                      </div>
+                    </>
+                  )}
               </div>
             )}
          </CardBody>

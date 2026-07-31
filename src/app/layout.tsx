@@ -7,6 +7,7 @@ import NavbarComponent from "../components/Layout/Navbar";
 import FooterComponent from "../components/Layout/Footer";
 import AlertBanner from "../components/Layout/AlertBanner";
 import PageLoadingBar from "../components/Layout/PageLoadingBar";
+import CookieConsent from "../components/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -122,6 +123,28 @@ export default function RootLayout({
             sameAs: [],
           }),
         }} />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              functionality_storage: 'granted',
+              personalization_storage: 'denied',
+              security_storage: 'granted',
+              wait_for_update: 500
+            });
+            try {
+              var c = localStorage.getItem("cookie-consent");
+              if (c === "granted") {
+                gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted', personalization_storage: 'granted' });
+              }
+            } catch(e) {}
+          `,
+        }} />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8180440849942257"
@@ -143,6 +166,7 @@ export default function RootLayout({
             </main>
             <FooterComponent />
           </div>
+          <CookieConsent />
         </Providers>
       </body>
     </html>

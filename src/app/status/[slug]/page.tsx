@@ -1,8 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Divider } from "@nextui-org/react";
-import { FaClock, FaPhone, FaExternalLinkAlt } from "react-icons/fa";
+import { Button, Chip, Divider } from "@nextui-org/react";
+import { FaClock, FaPhone, FaExternalLinkAlt, FaLink } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
@@ -438,6 +438,27 @@ export default function StatusMeaningPage({ params }: { params: { slug: string }
             ))}
           </div>
         </section>
+
+        {status.sources.length > 0 && (
+          <section className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 space-y-6">
+            <h2 className="text-xl font-bold flex items-center gap-2">
+              <FaLink className="text-primary-gold" /> Sources & References
+            </h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              This status guide was researched and verified against the following official sources:
+            </p>
+            <ul className="space-y-4">
+              {status.sources.map((url, i) => (
+                <li key={i} className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+                  <span className="break-all">{url.replace(/^https?:\/\//, "").replace(/\/$/, "")}</span>
+                  <Button as="a" href={url} target="_blank" rel="noopener noreferrer" size="sm" variant="flat" color="primary">
+                    Visit Website <FaExternalLinkAlt className="ml-2 text-xs" />
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {status.related.length > 0 && (
           <>

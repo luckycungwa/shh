@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Button, Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
-import { FaShieldAlt, FaNewspaper, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaMapMarkerAlt, FaClock, FaCheckCircle, FaRegBell } from "react-icons/fa";
+import { FaShieldAlt, FaNewspaper, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaMapMarkerAlt, FaClock, FaCheckCircle, FaRegBell, FaFileAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
 import { buildMetadata } from "../lib/seo";
@@ -37,6 +37,12 @@ export default function HomePage() {
   const paymentDates: { grant: string; date: string; day: string }[] = JSON.parse(fs.readFileSync(paymentDatesPath, "utf8"));
 
   const tools = [
+    {
+      title: "How to Apply",
+      description: "Step-by-step guide to applying for any SASSA grant, online or in person.",
+      icon: <FaFileAlt className="text-2xl" />,
+      link: "/guides/apply-sassa-grants",
+    },
     {
       title: "Change Banking Details",
       description: "Update your bank account for SRD R370 payments to avoid delays.",

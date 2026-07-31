@@ -196,6 +196,12 @@ export default function StatusCheckPage() {
                      </NextLink>
                   </li>
                   <li>
+                     <NextLink href="/guides/grant-verification-process" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        Grant Reviews & Verification Guide
+                     </NextLink>
+                  </li>
+                  <li>
                      <NextLink href="/guides/fourth-payment-day-guide" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
                         <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
                         Fourth Payment Day Guide

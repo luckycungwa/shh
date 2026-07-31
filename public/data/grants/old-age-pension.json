@@ -29,8 +29,8 @@
       "title": "How to Apply",
       "steps": [
         {
-          "title": "Visit Your Nearest SASSA Office",
-          "content": "Unlike the SRD grant, the Older Persons Grant cannot be applied for online. You must visit a SASSA office in person. Find your nearest office on our resources page."
+          "title": "Start Your Application (Online or In Person)",
+          "content": "You can now start your Older Persons Grant application online via the official SASSA Services Portal at services.sassa.gov.za. Register an account, log in, and complete the online application for the Older Persons Grant. Alternatively, you can apply in person at your nearest SASSA office. Find your nearest office on our resources page."
         },
         {
           "title": "Bring All Required Documents",
@@ -75,6 +75,10 @@
         {
           "q": "Can I apply before I turn 60?",
           "a": "No, you must have reached your 60th birthday to qualify. You should apply as soon as possible after your birthday."
+        },
+        {
+          "q": "Can I apply for the Old Age Grant online?",
+          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. Register an account, log in, and complete the online application. You may still be asked to visit a SASSA office to submit physical documents like your ID and proof of residence."
         },
         {
           "q": "What if I am too frail to visit a SASSA office?",

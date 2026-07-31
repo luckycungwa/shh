@@ -27,9 +27,11 @@
       "type": "steps",
       "title": "How to Apply",
       "steps": [
-        { "title": "Gather Your Military Documents", "content": "Find your military service records or discharge certificate. If lost, contact the SANDF archives at 012 355 5000 to request a copy of your service record." },
-        { "title": "Visit Your Nearest SASSA Office", "content": "Apply in person at a SASSA office. Tell the officer you are applying for the War Veterans Grant. Bring all documents including proof of military service." },
-        { "title": "Submit and Wait for Processing", "content": "SASSA aims to process applications within 60 days. Due to the small number of applicants, War Veterans Grant applications are typically processed quickly." }
+        { "title": "Gather Your Military Documents", "content": "Find your military service records or discharge certificate. If lost, contact the SANDF archives at 012 355 5000 to request a copy of your service record. This can take a few weeks, so start early." },
+        { "title": "Complete the Application at a SASSA Office", "content": "Apply in person at a SASSA office. Tell the officer you are applying for the War Veterans Grant. Bring your ID, proof of residence, proof of income and assets, and your military service records. A SASSA official will help you complete the application form." },
+        { "title": "Submit Your Documents and Get a Receipt", "content": "Hand in your completed application and all supporting documents. SASSA will give you a stamped receipt with a reference number. Keep it safe — it is your proof of application and lets you track progress." },
+        { "title": "Wait for Processing", "content": "SASSA aims to process applications within 60 days. Due to the small number of applicants, War Veterans Grant applications are typically processed quickly. SASSA will inform you of the outcome by SMS or letter." },
+        { "title": "Track Your Application", "content": "Check the status of your application at the same SASSA office using your reference number, or call the SASSA helpline on 0800 60 10 11. You can also register on the SASSA Services Portal at services.sassa.gov.za to track your application online." }
       ]
     },
     {
