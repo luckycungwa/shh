@@ -222,7 +222,11 @@ function shingleSet(text) {
   return set;
 }
 
-const SEEDS = Array.from({ length: NUM_HASHES }, () => Math.floor(Math.random() * 0xffffffff));
+const SEEDS = (() => {
+  let s = 0x12345678;
+  const next = () => (s = (s * 1664525 + 1013904223) >>> 0);
+  return Array.from({ length: NUM_HASHES }, next);
+})();
 
 function minHashSignature(text) {
   const shingles = shingleSet(text);
@@ -362,7 +366,7 @@ function buildCsv(pages, metaCounts) {
     "metaDescLen", "metaDescUnique",
   ];
   const rows = pages.map((p) => [
-    p.url.replace(SITE, "") || "/", p.type, p.score, p.grade, p.title, p.words, p.readingTime,
+    p.path || "/", p.type, p.score, p.grade, p.title, p.words, p.readingTime,
     p.dupSim === null ? "" : p.dupSim.toFixed(3), p.dupWith || "", p.h1, p.h2, p.h3,
     p.hasFaq ? "Y" : "N", p.internal.length, p.brokenCount,
     p.external.length, p.externalDomains.join("|"), [...p.schemaTypes].join("|"),
@@ -500,7 +504,7 @@ async function main() {
   reportLines.push("|---|-------|-------|------|------:|----:|----:|-------|-----|----:|----:|--------|-----|------|----:|----:|-------|------|------|");
   sorted.forEach((p, i) => {
     const m = p.metrics;
-    reportLines.push(`| ${i + 1} | **${m.grade}** | ${m.score} | ${m.type} | ${m.words} | ${m.readingTime} | ${m.dupSim === null ? "-" : m.dupSim.toFixed(2)} | ${m.h1}/${m.h2} | ${m.hasFaq ? "Y" : "N"} | ${m.internal.length} | ${m.external.length} | ${[...m.schemaTypes].join(",") || "-"} | ${m.lastUpdated || "-"} | ${m.author || "-"} | ${m.images} | ${m.tables} | ${m.canonicalOk ? "Y" : "N"} | ${m.metaDescription.length} | ${p.url.replace(SITE, "") || "/"} |`);
+    reportLines.push(`| ${i + 1} | **${m.grade}** | ${m.score} | ${m.type} | ${m.words} | ${m.readingTime} | ${m.dupSim === null ? "-" : m.dupSim.toFixed(2)} | ${m.h1}/${m.h2} | ${m.hasFaq ? "Y" : "N"} | ${m.internal.length} | ${m.external.length} | ${[...m.schemaTypes].join(",") || "-"} | ${m.lastUpdated || "-"} | ${m.author || "-"} | ${m.images} | ${m.tables} | ${m.canonicalOk ? "Y" : "N"} | ${m.metaDescription.length} | ${m.path || "/"} |`);
   });
 
   reportLines.push("");
@@ -508,7 +512,7 @@ async function main() {
   reportLines.push("");
   for (const p of sorted.filter((p) => p.metrics.score < 60)) {
     const m = p.metrics;
-    reportLines.push(`- **${m.score} (${m.grade})** \`${p.url.replace(SITE, "") || "/"}\` — words:${m.words}, dup:${m.dupSim === null ? "-" : m.dupSim.toFixed(2)}${m.dupWith ? ` (vs ${m.dupWith})` : ""}, faq:${m.hasFaq ? "Y" : "N"}, author:${m.author ? "Y" : "N"}, canonical:${m.canonicalOk ? "Y" : "N"}, meta:${m.metaDescription.length}ch, broken:${m.brokenCount}`);
+    reportLines.push(`- **${m.score} (${m.grade})** \`${m.path || "/"}\` — words:${m.words}, dup:${m.dupSim === null ? "-" : m.dupSim.toFixed(2)}${m.dupWith ? ` (vs ${m.dupWith})` : ""}, faq:${m.hasFaq ? "Y" : "N"}, author:${m.author ? "Y" : "N"}, canonical:${m.canonicalOk ? "Y" : "N"}, meta:${m.metaDescription.length}ch, broken:${m.brokenCount}`);
   }
 
   reportLines.push("");

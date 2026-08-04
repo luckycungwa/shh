@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Card, CardHeader, CardBody, Button, Input, Progress, Divider, Chip } from "@nextui-org/react";
 import { FaCheckCircle, FaTimesCircle, FaArrowRight, FaQuestionCircle, FaInfoCircle } from "react-icons/fa";
+import NextLink from "next/link";
 import { getFact } from "../../lib/canonical-facts";
 
 const SRD_LIMIT = parseInt(getFact("srd_income_limit").replace(/[^\d]/g, ""), 10);
@@ -212,9 +213,45 @@ export default function EligibilityContent() {
              </div>
              <div className="space-y-4">
                 <h3 className="text-xl font-bold">What to Do Next</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">If you likely qualify, apply through the official SRD portal at srd.sassa.gov.za, or read our step-by-step application guide. If you are unsure about any rule, check the full eligibility requirements on the relevant grant page before you apply.</p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">If you likely qualify, apply through the official SRD portal at srd.sassa.gov.za, or read our <NextLink href="/guides/srd-grant" className="text-primary-gold font-bold hover:underline">step-by-step SRD application guide</NextLink>. If you are unsure about any rule, check the full <NextLink href="/grants" className="text-primary-gold font-bold hover:underline">eligibility requirements for every grant</NextLink> before you apply.</p>
              </div>
           </div>
+      </section>
+
+      <section className="mt-12 space-y-4">
+         <div className="flex items-center gap-3">
+            <FaQuestionCircle className="text-primary-gold text-2xl" />
+            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+         </div>
+         <div className="space-y-3">
+            <details className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+               <summary className="flex items-center gap-3 p-4 cursor-pointer list-none font-bold hover:bg-gray-50 dark:hover:bg-gray-800/50 [&::-webkit-details-marker]:hidden">
+                  <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
+                  <span>What counts as income for the SRD R370 grant?</span>
+               </summary>
+               <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                  <p className="text-gray-600 dark:text-gray-400">SASSA counts every deposit into bank accounts linked to your ID, including salaries, family transfers, stokvel payouts, e-wallet deposits and refunds. If your total monthly deposits reach R{SRD_LIMIT} or more, the system flags you for "income source detected".</p>
+               </div>
+            </details>
+            <details className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+               <summary className="flex items-center gap-3 p-4 cursor-pointer list-none font-bold hover:bg-gray-50 dark:hover:bg-gray-800/50 [&::-webkit-details-marker]:hidden">
+                  <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
+                  <span>I am over {SRD_MAX_AGE}. Which grant should I check instead?</span>
+               </summary>
+               <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                  <p className="text-gray-600 dark:text-gray-400">The SRD R370 grant is only available to applicants aged {SRD_MIN_AGE} to {SRD_MAX_AGE}. From age 60, apply for the Old Age Pension instead, which pays more and is a permanent grant. The Disability Grant and War Veterans Grant also have their own age rules.</p>
+               </div>
+            </details>
+            <details className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+               <summary className="flex items-center gap-3 p-4 cursor-pointer list-none font-bold hover:bg-gray-50 dark:hover:bg-gray-800/50 [&::-webkit-details-marker]:hidden">
+                  <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
+                  <span>Why does SASSA check my bank account every month?</span>
+               </summary>
+               <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                  <p className="text-gray-600 dark:text-gray-400">The SRD is a means-tested grant, so SASSA runs automated bank verification each month to confirm you still earn under R{SRD_LIMIT} and are not receiving UIF or NSFAS. This is why you must re-qualify every month rather than once.</p>
+               </div>
+            </details>
+         </div>
       </section>
 
       <section className="mt-12 p-8 bg-primary-gold/5 rounded-3xl border border-primary-gold/10 space-y-4">
