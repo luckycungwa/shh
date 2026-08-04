@@ -388,7 +388,7 @@ async function main() {
 
   console.log("[audit] fetching sitemap...");
   const sm = await fetchHtml(`${BASE}/sitemap.xml`);
-  const locs = [...sm.html.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const locs = [...sm.html.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(SITE, BASE));
   console.log(`[audit] sitemap entries: ${locs.length}`);
 
   console.log("[audit] crawling pages...");

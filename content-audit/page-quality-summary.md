@@ -1,21 +1,21 @@
 # Page Quality Summary — sassahelphub.co.za
 
-**Date:** 2026-08-04 · **Pages scored:** 125
+**Date:** 2026-08-04 · **Pages scored:** 122
 
 ## Grade distribution
 
 | Grade | Count |
 |-------|-------|
-| A | 41 |
+| A | 40 |
 | B | 77 |
-| C | 7 |
+| C | 5 |
 | D | 0 |
 
 ## Site-wide averages
 
-- Average main-content word count: **922**
+- Average main-content word count: **923**
 - Pages under 300 words (thin): **20**
-- Content pages missing FAQs: **62**
+- Content pages missing FAQs: **59**
 - Pages without an author attribution: **24**
 - Pages without a valid self canonical: **0**
 - Pages missing a meta description: **0**

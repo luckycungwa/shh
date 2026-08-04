@@ -68,7 +68,7 @@ export default async function sitemap() {
   const guideListDate = mostRecentDate(guideDates);
   const allContentDates = [...updateDates, ...guideDates, ...grantDates, ...faqDates];
 
-  const updateUrls = updates.filter((u: any) => u.tag !== "monthly-payment-schedule").map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate, priority: 0.7, changeFreq: "monthly" as const }));
+  const updateUrls = updates.filter((u: any) => u.tag !== "monthly-payment-schedule" && !u.noindex).map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate, priority: 0.7, changeFreq: "monthly" as const }));
   const guideUrls = guides.map((g: any) => ({ path: `/guides/${g.id}`, lastMod: g.lastUpdated || guideListDate, priority: 0.8, changeFreq: "monthly" as const }));
 
   const grantSlugs = [

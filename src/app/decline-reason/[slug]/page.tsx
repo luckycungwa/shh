@@ -8,6 +8,7 @@ import { FaExclamationTriangle, FaCheckCircle, FaClock } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 
@@ -142,6 +143,8 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
             </section>
           </>
         )}
+
+        <AdNetworkLoader />
 
         <Divider />
         <EditorialFooter lastUpdated={reason.last_updated} author={reason.author} />

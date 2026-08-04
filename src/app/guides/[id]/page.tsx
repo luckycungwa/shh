@@ -9,6 +9,7 @@ import NextLink from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
 import EditorialMeta from "../../../components/EditorialMeta";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { howToSchema, faqPageSchema, breadcrumbSchema } from "../../../lib/schema";
 import { SITE_CONFIG } from "../../../lib/config";
 import { resolveTemplates } from "../../../lib/canonical-facts";
@@ -95,11 +96,11 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <JsonLd data={howToSchema(guide.title, guide.description,
-        guide.steps.map(s => ({ title: s.title, text: s.content }))
+      <JsonLd data={howToSchema(guide.title, resolveTemplates(guide.description),
+        guide.steps.map(s => ({ title: s.title, text: resolveTemplates(s.content) }))
       )} />
       {guide.faqs && guide.faqs.length > 0 && (
-        <JsonLd data={faqPageSchema(guide.faqs)} />
+        <JsonLd data={faqPageSchema(guide.faqs.map(f => ({ q: resolveTemplates(f.q), a: resolveTemplates(f.a) })))} />
       )}
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
@@ -143,7 +144,7 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                     <Avatar name="ZA" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
                         <NextLink href="/authors" className="font-bold text-gray-900 hover:text-primary-gold transition-colors">{guide.author}</NextLink>
-                       <p className="text-xs">South African Benefit Specialist</p>
+                       <p className="text-xs">Founder & Editor — Independent Grant Researcher</p>
                     </div>
                  </div>
                  <div className="flex items-center gap-2">
@@ -218,9 +219,9 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                            <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
                            <span>{faq.q}</span>
                          </summary>
-                         <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
-                           <p className="text-gray-600 dark:text-gray-400">{faq.a}</p>
-                         </div>
+                           <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                            <p className="text-gray-600 dark:text-gray-400">{resolveTemplates(faq.a)}</p>
+                          </div>
                        </details>
                      ))}
                   </div>
@@ -276,6 +277,8 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                   </ul>
                </section>
             )}
+
+            <AdNetworkLoader />
 
             {guide.relatedLinks && (
                <section className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/10 space-y-6">

@@ -9,6 +9,7 @@ import NextLink from "next/link";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 
@@ -212,6 +213,8 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
               }
             })}
           </div>
+
+          <AdNetworkLoader />
 
           <aside className="lg:col-span-4 space-y-8">
             <div className="sticky top-24 hidden lg:block space-y-8">

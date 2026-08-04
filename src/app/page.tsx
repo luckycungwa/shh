@@ -6,6 +6,7 @@ import { FaShieldAlt, FaNewspaper, FaCalendarAlt, FaQuestionCircle, FaArrowRight
 import NextLink from "next/link";
 import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
 import { buildMetadata } from "../lib/seo";
+import { getFact } from "../lib/canonical-facts";
 
 export const metadata = buildMetadata({
   title: "SASSA Help Hub - Your Unofficial SASSA Resource",
@@ -53,7 +54,7 @@ export default function HomePage() {
       title: "Change Phone Number",
       description: "Lost your registered number? Follow our guide to update it safely.",
       icon: <FaSmartphone className="text-2xl" />,
-      link: "/guides/srd-grant",
+      link: "/guides/lost-phone-number",
     },
     {
       title: "Lodge an Appeal",
@@ -220,6 +221,36 @@ export default function HomePage() {
               </div>
             </NextLink>
           ))}
+        </div>
+      </section>
+
+      {/* ── Editorial: The Grant Landscape in 2026 ── */}
+      <section className="bg-white dark:bg-gray-900 py-28 w-full border-y border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl mx-auto mb-16 text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-gold mb-3">The Big Picture</p>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight dark:text-white">
+              The SRD Grant in 2026: What's Changed and What It Means for You
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="space-y-5 text-lg text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">
+              <p>
+                The Social Relief of Distress grant — commonly known as the SRD grant — remains the backbone of emergency support for unemployed South Africans in 2026, paying {getFact("srd_grant_amount")} per month to qualifying applicants aged {getFact("srd_age_range_min")} to {getFact("srd_age_range_max")}. Unlike the permanent grants, the SRD is not a long-term entitlement: you must re-qualify each month, and your eligibility is checked automatically against your bank accounts, UIF records, and other government databases.
+              </p>
+              <p>
+                This is why so many applicants are surprised by a decline. A family transfer, a stokvel payout, or even money moved between your own accounts can push your monthly deposits past the income limit and trigger an automated decline. The good news is that most of these declines are appealable, and the appeal process is free and handled online through the official portals.
+              </p>
+            </div>
+            <div className="space-y-5 text-lg text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">
+              <p>
+                Understanding the difference between the SRD and the permanent grants matters more in 2026 than ever. The Child Support Grant pays {getFact("child_support_grant_amount")} per child per month, the Old Age Pension pays {getFact("old_age_pension_amount_under75")} for pensioners under 75, and each has its own means test. If you are over 59, applying for the Old Age Pension — or the Disability Grant if you qualify — can replace the uncertainty of the monthly SRD cycle with a reliable permanent income.
+              </p>
+              <p>
+                Whatever grant applies to you, the rules for checking your status, updating your banking details, and keeping your payments safe are the same. That is what this site exists to explain, in plain language, with every claim linked back to an official source you can check yourself before you act.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

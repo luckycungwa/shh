@@ -7,6 +7,7 @@ import { Chip, Divider, Card, CardBody } from "@nextui-org/react";
 import { FaMapMarkerAlt, FaPhone, FaInfoCircle, FaBuilding, FaStore, FaRegClock, FaExternalLinkAlt } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { articleSchema, breadcrumbSchema, governmentOfficeSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 import { getCurrentYearString } from "../../../lib/config";
@@ -274,6 +275,8 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
           <h2 className="text-2xl font-bold mb-4">Payment Collection in {province.name}</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300">{province.payment_collection}</p>
         </section>
+
+        <AdNetworkLoader />
 
         <Divider />
         <EditorialFooter lastUpdated={province.last_updated} author="Lucky Cungwa" />

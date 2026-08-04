@@ -6,6 +6,7 @@ import { FaClock, FaPhone, FaExternalLinkAlt, FaLink } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { articleSchema, breadcrumbSchema } from "../../../lib/schema";
 import { getCurrentYearString } from "../../../lib/config";
 
@@ -459,6 +460,8 @@ export default function StatusMeaningPage({ params }: { params: { slug: string }
             </ul>
           </section>
         )}
+
+        <AdNetworkLoader />
 
         {status.related.length > 0 && (
           <>

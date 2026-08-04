@@ -10,6 +10,7 @@ import rehypeSlug from "rehype-slug";
 import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
 import { resolveTemplates } from "../../../lib/canonical-facts";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
 
 interface Update {
   id: string;
@@ -19,6 +20,7 @@ interface Update {
   date: string;
   type: string;
   urgent: boolean;
+  noindex?: boolean;
   author?: string;
   sources?: { title: string; url: string }[];
   faqs?: { q: string; a: string }[];
@@ -47,7 +49,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     title: update.title,
     description: update.summary,
     alternates: { canonical: url },
-    robots: { index: true, follow: true },
+    robots: update.noindex ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
       title: update.title,
       description: update.summary,
@@ -236,10 +238,12 @@ export default async function UpdatePage({ params }: { params: { id: string } })
                  <Button color="success" variant="flat" startContent={<FaThumbsUp />}>Yes, thanks!</Button>
                  <Button color="danger" variant="flat" startContent={<FaThumbsDown />}>Not really</Button>
               </div>
-           </div>
-        </div>
+            </div>
+         </div>
 
-        <aside className="lg:col-span-4 space-y-12">
+         <AdNetworkLoader />
+
+         <aside className="lg:col-span-4 space-y-12">
            {toc.length > 0 && (
              <div className="sticky top-24 hidden lg:block space-y-8">
                 <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800">

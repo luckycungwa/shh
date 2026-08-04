@@ -51,6 +51,7 @@ export default function CookieConsent() {
     }
     applyConsent(consent);
     setVisible(false);
+    window.dispatchEvent(new CustomEvent("cookie-consent", { detail: consent }));
   };
 
   if (!visible) return null;
