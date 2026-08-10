@@ -39,7 +39,7 @@ export default function FAQPage() {
     return acc;
   }, {});
 
-  const faqData = faqs.map(f => ({ q: f.question, a: f.answer }));
+  const faqData = faqs.map(f => ({ q: resolveTemplates(f.question), a: resolveTemplates(f.answer) }));
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">

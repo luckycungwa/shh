@@ -592,7 +592,7 @@
 		"faqs": [
 			{
 				"q": "Is the Moya App safe for SASSA SRD services?",
-				"a": "Yes. The Moya App is officially partnered with SASSA and the Department of Social Development. Your ID number and personal details are encrypted and protected. Always download Moya from the official Google Play or Apple App Store."
+				"a": "Yes. The Moya App is an official SASSA channel for checking SRD status and applying for grants. Your ID number and personal details are encrypted and protected. Always download Moya from the official Google Play or Apple App Store."
 			},
 			{
 				"q": "Do I need internet data for the Moya App SASSA services?",
@@ -1662,7 +1662,7 @@
 				"title": "Fix via the Moya App (No Data Needed)",
 				"content": "Download the Moya App from the Google Play Store or Apple App Store. Open the app and look for the 'SASSA SRD' section. Select 'Update Banking Details'. Enter your 13-digit ID number. Enter your bank name, account number, and branch code. Submit the update. The Moya App uses free data for SASSA services, so you do not need to buy airtime or data. The Moya App method is often faster than the web portal because it does not require an SMS OTP link.",
 				"tips": [
-					"The Moya App is the only third-party app officially partnered with SASSA — do not use any other app.",
+					"The Moya App is SASSA's recommended channel for SRD applications — do not use any other app that claims to be official.",
 					"If you updated your details on the portal already, do not update again on Moya — it may create a conflict."
 				]
 			},
