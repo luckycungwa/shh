@@ -55,14 +55,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const filePath = path.join(process.cwd(), "public/data/grants", `${params.slug}.json`);
     const data: GrantData = JSON.parse(fs.readFileSync(filePath, "utf8"));
     const url = `https://www.sassahelphub.co.za/grants/${params.slug}`;
+    const title = resolveTemplates(data.title);
+    const description = resolveTemplates(data.description);
     return {
-      title: data.title,
-      description: data.description,
+      title,
+      description,
       alternates: { canonical: url },
       robots: { index: true, follow: true },
       openGraph: {
-        title: data.title,
-        description: data.description,
+        title,
+        description,
         url,
         type: "article",
         siteName: "SASSA Help Hub",
@@ -71,8 +73,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       },
       twitter: {
         card: "summary_large_image",
-        title: data.title,
-        description: data.description,
+        title,
+        description,
         images: ["https://www.sassahelphub.co.za/logo.png"],
       },
     };

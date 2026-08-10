@@ -71,6 +71,8 @@ const nextConfig = {
       { source: '/updates/update-2026-009', destination: '/updates', statusCode: 301 },
       { source: '/updates/update-2026-030', destination: '/guides/grant-verification-process', statusCode: 301 },
       { source: '/updates/update-2026-032', destination: '/updates', statusCode: 301 },
+      { source: '/grants/srd-grant', destination: '/grants/srd-r370-grant', statusCode: 301 },
+      { source: '/grants/older-persons-grant', destination: '/grants/old-age-pension', statusCode: 301 },
       { source: '/guides/srd-grant', destination: '/grants/srd-r370-grant', statusCode: 301 },
       { source: '/guides/change-banking-details', destination: '/guides/bank-details-pending-fix', statusCode: 301 },
       { source: '/guides/biometric-verification-guide', destination: '/guides/biometric-fix-guide', statusCode: 301 },
