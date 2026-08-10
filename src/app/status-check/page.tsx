@@ -5,11 +5,10 @@ import { FaUserShield, FaExternalLinkAlt, FaExclamationTriangle, FaPhoneAlt, FaM
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentMonthYearKey, getCurrentYearString } from "../../lib/config";
 import StatusCheckForm from "../../components/StatusCheckForm";
 
-const currentMonthYear = getCurrentMonthYearKey();
-const currentYear = getCurrentYearString();
+const currentMonthYear = "August 2026";
+const currentYear = "2026";
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -184,7 +183,7 @@ export default function StatusCheckPage() {
                     </NextLink>
                  </li>
                   <li>
-                     <NextLink href="/guides/change-banking-details" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                     <NextLink href="/guides/bank-details-pending-fix" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
                         <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
                         Update Bank Details
                      </NextLink>
@@ -217,13 +216,13 @@ export default function StatusCheckPage() {
           <div className="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border-l-8 border-blue-500 mb-12">
             <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">{currentMonthYear} Notice</h3>
             <p className="text-blue-800 dark:text-blue-300 leading-relaxed font-medium">
-              SASSA has confirmed that all SRD R370 applications for {currentMonthYear} will undergo automated bank verification between the 15th and 22nd of the month. Ensure your mobile number is active to receive biometric verification links if your profile is flagged for high-level security checks.
+              Based on recent payment cycles, SRD R370 applications can undergo automated bank verification around the middle of each month. Ensure your mobile number is active to receive any biometric verification links if your profile is flagged for additional security checks.
             </p>
           </div>
 
           <h2 className="text-4xl font-black">Why Checking Your Status Matters in {currentMonthYear}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            The SRD R370 grant is helping over 9 million South Africans right now. But SASSA has moved to a digital-first system — more automated checks, more bank verification, and new facial recognition for some applicants. If something's wrong with your details, you want to catch it before payment day passes you by.
+            The SRD R370 grant provides vital support to millions of South Africans. SASSA has moved to a digital-first system — more automated checks, more bank verification, and facial recognition for some applicants. If something's wrong with your details, you want to catch it before payment day passes you by.
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Whether you're applying for the first time or you've been getting the grant for months, doing a status check at the start of {currentMonthYear.split(" ")[0]} helps you spot any mismatches — with Home Affairs, UIF, or your bank details — before the payment batch runs at the end of the month.
@@ -322,7 +321,7 @@ export default function StatusCheckPage() {
             </div>
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-orange-600 text-xl mb-4 flex items-center gap-2"><FaPhoneAlt /> BANK DETAILS PENDING</p>
-              <p className="text-gray-500 leading-relaxed">Approved in principle, but SASSA does not have valid banking info. Update your details on the <NextLink href="/guides/change-banking-details" className="text-primary-gold underline font-bold">SRD banking portal</NextLink> immediately to avoid missing the {currentMonthYear.split(" ")[0]} cutoff.</p>
+              <p className="text-gray-500 leading-relaxed">Approved in principle, but SASSA does not have valid banking info. Update your details on the <NextLink href="/guides/bank-details-pending-fix" className="text-primary-gold underline font-bold">SRD banking portal</NextLink> immediately to avoid missing the {currentMonthYear.split(" ")[0]} cutoff.</p>
             </div>
           </div>
 
@@ -527,7 +526,7 @@ export default function StatusCheckPage() {
         <section className="space-y-12">
 <h2 className="text-4xl font-black">Declined? Here's How to Appeal in {currentYear}</h2>
            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Getting a "Declined" status is frustrating, but it's not the end. Thousands of people successfully overturn their rejections through the appeals process every month.
+              Getting a "Declined" status is frustrating, but it's not the end. Many applicants successfully overturn their rejections through the appeals process.
            </p>
 
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

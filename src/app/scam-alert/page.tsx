@@ -88,6 +88,35 @@ export default function ScamAlertPage() {
            ))}
         </div>
 
+        <section className="bg-gray-50 dark:bg-gray-900 p-8 rounded-[2rem] border border-gray-100 dark:border-gray-800">
+           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <FaCheckCircle /> How to Report SASSA Fraud
+           </h2>
+           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+              SASSA fraud includes applying for a grant with false information, not telling SASSA about a change in
+              your circumstances, someone using your SASSA card without permission, or a moneylender keeping your
+              SASSA card as security for a loan. If you suspect fraud, report it — you can do so anonymously.
+           </p>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="space-y-2">
+                 <p className="font-bold flex items-center gap-2"><FaExclamationCircle className="text-red-500" /> SASSA Fraud Hotline</p>
+                 <p className="text-sm text-gray-600">Call the toll-free fraud hotline on <strong>0800 60 10 11</strong>. You do not have to give your name.</p>
+              </div>
+              <div className="space-y-2">
+                 <p className="font-bold flex items-center gap-2"><FaExclamationCircle className="text-red-500" /> Nearest SASSA Office</p>
+                 <p className="text-sm text-gray-600">Report it in person at your nearest SASSA office. Staff can log the case for investigation.</p>
+              </div>
+              <div className="space-y-2">
+                 <p className="font-bold flex items-center gap-2"><FaExclamationCircle className="text-red-500" /> SAPS</p>
+                 <p className="text-sm text-gray-600">For fraud involving identity theft or card misuse, report it at your nearest police station (SAPS).</p>
+              </div>
+           </div>
+           <p className="text-sm text-gray-500 mt-6">
+              Provide as much detail as you can — dates, amounts, and the person or service involved. Reporting
+              suspected fraud protects your community and the grant system.
+           </p>
+        </section>
+
         <section className="text-center py-12">
            <Card className="bg-primary-black text-white p-12 overflow-hidden relative">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-gold opacity-10 rounded-full -mr-32 -mt-32"></div>

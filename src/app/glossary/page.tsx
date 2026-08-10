@@ -4,7 +4,7 @@ import { Chip, Divider } from "@nextui-org/react";
 import JsonLd from "../../components/JsonLd";
 import EditorialFooter from "../../components/EditorialFooter";
 import { breadcrumbSchema } from "../../lib/schema";
-import { SITE_CONFIG, getCurrentYearString, getCurrentMonthYearKey } from "../../lib/config";
+import { SITE_CONFIG, getCurrentYearString } from "../../lib/config";
 import { buildMetadata } from "../../lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -97,7 +97,7 @@ export default function GlossaryPage() {
         </div>
 
         <Divider className="my-12" />
-        <EditorialFooter lastUpdated={getCurrentMonthYearKey()} author="Lucky Cungwa" />
+        <EditorialFooter lastUpdated="10 August 2026" author="Lucky Cungwa" />
       </article>
     </div>
   );

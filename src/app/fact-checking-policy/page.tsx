@@ -4,7 +4,6 @@ import { Card, CardBody, Divider } from "@nextui-org/react";
 import { FaSearch, FaCheckDouble, FaExclamationTriangle, FaSync } from "react-icons/fa";
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentMonthYearKey } from "../../lib/config";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -51,14 +50,14 @@ export default function FactCheckingPolicyPage() {
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-md">1</div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Source Verification</h3>
-                <p className="text-gray-600 dark:text-gray-400">Every factual claim is cross-referenced against at least one official source. Where possible, we use primary sources: official government websites, published gazettes, parliamentary records, or direct SASSA announcements.</p>
+                <p className="text-gray-600 dark:text-gray-400">Factual claims are checked against official sources where available: government websites, published gazettes, parliamentary records, or direct SASSA announcements. Where a claim cannot be confirmed against an official source, it is marked as unverified rather than presented as confirmed.</p>
               </div>
             </div>
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black shadow-md">2</div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Second-Pair Review</h3>
-                <p className="text-gray-600 dark:text-gray-400">No factually significant content is published without being reviewed by at least one other editorial team member. This ensures that errors in interpretation or transcription are caught before publication.</p>
+                <h3 className="text-xl font-bold mb-2">Quality Review</h3>
+                <p className="text-gray-600 dark:text-gray-400">Before publication, content is checked against our editorial standards for accuracy, clarity, and helpfulness. Corrections are published promptly under our corrections policy.</p>
               </div>
             </div>
             <div className="flex gap-6">
@@ -98,7 +97,7 @@ export default function FactCheckingPolicyPage() {
         <Card className="bg-gray-50 dark:bg-gray-900 p-8 border border-gray-200 dark:border-gray-700">
           <CardBody>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-                             <strong>Last updated:</strong> {getCurrentMonthYearKey()}. Read our <NextLink href="/editorial-policy" className="text-primary-gold underline">Editorial Policy</NextLink>, <NextLink href="/sources-policy" className="text-primary-gold underline">Sources Policy</NextLink>, and <NextLink href="/corrections-policy" className="text-primary-gold underline">Corrections Policy</NextLink>.
+                             <strong>Last updated:</strong> 10 August 2026. Read our <NextLink href="/editorial-policy" className="text-primary-gold underline">Editorial Policy</NextLink>, <NextLink href="/sources-policy" className="text-primary-gold underline">Sources Policy</NextLink>, and <NextLink href="/corrections-policy" className="text-primary-gold underline">Corrections Policy</NextLink>.
             </p>
           </CardBody>
         </Card>

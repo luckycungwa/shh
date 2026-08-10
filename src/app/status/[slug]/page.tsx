@@ -114,7 +114,7 @@ const statusMeanings: StatusMeaning[] = [
       { label: "SASSA Helpline", value: "0800 60 10 11" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
-    related: ["/guides/change-banking-details", "/status/approved", "/payment-calendar"],
+    related: ["/guides/bank-details-pending-fix", "/status/approved", "/payment-calendar"],
     last_updated: todayStr(),
     author: "Lucky Cungwa"
   },
@@ -144,7 +144,7 @@ const statusMeanings: StatusMeaning[] = [
       { label: "Home Affairs", value: "0800 60 11 90" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.dha.gov.za"],
-    related: ["/status/pending", "/status/declined", "/guides/biometric-verification-guide", "/faq"],
+    related: ["/status/pending", "/status/declined", "/guides/biometric-fix-guide", "/faq"],
     last_updated: todayStr(),
     author: "Lucky Cungwa"
   },
@@ -230,7 +230,7 @@ const statusMeanings: StatusMeaning[] = [
       { label: "SASSA Helpline", value: "0800 60 10 11" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
-    related: ["/status/approved", "/status/paid", "/payment-calendar", "/guides/change-banking-details"],
+    related: ["/status/approved", "/status/paid", "/payment-calendar", "/guides/bank-details-pending-fix"],
     last_updated: todayStr(),
     author: "Lucky Cungwa"
   },

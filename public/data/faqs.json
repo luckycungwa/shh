@@ -801,7 +801,7 @@
   {
     "id": "faq-030",
     "question": "How does the SASSA biometric system prevent fraud in 2026?",
-    "answer": "<p>The SASSA biometric system, mandatory from 1 September 2026, prevents fraud by:</p><ul><li><strong>Verifying Identity:</strong> Fingerprints and facial recognition ensure applicants are authentic and alive.</li><li><strong>Reducing Duplicates:</strong> Detects multiple applications using the same ID.</li><li><strong>Stopping Forgery:</strong> Replaces unreliable green ID checks with secure eKYC technology.</li><li><strong>Flagging Issues:</strong> Applications without biometrics are reviewed, preventing unauthorized payments.</li></ul><p><strong>Impact:</strong> SASSA reported 1,650 identity theft attempts in 2025 and R140 million paid to deceased beneficiaries, highlighting the need for this system. Learn more on our <a href='/scam-alert'>fraud prevention page</a> or visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>.</p>",
+    "answer": "<p>The SASSA biometric system, mandatory from 1 September 2026, prevents fraud by:</p><ul><li><strong>Verifying Identity:</strong> Fingerprints and facial recognition ensure applicants are authentic and alive.</li><li><strong>Reducing Duplicates:</strong> Detects multiple applications using the same ID.</li><li><strong>Stopping Forgery:</strong> Replaces unreliable green ID checks with secure eKYC technology.</li><li><strong>Flagging Issues:</strong> Applications without biometrics are reviewed, preventing unauthorized payments.</li></ul><p><strong>Impact:</strong> Identity theft attempts and payments made against deceased beneficiaries have been reported in past years, highlighting the need for this system. Learn more on our <a href='/scam-alert'>fraud prevention page</a> or visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA fraud prevention 2026",
@@ -1191,7 +1191,7 @@
   {
     "id": "faq-045",
     "question": "Why did SASSA pay grants to deceased beneficiaries?",
-    "answer": "<p>SASSA reported paying R140 million to approximately 75,000 deceased beneficiaries due to system vulnerabilities, such as:</p><ul><li><strong>Weak Verification:</strong> Lack of biometric checks before September 2026.</li><li><strong>Fraudulent Claims:</strong> Forged IDs or unreported deaths.</li><li><strong>System Delays:</strong> Slow updates from Home Affairs records.</li></ul><p><strong>Solution:</strong> The mandatory biometric system from September 2026 ensures proof of life. Report suspected fraud to <a href='mailto:fraud@sassa.gov.za'>fraud@sassa.gov.za</a>. Visit our <a href='/scam-alert'>fraud prevention page</a>.</p>",
+    "answer": "<p>In past years SASSA has acknowledged payments being made against the records of deceased beneficiaries due to system vulnerabilities, such as:</p><ul><li><strong>Weak Verification:</strong> Lack of biometric checks before September 2026.</li><li><strong>Fraudulent Claims:</strong> Forged IDs or unreported deaths.</li><li><strong>System Delays:</strong> Slow updates from Home Affairs records.</li></ul><p><strong>Solution:</strong> The mandatory biometric system from September 2026 ensures proof of life. Report suspected fraud to <a href='mailto:fraud@sassa.gov.za'>fraud@sassa.gov.za</a>. Visit our <a href='/scam-alert'>fraud prevention page</a>.</p>",
     "category": "Fraud & Scams",
     "tags": [
       "SASSA deceased payments 2026",

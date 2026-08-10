@@ -43,7 +43,7 @@ export default function FooterComponent() {
                 { label: `${currentYear} Payment Dates`, href: "/payment-calendar" },
                 { label: "How to Apply", href: "/guides/apply-sassa-grants" },
                 { label: "All SASSA Grants", href: "/grants" },
-                { label: "SRD Grant Guide", href: "/guides/srd-grant" },
+                { label: "SRD Grant Guide", href: "/grants/srd-r370-grant" },
                 { label: "Latest News", href: "/updates" },
                 { label: "Scam Alerts", href: "/scam-alert" },
                 { label: "Common Problems", href: "/common-problems" },

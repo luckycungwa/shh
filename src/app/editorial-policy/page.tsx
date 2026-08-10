@@ -4,7 +4,6 @@ import { Card, CardBody, Divider } from "@nextui-org/react";
 import { FaPenFancy, FaClock, FaLink, FaUsers } from "react-icons/fa";
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentMonthYearKey } from "../../lib/config";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -65,10 +64,10 @@ export default function EditorialPolicyPage() {
             <h2 className="text-3xl font-bold">Who Creates Our Content</h2>
           </div>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Our content is created by a dedicated team of South African researchers and writers with expertise in social welfare policy. Each piece of content is reviewed by at least one other team member before publication to ensure accuracy and clarity.
+            Our content is created and edited by the SASSA Help Hub editorial team, which researches publicly available information published by SASSA, the Department of Social Development, and other official sources. Where a fact cannot be confirmed against an official source, it is clearly marked as unverified rather than presented as confirmed.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Every article includes the author or editorial team attribution and the date it was last reviewed, so you know who stands behind the information.
+            Every article includes the SASSA Help Hub editorial team attribution and the date it was last updated, so you can see when the information was reviewed.
           </p>
         </section>
 
@@ -119,7 +118,7 @@ export default function EditorialPolicyPage() {
         <Card className="bg-gray-50 dark:bg-gray-900 p-8 border border-gray-200 dark:border-gray-700">
           <CardBody>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-                             <strong>Last updated:</strong> {getCurrentMonthYearKey()}. Read our <NextLink href="/fact-checking-policy" className="text-primary-gold underline">Fact-Checking Policy</NextLink>, <NextLink href="/sources-policy" className="text-primary-gold underline">Sources Policy</NextLink>, and <NextLink href="/corrections-policy" className="text-primary-gold underline">Corrections Policy</NextLink>.
+                             <strong>Last updated:</strong> 10 August 2026. Read our <NextLink href="/fact-checking-policy" className="text-primary-gold underline">Fact-Checking Policy</NextLink>, <NextLink href="/sources-policy" className="text-primary-gold underline">Sources Policy</NextLink>, and <NextLink href="/corrections-policy" className="text-primary-gold underline">Corrections Policy</NextLink>.
             </p>
           </CardBody>
         </Card>

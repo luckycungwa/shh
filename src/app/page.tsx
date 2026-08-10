@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Button, Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
-import { FaShieldAlt, FaNewspaper, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaMapMarkerAlt, FaClock, FaCheckCircle, FaRegBell, FaFileAlt } from "react-icons/fa";
+import { FaShieldAlt, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaClock, FaCheckCircle, FaRegBell, FaFileAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
 import { buildMetadata } from "../lib/seo";
@@ -48,7 +48,7 @@ export default function HomePage() {
       title: "Change Banking Details",
       description: "Update your bank account for SRD R370 payments to avoid delays.",
       icon: <FaCreditCard className="text-2xl" />,
-      link: "/guides/change-banking-details",
+      link: "/guides/bank-details-pending-fix",
     },
     {
       title: "Change Phone Number",
@@ -66,15 +66,15 @@ export default function HomePage() {
       title: "Biometric Verification",
       description: `New for ${getCurrentYearString()}: Complete your facial recognition for enhanced security.`,
       icon: <FaUserCheck className="text-2xl" />,
-      link: "/guides/biometric-verification-guide",
+      link: "/guides/biometric-fix-guide",
     },
   ];
 
   const stats = [
-    { label: "Beneficiaries Helped", value: "2000+", icon: <FaUsers /> },
-    { label: "Scams Prevented", value: "100+", icon: <FaShieldAlt /> },
-    { label: "SASSA Offices", value: "200+", icon: <FaMapMarkerAlt /> },
-    { label: "Updated Daily", value: getCurrentYearString(), icon: <FaClock /> },
+    { label: "Grants Covered", value: "8", icon: <FaUsers /> },
+    { label: "Independent Resource", value: "Unofficial", icon: <FaShieldAlt /> },
+    { label: "Payment Calendar", value: "Monthly", icon: <FaCalendarAlt /> },
+    { label: "Updated For", value: getCurrentYearString(), icon: <FaClock /> },
   ];
 
   return (
@@ -180,9 +180,9 @@ export default function HomePage() {
               <FaShieldAlt />
             </div>
             <div className="flex-grow text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-white">Independent & Trusted</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">Independent & Unofficial</h2>
               <p className="text-secondary-gray mt-2 max-w-xl">
-                We are South Africans helping South Africans. Our goal is to simplify grant information so you never miss a payment.
+                SASSA Help Hub is an unofficial, independent information resource. We are not affiliated with the South African Social Security Agency.
               </p>
             </div>
             <Button as={NextLink} href="/about" className="font-bold px-8 py-6 bg-primary-gold/10 text-primary-gold border border-primary-gold/20 hover:bg-primary-gold/20 transition-all shrink-0">

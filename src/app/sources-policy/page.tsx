@@ -4,7 +4,6 @@ import { Card, CardBody, Divider } from "@nextui-org/react";
 import { FaBook, FaExternalLinkAlt, FaFileAlt, FaGlobe } from "react-icons/fa";
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentMonthYearKey } from "../../lib/config";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -106,7 +105,7 @@ export default function SourcesPolicyPage() {
         <Card className="bg-gray-50 dark:bg-gray-900 p-8 border border-gray-200 dark:border-gray-700">
           <CardBody>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-                             <strong>Last updated:</strong> {getCurrentMonthYearKey()}. Read our <NextLink href="/editorial-policy" className="text-primary-gold underline">Editorial Policy</NextLink>, <NextLink href="/fact-checking-policy" className="text-primary-gold underline">Fact-Checking Policy</NextLink>, and <NextLink href="/corrections-policy" className="text-primary-gold underline">Corrections Policy</NextLink>.
+                             <strong>Last updated:</strong> 10 August 2026. Read our <NextLink href="/editorial-policy" className="text-primary-gold underline">Editorial Policy</NextLink>, <NextLink href="/fact-checking-policy" className="text-primary-gold underline">Fact-Checking Policy</NextLink>, and <NextLink href="/corrections-policy" className="text-primary-gold underline">Corrections Policy</NextLink>.
             </p>
           </CardBody>
         </Card>

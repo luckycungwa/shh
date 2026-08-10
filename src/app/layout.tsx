@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | SASSA Help Hub",
   },
   description:
-    "SASSA Help Hub - Your trusted unofficial guide for SASSA beneficiaries. Get daily updates for 2026, payment dates, SRD R370 news, and scam alerts.",
+    "SASSA Help Hub - Your independent unofficial guide for SASSA beneficiaries. Get 2026 payment dates, SRD R370 news, application help, and scam alerts.",
   keywords: [
     "SASSA news 2026",
     "SASSA payment dates 2026",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "South African social security",
     "SASSA status check",
   ],
-  authors: [{ name: "Lucky Cungwa" }],
+  authors: [{ name: "SASSA Help Hub Editorial Team" }],
   verification: {
     google: "SKlM_MFnb6YY5C-1Ma3k5ETqJBwJSnicqxaqTYzp7HU",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SASSA Help Hub - Your Unofficial SASSA Resource",
     description:
-      "SASSA Help Hub - Your trusted unofficial guide for SASSA beneficiaries. Get daily updates for 2026, payment dates, SRD R370 news, and scam alerts.",
+      "SASSA Help Hub - Your independent unofficial guide for SASSA beneficiaries. Get 2026 payment dates, SRD R370 news, application help, and scam alerts.",
     url: "https://www.sassahelphub.co.za",
     siteName: "SASSA Help Hub",
     locale: "en_ZA",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SASSA Help Hub - Your Unofficial SASSA Resource",
     description:
-      "SASSA Help Hub - Your trusted unofficial guide for SASSA beneficiaries. Get daily updates for 2026, payment dates, SRD R370 news, and scam alerts.",
+      "SASSA Help Hub - Your independent unofficial guide for SASSA beneficiaries. Get 2026 payment dates, SRD R370 news, application help, and scam alerts.",
     images: ["https://www.sassahelphub.co.za/logo.png"],
   },
   icons: {
@@ -88,15 +88,7 @@ export default function RootLayout({
             "@type": "WebSite",
             name: "SASSA Help Hub",
             url: "https://www.sassahelphub.co.za",
-            description: "Your independent guide to SASSA grants, payment dates, and applications in South Africa.",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://www.google.com/search?q=site%3Asassahelphub.co.za+{search_term_string}",
-              },
-              "query-input": "required name=search_term_string",
-            },
+            description: "Your independent unofficial guide to SASSA grants, payment dates, and applications in South Africa.",
           }),
         }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
@@ -105,22 +97,7 @@ export default function RootLayout({
             "@type": "Organization",
             name: "SASSA Help Hub",
             url: "https://www.sassahelphub.co.za",
-            description: "Independent guide to SASSA grants, payment dates, and applications in South Africa.",
-            founder: {
-              "@type": "Person",
-              name: "Lucky Cungwa",
-            },
-          }),
-        }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Lucky Cungwa",
-            url: "https://www.sassahelphub.co.za/authors",
-            jobTitle: "South African Benefit Specialist",
-            description: "Independent SASSA benefits specialist and researcher, providing accurate, accessible information to South African social grant beneficiaries.",
-            sameAs: [],
+            description: "Independent unofficial guide to SASSA grants, payment dates, and applications in South Africa.",
           }),
         }} />
         <script dangerouslySetInnerHTML={{

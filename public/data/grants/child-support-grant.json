@@ -6,8 +6,18 @@
   "last_updated": "2026-07-07",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
-  "sources": ["https://www.sassa.gov.za", "https://www.gov.za", "https://www.dsd.gov.za"],
-  "related": ["/grants/srd-r370-grant", "/status/declined", "/payment-calendar", "/faq", "/eligibility-check"],
+  "sources": [
+    "https://www.sassa.gov.za",
+    "https://www.gov.za",
+    "https://www.dsd.gov.za"
+  ],
+  "related": [
+    "/grants/srd-r370-grant",
+    "/status/declined",
+    "/payment-calendar",
+    "/faq",
+    "/eligibility-check"
+  ],
   "sections": [
     {
       "type": "intro",
@@ -85,10 +95,24 @@
       "type": "references",
       "title": "References",
       "references": [
-        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
-        { "title": "Children's Act 2005", "url": "https://www.gov.za/documents/childrens-act" },
-        { "title": "Department of Social Development", "url": "https://www.dsd.gov.za" }
+        {
+          "title": "SASSA Official Website",
+          "url": "https://www.sassa.gov.za"
+        },
+        {
+          "title": "Children's Act 2005",
+          "url": "https://www.gov.za/documents/childrens-act"
+        },
+        {
+          "title": "Department of Social Development",
+          "url": "https://www.dsd.gov.za"
+        }
       ]
+    },
+    {
+      "type": "info",
+      "title": "Child Support Grant Top-Up for Orphaned Children",
+      "content": "Children who are orphaned, in child-headed households, or whose caregiver cannot be traced may qualify for the Child Support Grant top-up, an additional monthly amount paid on top of the standard grant. The top-up amount has changed over the years and is set in each national budget, so the exact total depends on the top-up in effect at the time. Check the current amount with SASSA (0800 60 10 11) or on the official sassa.gov.za website before budgeting on a specific figure. A caregiver can apply for this top-up through the normal SASSA channels by stating that the child is orphaned or abandoned."
     }
   ]
 }

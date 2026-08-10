@@ -48,7 +48,6 @@
 /status/means-test-failed,status,78,B,SASSA Status: 'Means Test Failed' — What It Means & How to Appeal | SASSA Help Hub,390,1.9,0.344,,1,7,4,N,11,0,2,srd-appeals.dsd.gov.za|www.sassa.gov.za,Article|BreadcrumbList,2026-08-03,1,Lucky Cungwa,Y,0,0,0,Y,131,Y
 /status/pending,status,78,B,SASSA Status: 'Pending' — What It Means & What To Do | SASSA Help Hub,373,1.9,0.333,,1,7,4,N,11,0,2,srd.sassa.gov.za|www.sassa.gov.za,Article|BreadcrumbList,2026-08-03,1,Lucky Cungwa,Y,0,0,0,Y,123,Y
 /status/referred,status,78,B,SASSA Status: 'Referred' — What It Means & How to Get Unstuck | SASSA Help Hub,359,1.8,0.333,,1,7,4,N,11,0,2,srd.sassa.gov.za|www.sassa.gov.za,Article|BreadcrumbList,2026-08-03,1,Lucky Cungwa,Y,0,0,0,Y,125,Y
-/about,static,77,B,About SASSA Help Hub — Independent Grant Resource Since 2024 | SASSA Help Hub,342,1.7,0.146,,1,6,5,N,4,0,3,44tagstudios.co.za|srd.sassa.gov.za,BreadcrumbList,2001-03-31,9257,,N,0,0,0,Y,154,Y
 /guides,listing,76,B,SASSA Grant Guides 2026 — Step-by-Step Application Help | SASSA Help Hub,2078,10.4,0.135,,1,3,42,Y,40,0,0,,FAQPage,,,,N,0,0,0,Y,150,Y
 /editorial-policy,static,75,B,Editorial Policy — How We Create Content | SASSA Help Hub,319,1.6,0.146,,1,4,0,N,4,0,3,www.sassa.gov.za|srd.sassa.gov.za|www.dsd.gov.za,BreadcrumbList,,,,N,0,0,0,Y,148,Y
 /guides/guide-report-fraud,guide,75,B,Understanding and Reporting SASSA Fraud | SASSA Help Hub,419,2.1,0.365,,1,1,4,N,6,0,3,www.sassa.gov.za|srd.sassa.gov.za|www.dsd.gov.za,HowTo|BreadcrumbList,2026-07-06,29,Lucky Cungwa,Y,0,0,0,Y,132,Y
@@ -63,10 +62,10 @@
 /status/identity-verification,status,74,B,SASSA Status: 'Identity Verification' — What It Means & How to Resolve | SASSA Help Hub,372,1.9,0.385,,1,7,4,N,11,0,3,srd.sassa.gov.za|www.sassa.gov.za|www.dha.gov.za,Article|BreadcrumbList,2026-08-03,1,Lucky Cungwa,Y,0,0,0,Y,136,Y
 /guides/change-banking-details,guide,73,B,How to Change SASSA SRD Banking Details (2026 Updated) | SASSA Help Hub,382,1.9,0.396,,1,1,6,N,7,0,3,www.sassa.gov.za|srd.sassa.gov.za|www.dsd.gov.za,HowTo|BreadcrumbList,2026-02-28,157,Lucky Cungwa,Y,0,0,0,Y,148,Y
 /updates,listing,73,B,SASSA Grant Updates & Information 2026 | SASSA Help Hub,1520,7.6,0.135,,1,5,34,N,36,0,0,,BreadcrumbList,,,,N,0,0,0,Y,115,Y
+/about,static,72,B,About SASSA Help Hub — Independent Grant Resource Since 2024 | SASSA Help Hub,436,2.2,0.281,,1,6,5,N,7,0,1,srd.sassa.gov.za,BreadcrumbList,2001-03-31,9257,,N,0,0,0,Y,154,Y
 /common-problems,listing,72,B,Common SASSA Problems — Find Your Solution Fast | SASSA Help Hub,942,4.7,0.115,,1,9,0,Y,74,0,0,,FAQPage,,,,N,0,0,0,Y,170,Y
 /payment-calendar,tool,72,B,SASSA Payment Dates 2026 — Independent Grant Payment Schedule | SASSA Help Hub,213,1.1,0.104,,1,1,2,N,2,0,3,www.sassa.gov.za|srd.sassa.gov.za,BreadcrumbList,2026-08-03,1,,N,0,0,1,Y,159,Y
 /resources,listing,71,B,SASSA Office Locator — Find Offices Near You | SASSA Help Hub,779,3.9,0.083,,1,3,14,Y,2,0,0,,GovernmentOffice|FAQPage,,,,N,0,0,0,Y,121,Y
-/authors,static,70,B,"About the Author — Lucky Cungwa, Founder & Editor | SASSA Help Hub",447,2.2,0.135,,1,4,2,N,6,0,0,,BreadcrumbList,,,,N,0,0,0,Y,160,Y
 /decline-reason/deceased-dha-record,decline,70,B,SASSA Decline Reason: 'Deceased Record on DHA' — What to Do | SASSA Help Hub,323,1.6,0.354,,1,4,6,N,10,0,0,,Article|BreadcrumbList,2026-07-06,29,Lucky Cungwa,Y,0,0,0,Y,117,Y
 /decline-reason/existing-sassa-grant,decline,70,B,SASSA Decline Reason: 'Existing SASSA Grant' — What It Means & How to Resolve | SASSA Help Hub,347,1.7,0.365,,1,4,5,N,10,0,0,,Article|BreadcrumbList,2026-07-06,29,Lucky Cungwa,Y,0,0,0,Y,129,Y
 /decline-reason/government-payroll,decline,70,B,SASSA Decline Reason: 'Government Payroll Registered' — What It Means & How to Fix | SASSA Help Hub,313,1.6,0.365,,1,4,5,N,10,0,0,,Article|BreadcrumbList,2026-07-06,29,Lucky Cungwa,Y,0,0,0,Y,132,Y
@@ -93,6 +92,7 @@
 /updates/update-2026-025,update,67,B,How to Check SASSA Status Without Internet: Complete USSD Code Guide for Any Phone | SASSA Help Hub,491,2.5,0.292,,2,4,7,N,9,0,2,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-07-06,29,Lucky Cungwa,N,0,0,0,Y,179,Y
 /updates/update-2026-026,update,67,B,July 2026 SRD R370 Payments Rolling Out — Check Your Status Now | SASSA Help Hub,590,3.0,0.292,,2,5,6,N,9,0,4,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-07-22,13,Lucky Cungwa,N,0,0,0,Y,185,Y
 /updates/update-2026-031,update,66,B,SASSA WhatsApp Self-Service Launched | SASSA Help Hub,459,2.3,0.396,,2,5,4,N,4,0,2,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-07-27,8,Lucky Cungwa,N,0,0,0,Y,142,Y
+/authors,static,65,B,"About the Author — Lucky Cungwa, Founder & Editor | SASSA Help Hub",447,2.2,0.281,,1,4,2,N,6,0,0,,BreadcrumbList,,,,N,0,0,0,Y,160,Y
 /corrections-policy,static,65,B,Corrections Policy — How Errors Are Fixed | SASSA Help Hub,209,1.0,0.156,,1,4,3,N,4,0,0,,BreadcrumbList,,,,N,0,0,0,Y,136,Y
 /fact-checking-policy,static,65,B,Fact-Checking Policy — How We Verify Information | SASSA Help Hub,235,1.2,0.156,,1,4,3,N,4,0,0,,BreadcrumbList,,,,N,0,0,0,Y,140,Y
 /province/free-state,province,65,B,"SASSA Grants in Free State: Offices, Payments & SRD Guide 2026 | SASSA Help Hub",257,1.3,0.365,,1,8,0,N,7,0,0,,Article|BreadcrumbList|GovernmentOffice,2026-07-06,29,Lucky Cungwa,N,0,0,1,Y,152,Y
@@ -103,7 +103,7 @@
 /updates/update-2026-009,update,65,B,SONA 2026: President Ramaphosa Expected to Address SRD R370 Grant Future | SASSA Help Hub,424,2.1,0.313,,2,2,5,N,8,0,2,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-02-10,175,Lucky Cungwa,N,0,0,0,Y,179,Y
 /updates/update-2026-010,update,65,B,"70,000 SASSA Grants Suspended in 2026 Integrity Rollout – What You Need to Do | SASSA Help Hub",405,2.0,0.323,,2,2,4,N,6,0,3,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-02-09,176,Lucky Cungwa,N,0,0,0,Y,169,Y
 /updates/update-2026-011,update,64,B,Guide: How to Resolve SASSA 'Bank Account Verification Failed' Errors | SASSA Help Hub,353,1.8,0.365,,2,2,4,N,6,0,3,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-02-08,177,Lucky Cungwa,N,0,0,0,Y,160,Y
-/disclaimer,static,63,B,Disclaimer — Independent SASSA Information Resource | SASSA Help Hub,229,1.1,0.146,,1,3,2,N,0,0,2,srd.sassa.gov.za|www.sassa.gov.za,BreadcrumbList,,,,N,0,0,0,Y,127,Y
+/disclaimer,static,63,B,Disclaimer — Independent SASSA Information Resource | SASSA Help Hub,229,1.1,0.156,,1,3,2,N,0,0,2,srd.sassa.gov.za|www.sassa.gov.za,BreadcrumbList,,,,N,0,0,0,Y,127,Y
 /terms-of-service,static,63,B,Terms of Service — Using SASSA Help Hub's Free Resources | SASSA Help Hub,336,1.7,0.125,,1,2,4,N,0,0,0,,BreadcrumbList,,,,N,0,0,0,Y,145,Y
 /updates/update-2026-002,update,63,B,SASSA SRD R370 Grant: Mandatory Biometric Verification Rolled Out Nationwide | SASSA Help Hub,408,2.0,0.344,,2,2,4,N,6,0,2,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-01-21,195,Lucky Cungwa,N,0,0,0,Y,217,Y
 /updates/update-2026-017,update,63,B,"Moya App Now Offers Free SASSA SRD Services: Status Checks, Banking Updates & Appeals | SASSA Help Hub",417,2.1,0.365,,2,3,4,N,10,0,2,srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-05-21,75,Lucky Cungwa,N,0,0,0,Y,185,Y
@@ -120,4 +120,4 @@
 /updates/update-2026-006,update,59,C,SASSA Child Support Grant Top-Up: Boosting Support for Orphans and Vulnerable Children | SASSA Help Hub,355,1.8,0.396,,2,3,3,N,4,0,3,services.sassa.gov.za|srd.sassa.gov.za|www.dsd.gov.za,Article|BreadcrumbList,2026-01-17,199,Lucky Cungwa,N,0,0,0,Y,163,Y
 /scam-alert,static,58,C,SASSA Scam Alerts 2026 — Protect Yourself from Fraud | SASSA Help Hub,272,1.4,0.104,,1,2,4,N,0,0,0,,BreadcrumbList,,,,N,0,0,0,Y,136,Y
 /contact,static,51,C,Contact Us | SASSA Help Hub,78,0.4,0.104,,1,1,5,N,0,0,0,,BreadcrumbList,,,,N,0,0,0,Y,130,Y
-/privacy-policy,static,51,C,Privacy Policy — How We Protect Your Data | SASSA Help Hub,117,0.6,0.125,,1,5,0,N,0,0,0,,BreadcrumbList,,,,N,0,0,0,Y,122,Y
+/privacy-policy,static,51,C,Privacy Policy — How We Protect Your Data | SASSA Help Hub,117,0.6,0.115,,1,5,0,N,0,0,0,,BreadcrumbList,,,,N,0,0,0,Y,122,Y

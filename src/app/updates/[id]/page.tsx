@@ -160,7 +160,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
                     <Avatar name="SHH" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
                        <p className="font-bold text-gray-900">By SASSA Help Hub Team</p>
-                       <p className="text-xs">Expert Policy Researchers</p>
+                       <p className="text-xs">Independent Unofficial Resource</p>
                     </div>
                  </div>
                  <div className="flex items-center gap-2">
@@ -270,7 +270,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
               <CardBody className="p-0 space-y-6">
                  <h3 className="text-2xl font-black text-primary-gold">2026 Alert</h3>
                  <p className="text-sm text-secondary-gray">SASSA has implemented new biometric security measures. Ensure your cellphone number is RICA'd in your name.</p>
-                 <Button as={NextLink} href="/guides/biometric-verification-guide" fullWidth color="primary" className="font-bold">
+                 <Button as={NextLink} href="/guides/biometric-fix-guide" fullWidth color="primary" className="font-bold">
                     Learn More
                  </Button>
               </CardBody>

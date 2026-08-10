@@ -56,51 +56,51 @@
 | 47 | **B** | 78 | status | 390 | 1.9 | 0.34 | 1/7 | N | 11 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 131 | /status/means-test-failed |
 | 48 | **B** | 78 | status | 373 | 1.9 | 0.33 | 1/7 | N | 11 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 123 | /status/pending |
 | 49 | **B** | 78 | status | 359 | 1.8 | 0.33 | 1/7 | N | 11 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 125 | /status/referred |
-| 50 | **B** | 77 | static | 342 | 1.7 | 0.15 | 1/6 | N | 4 | 3 | BreadcrumbList | 2001-03-31 | - | 0 | 0 | Y | 154 | /about |
-| 51 | **B** | 76 | listing | 2078 | 10.4 | 0.14 | 1/3 | Y | 40 | 0 | FAQPage | - | - | 0 | 0 | Y | 150 | /guides |
-| 52 | **B** | 75 | static | 319 | 1.6 | 0.15 | 1/4 | N | 4 | 3 | BreadcrumbList | - | - | 0 | 0 | Y | 148 | /editorial-policy |
-| 53 | **B** | 75 | guide | 419 | 2.1 | 0.36 | 1/1 | N | 6 | 3 | HowTo,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 132 | /guides/guide-report-fraud |
-| 54 | **B** | 75 | status | 333 | 1.7 | 0.35 | 1/7 | N | 10 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 142 | /status/application-complete |
-| 55 | **B** | 75 | status | 358 | 1.8 | 0.39 | 1/7 | N | 10 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 137 | /status/bank-details-pending |
-| 56 | **B** | 74 | decline | 387 | 1.9 | 0.32 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 159 | /decline-reason/income-source-detected |
-| 57 | **B** | 74 | listing | 638 | 3.2 | 0.16 | 1/12 | Y | 12 | 0 | BreadcrumbList,FAQPage | - | - | 0 | 1 | Y | 207 | /grants |
-| 58 | **B** | 74 | province | 303 | 1.5 | 0.28 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 158 | /province/western-cape |
-| 59 | **B** | 74 | listing | 789 | 3.9 | 0.16 | 1/14 | Y | 12 | 0 | BreadcrumbList,FAQPage | - | - | 0 | 1 | Y | 191 | /status |
-| 60 | **B** | 74 | status | 371 | 1.9 | 0.35 | 1/7 | N | 11 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 146 | /status/approved |
-| 61 | **B** | 74 | status | 397 | 2.0 | 0.35 | 1/7 | N | 12 | 3 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 133 | /status/declined |
-| 62 | **B** | 74 | status | 372 | 1.9 | 0.39 | 1/7 | N | 11 | 3 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 136 | /status/identity-verification |
-| 63 | **B** | 73 | guide | 382 | 1.9 | 0.40 | 1/1 | N | 7 | 3 | HowTo,BreadcrumbList | 2026-02-28 | Lucky Cungwa | 0 | 0 | Y | 148 | /guides/change-banking-details |
-| 64 | **B** | 73 | listing | 1520 | 7.6 | 0.14 | 1/5 | N | 36 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 115 | /updates |
+| 50 | **B** | 76 | listing | 2078 | 10.4 | 0.14 | 1/3 | Y | 40 | 0 | FAQPage | - | - | 0 | 0 | Y | 150 | /guides |
+| 51 | **B** | 75 | static | 319 | 1.6 | 0.15 | 1/4 | N | 4 | 3 | BreadcrumbList | - | - | 0 | 0 | Y | 148 | /editorial-policy |
+| 52 | **B** | 75 | guide | 419 | 2.1 | 0.36 | 1/1 | N | 6 | 3 | HowTo,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 132 | /guides/guide-report-fraud |
+| 53 | **B** | 75 | status | 333 | 1.7 | 0.35 | 1/7 | N | 10 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 142 | /status/application-complete |
+| 54 | **B** | 75 | status | 358 | 1.8 | 0.39 | 1/7 | N | 10 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 137 | /status/bank-details-pending |
+| 55 | **B** | 74 | decline | 387 | 1.9 | 0.32 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 159 | /decline-reason/income-source-detected |
+| 56 | **B** | 74 | listing | 638 | 3.2 | 0.16 | 1/12 | Y | 12 | 0 | BreadcrumbList,FAQPage | - | - | 0 | 1 | Y | 207 | /grants |
+| 57 | **B** | 74 | province | 303 | 1.5 | 0.28 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 158 | /province/western-cape |
+| 58 | **B** | 74 | listing | 789 | 3.9 | 0.16 | 1/14 | Y | 12 | 0 | BreadcrumbList,FAQPage | - | - | 0 | 1 | Y | 191 | /status |
+| 59 | **B** | 74 | status | 371 | 1.9 | 0.35 | 1/7 | N | 11 | 2 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 146 | /status/approved |
+| 60 | **B** | 74 | status | 397 | 2.0 | 0.35 | 1/7 | N | 12 | 3 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 133 | /status/declined |
+| 61 | **B** | 74 | status | 372 | 1.9 | 0.39 | 1/7 | N | 11 | 3 | Article,BreadcrumbList | 2026-08-03 | Lucky Cungwa | 0 | 0 | Y | 136 | /status/identity-verification |
+| 62 | **B** | 73 | guide | 382 | 1.9 | 0.40 | 1/1 | N | 7 | 3 | HowTo,BreadcrumbList | 2026-02-28 | Lucky Cungwa | 0 | 0 | Y | 148 | /guides/change-banking-details |
+| 63 | **B** | 73 | listing | 1520 | 7.6 | 0.14 | 1/5 | N | 36 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 115 | /updates |
+| 64 | **B** | 72 | static | 436 | 2.2 | 0.28 | 1/6 | N | 7 | 1 | BreadcrumbList | 2001-03-31 | - | 0 | 0 | Y | 154 | /about |
 | 65 | **B** | 72 | listing | 942 | 4.7 | 0.11 | 1/9 | Y | 74 | 0 | FAQPage | - | - | 0 | 0 | Y | 170 | /common-problems |
 | 66 | **B** | 72 | tool | 213 | 1.1 | 0.10 | 1/1 | N | 2 | 3 | BreadcrumbList | 2026-08-03 | - | 0 | 1 | Y | 159 | /payment-calendar |
 | 67 | **B** | 71 | listing | 779 | 3.9 | 0.08 | 1/3 | Y | 2 | 0 | GovernmentOffice,FAQPage | - | - | 0 | 0 | Y | 121 | /resources |
-| 68 | **B** | 70 | static | 447 | 2.2 | 0.14 | 1/4 | N | 6 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 160 | /authors |
-| 69 | **B** | 70 | decline | 323 | 1.6 | 0.35 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 117 | /decline-reason/deceased-dha-record |
-| 70 | **B** | 70 | decline | 347 | 1.7 | 0.36 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 129 | /decline-reason/existing-sassa-grant |
-| 71 | **B** | 70 | decline | 313 | 1.6 | 0.36 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 132 | /decline-reason/government-payroll |
-| 72 | **B** | 70 | decline | 376 | 1.9 | 0.35 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 132 | /decline-reason/identity-verification-failed |
-| 73 | **B** | 70 | decline | 320 | 1.6 | 0.38 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 147 | /decline-reason/nsfas-registered |
-| 74 | **B** | 70 | decline | 334 | 1.7 | 0.38 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 133 | /decline-reason/uif-registered |
-| 75 | **B** | 70 | province | 315 | 1.6 | 0.35 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 158 | /province/eastern-cape |
-| 76 | **B** | 70 | static | 206 | 1.0 | 0.14 | 1/3 | N | 3 | 4 | BreadcrumbList | - | - | 0 | 0 | Y | 149 | /sources-policy |
-| 77 | **B** | 70 | update | 461 | 2.3 | 0.32 | 2/5 | N | 4 | 2 | Article,BreadcrumbList | 2026-07-27 | Lucky Cungwa | 0 | 0 | Y | 159 | /updates/update-2026-030 |
-| 78 | **B** | 70 | update | 562 | 2.8 | 0.26 | 2/5 | N | 4 | 2 | Article,BreadcrumbList | 2026-07-27 | Lucky Cungwa | 0 | 0 | Y | 132 | /updates/update-2026-032 |
-| 79 | **B** | 69 | decline | 337 | 1.7 | 0.36 | 1/4 | N | 11 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 111 | /decline-reason/age-outside-range |
-| 80 | **B** | 69 | listing | 1388 | 6.9 | 0.15 | 1/0 | N | 6 | 0 | DefinedTermSet,BreadcrumbList | - | - | 0 | 0 | Y | 134 | /glossary |
-| 81 | **B** | 69 | province | 288 | 1.4 | 0.28 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 153 | /province/gauteng |
-| 82 | **B** | 69 | province | 262 | 1.3 | 0.34 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 153 | /province/limpopo |
-| 83 | **B** | 69 | update | 489 | 2.4 | 0.34 | 2/3 | N | 11 | 4 | Article,BreadcrumbList | 2026-07-04 | Lucky Cungwa | 0 | 0 | Y | 157 | /updates/update-2026-023 |
-| 84 | **B** | 69 | update | 505 | 2.5 | 0.40 | 2/4 | Y | 6 | 2 | Article,BreadcrumbList | 2026-07-28 | Lucky Cungwa | 0 | 0 | Y | 178 | /updates/update-2026-033 |
-| 85 | **B** | 68 | tool | 580 | 2.9 | 0.11 | 1/6 | N | 14 | 0 | - | - | - | 0 | 0 | Y | 155 | / |
-| 86 | **B** | 68 | guide | 412 | 2.1 | 0.38 | 1/1 | N | 8 | 5 | HowTo,BreadcrumbList | 2026-01-27 | Lucky Cungwa | 0 | 0 | Y | 177 | /guides/srd-grant |
-| 87 | **B** | 67 | guide | 287 | 1.4 | 0.40 | 1/1 | N | 7 | 3 | HowTo,BreadcrumbList | 2026-03-04 | Lucky Cungwa | 0 | 0 | Y | 133 | /guides/biometric-verification-guide |
-| 88 | **B** | 67 | listing | 666 | 3.3 | 0.22 | 1/9 | N | 7 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 149 | /sassa-offices |
-| 89 | **B** | 67 | update | 451 | 2.3 | 0.34 | 2/4 | N | 10 | 3 | Article,BreadcrumbList | 2026-05-14 | Lucky Cungwa | 0 | 0 | Y | 178 | /updates/update-2026-016 |
-| 90 | **B** | 67 | update | 486 | 2.4 | 0.33 | 2/2 | N | 16 | 3 | Article,BreadcrumbList | 2026-06-16 | Lucky Cungwa | 0 | 0 | Y | 189 | /updates/update-2026-020 |
-| 91 | **B** | 67 | update | 447 | 2.2 | 0.32 | 2/2 | N | 20 | 2 | Article,BreadcrumbList | 2026-06-23 | Lucky Cungwa | 0 | 0 | Y | 203 | /updates/update-2026-021 |
-| 92 | **B** | 67 | update | 491 | 2.5 | 0.29 | 2/4 | N | 9 | 2 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 179 | /updates/update-2026-025 |
-| 93 | **B** | 67 | update | 590 | 3.0 | 0.29 | 2/5 | N | 9 | 4 | Article,BreadcrumbList | 2026-07-22 | Lucky Cungwa | 0 | 0 | Y | 185 | /updates/update-2026-026 |
-| 94 | **B** | 66 | update | 459 | 2.3 | 0.40 | 2/5 | N | 4 | 2 | Article,BreadcrumbList | 2026-07-27 | Lucky Cungwa | 0 | 0 | Y | 142 | /updates/update-2026-031 |
+| 68 | **B** | 70 | decline | 323 | 1.6 | 0.35 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 117 | /decline-reason/deceased-dha-record |
+| 69 | **B** | 70 | decline | 347 | 1.7 | 0.36 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 129 | /decline-reason/existing-sassa-grant |
+| 70 | **B** | 70 | decline | 313 | 1.6 | 0.36 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 132 | /decline-reason/government-payroll |
+| 71 | **B** | 70 | decline | 376 | 1.9 | 0.35 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 132 | /decline-reason/identity-verification-failed |
+| 72 | **B** | 70 | decline | 320 | 1.6 | 0.38 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 147 | /decline-reason/nsfas-registered |
+| 73 | **B** | 70 | decline | 334 | 1.7 | 0.38 | 1/4 | N | 10 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 133 | /decline-reason/uif-registered |
+| 74 | **B** | 70 | province | 315 | 1.6 | 0.35 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 158 | /province/eastern-cape |
+| 75 | **B** | 70 | static | 206 | 1.0 | 0.14 | 1/3 | N | 3 | 4 | BreadcrumbList | - | - | 0 | 0 | Y | 149 | /sources-policy |
+| 76 | **B** | 70 | update | 461 | 2.3 | 0.32 | 2/5 | N | 4 | 2 | Article,BreadcrumbList | 2026-07-27 | Lucky Cungwa | 0 | 0 | Y | 159 | /updates/update-2026-030 |
+| 77 | **B** | 70 | update | 562 | 2.8 | 0.26 | 2/5 | N | 4 | 2 | Article,BreadcrumbList | 2026-07-27 | Lucky Cungwa | 0 | 0 | Y | 132 | /updates/update-2026-032 |
+| 78 | **B** | 69 | decline | 337 | 1.7 | 0.36 | 1/4 | N | 11 | 0 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 111 | /decline-reason/age-outside-range |
+| 79 | **B** | 69 | listing | 1388 | 6.9 | 0.15 | 1/0 | N | 6 | 0 | DefinedTermSet,BreadcrumbList | - | - | 0 | 0 | Y | 134 | /glossary |
+| 80 | **B** | 69 | province | 288 | 1.4 | 0.28 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 153 | /province/gauteng |
+| 81 | **B** | 69 | province | 262 | 1.3 | 0.34 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 153 | /province/limpopo |
+| 82 | **B** | 69 | update | 489 | 2.4 | 0.34 | 2/3 | N | 11 | 4 | Article,BreadcrumbList | 2026-07-04 | Lucky Cungwa | 0 | 0 | Y | 157 | /updates/update-2026-023 |
+| 83 | **B** | 69 | update | 505 | 2.5 | 0.40 | 2/4 | Y | 6 | 2 | Article,BreadcrumbList | 2026-07-28 | Lucky Cungwa | 0 | 0 | Y | 178 | /updates/update-2026-033 |
+| 84 | **B** | 68 | tool | 580 | 2.9 | 0.11 | 1/6 | N | 14 | 0 | - | - | - | 0 | 0 | Y | 155 | / |
+| 85 | **B** | 68 | guide | 412 | 2.1 | 0.38 | 1/1 | N | 8 | 5 | HowTo,BreadcrumbList | 2026-01-27 | Lucky Cungwa | 0 | 0 | Y | 177 | /guides/srd-grant |
+| 86 | **B** | 67 | guide | 287 | 1.4 | 0.40 | 1/1 | N | 7 | 3 | HowTo,BreadcrumbList | 2026-03-04 | Lucky Cungwa | 0 | 0 | Y | 133 | /guides/biometric-verification-guide |
+| 87 | **B** | 67 | listing | 666 | 3.3 | 0.22 | 1/9 | N | 7 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 149 | /sassa-offices |
+| 88 | **B** | 67 | update | 451 | 2.3 | 0.34 | 2/4 | N | 10 | 3 | Article,BreadcrumbList | 2026-05-14 | Lucky Cungwa | 0 | 0 | Y | 178 | /updates/update-2026-016 |
+| 89 | **B** | 67 | update | 486 | 2.4 | 0.33 | 2/2 | N | 16 | 3 | Article,BreadcrumbList | 2026-06-16 | Lucky Cungwa | 0 | 0 | Y | 189 | /updates/update-2026-020 |
+| 90 | **B** | 67 | update | 447 | 2.2 | 0.32 | 2/2 | N | 20 | 2 | Article,BreadcrumbList | 2026-06-23 | Lucky Cungwa | 0 | 0 | Y | 203 | /updates/update-2026-021 |
+| 91 | **B** | 67 | update | 491 | 2.5 | 0.29 | 2/4 | N | 9 | 2 | Article,BreadcrumbList | 2026-07-06 | Lucky Cungwa | 0 | 0 | Y | 179 | /updates/update-2026-025 |
+| 92 | **B** | 67 | update | 590 | 3.0 | 0.29 | 2/5 | N | 9 | 4 | Article,BreadcrumbList | 2026-07-22 | Lucky Cungwa | 0 | 0 | Y | 185 | /updates/update-2026-026 |
+| 93 | **B** | 66 | update | 459 | 2.3 | 0.40 | 2/5 | N | 4 | 2 | Article,BreadcrumbList | 2026-07-27 | Lucky Cungwa | 0 | 0 | Y | 142 | /updates/update-2026-031 |
+| 94 | **B** | 65 | static | 447 | 2.2 | 0.28 | 1/4 | N | 6 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 160 | /authors |
 | 95 | **B** | 65 | static | 209 | 1.0 | 0.16 | 1/4 | N | 4 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 136 | /corrections-policy |
 | 96 | **B** | 65 | static | 235 | 1.2 | 0.16 | 1/4 | N | 4 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 140 | /fact-checking-policy |
 | 97 | **B** | 65 | province | 257 | 1.3 | 0.36 | 1/8 | N | 7 | 0 | Article,BreadcrumbList,GovernmentOffice | 2026-07-06 | Lucky Cungwa | 0 | 1 | Y | 152 | /province/free-state |
@@ -111,7 +111,7 @@
 | 102 | **B** | 65 | update | 424 | 2.1 | 0.31 | 2/2 | N | 8 | 2 | Article,BreadcrumbList | 2026-02-10 | Lucky Cungwa | 0 | 0 | Y | 179 | /updates/update-2026-009 |
 | 103 | **B** | 65 | update | 405 | 2.0 | 0.32 | 2/2 | N | 6 | 3 | Article,BreadcrumbList | 2026-02-09 | Lucky Cungwa | 0 | 0 | Y | 169 | /updates/update-2026-010 |
 | 104 | **B** | 64 | update | 353 | 1.8 | 0.36 | 2/2 | N | 6 | 3 | Article,BreadcrumbList | 2026-02-08 | Lucky Cungwa | 0 | 0 | Y | 160 | /updates/update-2026-011 |
-| 105 | **B** | 63 | static | 229 | 1.1 | 0.15 | 1/3 | N | 0 | 2 | BreadcrumbList | - | - | 0 | 0 | Y | 127 | /disclaimer |
+| 105 | **B** | 63 | static | 229 | 1.1 | 0.16 | 1/3 | N | 0 | 2 | BreadcrumbList | - | - | 0 | 0 | Y | 127 | /disclaimer |
 | 106 | **B** | 63 | static | 336 | 1.7 | 0.13 | 1/2 | N | 0 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 145 | /terms-of-service |
 | 107 | **B** | 63 | update | 408 | 2.0 | 0.34 | 2/2 | N | 6 | 2 | Article,BreadcrumbList | 2026-01-21 | Lucky Cungwa | 0 | 0 | Y | 217 | /updates/update-2026-002 |
 | 108 | **B** | 63 | update | 417 | 2.1 | 0.36 | 2/3 | N | 10 | 2 | Article,BreadcrumbList | 2026-05-21 | Lucky Cungwa | 0 | 0 | Y | 185 | /updates/update-2026-017 |
@@ -128,7 +128,7 @@
 | 119 | **C** | 59 | update | 355 | 1.8 | 0.40 | 2/3 | N | 4 | 3 | Article,BreadcrumbList | 2026-01-17 | Lucky Cungwa | 0 | 0 | Y | 163 | /updates/update-2026-006 |
 | 120 | **C** | 58 | static | 272 | 1.4 | 0.10 | 1/2 | N | 0 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 136 | /scam-alert |
 | 121 | **C** | 51 | static | 78 | 0.4 | 0.10 | 1/1 | N | 0 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 130 | /contact |
-| 122 | **C** | 51 | static | 117 | 0.6 | 0.13 | 1/5 | N | 0 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 122 | /privacy-policy |
+| 122 | **C** | 51 | static | 117 | 0.6 | 0.11 | 1/5 | N | 0 | 0 | BreadcrumbList | - | - | 0 | 0 | Y | 122 | /privacy-policy |
 
 ## Lowest-scoring pages (priority fixes)
 
@@ -138,7 +138,7 @@
 - **59 (C)** `/updates/update-2026-006` — words:355, dup:0.40, faq:N, author:Y, canonical:Y, meta:163ch, broken:0
 - **58 (C)** `/scam-alert` — words:272, dup:0.10, faq:N, author:N, canonical:Y, meta:136ch, broken:0
 - **51 (C)** `/contact` — words:78, dup:0.10, faq:N, author:N, canonical:Y, meta:130ch, broken:0
-- **51 (C)** `/privacy-policy` — words:117, dup:0.13, faq:N, author:N, canonical:Y, meta:122ch, broken:0
+- **51 (C)** `/privacy-policy` — words:117, dup:0.11, faq:N, author:N, canonical:Y, meta:122ch, broken:0
 
 ## Near-duplicate page pairs (similarity > 0.35)
 

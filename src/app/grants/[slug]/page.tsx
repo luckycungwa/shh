@@ -11,7 +11,7 @@ import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../../lib/schema";
-import { resolveTemplates } from "../../../lib/canonical-facts";
+import { resolveTemplates, getFactMeta } from "../../../lib/canonical-facts";
 
 interface GrantFaq {
   q: string;
@@ -92,6 +92,13 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
 
   const allFaqs = data.sections.filter((s) => s.type === "faq" && s.faqs).flatMap((s) => s.faqs || []);
 
+  const rawSectionText = data.sections.map((s) => JSON.stringify(s)).join(" ") + " " + data.title + " " + data.description;
+  const usedFactKeys = Array.from(new Set(Array.from(rawSectionText.matchAll(/\{\{(\w+)\}\}/g), (m) => m[1])));
+  const unverifiedFacts = usedFactKeys
+    .map((k) => ({ k, meta: getFactMeta(k) }))
+    .filter((x) => x.meta && x.meta.confidence === "needs_human_review")
+    .map((x) => x.k);
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       <JsonLd data={articleSchema(data.title, data.description, `/grants/${data.slug}`, data.author, data.last_updated)} />
@@ -122,6 +129,16 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
             {resolveTemplates(data.description)}
           </p>
           <EditorialMeta lastVerified={data.last_updated} author={data.author} />
+          {unverifiedFacts.length > 0 && (
+            <div className="flex items-start gap-3 p-4 rounded-2xl border-2 border-amber-200 dark:border-amber-700/50 bg-amber-50 dark:bg-amber-900/10 text-sm text-amber-800 dark:text-amber-200">
+              <FaInfoCircle className="text-amber-500 mt-0.5 shrink-0" />
+              <p>
+                Some amounts on this page have not been independently verified against an official source and
+                may change. Always confirm current figures with SASSA, Postbank, or the National Treasury before
+                acting on them.
+              </p>
+            </div>
+          )}
         </header>
 
         <div className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-4 rounded-2xl shadow-sm lg:hidden mb-8">
@@ -237,6 +254,19 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
                       <NextLink key={i} href={slug} className="text-sm font-medium text-primary-gold hover:underline">
                         {slug.split("/").pop()?.replace(/-/g, " ") || slug}
                       </NextLink>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {data.sources.length > 0 && (
+                <div className="p-6 border border-gray-100 dark:border-gray-800 rounded-2xl">
+                  <p className="font-bold text-lg mb-4">Official Sources</p>
+                  <div className="flex flex-col gap-3">
+                    {data.sources.map((src: string, i: number) => (
+                      <a key={i} href={src} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary-gold hover:underline break-all flex items-center gap-1">
+                        {src.replace(/^https?:\/\//, "")} <FaExternalLinkAlt className="text-xs" />
+                      </a>
                     ))}
                   </div>
                 </div>

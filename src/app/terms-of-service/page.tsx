@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Gavel, Scale, AlertCircle } from 'lucide-react';
 import { Card, CardBody, Divider } from "@nextui-org/react";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentMonthYearKey } from "../../lib/config";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function TermsOfServicePage() {
-  const lastUpdated = getCurrentMonthYearKey();
+  const lastUpdated = "10 August 2026";
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">

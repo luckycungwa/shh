@@ -138,7 +138,7 @@ export default function ResourcesPage() {
                  <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
                     Many SASSA services can now be performed online or via WhatsApp. Check our digital application guide first.
                  </p>
-                 <Button as={NextLink} href="/guides/srd-grant" color="primary" variant="solid" className="font-bold px-8 py-6">
+                 <Button as={NextLink} href="/grants/srd-r370-grant" color="primary" variant="solid" className="font-bold px-8 py-6">
                     View Digital Guides <FaExternalLinkAlt className="ml-2 text-xs" />
                  </Button>
               </CardBody>

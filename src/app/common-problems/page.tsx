@@ -40,9 +40,9 @@ const categories = [
       { href: "/status/paid", label: "Status Shows Paid but No Money", desc: "What to do if your money hasn't arrived" },
       { href: "/guides/guide-001", label: "How to Apply for Child Support Grant", desc: "Step-by-step application for CSG" },
       { href: "/guides/apply-sassa-grants", label: "How to Apply for Any SASSA Grant", desc: "Online and in-person application hub" },
-      { href: "/guides/srd-grant", label: "How to Apply for SRD R370 Grant", desc: "Online application process for the SRD grant" },
+      { href: "/grants/srd-r370-grant", label: "How to Apply for SRD R370 Grant", desc: "Online application process for the SRD grant" },
       { href: "/guides/document-checklist", label: "SASSA Documents Checklist", desc: "What documents to bring for each grant type" },
-      { href: "/guides/guide-means-test", label: "Understanding the Means Test", desc: "How income and assets are assessed" },
+      { href: "/guides/bulk-means-test", label: "Understanding the Means Test", desc: "How income and assets are assessed" },
       { href: "/guides/sassa-grant-renewal", label: "Why Your Grant Is Checked Every Month", desc: "Monthly reassessment explained" },
       { href: "/eligibility-check", label: "SASSA Grant Eligibility Checker", desc: "Check which grants you qualify for" },
       { href: "/glossary", label: "SASSA Glossary of Terms", desc: "Understand SASSA terminology" },
@@ -76,7 +76,7 @@ const categories = [
     links: [
       { href: "/payment-calendar", label: "SASSA Payment Dates 2026", desc: "Full payment schedule for all grants" },
       { href: "/guides/sassa-payment-methods", label: "Payment Methods Compared", desc: "Bank vs Postbank vs Cash Send vs Retail" },
-      { href: "/guides/change-banking-details", label: "How to Change Banking Details", desc: "Update your bank account for grant payments" },
+      { href: "/guides/bank-details-pending-fix", label: "How to Change Banking Details", desc: "Update your bank account for grant payments" },
       { href: "/guides/postbank-black-card-guide", label: "Gold Card to Black Card Migration", desc: "Switch before 31 August 2026 deadline" },
       { href: "/guides/grant-amounts-history", label: "Grant Amounts History 2020-2026", desc: "Historical grant amounts and increases" },
       { href: "/updates/update-2026-027", label: "August 2026 Payment Schedule", desc: "Latest confirmed payment dates" },
@@ -96,7 +96,7 @@ const categories = [
       { href: "/guides/sassa-update-information", label: "Received a SASSA Review SMS? What to Do", desc: "Verify genuine requests and update your information safely" },
       { href: "/guides/elife-certification-troubleshooting", label: "eLife Certification Troubleshooting", desc: "Fix portal problems and complete your review" },
       { href: "/guides/guide-reinstate-grant", label: "Reinstate a Lapsed or Suspended Grant", desc: "How to get your grant reinstated" },
-      { href: "/guides/guide-report-fraud", label: "Report SASSA Fraud", desc: "How to report fraud and protect your grant" },
+      { href: "/scam-alert", label: "Report SASSA Fraud", desc: "How to report fraud and protect your grant" },
     ],
   },
   {
@@ -108,7 +108,7 @@ const categories = [
       { href: "/guides/sassa-whatsapp", label: "SASSA WhatsApp Guide", desc: "Use WhatsApp for status checks and appeals" },
       { href: "/guides/moya-app-sassa", label: "Moya App for SASSA", desc: "Free-data app for SRD status checks" },
       { href: "/guides/ussd-codes", label: "USSD Codes — No Internet Needed", desc: "Check status on any phone with no data" },
-      { href: "/guides/biometric-verification-guide", label: "Biometric Verification Guide", desc: "Pass the facial recognition requirement" },
+      { href: "/guides/biometric-fix-guide", label: "Biometric Verification Guide", desc: "Pass the facial recognition requirement" },
       { href: "/status-check", label: "SASSA Status Check Tool", desc: "Check your SRD application status" },
     ],
   },
@@ -120,7 +120,7 @@ const categories = [
     links: [
       { href: "/scam-alert", label: "SASSA Scam & Fraud Alerts", desc: "Latest scams targeting grant beneficiaries" },
       { href: "/guides/sassa-online-security", label: "Online Security Guide", desc: "How to spot fake SASSA websites" },
-      { href: "/guides/guide-report-fraud", label: "How to Report SASSA Fraud", desc: "Step-by-step fraud reporting guide" },
+      { href: "/scam-alert", label: "How to Report SASSA Fraud", desc: "Step-by-step fraud reporting guide" },
     ],
   },
   {
@@ -159,7 +159,7 @@ const categories = [
 
 const urgentAlert = {
   title: "Gold Card Deadline: 31 August 2026",
-  desc: "Your SASSA Gold Card stops working on 31 August 2026. Over 600,000 beneficiaries still need to switch to the Postbank Black Card. The replacement is free.",
+  desc: "Your SASSA Gold Card stops working on 31 August 2026. Migrate to the free Postbank Black Card before the deadline. The replacement is free.",
   href: "/guides/postbank-black-card-guide",
 };
 

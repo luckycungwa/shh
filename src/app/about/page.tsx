@@ -20,9 +20,9 @@ import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About SASSA Help Hub \u2014 Independent Grant Resource Since 2024",
+  title: "About SASSA Help Hub \u2014 Independent Unofficial Resource",
   description:
-    "Learn about the publisher, editorial standards, and free resources behind SASSA Help Hub \u2014 your trusted unofficial guide to South African social security.",
+    "Learn about the publisher, editorial standards, and free resources behind SASSA Help Hub \u2014 your independent unofficial guide to South African social security.",
   path: "/about",
 });
 
@@ -51,13 +51,12 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold">Important Information</h2>
                 <p className="text-lg leading-relaxed">
-                  <strong>
-                    SASSA Help Hub is an independent, Independent Resource
-                  </strong>{" "}
-                  created by South Africans to help others. We are NOT
-                  affiliated with, endorsed by, or representing the South
-                  African Social Security Agency (SASSA), the Department of
-                  Social Development, or any other government department.
+                  <strong>SASSA Help Hub is an independent resource</strong>{" "}
+                  created to help South Africans understand and access social
+                  grants. We are NOT affiliated with, endorsed by, or
+                  representing the South African Social Security Agency (SASSA),
+                  the Department of Social Development, or any other government
+                  department.
                 </p>
               </div>
             </div>
@@ -91,18 +90,20 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               SASSA Help Hub is published by{" "}
-              <a
-                href="https://44tagstudios.co.za"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-gold font-semibold hover:underline"
-              >
-                44Tag Studios
-              </a>
-              , a South African digital agency specialising in accessible web
-              tools, civic information projects, and SEO-driven content. We
-              build free resources that help ordinary South Africans navigate
-              government services with confidence.
+              <NextLink href="/authors" className="text-primary-gold font-semibold hover:underline">
+                Lucky Cungwa
+              </NextLink>
+              , an independent publisher and editor. The site is
+              reader-focused: it carries no paid promotional articles, accepts
+              no money from government departments or third parties for
+              coverage, and is not affiliated with any grant or banking
+              provider.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+              Because this site is independent and unofficial, we can be direct
+              when official information is confusing, and we link to the
+              primary sources — SASSA, the Department of Social Development, and
+              Treasury — where available, so you can check our work yourself.
             </p>
           </div>
 
@@ -121,6 +122,13 @@ export default function AboutPage() {
                 before publishing.
               </p>
               <p>
+                Grant amounts, income thresholds and effective dates are drawn
+                from a single canonical facts table, so the same figure is never
+                stated differently across two pages. Each guide records its
+                last-updated date and is reviewed whenever SASSA announces a
+                change.
+              </p>
+              <p>
                 Content is written in plain English to serve all literacy
                 levels. We clearly label any interpretation or opinion as such
                 and always link back to official sources where available.
@@ -128,12 +136,7 @@ export default function AboutPage() {
               <p className="flex items-start gap-2">
                 <FaCheckCircle className="text-primary-gold mt-1 flex-shrink-0" />
                 <span>
-                  <strong>Last updated:</strong>{" "}
-                  {new Date().toLocaleDateString("en-ZA", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
+                  <strong>Page last reviewed:</strong> 10 August 2026
                 </span>
               </p>
             </div>
@@ -148,10 +151,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 border border-gray-100 dark:border-gray-800">
                 <CardBody className="p-0 space-y-3">
-                  <h3 className="text-xl font-bold">SASSA AI Status Update</h3>
+                  <h3 className="text-xl font-bold">SASSA Status Check Guide</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Get instant answers about your SASSA grant status using our
-                    AI-powered assistant — free, no login required.
+                    Step-by-step help to check your SASSA grant status using
+                    the official portal — free, no login required.
                   </p>
                   <Button
                     as={NextLink}
@@ -224,22 +227,22 @@ export default function AboutPage() {
           <Divider />
 
           <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800">
-            <h2 className="text-3xl font-bold mb-4">Partner With Us</h2>
+            <h2 className="text-3xl font-bold mb-4">Found a Mistake?</h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              44Tag Studios partners with organisations that share our mission
-              of making government information accessible. Whether you need
-              SEO-optimised content, civic web tools, or digital strategy for
-              the South African market, we can help.
+              If you spot an error or something that has changed, tell me. I
+              correct mistakes promptly and publicly under the{" "}
+              <NextLink href="/corrections-policy" className="text-primary-gold font-semibold hover:underline">
+                corrections policy
+              </NextLink>
+              . For anything specific to your own grant, contact SASSA directly.
             </p>
             <Button
               as={NextLink}
-              href="https://44tagstudios.co.za"
-              target="_blank"
+              href="/contact"
               color="primary"
               variant="solid"
-              endContent={<FaExternalLinkAlt className="text-xs" />}
             >
-              Visit 44Tag Studios
+              Contact the Editor
             </Button>
           </div>
         </section>

@@ -144,7 +144,7 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                     <Avatar name="ZA" size="sm" className="bg-primary-gold text-primary-black font-bold" />
                     <div>
                         <NextLink href="/authors" className="font-bold text-gray-900 hover:text-primary-gold transition-colors">{guide.author}</NextLink>
-                       <p className="text-xs">Founder & Editor — Independent Grant Researcher</p>
+                       <p className="text-xs">SASSA Help Hub — Independent Unofficial Resource</p>
                     </div>
                  </div>
                  <div className="flex items-center gap-2">

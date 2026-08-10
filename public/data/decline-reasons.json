@@ -1,197 +1,344 @@
 [
-  {
-    "slug": "income-source-detected",
-    "title": "SASSA Decline Reason: 'Income Source Detected' — What It Means & How to Fix",
-    "description": "The most common SRD decline reason. SASSA found deposits in your bank account exceeding R624 for the month. Learn exactly what triggers this and how to appeal.",
-    "decline_code": "Income Source Detected / Means Test Failed",
-    "what_it_means": "SASSA's automated system scanned your bank accounts and found total deposits exceeding R624 for the month. The system does not distinguish between salary, gifts, stokvel payouts, family transfers, refunds, or any other type of deposit — any money coming in counts as income. This is the most common SRD decline reason, affecting over 1 million applicants per month in 2026.",
-    "common_triggers": [
-      "A family member sent you money via e-wallet or bank transfer",
-      "A stokvel payout was deposited into your account",
-      "You received a UIF payment or NSFAS stipend",
-      "Someone used your bank account for their transactions",
-      "You do informal work that pays irregularly into your account"
-    ],
-    "how_to_fix": [
-      { "step": "Check what triggered it", "detail": "Review your bank statements for the declined month. Identify every deposit, including gifts, family transfers, and stokvel payouts." },
-      { "step": "Appeal on ITSAA portal", "detail": "Go to srd-appeals.dsd.gov.za and select the declined month. Choose 'Income Source Detected' as the reason. Explain what each deposit was — be specific about dates and amounts." },
-      { "step": "Provide evidence", "detail": "Upload bank statements showing the deposits. If a family member sent you money, include a signed affidavit explaining it was a gift, not income." },
-      { "step": "Prevent future declines", "detail": "Use a separate bank account for SRD only, or have family give you cash instead of electronic transfers." }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "Most appeals succeed if the deposit was genuinely not income (family gift, stokvel, refund). Be honest and specific in your explanation.",
-    "tags": ["income source detected", "means test failed", "bank deposits", "appeal"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/means-test-failed", "/status/declined"]
-  },
-  {
-    "slug": "identity-verification-failed",
-    "title": "SASSA Decline Reason: 'Identity Verification Failed' — What It Means & How to Fix",
-    "description": "Your name or ID number does not match Department of Home Affairs records. Learn why this happens and how to correct it step by step.",
-    "decline_code": "Identity Verification Failed",
-    "what_it_means": "SASSA compared the personal details you submitted (name, surname, ID number) against the Department of Home Affairs database and found a mismatch. This is a security measure to prevent identity fraud. The mismatch could be caused by a simple typo, a name change after marriage, or an error in Home Affairs records.",
-    "common_triggers": [
-      "A typo in your name or surname during application",
-      "You used a nickname instead of your full legal name",
-      "Your surname changed after marriage but was not updated at Home Affairs",
-      "Home Affairs has incorrect records for your ID number",
-      "Your ID document was recently issued and has not synced to all databases"
-    ],
-    "how_to_fix": [
-      { "step": "Check your name on the SRD portal", "detail": "Log into srd.sassa.gov.za and verify that your name and surname are spelled exactly as on your ID document. A single letter difference can cause this decline." },
-      { "step": "Correct name/surname online", "detail": "Use the 'Request Names and Surname Update' tool on the SRD website if the spelling is wrong." },
-      { "step": "Complete biometric verification", "detail": "If you received an SMS with a facial recognition link, complete it within 72 hours." },
-      { "step": "Visit Home Affairs if needed", "detail": "If your ID records at Home Affairs are incorrect (e.g., listed as deceased, wrong surname), visit a Home Affairs office in person to correct the error." }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "High if the cause is a simple typo or name mismatch — fix the details and reapply. Lower if Home Affairs records themselves need correction.",
-    "tags": ["identity verification", "home affairs mismatch", "name error", "ID verification failed"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/identity-verification", "/status/declined"]
-  },
-  {
-    "slug": "uif-registered",
-    "title": "SASSA Decline Reason: 'UIF Registered' — What It Means & How to Fix",
-    "description": "SASSA found that you are registered with the Unemployment Insurance Fund. Learn why this blocks your SRD grant and how to resolve it.",
-    "decline_code": "UIF Registered",
-    "what_it_means": "SASSA's system cross-checks your ID number against the Department of Employment and Labour's UIF database. If you appear as an active UIF contributor or recipient, your SRD application is declined. This happens even if you are not currently receiving UIF payments — simply being registered on the UIF system can trigger the decline.",
-    "common_triggers": [
-      "Your previous employer did not deregister you from UIF when you left",
-      "You applied for and received UIF payments during the SRD assessment period",
-      "Your employer is still contributing to UIF on your behalf without your knowledge",
-      "There is an old UIF claim on your ID number from a previous job"
-    ],
-    "how_to_fix": [
-      { "step": "Check your UIF status", "detail": "Contact the Department of Employment and Labour to check if your UIF record is still active. You can visit your nearest Labour Centre." },
-      { "step": "Request UIF deregistration", "detail": "Ask your previous employer to deregister you from UIF. If they refuse or cannot be contacted, the Labour Centre can assist." },
-      { "step": "Appeal with proof", "detail": "Submit an appeal on the ITSAA portal. Include a letter from the Labour Centre confirming you are not receiving UIF benefits." }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "High if you provide a UIF deregistration letter or confirmation that you are not receiving payments.",
-    "tags": ["uif registered", "uif detected", "unemployment fund", "appeal"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/declined", "/status/means-test-failed"]
-  },
-  {
-    "slug": "nsfas-registered",
-    "title": "SASSA Decline Reason: 'NSFAS Registered' — What It Means & How to Fix",
-    "description": "SASSA found that you are registered with NSFAS for student funding. Learn how to prove you are no longer a student and get your SRD grant approved.",
-    "decline_code": "NSFAS Registered",
-    "what_it_means": "SASSA checks your ID number against the National Student Financial Aid Scheme (NSFAS) database. If you appear as an active NSFAS beneficiary, your SRD application is declined. This often happens to students who graduated or dropped out but were never removed from the NSFAS system.",
-    "common_triggers": [
-      "You graduated but the university did not update your status with NSFAS",
-      "You dropped out of your studies but NSFAS still shows you as active",
-      "You applied for NSFAS but never received funding",
-      "There is a data error linking your ID number to another student's NSFAS record"
-    ],
-    "how_to_fix": [
-      { "step": "Contact your university's financial aid office", "detail": "Request a formal clearance letter confirming you are no longer registered as a student or receiving NSFAS funding." },
-      { "step": "Submit clearance with your appeal", "detail": "On the ITSAA portal, upload your NSFAS clearance letter or proof that you are not currently funded." },
-      { "step": "Appeal with explanation", "detail": "Explain clearly: 'I graduated in [year] and am no longer a student. I am not receiving any NSFAS funding.'" }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "Very high with a proper clearance letter from the university financial aid office.",
-    "tags": ["nsfas", "student funding", "university", "appeal"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/declined", "/status/means-test-failed"]
-  },
-  {
-    "slug": "existing-sassa-grant",
-    "title": "SASSA Decline Reason: 'Existing SASSA Grant' — What It Means & How to Resolve",
-    "description": "You cannot receive the SRD grant if you are already receiving another SASSA grant. Learn about the one-grant rule and what to do.",
-    "decline_code": "Existing SASSA Grant",
-    "what_it_means": "SASSA's system shows that you are already receiving another social grant — such as Old Age Pension, Disability Grant, Child Support Grant, Foster Child Grant, or Care Dependency Grant. South African law does not allow you to receive more than one SASSA grant at the same time (with limited exceptions for foster parents).",
-    "common_triggers": [
-      "You are already receiving the Old Age Pension or Disability Grant",
-      "You are the primary caregiver receiving the Child Support Grant",
-      "Someone applied for a grant using your ID number without your knowledge",
-      "There is a data error linking your ID to another person's grant"
-    ],
-    "how_to_fix": [
-      { "step": "Check which grant you are receiving", "detail": "Call the SASSA helpline at 0800 60 10 11 and ask which grant is linked to your ID number." },
-      { "step": "Compare grant amounts", "detail": "If you are receiving a permanent grant (R2,400 for Old Age/Disability), it pays much more than the SRD (R370) — you are better off with the permanent grant." },
-      { "step": "Report fraudulent applications", "detail": "If someone else used your ID to apply for a grant, report it to the SASSA fraud hotline immediately." }
-    ],
-    "appeal_deadline": "No appeal needed — this decline is usually correct. Apply for the correct grant type instead.",
-    "success_rate": "This decline is usually accurate. Only appeal if you believe a grant is fraudulently linked to your ID.",
-    "tags": ["existing grant", "duplicate grant", "one grant rule", "sassa fraud"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/declined", "/guides/grant-comparison-overview"]
-  },
-  {
-    "slug": "government-payroll",
-    "title": "SASSA Decline Reason: 'Government Payroll Registered' — What It Means & How to Fix",
-    "description": "SASSA found your ID number on a government payroll. Learn why this happens and how to prove you are no longer employed by the state.",
-    "decline_code": "Government Payroll Registered",
-    "what_it_means": "SASSA cross-checks your ID number against the Government Employees Pension Fund and government payroll databases. If your ID appears on any government payroll system — even if you left years ago — your SRD application will be declined.",
-    "common_triggers": [
-      "You previously worked for a government department and were never removed from the payroll",
-      "You were employed as a temporary educator, police reservist, or municipal worker",
-      "You are a former SANDF member with an active pension record",
-      "Your ID number was incorrectly linked to a government employee"
-    ],
-    "how_to_fix": [
-      { "step": "Contact your former employer", "detail": "Ask the government department you worked for to provide written confirmation that you are no longer employed." },
-      { "step": "Appeal with proof", "detail": "Submit your appeal with the confirmation letter. Explain that you are no longer a government employee." },
-      { "step": "Contact Government Pensions Administration", "detail": "If the issue is with the pension fund, contact GEPF to confirm you are not receiving a government pension." }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "Good if you provide a formal letter from the government department confirming you are no longer employed.",
-    "tags": ["government payroll", "government employee", "gepf", "public service"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/declined", "/status/means-test-failed"]
-  },
-  {
-    "slug": "age-outside-range",
-    "title": "SASSA Decline Reason: 'Age Outside Range' — What It Means & Which Grant to Apply For",
-    "description": "Your age does not meet the SRD grant requirement of 18–59. Learn which grant you qualify for based on your age.",
-    "decline_code": "Age Outside Range",
-    "what_it_means": "The SRD grant is only available to applicants aged 18 to 59 (inclusive). If you are under 18 or over 59, your application will be declined with this reason. This is a hard requirement with no exceptions.",
-    "common_triggers": [
-      "You are under 18 — the SRD grant requires applicants to be 18 or older",
-      "You are 60 or older — you qualify for the Old Age Grant instead",
-      "Your date of birth was entered incorrectly on the application form"
-    ],
-    "how_to_fix": [
-      { "step": "If you are under 18", "detail": "You cannot receive the SRD grant. However, a parent or guardian may qualify for the Child Support Grant on your behalf." },
-      { "step": "If you are 60 or older", "detail": "Apply for the Old Age Grant (R2,400/month) at your nearest SASSA office. It pays much more than the SRD." },
-      { "step": "If your age is incorrect on the application", "detail": "The SRD portal does not allow you to change your date of birth. You must appeal explaining the error and provide your ID document as proof." }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "High if you are appealing because the date of birth was entered incorrectly. If you genuinely do not meet the age requirement, apply for the correct grant type.",
-    "tags": ["age outside range", "under 18", "over 60", "old age grant", "child support"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/declined", "/grants/old-age-pension", "/grants/child-support-grant"]
-  },
-  {
-    "slug": "deceased-dha-record",
-    "title": "SASSA Decline Reason: 'Deceased Record on DHA' — What to Do",
-    "description": "SASSA's system shows you as deceased according to Home Affairs records. Learn how to correct this serious data error.",
-    "decline_code": "Deceased Record on DHA",
-    "what_it_means": "When SASSA checks your ID number with the Department of Home Affairs, their database shows your ID as belonging to a deceased person. This is a serious data error — either Home Affairs has incorrect records, or someone fraudulently reported you as deceased.",
-    "common_triggers": [
-      "Home Affairs has a data error linking your ID number to a deceased person",
-      "A family member mistakenly reported you as deceased (common with estranged families)",
-      "Identity theft — someone used your ID to fraudulently claim benefits and reported you as deceased to cover their tracks"
-    ],
-    "how_to_fix": [
-      { "step": "Visit your nearest Home Affairs office", "detail": "This cannot be resolved online. You must go to a Home Affairs office in person with your ID document." },
-      { "step": "Request a 'Living Person Confirmation'", "detail": "Ask Home Affairs to verify that you are alive and correct the database error." },
-      { "step": "Get written confirmation", "detail": "Obtain a signed letter from Home Affairs confirming you are alive and the deceased record was an error." },
-      { "step": "Present to SASSA", "detail": "Take the Home Affairs letter to your nearest SASSA office along with a new SRD application." }
-    ],
-    "appeal_deadline": "90 days from the date of decline",
-    "success_rate": "High once the Home Affairs record is corrected. Expect delays — this process can take 2 to 4 weeks.",
-    "tags": ["deceased record", "home affairs error", "identity theft", "living confirmation"],
-    "last_updated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "related_statuses": ["/status/identity-verification", "/status/declined"]
-  }
+    {
+        "slug": "income-source-detected",
+        "title": "SASSA Decline Reason: 'Income Source Detected' — What It Means & How to Fix",
+        "description": "The most common SRD decline reason. SASSA found deposits in your bank account exceeding R624 for the month. Learn exactly what triggers this and how to appeal.",
+        "decline_code": "Income Source Detected / Means Test Failed",
+        "what_it_means": "SASSA's automated system scanned your bank accounts and found total deposits exceeding R624 for the month. The system does not distinguish between salary, gifts, stokvel payouts, family transfers, refunds, or any other type of deposit — any money coming in counts as income. This is one of the most common SRD decline reasons. The exact number of affected applicants is not published by SASSA.",
+        "common_triggers": [
+            "A family member sent you money via e-wallet or bank transfer",
+            "A stokvel payout was deposited into your account",
+            "You received a UIF payment or NSFAS stipend",
+            "Someone used your bank account for their transactions",
+            "You do informal work that pays irregularly into your account"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Check what triggered it",
+                "detail": "Review your bank statements for the declined month. Identify every deposit, including gifts, family transfers, and stokvel payouts."
+            },
+            {
+                "step": "Appeal on ITSAA portal",
+                "detail": "Go to srd-appeals.dsd.gov.za and select the declined month. Choose 'Income Source Detected' as the reason. Explain what each deposit was — be specific about dates and amounts."
+            },
+            {
+                "step": "Provide evidence",
+                "detail": "Upload bank statements showing the deposits. If a family member sent you money, include a signed affidavit explaining it was a gift, not income."
+            },
+            {
+                "step": "Prevent future declines",
+                "detail": "Use a separate bank account for SRD only, or have family give you cash instead of electronic transfers."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Appeals are most likely to succeed when the deposit was genuinely not income (family gift, stokvel payout, refund). Be honest and specific in your explanation and provide bank statements.",
+        "tags": [
+            "income source detected",
+            "means test failed",
+            "bank deposits",
+            "appeal"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/means-test-failed",
+            "/status/declined"
+        ]
+    },
+    {
+        "slug": "identity-verification-failed",
+        "title": "SASSA Decline Reason: 'Identity Verification Failed' — What It Means & How to Fix",
+        "description": "Your name or ID number does not match Department of Home Affairs records. Learn why this happens and how to correct it step by step.",
+        "decline_code": "Identity Verification Failed",
+        "what_it_means": "SASSA compared the personal details you submitted (name, surname, ID number) against the Department of Home Affairs database and found a mismatch. This is a security measure to prevent identity fraud. The mismatch could be caused by a simple typo, a name change after marriage, or an error in Home Affairs records.",
+        "common_triggers": [
+            "A typo in your name or surname during application",
+            "You used a nickname instead of your full legal name",
+            "Your surname changed after marriage but was not updated at Home Affairs",
+            "Home Affairs has incorrect records for your ID number",
+            "Your ID document was recently issued and has not synced to all databases"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Check your name on the SRD portal",
+                "detail": "Log into srd.sassa.gov.za and verify that your name and surname are spelled exactly as on your ID document. A single letter difference can cause this decline."
+            },
+            {
+                "step": "Correct name/surname online",
+                "detail": "Use the 'Request Names and Surname Update' tool on the SRD website if the spelling is wrong."
+            },
+            {
+                "step": "Complete biometric verification",
+                "detail": "If you received an SMS with a facial recognition link, complete it within 72 hours."
+            },
+            {
+                "step": "Visit Home Affairs if needed",
+                "detail": "If your ID records at Home Affairs are incorrect (e.g., listed as deceased, wrong surname), visit a Home Affairs office in person to correct the error."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Outcomes depend on the cause. A simple typo or name mismatch can usually be corrected by updating your details and reapplying. Corrections to Home Affairs records can take longer.",
+        "tags": [
+            "identity verification",
+            "home affairs mismatch",
+            "name error",
+            "ID verification failed"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/identity-verification",
+            "/status/declined"
+        ]
+    },
+    {
+        "slug": "uif-registered",
+        "title": "SASSA Decline Reason: 'UIF Registered' — What It Means & How to Fix",
+        "description": "SASSA found that you are registered with the Unemployment Insurance Fund. Learn why this blocks your SRD grant and how to resolve it.",
+        "decline_code": "UIF Registered",
+        "what_it_means": "SASSA's system cross-checks your ID number against the Department of Employment and Labour's UIF database. If you appear as an active UIF contributor or recipient, your SRD application is declined. This happens even if you are not currently receiving UIF payments — simply being registered on the UIF system can trigger the decline.",
+        "common_triggers": [
+            "Your previous employer did not deregister you from UIF when you left",
+            "You applied for and received UIF payments during the SRD assessment period",
+            "Your employer is still contributing to UIF on your behalf without your knowledge",
+            "There is an old UIF claim on your ID number from a previous job"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Check your UIF status",
+                "detail": "Contact the Department of Employment and Labour to check if your UIF record is still active. You can visit your nearest Labour Centre."
+            },
+            {
+                "step": "Request UIF deregistration",
+                "detail": "Ask your previous employer to deregister you from UIF. If they refuse or cannot be contacted, the Labour Centre can assist."
+            },
+            {
+                "step": "Appeal with proof",
+                "detail": "Submit an appeal on the ITSAA portal. Include a letter from the Labour Centre confirming you are not receiving UIF benefits."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Provide a UIF deregistration letter or confirmation that you are not currently receiving UIF payments.",
+        "tags": [
+            "uif registered",
+            "uif detected",
+            "unemployment fund",
+            "appeal"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/declined",
+            "/status/means-test-failed"
+        ]
+    },
+    {
+        "slug": "nsfas-registered",
+        "title": "SASSA Decline Reason: 'NSFAS Registered' — What It Means & How to Fix",
+        "description": "SASSA found that you are registered with NSFAS for student funding. Learn how to prove you are no longer a student and get your SRD grant approved.",
+        "decline_code": "NSFAS Registered",
+        "what_it_means": "SASSA checks your ID number against the National Student Financial Aid Scheme (NSFAS) database. If you appear as an active NSFAS beneficiary, your SRD application is declined. This often happens to students who graduated or dropped out but were never removed from the NSFAS system.",
+        "common_triggers": [
+            "You graduated but the university did not update your status with NSFAS",
+            "You dropped out of your studies but NSFAS still shows you as active",
+            "You applied for NSFAS but never received funding",
+            "There is a data error linking your ID number to another student's NSFAS record"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Contact your university's financial aid office",
+                "detail": "Request a formal clearance letter confirming you are no longer registered as a student or receiving NSFAS funding."
+            },
+            {
+                "step": "Submit clearance with your appeal",
+                "detail": "On the ITSAA portal, upload your NSFAS clearance letter or proof that you are not currently funded."
+            },
+            {
+                "step": "Appeal with explanation",
+                "detail": "Explain clearly: 'I graduated in [year] and am no longer a student. I am not receiving any NSFAS funding.'"
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Provide a clearance letter from the university financial aid office confirming your status.",
+        "tags": [
+            "nsfas",
+            "student funding",
+            "university",
+            "appeal"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/declined",
+            "/status/means-test-failed"
+        ]
+    },
+    {
+        "slug": "existing-sassa-grant",
+        "title": "SASSA Decline Reason: 'Existing SASSA Grant' — What It Means & How to Resolve",
+        "description": "You cannot receive the SRD grant if you are already receiving another SASSA grant. Learn about the one-grant rule and what to do.",
+        "decline_code": "Existing SASSA Grant",
+        "what_it_means": "SASSA's system shows that you are already receiving another social grant — such as Old Age Pension, Disability Grant, Child Support Grant, Foster Child Grant, or Care Dependency Grant. South African law does not allow you to receive more than one SASSA grant at the same time (with limited exceptions for foster parents).",
+        "common_triggers": [
+            "You are already receiving the Old Age Pension or Disability Grant",
+            "You are the primary caregiver receiving the Child Support Grant",
+            "Someone applied for a grant using your ID number without your knowledge",
+            "There is a data error linking your ID to another person's grant"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Check which grant you are receiving",
+                "detail": "Call the SASSA helpline at 0800 60 10 11 and ask which grant is linked to your ID number."
+            },
+            {
+                "step": "Compare grant amounts",
+                "detail": "If you are receiving a permanent grant (R2,400 for Old Age/Disability), it pays much more than the SRD (R370) — you are better off with the permanent grant."
+            },
+            {
+                "step": "Report fraudulent applications",
+                "detail": "If someone else used your ID to apply for a grant, report it to the SASSA fraud hotline immediately."
+            }
+        ],
+        "appeal_deadline": "No appeal needed — this decline is usually correct. Apply for the correct grant type instead.",
+        "success_rate": "This decline is usually accurate. Only appeal if you believe a grant is fraudulently linked to your ID.",
+        "tags": [
+            "existing grant",
+            "duplicate grant",
+            "one grant rule",
+            "sassa fraud"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/declined",
+            "/guides/grant-comparison-overview"
+        ]
+    },
+    {
+        "slug": "government-payroll",
+        "title": "SASSA Decline Reason: 'Government Payroll Registered' — What It Means & How to Fix",
+        "description": "SASSA found your ID number on a government payroll. Learn why this happens and how to prove you are no longer employed by the state.",
+        "decline_code": "Government Payroll Registered",
+        "what_it_means": "SASSA cross-checks your ID number against the Government Employees Pension Fund and government payroll databases. If your ID appears on any government payroll system — even if you left years ago — your SRD application will be declined.",
+        "common_triggers": [
+            "You previously worked for a government department and were never removed from the payroll",
+            "You were employed as a temporary educator, police reservist, or municipal worker",
+            "You are a former SANDF member with an active pension record",
+            "Your ID number was incorrectly linked to a government employee"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Contact your former employer",
+                "detail": "Ask the government department you worked for to provide written confirmation that you are no longer employed."
+            },
+            {
+                "step": "Appeal with proof",
+                "detail": "Submit your appeal with the confirmation letter. Explain that you are no longer a government employee."
+            },
+            {
+                "step": "Contact Government Pensions Administration",
+                "detail": "If the issue is with the pension fund, contact GEPF to confirm you are not receiving a government pension."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Provide a formal letter from the government department confirming you are no longer employed.",
+        "tags": [
+            "government payroll",
+            "government employee",
+            "gepf",
+            "public service"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/declined",
+            "/status/means-test-failed"
+        ]
+    },
+    {
+        "slug": "age-outside-range",
+        "title": "SASSA Decline Reason: 'Age Outside Range' — What It Means & Which Grant to Apply For",
+        "description": "Your age does not meet the SRD grant requirement of 18–59. Learn which grant you qualify for based on your age.",
+        "decline_code": "Age Outside Range",
+        "what_it_means": "The SRD grant is only available to applicants aged 18 to 59 (inclusive). If you are under 18 or over 59, your application will be declined with this reason. This is a hard requirement with no exceptions.",
+        "common_triggers": [
+            "You are under 18 — the SRD grant requires applicants to be 18 or older",
+            "You are 60 or older — you qualify for the Old Age Grant instead",
+            "Your date of birth was entered incorrectly on the application form"
+        ],
+        "how_to_fix": [
+            {
+                "step": "If you are under 18",
+                "detail": "You cannot receive the SRD grant. However, a parent or guardian may qualify for the Child Support Grant on your behalf."
+            },
+            {
+                "step": "If you are 60 or older",
+                "detail": "Apply for the Old Age Grant (R2,400/month) at your nearest SASSA office. It pays much more than the SRD."
+            },
+            {
+                "step": "If your age is incorrect on the application",
+                "detail": "The SRD portal does not allow you to change your date of birth. You must appeal explaining the error and provide your ID document as proof."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Appeal if your date of birth was entered incorrectly. If you genuinely do not meet the age requirement, apply for the correct grant type instead.",
+        "tags": [
+            "age outside range",
+            "under 18",
+            "over 60",
+            "old age grant",
+            "child support"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/declined",
+            "/grants/old-age-pension",
+            "/grants/child-support-grant"
+        ]
+    },
+    {
+        "slug": "deceased-dha-record",
+        "title": "SASSA Decline Reason: 'Deceased Record on DHA' — What to Do",
+        "description": "SASSA's system shows you as deceased according to Home Affairs records. Learn how to correct this serious data error.",
+        "decline_code": "Deceased Record on DHA",
+        "what_it_means": "When SASSA checks your ID number with the Department of Home Affairs, their database shows your ID as belonging to a deceased person. This is a serious data error — either Home Affairs has incorrect records, or someone fraudulently reported you as deceased.",
+        "common_triggers": [
+            "Home Affairs has a data error linking your ID number to a deceased person",
+            "A family member mistakenly reported you as deceased (common with estranged families)",
+            "Identity theft — someone used your ID to fraudulently claim benefits and reported you as deceased to cover their tracks"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Visit your nearest Home Affairs office",
+                "detail": "This cannot be resolved online. You must go to a Home Affairs office in person with your ID document."
+            },
+            {
+                "step": "Request a 'Living Person Confirmation'",
+                "detail": "Ask Home Affairs to verify that you are alive and correct the database error."
+            },
+            {
+                "step": "Get written confirmation",
+                "detail": "Obtain a signed letter from Home Affairs confirming you are alive and the deceased record was an error."
+            },
+            {
+                "step": "Present to SASSA",
+                "detail": "Take the Home Affairs letter to your nearest SASSA office along with a new SRD application."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Appeal after the Home Affairs record is corrected. Expect delays — this process can take 2 to 4 weeks.",
+        "tags": [
+            "deceased record",
+            "home affairs error",
+            "identity theft",
+            "living confirmation"
+        ],
+        "last_updated": "2026-07-07",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/identity-verification",
+            "/status/declined"
+        ]
+    }
 ]

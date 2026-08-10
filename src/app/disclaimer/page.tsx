@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody, Divider, Button, Link } from "@nextui-org/r
 import { FaExclamationTriangle, FaExternalLinkAlt, FaShieldAlt, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentYearString, getCurrentMonthYearKey } from "../../lib/config";
+import { getCurrentYearString } from "../../lib/config";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -97,7 +97,7 @@ export default function DisclaimerPage() {
         <Card className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
            <CardBody>
               <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                 Last updated: {getCurrentMonthYearKey()}. By using this website, you acknowledge that you have read, understood, and agreed to this disclaimer. All content on sassahelphub.co.za is subject to change without notice.
+                 Last updated: 10 August 2026. By using this website, you acknowledge that you have read, understood, and agreed to this disclaimer. All content on sassahelphub.co.za is subject to change without notice.
               </p>
            </CardBody>
         </Card>

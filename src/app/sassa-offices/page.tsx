@@ -7,7 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import EditorialFooter from "../../components/EditorialFooter";
 import { breadcrumbSchema } from "../../lib/schema";
 import { buildMetadata } from "../../lib/seo";
-import { getCurrentYearString, getCurrentMonthYearKey } from "../../lib/config";
+import { getCurrentYearString } from "../../lib/config";
 
 export const metadata: Metadata = buildMetadata({
   title: `SASSA Offices by Province: Contact Details & Locations ${getCurrentYearString()}`,
@@ -42,7 +42,7 @@ const provinces = [
   {
     name: "Gauteng",
     capital: "Johannesburg",
-    description: "As South Africa's most populous province, Gauteng has the highest number of SASSA offices and beneficiaries. The provincial office handles over 7 million social grant recipients.",
+    description: "As South Africa's most populous province, Gauteng has the highest number of SASSA offices and beneficiaries. The provincial office handles several million social grant recipients.",
     offices: [
       { town: "Johannesburg (Provincial Office)", address: "78 Marshall Street, Johannesburg", phone: "011 241 8000", hours: "Mon–Fri 07:30–16:00" },
       { town: "Pretoria", address: "262 Lilian Ngoyi Street, Pretoria", phone: "012 315 7000", hours: "Mon–Fri 07:30–16:00" },
@@ -173,7 +173,7 @@ export default function SassaOfficesPage() {
         </div>
 
         <Divider className="my-12" />
-        <EditorialFooter lastUpdated={getCurrentMonthYearKey()} author="Lucky Cungwa" />
+        <EditorialFooter lastUpdated="10 August 2026" author="Lucky Cungwa" />
       </article>
     </div>
   );

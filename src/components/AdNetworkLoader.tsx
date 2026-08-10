@@ -6,6 +6,10 @@ const INVOKE_SRC = "https://pl30681104.effectivecpmnetwork.com/a1cf66fbb77a5290f
 const CONTAINER_ID = "container-a1cf66fbb77a5290f9be40bb65ba010a";
 const SCRIPT_ID = "effectivecpm-invoke";
 
+// Disabled by default while the site goes through Google AdSense review.
+// Re-enable only after approval by setting NEXT_PUBLIC_ENABLE_EFFECTIVECPM=true.
+const ENABLED = process.env.NEXT_PUBLIC_ENABLE_EFFECTIVECPM === "true";
+
 function getConsent(): boolean {
   try {
     return localStorage.getItem("cookie-consent") === "granted";
@@ -18,6 +22,7 @@ export default function AdNetworkLoader() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
+    if (!ENABLED) return;
     setConsented(getConsent());
     const onConsent = () => setConsented(getConsent());
     window.addEventListener("cookie-consent", onConsent);
@@ -25,7 +30,7 @@ export default function AdNetworkLoader() {
   }, []);
 
   useEffect(() => {
-    if (!consented) return;
+    if (!ENABLED || !consented) return;
     if (document.getElementById(SCRIPT_ID)) return;
     const script = document.createElement("script");
     script.id = SCRIPT_ID;
@@ -35,7 +40,7 @@ export default function AdNetworkLoader() {
     document.body.appendChild(script);
   }, [consented]);
 
-  if (!consented) return null;
+  if (!ENABLED || !consented) return null;
 
   return (
     <div className="my-12 w-full flex justify-center" aria-hidden="false">

@@ -123,7 +123,7 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
             <p className="text-gray-700 dark:text-gray-300">{reason.appeal_deadline}</p>
           </section>
           <section className="bg-green-50 dark:bg-green-900/10 p-6 rounded-2xl border border-green-200 dark:border-green-900">
-            <h3 className="font-bold flex items-center gap-2 mb-2"><FaCheckCircle className="text-green-600" /> Success Rate</h3>
+            <h3 className="font-bold flex items-center gap-2 mb-2"><FaCheckCircle className="text-green-600" /> Appeal Guidance</h3>
             <p className="text-gray-700 dark:text-gray-300">{reason.success_rate}</p>
           </section>
         </div>

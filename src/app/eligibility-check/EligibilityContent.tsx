@@ -162,7 +162,7 @@ export default function EligibilityContent() {
                       <FaCheckCircle className="text-8xl text-success mx-auto" />
                       <h2 className="text-4xl font-black">You Likely Qualify!</h2>
                       <p className="text-xl text-gray-600">Based on your answers, you meet the income and eligibility criteria for the SRD R370 grant in 2026.</p>
-                      <Button as="a" href="/guides/srd-grant" color="primary" size="lg" className="font-bold px-12 py-8 text-xl">How to Apply <FaArrowRight className="ml-2" /></Button>
+                      <Button as="a" href="/grants/srd-r370-grant" color="primary" size="lg" className="font-bold px-12 py-8 text-xl">How to Apply <FaArrowRight className="ml-2" /></Button>
                     </>
                   ) : (
                     <>
@@ -213,7 +213,7 @@ export default function EligibilityContent() {
              </div>
              <div className="space-y-4">
                 <h3 className="text-xl font-bold">What to Do Next</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">If you likely qualify, apply through the official SRD portal at srd.sassa.gov.za, or read our <NextLink href="/guides/srd-grant" className="text-primary-gold font-bold hover:underline">step-by-step SRD application guide</NextLink>. If you are unsure about any rule, check the full <NextLink href="/grants" className="text-primary-gold font-bold hover:underline">eligibility requirements for every grant</NextLink> before you apply.</p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">If you likely qualify, apply through the official SRD portal at srd.sassa.gov.za, or read our <NextLink href="/grants/srd-r370-grant" className="text-primary-gold font-bold hover:underline">step-by-step SRD application guide</NextLink>. If you are unsure about any rule, check the full <NextLink href="/grants" className="text-primary-gold font-bold hover:underline">eligibility requirements for every grant</NextLink> before you apply.</p>
              </div>
           </div>
       </section>

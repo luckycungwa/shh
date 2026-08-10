@@ -13,7 +13,7 @@
 
 ## Site-wide averages
 
-- Average main-content word count: **965**
+- Average main-content word count: **966**
 - Pages under 300 words (thin): **16**
 - Content pages missing FAQs: **57**
 - Pages without an author attribution: **24**

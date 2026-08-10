@@ -39,7 +39,7 @@ export default function NavbarComponent() {
     { name: "Status Check", href: "/status-check", icon: <FaUserCheck />, altPaths: ["/status"] },
     { name: "Payment Dates", href: "/payment-calendar", icon: <FaCalendarAlt /> },
     { name: "Grants", href: "/grants", icon: <FaCoins /> },
-    { name: "SRD Grant Guide", href: "/guides/srd-grant", icon: <FaFileAlt /> },
+    { name: "SRD Grant Guide", href: "/grants/srd-r370-grant", icon: <FaFileAlt /> },
     { name: "News & Updates", href: "/updates", icon: <FaNewspaper /> },
     { name: "Eligibility", href: "/eligibility-check", icon: <FaCheckCircle /> },
     { name: "FAQ", href: "/faq", icon: <FaQuestionCircle /> },
