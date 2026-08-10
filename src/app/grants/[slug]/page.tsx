@@ -92,14 +92,26 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
     notFound();
   }
 
-  const allFaqs = data.sections.filter((s) => s.type === "faq" && s.faqs).flatMap((s) => s.faqs || []);
-
   const rawSectionText = data.sections.map((s) => JSON.stringify(s)).join(" ") + " " + data.title + " " + data.description;
   const usedFactKeys = Array.from(new Set(Array.from(rawSectionText.matchAll(/\{\{(\w+)\}\}/g), (m) => m[1])));
   const unverifiedFacts = usedFactKeys
     .map((k) => ({ k, meta: getFactMeta(k) }))
     .filter((x) => x.meta && x.meta.confidence === "needs_human_review")
     .map((x) => x.k);
+
+  data = {
+    ...data,
+    title: resolveTemplates(data.title),
+    description: resolveTemplates(data.description),
+    sections: data.sections.map((s) => ({
+      ...s,
+      content: s.content ? resolveTemplates(s.content) : s.content,
+      steps: s.steps ? s.steps.map((st) => ({ ...st, content: resolveTemplates(st.content) })) : s.steps,
+      faqs: s.faqs ? s.faqs.map((f) => ({ ...f, q: resolveTemplates(f.q), a: resolveTemplates(f.a) })) : s.faqs,
+    })),
+  };
+
+  const allFaqs = data.sections.filter((s) => s.type === "faq" && s.faqs).flatMap((s) => s.faqs || []);
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
