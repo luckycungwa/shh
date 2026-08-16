@@ -148,6 +148,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p className="lg:ml-72 mt-4 text-xs font-semibold text-primary-black/70">
+            Long weekend note: Women&apos;s Day falls on Sunday 9 August 2026 and is observed on Monday 10 August 2026. Main grant payments (4&ndash;7 August) are unaffected; SRD R370 runs later in the month. Expect longer queues at ATMs and pay-out points &mdash; withdraw early if you can.
+          </p>
         </div>
       </section>
 

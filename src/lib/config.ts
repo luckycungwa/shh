@@ -16,6 +16,18 @@ export const SRD_CONFIG = {
   grantName: "SRD R370",
 };
 
+// TODO(recheck): SRD R370 August 2026 date is still "TBC — last week of month" in
+// public/data/paymentDates.json (day field). No confirmed date exists as of 2026-08-10.
+// Re-check srd.sassa.gov.za / SASSA official channels during the last week of August
+// and update when confirmed — do NOT guess a date.
+//
+// CONFLICT FLAG (human review): update-2026-027 and update-2026-034 list the August
+// SRD as "25–29 August 2026 (batch window)" and payment-schedule-history.json stores
+// srd_start 2026-08-25 / srd_end 2026-08-29, while paymentDates.json keeps the SRD
+// entry as TBC. The 25–29 window is not confirmed by an official source. Left TBC
+// deliberately; do not overwrite either value without confirming via SASSA's official
+// channels first.
+
 export function getCurrentMonthLabel(): string {
   const now = new Date();
   // After the 20th, show next month (SASSA publishes the next cycle in advance)

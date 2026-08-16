@@ -96,6 +96,13 @@ export default function PaymentCalendarClient({
                     </div>
                   ))}
                 </div>
+                {getCurrentMonthLabel().startsWith("August") && (
+                  <div className="mt-6 p-4 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800 rounded-2xl">
+                    <p className="text-sm text-amber-800 dark:text-amber-300">
+                      <strong>Long weekend note:</strong> Women&apos;s Day falls on Sunday 9 August 2026 and is observed on Monday 10 August 2026. Main grant payments (4&ndash;7 August) are unaffected; SRD R370 runs later in the month. Expect longer queues at ATMs and pay-out points &mdash; withdraw early if you can.
+                    </p>
+                  </div>
+                )}
               </CardBody>
             </Card>
           ) : currentSchedule ? (
@@ -199,6 +206,9 @@ export default function PaymentCalendarClient({
 
           <div className="p-8 border border-gray-100 dark:border-gray-800 rounded-[2rem] space-y-6">
             <h4 className="text-xl font-bold flex items-center gap-2"><FaInfoCircle className="text-blue-500" /> SRD R370 Dates</h4>
+            {/* SRD window below is derived from SRD_CONFIG (25th → month-end). The August 2026
+                entry in paymentDates.json remains "TBC — last week of month" — see TODO(recheck)
+                in src/lib/config.ts. Re-confirm via srd.sassa.gov.za before treating as final. */}
             <p className="text-sm text-gray-600 leading-relaxed">The Social Relief of Distress (SRD) R370 grant is paid in a batch window each month.</p>
             <p className="text-sm font-bold text-primary-gold">
               {new Date(fullSchedule[0].srdStart).toLocaleDateString("en-ZA", { day: "numeric", month: "long" })} – {new Date(fullSchedule[0].srdEnd).toLocaleDateString("en-ZA", { day: "numeric", month: "long", year: "numeric" })}

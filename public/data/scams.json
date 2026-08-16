@@ -79,5 +79,24 @@
       "R50 deducted for 'funeral policy' you never agreed to",
       "Insurance premium taken without permission"
     ]
+  },
+  {
+    "id": "scam-005",
+    "title": "Illegal Sale of SASSA Queue Positions",
+    "description": "SASSA has condemned the unlawful selling of queue positions at its offices, where people charge beneficiaries for a place in line. SASSA CEO Themba Matlou called it a serious exploitation of vulnerable beneficiaries, especially the elderly and people with disabilities. SASSA is strengthening security and working with law enforcement to act against sellers and any officials who enable the practice. Source: South African Government media statement, 16 April 2026.",
+    "type": "In-Person",
+    "severity": "high",
+    "reportedDate": "2026-04-16",
+    "indicators": [
+      "People selling a spot in the queue at SASSA offices",
+      "Payment demanded before you can enter or be seen",
+      "Targets elderly and disabled beneficiaries",
+      "Sellers claim they can guarantee you are seen faster"
+    ],
+    "prevention": "Never pay for a queue position. Arrive early, use online or eLife Certification self-service where possible, and report anyone selling queue positions to the SASSA fraud hotline on 0800 60 10 11. Source: https://www.gov.za/news/media-statements/sassa-condemns-illegal-sale-queue-positions-its-offices-16-apr-2026",
+    "examples": [
+      "Pay R100 and I will hold your spot in the queue",
+      "Give me the money and I will make sure you get seen first"
+    ]
   }
 ]
