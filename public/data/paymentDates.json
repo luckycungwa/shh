@@ -1,27 +1,27 @@
 [
   {
     "grant": "Older Persons Grant",
-    "date": "2026-08-04",
-    "day": "Tuesday"
-  },
-  {
-    "grant": "Disability Grant",
-    "date": "2026-08-05",
+    "date": "2026-09-02",
     "day": "Wednesday"
   },
   {
-    "grant": "Children's Grants",
-    "date": "2026-08-06",
+    "grant": "Disability Grant",
+    "date": "2026-09-03",
     "day": "Thursday"
   },
   {
-    "grant": "Grants Under Review",
-    "date": "2026-08-07",
+    "grant": "Children's Grants",
+    "date": "2026-09-04",
     "day": "Friday"
   },
   {
+    "grant": "Grants Under Review",
+    "date": "TBC",
+    "day": "Only if your grant is under review — date not yet confirmed"
+  },
+  {
     "grant": "SRD R370 Grant",
-    "date": "2026-08-25",
-    "day": "TBC — last week of month"
+    "date": "TBC",
+    "day": "Not yet officially confirmed"
   }
 ]

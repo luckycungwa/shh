@@ -46,7 +46,7 @@ const statusMeanings: StatusMeaning[] = [
     how_to_fix: [
       { title: "Wait for Processing", content: "The status will change as your application moves through the verification process. This typically takes a few days." },
       { title: "Keep Your Phone Active", content: "Make sure your registered mobile number is active and has network coverage. SASSA may send you SMS updates." },
-      { title: "Check Your Status Regularly", content: "Return to the SRD portal or use the WhatsApp line (082 046 8553) to check for updates." }
+      { title: "Check Your Status Regularly", content: "Return to the SRD portal or use the WhatsApp line (082 601 0111) to check for updates." }
     ],
     how_long: "The 'Application Complete' status usually lasts 1 to 7 days before changing to 'Pending' or another status as verification begins.",
     who_to_contact: [
@@ -81,7 +81,7 @@ const statusMeanings: StatusMeaning[] = [
     who_to_contact: [
       { label: "SASSA Helpline", value: "0800 60 10 11" },
       { label: "SRD Portal", value: "srd.sassa.gov.za" },
-      { label: "WhatsApp Line", value: "082 046 8553" }
+      { label: "WhatsApp Line", value: "082 601 0111" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
     related: ["/status/application-complete", "/status/approved", "/status/declined", "/faq"],
@@ -210,27 +210,32 @@ const statusMeanings: StatusMeaning[] = [
     slug: "approved",
     status_label: "Approved",
     title: "SASSA Status: 'Approved' — What It Means & When You Will Be Paid",
-    description: "'Approved' means your SASSA application was successful. Learn what happens next, when to expect payment, and how to check for your 'Pay Day' date.",
-    what_it_means: "'Approved' is the status every applicant wants to see. It means SASSA has verified your information and you qualify for the grant. Your application has passed all the checks — identity verification, means test, bank verification, and cross-referencing with other government databases. However, 'Approved' does not mean the money is in your account yet. You still need to wait for a 'Pay Day' date to be assigned, which indicates when payment will be processed.",
+    description: "'Approved' means your SASSA application was successful. Learn what happens next, what 'Approved but no Pay Day' means, when to expect payment, and what to do if your payment date has passed.",
+    what_it_means: "'Approved' is the status every applicant wants to see. It means SASSA has verified your information and you qualify for the grant. Your application has passed all the checks — identity verification, means test, bank verification, and cross-referencing with other government databases. However, 'Approved' does NOT mean the money is in your account yet. Approved means you qualify; 'Paid' means the money has been released. Between the two, SASSA assigns a 'Pay Day' date that tells you when your payment batch will run. If you see 'Approved' but no Pay Day, your payment is still being processed for disbursement — this is normal for a few days to a week after approval. It does not mean anything is wrong, and it does not mean you will definitely be paid — approval is conditional on your details staying valid until the batch runs. Keep checking your status, and make sure your banking details are correct and your phone is active.",
     why_it_happens: [
       "You met all eligibility criteria for the grant",
       "Your identity was successfully verified with Home Affairs",
       "Your income was below the threshold",
-      "Your banking details are valid and verified"
+      "Your banking details are valid and verified",
+      "You see 'Approved' without a Pay Day because the payment batch for the month has not run yet — approved applications are paid in batches, not all on one day",
+      "Your payment is scheduled for the fourth payment day if your grant is under review"
     ],
     how_to_fix: [
-      { title: "Check for a 'Pay Day' Date", content: "Log into the SRD portal and look for a 'Pay Day' date next to your approved status." },
-      { title: "Wait for Payment Processing", content: "Once a Pay Day date is assigned, it takes 1 to 2 business days for the money to reflect in your account." },
-      { title: "Do Not Close Your Bank Account", content: "Keep your bank account active. Closing it after receiving 'Approved' will delay your payment." },
-      { title: "Check Payment Method", content: "Confirm whether payment will be made to your bank account, Postbank, or retail collection point." }
+      { title: "Check for a 'Pay Day' Date", content: "Log into the SRD portal and look for a 'Pay Day' date next to your approved status. Approved without a Pay Day simply means your payment batch has not run yet." },
+      { title: "Check Again After the 15th", content: "Statuses and Pay Day dates are most reliably updated after the 15th of each month, following bank verification. Check back then before taking any action." },
+      { title: "Wait for Your Payment Batch", content: "SRD payments are released in batches over several days. Once a Pay Day date is assigned, it takes 1 to 2 business days for the money to reflect in your account. Your neighbours may be paid on a different day." },
+      { title: "What If the Payment Date Has Passed?", content: "If the Pay Day date has passed and the money is not in your account, wait 3 business days for the banking system to reflect it. If it still has not arrived, follow the missing grant payment guide step by step before contacting SASSA." },
+      { title: "Do Not Close Your Bank Account", content: "Keep your bank account active. Closing it after receiving 'Approved' will delay your payment, and your details must match your ID exactly." },
+      { title: "Check Payment Method", content: "Confirm whether payment will be made to your bank account, Postbank, or retail collection point. For retail collection, wait for the payment SMS before going to the store." }
     ],
-    how_long: "After 'Approved', a Pay Day date is usually assigned within 1 to 7 days. Payment takes 1 to 2 business days after the Pay Day date.",
+    how_long: "After 'Approved', a Pay Day date is usually assigned within 1 to 7 days. Payment takes 1 to 2 business days after the Pay Day date. If your grant is under review, you will be paid on the fourth payment day once SASSA confirms the date.",
     who_to_contact: [
       { label: "SRD Portal", value: "srd.sassa.gov.za" },
-      { label: "SASSA Helpline", value: "0800 60 10 11" }
+      { label: "SASSA Helpline", value: "0800 60 10 11" },
+      { label: "Postbank", value: "0800 53 54 55" }
     ],
     sources: ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
-    related: ["/status/approved", "/status/paid", "/payment-calendar", "/guides/bank-details-pending-fix"],
+    related: ["/status/paid", "/payment-calendar", "/guides/missing-grant-payment-guide", "/grants/srd-r370-grant", "/status/bank-details-pending"],
     last_updated: todayStr(),
     author: "Lucky Cungwa"
   },

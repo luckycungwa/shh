@@ -1,9 +1,9 @@
 {
   "title": "SASSA SRD R370 Grant 2026: Eligibility, Payment Dates & How to Apply",
-  "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, confirmed payment dates, and what to do if your application is declined.",
+  "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, September 2026 payment dates, what 'Approved' means, and what to do if your application is declined.",
   "slug": "grants/srd-r370-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-07-07",
+  "last_updated": "2026-08-20",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -12,12 +12,14 @@
     "https://www.gov.za"
   ],
   "related": [
-    "/status/pending",
+    "/status/approved",
     "/status/declined",
+    "/status/pending",
+    "/status-check",
     "/guides/appeal-guide",
+    "/guides/missing-grant-payment-guide",
     "/guides/bank-details-pending-fix",
-    "/faq",
-    "/eligibility-check"
+    "/payment-calendar"
   ],
   "sections": [
     {
@@ -69,7 +71,84 @@
     {
       "type": "info",
       "title": "Payment Dates for 2026",
-      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, in July 2026, the payment window was 25–29 July. Once your status shows a 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day — your money is safe in your account."
+      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, the official payment window for August 2026 is 24-26 August (confirmed by SASSA). <strong>For September 2026, SASSA has not yet officially confirmed the SRD payment date</strong> - it is expected in the last week of September, but do not rely on third-party dates. Check the official <a href=\"https://srd.sassa.gov.za\">SRD portal</a> for your own 'Pay Day' date. Once your status shows a 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day - your money is safe in your account."
+    },
+    {
+      "type": "info",
+      "title": "September 2026: Confirmed and Pending Payment Dates",
+      "content": "SASSA has confirmed the <strong>September 2026</strong> payment dates for the permanent grants: Older Persons Grant on <strong>Wednesday, 2 September</strong>, Disability Grant on <strong>Thursday, 3 September</strong>, and Children's Grants on <strong>Friday, 4 September</strong>. The <strong>SRD {{srd_grant_amount}} date is not yet confirmed</strong> (expected in the last week of September), and the fourth payment day for grants under review is also unconfirmed. Read our <a href=\"/updates/update-2026-036\">September 2026 payment update</a> and the full <a href=\"/payment-calendar\">payment calendar</a> for the latest confirmed dates."
+    },
+    {
+      "type": "text",
+      "title": "What Does 'Approved' Mean for the SRD Grant?",
+      "content": "When your status shows <strong>'Approved'</strong>, it means SASSA has confirmed you qualify for the {{srd_grant_amount}} SRD grant for that month and your payment is being processed. It does not mean the money is already in your bank account. After approval, your status will later show a <strong>'Pay Day'</strong> date - this is when the payment batch is released. The money can then take up to 48 business hours to reflect in your account. See our full explanation of what <a href=\"/status/approved\">Approved means</a>."
+    },
+    {
+      "type": "text",
+      "title": "Approved But No Pay Day - What Now?",
+      "content": "Early in the month it is normal for your status to show <strong>'Approved'</strong> without a <strong>'Pay Day'</strong> date yet. SRD statuses are refreshed around the middle of each month, and the payment date appears once the batch for that month is confirmed. Do not contact SASSA about it yet - wait until after the middle of the month and check again. If you are approved but your payment date passes without the money arriving, read our guide on <a href=\"/status/approved\">Approved but no pay day</a> and the <a href=\"/guides/missing-grant-payment-guide\">missing grant payment guide</a> before calling 0800 60 10 11."
+    },
+    {
+      "type": "text",
+      "title": "Why Was I Approved One Month, Declined the Next?",
+      "content": "The SRD grant is reassessed <strong>every single month</strong>. Approval in one month does not guarantee approval in the next, because your circumstances are re-checked against your bank accounts, UIF, SARS, NSFAS and Home Affairs records each cycle. A bank deposit that pushed your total over {{srd_income_limit}}, a UIF payment received, an NSFAS record still showing as active, or a Home Affairs data update can each trigger a decline for the new month. A decline for one month does not cancel your application for the following month, and it does not mean you lost the grant permanently. Check the decline reason on the portal and appeal within 90 days if it is wrong. See our <a href=\"/guides/sassa-grant-renewal\">SRD reapplication and renewal guide</a> and the <a href=\"/guides/appeal-guide\">appeal guide</a>."
+    },
+    {
+      "type": "text",
+      "title": "What If My SRD Grant Was Cancelled?",
+      "content": "If your SRD status shows your grant was cancelled, do not panic. Cancellation can happen if you did not collect for three consecutive months, if you no longer meet the eligibility criteria, or if SASSA flagged your application during verification. A cancelled grant is not a permanent ban - you can <strong>reapply</strong> at any time on the official <a href=\"https://srd.sassa.gov.za\">SRD portal</a> with your 13-digit ID number. Your reapplication is assessed on the same monthly cycle as new applications. If you believe the cancellation is an error, lodge an appeal within 90 days to claim back pay. See our <a href=\"/guides/sassa-grant-renewal\">renewal guide</a> for the full steps."
+    },
+    {
+      "type": "steps",
+      "title": "Payment Problems - What to Do Step by Step",
+      "steps": [
+        {
+          "title": "Check Your Status First",
+          "content": "Log in to the official SRD portal (srd.sassa.gov.za) with your 13-digit ID number and check your current status. If it shows 'Referred', 'Under Review' or 'Declined', that explains the missing payment."
+        },
+        {
+          "title": "Wait for Your 'Pay Day' Date",
+          "content": "If your status shows 'Approved', look for the 'Pay Day' date. The payment batch may not have been released yet, or the money can take up to 48 business hours to reflect in your bank account after the pay day."
+        },
+        {
+          "title": "Confirm Your Banking Details",
+          "content": "Make sure the bank account on your application is correct and active. If your banking details are pending, see our bank details fix guide (/guides/bank-details-pending-fix)."
+        },
+        {
+          "title": "Wait for the SMS If Collecting at Retail",
+          "content": "If you collect at Pick n Pay, Boxer, Shoprite, Checkers or USave, do not go to the store until you receive the official payment SMS containing your collection code."
+        },
+        {
+          "title": "Follow the Missing Payment Guide",
+          "content": "If the money still has not arrived, follow the missing grant payment guide (/guides/missing-grant-payment-guide) step by step, then contact the SASSA helpline on 0800 60 10 11."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "September 2026: Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "What is the confirmed SRD payment date for September 2026?",
+          "a": "SASSA has not yet officially confirmed the September 2026 SRD payment date. It is expected to be paid in the last week of September, based on recent months. Check the official SRD portal for your own 'Pay Day' date and read the September 2026 payment update (/updates/update-2026-036) for the latest."
+        },
+        {
+          "q": "My status shows 'Approved' but I have no 'Pay Day' date. What does this mean?",
+          "a": "This is normal early in the month. SRD statuses are refreshed around the middle of each month, and the payment date appears once the batch is confirmed. Wait and check your status again after the middle of the month. Read more at /status/approved."
+        },
+        {
+          "q": "I was approved last month but declined this month. Why?",
+          "a": "The SRD grant is reassessed fresh every month. Changes in your bank deposits, UIF, SARS, NSFAS or Home Affairs records can trigger a decline even if nothing felt different to you. A decline for one month does not cancel your application for the next month. Check the decline reason and appeal within 90 days."
+        },
+        {
+          "q": "What happens if I do not collect my grant?",
+          "a": "If you do not collect your grant for three consecutive months, your application may be suspended. You will need to reapply by visiting srd.sassa.gov.za and submitting a fresh application. Your banking details are usually kept, but you should verify your details after reapplying."
+        },
+        {
+          "q": "Can someone collect my grant on my behalf?",
+          "a": "Yes, but only if you have registered them as an authorized proxy with SASSA. The proxy must present their ID and a letter of authorization."
+        }
+      ]
     },
     {
       "type": "text",
@@ -79,7 +158,7 @@
     {
       "type": "text",
       "title": "How to Reapply for the SRD Grant",
-      "content": "If your SRD application was declined or your grant was suspended, you can reapply in a few minutes — and it is completely free. Go to <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a> and submit a new application with your 13-digit ID number, or reapply through the official SASSA WhatsApp line (<a href=\"https://wa.me/27820468553\">082 046 8553</a>) or the Moya App. If your grant was lapsed or suspended as a permanent grant recipient, see our guide on <a href=\"/guides/guide-reinstate-grant\">reinstating a lapsed or suspended grant</a> for the steps to follow. After reapplying, check your status after the 15th of the month — reapplications are assessed on the same monthly cycle as new applications."
+      "content": "If your SRD application was declined or your grant was suspended, you can reapply in a few minutes — and it is completely free. Go to <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a> and submit a new application with your 13-digit ID number, or reapply through the official SASSA WhatsApp line (<a href=\"https://wa.me/27826010111\">082 601 0111</a>) or the Moya App. If your grant was lapsed or suspended as a permanent grant recipient, see our guide on <a href=\"/guides/guide-reinstate-grant\">reinstating a lapsed or suspended grant</a> for the steps to follow. After reapplying, check your status after the 15th of the month — reapplications are assessed on the same monthly cycle as new applications."
     },
     {
       "type": "faq",
@@ -99,11 +178,15 @@
         },
         {
           "q": "How do I reapply for the SRD grant?",
-          "a": "To reapply, go to the official SRD portal at srd.sassa.gov.za and submit a new application with your 13-digit ID number. You can also reapply via the SASSA WhatsApp line (082 046 8553) or the Moya App. Reapplication is free and does not require visiting a SASSA office."
+          "a": "To reapply, go to the official SRD portal at srd.sassa.gov.za and submit a new application with your 13-digit ID number. You can also reapply via the SASSA WhatsApp line (082 601 0111) or the Moya App. Reapplication is free and does not require visiting a SASSA office."
         },
         {
           "q": "Can someone collect my grant on my behalf?",
           "a": "Yes, but only if you have registered them as an authorized proxy with SASSA. The proxy must present their ID and a letter of authorization."
+        },
+        {
+          "a": "Yes. The 2026 National Budget (announced 19 February 2026) confirmed funding for the SRD R370 grant through 31 March 2027, and SASSA is still processing payments every month. The grant amount stays at {{srd_grant_amount}} for now. Any decision on what happens after March 2027 will be announced by the Minister of Finance and the Department of Social Development - watch our budget update for the latest (/updates/update-2026-014).",
+          "q": "Will the SRD grant continue in 2026 and 2027?"
         }
       ]
     },
@@ -111,10 +194,22 @@
       "type": "references",
       "title": "References",
       "references": [
-        { "title": "SRD Grant Official Portal", "url": "https://srd.sassa.gov.za" },
-        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
-        { "title": "Department of Social Development", "url": "https://www.dsd.gov.za" },
-        { "title": "South African Government Services", "url": "https://www.gov.za" }
+        {
+          "title": "SRD Grant Official Portal",
+          "url": "https://srd.sassa.gov.za"
+        },
+        {
+          "title": "SASSA Official Website",
+          "url": "https://www.sassa.gov.za"
+        },
+        {
+          "title": "Department of Social Development",
+          "url": "https://www.dsd.gov.za"
+        },
+        {
+          "title": "South African Government Services",
+          "url": "https://www.gov.za"
+        }
       ]
     }
   ]

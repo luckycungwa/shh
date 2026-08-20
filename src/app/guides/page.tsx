@@ -42,7 +42,7 @@ const guideCategories = [
 ];
 
 const faqs = [
-  { q: "What is the easiest way to apply for a SASSA grant?", a: "The easiest way is online via the official SRD portal at srd.sassa.gov.za or via the SASSA WhatsApp line at 082 046 8553. Both methods guide you step by step." },
+  { q: "What is the easiest way to apply for a SASSA grant?", a: "The easiest way is online via the official SRD portal at srd.sassa.gov.za or via the SASSA WhatsApp line at 082 601 0111. Both methods guide you step by step." },
   { q: "How long does a SASSA grant application take?", a: "The online application takes about 15 minutes. SASSA then processes applications on a monthly cycle, with status updates typically available after the 15th of each month." },
   { q: "Can I apply for multiple SASSA grants?", a: "No. You can only receive one social grant at a time. The SRD R370 grant is specifically for those not receiving any other form of government support." },
   { q: "What documents do I need to apply for a SASSA grant?", a: "You need your 13-digit South African ID number (or refugee/asylum permit), a valid cellphone number, and your banking details for payment." },
@@ -140,7 +140,7 @@ export default function GuidesListPage() {
       </section>
 
       <section className="text-center mt-20">
-        <Card className="bg-primary-black text-white p-12 rounded-[3rem]">
+        <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Need More Help?</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Every SASSA situation is different. If you cannot find the guide you need, drop me a message or visit the official SASSA website.</p>

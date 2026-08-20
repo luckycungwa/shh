@@ -85,6 +85,47 @@ export default function ResourcesPage() {
         </div>
       </div>
 
+      <div className="bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-800 rounded-3xl p-8 mb-12 max-w-5xl mx-auto">
+        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-emerald-900 dark:text-emerald-400">
+          <FaPhoneAlt /> National SASSA & Postbank Contact Numbers
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div className="space-y-3">
+            <div>
+              <p className="font-bold text-emerald-900 dark:text-emerald-300">SASSA Grant Helpline (toll-free)</p>
+              <a href="tel:0800601011" className="font-black text-lg text-emerald-700 dark:text-emerald-400 hover:underline">0800 60 10 11</a>
+              <p className="text-emerald-700/80 dark:text-emerald-500/80">For all grant queries, status checks, and applications. Open weekdays 08:00–16:00.</p>
+            </div>
+            <div>
+              <p className="font-bold text-emerald-900 dark:text-emerald-300">Postbank Card Support</p>
+              <a href="tel:0800535455" className="font-black text-lg text-emerald-700 dark:text-emerald-400 hover:underline">0800 53 54 55</a>
+              <p className="text-emerald-700/80 dark:text-emerald-500/80">For Black Card and Gold Card problems, lost/stolen cards, and card replacements. Postbank, not SASSA, handles all card matters.</p>
+            </div>
+            <div>
+              <p className="font-bold text-emerald-900 dark:text-emerald-300">SASSA WhatsApp</p>
+              <p className="font-black text-lg text-emerald-700 dark:text-emerald-400">082 601 0111</p>
+              <p className="text-emerald-700/80 dark:text-emerald-500/80">WhatsApp this number to check your SRD status or get general grant assistance for free.</p>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <div>
+              <p className="font-bold text-emerald-900 dark:text-emerald-300">SRD Status Check USSD</p>
+              <p className="font-black text-lg text-emerald-700 dark:text-emerald-400">*120*69277#</p>
+              <p className="text-emerald-700/80 dark:text-emerald-500/80">Dial free from any cellphone (no data needed) to check your R370 SRD grant status.</p>
+            </div>
+            <div>
+              <p className="font-bold text-emerald-900 dark:text-emerald-300">Postbank Balance & Grant USSD</p>
+              <p className="font-black text-lg text-emerald-700 dark:text-emerald-400">*120*3210#</p>
+              <p className="text-emerald-700/80 dark:text-emerald-500/80">Check your grant balance and payment history on your SASSA Black Card.</p>
+            </div>
+            <div>
+              <p className="font-bold text-emerald-900 dark:text-emerald-300">Moya App</p>
+              <p className="text-emerald-700/80 dark:text-emerald-500/80">The free Moya App includes official SASSA services — check your SRD status without using mobile data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="grid gap-12">
         <section className="max-w-3xl mx-auto w-full">
            <Input

@@ -1,55 +1,91 @@
 {
-  "title": "SASSA Grant-in-Aid 2026: Complete Guide",
-  "description": "Full guide to the Grant-in-Aid — R580/month supplementary payment for Old Age or Disability grant recipients who need full-time care. Eligibility, application, and amounts.",
-  "slug": "grant-in-aid",
-  "last_updated": "2026-07-07",
-  "reviewed_by": "Lucky Cungwa",
-  "author": "Lucky Cungwa",
-  "sources": ["https://www.sassa.gov.za"],
-  "related": ["/grants/old-age-pension", "/grants/disability-grant", "/grants/care-dependency-grant"],
-  "sections": [
-    {
-      "type": "intro",
-      "title": "What Is the Grant-in-Aid?",
-      "content": "The Grant-in-Aid (GIA) is a supplementary payment of <strong>{{grant_in_aid_amount}} per month</strong> (2026 rate) for existing Old Age Grant or Disability Grant recipients who require full-time attendance from another person due to their physical or mental condition. It is not a standalone grant — you must already be receiving either the Old Age Pension or the Disability Grant to qualify. The Grant-in-Aid is intended to help cover the costs of the caregiver who looks after you."
-    },
-    {
-      "type": "eligibility",
-      "title": "Eligibility Requirements",
-      "content": "<strong>To qualify for the Grant-in-Aid, you must meet all of the following criteria:</strong><br><br>• You must already be receiving an <strong>Old Age Grant</strong> or <strong>Disability Grant</strong><br>• You must require full-time attendance from another person due to your condition (cannot be left alone)<br>• Your condition must be confirmed by a medical report from a government doctor<br>• You are not already receiving a similar grant or living in a state-funded institution<br><br>The Grant-in-Aid is not means-tested — it is based entirely on your medical need for a caregiver. If you qualify, you receive the full {{grant_in_aid_amount}} regardless of your income or assets."
-    },
-    {
-      "type": "steps",
-      "title": "How to Apply",
-      "steps": [
-        { "title": "Get a Medical Report", "content": "Visit a government hospital or clinic and ask for a medical assessment confirming that you require full-time attendance from another person. The medical report must specifically state that you cannot be left alone and need a caregiver." },
-        { "title": "Visit Your SASSA Office", "content": "Go to your nearest SASSA office with your ID document and the medical report. Inform the officer that you want to apply for the Grant-in-Aid. You will need to complete the application form." },
-        { "title": "SASSA Home Visit", "content": "SASSA will send an official to your home to verify your living situation and confirm that you need a caregiver. The official will also speak to your caregiver." },
-        { "title": "Submit Your Application and Get a Receipt", "content": "After completing the application form and handing in your documents, SASSA will give you a stamped receipt with a reference number. Keep it as proof of your application." },
-        { "title": "Receive the Outcome", "content": "SASSA aims to process Grant-in-Aid applications within 60 days. If approved, the {{grant_in_aid_amount}} is added to your existing grant payment from the date of application. You can track progress using your reference number at the SASSA office or by calling 0800 60 10 11." }
-      ]
-    },
-    {
-      "type": "info",
-      "title": "Grant Amount & Payment Dates 2026",
-      "content": "The Grant-in-Aid is <strong>{{grant_in_aid_amount}} per month</strong> (2026 rate). It is paid on the same day as your primary grant. If you receive the Old Age Grant, you will be paid on the first working day of the month. If you receive the Disability Grant, you will be paid on the second working day. The Grant-in-Aid is deposited into the same account as your primary grant."
-    },
-    {
-      "type": "faq",
-      "title": "Frequently Asked Questions",
-      "faqs": [
-        { "q": "Can I apply for the Grant-in-Aid online?", "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. However, the Grant-in-Aid still requires a medical assessment and home visit, so you may need to visit a SASSA office to complete the process." },
-        { "q": "Does the Grant-in-Aid affect my other grants?", "a": "No. The Grant-in-Aid is a supplementary payment and does not affect your Old Age or Disability Grant. It is paid in addition to your existing grant." },
-        { "q": "What if I am already receiving a Care Dependency Grant?", "a": "The Grant-in-Aid is for adults who already receive Old Age or Disability grants. The Care Dependency Grant is for children under 18. These are different grants for different situations." }
-      ]
-    },
-    {
-      "type": "references",
-      "title": "Sources",
-      "references": [
-        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
-        { "title": "SASSA Helpline", "url": "tel:0800601011" }
-      ]
-    }
-  ]
+    "title":  "SASSA Grant-in-Aid 2026: Complete Guide",
+    "description":  "Full guide to the Grant-in-Aid — R580/month supplementary payment for Old Age or Disability grant recipients who need full-time care. Eligibility, application, and amounts.",
+    "slug":  "grant-in-aid",
+    "last_updated":  "2026-08-20",
+    "reviewed_by":  "Lucky Cungwa",
+    "author":  "Lucky Cungwa",
+    "sources":  [
+                    "https://www.sassa.gov.za"
+                ],
+    "related":  [
+                    "/grants/old-age-pension",
+                    "/grants/disability-grant",
+                    "/grants/care-dependency-grant"
+                ],
+    "sections":  [
+                     {
+                         "type":  "intro",
+                         "title":  "What Is the Grant-in-Aid?",
+                         "content":  "The Grant-in-Aid (GIA) is a supplementary payment of \u003cstrong\u003e{{grant_in_aid_amount}} per month\u003c/strong\u003e (2026 rate) for existing Old Age Grant or Disability Grant recipients who require full-time attendance from another person due to their physical or mental condition. It is not a standalone grant — you must already be receiving either the Old Age Pension or the Disability Grant to qualify. The Grant-in-Aid is intended to help cover the costs of the caregiver who looks after you."
+                     },
+                     {
+                         "type":  "eligibility",
+                         "title":  "Eligibility Requirements",
+                         "content":  "\u003cstrong\u003eTo qualify for the Grant-in-Aid, you must meet all of the following criteria:\u003c/strong\u003e\u003cbr\u003e\u003cbr\u003e• You must already be receiving an \u003cstrong\u003eOld Age Grant\u003c/strong\u003e or \u003cstrong\u003eDisability Grant\u003c/strong\u003e\u003cbr\u003e• You must require full-time attendance from another person due to your condition (cannot be left alone)\u003cbr\u003e• Your condition must be confirmed by a medical report from a government doctor\u003cbr\u003e• You are not already receiving a similar grant or living in a state-funded institution\u003cbr\u003e\u003cbr\u003eThe Grant-in-Aid is not means-tested — it is based entirely on your medical need for a caregiver. If you qualify, you receive the full {{grant_in_aid_amount}} regardless of your income or assets."
+                     },
+                     {
+                         "type":  "steps",
+                         "title":  "How to Apply",
+                         "steps":  [
+                                       {
+                                           "title":  "Get a Medical Report",
+                                           "content":  "Visit a government hospital or clinic and ask for a medical assessment confirming that you require full-time attendance from another person. The medical report must specifically state that you cannot be left alone and need a caregiver."
+                                       },
+                                       {
+                                           "title":  "Visit Your SASSA Office",
+                                           "content":  "Go to your nearest SASSA office with your ID document and the medical report. Inform the officer that you want to apply for the Grant-in-Aid. You will need to complete the application form."
+                                       },
+                                       {
+                                           "title":  "SASSA Home Visit",
+                                           "content":  "SASSA will send an official to your home to verify your living situation and confirm that you need a caregiver. The official will also speak to your caregiver."
+                                       },
+                                       {
+                                           "title":  "Submit Your Application and Get a Receipt",
+                                           "content":  "After completing the application form and handing in your documents, SASSA will give you a stamped receipt with a reference number. Keep it as proof of your application."
+                                       },
+                                       {
+                                           "title":  "Receive the Outcome",
+                                           "content":  "SASSA aims to process Grant-in-Aid applications within 60 days. If approved, the {{grant_in_aid_amount}} is added to your existing grant payment from the date of application. You can track progress using your reference number at the SASSA office or by calling 0800 60 10 11."
+                                       }
+                                   ]
+                     },
+                     {
+                         "type":  "info",
+                         "title":  "Grant Amount \u0026 Payment Dates 2026",
+                         "content":  "The Grant-in-Aid is \u003cstrong\u003e{{grant_in_aid_amount}} per month\u003c/strong\u003e (2026 rate). It is paid on the same day as your primary grant. If you receive the Old Age Grant, you will be paid on the first working day of the month. If you receive the Disability Grant, you will be paid on the second working day. The Grant-in-Aid is deposited into the same account as your primary grant."
+                     },
+                     {
+                         "type":  "faq",
+                         "title":  "Frequently Asked Questions",
+                         "faqs":  [
+                                      {
+                                          "q":  "Can I apply for the Grant-in-Aid online?",
+                                          "a":  "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. However, the Grant-in-Aid still requires a medical assessment and home visit, so you may need to visit a SASSA office to complete the process."
+                                      },
+                                      {
+                                          "q":  "Does the Grant-in-Aid affect my other grants?",
+                                          "a":  "No. The Grant-in-Aid is a supplementary payment and does not affect your Old Age or Disability Grant. It is paid in addition to your existing grant."
+                                      },
+                                      {
+                                          "q":  "What if I am already receiving a Care Dependency Grant?",
+                                          "a":  "The Grant-in-Aid is for adults who already receive Old Age or Disability grants. The Care Dependency Grant is for children under 18. These are different grants for different situations."
+                                      }
+                                  ]
+                     },
+                     {
+                         "type":  "references",
+                         "title":  "Sources",
+                         "references":  [
+                                            {
+                                                "title":  "SASSA Official Website",
+                                                "url":  "https://www.sassa.gov.za"
+                                            },
+                                            {
+                                                "title":  "SASSA Helpline",
+                                                "url":  "tel:0800601011"
+                                            }
+                                        ]
+                     }
+                 ]
 }

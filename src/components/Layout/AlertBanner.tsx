@@ -31,8 +31,8 @@ export default function AlertBanner() {
         <Alert
           color="warning"
           icon={<FaCreditCard />}
-          title="Postbank Black Card Migration Deadline: 31 August 2026"
-          description="Your SASSA Gold Card will STOP WORKING after 31 August 2026. Visit a Postbank service point at Shoprite, Checkers, Pick n Pay, Boxer, or Spar to get your free Black Card replacement. Bring your ID."
+          title="Postbank Black Card Migration: Switch Before 31 August 2026"
+          description="Your SASSA Gold Card will STOP WORKING after 31 August 2026. Visit a Postbank service point at Shoprite, Checkers, Pick n Pay, Boxer, or Spar to get your free Black Card replacement. Bring your ID. Your money stays safe in your Postbank account."
           onClose={handleDismiss}
           variant="faded"
         />

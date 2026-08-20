@@ -1,99 +1,118 @@
 {
-  "title": "SASSA Disability Grant 2026: Eligibility, Medical Requirements & Application",
-  "description": "Step-by-step guide to the SASSA Disability Grant (R2,400/month). Who qualifies, how the medical assessment works, required documents, payment dates, and how to appeal a denial.",
-  "slug": "grants/disability-grant",
-  "pillar": "grant-guide",
-  "last_updated": "2026-07-07",
-  "reviewed_by": "Lucky Cungwa",
-  "author": "Lucky Cungwa",
-  "sources": ["https://www.sassa.gov.za", "https://www.gov.za", "https://www.dsd.gov.za"],
-  "related": ["/grants/srd-r370-grant", "/status/means-test-failed", "/payment-calendar", "/faq", "/guides/biometric-fix-guide"],
-  "sections": [
-    {
-      "type": "intro",
-      "title": "What is the SASSA Disability Grant?",
-      "content": "The SASSA Disability Grant is a monthly payment for South African citizens and permanent residents aged 18 to 59 who have a physical or mental disability that makes them unable to work for more than six months. As of 2026, the grant amount is {{disability_grant_amount}} per month. The grant is means-tested, meaning your income and assets must be below a certain threshold. A medical assessment by a state doctor is required to confirm the disability. The grant may be awarded temporarily (6 to 12 months) or permanently, depending on the nature of the disability."
-    },
-    {
-      "type": "eligibility",
-      "title": "Eligibility Requirements",
-      "content": "To qualify for the SASSA Disability Grant in 2026, you must meet all the following requirements: <ul><li><strong>Age:</strong> You must be between 18 and 59 years old.</li><li><strong>Disability:</strong> You must have a physical or mental disability that prevents you from working for at least six months.</li><li><strong>Medical assessment:</strong> A state doctor must confirm your disability. Private doctor reports may be considered but a state assessment is usually required.</li><li><strong>Income threshold:</strong> Your income must not exceed {{disability_income_threshold_single}} per month if single, or {{disability_income_threshold_married}} combined if married.</li><li><strong>Asset threshold:</strong> Your assets must not exceed {{disability_asset_threshold_single}} for a single person or {{disability_asset_threshold_married}} for a married couple.</li><li><strong>Citizenship:</strong> You must be a South African citizen, permanent resident, or refugee.</li></ul>"
-    },
-    {
-      "type": "text",
-      "title": "Types of Disabilities That May Qualify",
-      "content": "The Disability Grant covers a wide range of conditions, including but not limited to: <ul><li>Physical disabilities affecting mobility (paralysis, amputation, severe arthritis)</li><li>Blindness or severe visual impairment</li><li>Deafness or severe hearing impairment</li><li>Mental health conditions (severe depression, schizophrenia, bipolar disorder)</li><li>Intellectual disabilities</li><li>Chronic medical conditions (HIV/AIDS with complications, tuberculosis, cancer, kidney disease)</li><li>Stroke or brain injury recovery</li></ul>The condition must be confirmed by a medical professional and must substantially limit your ability to work."
-    },
-    {
-      "type": "documents",
-      "title": "Required Documents",
-      "content": "You need the following to apply for the Disability Grant: <ul><li><strong>13-digit ID</strong> (green ID book or smart ID card)</li><li><strong>Medical report</strong> from a doctor detailing your disability (form available at SASSA offices)</li><li><strong>Proof of income</strong> — last 3 months bank statements, payslips, or affidavit</li><li><strong>Proof of residence</strong> — utility bill or affidavit</li><li><strong>Proof of assets</strong> — property valuations, investment statements if applicable</li><li><strong>Medical records</strong> — hospital discharge summaries, specialist reports, test results</li></ul>"
-    },
-    {
-      "type": "steps",
-      "title": "How to Apply",
-      "steps": [
-        {
-          "title": "Get a Medical Report",
-          "content": "Visit a doctor or clinic to obtain a medical report. SASSA provides a specific form (the MED 1 form) that your doctor must complete."
-        },
-        {
-          "title": "Submit Your Application (Online or In Person)",
-          "content": "You can start your Disability Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, take all your documents, including the medical report, to your nearest SASSA office."
-        },
-        {
-          "title": "Complete the Application",
-          "content": "A SASSA officer will help you fill out the application form. You may be referred to a state doctor for a second medical assessment."
-        },
-        {
-          "title": "Attend the State Medical Assessment",
-          "content": "If required, attend the assessment with a state doctor. This is usually scheduled within a few weeks of your application."
-        },
-        {
-          "title": "Wait for the Outcome",
-          "content": "Processing takes between 30 and 90 days. You will receive an SMS notification of the outcome."
-        }
-      ]
-    },
-    {
-      "type": "info",
-      "title": "Payment Amounts & Dates",
-      "content": "The Disability Grant amount is {{disability_grant_amount}} per month in 2026. Payments are made in the first week of each month, typically from the 4th to the 6th. If your grant is approved temporarily, you will need to reapply when it expires. A new medical assessment will be required to confirm that the disability persists."
-    },
-    {
-      "type": "faq",
-      "title": "Frequently Asked Questions",
-      "faqs": [
-        {
-          "q": "Can I receive the Disability Grant and work part-time?",
-          "a": "Yes, but your income must remain below the means test threshold. If you earn more than {{disability_income_threshold_single}} per month, your grant may be reduced or cancelled."
-        },
-        {
-          "q": "What happens if I turn 60 while receiving the Disability Grant?",
-          "a": "Your Disability Grant will automatically convert to the Older Persons Grant. You do not need to reapply."
-        },
-        {
-          "q": "What if my disability improves?",
-          "a": "If your grant was awarded for a temporary period, you will need to be reassessed when it expires. If it improves permanently, you should inform SASSA."
-        },
-        {
-          "q": "Can I apply for the Disability Grant online?",
-          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. However, the medical assessment process still requires you to obtain a medical report and attend a state medical assessment."
-        },
-        {
-          "q": "Can I apply if I have a private doctor's report?",
-          "a": "Yes, but SASSA may still require you to see a state doctor for confirmation. The final decision is based on the state assessment."
-        }
-      ]
-    },
-    {
-      "type": "references",
-      "title": "References",
-      "references": [
-        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
-        { "title": "Social Assistance Act 2004", "url": "https://www.gov.za/documents/social-assistance-act" },
-        { "title": "Department of Social Development", "url": "https://www.dsd.gov.za" }
-      ]
-    }
-  ]
+    "title":  "SASSA Disability Grant 2026: Eligibility, Medical Requirements \u0026 Application",
+    "description":  "Step-by-step guide to the SASSA Disability Grant (R2,400/month). Who qualifies, how the medical assessment works, required documents, payment dates, and how to appeal a denial.",
+    "slug":  "grants/disability-grant",
+    "pillar":  "grant-guide",
+    "last_updated":  "2026-08-20",
+    "reviewed_by":  "Lucky Cungwa",
+    "author":  "Lucky Cungwa",
+    "sources":  [
+                    "https://www.sassa.gov.za",
+                    "https://www.gov.za",
+                    "https://www.dsd.gov.za"
+                ],
+    "related":  [
+                    "/grants/srd-r370-grant",
+                    "/status/means-test-failed",
+                    "/payment-calendar",
+                    "/faq",
+                    "/guides/biometric-fix-guide"
+                ],
+    "sections":  [
+                     {
+                         "type":  "intro",
+                         "title":  "What is the SASSA Disability Grant?",
+                         "content":  "The SASSA Disability Grant is a monthly payment for South African citizens and permanent residents aged 18 to 59 who have a physical or mental disability that makes them unable to work for more than six months. As of 2026, the grant amount is {{disability_grant_amount}} per month. The grant is means-tested, meaning your income and assets must be below a certain threshold. A medical assessment by a state doctor is required to confirm the disability. The grant may be awarded temporarily (6 to 12 months) or permanently, depending on the nature of the disability."
+                     },
+                     {
+                         "type":  "eligibility",
+                         "title":  "Eligibility Requirements",
+                         "content":  "To qualify for the SASSA Disability Grant in 2026, you must meet all the following requirements: \u003cul\u003e\u003cli\u003e\u003cstrong\u003eAge:\u003c/strong\u003e You must be between 18 and 59 years old.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eDisability:\u003c/strong\u003e You must have a physical or mental disability that prevents you from working for at least six months.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eMedical assessment:\u003c/strong\u003e A state doctor must confirm your disability. Private doctor reports may be considered but a state assessment is usually required.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eIncome threshold:\u003c/strong\u003e Your income must not exceed {{disability_income_threshold_single}} per month if single, or {{disability_income_threshold_married}} combined if married.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eAsset threshold:\u003c/strong\u003e Your assets must not exceed {{disability_asset_threshold_single}} for a single person or {{disability_asset_threshold_married}} for a married couple.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCitizenship:\u003c/strong\u003e You must be a South African citizen, permanent resident, or refugee.\u003c/li\u003e\u003c/ul\u003e"
+                     },
+                     {
+                         "type":  "text",
+                         "title":  "Types of Disabilities That May Qualify",
+                         "content":  "The Disability Grant covers a wide range of conditions, including but not limited to: \u003cul\u003e\u003cli\u003ePhysical disabilities affecting mobility (paralysis, amputation, severe arthritis)\u003c/li\u003e\u003cli\u003eBlindness or severe visual impairment\u003c/li\u003e\u003cli\u003eDeafness or severe hearing impairment\u003c/li\u003e\u003cli\u003eMental health conditions (severe depression, schizophrenia, bipolar disorder)\u003c/li\u003e\u003cli\u003eIntellectual disabilities\u003c/li\u003e\u003cli\u003eChronic medical conditions (HIV/AIDS with complications, tuberculosis, cancer, kidney disease)\u003c/li\u003e\u003cli\u003eStroke or brain injury recovery\u003c/li\u003e\u003c/ul\u003eThe condition must be confirmed by a medical professional and must substantially limit your ability to work."
+                     },
+                     {
+                         "type":  "documents",
+                         "title":  "Required Documents",
+                         "content":  "You need the following to apply for the Disability Grant: \u003cul\u003e\u003cli\u003e\u003cstrong\u003e13-digit ID\u003c/strong\u003e (green ID book or smart ID card)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eMedical report\u003c/strong\u003e from a doctor detailing your disability (form available at SASSA offices)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of income\u003c/strong\u003e — last 3 months bank statements, payslips, or affidavit\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of residence\u003c/strong\u003e — utility bill or affidavit\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of assets\u003c/strong\u003e — property valuations, investment statements if applicable\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eMedical records\u003c/strong\u003e — hospital discharge summaries, specialist reports, test results\u003c/li\u003e\u003c/ul\u003e"
+                     },
+                     {
+                         "type":  "steps",
+                         "title":  "How to Apply",
+                         "steps":  [
+                                       {
+                                           "title":  "Get a Medical Report",
+                                           "content":  "Visit a doctor or clinic to obtain a medical report. SASSA provides a specific form (the MED 1 form) that your doctor must complete."
+                                       },
+                                       {
+                                           "title":  "Submit Your Application (Online or In Person)",
+                                           "content":  "You can start your Disability Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, take all your documents, including the medical report, to your nearest SASSA office."
+                                       },
+                                       {
+                                           "title":  "Complete the Application",
+                                           "content":  "A SASSA officer will help you fill out the application form. You may be referred to a state doctor for a second medical assessment."
+                                       },
+                                       {
+                                           "title":  "Attend the State Medical Assessment",
+                                           "content":  "If required, attend the assessment with a state doctor. This is usually scheduled within a few weeks of your application."
+                                       },
+                                       {
+                                           "title":  "Wait for the Outcome",
+                                           "content":  "Processing takes between 30 and 90 days. You will receive an SMS notification of the outcome."
+                                       }
+                                   ]
+                     },
+                     {
+                         "type":  "info",
+                         "title":  "Payment Amounts \u0026 Dates",
+                         "content":  "The Disability Grant amount is {{disability_grant_amount}} per month in 2026. Payments are made in the first week of each month, typically from the 4th to the 6th. If your grant is approved temporarily, you will need to reapply when it expires. A new medical assessment will be required to confirm that the disability persists."
+                     },
+                     {
+                         "type":  "faq",
+                         "title":  "Frequently Asked Questions",
+                         "faqs":  [
+                                      {
+                                          "q":  "Can I receive the Disability Grant and work part-time?",
+                                          "a":  "Yes, but your income must remain below the means test threshold. If you earn more than {{disability_income_threshold_single}} per month, your grant may be reduced or cancelled."
+                                      },
+                                      {
+                                          "q":  "What happens if I turn 60 while receiving the Disability Grant?",
+                                          "a":  "Your Disability Grant will automatically convert to the Older Persons Grant. You do not need to reapply."
+                                      },
+                                      {
+                                          "q":  "What if my disability improves?",
+                                          "a":  "If your grant was awarded for a temporary period, you will need to be reassessed when it expires. If it improves permanently, you should inform SASSA."
+                                      },
+                                      {
+                                          "q":  "Can I apply for the Disability Grant online?",
+                                          "a":  "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. However, the medical assessment process still requires you to obtain a medical report and attend a state medical assessment."
+                                      },
+                                      {
+                                          "q":  "Can I apply if I have a private doctor\u0027s report?",
+                                          "a":  "Yes, but SASSA may still require you to see a state doctor for confirmation. The final decision is based on the state assessment."
+                                      }
+                                  ]
+                     },
+                     {
+                         "type":  "references",
+                         "title":  "References",
+                         "references":  [
+                                            {
+                                                "title":  "SASSA Official Website",
+                                                "url":  "https://www.sassa.gov.za"
+                                            },
+                                            {
+                                                "title":  "Social Assistance Act 2004",
+                                                "url":  "https://www.gov.za/documents/social-assistance-act"
+                                            },
+                                            {
+                                                "title":  "Department of Social Development",
+                                                "url":  "https://www.dsd.gov.za"
+                                            }
+                                        ]
+                     }
+                 ]
 }

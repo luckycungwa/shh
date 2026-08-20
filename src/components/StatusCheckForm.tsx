@@ -112,14 +112,14 @@ export default function StatusCheckForm() {
 
   return (
     <div>
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex sm:flex-row  items-center gap-2 mb-2">
         <Chip size="sm" color="success" variant="flat" className="font-bold text-[10px] uppercase">No data collected</Chip>
-        <Chip size="sm" color="warning" variant="flat" className="font-bold text-[10px] uppercase">Client-side only</Chip>
+        <Chip size="sm" color="warning" variant="flat" className="font-bold text-[10px] uppercase">Safe & fast</Chip>
       </div>
       <p className="text-sm text-gray-500 mb-6 leading-relaxed">
         Enter your details below to prepare for the official SASSA status check. Your information stays on your device — we never see or store it.
       </p>
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5  m-0">
         <div>
           <label className="block text-sm font-bold mb-1.5">SA ID Number</label>
           <input
@@ -158,7 +158,7 @@ export default function StatusCheckForm() {
         >
           {loading ? <Spinner size="sm" color="current" /> : "Prepare My Status Check"}
         </Button>
-        <div className="flex items-start gap-2 p-3 bg-blue-50 dark:bg-blue-900/10 rounded-xl border border-blue-100 dark:border-blue-800 text-xs text-blue-700 dark:text-blue-300">
+        <div className="flex items-start gap-2 p-2 bg-blue-50 dark:bg-blue-900/10 rounded-xl border border-blue-100 dark:border-blue-800 text-xs text-blue-700 dark:text-blue-300">
           <FaExclamationTriangle className="mt-0.5 flex-shrink-0" />
           <p>We do not store, send, or share your information. Everything stays on your device. This form only prepares you for the official SASSA portal.</p>
         </div>

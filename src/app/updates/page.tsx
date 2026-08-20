@@ -132,7 +132,7 @@ export default function UpdatesListPage() {
       </section>
 
       <section className="text-center mt-16">
-        <Card className="bg-primary-black text-white p-12 rounded-[3rem]">
+        <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Never Miss an Update</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Bookmark this page and check back regularly for the latest SASSA news and alerts.</p>

@@ -72,9 +72,9 @@ export default function HomePage() {
 
   const stats = [
     { label: "Grants Covered", value: "8", icon: <FaUsers /> },
-    { label: "Independent Resource", value: "Unofficial", icon: <FaShieldAlt /> },
+    { label: "Independent Resource", value: "Reliable", icon: <FaShieldAlt /> },
     { label: "Payment Calendar", value: "Monthly", icon: <FaCalendarAlt /> },
-    { label: "Updated For", value: getCurrentYearString(), icon: <FaClock /> },
+    { label: "latest updates", value: getCurrentYearString(), icon: <FaClock /> },
   ];
 
   return (
@@ -143,19 +143,19 @@ export default function HomePage() {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <p className="text-[9px] font-black uppercase text-primary-black/60 tracking-wider mb-1">{p.grant}</p>
-                <p className="text-2xl font-black text-primary-black leading-none">{new Date(p.date).getDate()}</p>
+                <p className="text-2xl font-black text-primary-black leading-none">{p.date === "TBC" ? "TBC" : new Date(p.date).getDate()}</p>
                 <p className="text-[9px] font-bold text-primary-black/70 uppercase tracking-tight mt-0.5">{p.day}</p>
               </div>
             ))}
           </div>
           <p className="lg:ml-72 mt-4 text-xs font-semibold text-primary-black/70">
-            Long weekend note: Women&apos;s Day falls on Sunday 9 August 2026 and is observed on Monday 10 August 2026. Main grant payments (4&ndash;7 August) are unaffected; SRD R370 runs later in the month. Expect longer queues at ATMs and pay-out points &mdash; withdraw early if you can.
+            Main grant payments run 2&ndash;4 September 2026. The SRD R370 September date and the fourth payment day for grants under review are <strong>not yet officially confirmed</strong> &mdash; check your status for a &ldquo;Pay Day&rdquo; date once SASSA confirms. Avoid long queues by withdrawing later in the day or using a retail point.
           </p>
         </div>
       </section>
 
       {/* ── Stats ── */}
-      <section className="bg-primary-surface dark:bg-primary-dark border-y border-primary-gold/5">
+      <section className="bg-primary-surface dark:bg-primary-dark border-y border-primary-gold/5 mb-4">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (

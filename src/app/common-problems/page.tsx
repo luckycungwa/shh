@@ -31,7 +31,7 @@ const categories = [
       { href: "/status/bank-details-pending", label: "Bank Details Pending — Payment Blocked", desc: "How to fix this status and get paid" },
       { href: "/status/identity-verification", label: "Identity Verification Required", desc: "Why SASSA needs to verify you and how to do it" },
       { href: "/status/referred", label: "Application Referred for Manual Review", desc: "What it means and how long it takes" },
-      { href: "/updates/update-2026-028", label: "Grants Under Review — Paid 7 August 2026", desc: "Beneficiaries flagged for review are paid on the fourth day" },
+      { href: "/updates/update-2026-036", label: "September 2026 — What's Confirmed", desc: "Confirmed September payment dates and what's still unconfirmed" },
       { href: "/guides/grant-verification-process", label: "Grant Reviews & Verification Guide", desc: "Complete walkthrough of the review and verification process" },
       { href: "/guides/fourth-payment-day-guide", label: "Fourth Payment Day Explained", desc: "What it means when you are paid on a different day" },
       { href: "/status/means-test-failed", label: "Means Test Failed", desc: "Why income threshold was exceeded and how to appeal" },
@@ -77,10 +77,10 @@ const categories = [
       { href: "/payment-calendar", label: "SASSA Payment Dates 2026", desc: "Full payment schedule for all grants" },
       { href: "/guides/sassa-payment-methods", label: "Payment Methods Compared", desc: "Bank vs Postbank vs Cash Send vs Retail" },
       { href: "/guides/bank-details-pending-fix", label: "How to Change Banking Details", desc: "Update your bank account for grant payments" },
-      { href: "/guides/postbank-black-card-guide", label: "Gold Card to Black Card Migration", desc: "Switch before 31 August 2026 deadline" },
+      { href: "/guides/postbank-black-card-guide", label: "Gold Card Switch-Off — Get Your Black Card", desc: "The 31 August 2026 switch-off has passed — get your free Black Card now" },
       { href: "/guides/grant-amounts-history", label: "Grant Amounts History 2020-2026", desc: "Historical grant amounts and increases" },
-      { href: "/updates/update-2026-027", label: "August 2026 Payment Schedule", desc: "Latest confirmed payment dates" },
-      { href: "/updates/update-2026-028", label: "Grants Under Review — Paid 7 August", desc: "Fourth payment day for flagged beneficiaries" },
+      { href: "/updates/update-2026-036", label: "September 2026 Payment Schedule", desc: "Latest confirmed payment dates" },
+      { href: "/guides/fourth-payment-day-guide", label: "Grants Under Review — Paid on the Fourth Day", desc: "Fourth payment day for flagged beneficiaries" },
       { href: "/guides/missing-grant-payment-guide", label: "Grant Approved but Not Paid", desc: "7-step guide to find missing payments" },
       { href: "/guides/sassa-deductions-explained", label: "Grant Deductions Explained", desc: "Why money is taken and how to stop wrong deductions" },
     ],
@@ -158,8 +158,8 @@ const categories = [
 ];
 
 const urgentAlert = {
-  title: "Gold Card Deadline: 31 August 2026",
-  desc: "Your SASSA Gold Card stops working on 31 August 2026. Migrate to the free Postbank Black Card before the deadline. The replacement is free.",
+  title: "Gold Card Switched Off — Get Your Free Black Card",
+  desc: "SASSA Gold Cards stopped working after 31 August 2026. Your money is safe — collect your free Postbank Black Card from any Postbank service point now. The replacement is free.",
   href: "/guides/postbank-black-card-guide",
 };
 
@@ -171,7 +171,7 @@ export default function CommonProblemsPage() {
         { q: "My application was declined — how do I appeal?", a: "Visit the official SRD appeals portal at srd.sassa.gov.za/appeals/appeal, enter your ID and phone number, select the declined month, and submit your explanation within 30 days." },
         { q: "My status says Approved but I have not been paid — why?", a: "An approved status means you qualified, but the payment date may not be assigned yet. Check back after the 20th of the month. If no payment date appears after 3 weeks, contact SASSA." },
         { q: "How do I change my banking details for SRD?", a: "Log into the SRD portal at srd.sassa.gov.za, go to 'Change Banking Details', enter your new account info, and wait for verification." },
-        { q: "My SASSA Gold Card is expiring — what should I do?", a: "Replace your Gold Card with the free Postbank Black Card before 31 August 2026. Visit any Postbank service point with your ID." },
+        { q: "My SASSA Gold Card has stopped working — what should I do?", a: "Your Gold Card was switched off after 31 August 2026. Get your free Postbank Black Card at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, USave) with your ID. Your money remains safe in your Postbank account." },
       ])} />
 
       <header className="text-center mb-16 max-w-3xl mx-auto">

@@ -155,7 +155,7 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
           )}
         </header>
 
-        <div className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-4 rounded-2xl shadow-sm lg:hidden mb-8">
+        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-4 rounded-2xl shadow-sm lg:hidden mb-8">
           <p className="font-bold text-sm mb-2">On this page:</p>
           <div className="flex flex-wrap gap-2">
             {data.sections.filter((s) => s.title).map((s, i) => (

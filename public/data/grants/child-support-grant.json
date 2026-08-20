@@ -1,118 +1,118 @@
 {
-  "title": "SASSA Child Support Grant 2026: Eligibility, Amount & How to Apply",
-  "description": "Everything you need to know about the SASSA Child Support Grant — R580 per child per month. Who qualifies, required documents, how to apply, and why applications get declined.",
-  "slug": "grants/child-support-grant",
-  "pillar": "grant-guide",
-  "last_updated": "2026-07-07",
-  "reviewed_by": "Lucky Cungwa",
-  "author": "Lucky Cungwa",
-  "sources": [
-    "https://www.sassa.gov.za",
-    "https://www.gov.za",
-    "https://www.dsd.gov.za"
-  ],
-  "related": [
-    "/grants/srd-r370-grant",
-    "/status/declined",
-    "/payment-calendar",
-    "/faq",
-    "/eligibility-check"
-  ],
-  "sections": [
-    {
-      "type": "intro",
-      "title": "What is the SASSA Child Support Grant?",
-      "content": "The SASSA Child Support Grant is a monthly payment to the primary caregivers of children under 18 who live in low-income households. It is the most widely distributed grant in South Africa, reaching millions of children each month. As of 2026, the grant amount is {{child_support_grant_amount}} per child per month. The grant is intended to help cover the costs of raising a child, including food, clothing, school supplies, and healthcare. Unlike the SRD grant, this is a permanent grant that continues as long as you meet the eligibility criteria."
-    },
-    {
-      "type": "eligibility",
-      "title": "Eligibility Requirements",
-      "content": "To qualify for the SASSA Child Support Grant in 2026, you must meet the following requirements: <ul><li><strong>Primary caregiver:</strong> You must be the person who takes primary responsibility for meeting the child's daily needs. This can be a parent, grandparent, guardian, or foster parent.</li><li><strong>Income threshold:</strong> Your income (as the primary caregiver) must not exceed {{child_support_income_threshold_single}} per month if single, or {{child_support_income_threshold_married}} per month combined if married.</li><li><strong>Child's age:</strong> The child must be under 18 years old.</li><li><strong>Citizenship:</strong> You and the child must be South African citizens, permanent residents, or refugees.</li><li><strong>Means test:</strong> SASSA will assess your income and assets to determine if you qualify.</li></ul>"
-    },
-    {
-      "type": "documents",
-      "title": "Required Documents",
-      "content": "You need the following to apply for the Child Support Grant: <ul><li><strong>Your 13-digit ID</strong> (green ID book or smart ID card)</li><li><strong>Child's birth certificate</strong> (unabridged version preferred)</li><li><strong>Child's 13-digit ID number</strong> (if they have one)</li><li><strong>Proof of income</strong> — payslips, bank statements, or an affidavit if you have no income</li><li><strong>Proof of residence</strong> — utility bill or affidavit</li><li><strong>School report or clinic card</strong> (if the child is of school age)</li><li><strong>Affidavit from the biological parent</strong> (if you are not the child's parent)</li></ul>"
-    },
-    {
-      "type": "steps",
-      "title": "How to Apply",
-      "steps": [
-        {
-          "title": "Start Your Application (Online or In Person)",
-          "content": "You can start your Child Support Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, apply in person at a SASSA office. Locate your nearest office on our resources page."
-        },
-        {
-          "title": "Bring the Child and All Documents",
-          "content": "It is recommended that you bring the child with you, though an application can be made without the child if you have the required documents."
-        },
-        {
-          "title": "Complete the Application",
-          "content": "A SASSA officer will assist you with the application form. Provide accurate information about your income and living situation."
-        },
-        {
-          "title": "Keep Your Receipt",
-          "content": "You will receive a receipt with a reference number. This is your proof of application."
-        },
-        {
-          "title": "Wait for Approval",
-          "content": "Processing can take up to 3 months. You will receive an SMS notification once your application is approved or declined."
-        }
-      ]
-    },
-    {
-      "type": "info",
-      "title": "Payment Dates & Amounts 2026",
-      "content": "The Child Support Grant amount is {{child_support_grant_amount}} per child per month in 2026. Payments are made from the 6th of each month. If you have multiple children who qualify, you will receive that amount for each child. Payments are made to the primary caregiver, not the child."
-    },
-    {
-      "type": "faq",
-      "title": "Frequently Asked Questions",
-      "faqs": [
-        {
-          "q": "Can I get the Child Support Grant if I am working?",
-          "a": "Yes, as long as your monthly income is below the threshold. Many working parents qualify because the threshold is higher than the SRD grant."
-        },
-        {
-          "q": "What happens when the child turns 18?",
-          "a": "The grant stops when the child turns 18. You must inform SASSA of the child's birthday to avoid being asked to repay any overpayments."
-        },
-        {
-          "q": "Can a grandmother apply for the Child Support Grant?",
-          "a": "Yes, grandparents who are the primary caregivers of their grandchildren can apply. You will need to provide an affidavit explaining the circumstances."
-        },
-        {
-          "q": "Can I apply for the Child Support Grant online?",
-          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. You may still need to visit a SASSA office to submit supporting documents."
-        },
-        {
-          "q": "Can I receive the grant for a child who is not my biological child?",
-          "a": "Yes, if you are the primary caregiver of the child. You will need to provide documentation showing your relationship to the child and the circumstances of your care."
-        }
-      ]
-    },
-    {
-      "type": "references",
-      "title": "References",
-      "references": [
-        {
-          "title": "SASSA Official Website",
-          "url": "https://www.sassa.gov.za"
-        },
-        {
-          "title": "Children's Act 2005",
-          "url": "https://www.gov.za/documents/childrens-act"
-        },
-        {
-          "title": "Department of Social Development",
-          "url": "https://www.dsd.gov.za"
-        }
-      ]
-    },
-    {
-      "type": "info",
-      "title": "Child Support Grant Top-Up for Orphaned Children",
-      "content": "Children who are orphaned, in child-headed households, or whose caregiver cannot be traced may qualify for the Child Support Grant top-up, an additional monthly amount paid on top of the standard grant. The top-up amount has changed over the years and is set in each national budget, so the exact total depends on the top-up in effect at the time. Check the current amount with SASSA (0800 60 10 11) or on the official sassa.gov.za website before budgeting on a specific figure. A caregiver can apply for this top-up through the normal SASSA channels by stating that the child is orphaned or abandoned."
-    }
-  ]
+    "title":  "SASSA Child Support Grant 2026: Eligibility, Amount \u0026 How to Apply",
+    "description":  "Everything you need to know about the SASSA Child Support Grant — R580 per child per month. Who qualifies, required documents, how to apply, and why applications get declined.",
+    "slug":  "grants/child-support-grant",
+    "pillar":  "grant-guide",
+    "last_updated":  "2026-08-20",
+    "reviewed_by":  "Lucky Cungwa",
+    "author":  "Lucky Cungwa",
+    "sources":  [
+                    "https://www.sassa.gov.za",
+                    "https://www.gov.za",
+                    "https://www.dsd.gov.za"
+                ],
+    "related":  [
+                    "/grants/srd-r370-grant",
+                    "/status/declined",
+                    "/payment-calendar",
+                    "/faq",
+                    "/eligibility-check"
+                ],
+    "sections":  [
+                     {
+                         "type":  "intro",
+                         "title":  "What is the SASSA Child Support Grant?",
+                         "content":  "The SASSA Child Support Grant is a monthly payment to the primary caregivers of children under 18 who live in low-income households. It is the most widely distributed grant in South Africa, reaching millions of children each month. As of 2026, the grant amount is {{child_support_grant_amount}} per child per month. The grant is intended to help cover the costs of raising a child, including food, clothing, school supplies, and healthcare. Unlike the SRD grant, this is a permanent grant that continues as long as you meet the eligibility criteria."
+                     },
+                     {
+                         "type":  "eligibility",
+                         "title":  "Eligibility Requirements",
+                         "content":  "To qualify for the SASSA Child Support Grant in 2026, you must meet the following requirements: \u003cul\u003e\u003cli\u003e\u003cstrong\u003ePrimary caregiver:\u003c/strong\u003e You must be the person who takes primary responsibility for meeting the child\u0027s daily needs. This can be a parent, grandparent, guardian, or foster parent.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eIncome threshold:\u003c/strong\u003e Your income (as the primary caregiver) must not exceed {{child_support_income_threshold_single}} per month if single, or {{child_support_income_threshold_married}} per month combined if married.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eChild\u0027s age:\u003c/strong\u003e The child must be under 18 years old.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCitizenship:\u003c/strong\u003e You and the child must be South African citizens, permanent residents, or refugees.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eMeans test:\u003c/strong\u003e SASSA will assess your income and assets to determine if you qualify.\u003c/li\u003e\u003c/ul\u003e"
+                     },
+                     {
+                         "type":  "documents",
+                         "title":  "Required Documents",
+                         "content":  "You need the following to apply for the Child Support Grant: \u003cul\u003e\u003cli\u003e\u003cstrong\u003eYour 13-digit ID\u003c/strong\u003e (green ID book or smart ID card)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eChild\u0027s birth certificate\u003c/strong\u003e (unabridged version preferred)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eChild\u0027s 13-digit ID number\u003c/strong\u003e (if they have one)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of income\u003c/strong\u003e — payslips, bank statements, or an affidavit if you have no income\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of residence\u003c/strong\u003e — utility bill or affidavit\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eSchool report or clinic card\u003c/strong\u003e (if the child is of school age)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eAffidavit from the biological parent\u003c/strong\u003e (if you are not the child\u0027s parent)\u003c/li\u003e\u003c/ul\u003e"
+                     },
+                     {
+                         "type":  "steps",
+                         "title":  "How to Apply",
+                         "steps":  [
+                                       {
+                                           "title":  "Start Your Application (Online or In Person)",
+                                           "content":  "You can start your Child Support Grant application online via the official SASSA Services Portal at services.sassa.gov.za — register, log in, and complete the online application. Alternatively, apply in person at a SASSA office. Locate your nearest office on our resources page."
+                                       },
+                                       {
+                                           "title":  "Bring the Child and All Documents",
+                                           "content":  "It is recommended that you bring the child with you, though an application can be made without the child if you have the required documents."
+                                       },
+                                       {
+                                           "title":  "Complete the Application",
+                                           "content":  "A SASSA officer will assist you with the application form. Provide accurate information about your income and living situation."
+                                       },
+                                       {
+                                           "title":  "Keep Your Receipt",
+                                           "content":  "You will receive a receipt with a reference number. This is your proof of application."
+                                       },
+                                       {
+                                           "title":  "Wait for Approval",
+                                           "content":  "Processing can take up to 3 months. You will receive an SMS notification once your application is approved or declined."
+                                       }
+                                   ]
+                     },
+                     {
+                         "type":  "info",
+                         "title":  "Payment Dates \u0026 Amounts 2026",
+                         "content":  "The Child Support Grant amount is {{child_support_grant_amount}} per child per month in 2026. Payments are made from the 6th of each month. If you have multiple children who qualify, you will receive that amount for each child. Payments are made to the primary caregiver, not the child."
+                     },
+                     {
+                         "type":  "faq",
+                         "title":  "Frequently Asked Questions",
+                         "faqs":  [
+                                      {
+                                          "q":  "Can I get the Child Support Grant if I am working?",
+                                          "a":  "Yes, as long as your monthly income is below the threshold. Many working parents qualify because the threshold is higher than the SRD grant."
+                                      },
+                                      {
+                                          "q":  "What happens when the child turns 18?",
+                                          "a":  "The grant stops when the child turns 18. You must inform SASSA of the child\u0027s birthday to avoid being asked to repay any overpayments."
+                                      },
+                                      {
+                                          "q":  "Can a grandmother apply for the Child Support Grant?",
+                                          "a":  "Yes, grandparents who are the primary caregivers of their grandchildren can apply. You will need to provide an affidavit explaining the circumstances."
+                                      },
+                                      {
+                                          "q":  "Can I apply for the Child Support Grant online?",
+                                          "a":  "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. You may still need to visit a SASSA office to submit supporting documents."
+                                      },
+                                      {
+                                          "q":  "Can I receive the grant for a child who is not my biological child?",
+                                          "a":  "Yes, if you are the primary caregiver of the child. You will need to provide documentation showing your relationship to the child and the circumstances of your care."
+                                      }
+                                  ]
+                     },
+                     {
+                         "type":  "references",
+                         "title":  "References",
+                         "references":  [
+                                            {
+                                                "title":  "SASSA Official Website",
+                                                "url":  "https://www.sassa.gov.za"
+                                            },
+                                            {
+                                                "title":  "Children\u0027s Act 2005",
+                                                "url":  "https://www.gov.za/documents/childrens-act"
+                                            },
+                                            {
+                                                "title":  "Department of Social Development",
+                                                "url":  "https://www.dsd.gov.za"
+                                            }
+                                        ]
+                     },
+                     {
+                         "type":  "info",
+                         "title":  "Child Support Grant Top-Up for Orphaned Children",
+                         "content":  "Children who are orphaned, in child-headed households, or whose caregiver cannot be traced may qualify for the Child Support Grant top-up, an additional monthly amount paid on top of the standard grant. The top-up amount has changed over the years and is set in each national budget, so the exact total depends on the top-up in effect at the time. Check the current amount with SASSA (0800 60 10 11) or on the official sassa.gov.za website before budgeting on a specific figure. A caregiver can apply for this top-up through the normal SASSA channels by stating that the child is orphaned or abandoned."
+                     }
+                 ]
 }

@@ -7,8 +7,8 @@ export const SITE_CONFIG = {
 
 export const GRANT_CONFIG = {
   helpline: "0800 60 10 11",
-  ussdCode: "*120*3227#",
-  whatsappNumber: "082 046 8553",
+  ussdCode: "*120*69277#",
+  whatsappNumber: "082 601 0111",
 };
 
 export const SRD_CONFIG = {
@@ -16,17 +16,16 @@ export const SRD_CONFIG = {
   grantName: "SRD R370",
 };
 
-// TODO(recheck): SRD R370 August 2026 date is still "TBC — last week of month" in
-// public/data/paymentDates.json (day field). No confirmed date exists as of 2026-08-10.
-// Re-check srd.sassa.gov.za / SASSA official channels during the last week of August
+// TODO(recheck): SRD R370 September 2026 date is still "TBC — not officially confirmed" in
+// public/data/paymentDates.json. No confirmed date exists as of 2026-08-20.
+// Re-check srd.sassa.gov.za / SASSA official channels during the last week of September
 // and update when confirmed — do NOT guess a date.
 //
-// CONFLICT FLAG (human review): update-2026-027 and update-2026-034 list the August
-// SRD as "25–29 August 2026 (batch window)" and payment-schedule-history.json stores
-// srd_start 2026-08-25 / srd_end 2026-08-29, while paymentDates.json keeps the SRD
-// entry as TBC. The 25–29 window is not confirmed by an official source. Left TBC
-// deliberately; do not overwrite either value without confirming via SASSA's official
-// channels first.
+// NOTE: The September 2026 fourth payment day (grants under review) is also not yet
+// officially confirmed. Do not publish a specific date as official until SASSA announces it.
+//
+// USSD note: *120*69277# is the SRD status-check code (matches guides/ussd-codes). The old
+// *120*3227# value was retired — kept in git history only.
 
 export function getCurrentMonthLabel(): string {
   const now = new Date();

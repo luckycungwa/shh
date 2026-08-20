@@ -309,7 +309,7 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
 
         <aside className="lg:col-span-4 space-y-12">
            {guide.steps.length > 0 && (
-             <div className="sticky top-24 hidden lg:block space-y-8">
+             <div className="hidden lg:block space-y-8">
                 <div className="p-8 bg-gray-50 dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800">
                    <p className="font-black text-2xl mb-8 flex items-center gap-3">
                       <span className="w-2 h-8 bg-primary-gold rounded-full"></span>

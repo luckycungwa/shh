@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@nextui-org/react";
 import Image from "next/image";
 import NextLink from "next/link";
-import { FaPhoneAlt, FaEnvelope, FaExternalLinkAlt, FaMapMarkerAlt, FaHeart } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaExternalLinkAlt, FaMapMarkerAlt, FaHeart, FaWhatsapp } from "react-icons/fa";
 
 const currentYear = new Date().getFullYear();
 
@@ -113,6 +113,15 @@ export default function FooterComponent() {
                 <div>
                   <p className="text-xs font-semibold text-white">Government Site</p>
                   <a href="https://www.sassa.gov.za" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary-gray hover:text-primary-gold transition-colors">www.sassa.gov.za</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-primary-gold/10 flex items-center justify-center shrink-0">
+                  <FaWhatsapp className="text-primary-gold text-xs" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-white">WhatsApp Channel</p>
+                  <a href="https://whatsapp.com/channel/0029Vb8TJrA5a247M5xFJT1r" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary-gray hover:text-primary-gold transition-colors">Join our channel</a>
                 </div>
               </li>
             </ul>

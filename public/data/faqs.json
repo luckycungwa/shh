@@ -61,7 +61,7 @@
   {
     "id": "faq-003",
     "question": "Who qualifies for the SASSA Child Support Grant in 2026?",
-    "answer": "<p>The Child Support Grant (CSG) supports caregivers raising children under 18. Here’s who qualifies:</p><h4>For the Child:</h4><ul><li>Under 18 years old</li><li>South African citizen or permanent resident</li><li>Living in South Africa</li></ul><h4>For the Caregiver:</h4><ul><li>Primary caregiver (parent, guardian, or relative)</li><li>South African citizen or permanent resident</li><li>Meets income thresholds (means test)</li><li>Living in South Africa</li></ul><h4>2026 Income Thresholds:</h4><ul><li><strong>Single caregiver:</strong> {{child_support_income_threshold_single}}/month or less</li><li><strong>Married/cohabiting:</strong> Combined income of {{child_support_income_threshold_married}}/month or less</li></ul><p><strong>Grant Amount:</strong> {{child_support_grant_amount}}/month per child (effective October 2026).</p><p><strong>Tip:</strong> Apply early to avoid delays! Check eligibility details on our <a href='/guides'>eligibility guide</a>.</p>",
+    "answer": "<p>The Child Support Grant (CSG) supports caregivers raising children under 18. Here’s who qualifies:</p><h4>For the Child:</h4><ul><li>Under 18 years old</li><li>South African citizen or permanent resident</li><li>Living in South Africa</li></ul><h4>For the Caregiver:</h4><ul><li>Primary caregiver (parent, guardian, or relative)</li><li>South African citizen or permanent resident</li><li>Meets income thresholds (means test)</li><li>Living in South Africa</li></ul><h4>2026 Income Thresholds:</h4><ul><li><strong>Single caregiver:</strong> {{child_support_income_threshold_single}}/month or less</li><li><strong>Married/cohabiting:</strong> Combined income of {{child_support_income_threshold_married}}/month or less</li></ul><p><strong>Grant Amount:</strong> {{child_support_grant_amount}}/month per child (effective April 2026).</p><p><strong>Tip:</strong> Apply early to avoid delays! Check eligibility details on our <a href='/guides'>eligibility guide</a>.</p>",
     "category": "Eligibility",
     "tags": [
       "child support grant 2026",
@@ -87,7 +87,7 @@
   {
     "id": "faq-004",
     "question": "How can I check my SASSA application status in 2026?",
-    "answer": "<p>Tracking your SASSA application status is easy with these options:</p><h4>1. Online:</h4><ul><li>Visit <a href='https://www.sassa.gov.za' target='_blank'>www.sassa.gov.za</a></li><li>Go to 'Grant Status Check'</li><li>Enter your ID number and application reference</li><li>For SRD Grant, check <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a></li></ul><h4>2. SMS:</h4><ul><li>Send your ID number to 34548 (R1/SMS)</li><li>Receive an instant update</li></ul><h4>3. WhatsApp:</h4><ul><li>Send 'Status' and your ID to 082 046 8553</li><li>Follow prompts for updates</li></ul><h4>4. Call Center:</h4><ul><li>Call 0800 60 10 11 (toll-free)</li><li>Provide ID and reference number</li></ul><h4>5. In-Person:</h4><ul><li>Visit a SASSA office with your ID and receipt</li><li>Speak to an official for assistance</li></ul><p><strong>Pro Tip:</strong> Save your application reference number for quick checks. Explore more on our <a href='/'>status tracking page</a>.</p>",
+    "answer": "<p>Tracking your SASSA application status is easy with these options:</p><h4>1. Online:</h4><ul><li>Visit <a href='https://www.sassa.gov.za' target='_blank'>www.sassa.gov.za</a></li><li>Go to 'Grant Status Check'</li><li>Enter your ID number and application reference</li><li>For SRD Grant, check <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a></li></ul><h4>2. SMS:</h4><ul><li>Send your ID number to 34548 (R1/SMS)</li><li>Receive an instant update</li></ul><h4>3. WhatsApp:</h4><ul><li>Send 'Status' and your ID to 082 601 0111</li><li>Follow prompts for updates</li></ul><h4>4. Call Center:</h4><ul><li>Call 0800 60 10 11 (toll-free)</li><li>Provide ID and reference number</li></ul><h4>5. In-Person:</h4><ul><li>Visit a SASSA office with your ID and receipt</li><li>Speak to an official for assistance</li></ul><p><strong>Pro Tip:</strong> Save your application reference number for quick checks. Explore more on our <a href='/'>status tracking page</a>.</p>",
     "category": "Applications",
     "tags": [
       "SASSA status check 2026",
@@ -171,7 +171,7 @@
   {
     "id": "faq-007",
     "question": "Who qualifies for the SASSA Old Age Grant in 2026?",
-    "answer": "<p>The Old Age Grant supports elderly South Africans with monthly payments.</p><h4>Eligibility Criteria:</h4><ul><li><strong>Age:</strong> 60+ years</li><li><strong>Citizenship:</strong> South African citizen or permanent resident</li><li><strong>Residence:</strong> Living in South Africa</li><li><strong>Means Test:</strong> Income and assets below thresholds</li></ul><h4>2026 Income Thresholds:</h4><ul><li><strong>Single:</strong> R8,500/month or less</li><li><strong>Married:</strong> Combined income of R17,000/month or less</li></ul><h4>Asset Thresholds:</h4><ul><li><strong>Single:</strong> R1,350,000 or less</li><li><strong>Married:</strong> Combined assets of R2,700,000 or less</li></ul><p><strong>Grant Amount:</strong> {{old_age_pension_amount_under75}}/month (below 75) or {{old_age_pension_amount_over75}}/month (75+) as of October 2026.</p><p><strong>Tip:</strong> Apply early to secure your pension! Visit our <a href='/guides'>eligibility page</a> for more.</p>",
+    "answer": "<p>The Old Age Grant supports elderly South Africans with monthly payments.</p><h4>Eligibility Criteria:</h4><ul><li><strong>Age:</strong> 60+ years</li><li><strong>Citizenship:</strong> South African citizen or permanent resident</li><li><strong>Residence:</strong> Living in South Africa</li><li><strong>Means Test:</strong> Income and assets below thresholds</li></ul><h4>2026 Income Thresholds:</h4><ul><li><strong>Single:</strong> R9,350/month or less</li><li><strong>Married:</strong> Combined income of R18,700/month or less</li></ul><h4>Asset Thresholds:</h4><ul><li><strong>Single:</strong> R1,584,000 or less</li><li><strong>Married:</strong> Combined assets of R3,168,000 or less</li></ul><p><strong>Grant Amount:</strong> {{old_age_pension_amount_under75}}/month (below 75) or {{old_age_pension_amount_over75}}/month (75+) effective April 2026.</p><p><strong>Tip:</strong> Apply early to secure your pension! Visit our <a href='/guides'>eligibility page</a> for more.</p>",
     "category": "Eligibility",
     "tags": [
       "SASSA old age grant 2026",
@@ -223,7 +223,7 @@
   {
     "id": "faq-009",
     "question": "What is the SASSA Disability Grant and how do I apply?",
-    "answer": "<p>The Disability Grant supports South Africans unable to work due to temporary or permanent disabilities.</p><h4>Eligibility Criteria:</h4><ul><li><strong>Age:</strong> 18-59 years</li><li><strong>Citizenship:</strong> South African citizen or permanent resident</li><li><strong>Disability:</strong> Medically confirmed inability to work</li><li><strong>Means Test:</strong> Income below thresholds</li></ul><h4>Documents Needed:</h4><ul><li>South African ID</li><li>Medical report from a doctor</li><li>Proof of income</li><li>3-month bank statements</li><li>Specialist reports (if applicable)</li></ul><h4>Application Steps:</h4><ol><li>Undergo a SASSA medical assessment</li><li>Complete the application at a SASSA office</li><li>Submit all documents</li><li>Await review (60-120 days)</li></ol><p><strong>Grant Amount:</strong> {{disability_grant_amount}}/month (as of October 2026).</p><p><strong>Tip:</strong> Start early due to medical reviews. Visit our <a href='/guides'>eligibility guide</a>.</p>",
+    "answer": "<p>The Disability Grant supports South Africans unable to work due to temporary or permanent disabilities.</p><h4>Eligibility Criteria:</h4><ul><li><strong>Age:</strong> 18-59 years</li><li><strong>Citizenship:</strong> South African citizen or permanent resident</li><li><strong>Disability:</strong> Medically confirmed inability to work</li><li><strong>Means Test:</strong> Income below thresholds</li></ul><h4>Documents Needed:</h4><ul><li>South African ID</li><li>Medical report from a doctor</li><li>Proof of income</li><li>3-month bank statements</li><li>Specialist reports (if applicable)</li></ul><h4>Application Steps:</h4><ol><li>Undergo a SASSA medical assessment</li><li>Complete the application at a SASSA office</li><li>Submit all documents</li><li>Await review (60-120 days)</li></ol><p><strong>Grant Amount:</strong> {{disability_grant_amount}}/month (effective April 2026).</p><p><strong>Tip:</strong> Start early due to medical reviews. Visit our <a href='/guides'>eligibility guide</a>.</p>",
     "category": "Eligibility",
     "tags": [
       "SASSA disability grant 2026",
@@ -332,7 +332,7 @@
   {
     "id": "faq-013",
     "question": "Who can apply for the SASSA Foster Child Grant in 2026?",
-    "answer": "<p>The Foster Child Grant supports foster parents caring for children under court-ordered foster care.</p><h4>Eligibility Criteria:</h4><ul><li><strong>Child:</strong> Under 18, with a valid court order</li><li><strong>Foster Parent:</strong> Approved by court, South African citizen/permanent resident</li><li><strong>Residence:</strong> Both must live in South Africa</li></ul><h4>Documents Needed:</h4><ul><li>Foster care court order</li><li>Foster parent’s ID</li><li>Child’s birth certificate</li><li>Proof of income</li><li>3-month bank statements</li><li>Social worker’s report</li></ul><h4>Grant Amount:</h4><ul><li>R1,295/month per child (effective April 2026)</li><li>Extra allowances for special needs</li></ul><p><strong>Note:</strong> Grants are reviewed every 2 years. Learn more on our <a href='/guides'>eligibility page</a>.</p>",
+    "answer": "<p>The Foster Child Grant supports foster parents caring for children under court-ordered foster care.</p><h4>Eligibility Criteria:</h4><ul><li><strong>Child:</strong> Under 18, with a valid court order</li><li><strong>Foster Parent:</strong> Approved by court, South African citizen/permanent resident</li><li><strong>Residence:</strong> Both must live in South Africa</li></ul><h4>Documents Needed:</h4><ul><li>Foster care court order</li><li>Foster parent’s ID</li><li>Child’s birth certificate</li><li>Proof of income</li><li>3-month bank statements</li><li>Social worker’s report</li></ul><h4>Grant Amount:</h4><ul><li>R1,290/month per child (effective April 2026)</li><li>Extra allowances for special needs</li></ul><p><strong>Note:</strong> Grants are reviewed every 2 years. Learn more on our <a href='/guides'>eligibility page</a>.</p>",
     "category": "Eligibility",
     "tags": [
       "SASSA foster child grant 2026",
@@ -358,7 +358,7 @@
   {
     "id": "faq-014",
     "question": "How long does a SASSA grant application take to process in 2026?",
-    "answer": "<p>Processing times for SASSA grants vary by type:</p><h4>Typical Timelines:</h4><ul><li><strong>Child Support Grant:</strong> 30-60 days</li><li><strong>Old Age Grant:</strong> 30-90 days</li><li><strong>Disability Grant:</strong> 60-120 days (includes medical review)</li><li><strong>Foster Child Grant:</strong> 60-90 days</li><li><strong>Care Dependency Grant:</strong> 90-120 days</li><li><strong>COVID-19 SRD Grant:</strong> 7-30 days (online applications)</li></ul><h4>Factors Affecting Delays:</h4><ul><li>Incomplete documents</li><li>Medical assessments</li><li>Verification processes</li><li>Office workload</li></ul><h4>Track Your Application:</h4><ol><li>Save your reference number</li><li>Check online at <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a> or <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a> (for SRD)</li><li>SMS ID to 34548 (R1/SMS)</li><li>WhatsApp 'Status' to 082 046 8553</li><li>Call 0800 60 10 11</li></ol><p><strong>Tip:</strong> Avoid delays by submitting complete documents. Visit our <a href='/'>tracking guide</a>.</p>",
+    "answer": "<p>Processing times for SASSA grants vary by type:</p><h4>Typical Timelines:</h4><ul><li><strong>Child Support Grant:</strong> 30-60 days</li><li><strong>Old Age Grant:</strong> 30-90 days</li><li><strong>Disability Grant:</strong> 60-120 days (includes medical review)</li><li><strong>Foster Child Grant:</strong> 60-90 days</li><li><strong>Care Dependency Grant:</strong> 90-120 days</li><li><strong>COVID-19 SRD Grant:</strong> 7-30 days (online applications)</li></ul><h4>Factors Affecting Delays:</h4><ul><li>Incomplete documents</li><li>Medical assessments</li><li>Verification processes</li><li>Office workload</li></ul><h4>Track Your Application:</h4><ol><li>Save your reference number</li><li>Check online at <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a> or <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a> (for SRD)</li><li>SMS ID to 34548 (R1/SMS)</li><li>WhatsApp 'Status' to 082 601 0111</li><li>Call 0800 60 10 11</li></ol><p><strong>Tip:</strong> Avoid delays by submitting complete documents. Visit our <a href='/'>tracking guide</a>.</p>",
     "category": "Applications",
     "tags": [
       "SASSA processing time 2026",
@@ -609,7 +609,7 @@
   {
     "id": "faq-023",
     "question": "Why is my SASSA SRD grant still pending after weeks?",
-    "answer": "<p>A 'Pending' status for the SASSA Social Relief of Distress (SRD) grant often indicates delays in verification. Common reasons include:</p><h4>Reasons for Delay:</h4><ul><li><strong>Bank Verification:</strong> SASSA is cross-checking your bank details with the Department of Home Affairs or banks.</li><li><strong>Income Verification:</strong> Checking for other income sources (e.g., UIF, employment).</li><li><strong>Incomplete Details:</strong> Missing or incorrect ID, contact, or banking information.</li><li><strong>System Backlog:</strong> High application volumes can slow processing.</li></ul><h4>Steps to Resolve:</h4><ol><li>Check status at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a> or via WhatsApp (082 046 8553).</li><li>Ensure bank details are correct and linked to your ID.</li><li>Contact SASSA at 0800 60 10 11 with your reference number.</li><li>Resubmit missing documents if notified.</li></ol><p><strong>Processing Time:</strong> Typically 7-30 days, but can take longer during peak periods.</p><p><strong>Tip:</strong> Regularly check your status and respond to SASSA queries. Visit our <a href='/'>tracking guide</a>.</p>",
+    "answer": "<p>A 'Pending' status for the SASSA Social Relief of Distress (SRD) grant often indicates delays in verification. Common reasons include:</p><h4>Reasons for Delay:</h4><ul><li><strong>Bank Verification:</strong> SASSA is cross-checking your bank details with the Department of Home Affairs or banks.</li><li><strong>Income Verification:</strong> Checking for other income sources (e.g., UIF, employment).</li><li><strong>Incomplete Details:</strong> Missing or incorrect ID, contact, or banking information.</li><li><strong>System Backlog:</strong> High application volumes can slow processing.</li></ul><h4>Steps to Resolve:</h4><ol><li>Check status at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a> or via WhatsApp (082 601 0111).</li><li>Ensure bank details are correct and linked to your ID.</li><li>Contact SASSA at 0800 60 10 11 with your reference number.</li><li>Resubmit missing documents if notified.</li></ol><p><strong>Processing Time:</strong> Typically 7-30 days, but can take longer during peak periods.</p><p><strong>Tip:</strong> Regularly check your status and respond to SASSA queries. Visit our <a href='/'>tracking guide</a>.</p>",
     "category": "Applications",
     "tags": [
       "SASSA SRD pending 2026",
@@ -640,7 +640,7 @@
   {
     "id": "faq-024",
     "question": "Can I apply for a SASSA grant if I’m unemployed in 2026?",
-    "answer": "<p>Unemployment may qualify you for certain SASSA grants, primarily the Social Relief of Distress (SRD) grant:</p><h4>SRD Grant Eligibility:</h4><ul><li><strong>Age:</strong> 18-59 years</li><li><strong>Income:</strong> No income or below R624/month (2026 threshold)</li><li><strong>Residence:</strong> Living in South Africa</li><li><strong>Status:</strong> Unemployed, not receiving UIF or other grants</li></ul><h4>Application Process:</h4><ol><li>Apply online at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a></li><li>Provide ID, contact, and bank details</li><li>Verify banking details</li><li>Wait 7-30 days for processing</li></ol><h4>Grant Amount:</h4><ul><li>{{srd_grant_amount}}/month (as of October 2026)</li></ul><h4>Other Grants:</h4><ul><li>Disability Grant (if unemployed due to disability)</li><li>Child Support Grant (if caring for children)</li></ul><p><strong>Tip:</strong> Check eligibility for all grants at our <a href='/guides'>eligibility guide</a>.</p>",
+    "answer": "<p>Unemployment may qualify you for certain SASSA grants, primarily the Social Relief of Distress (SRD) grant:</p><h4>SRD Grant Eligibility:</h4><ul><li><strong>Age:</strong> 18-59 years</li><li><strong>Income:</strong> No income or below R624/month (2026 threshold)</li><li><strong>Residence:</strong> Living in South Africa</li><li><strong>Status:</strong> Unemployed, not receiving UIF or other grants</li></ul><h4>Application Process:</h4><ol><li>Apply online at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a></li><li>Provide ID, contact, and bank details</li><li>Verify banking details</li><li>Wait 7-30 days for processing</li></ol><h4>Grant Amount:</h4><ul><li>{{srd_grant_amount}}/month (effective April 2026)</li></ul><h4>Other Grants:</h4><ul><li>Disability Grant (if unemployed due to disability)</li><li>Child Support Grant (if caring for children)</li></ul><p><strong>Tip:</strong> Check eligibility for all grants at our <a href='/guides'>eligibility guide</a>.</p>",
     "category": "Eligibility",
     "tags": [
       "SASSA unemployed grant 2026",
@@ -670,8 +670,8 @@
   },
   {
     "id": "faq-025",
-    "question": "What is the SASSA mandatory biometric system starting September 2026?",
-    "answer": "<p>The South African Social Security Agency (SASSA) will implement a mandatory Beneficiary Biometric Enrolment system from 1 September 2026 to enhance security and combat fraud. This system requires all new grant applicants to provide biometric data, such as fingerprints or facial recognition, through electronic Know Your Client (eKYC) technology. The initiative aims to verify beneficiary authenticity, reduce fraudulent applications, and ensure grants reach eligible recipients.</p><h4>Key Features:</h4><ul><li><strong>Fraud Prevention:</strong> Detects forged IDs and duplicate payments.</li><li><strong>Proof of Life:</strong> Confirms beneficiaries are alive at application.</li><li><strong>Streamlined Process:</strong> Simplifies documentation and improves audit outcomes.</li></ul><p><strong>Note:</strong> Only new applicants from September 2026 are required to enroll initially, but existing beneficiaries may need to comply later. Visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a> for updates or call 0800 60 1011. Learn more on our <a href='/guides'>biometrics guide</a>.</p>",
+    "question": "What is the SASSA mandatory biometric system (since September 2025)?",
+    "answer": "<p>The South African Social Security Agency (SASSA) introduced the mandatory Beneficiary Biometric Enrolment system on <strong>1 September 2025</strong> to enhance security and combat fraud. The system has been rolling out since then and requires grant applicants to provide biometric data, such as fingerprints or facial recognition, through electronic Know Your Client (eKYC) technology. The initiative verifies beneficiary authenticity, reduces fraudulent applications, and ensures grants reach eligible recipients.</p><h4>Key Features:</h4><ul><li><strong>Fraud Prevention:</strong> Detects forged IDs and duplicate payments.</li><li><strong>Proof of Life:</strong> Confirms beneficiaries are alive at application.</li><li><strong>Streamlined Process:</strong> Simplifies documentation and improves audit outcomes.</li></ul><p><strong>Note:</strong> New applicants have been required to enroll since September 2025, and existing beneficiaries may need to comply when flagged for review or when updating their details. Visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a> for updates or call 0800 60 10 11. Learn more on our <a href='/guides'>biometrics guide</a>.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric system 2026",
@@ -680,7 +680,7 @@
       "eKYC"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -696,8 +696,8 @@
   },
   {
     "id": "faq-026",
-    "question": "Who needs to complete the SASSA biometric enrolment in September 2026?",
-    "answer": "<p>Starting 1 September 2026, the mandatory biometric enrolment applies to:</p><ul><li><strong>New Applicants:</strong> Anyone applying for a SASSA grant (e.g., Child Support, Disability, SRD) must provide fingerprints or facial recognition data.</li><li><strong>Existing Beneficiaries Under Review:</strong> Those flagged for identity checks or updating personal details may need to enroll.</li><li><strong>Alternative ID Users:</strong> Beneficiaries using non-standard IDs (e.g., quad 7 numbers) must comply, as per earlier SASSA policies from May 2026.</li></ul><p><strong>Exemption:</strong> Current beneficiaries not under review are not required to enroll immediately but may need to later. Bring your South African ID to a SASSA office for a quick scan. Check our <a href='/guides'>biometrics guide</a> or call 0800 60 10 11 for clarification.</p>",
+    "question": "Who needs to complete the SASSA biometric enrolment?",
+    "answer": "<p>Since 1 September 2025, the mandatory biometric enrolment applies to:</p><ul><li><strong>New Applicants:</strong> Anyone applying for a SASSA grant (e.g., Child Support, Disability, SRD) must provide fingerprints or facial recognition data.</li><li><strong>Existing Beneficiaries Under Review:</strong> Those flagged for identity checks or updating personal details may need to enroll.</li><li><strong>Alternative ID Users:</strong> Beneficiaries using non-standard IDs (e.g., refugee and asylum seeker permits) must comply.</li></ul><p><strong>Exemption:</strong> Current beneficiaries not under review are not required to enroll immediately but may need to later. Bring your South African ID to a SASSA office for a quick scan. Check our <a href='/guides'>biometrics guide</a> or call 0800 60 10 11 for clarification.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric enrolment 2026",
@@ -706,7 +706,7 @@
       "alternative ID"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -723,7 +723,7 @@
   {
     "id": "faq-027",
     "question": "How do I complete the SASSA biometric enrolment process in 2026?",
-    "answer": "<p>To complete the mandatory biometric enrolment starting 1 September 2026:</p><ol><li><strong>Visit a SASSA Office:</strong> Go to your nearest SASSA branch or mobile unit.</li><li><strong>Bring Documents:</strong> Carry your South African ID (smart ID preferred), or alternative IDs like green ID book or Home Affairs receipts.</li><li><strong>Biometric Capture:</strong> Staff will scan your fingerprints or face using electronic Know Your Client (eKYC) technology. The process takes minutes.</li><li><strong>Receive Confirmation:</strong> Get a reference number to track your application.</li></ol><p><strong>Important:</strong> Applications without biometrics will be flagged for review, delaying payments. Visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a> or check our <a href='/guides'>biometrics guide</a> for office locations and tips.</p>",
+    "answer": "<p>To complete the mandatory biometric enrolment since 1 September 2025:</p><ol><li><strong>Visit a SASSA Office:</strong> Go to your nearest SASSA branch or mobile unit.</li><li><strong>Bring Documents:</strong> Carry your South African ID (smart ID preferred), or alternative IDs like green ID book or Home Affairs receipts.</li><li><strong>Biometric Capture:</strong> Staff will scan your fingerprints or face using electronic Know Your Client (eKYC) technology. The process takes minutes.</li><li><strong>Receive Confirmation:</strong> Get a reference number to track your application.</li></ol><p><strong>Important:</strong> Applications without biometrics will be flagged for review, delaying payments. Visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a> or check our <a href='/guides'>biometrics guide</a> for office locations and tips.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric process 2026",
@@ -732,7 +732,7 @@
       "biometric verification"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -749,7 +749,7 @@
   {
     "id": "faq-028",
     "question": "What happens if I don’t complete the SASSA biometric enrolment in 2026?",
-    "answer": "<p>If you fail to complete the mandatory biometric enrolment starting 1 September 2026:</p><ul><li><strong>New Applicants:</strong> Your grant application will be placed under review and not processed until biometrics are captured.</li><li><strong>Existing Beneficiaries:</strong> If flagged for review (e.g., due to alternative IDs or suspicious activity), your grant may be suspended until you comply.</li><li><strong>Deadline Risks:</strong> Missing deadlines, like the 22 June 2026 biometric update for some beneficiaries, could lead to permanent grant suspension.</li></ul><p><strong>Action:</strong> Visit a SASSA office with your ID to enroll. Check notifications via SMS or <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a>. See our <a href='/guides'>biometrics guide</a> for details.</p>",
+    "answer": "<p>If you fail to complete the mandatory biometric enrolment (which has applied since 1 September 2025):</p><ul><li><strong>New Applicants:</strong> Your grant application will be placed under review and not processed until biometrics are captured.</li><li><strong>Existing Beneficiaries:</strong> If flagged for review (e.g., due to alternative IDs or suspicious activity), your grant may be suspended until you comply.</li><li><strong>Deadline Risks:</strong> Missing a deadline set by SASSA can lead to grant suspension until you complete the process.</li></ul><p><strong>Action:</strong> Visit a SASSA office with your ID to enroll. Check notifications via SMS or <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a>. See our <a href='/guides'>biometrics guide</a> for details.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric non-compliance 2026",
@@ -758,7 +758,7 @@
       "eKYC"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -775,7 +775,7 @@
   {
     "id": "faq-029",
     "question": "Will elderly SASSA beneficiaries need to provide biometrics in 2026?",
-    "answer": "<p>Elderly SASSA beneficiaries (60+ years, receiving Old Age Grants) are not immediately required to provide biometrics unless they are:</p><ul><li><strong>New Applicants:</strong> Applying for a grant after 1 September 2026.</li><li><strong>Flagged for Review:</strong> Due to alternative IDs, data updates, or suspected fraud.</li><li><strong>Updating Details:</strong> Changing payment methods or personal information.</li></ul><p><strong>Concerns:</strong> Some elderly beneficiaries worry about unreadable fingerprints due to age. SASSA offers facial recognition as an alternative. For mobility issues, contact 0800 60 1011 to arrange assistance or mobile unit visits. Check our <a href='/guides'>biometrics guide</a> for support options.</p>",
+    "answer": "<p>Elderly SASSA beneficiaries (60+ years, receiving Old Age Grants) are not immediately required to provide biometrics unless they are:</p><ul><li><strong>New Applicants:</strong> Applying for a grant after 1 September 2025.</li><li><strong>Flagged for Review:</strong> Due to alternative IDs, data updates, or suspected fraud.</li><li><strong>Updating Details:</strong> Changing payment methods or personal information.</li></ul><p><strong>Concerns:</strong> Some elderly beneficiaries worry about unreadable fingerprints due to age. SASSA offers facial recognition as an alternative. For mobility issues, contact 0800 60 1011 to arrange assistance or mobile unit visits. Check our <a href='/guides'>biometrics guide</a> for support options.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA elderly biometrics 2026",
@@ -784,7 +784,7 @@
       "facial recognition"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -801,7 +801,7 @@
   {
     "id": "faq-030",
     "question": "How does the SASSA biometric system prevent fraud in 2026?",
-    "answer": "<p>The SASSA biometric system, mandatory from 1 September 2026, prevents fraud by:</p><ul><li><strong>Verifying Identity:</strong> Fingerprints and facial recognition ensure applicants are authentic and alive.</li><li><strong>Reducing Duplicates:</strong> Detects multiple applications using the same ID.</li><li><strong>Stopping Forgery:</strong> Replaces unreliable green ID checks with secure eKYC technology.</li><li><strong>Flagging Issues:</strong> Applications without biometrics are reviewed, preventing unauthorized payments.</li></ul><p><strong>Impact:</strong> Identity theft attempts and payments made against deceased beneficiaries have been reported in past years, highlighting the need for this system. Learn more on our <a href='/scam-alert'>fraud prevention page</a> or visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>.</p>",
+    "answer": "<p>The SASSA biometric system, mandatory from 1 September 2025, prevents fraud by:</p><ul><li><strong>Verifying Identity:</strong> Fingerprints and facial recognition ensure applicants are authentic and alive.</li><li><strong>Reducing Duplicates:</strong> Detects multiple applications using the same ID.</li><li><strong>Stopping Forgery:</strong> Replaces unreliable green ID checks with secure eKYC technology.</li><li><strong>Flagging Issues:</strong> Applications without biometrics are reviewed, preventing unauthorized payments.</li></ul><p><strong>Impact:</strong> Identity theft attempts and payments made against deceased beneficiaries have been reported in past years, highlighting the need for this system. Learn more on our <a href='/scam-alert'>fraud prevention page</a> or visit <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA fraud prevention 2026",
@@ -810,7 +810,7 @@
       "eKYC"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Fraud Prevention",
@@ -827,7 +827,7 @@
   {
     "id": "faq-031",
     "question": "What should I do if I can’t visit a SASSA office for biometric enrolment?",
-    "answer": "<p>If you can’t visit a SASSA office for biometric enrolment due to mobility issues, illness, or remote location:</p><ol><li><strong>Contact SASSA:</strong> Call 0800 60 1011 or WhatsApp 082 046 8553 to request assistance.</li><li><strong>Mobile Units:</strong> SASSA has mobile units for remote areas; check schedules on <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>.</li><li><strong>Proxy Assistance:</strong> Authorize a trusted person with a signed affidavit and your ID.</li><li><strong>Home Visits:</strong> Request a home visit for elderly or disabled beneficiaries.</li></ol><p><strong>Tip:</strong> Act promptly to avoid payment delays. See our <a href='/guides'>biometrics guide</a> for more options.</p>",
+    "answer": "<p>If you can’t visit a SASSA office for biometric enrolment due to mobility issues, illness, or remote location:</p><ol><li><strong>Contact SASSA:</strong> Call 0800 60 1011 or WhatsApp 082 601 0111 to request assistance.</li><li><strong>Mobile Units:</strong> SASSA has mobile units for remote areas; check schedules on <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>.</li><li><strong>Proxy Assistance:</strong> Authorize a trusted person with a signed affidavit and your ID.</li><li><strong>Home Visits:</strong> Request a home visit for elderly or disabled beneficiaries.</li></ol><p><strong>Tip:</strong> Act promptly to avoid payment delays. See our <a href='/guides'>biometrics guide</a> for more options.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric access 2026",
@@ -853,7 +853,7 @@
   {
     "id": "faq-032",
     "question": "Is my biometric data safe with SASSA in 2026?",
-    "answer": "<p>SASSA assures that biometric data (fingerprints, facial scans) collected from 1 September 2026 is stored securely under strict privacy protocols. However, concerns exist due to the sensitivity of biometric information.</p><h4>Safety Measures:</h4><ul><li><strong>Encryption:</strong> Data is encrypted and stored in secure databases.</li><li><strong>Access Control:</strong> Only authorized staff access biometric records.</li><li><strong>Compliance:</strong> Aligns with South Africa’s POPIA (Protection of Personal Information Act).</li></ul><p><strong>Concerns:</strong> Some experts warn of potential hacking risks. Report suspicious activity to SASSA at 0800 60 10 11. Visit our <a href='/privacy-policy'>privacy guide</a> for tips on protecting your data.</p>",
+    "answer": "<p>SASSA assures that biometric data (fingerprints, facial scans) collected from 1 September 2025 is stored securely under strict privacy protocols. However, concerns exist due to the sensitivity of biometric information.</p><h4>Safety Measures:</h4><ul><li><strong>Encryption:</strong> Data is encrypted and stored in secure databases.</li><li><strong>Access Control:</strong> Only authorized staff access biometric records.</li><li><strong>Compliance:</strong> Aligns with South Africa’s POPIA (Protection of Personal Information Act).</li></ul><p><strong>Concerns:</strong> Some experts warn of potential hacking risks. Report suspicious activity to SASSA at 0800 60 10 11. Visit our <a href='/privacy-policy'>privacy guide</a> for tips on protecting your data.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA biometric safety 2026",
@@ -862,7 +862,7 @@
       "secure data"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Privacy Guide",
@@ -957,7 +957,7 @@
   {
     "id": "faq-036",
     "question": "Can refugees or asylum seekers apply for SASSA grants in 2026?",
-    "answer": "<p>Refugees and asylum seekers with valid permits can apply for certain SASSA grants in 2026, but restrictions apply:</p><h4>Eligible Grants:</h4><ul><li>Child Support Grant</li><li>Disability Grant</li><li>Foster Child Grant</li><li>Care Dependency Grant</li></ul><h4>Not Eligible:</h4><ul><li>Social Relief of Distress (SRD) Grant</li><li>Old Age Grant</li></ul><h4>Documents Needed:</h4><ul><li>Valid refugee/asylum seeker permit</li><li>UNHCR documentation</li><li>Proof of income</li><li>Child’s birth certificate (for child-related grants)</li></ul><p><strong>Process:</strong> Apply at a SASSA office; biometric enrolment is mandatory from September 2026. Check our <a href='/guides'>eligibility guide</a> or call 0800 60 10 11.</p>",
+    "answer": "<p>Refugees and asylum seekers with valid permits can apply for certain SASSA grants in 2026:</p><h4>Eligible Grants:</h4><ul><li><strong>Social Relief of Distress (SRD) Grant</strong> - refugees, asylum seekers with a valid section 22 permit, permanent residents, and special permit holders are eligible, provided they meet the income criteria (monthly income under R624)</li><li>Child Support Grant</li><li>Disability Grant</li><li>Foster Child Grant</li><li>Care Dependency Grant</li></ul><h4>Not Eligible:</h4><ul><li>Old Age Grant (restricted to South African citizens and permanent residents)</li></ul><h4>Documents Needed:</h4><ul><li>Valid refugee/asylum seeker permit issued by Home Affairs</li><li>UNHCR documentation</li><li>Proof of income</li><li>Child's birth certificate (for child-related grants)</li></ul><p><strong>Process:</strong> For the SRD grant you apply online at srd.sassa.gov.za using your permit number; for permanent grants, apply at a SASSA office. Biometric enrolment has been mandatory since 1 September 2025. Check our <a href='/guides'>eligibility guide</a> or call 0800 60 10 11.</p>",
     "category": "Eligibility",
     "tags": [
       "SASSA refugee grant 2026",
@@ -966,7 +966,7 @@
       "non-citizen grants"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Eligibility Guide",
@@ -1009,7 +1009,7 @@
   {
     "id": "faq-038",
     "question": "Why was my SASSA grant suspended in 2026?",
-    "answer": "<p>Your SASSA grant may be suspended in 2026 for reasons such as:</p><ul><li><strong>Non-Collection:</strong> Uncollected payments for 3+ months (see FAQ-017).</li><li><strong>Biometric Non-Compliance:</strong> Failure to provide fingerprints or facial scans (from September 2026).</li><li><strong>Income Changes:</strong> Undisclosed income exceeding means test thresholds.</li><li><strong>Fraud Flags:</strong> Suspected double-dipping or identity issues (e.g., 210,000 suspensions in July 2026).</li></ul><p><strong>Action:</strong> Visit a SASSA office with your ID, reference number, and updated documents. Check status at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a>. See our <a href='/guides'>payment issues guide</a>.</p>",
+    "answer": "<p>Your SASSA grant may be suspended in 2026 for reasons such as:</p><ul><li><strong>Non-Collection:</strong> Uncollected payments for 3+ months (see FAQ-017).</li><li><strong>Biometric Non-Compliance:</strong> Failure to provide fingerprints or facial scans when required (mandatory enrolment began 1 September 2025).</li><li><strong>Income Changes:</strong> Undisclosed income exceeding means test thresholds.</li><li><strong>Fraud Flags:</strong> Suspected double-dipping or identity issues.</li></ul><p><strong>Action:</strong> Visit a SASSA office with your ID, reference number, and updated documents. Check status at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a>. See our <a href='/guides'>payment issues guide</a>.</p>",
     "category": "Payment Issues",
     "tags": [
       "SASSA grant suspension 2026",
@@ -1018,7 +1018,7 @@
       "double-dipping"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Payment Issues Guide",
@@ -1061,7 +1061,7 @@
   {
     "id": "faq-040",
     "question": "What is the SASSA grant review process in 2026?",
-    "answer": "<p>The SASSA grant review process in 2026 ensures continued eligibility for grants. It involves:</p><ul><li><strong>Periodic Checks:</strong> SASSA reviews income, residence, or disability status every 1-2 years.</li><li><strong>Biometric Verification:</strong> From September 2026, reviews may require fingerprints or facial scans.</li><li><strong>Notifications:</strong> You’ll receive an SMS or letter to submit updated documents.</li><li><strong>Consequences:</strong> Failure to comply may lead to suspension.</li></ul><p><strong>Steps:</strong> Visit a SASSA office with ID, bank statements, and proof of income. Check status at <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>. See our <a href='/guides'>grant reviews guide</a>.</p>",
+    "answer": "<p>The SASSA grant review process in 2026 ensures continued eligibility for grants. It involves:</p><ul><li><strong>Periodic Checks:</strong> SASSA reviews income, residence, or disability status every 1-2 years.</li><li><strong>Biometric Verification:</strong> Since September 2025, reviews may require fingerprints or facial scans.</li><li><strong>Notifications:</strong> You’ll receive an SMS or letter to submit updated documents.</li><li><strong>Consequences:</strong> Failure to comply may lead to suspension.</li></ul><p><strong>Steps:</strong> Visit a SASSA office with ID, bank statements, and proof of income. Check status at <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>. See our <a href='/guides'>grant reviews guide</a>.</p>",
     "category": "Applications",
     "tags": [
       "SASSA grant review 2026",
@@ -1070,7 +1070,7 @@
       "grant suspension"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Grant Reviews Guide",
@@ -1087,7 +1087,7 @@
   {
     "id": "faq-041",
     "question": "Can I apply for a SASSA grant online in 2026?",
-    "answer": "<p>In 2026, online applications are available only for the Social Relief of Distress (SRD) Grant:</p><h4>Process:</h4><ol><li>Visit <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a>.</li><li>Enter your ID and mobile number.</li><li>Complete biometric verification (from September 2026) via a secure link or office visit.</li><li>Submit bank details and income information.</li></ol><h4>Other Grants:</h4><ul><li>Child Support, Disability, Old Age, etc., require in-person applications at SASSA offices.</li></ul><p><strong>Tip:</strong> Ensure your details match Home Affairs records. Check our <a href='/guides'>application guide</a> for details.</p>",
+    "answer": "<p>In 2026, online applications are available only for the Social Relief of Distress (SRD) Grant:</p><h4>Process:</h4><ol><li>Visit <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a>.</li><li>Enter your ID and mobile number.</li><li>Complete biometric verification (since September 2025) via a secure link or office visit.</li><li>Submit bank details and income information.</li></ol><h4>Other Grants:</h4><ul><li>Child Support, Disability, Old Age, etc., require in-person applications at SASSA offices.</li></ul><p><strong>Tip:</strong> Ensure your details match Home Affairs records. Check our <a href='/guides'>application guide</a> for details.</p>",
     "category": "Applications",
     "tags": [
       "SASSA online application 2026",
@@ -1096,7 +1096,7 @@
       "grant application"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Application Guide",
@@ -1139,7 +1139,7 @@
   {
     "id": "faq-043",
     "question": "How do I know if my SASSA grant application is flagged for review in 2026?",
-    "answer": "<p>Your SASSA grant application may be flagged for review if:</p><ul><li><strong>Missing Biometrics:</strong> No fingerprints or facial scans provided (mandatory from September 2026).</li><li><strong>Incomplete Documents:</strong> Missing ID, bank statements, or income proof.</li><li><strong>Suspicious Activity:</strong> Suspected fraud or double-dipping.</li><li><strong>Data Mismatch:</strong> Details don’t match Home Affairs records.</li></ul><p><strong>Notification:</strong> SASSA will send an SMS or letter. Check status at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a> or SMS your ID to 34548 (R1). Visit our <a href='/'>tracking guide</a>.</p>",
+    "answer": "<p>Your SASSA grant application may be flagged for review if:</p><ul><li><strong>Missing Biometrics:</strong> No fingerprints or facial scans provided (mandatory since September 2025).</li><li><strong>Incomplete Documents:</strong> Missing ID, bank statements, or income proof.</li><li><strong>Suspicious Activity:</strong> Suspected fraud or double-dipping.</li><li><strong>Data Mismatch:</strong> Details don’t match Home Affairs records.</li></ul><p><strong>Notification:</strong> SASSA will send an SMS or letter. Check status at <a href='https://srd.sassa.gov.za'>srd.sassa.gov.za</a> or SMS your ID to 34548 (R1). Visit our <a href='/'>tracking guide</a>.</p>",
     "category": "Applications",
     "tags": [
       "SASSA application review 2026",
@@ -1148,7 +1148,7 @@
       "status check"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Application Tracking",
@@ -1165,7 +1165,7 @@
   {
     "id": "faq-044",
     "question": "Can I use a smart ID for SASSA biometric enrolment in 2026?",
-    "answer": "<p>Yes, a smart ID is preferred for SASSA biometric enrolment starting 1 September 2026. It aligns with the electronic Know Your Client (eKYC) system for faster verification. Other acceptable IDs include:</p><ul><li>Green ID book</li><li>Home Affairs receipts</li><li>Refugee/asylum seeker permits</li></ul><p><strong>Tip:</strong> Ensure your ID is valid and matches Home Affairs records. Visit a SASSA office for enrolment. Check our <a href='/guides'>biometrics guide</a> or call 0800 60 10 11 for assistance.</p>",
+    "answer": "<p>Yes, a smart ID is preferred for SASSA biometric enrolment since 1 September 2025. It aligns with the electronic Know Your Client (eKYC) system for faster verification. Other acceptable IDs include:</p><ul><li>Green ID book</li><li>Home Affairs receipts</li><li>Refugee/asylum seeker permits</li></ul><p><strong>Tip:</strong> Ensure your ID is valid and matches Home Affairs records. Visit a SASSA office for enrolment. Check our <a href='/guides'>biometrics guide</a> or call 0800 60 10 11 for assistance.</p>",
     "category": "Biometrics",
     "tags": [
       "SASSA smart ID 2026",
@@ -1174,7 +1174,7 @@
       "valid ID"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -1191,7 +1191,7 @@
   {
     "id": "faq-045",
     "question": "Why did SASSA pay grants to deceased beneficiaries?",
-    "answer": "<p>In past years SASSA has acknowledged payments being made against the records of deceased beneficiaries due to system vulnerabilities, such as:</p><ul><li><strong>Weak Verification:</strong> Lack of biometric checks before September 2026.</li><li><strong>Fraudulent Claims:</strong> Forged IDs or unreported deaths.</li><li><strong>System Delays:</strong> Slow updates from Home Affairs records.</li></ul><p><strong>Solution:</strong> The mandatory biometric system from September 2026 ensures proof of life. Report suspected fraud to <a href='mailto:fraud@sassa.gov.za'>fraud@sassa.gov.za</a>. Visit our <a href='/scam-alert'>fraud prevention page</a>.</p>",
+    "answer": "<p>In past years SASSA has acknowledged payments being made against the records of deceased beneficiaries due to system vulnerabilities, such as:</p><ul><li><strong>Weak Verification:</strong> Lack of biometric checks before September 2025.</li><li><strong>Fraudulent Claims:</strong> Forged IDs or unreported deaths.</li><li><strong>System Delays:</strong> Slow updates from Home Affairs records.</li></ul><p><strong>Solution:</strong> The mandatory biometric system since September 2025 ensures proof of life. Report suspected fraud to <a href='mailto:fraud@sassa.gov.za'>fraud@sassa.gov.za</a>. Visit our <a href='/scam-alert'>fraud prevention page</a>.</p>",
     "category": "Fraud & Scams",
     "tags": [
       "SASSA deceased payments 2026",
@@ -1200,7 +1200,7 @@
       "proof of life"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Fraud Prevention",
@@ -1217,7 +1217,7 @@
   {
     "id": "faq-046",
     "question": "How do I update my SASSA payment method to a bank account in 2026?",
-    "answer": "<p>To update your SASSA payment method to a bank account in 2026:</p><ol><li><strong>Visit a SASSA Office:</strong> Bring your ID and bank confirmation letter (not older than 3 months).</li><li><strong>Complete Form:</strong> Fill out the payment method change form.</li><li><strong>Biometric Verification:</strong> From September 2026, provide fingerprints or facial scans.</li><li><strong>Wait for Processing:</strong> Takes 1-2 months; check status via 0800 60 10 11.</li></ol><p><strong>Tip:</strong> Ensure bank details match your ID. Visit our <a href='/guides'>payment guide</a>.</p>",
+    "answer": "<p>To update your SASSA payment method to a bank account in 2026:</p><ol><li><strong>Visit a SASSA Office:</strong> Bring your ID and bank confirmation letter (not older than 3 months).</li><li><strong>Complete Form:</strong> Fill out the payment method change form.</li><li><strong>Biometric Verification:</strong> Since September 2025, provide fingerprints or facial scans.</li><li><strong>Wait for Processing:</strong> Takes 1-2 months; check status via 0800 60 10 11.</li></ol><p><strong>Tip:</strong> Ensure bank details match your ID. Visit our <a href='/guides'>payment guide</a>.</p>",
     "category": "Payment Methods",
     "tags": [
       "SASSA bank account 2026",
@@ -1226,7 +1226,7 @@
       "direct deposit"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Payment Methods Guide",
@@ -1269,7 +1269,7 @@
   {
     "id": "faq-048",
     "question": "How do I contact SASSA for urgent issues in 2026?",
-    "answer": "<p>For urgent SASSA issues in 2026 (e.g., delayed payments, suspensions):</p><h4>Contact Options:</h4><ul><li><strong>Toll-Free:</strong> 0800 60 10 11 (Mon-Fri, 8 AM-4 PM)</li><li><strong>WhatsApp:</strong> 082 046 8553</li><li><strong>Email:</strong> <a href='mailto:GrantEnquiries@sassa.gov.za'>GrantEnquiries@sassa.gov.za</a></li><li><strong>Office Visit:</strong> Find locations at <a href='https://www.sassa.gov.za/office-locator'>www.sassa.gov.za/office-locator</a></li></ul><p><strong>Tip:</strong> Have your ID and reference number ready. Visit our <a href='/about'>contact guide</a> for more options.</p>",
+    "answer": "<p>For urgent SASSA issues in 2026 (e.g., delayed payments, suspensions):</p><h4>Contact Options:</h4><ul><li><strong>Toll-Free:</strong> 0800 60 10 11 (Mon-Fri, 8 AM-4 PM)</li><li><strong>WhatsApp:</strong> 082 601 0111</li><li><strong>Email:</strong> <a href='mailto:GrantEnquiries@sassa.gov.za'>GrantEnquiries@sassa.gov.za</a></li><li><strong>Office Visit:</strong> Find locations at <a href='https://www.sassa.gov.za/office-locator'>www.sassa.gov.za/office-locator</a></li></ul><p><strong>Tip:</strong> Have your ID and reference number ready. Visit our <a href='/about'>contact guide</a> for more options.</p>",
     "category": "Contact",
     "tags": [
       "SASSA contact 2026",
@@ -1295,7 +1295,7 @@
   {
     "id": "faq-049",
     "question": "Can I collect my SASSA grant at a retailer like Checkers in 2026?",
-    "answer": "<p>Yes, you can collect your SASSA grant at retailers like Checkers, Shoprite, or Pick n Pay in 2026 if you use a SASSA card or cash paypoint.</p><h4>Steps:</h4><ol><li>Bring your South African ID and SASSA card.</li><li>Verify identity (biometrics may be required from September 2026).</li><li>Collect funds at the till or designated counter.</li></ol><p><strong>Note:</strong> Check payment schedules at <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>. Visit our <a href='/guides'>payment guide</a> for retailer locations.</p>",
+    "answer": "<p>Yes, you can collect your SASSA grant at retailers like Checkers, Shoprite, or Pick n Pay in 2026 if you use a SASSA card or cash paypoint.</p><h4>Steps:</h4><ol><li>Bring your South African ID and SASSA card.</li><li>Verify identity (biometrics may be required since September 2025).</li><li>Collect funds at the till or designated counter.</li></ol><p><strong>Note:</strong> Check payment schedules at <a href='https://www.sassa.gov.za'>www.sassa.gov.za</a>. Visit our <a href='/guides'>payment guide</a> for retailer locations.</p>",
     "category": "Payment Methods",
     "tags": [
       "SASSA retailer payment 2026",
@@ -1304,7 +1304,7 @@
       "biometric verification"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-08-20",
     "relatedLinks": [
       {
         "title": "SASSA Payment Methods Guide",
@@ -1349,7 +1349,11 @@
     "question": "What does 'Referred' status mean for SASSA SRD in 2026?",
     "answer": "<p>'Referred' status means your application was flagged during the automated cross-check with internal or external databases (like SARS or Home Affairs). It requires a manual review by a SASSA official to verify that you meet the income threshold or citizenship requirements.</p>",
     "category": "Status Meanings",
-    "tags": ["referred status", "manual review", "SRD R370"],
+    "tags": [
+      "referred status",
+      "manual review",
+      "SRD R370"
+    ],
     "helpful": 0,
     "lastUpdated": "2026-03-10"
   },
@@ -1358,7 +1362,11 @@
     "question": "Why is my SASSA status 'Bank Details Pending' for months?",
     "answer": "<p>This usually happens because you haven't selected a payment method or the banking details provided did not pass the verification test. Ensure the account belongs to you and is a personal, active account. Log in to the SRD portal to re-submit your details if necessary.</p>",
     "category": "Banking",
-    "tags": ["bank details pending", "payment method", "verification"],
+    "tags": [
+      "bank details pending",
+      "payment method",
+      "verification"
+    ],
     "helpful": 0,
     "lastUpdated": "2026-03-10"
   },
@@ -1367,7 +1375,11 @@
     "question": "I received an SMS about a SASSA grant review — is it real?",
     "answer": "<p>Genuine SASSA review SMS messages come from registered short codes (not regular cellphone numbers or WhatsApp). They tell you to visit a SASSA office and list the documents you need to bring. They never ask for your PIN, OTP, or banking password. If the message contains a clickable link, demands payment, or creates false urgency, it is a scam. When in doubt, call the SASSA helpline on <strong>0800 60 10 11</strong> to verify. For detailed guidance, see our guide on <a href='/guides/sassa-update-information'>what to do if SASSA asks you to update your information</a>.</p>",
     "category": "Scams & Fraud",
-    "tags": ["review sms", "genuine sassa message", "scam identification"],
+    "tags": [
+      "review sms",
+      "genuine sassa message",
+      "scam identification"
+    ],
     "helpful": 0,
     "lastUpdated": "2026-07-29"
   },
@@ -1376,7 +1388,11 @@
     "question": "What documents do I need for a SASSA grant review appointment?",
     "answer": "<p>For a grant review appointment, bring: your original South African ID (or alternative ID document), proof of residence dated within 3 months, your SASSA card if you have one, proof of income (payslips, bank statements, or an affidavit if unemployed), and any documents SASSA specifically requested in their SMS or letter. Bring originals plus photocopies. For a full walkthrough, see our <a href='/guides/grant-verification-process'>grant review and verification guide</a>.</p>",
     "category": "Grant Management",
-    "tags": ["grant review documents", "review appointment", "what to bring"],
+    "tags": [
+      "grant review documents",
+      "review appointment",
+      "what to bring"
+    ],
     "helpful": 0,
     "lastUpdated": "2026-07-29"
   }

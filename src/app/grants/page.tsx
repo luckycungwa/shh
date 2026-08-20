@@ -134,7 +134,7 @@ export default function GrantsListingPage() {
       </section>
 
       <section className="text-center mt-20">
-        <Card className="bg-primary-black text-white p-12 rounded-[3rem]">
+        <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Not Sure Which Grant Applies to You?</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Take our eligibility check or browse the detailed guide for each grant type.</p>

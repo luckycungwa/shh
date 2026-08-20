@@ -145,7 +145,7 @@ export default function StatusListingPage() {
       </section>
 
       <section className="text-center mt-20">
-        <Card className="bg-primary-black text-white p-12 rounded-[3rem]">
+        <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Check Your Status Now</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Use the official SASSA SRD portal to check your current grant status.</p>

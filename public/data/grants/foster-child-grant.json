@@ -1,13 +1,23 @@
 {
   "title": "SASSA Foster Child Grant 2026: Eligibility, Amount & Application Guide",
-  "description": "Your guide to the SASSA Foster Child Grant (R1,295/month). Court order requirements, who qualifies, required documents, payment amounts, and key differences from the Child Support Grant.",
+  "description": "Your guide to the SASSA Foster Child Grant (R1,290/month). Court order requirements, who qualifies, required documents, payment amounts, and key differences from the Child Support Grant.",
   "slug": "grants/foster-child-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-07-07",
+  "last_updated": "2026-08-20",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
-  "sources": ["https://www.sassa.gov.za", "https://www.gov.za", "https://www.dsd.gov.za"],
-  "related": ["/grants/child-support-grant", "/grants/care-dependency-grant", "/status/approved", "/faq", "/eligibility-check"],
+  "sources": [
+    "https://www.sassa.gov.za",
+    "https://www.gov.za",
+    "https://www.dsd.gov.za"
+  ],
+  "related": [
+    "/grants/child-support-grant",
+    "/grants/care-dependency-grant",
+    "/status/approved",
+    "/faq",
+    "/eligibility-check"
+  ],
   "sections": [
     {
       "type": "intro",
@@ -90,9 +100,18 @@
       "type": "references",
       "title": "References",
       "references": [
-        { "title": "SASSA Official Website", "url": "https://www.sassa.gov.za" },
-        { "title": "Children's Act 2005", "url": "https://www.gov.za/documents/childrens-act" },
-        { "title": "Department of Social Development", "url": "https://www.dsd.gov.za" }
+        {
+          "title": "SASSA Official Website",
+          "url": "https://www.sassa.gov.za"
+        },
+        {
+          "title": "Children's Act 2005",
+          "url": "https://www.gov.za/documents/childrens-act"
+        },
+        {
+          "title": "Department of Social Development",
+          "url": "https://www.dsd.gov.za"
+        }
       ]
     }
   ]

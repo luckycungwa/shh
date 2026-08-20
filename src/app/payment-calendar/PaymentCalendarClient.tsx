@@ -90,16 +90,16 @@ export default function PaymentCalendarClient({
                   {paymentDates.map((p, i) => (
                     <div key={i} className="bg-gray-50 dark:bg-gray-900 p-5 rounded-2xl border border-gray-100 dark:border-gray-800 text-center space-y-2">
                       <p className="text-xs font-black uppercase text-gray-400">{p.grant}</p>
-                      <p className="text-3xl font-black text-primary-gold">{new Date(p.date).getDate()}</p>
+                      <p className="text-3xl font-black text-primary-gold">{p.date === "TBC" ? "TBC" : new Date(p.date).getDate()}</p>
                       <p className="font-bold text-sm">{p.day}</p>
-                      <p className="text-[10px] text-gray-500">{new Date(p.date).toLocaleDateString("en-ZA", { month: "long" })}</p>
+                      <p className="text-[10px] text-gray-500">{p.date === "TBC" ? "Date to be confirmed" : new Date(p.date).toLocaleDateString("en-ZA", { month: "long" })}</p>
                     </div>
                   ))}
                 </div>
-                {getCurrentMonthLabel().startsWith("August") && (
+                {paymentDates.some((p) => p.date === "TBC") && (
                   <div className="mt-6 p-4 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800 rounded-2xl">
                     <p className="text-sm text-amber-800 dark:text-amber-300">
-                      <strong>Long weekend note:</strong> Women&apos;s Day falls on Sunday 9 August 2026 and is observed on Monday 10 August 2026. Main grant payments (4&ndash;7 August) are unaffected; SRD R370 runs later in the month. Expect longer queues at ATMs and pay-out points &mdash; withdraw early if you can.
+                      <strong>Not confirmed:</strong> the September 2026 SRD R370 date and the fourth payment day for grants under review have not been officially announced by SASSA. Once a &ldquo;Pay Day&rdquo; date appears on your status, that is your payment date &mdash; check your <a href="/status-check" className="underline font-bold">status</a> regularly.
                     </p>
                   </div>
                 )}
@@ -178,6 +178,9 @@ export default function PaymentCalendarClient({
                   ))}
                 </tbody>
               </table>
+              <p className="text-xs text-gray-500 mt-2">
+                SRD R370 dates shown are the typical month-end batch window and are subject to official confirmation each month. See the <a href="/guides/missing-grant-payment-guide" className="text-primary-gold underline font-bold">missing payment guide</a> if you were approved but not paid.
+              </p>
             </div>
           </div>
 
@@ -206,14 +209,20 @@ export default function PaymentCalendarClient({
 
           <div className="p-8 border border-gray-100 dark:border-gray-800 rounded-[2rem] space-y-6">
             <h4 className="text-xl font-bold flex items-center gap-2"><FaInfoCircle className="text-blue-500" /> SRD R370 Dates</h4>
-            {/* SRD window below is derived from SRD_CONFIG (25th → month-end). The August 2026
-                entry in paymentDates.json remains "TBC — last week of month" — see TODO(recheck)
-                in src/lib/config.ts. Re-confirm via srd.sassa.gov.za before treating as final. */}
-            <p className="text-sm text-gray-600 leading-relaxed">The Social Relief of Distress (SRD) R370 grant is paid in a batch window each month.</p>
+            {/* SRD window below is the typical monthly batch pattern (25th → month-end). The
+                September 2026 entry in paymentDates.json is "TBC — not officially confirmed".
+                Re-confirm via srd.sassa.gov.za before treating as final. */}
+            <p className="text-sm text-gray-600 leading-relaxed">The Social Relief of Distress (SRD) R370 grant is paid in a batch window each month, typically in the last week.</p>
             <p className="text-sm font-bold text-primary-gold">
               {new Date(fullSchedule[0].srdStart).toLocaleDateString("en-ZA", { day: "numeric", month: "long" })} – {new Date(fullSchedule[0].srdEnd).toLocaleDateString("en-ZA", { day: "numeric", month: "long", year: "numeric" })}
             </p>
+            <p className="text-xs text-amber-700 dark:text-amber-400 font-semibold">
+              Typical batch window only — the exact September 2026 date is not yet officially confirmed. Watch your status for a &ldquo;Pay Day&rdquo; date.
+            </p>
             <Divider />
+            <p className="text-xs text-gray-500 leading-relaxed">
+              Read the full guide: <a href="/grants/srd-r370-grant" className="text-primary-gold underline font-bold">SRD R370 Grant Guide</a>
+            </p>
             <Button variant="flat" color="secondary" fullWidth startContent={<FaPrint />}>Print Schedule</Button>
           </div>
         </aside>

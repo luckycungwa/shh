@@ -7,7 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
 import StatusCheckForm from "../../components/StatusCheckForm";
 
-const currentMonthYear = "August 2026";
+const currentMonthYear = "September 2026";
 const currentYear = "2026";
 
 export const metadata: Metadata = {
@@ -58,7 +58,23 @@ export default function StatusCheckPage() {
     },
     {
       q: "Can I check my status without a phone number?",
-      a: "No. You must have the mobile number that was used to register the application to verify your identity and receive security codes if prompted."
+      a: "No, the mobile number registered to your application is required to verify your identity on the official portal, USSD (*120*69277#), or WhatsApp. If you have lost your phone or no longer have that number, you cannot verify online — contact SASSA on 0800 60 10 11 or visit a SASSA office with your ID, and see our lost phone number guide (/guides/lost-phone-number) for the steps to update your number."
+    },
+    {
+      q: "Why is my SASSA status not updating / stuck on the same status?",
+      a: "Statuses are refreshed around the middle of each month, after SASSA runs its bank and database verification. It is completely normal for your status to stay the same for days or even weeks — it only changes when SASSA updates it, not when you check it. If your status has been stuck on 'Pending' for more than 30 days, or 'Approved' without a Pay Day for more than 3 weeks, contact SASSA on 0800 60 10 11. Do not reapply while your application is still pending — it can delay your file."
+    },
+    {
+      q: "What does 'Pay Day' mean on my SASSA status?",
+      a: "'Pay Day' is the date SASSA releases your payment batch for the month. 'Approved' means you qualify; 'Pay Day' is when the money is actually sent. Once your status shows a Pay Day date, it can take up to 48 working hours for the money to reflect in your bank account. If your status is 'Approved' but there is no Pay Day yet, your payment is still being assigned to a batch — read our Approved status guide (/status/approved) for exactly what to do."
+    },
+    {
+      q: "The SRD portal is not working — how else can I check my status?",
+      a: "If srd.sassa.gov.za is down or slow, use another official channel: dial *120*69277# (free USSD, works without data), WhatsApp 082 601 0111, the Moya App, or call 0800 60 10 11. Do not use unofficial websites or apps that ask for your OTP or banking PIN. The portal is busiest at month-end, so try again later if it is overloaded."
+    },
+    {
+      q: "What is my SASSA reference number and where do I find it?",
+      a: "Your reference number is the application/reference ID that appears on your status check and in your SMS updates. It is shown on the official SRD portal after you log in with your ID and phone number, and in the status-check SMS or WhatsApp replies. Keep it handy when contacting SASSA on 0800 60 10 11 or lodging an appeal — it helps agents find your file faster."
     },
     {
       q: `Does the SRD grant increase in ${currentYear}?`,
@@ -67,6 +83,10 @@ export default function StatusCheckPage() {
     {
       q: "Why did my status change from 'Approved' to 'Declined'?",
       a: "SASSA re-evaluates applications every single month. If you received a payment or a deposit in your bank account that put you over the R624 income threshold, your status for that specific month will be updated to Declined."
+    },
+    {
+      q: "What does 'Approved' but no Pay Day mean?",
+      a: "It means SASSA has verified that you qualify for the month, but your payment has not yet been assigned to a batch. A 'Pay Day' date is usually added within a few days to a week. Keep checking your status — if no Pay Day appears after 3 weeks, contact SASSA on 0800 60 10 11. See our Approved status guide (/status/approved) and the missing grant payment guide (/guides/missing-grant-payment-guide) for what to do next."
     },
     {
       q: "What does 'Bank Details Pending' mean?",
@@ -107,18 +127,18 @@ export default function StatusCheckPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
         <div className="lg:col-span-8">
-           <Card className="p-8 md:p-12 border-2 border-primary-gold/30 shadow-2xl rounded-[3rem] bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+           <Card className="p-1 md:p-12 border-2 border-primary-gold/30 shadow-2xl rounded-[2rem] bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
               <CardBody className="space-y-12">
                  <div className="space-y-6 text-center md:text-left">
-                    <h2 className="text-4xl font-black flex items-center gap-3 justify-center md:justify-start">
-                       <FaUserShield className="text-primary-gold" /> Prepare Your Status Check
+                    <h2 className="text-4xl font-normal flex items-center gap-3 justify-center md:justify-start">
+                       <FaUserShield className="text-primary-gold hidden md:block" /> Check My Status
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400">
                        Enter your ID and phone number below to prepare for the official SASSA portal. Your details stay on your device — we never collect them.
                     </p>
                  </div>
 
-                 <div className="bg-white dark:bg-gray-800 rounded-3xl border-2 border-primary-gold/20 p-8">
+                 <div className="bg-white dark:bg-gray-800 rounded-3xl border-2 border-primary-gold/20 p-4 md:p-8">
                     <StatusCheckForm />
                  </div>
 
@@ -145,7 +165,7 @@ export default function StatusCheckPage() {
                           <FaMobileAlt className="text-purple-500 text-lg flex-shrink-0" />
                           <div>
                              <p className="font-bold text-xs">WhatsApp</p>
-                             <p className="text-sm font-bold">082 046 8553</p>
+                             <p className="text-sm font-bold">082 601 0111</p>
                           </div>
                        </div>
                     </div>
@@ -169,19 +189,31 @@ export default function StatusCheckPage() {
 
            <div className="p-8 bg-primary-gold/5 rounded-[2rem] border border-primary-gold/20">
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-3">
-                 <li>
-                    <NextLink href="/payment-calendar" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
-                       <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
-                       {currentMonthYear} Payment Dates
-                    </NextLink>
-                 </li>
-                 <li>
-                    <NextLink href="/guides/appeal-guide" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
-                       <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
-                       How to Appeal Declined Status
-                    </NextLink>
-                 </li>
+<ul className="space-y-3">
+                  <li>
+                     <NextLink href="/payment-calendar" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        {currentMonthYear} Payment Dates
+                     </NextLink>
+                  </li>
+                  <li>
+                     <NextLink href="/grants/srd-r370-grant" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        Full SRD R370 Grant Guide
+                     </NextLink>
+                  </li>
+                  <li>
+                     <NextLink href="/status/approved" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        Approved but No Pay Day?
+                     </NextLink>
+                  </li>
+                  <li>
+                     <NextLink href="/guides/appeal-guide" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
+                        <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
+                        How to Appeal Declined Status
+                     </NextLink>
+                  </li>
                   <li>
                      <NextLink href="/guides/bank-details-pending-fix" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
                         <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
@@ -262,10 +294,10 @@ export default function StatusCheckPage() {
             Checking your SASSA SRD grant status is straightforward.            Use one of the available channels below.
           </p>
 
-          <div className="bg-white dark:bg-gray-800 p-10 rounded-[3rem] border-2 border-primary-gold/10 space-y-6">
+          <div className="bg-white dark:bg-gray-800 p-10 rounded-[2rem] border-2 border-primary-gold/10 space-y-6">
              <h3 className="text-2xl font-bold">Quick Answer: How do I check my SASSA status for {currentMonthYear}?</h3>
              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                To check your SASSA SRD status for {currentMonthYear}, visit <strong>srd.sassa.gov.za</strong>, enter your <strong>13-digit ID number</strong> and <strong>registered mobile number</strong>, then click submit. You can also dial <strong>*120*3227#</strong> or WhatsApp <strong>082 046 8553</strong>. Statuses are typically updated after the 15th of each month following bank verification.
+                To check your SASSA SRD status for {currentMonthYear}, visit <strong>srd.sassa.gov.za</strong>, enter your <strong>13-digit ID number</strong> and <strong>registered mobile number</strong>, then click submit. You can also dial <strong>*120*69277#</strong> or WhatsApp <strong>082 601 0111</strong>. Statuses are typically updated after the 15th of each month following bank verification.
              </p>
              <div className="flex flex-wrap gap-4 pt-4">
                 <Chip color="primary" variant="flat">ID Number Required</Chip>
@@ -288,17 +320,17 @@ export default function StatusCheckPage() {
              <div className="space-y-4 p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary-gold/30 transition-colors">
                 <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600 font-black text-2xl">02</div>
                 <h3 className="text-xl font-bold">WhatsApp Bot</h3>
-                <p className="text-sm text-gray-500 leading-relaxed"><strong>Best for:</strong> Quick, on-the-go updates. Save <strong>082 046 8553</strong>. It uses minimal data and provides an easy-to-read text summary of your current approval month and reference numbers.</p>
+                <p className="text-sm text-gray-500 leading-relaxed"><strong>Best for:</strong> Quick, on-the-go updates. Save <strong>082 601 0111</strong>. It uses minimal data and provides an easy-to-read text summary of your current approval month and reference numbers.</p>
              </div>
              <div className="space-y-4 p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary-gold/30 transition-colors">
                 <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-orange-600 font-black text-2xl">03</div>
                 <h3 className="text-xl font-bold">USSD Interface</h3>
-                <p className="text-sm text-gray-500 leading-relaxed"><strong>Best for:</strong> Users without smartphones or data. Completely free to use on any network within South Africa by dialing <strong>*120*3227#</strong> or <strong>*120*69277#</strong> from your keypad.</p>
+                <p className="text-sm text-gray-500 leading-relaxed"><strong>Best for:</strong> Users without smartphones or data. Completely free to use on any network within South Africa by dialing <strong>*120*69277#</strong> from your keypad. (The separate code <strong>*120*3210#</strong> connects you to the Postbank grant balance service.)</p>
              </div>
           </div>
         </section>
 
-        <section className="bg-gray-50 dark:bg-gray-900 p-12 rounded-[3rem] border border-gray-100 dark:border-gray-800 space-y-12">
+        <section className="bg-gray-50 dark:bg-gray-900 p-12 rounded-[2rem] border border-gray-100 dark:border-gray-800 space-y-12">
 <header className="space-y-4">
              <h2 className="text-3xl font-black">Understanding Status Meanings & Rejection Codes</h2>
              <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -309,7 +341,7 @@ export default function StatusCheckPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-green-600 text-xl mb-4 flex items-center gap-2"><FaCheckCircle /> APPROVED</p>
-              <p className="text-gray-500 leading-relaxed">Your application was successful for the selected month. Look for a 'Pay Day' date. If no date is shown, it's still being processed for disbursement. Check the <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">{currentMonthYear} payment calendar</NextLink> for batch windows.</p>
+              <p className="text-gray-500 leading-relaxed">Your application was successful for the selected month. Look for a 'Pay Day' date — if none is shown yet, your payment is still being processed for disbursement. Approved does not mean paid yet. Learn more in our <NextLink href="/status/approved" className="text-primary-gold underline font-bold">Approved status guide</NextLink> and check the <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">{currentMonthYear} payment calendar</NextLink> for batch windows.</p>
             </div>
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-blue-600 text-xl mb-4 flex items-center gap-2"><FaSearch /> PENDING</p>
@@ -394,7 +426,7 @@ export default function StatusCheckPage() {
                  </div>
               </div>
               <div className="space-y-6">
-                <Card className="p-10 bg-red-50 dark:bg-red-900/10 rounded-[3rem] border-none shadow-sm">
+                <Card className="p-10 bg-red-50 dark:bg-red-900/10 rounded-[2rem] border-none shadow-sm">
                    <h4 className="font-black text-red-900 dark:text-red-400 text-xl mb-4 flex items-center gap-2"><FaExclamationTriangle /> Common Biometric Failures</h4>
                    <ul className="text-sm text-red-800 dark:text-red-300 space-y-4">
                       <li className="flex gap-3">
@@ -435,12 +467,15 @@ export default function StatusCheckPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
              <div className="space-y-6">
                 <p className="text-lg text-gray-600 dark:text-gray-400">
-                  For <strong>{currentMonthYear}</strong>, the projected payment window is:
+                  For <strong>{currentMonthYear}</strong>, the SRD payment date has <strong>not yet been officially confirmed</strong>. The grant is normally paid in a batch window in the last week of the month:
                 </p>
                 <Card className="p-8 bg-primary-gold/10 border-primary-gold border-2 rounded-[2.5rem] shadow-xl">
-                   <p className="text-center font-black text-3xl text-primary-black mb-2">Last week of the month</p>
-                   <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">Disbursement window</p>
+                   <p className="text-center font-black text-3xl text-primary-black mb-2">TBC — last week of the month</p>
+                   <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">Not yet officially confirmed</p>
                 </Card>
+                <p className="text-sm text-amber-700 dark:text-amber-400 font-semibold">
+                  Do not rely on third-party dates. Check your status on the official SRD portal for a &ldquo;Pay Day&rdquo; date once SASSA confirms, and only collect once you receive the payment SMS.
+                </p>
                 <div className="prose prose-sm dark:prose-invert">
                    <p>Remember these three critical factors regarding your payment:</p>
                    <ul>
@@ -450,22 +485,26 @@ export default function StatusCheckPage() {
                    </ul>
                 </div>
              </div>
-             <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-[3rem] border border-gray-100 dark:border-gray-800">
-                <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {currentMonthYear.split(" ")[0]} Grant Dates</h4>
-                <div className="space-y-4">
-                   <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                      <span className="font-bold">Older Persons</span>
-                      <Chip color="success" variant="flat">{new Date(new Date().getFullYear(), new Date().getMonth(), 2).toLocaleDateString("en-ZA", { month: "short", day: "numeric", year: "numeric" })}</Chip>
-                   </div>
-                   <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                      <span className="font-bold">Disability Grant</span>
-                      <Chip color="success" variant="flat">{new Date(new Date().getFullYear(), new Date().getMonth(), 3).toLocaleDateString("en-ZA", { month: "short", day: "numeric", year: "numeric" })}</Chip>
-                   </div>
-                   <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                      <span className="font-bold">Children's Grants</span>
-                      <Chip color="success" variant="flat">{new Date(new Date().getFullYear(), new Date().getMonth(), 6).toLocaleDateString("en-ZA", { month: "short", day: "numeric", year: "numeric" })}</Chip>
-                   </div>
-                </div>
+             <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800">
+                 <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {currentMonthYear.split(" ")[0]} Grant Dates</h4>
+                 <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+                       <span className="font-bold">Older Persons</span>
+                       <Chip color="success" variant="flat">Wed, 2 Sep 2026</Chip>
+                    </div>
+                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+                       <span className="font-bold">Disability Grant</span>
+                       <Chip color="success" variant="flat">Thu, 3 Sep 2026</Chip>
+                    </div>
+                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+                       <span className="font-bold">Children's Grants</span>
+                       <Chip color="success" variant="flat">Fri, 4 Sep 2026</Chip>
+                    </div>
+                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+                       <span className="font-bold">SRD R370</span>
+                       <Chip color="warning" variant="flat">TBC — not yet confirmed</Chip>
+                    </div>
+                 </div>
                 <div className="mt-8">
                    <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</Button>
                 </div>
@@ -501,7 +540,7 @@ export default function StatusCheckPage() {
               </ul>
            </div>
 
-           <div className="p-10 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-[3rem] bg-gray-50/50 dark:bg-gray-900/50">
+           <div className="p-10 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-[2rem] bg-gray-50/50 dark:bg-gray-900/50">
               <h4 className="text-2xl font-black mb-6 text-center">3 Actionable Steps to Protect Your {currentMonthYear} Eligibility</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                  <div className="text-center space-y-3">
@@ -530,7 +569,7 @@ export default function StatusCheckPage() {
            </p>
 
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="space-y-6 bg-primary-black text-white p-10 rounded-[3rem] shadow-2xl">
+              <div className="space-y-6 bg-primary-black text-white p-10 rounded-[2rem] shadow-2xl">
                  <h3 className="text-2xl font-black text-primary-gold">The Professional Appeal Checklist</h3>
                  <p className="text-secondary-gray text-sm">Follow these steps exactly to increase your chances of success:</p>
                  <ul className="space-y-4">

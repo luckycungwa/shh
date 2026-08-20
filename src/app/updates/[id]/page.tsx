@@ -175,7 +175,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
            </header>
 
            {toc.length > 0 && (
-             <Card className="sticky top-24 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-8 shadow-2xl rounded-[2rem] lg:hidden mb-12">
+              <Card className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 p-8 shadow-2xl rounded-[2rem] lg:hidden mb-12">
                 <CardBody className="p-0 space-y-6">
                    <p className="font-black text-xl flex items-center gap-3"><FaListUl className="text-primary-gold" /> In this article</p>
                    <div className="flex flex-col gap-4">

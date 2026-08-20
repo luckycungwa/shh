@@ -13,7 +13,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins, FaWhatsapp } from "react-icons/fa";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "../ThemeToggle";
@@ -123,8 +123,18 @@ export default function NavbarComponent() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={NextLink} color="primary" href="/contact" variant="flat" className="font-semibold bg-primary-gold/10 text-primary-gold hover:bg-primary-gold/20 border border-primary-gold/20">
-            Contact
+          <Button
+            as="a"
+            href="https://whatsapp.com/channel/0029Vb8TJrA5a247M5xFJT1r"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="primary"
+            variant="flat"
+            isIconOnly
+            className="bg-primary-gold/10 text-primary-gold hover:bg-primary-gold/20 border border-primary-gold/20"
+            title="Join WhatsApp Channel"
+          >
+            <FaWhatsapp />
           </Button>
         </NavbarItem>
       </NavbarContent>
