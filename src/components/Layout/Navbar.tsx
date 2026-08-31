@@ -72,10 +72,10 @@ export default function NavbarComponent() {
         <NavbarBrand>
           <NextLink href="/" className="flex items-center gap-2">
             <Image src="/logo.png" alt="SASSA Help Hub Logo" width={32} height={32} className="rounded ring-2 ring-primary-gold/20" />
-            <p className="font-bold text-inherit hidden sm:block">
+            {/* <p className="font-bold text-inherit hidden sm:block">
               <span className="text-primary-black dark:text-white">SASSA</span>
               <span className="text-primary-gold"> Help Hub</span>
-            </p>
+            </p> */}
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -93,7 +93,7 @@ export default function NavbarComponent() {
         </NavbarItem>
         <NavbarItem>
           <Link as={NextLink} href="/payment-calendar" aria-current={isActive("/payment-calendar") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/payment-calendar") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
-            Payment Dates
+            Pay Dates
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -115,7 +115,7 @@ export default function NavbarComponent() {
           <Dropdown>
             <DropdownTrigger>
               <span className="px-3 py-1.5 rounded-lg transition-all duration-200 text-foreground hover:bg-gray-100 dark:hover:bg-white/5 flex items-center gap-1">
-                Tools <FaWrench className="text-xs" />
+                Tools
               </span>
             </DropdownTrigger>
             <DropdownMenu className="w-56">
