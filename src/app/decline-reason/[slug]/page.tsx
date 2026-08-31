@@ -11,6 +11,7 @@ import EditorialMeta from "../../../components/EditorialMeta";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
+import EntityLinks from "../../../components/EntityLinks";
 
 interface DeclineReason {
   slug: string;
@@ -145,6 +146,16 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
         )}
 
         <AdNetworkLoader />
+
+        <EntityLinks
+          links={[
+            { title: "How to appeal a declined grant", url: "/appeals/how-to-appeal" },
+            { title: "Reconsideration explained", url: "/appeals/reconsideration" },
+            { title: "Check your appeal status", url: "/appeals/appeal-status-check" },
+            { title: "All decline reasons & fixes", url: "/status/declined" },
+          ]}
+          pagePath={`/decline-reason/${reason.slug}`}
+        />
 
         <Divider />
         <EditorialFooter lastUpdated={reason.last_updated} author={reason.author} />

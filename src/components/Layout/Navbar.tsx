@@ -12,9 +12,12 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  DropdownTrigger,
 } from "@nextui-org/react";
-import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins, FaWhatsapp } from "react-icons/fa";
-import NextLink from "next/link";
+import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins, FaWhatsapp, FaWrench, FaSearch } from "react-icons/fa";import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "../ThemeToggle";
 
@@ -36,10 +39,12 @@ export default function NavbarComponent() {
   type MenuItem = { name: string; href: string; icon: React.ReactNode; altPaths?: string[] };
   const menuItems: MenuItem[] = [
     { name: "Home", href: "/", icon: <FaHome /> },
+    { name: "Search", href: "/search", icon: <FaSearch /> },
     { name: "Status Check", href: "/status-check", icon: <FaUserCheck />, altPaths: ["/status"] },
     { name: "Payment Dates", href: "/payment-calendar", icon: <FaCalendarAlt /> },
     { name: "Grants", href: "/grants", icon: <FaCoins /> },
     { name: "SRD Grant Guide", href: "/grants/srd-r370-grant", icon: <FaFileAlt /> },
+    { name: "Tools", href: "/tools/status-explorer", icon: <FaWrench />, altPaths: ["/tools/payment-troubleshooter", "/tools/appeal-deadline"] },
     { name: "News & Updates", href: "/updates", icon: <FaNewspaper /> },
     { name: "Eligibility", href: "/eligibility-check", icon: <FaCheckCircle /> },
     { name: "FAQ", href: "/faq", icon: <FaQuestionCircle /> },
@@ -107,6 +112,32 @@ export default function NavbarComponent() {
           </Link>
         </NavbarItem>
         <NavbarItem>
+          <Dropdown>
+            <DropdownTrigger>
+              <span className="px-3 py-1.5 rounded-lg transition-all duration-200 text-foreground hover:bg-gray-100 dark:hover:bg-white/5 flex items-center gap-1">
+                Tools <FaWrench className="text-xs" />
+              </span>
+            </DropdownTrigger>
+            <DropdownMenu className="w-56">
+              <DropdownItem key="status-explorer">
+                <Link as={NextLink} href="/tools/status-explorer" className="flex items-center gap-2 text-sm" onClick={() => setIsMenuOpen(false)}>
+                  <FaWrench className="text-primary-gold" /> Status Meaning Explorer
+                </Link>
+              </DropdownItem>
+              <DropdownItem key="payment-troubleshooter">
+                <Link as={NextLink} href="/tools/payment-troubleshooter" className="flex items-center gap-2 text-sm" onClick={() => setIsMenuOpen(false)}>
+                  <FaSearch className="text-primary-gold" /> Payment Troubleshooter
+                </Link>
+              </DropdownItem>
+              <DropdownItem key="appeal-deadline">
+                <Link as={NextLink} href="/tools/appeal-deadline" className="flex items-center gap-2 text-sm" onClick={() => setIsMenuOpen(false)}>
+                  <FaCalendarAlt className="text-primary-gold" /> Appeal Deadline Calculator
+                </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarItem>
+        <NavbarItem>
           <Link as={NextLink} href="/resources" aria-current={isActive("/resources") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/resources") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
             Offices
           </Link>
@@ -114,6 +145,11 @@ export default function NavbarComponent() {
       </NavbarContent>
 
       <NavbarContent justify="end">
+        <NavbarItem className="hidden sm:flex">
+          <Link as={NextLink} href="/search" aria-current={isActive("/search") ? "page" : undefined} title="Search the site" className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/search") ? "bg-primary-gold/10 text-primary-gold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
+            <FaSearch />
+          </Link>
+        </NavbarItem>
         <NavbarItem>
           <ThemeToggle />
         </NavbarItem>

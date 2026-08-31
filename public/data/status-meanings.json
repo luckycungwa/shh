@@ -1,0 +1,1180 @@
+[
+  {
+    "slug": "application-complete",
+    "status_label": "Application Complete",
+    "title": "SASSA Status: 'Application Complete' — What It Means & What Happens Next",
+    "description": "Your SASSA application has been submitted successfully. Learn what this status means, how long processing takes, and what to do while waiting.",
+    "what_it_means": "'Application Complete' means SASSA has received your application and all the information you provided. Your details are now in the queue for verification and processing. This is the first status you will see after submitting your application online or at a SASSA office. It does not mean your application has been approved yet — it simply confirms that the system has accepted your submission.",
+    "why_it_happens": [
+      "You successfully submitted your SRD R370 application on srd.sassa.gov.za",
+      "A SASSA officer entered your details during an in-person application",
+      "Your application was received outside of normal business hours and is awaiting processing"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait for Processing",
+        "content": "The status will change as your application moves through the verification process. This typically takes a few days."
+      },
+      {
+        "title": "Keep Your Phone Active",
+        "content": "Make sure your registered mobile number is active and has network coverage. SASSA may send you SMS updates."
+      },
+      {
+        "title": "Check Your Status Regularly",
+        "content": "Return to the SRD portal or use the WhatsApp line (082 601 0111) to check for updates."
+      }
+    ],
+    "how_long": "The 'Application Complete' status usually lasts 1 to 7 days before changing to 'Pending' or another status as verification begins.",
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/grants/srd-r370-grant",
+      "/status/pending",
+      "/status/declined"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "pending",
+    "status_label": "Pending",
+    "title": "SASSA Status: 'Pending' — What It Means & What To Do",
+    "description": "'Pending' is the most common SASSA status. Learn what it means, why it happens, how long it lasts, and when to take action.",
+    "what_it_means": "'Pending' means SASSA is actively verifying your information. Your application is being cross-checked against several government databases including the Department of Home Affairs (for identity verification), the South African Revenue Service (SARS) for income checks, the Unemployment Insurance Fund (UIF), and the National Student Financial Aid Scheme (NSFAS). Your bank accounts are also being monitored to ensure your income stays below R624. This is a normal part of the process and most applications go through a 'Pending' period.",
+    "why_it_happens": [
+      "SASSA is verifying your ID number with Home Affairs",
+      "Your bank accounts are being checked for income deposits",
+      "Your details are being cross-referenced with UIF and SARS databases",
+      "There is a backlog of applications causing delays",
+      "Manual review is required due to a data mismatch"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait — This is Normal",
+        "content": "Pending does not mean rejected. Most applications remain in this status for 1 to 4 weeks."
+      },
+      {
+        "title": "Do Not Reapply",
+        "content": "Applying again while your existing application is pending will not speed up the process and may cause confusion."
+      },
+      {
+        "title": "Check for SMS Updates",
+        "content": "SASSA will send SMS updates when your status changes."
+      },
+      {
+        "title": "Contact SASSA After 30 Days",
+        "content": "If your status remains 'Pending' for more than 30 days, call the SASSA helpline at 0800 60 10 11."
+      }
+    ],
+    "how_long": "The 'Pending' status typically lasts 1 to 4 weeks. During peak application periods (the start of each month), it may take longer.",
+    "faqs": [
+      {
+        "q": "I am pending but the payment window has started — will I still be paid this month?",
+        "a": "Possibly, but there is no guarantee. SRD payments run in batches through the last week of the month, and applications are only scheduled for payment once they are approved. If your status is still Pending when batches run, you may be approved later in the window or carried into the following month's cycle."
+      },
+      {
+        "q": "Is 'Pending' a good or bad sign?",
+        "a": "Neither on its own. It is simply the most common status while SASSA cross-checks your details with Home Affairs, SARS, UIF, NSFAS, and the banks. Most applications pass through Pending before a decision is made."
+      },
+      {
+        "q": "My status has been Pending for months — should I reapply?",
+        "a": "No. Reapplying while your application is still in the system can create duplicate records and delay your file further. If Pending has lasted more than 30 days, contact SASSA on 0800 60 10 11 with your reference number instead."
+      }
+    ],
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "WhatsApp Line",
+        "value": "082 601 0111"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/application-complete",
+      "/status/approved",
+      "/status/declined",
+      "/faq"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "bank-details-pending",
+    "status_label": "Bank Details Pending",
+    "title": "SASSA Status: 'Bank Details Pending' — How to Fix It Fast",
+    "description": "'Bank Details Pending' means your application is approved but SASSA cannot pay you. Learn how to update your banking details immediately.",
+    "what_it_means": "'Bank Details Pending' indicates that your application has been approved in principle, but SASSA does not have valid banking information to deposit your grant. Your payment cannot be processed until you provide correct banking details. This is one of the most common reasons for payment delays. The good news is that fixing this is straightforward.",
+    "why_it_happens": [
+      "You did not provide banking details during your application",
+      "The bank account details you provided are invalid or incorrect",
+      "Your bank account has been closed or frozen",
+      "The account name does not match your ID document",
+      "You recently changed banks and did not update your details"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Log into the SRD Portal",
+        "content": "Go to srd.sassa.gov.za and log in using your ID number and registered phone number."
+      },
+      {
+        "title": "Navigate to Banking Details",
+        "content": "Find the 'Update Banking Details' section on the portal."
+      },
+      {
+        "title": "Enter Correct Details",
+        "content": "Provide your full bank name, account number, branch code, and account holder name exactly as it appears on your ID."
+      },
+      {
+        "title": "Submit and Wait",
+        "content": "After submitting, your details will be verified. This usually takes 3 to 7 working days."
+      },
+      {
+        "title": "Check Your Status",
+        "content": "Return to the portal to confirm your status has changed from 'Bank Details Pending'."
+      }
+    ],
+    "how_long": "After submitting corrected banking details, verification takes 3 to 7 working days. Payment will be released in the next available batch.",
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/guides/bank-details-pending-fix",
+      "/status/approved",
+      "/payment-calendar"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "identity-verification",
+    "status_label": "Identity Verification",
+    "title": "SASSA Status: 'Identity Verification' — What It Means & How to Resolve",
+    "description": "'Identity Verification' means SASSA needs to confirm your identity. Learn why this happens and how to complete the verification process.",
+    "what_it_means": "'Identity Verification' means that SASSA could not automatically verify your identity through the Department of Home Affairs database. Your application has been flagged for manual identity verification. This may involve submitting additional documents or completing a biometric verification (facial recognition) process. This status is becoming more common in 2026 as SASSA implements stricter security measures.",
+    "why_it_happens": [
+      "Your ID number does not match Home Affairs records",
+      "Your name or surname is spelled differently on your application vs your ID document",
+      "A nickname or shortened name was used instead of your full name",
+      "Your ID document was recently issued and has not propagated to all databases",
+      "Your application was flagged for biometric (facial recognition) verification"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Check Your Application Details",
+        "content": "Log into the SRD portal and verify that your name, surname, and ID number are exactly as they appear on your ID document."
+      },
+      {
+        "title": "Complete Biometric Verification",
+        "content": "If you received an SMS with a biometric verification link, complete the facial recognition process within 72 hours."
+      },
+      {
+        "title": "Correct Name/Surname",
+        "content": "Use the 'Request Names and Surname Update' tool on the SRD website if there is a spelling mismatch."
+      },
+      {
+        "title": "Visit a SASSA Office",
+        "content": "If online methods do not resolve the issue, visit your nearest SASSA office with your ID document."
+      }
+    ],
+    "how_long": "Online corrections typically take 3 to 7 working days. Biometric verification is instant once you complete the facial recognition process.",
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "Home Affairs",
+        "value": "0800 60 11 90"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za",
+      "https://www.dha.gov.za"
+    ],
+    "related": [
+      "/status/pending",
+      "/status/declined",
+      "/guides/biometric-fix-guide",
+      "/faq"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "referred",
+    "status_label": "Referred",
+    "title": "SASSA Status: 'Referred' — What It Means & How to Get Unstuck",
+    "description": "'Referred' means your application is being manually reviewed. Learn why this happens, how long it takes, and what you can do.",
+    "what_it_means": "'Referred' means your application did not pass the automated checks and has been referred for manual review by a SASSA official. This is not a decline — it simply means a human being needs to look at your application because the system found something that requires human judgment. This status often leads to either approval or decline after the manual review is complete.",
+    "why_it_happens": [
+      "There is a mismatch between your application data and government databases",
+      "Your income is borderline relative to the R624 threshold",
+      "Your bank account has irregular deposits that need human assessment",
+      "Your ID or personal details triggered a manual review flag",
+      "There is a potential duplicate application linked to your ID"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait for the Review",
+        "content": "Manual review is conducted by SASSA officials. There is nothing you can do to speed this up."
+      },
+      {
+        "title": "Do Not Reapply",
+        "content": "Reapplying will not help and may create additional confusion."
+      },
+      {
+        "title": "Check for SMS Updates",
+        "content": "SASSA will notify you when the review is complete and your status has changed."
+      },
+      {
+        "title": "Contact SASSA After 30 Days",
+        "content": "If the status remains 'Referred' for more than 30 days, call the helpline to follow up."
+      }
+    ],
+    "how_long": "Manual review takes 2 to 6 weeks, depending on the complexity of your case and the current workload at your regional SASSA office.",
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "Your Local SASSA Office",
+        "value": "Visit our offices page"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/pending",
+      "/status/means-test-failed",
+      "/status/declined",
+      "/guides/appeal-guide"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "means-test-failed",
+    "status_label": "Means Test Failed",
+    "title": "SASSA Status: 'Means Test Failed' — What It Means & How to Appeal",
+    "description": "'Means Test Failed' means SASSA found that your income or assets exceed the allowed limit. Learn what this means and how to appeal.",
+    "what_it_means": "'Means Test Failed' means SASSA's automated system checked your financial situation and determined that you have income or assets above the threshold for the grant you applied for. For the SRD grant, the threshold is R624 per month. For permanent grants, the thresholds are higher. This status is not necessarily permanent — if the system made an error, you can appeal the decision.",
+    "why_it_happens": [
+      "Your bank account received deposits totaling more than R624 in a month",
+      "You received a payment from a family member or friend that pushed you over the limit",
+      "SASSA detected income from UIF, NSFAS, or another source",
+      "You have multiple bank accounts and the combined deposits exceed the threshold",
+      "Your spouse's income was included in the assessment for a permanent grant"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Review Your Bank Deposits",
+        "content": "Check your bank statements for the month in question. Identify any deposits that may have triggered the alert."
+      },
+      {
+        "title": "Lodge an Appeal",
+        "content": "Go to srd-appeals.dsd.gov.za and submit an appeal explaining why the income detected should not disqualify you."
+      },
+      {
+        "title": "Provide Supporting Evidence",
+        "content": "If a family member sent you money that was a gift (not income), provide an affidavit explaining this."
+      },
+      {
+        "title": "Isolate Your Bank Account",
+        "content": "Do not allow anyone else to use your bank account for their transactions. SASSA cannot distinguish between 'loans' and 'income.'"
+      }
+    ],
+    "how_long": "Appeals are processed within 60 to 90 days. If successful, you will receive back pay for the months that were incorrectly declined.",
+    "who_to_contact": [
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/declined",
+      "/guides/appeal-guide",
+      "/grants/srd-r370-grant",
+      "/eligibility-check"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "approved",
+    "status_label": "Approved",
+    "title": "SASSA Status: 'Approved' — What It Means & When You Will Be Paid",
+    "description": "'Approved' means your SASSA application was successful. Learn what happens next, what 'Approved but no Pay Day' means, when to expect payment, and what to do if your payment date has passed.",
+    "what_it_means": "'Approved' is the status every applicant wants to see. It means SASSA has verified your information and you qualify for the grant. Your application has passed all the checks — identity verification, means test, bank verification, and cross-referencing with other government databases. However, 'Approved' does NOT mean the money is in your account yet. Approved means you qualify; 'Paid' means the money has been released. Between the two, SASSA assigns a 'Pay Day' date that tells you when your payment batch will run. If you see 'Approved' but no Pay Day, your payment is still being processed for disbursement — this is normal for a few days to a week after approval. It does not mean anything is wrong, and it does not mean you will definitely be paid — approval is conditional on your details staying valid until the batch runs. Keep checking your status, and make sure your banking details are correct and your phone is active.",
+    "why_it_happens": [
+      "You met all eligibility criteria for the grant",
+      "Your identity was successfully verified with Home Affairs",
+      "Your income was below the threshold",
+      "Your banking details are valid and verified",
+      "You see 'Approved' without a Pay Day because the payment batch for the month has not run yet — approved applications are paid in batches, not all on one day",
+      "Your payment is scheduled for the fourth payment day if your grant is under review"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Check for a 'Pay Day' Date",
+        "content": "Log into the SRD portal and look for a 'Pay Day' date next to your approved status. Approved without a Pay Day simply means your payment batch has not run yet."
+      },
+      {
+        "title": "Check Again After the 15th",
+        "content": "Statuses and Pay Day dates are most reliably updated after the 15th of each month, following bank verification. Check back then before taking any action."
+      },
+      {
+        "title": "Wait for Your Payment Batch",
+        "content": "SRD payments are released in batches over several days. Once a Pay Day date is assigned, it usually takes 1 to 3 business days for the money to reflect in your account. Your neighbours may be paid on a different day."
+      },
+      {
+        "title": "What If the Payment Date Has Passed?",
+        "content": "If the Pay Day date has passed and the money is not in your account, wait 3 business days for the banking system to reflect it. If it still has not arrived, follow the missing grant payment guide step by step before contacting SASSA."
+      },
+      {
+        "title": "Do Not Close Your Bank Account",
+        "content": "Keep your bank account active. Closing it after receiving 'Approved' will delay your payment, and your details must match your ID exactly."
+      },
+      {
+        "title": "Check Payment Method",
+        "content": "Confirm whether payment will be made to your bank account, Postbank, or retail collection point. For retail collection, wait for the payment SMS before going to the store."
+      }
+    ],
+    "how_long": "After 'Approved', a Pay Day date is usually assigned within 1 to 7 days. Payment usually reflects within 1 to 3 business days after the Pay Day date. If your grant is under review, you will be paid on the fourth payment day once SASSA confirms the date.",
+    "what_not_to_do": [
+      "Do not reapply — a new application will not speed up your Pay Day and can delay your existing file.",
+      "Do not pay anyone to 'release' or 'speed up' your payment. SASSA never charges a fee.",
+      "Do not close or change your bank account while you are waiting for the batch to run.",
+      "Do not share your OTP, PIN, or password with anyone who contacts you claiming to be from SASSA.",
+      "Do not travel to a retail collection point until you have received the payment SMS with your collection code."
+    ],
+    "faqs": [
+      {
+        "q": "What does 'Approved but no Pay Day' mean?",
+        "a": "It means your application is approved, but a Pay Day has not been shown yet. In other words, SASSA has verified that you qualify for the month, but your payment has not yet been assigned to a payment batch. A Pay Day date is usually added within a few days to a week after approval."
+      },
+      {
+        "q": "What is the difference between Approved with a Pay Day and Approved without one?",
+        "a": "'Approved' means you qualify for the month. A 'Pay Day' date means SASSA has scheduled your payment batch for a specific day. If you see Approved with no Pay Day, your payment simply has not been scheduled yet — it does not mean anything is wrong with your application."
+      },
+      {
+        "q": "How long after 'Approved' until I get a Pay Day?",
+        "a": "There is no officially published timeframe, but in practice a Pay Day is usually assigned within a few days to a week after approval. Statuses and Pay Day dates are most reliably updated after the 15th of each month, following bank verification. If no Pay Day appears for more than 3 weeks, contact SASSA on 0800 60 10 11."
+      },
+      {
+        "q": "Should I reapply if I am approved but have no Pay Day?",
+        "a": "No. Reapplying will not create a Pay Day faster and may cause problems with your existing application. Keep checking your status on the official SRD portal instead."
+      },
+      {
+        "q": "Is 'Approved but no Pay Day' the same as 'Pending'?",
+        "a": "No. 'Pending' means SASSA is still verifying whether you qualify at all. 'Approved without a Pay Day' means verification is complete and you qualify — only the payment scheduling step remains. Approval is the stronger status of the two."
+      },
+      {
+        "q": "I was approved but received no SMS — what now?",
+        "a": "SMS notifications depend on your registered number being active and can be delayed or undelivered. Your status on the official portal is the reliable source of truth, so check it directly at srd.sassa.gov.za. Make sure your phone number is correct and your inbox is not full."
+      },
+      {
+        "q": "Can I be approved and then never paid?",
+        "a": "Approval is assessed monthly and remains subject to your details staying valid until the payment batch runs. If your banking details become invalid, your income exceeds the threshold, or a new database check flags your application, your status can change before payment. That is why it is important to keep your bank details and phone number up to date."
+      }
+    ],
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "Postbank",
+        "value": "0800 53 54 55"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/paid",
+      "/payment-calendar",
+      "/guides/missing-grant-payment-guide",
+      "/grants/srd-r370-grant",
+      "/status/bank-details-pending"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "declined",
+    "status_label": "Declined",
+    "title": "SASSA Status: 'Declined' — What It Means, Why & How to Appeal",
+    "description": "'Declined' means your application was not approved. Learn the common reasons, what to do next, and how to submit a successful appeal.",
+    "what_it_means": "'Declined' means SASSA has evaluated your application and determined that you do not qualify for the grant for the month in question. This can happen for many reasons, and it does not necessarily mean you will never qualify. The decline applies to each month separately — even if you were declined this month, you may be approved in a future month if your circumstances change. You have the right to appeal a decline within 90 days.",
+    "why_it_happens": [
+      "Your income exceeded the R624 threshold due to deposits in your bank account",
+      "UIF or NSFAS records show you are registered with them",
+      "Identity verification failed due to a name or ID mismatch",
+      "Alternative income source was detected (gifts, family transfers, informal trade)",
+      "You are receiving another social grant",
+      "Your banking details are invalid or unverified"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Check the Decline Reason",
+        "content": "Log into the SRD portal and look for the specific reason code for your decline."
+      },
+      {
+        "title": "Lodge an Appeal",
+        "content": "Go to srd-appeals.dsd.gov.za within 30 days (you have up to 90 days, but early appeals are processed faster)."
+      },
+      {
+        "title": "Provide Evidence",
+        "content": "If the decline was due to income detection, provide proof that the deposits were not regular income."
+      },
+      {
+        "title": "Fix the Root Cause",
+        "content": "Close unused bank accounts, stop others from using your account, or update your personal details if there was a name mismatch."
+      }
+    ],
+    "how_long": "Appeals take 60 to 90 days to process. If successful, you will receive back pay for all the months that were incorrectly declined.",
+    "faqs": [
+      {
+        "q": "I was approved last month but declined this month — why?",
+        "a": "The SRD grant is reassessed every single month. A change between months — such as a bank deposit that pushed you over the R624 threshold, an UIF or NSFAS record appearing against your ID, or a verification mismatch — can cause a decline for that specific month even if you were approved before. Check your decline reason on the portal to see which check failed."
+      },
+      {
+        "q": "Can I be approved again in a future month?",
+        "a": "Yes. Each month is assessed separately. If the issue that caused the decline no longer applies — for example your bank balance drops back under the threshold — you can be approved again in a later cycle without reapplying."
+      },
+      {
+        "q": "Does one decline mean my application is cancelled?",
+        "a": "No. A decline applies only to the month in question. Your application stays in the system and is reassessed for each new month."
+      }
+    ],
+    "who_to_contact": [
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SASSA Office",
+        "value": "Visit our offices page"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/means-test-failed",
+      "/guides/appeal-guide",
+      "/grants/srd-r370-grant",
+      "/decline-reason/income-source-detected",
+      "/faq"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "appeal-pending",
+    "status_label": "Appeal Pending",
+    "title": "SASSA Status: 'Appeal Pending' — What It Means & How Long It Takes",
+    "description": "'Appeal Pending' means your appeal has been received and is being reviewed. Learn about the appeal process, timeline, and what to expect.",
+    "what_it_means": "'Appeal Pending' means your appeal against a declined grant decision has been received by the Independent Tribunal for Social Assistance Appeals (ITSAA) and is being reviewed. ITSAA is an independent body separate from SASSA, which ensures fairness in the appeal process. Your application and supporting documents are being evaluated by an independent tribunal member who will decide whether the original decline decision was correct.",
+    "why_it_happens": [
+      "You submitted an appeal through the ITSAA portal (srd-appeals.dsd.gov.za)",
+      "Your appeal has been logged and assigned to a case officer",
+      "The tribunal is reviewing your application and the evidence you provided",
+      "SASSA has been asked to provide their reasons for the decline"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait for Processing",
+        "content": "The tribunal process takes time. Most appeals are resolved within 60 to 90 days."
+      },
+      {
+        "title": "Keep Your Contact Details Updated",
+        "content": "Ensure your phone number and address are correct so you receive the outcome notification."
+      },
+      {
+        "title": "Check Your Status Online",
+        "content": "You can check your appeal status on the ITSAA portal using your reference number."
+      },
+      {
+        "title": "Do Not Submit a Second Appeal",
+        "content": "Submitting a duplicate appeal will not speed up the process and may cause delays."
+      }
+    ],
+    "how_long": "The Independent Tribunal typically takes 60 to 90 days to process an appeal. Complex cases may take longer.",
+    "who_to_contact": [
+      {
+        "label": "ITSAA Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      },
+      {
+        "label": "DSD Contact",
+        "value": "012 312 7726"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.dsd.gov.za"
+    ],
+    "related": [
+      "/guides/appeal-guide",
+      "/status/declined",
+      "/status/approved",
+      "/status/declined"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "paid",
+    "status_label": "Paid",
+    "title": "SASSA Status: 'Paid' — What It Means & What to Do If Money Is Not Received",
+    "description": "'Paid' means SASSA has released your payment. Learn what to do if the money has not reached your account and how to track your payment.",
+    "what_it_means": "'Paid' is the final and best status — it means SASSA has successfully processed your payment and the funds have been released. However, 'Paid' does not mean the money is already in your account. Depending on your bank, it can take 1 to 3 business days for the payment to reflect. This delay is normal and is caused by the banking system processing times, not SASSA.",
+    "why_it_happens": [
+      "Your grant was approved and a Pay Day date was assigned",
+      "SASSA processed the payment batch and sent it to the bank",
+      "The payment was sent via your chosen payment method (bank transfer, Postbank, or retail)"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait 1 to 3 Business Days",
+        "content": "Bank processing times vary. The money may not appear immediately even though the status says 'Paid'."
+      },
+      {
+        "title": "Check Your Bank Account",
+        "content": "Log into your banking app or check your balance at an ATM."
+      },
+      {
+        "title": "Check for an SMS",
+        "content": "If you collect at retail (Pick n Pay, Boxer), wait for the SMS collection code before going to the store."
+      },
+      {
+        "title": "Contact SASSA After 5 Days",
+        "content": "If the money has not reflected after 5 business days, call the SASSA helpline at 0800 60 10 11."
+      }
+    ],
+    "how_long": "Once 'Paid' is shown, money usually reflects within 1 to 3 business days. Retail collection SMS may take 1 to 2 days.",
+    "what_not_to_do": [
+      "Do not go to a retail collection point without the payment SMS — staff cannot release funds without the collection code.",
+      "Do not reapply or submit a new application because a payment has not reflected yet.",
+      "Do not pay anyone who offers to 'trace' your money for a fee. SASSA never charges for payment queries."
+    ],
+    "faqs": [
+      {
+        "q": "My Pay Day is today but I have not received my money — why?",
+        "a": "Pay Day is the day SASSA releases your payment batch, not the moment cash reaches your account. Bank transfers usually reflect within 1 to 3 business days after Pay Day, depending on your bank. If you collect at a retail point, wait for the payment SMS with your collection code before going to the store."
+      },
+      {
+        "q": "My status says 'Paid' but there is no money after 3 days — what should I do?",
+        "a": "First confirm which payment method is on your profile (bank account, Postbank, or retail collection) and check that account directly. If nothing has reflected after about 5 business days, follow our missing grant payment guide step by step, then contact SASSA on 0800 60 10 11 with your reference number."
+      },
+      {
+        "q": "How do I know if my Pay Day has passed or moved?",
+        "a": "Check your status on the official SRD portal. If a Pay Day date is still shown, wait the full 1 to 3 business days for bank reflection. If the date has disappeared or changed, your payment may have been reassigned to another batch — check again after the 15th of the month and contact SASSA if it stays unresolved."
+      }
+    ],
+    "who_to_contact": [
+      {
+        "label": "Your Bank",
+        "value": "Contact your bank's customer service"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "Postbank",
+        "value": "0800 53 54 55"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/approved",
+      "/payment-calendar",
+      "/faq"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "under-review",
+    "status_label": "Under Review",
+    "title": "SASSA Status: 'Under Review' — What It Means & What Happens Next",
+    "description": "Under Review means SASSA is re-examining your application before a final decision. Learn why this happens, how long it takes, and what to do.",
+    "what_it_means": "'Under Review' means SASSA is actively re-examining your application before making a final decision. This is similar to 'Referred' but is often shown when your application has already been provisionally assessed and is being double-checked — for example after an appeal, a banking detail change, or a data mismatch. It is not a decline, and it is not a cancellation. It simply means your file is being checked again by the system or by a SASSA official before a Pay Day is assigned or a decision is confirmed.",
+    "why_it_happens": [
+      "Your application was flagged for a second check after a banking detail change or status update",
+      "You recently lodged an appeal and SASSA is re-evaluating your case",
+      "A data mismatch between your application and a government database triggered a manual review",
+      "Your grant is being verified for the new month's payment cycle"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait for the Review to Complete",
+        "content": "There is nothing you can do to speed up the review. Most reviews complete within 2 to 4 weeks."
+      },
+      {
+        "title": "Do Not Reapply",
+        "content": "Reapplying while your application is under review creates duplicate records and can delay the process."
+      },
+      {
+        "title": "Check Your Status After the 15th",
+        "content": "Statuses are most reliably updated after the middle of the month. Check back then before taking action."
+      },
+      {
+        "title": "Contact SASSA After 30 Days",
+        "content": "If the status stays Under Review for more than 30 days, call the SASSA helpline on 0800 60 10 11."
+      }
+    ],
+    "how_long": "'Under Review' typically lasts 2 to 4 weeks, but can take longer if the review is complex or if there is a backlog.",
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/referred",
+      "/status/pending",
+      "/status/approved",
+      "/faq"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "cancelled",
+    "status_label": "Cancelled",
+    "title": "SASSA Status: 'Cancelled' — What It Means & How to Get Your Grant Back",
+    "description": "'Cancelled' means your SASSA grant was cancelled. Learn the common reasons and the exact steps to reinstate or reapply.",
+    "what_it_means": "'Cancelled' means SASSA has removed your grant from the payment system. This is different from a monthly decline — a cancellation means your entire application has been closed or withdrawn. The most common reason is not collecting your grant for three consecutive months, which causes SASSA to suspend and eventually cancel the application. A cancellation is not a permanent ban. You can reapply at any time on the official SRD portal with your ID number, and your reapplication is assessed on the same monthly cycle as new applications.",
+    "why_it_happens": [
+      "You did not collect your grant for three consecutive months",
+      "Your application was flagged during verification and then cancelled",
+      "You no longer meet the eligibility criteria",
+      "SASSA found duplicate or fraudulent activity on your file"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Reapply on the SRD Portal",
+        "content": "Go to srd.sassa.gov.za and submit a new application with your 13-digit ID number. It is free and takes a few minutes."
+      },
+      {
+        "title": "Reapply via WhatsApp or Moya",
+        "content": "You can also reapply through the SASSA WhatsApp line (082 601 0111) or the Moya app (zero data)."
+      },
+      {
+        "title": "Lodge an Appeal If It Was an Error",
+        "content": "If you believe the cancellation was incorrect, appeal within 90 days on the ITSAA portal (srd-appeals.dsd.gov.za) to claim back pay."
+      }
+    ],
+    "how_long": "A reapplication is assessed on the same monthly cycle as new applications. Check your status after the 15th of the month.",
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/suspended",
+      "/guides/sassa-grant-renewal",
+      "/status/declined"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "suspended",
+    "status_label": "Suspended",
+    "title": "SASSA Status: 'Suspended' — What It Means & How to Reinstate",
+    "description": "'Suspended' means your SASSA grant has been temporarily halted. Learn why grants get suspended and the exact steps to get yours reinstated.",
+    "what_it_means": "'Suspended' means your grant payments have been temporarily halted. A suspension is the step that comes before cancellation. It most commonly happens after you do not collect your grant for three consecutive months. Unlike a cancellation, a suspension may be reversible by contacting SASSA and confirming you want to continue receiving the grant. If the suspension is not resolved, it can lead to your grant being cancelled.",
+    "why_it_happens": [
+      "You did not collect your grant for three consecutive months",
+      "SASSA flagged your application for additional verification",
+      "Your banking details became invalid and were not updated",
+      "A system review paused your payment while checks ran"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Contact SASSA",
+        "content": "Call the SASSA helpline on 0800 60 10 11 to ask why your grant was suspended and how to reinstate it."
+      },
+      {
+        "title": "Reapply If Needed",
+        "content": "If your grant was suspended because you stopped collecting, you may need to reapply on the SRD portal with your ID number."
+      },
+      {
+        "title": "Update Your Details",
+        "content": "Make sure your banking details and phone number are correct before reapplying."
+      }
+    ],
+    "how_long": "Processing a reinstatement or reapplication can take up to a full monthly cycle. Check your status after the 15th.",
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/cancelled",
+      "/guides/sassa-grant-renewal",
+      "/payment-calendar"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "reapplication-required",
+    "status_label": "Reapplication Required",
+    "title": "SASSA Status: 'Reapplication Required' — What It Means & How to Reapply",
+    "description": "'Reapplication Required' means SASSA needs you to submit a fresh application. Learn why this happens and how to reapply fast and free.",
+    "what_it_means": "'Reapplication Required' means SASSA needs you to submit a brand new application to continue receiving your grant. This usually happens when your previous application was cancelled, lapsed, or suspended and SASSA no longer has an active application on file. It is not a rejection of your eligibility — it simply means you need to re-apply. Reapplying is free and takes a few minutes.",
+    "why_it_happens": [
+      "Your previous grant was cancelled after you stopped collecting for three months",
+      "Your application lapsed and was not renewed",
+      "SASSA requires a fresh application for a new payment cycle",
+      "Your prior application was incomplete and SASSA closed it"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Go to the SRD Portal",
+        "content": "Visit srd.sassa.gov.za and submit a new application with your 13-digit ID number."
+      },
+      {
+        "title": "Reapply via WhatsApp or Moya",
+        "content": "You can reapply through the SASSA WhatsApp line (082 601 0111) or the Moya app (zero data)."
+      },
+      {
+        "title": "Check Your Status After the 15th",
+        "content": "Reapplications are assessed on the same monthly cycle as new applications. Check your status after the middle of the month."
+      }
+    ],
+    "how_long": "A reapplication is assessed on the same monthly cycle as new applications — usually within the current or next payment window.",
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "WhatsApp Line",
+        "value": "082 601 0111"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/cancelled",
+      "/status/suspended",
+      "/grants/srd-r370-grant",
+      "/guides/sassa-grant-renewal"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "alternative-income-detected",
+    "status_label": "Alternative Income Detected",
+    "title": "SASSA Status: 'Alternative Income Detected' — What It Means & How to Appeal",
+    "description": "'Alternative Income Detected' means SASSA identified income from another source. Learn what counts as income and how to appeal this decline.",
+    "what_it_means": "'Alternative Income Detected' means SASSA's system identified income flowing into your accounts that it believes should disqualify you from the SRD grant. This can include gifts, family transfers, stokvel payouts, refunds, or informal trade — SASSA does not distinguish between 'income' and 'money you received.' If your total monthly deposits exceed {{srd_income_limit}}, you may be declined with this status. You can appeal if the money was not regular income.",
+    "why_it_happens": [
+      "A family member sent you money via e-wallet or bank transfer",
+      "A stokvel payout was deposited into your account",
+      "You received a UIF payment or NSFAS stipend",
+      "Someone used your bank account for their own transactions",
+      "You do informal work that pays irregularly into your account"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Review Your Bank Statements",
+        "content": "Identify every deposit in the declined month, including gifts and transfers."
+      },
+      {
+        "title": "Lodge an Appeal",
+        "content": "Go to srd-appeals.dsd.gov.za, select the declined month, and explain what each deposit was."
+      },
+      {
+        "title": "Provide Supporting Evidence",
+        "content": "Upload bank statements and, if a family member sent money, include a signed affidavit explaining it was a gift."
+      },
+      {
+        "title": "Prevent Future Declines",
+        "content": "Use a separate account for SRD only, or ask family to give you cash instead of electronic transfers."
+      }
+    ],
+    "how_long": "Appeals are processed within 60 to 90 days. If successful, you receive back pay for the incorrectly declined months.",
+    "who_to_contact": [
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/decline-reason/income-source-detected",
+      "/status/means-test-failed",
+      "/status/declined",
+      "/guides/appeal-guide"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "uif-registered",
+    "status_label": "UIF Registered",
+    "title": "SASSA Status: 'UIF Registered' — What It Means & How to Fix It",
+    "description": "'UIF Registered' means SASSA found you on the Unemployment Insurance Fund database. Learn why this blocks your grant and how to resolve it.",
+    "what_it_means": "'UIF Registered' means SASSA cross-checked your ID number against the Department of Employment and Labour's UIF database and found that you appear as a registered contributor or recipient. Even if you are not currently receiving UIF payments, simply being registered can trigger this status and block your SRD grant. This often happens because a former employer never deregistered you when you left.",
+    "why_it_happens": [
+      "Your previous employer did not deregister you from UIF when you left",
+      "You applied for and received UIF payments during the assessment period",
+      "Your employer is still contributing to UIF on your behalf",
+      "There is an old UIF claim on your ID from a previous job"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Check Your UIF Status",
+        "content": "Contact the Department of Employment and Labour to check if your UIF record is still active."
+      },
+      {
+        "title": "Request UIF Deregistration",
+        "content": "Ask your former employer to deregister you, or get help from your nearest Labour Centre."
+      },
+      {
+        "title": "Appeal With Proof",
+        "content": "Submit an appeal on the ITSAA portal with a letter from the Labour Centre confirming you are not receiving UIF benefits."
+      }
+    ],
+    "how_long": "Appeals are processed within 60 to 90 days. Deregistration depends on your former employer and the Labour Centre.",
+    "who_to_contact": [
+      {
+        "label": "Labour Centre",
+        "value": "Visit your nearest Department of Employment and Labour office"
+      },
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.labour.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/decline-reason/uif-registered",
+      "/status/declined",
+      "/status/means-test-failed"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "nsfas-registered",
+    "status_label": "NSFAS Registered",
+    "title": "SASSA Status: 'NSFAS Registered' — What It Means & How to Fix It",
+    "description": "'NSFAS Registered' means SASSA found you on the National Student Financial Aid Scheme database. Learn how to prove you are no longer a student.",
+    "what_it_means": "'NSFAS Registered' means SASSA checked your ID number against the National Student Financial Aid Scheme (NSFAS) database and found that you appear as an active beneficiary. This blocks your SRD grant because student funding counts as alternative income. It often happens to students who graduated or dropped out but were never removed from the NSFAS system.",
+    "why_it_happens": [
+      "You graduated but your university did not update your status with NSFAS",
+      "You dropped out but NSFAS still shows you as active",
+      "You applied for NSFAS but never received funding",
+      "A data error links your ID to another person's NSFAS record"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Contact Your University's Financial Aid Office",
+        "content": "Request a formal clearance letter confirming you are no longer registered or receiving NSFAS funding."
+      },
+      {
+        "title": "Submit Clearance With Your Appeal",
+        "content": "Upload the NSFAS clearance letter or proof of non-funding on the ITSAA portal."
+      },
+      {
+        "title": "Explain Clearly in Your Appeal",
+        "content": "State that you graduated or dropped out in a specific year and are not receiving any NSFAS funding."
+      }
+    ],
+    "how_long": "Appeals are processed within 60 to 90 days, depending on how quickly you can provide clearance.",
+    "who_to_contact": [
+      {
+        "label": "Your University's Financial Aid Office",
+        "value": "Request a clearance letter"
+      },
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.nsfas.org.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/decline-reason/nsfas-registered",
+      "/status/declined",
+      "/status/means-test-failed"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "source-limit-exceeded",
+    "status_label": "Source Limit Exceeded",
+    "title": "SASSA Status: 'Source Limit Exceeded' — What It Means & How to Appeal",
+    "description": "'Source Limit Exceeded' means your total deposits across all sources went over the allowed limit. Learn what triggers this and how to appeal.",
+    "what_it_means": "'Source Limit Exceeded' means that when SASSA added up all the money coming into your accounts from every source, the total exceeded the allowed monthly limit of {{srd_income_limit}}. This is closely related to 'Alternative Income Detected' and 'Means Test Failed.' It means the combined value from salaries, gifts, transfers, or informal income was too high for the month in question. You can appeal if the deposits were not regular income.",
+    "why_it_happens": [
+      "Multiple deposits from different sources pushed your total over the limit",
+      "A large one-off deposit from a family member or refund was counted",
+      "You receive income on top of a gift or stokvel payout",
+      "You have multiple bank accounts and the combined deposits exceed the threshold"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Add Up Your Total Deposits",
+        "content": "Review all your bank statements and identify every credit for the declined month."
+      },
+      {
+        "title": "Lodge an Appeal",
+        "content": "Go to srd-appeals.dsd.gov.za and choose the declined month, explaining each deposit."
+      },
+      {
+        "title": "Provide Evidence",
+        "content": "Upload statements and an affidavit if the money was a gift, refund, or one-off transfer."
+      },
+      {
+        "title": "Reduce Future Deposits",
+        "content": "Keep grant-eligible accounts separate and avoid large transfers into them."
+      }
+    ],
+    "how_long": "Appeals are processed within 60 to 90 days. Success is most likely when deposits were clearly not regular income.",
+    "who_to_contact": [
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/alternative-income-detected",
+      "/status/means-test-failed",
+      "/status/declined",
+      "/guides/appeal-guide"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "application-invalid",
+    "status_label": "Application Invalid",
+    "title": "SASSA Status: 'Application Invalid' — What It Means & How to Fix It",
+    "description": "'Application Invalid' means your application was missing required or correct information. Learn how to fix it and get your grant back on track.",
+    "what_it_means": "'Application Invalid' means your SASSA application could not be processed because the information you provided was missing, incorrect, or did not match the required format. This is different from a decline based on eligibility — it means the application itself failed validation. The most common causes are an incorrect ID number, a wrong or inactive phone number, or missing banking details.",
+    "why_it_happens": [
+      "Your 13-digit ID number was entered with a typo",
+      "The phone number you provided is not registered in your name (not RICA'd)",
+      "Your banking details are missing or incorrect",
+      "Required fields were left blank during application"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Check Your Details",
+        "content": "Log into the SRD portal and verify your ID number, phone number, and banking details are correct."
+      },
+      {
+        "title": "Submit a New Application",
+        "content": "If the application cannot be corrected, submit a fresh application with the correct details on srd.sassa.gov.za."
+      },
+      {
+        "title": "Use a RICA'd Number",
+        "content": "Make sure your phone number is registered in your name so SASSA can send OTPs and updates."
+      }
+    ],
+    "how_long": "A corrected or new application is processed on the same monthly cycle. Check your status after the 15th.",
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/identity-verification",
+      "/status/pending",
+      "/status/declined"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "null",
+    "status_label": "Null / No Status",
+    "title": "SASSA Status: 'Null' or No Status — What It Means & What to Do",
+    "description": "A 'Null' or empty SASSA status means no status is showing for your application. Learn why this happens and how to get your status to appear.",
+    "what_it_means": "A 'Null' or blank status means the SRD system is not showing any status for your application. This is usually a temporary data issue that happens when a new application has just been submitted, when there is a system backlog, or when your details did not fully sync. It does not mean your application was rejected. In most cases the status appears within 24 to 48 hours once the system processes your details.",
+    "why_it_happens": [
+      "You just applied and the system has not processed your details yet",
+      "There is a backlog of applications causing a delay",
+      "Your application data did not fully load or sync",
+      "The SRD portal is experiencing temporary technical issues"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Wait 24 to 48 Hours",
+        "content": "A Null status right after applying is normal. Wait a day or two and check again."
+      },
+      {
+        "title": "Clear Your Browser or App Cache",
+        "content": "Try a fresh browser session or update the Moya app and check again."
+      },
+      {
+        "title": "Try Another Method",
+        "content": "Check via USSD (*120*69277#), WhatsApp, or call the SASSA helpline instead of the portal."
+      },
+      {
+        "title": "Contact SASSA If It Persists",
+        "content": "If the status stays blank for more than a few days, call 0800 60 10 11."
+      }
+    ],
+    "how_long": "A Null status usually resolves within 24 to 48 hours. If it persists beyond a few days, contact SASSA.",
+    "who_to_contact": [
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/pending",
+      "/status/application-complete",
+      "/status-check"
+    ],
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  }
+]

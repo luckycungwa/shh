@@ -15,10 +15,10 @@ export const metadata: Metadata = buildMetadata({
 
 const authors = [
   {
-    name: "Lucky Cungwa",
-    role: "Founder & Editor, SASSA Help Hub",
-    initials: "LC",
-    bio: "Lucky Cungwa founded SASSA Help Hub as an independent, unofficial public-information resource. SASSA Help Hub is not affiliated with SASSA, the Department of Social Development, or any government agency. The resource exists to help people navigate South Africa's social grant system by explaining official announcements, payment schedules, eligibility rules, and application and appeal processes in plain language, always linking to the official sources where available.",
+    name: "SASSA Help Hub Editorial Team",
+    role: "Independent, unofficial public-information resource",
+    initials: "SH",
+    bio: "SASSA Help Hub is an independent, unofficial public-information resource. It is not affiliated with SASSA, the Department of Social Development, or any government agency. The resource exists to help people navigate South Africa's social grant system by explaining official announcements, payment schedules, eligibility rules, and application and appeal processes in plain language, always linking to the official sources where available. Content is researched and edited by the SASSA Help Hub editorial team and reviewed against official sources where available.",
     topics: ["SRD R370 Grant", "Appeals & Declined Applications", "Eligibility & Means Test", "Payment Schedules & Banking", "All SASSA Grant Types", "Province-Specific Guides", "Scam Prevention"],
     color: "bg-primary-gold",
   },

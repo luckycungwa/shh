@@ -3,7 +3,7 @@
     "id": "apply-sassa-grants",
     "title": "How to Apply for SASSA Grants (Online & In Person) in 2026",
     "description": "Step-by-step guide to applying for any SASSA grant in 2026 — SRD R370 online, permanent grants online via the SASSA Services Portal, or in person at a SASSA office. Includes required documents and what happens after you apply.",
-    "category": "Applications",
+    "category": "Apply for a Grant",
     "difficulty": "beginner",
     "estimatedTime": "15 minutes",
     "steps": [
@@ -133,7 +133,7 @@
     "id": "appeal-guide",
     "title": "How to Appeal a Declined SASSA SRD Application (Step-by-Step)",
     "description": "Your SASSA SRD R370 application was declined — that is not the end of the road. Every declined applicant can dispute the decision, first with a SASSA reconsideration and then with an appeal to the Independent Tribunal for Social Assistance Appeals (ITSAA). This step-by-step 2026 guide shows you exactly how to find your decline reason, gather the right evidence, submit your appeal online or by WhatsApp, track it, and what to do if the appeal also fails.",
-    "category": "Appeals",
+    "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
     "estimatedTime": "20 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
@@ -281,7 +281,7 @@
     "id": "guide-001",
     "title": "How to Apply for the SASSA Child Support Grant in 2026",
     "description": "Step-by-step guide to applying for the SASSA Child Support Grant in 2026: eligibility rules and the income means test, the documents you need, how to apply online, in person or by post, what happens after you apply, the payment amount and dates, common mistakes that cause delays, and what to do if your application is declined.",
-    "category": "Applications",
+    "category": "Apply for a Grant",
     "difficulty": "beginner",
     "estimatedTime": "30 minutes",
     "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
@@ -419,7 +419,7 @@
     "id": "guide-reinstate-grant",
     "title": "How to Reinstate a Lapsed or Suspended Grant",
     "description": "If your SASSA grant has been suspended or has lapsed, this guide walks you through the steps to get it reinstated and recover back payments.",
-    "category": "Grant Management",
+    "category": "Manage Your Grant",
     "difficulty": "intermediate",
     "estimatedTime": "20 minutes",
     "steps": [
@@ -461,7 +461,7 @@
     "id": "lost-phone-number",
     "title": "Lost or Changed Your SASSA Phone Number? How to Update It in 2026",
     "description": "If you lost access to the phone number registered with SASSA, you cannot check your status, receive OTPs, or change banking details. This guide shows you how to update your number.",
-    "category": "Account Management",
+    "category": "Manage Your Account",
     "difficulty": "intermediate",
     "estimatedTime": "2 to 7 days",
     "image": "https://images.unsplash.com/photo-1598965402089-897ce52e4fd4?w=1200&h=400&fit=crop&auto=format",
@@ -545,13 +545,28 @@
         "url": "tel:0800601011",
         "isExternal": false
       }
+    ],
+    "monetization": {
+      "vertical": "mobile"
+    },
+    "nextSteps": [
+      {
+        "title": "Compare affordable data bundles",
+        "url": "/guides/affordable-data-bundles-south-africa",
+        "description": "Keep your number active cheaply"
+      },
+      {
+        "title": "Replace a lost SIM card",
+        "url": "/guides/sim-replacement-south-africa",
+        "description": "If your SIM is lost or stolen"
+      }
     ]
   },
   {
     "id": "moya-app-sassa",
     "title": "How to Use the Moya App for SASSA SRD: Status Checks & Banking Updates",
     "description": "The Moya App is a free data-free messaging platform that now offers SASSA SRD services. Learn how to check your status, update banking details, and appeal using Moya.",
-    "category": "Technology",
+    "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
     "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=400&fit=crop&auto=format",
@@ -633,7 +648,7 @@
     "id": "ussd-codes",
     "title": "SASSA USSD Codes: Check Your Grant Status Without Internet (2026)",
     "description": "You do not need a smartphone or data to check your SASSA status. Use these free USSD codes from any cellphone to check your SRD R370 grant, balance, and payment status.",
-    "category": "Technology",
+    "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
     "estimatedTime": "2 minutes",
     "image": "https://images.unsplash.com/photo-1589496931914-67f415f2e85f?w=1200&h=400&fit=crop&auto=format",
@@ -728,7 +743,7 @@
     "id": "sassa-whatsapp",
     "title": "SASSA WhatsApp Number 082 601 0111: Complete Guide 2026",
     "description": "SASSA offers a 24/7 WhatsApp service for SRD grant applications, status checks, and appeals. Learn exactly how to use the SASSA WhatsApp line step by step.",
-    "category": "Technology",
+    "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
     "estimatedTime": "3 minutes",
     "image": "https://images.unsplash.com/photo-1611605698335-8b156f7f3b8a?w=1200&h=400&fit=crop&auto=format",
@@ -804,13 +819,28 @@
         "url": "https://srd.sassa.gov.za",
         "isExternal": true
       }
+    ],
+    "monetization": {
+      "vertical": "mobile"
+    },
+    "nextSteps": [
+      {
+        "title": "Compare affordable data bundles",
+        "url": "/guides/affordable-data-bundles-south-africa",
+        "description": "Stay connected for status checks"
+      },
+      {
+        "title": "Replace a lost SIM card",
+        "url": "/guides/sim-replacement-south-africa",
+        "description": "If your number stopped working"
+      }
     ]
   },
   {
     "id": "grant-amounts-history",
     "title": "SASSA Grant Amounts 2020–2026: Complete History & Annual Increases",
     "description": "See how every SASSA grant has changed from 2020 to 2026. Complete table of Old Age, Disability, Child Support, Foster Care, and SRD grant amounts year by year.",
-    "category": "Reference",
+    "category": "Manage Your Grant",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
     "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=400&fit=crop&auto=format",
@@ -909,7 +939,7 @@
     "id": "stokvel-e-wallet",
     "title": "Stokvel Payouts & e-Wallet Transfers: Why They Cause SASSA SRD Declines",
     "description": "Thousands of SRD applications are declined because stokvel payouts and e-wallet transfers are counted as income. Learn how to prevent and fix this.",
-    "category": "Eligibility",
+    "category": "Eligibility & Requirements",
     "difficulty": "intermediate",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
@@ -992,7 +1022,7 @@
     "id": "appeal-timeline",
     "title": "How Long Does a SASSA Appeal Take? Full 2026 Timeline & Tracking Guide",
     "description": "SASSA SRD appeals take 60 to 90 days. This guide explains the full process, what happens at each stage, how to check your appeal status, and what to do if it is taking too long.",
-    "category": "Appeals",
+    "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
@@ -1075,7 +1105,7 @@
     "id": "sassa-grant-renewal",
     "title": "Why Your SASSA Grant Is Checked Every Month (Reassessment Guide 2026)",
     "description": "Unlike permanent grants, the SRD R370 is reassessed every month. Learn what changes each month, what triggers a decline, and how to keep your grant active.",
-    "category": "Eligibility",
+    "category": "Eligibility & Requirements",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
@@ -1186,7 +1216,7 @@
     "id": "grant-comparison-overview",
     "title": "SASSA Grants Compared: SRD vs Old Age vs Disability vs Child Support (2026)",
     "description": "Not sure which SASSA grant you qualify for? Compare all grants side by side — amounts, eligibility, age limits, means test thresholds, and how to apply.",
-    "category": "Reference",
+    "category": "Manage Your Grant",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&h=400&fit=crop&auto=format",
@@ -1277,7 +1307,7 @@
     "id": "sassa-online-security",
     "title": "How to Stay Safe on SASSA Websites: Avoiding Scams & Phishing in 2026",
     "description": "Hundreds of fake SASSA websites steal ID numbers and banking details. Learn how to identify the real SASSA website and protect yourself from grant scammers.",
-    "category": "Scam Alert",
+    "category": "Safety & Scams",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
     "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=400&fit=crop&auto=format",
@@ -1372,7 +1402,7 @@
     "id": "life-certification",
     "title": "SASSA Life Certification 2026: How to Complete Your Annual Verification Online",
     "description": "SASSA requires all grant beneficiaries to complete life certification annually. Learn how to verify using the new 2026 self-service portal, WhatsApp, or at a SASSA office.",
-    "category": "Grant Management",
+    "category": "Manage Your Grant",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1573497491765-dccce02aac4b?w=1200&h=400&fit=crop&auto=format",
@@ -1460,7 +1490,7 @@
     "id": "document-checklist",
     "title": "SASSA Grant Documents Checklist: What You Need for Every Grant Type 2026",
     "description": "Complete checklist of documents required for every SASSA grant. Print this list before visiting your SASSA office to avoid being turned away.",
-    "category": "Applications",
+    "category": "Apply for a Grant",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
@@ -1586,7 +1616,7 @@
     "id": "sassa-payment-methods",
     "title": "SASSA Payment Methods 2026: Bank Transfer vs Postbank vs Cash Send vs Retail",
     "description": "Compare all SASSA payment methods: bank account deposit, Postbank Black Card, Cash Send at Pick n Pay/Boxer, and Post Office collection. Find the fastest and safest option.",
-    "category": "Banking",
+    "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
@@ -1673,7 +1703,7 @@
     "id": "bank-details-pending-fix",
     "title": "How to Fix 'Bank Details Pending' on SASSA SRD in 2026",
     "description": "Your SRD status says 'Approved' but you see 'Bank Details Pending' and no payment has arrived. Follow this step-by-step guide to fix it and get your R370 paid.",
-    "category": "SRD Grant",
+    "category": "Eligibility & Requirements",
     "difficulty": "intermediate",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
@@ -1779,7 +1809,7 @@
     "id": "biometric-fix-guide",
     "title": "SASSA Biometric Verification Not Working? 7 Common Fixes for 2026",
     "description": "Your SASSA biometric (eKYC) verification keeps failing? Fix liveness detection errors, link expiry issues, camera problems, and clear your 'Self-Correction Required' status.",
-    "category": "Technology",
+    "category": "Apps, USSD & WhatsApp",
     "difficulty": "intermediate",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1573497491765-dccce02aac4b?w=1200&h=400&fit=crop&auto=format",
@@ -1897,7 +1927,7 @@
     "id": "micro-business-srd",
     "title": "How to Work While Receiving the R370 SRD Grant (Legal Rules & the R624 Income Check)",
     "description": "You can work and still qualify for the SRD R370 grant — as long as your total monthly deposits stay below R624. Learn how SASSA's income check works, which earnings count, and how to appeal if you are declined.",
-    "category": "SRD Grant",
+    "category": "Eligibility & Requirements",
     "difficulty": "intermediate",
     "estimatedTime": "12 minutes",
     "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&h=400&fit=crop&auto=format",
@@ -2005,13 +2035,28 @@
         "url": "/guides/stokvel-e-wallet",
         "isExternal": false
       }
+    ],
+    "monetization": {
+      "vertical": "education"
+    },
+    "nextSteps": [
+      {
+        "title": "Ways to earn extra income",
+        "url": "/guides/ways-to-make-extra-income-south-africa",
+        "description": "Realistic side income"
+      },
+      {
+        "title": "Free skills courses",
+        "url": "/guides/free-skills-courses-south-africa",
+        "description": "Build skills at no cost"
+      }
     ]
   },
   {
     "id": "income-source-detected-appeal",
     "title": "How to Fix 'Income Source Detected' SASSA Decline: Step-by-Step ITSAA Appeal Guide",
     "description": "Your SRD was declined because SASSA says they detected 'alternative income'. Most of the time this is a mistake — a family transfer, stokvel payout, or once-off deposit. Here is exactly how to appeal to the Independent Tribunal and get your back pay.",
-    "category": "Appeals",
+    "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
     "estimatedTime": "15 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
@@ -2129,7 +2174,7 @@
     "id": "bulk-means-test",
     "title": "SASSA Bulk Means Test: Why SASSA Checks Your Bank Accounts and How to Respond",
     "description": "SASSA uses the bulk means test to check if beneficiaries have undisclosed income flowing into bank accounts they did not declare. Learn what triggers it, how to respond, and what happens if you ignore it.",
-    "category": "Eligibility",
+    "category": "Eligibility & Requirements",
     "difficulty": "intermediate",
     "estimatedTime": "10 minutes",
     "steps": [
@@ -2246,7 +2291,7 @@
     "id": "alternative-id-grants",
     "title": "SASSA Grants with Alternative ID: Guide for Refugees, Asylum Seekers & Special Permit Holders",
     "description": "If you use a refugee permit, asylum seeker document, or special permit (ZEP/LEP) instead of a 13-digit SA ID, this guide explains how to apply for grants, what documents you need, and how the verification process affects you.",
-    "category": "Eligibility",
+    "category": "Eligibility & Requirements",
     "difficulty": "intermediate",
     "estimatedTime": "12 minutes",
     "steps": [
@@ -2355,7 +2400,7 @@
     "id": "grant-verification-process",
     "title": "SASSA Grant Reviews & Verification Process (Complete Guide)",
     "description": "Complete guide to SASSA grant reviews and verification. If you received an SMS or letter asking you to visit a SASSA office, here is exactly what will happen, what documents to bring, and what to do if you miss your appointment.",
-    "category": "Grant Management",
+    "category": "Manage Your Grant",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "steps": [
@@ -2524,7 +2569,7 @@
     "id": "sassa-update-information",
     "title": "What to Do If SASSA Asks You to Update Your Information (Step-by-Step)",
     "description": "Received an SMS, letter, or call asking you to update your information with SASSA? Follow this step-by-step guide to respond safely, keep your grant active, and avoid scams.",
-    "category": "Account Management",
+    "category": "Manage Your Account",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
     "steps": [
@@ -2654,7 +2699,7 @@
     "id": "best-bank-accounts-sassa-2026",
     "title": "Best Bank Accounts for SASSA Beneficiaries in 2026: Low Fees & ATM Access Compared",
     "description": "Not all bank accounts are equal when you live on a SASSA grant. Compare Capitec, Postbank, TymeBank, FNB, Absa, Nedbank, Bank Zero, and Shoprite Money Market — monthly fees, ATM withdrawal costs, and hidden charges that eat into your grant.",
-    "category": "Banking",
+    "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
@@ -2778,7 +2823,7 @@
     "id": "missing-grant-payment-guide",
     "title": "Fix Missing SASSA Grant Payments",
     "description": "Your SASSA grant did not arrive? Learn why payments get delayed, how to check your status, and the exact steps to get your money back into your account.",
-    "category": "Payment Problems",
+    "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
     "steps": [
@@ -2909,7 +2954,7 @@
     "id": "postbank-black-card-guide",
     "title": "SASSA Gold Card to Black Card Guide",
     "description": "The SASSA Gold Card switch-off date (31 August 2026) has passed. Find out what happens if you still have a Gold Card, whether you can still access your grant, and how to get your free Postbank Black Card now.",
-    "category": "Banking",
+    "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
     "steps": [
@@ -3067,7 +3112,7 @@
     "id": "fourth-payment-day-guide",
     "title": "Grant Under Review? Fourth Payment Day",
     "description": "If SASSA paid you on a different day than other beneficiaries, your grant may be under review. Here is what the fourth payment day is, why it happens, and what you must do to get back on the normal payment cycle.",
-    "category": "Payment Dates",
+    "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "steps": [
@@ -3239,7 +3284,7 @@
     "id": "elife-certification-troubleshooting",
     "title": "Fix SASSA eLife Certification Problems",
     "description": "eLife portal keeps loading? Facial recognition fails? OTP not received? This guide covers every known eLife Certification glitch and how to fix it.",
-    "category": "Identity Verification",
+    "category": "Manage Your Account",
     "difficulty": "intermediate",
     "estimatedTime": "10 minutes",
     "steps": [
@@ -3357,7 +3402,7 @@
     "id": "sassa-deductions-explained",
     "title": "SASSA Grant Deductions Explained",
     "description": "Money missing from your SASSA grant? Learn about loan repayments, funeral policies, and other deductions — and how to stop unauthorised ones.",
-    "category": "Payment Problems",
+    "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "steps": [
@@ -3462,5 +3507,871 @@
     ],
     "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=400&fit=crop&auto=format",
     "imageAlt": "Calculator and bank statements with highlighted deduction amounts"
+  },
+  {
+    "id": "best-bank-accounts-sassa-beneficiaries",
+    "title": "Best Bank Accounts for SASSA Beneficiaries in 2026 (Low-Fee Options Compared)",
+    "description": "SASSA does not require you to use a specific bank. Compare low-fee accounts from Capitec, TymeBank, FNB, Nedbank and Postbank for receiving your grant — fees, ATM access, retail collection and digital banking.",
+    "category": "Banking & Payments",
+    "difficulty": "Easy",
+    "estimatedTime": "8 min read",
+    "tags": [
+      "sassa bank account",
+      "sassa payment methods",
+      "low fee bank account south africa",
+      "sassa grant payment",
+      "where to receive sassa grant"
+    ],
+    "lastUpdated": "2026-08-20",
+    "author": "SASSA Help Hub Editorial Team",
+    "steps": [
+      {
+        "title": "Understand that SASSA does not mandate a bank",
+        "content": "SASSA lets you receive your grant through a bank account of your choice, through Postbank, or by collecting cash at a retail point (Pick n Pay, Boxer, Shoprite, Checkers, USave, or Spar). You are free to compare banks and choose the one that suits you. No commercial bank is 'required' by SASSA."
+      },
+      {
+        "title": "Compare the real costs that matter to grant recipients",
+        "content": "When your income is a fixed monthly grant, account fees matter. Look at: the monthly account fee, ATM withdrawal fees (especially at your own bank vs other ATMs), the cost of sending and receiving money, minimum balance rules, and whether the account is truly zero-rated for social grant recipients. Banks change their fee schedules every year, so confirm the current figures on the bank's own website or by asking in branch before opening."
+      },
+      {
+        "title": "Check how you will actually access your money",
+        "content": "Consider ATM availability near you, whether the bank has a strong mobile app for balance checks and airtime/data purchases, and whether retail collection is supported. Many beneficiaries prefer an account that lets them withdraw at a supermarket till or a nearby ATM without large fees."
+      },
+      {
+        "title": "Look at digital and low-cost banks",
+        "content": "Some South African banks and mobile-banking platforms offer low or no monthly fees and fully digital onboarding. These can be a good fit if you mainly need to receive a grant, check your balance, and buy airtime or data. Traditional banks may offer more branches but higher fees — weigh convenience against cost."
+      },
+      {
+        "title": "Match the account to how you receive payments",
+        "content": "If you collect cash, retail collection may remove the need for a bank account entirely. If you want the money paid into an account, choose one where your grant arrives reliably and where you can withdraw or spend it cheaply. Your banking details must match your ID exactly, or SASSA cannot pay you."
+      },
+      {
+        "title": "Open, then update your SASSA banking details",
+        "content": "After you open an account, update your details on the SRD portal (srd.sassa.gov.za) or the relevant SASSA channel so your payment goes to the correct account. Wrong or mismatched details are the most common cause of delayed payments."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does SASSA force me to use a specific bank?",
+        "a": "No. SASSA does not require you to use any particular commercial bank. You can choose your own bank, use Postbank, or collect cash at a participating retailer."
+      },
+      {
+        "q": "Which bank is cheapest for a SASSA grant?",
+        "a": "It depends on your usage. Compare the monthly fee, ATM withdrawal fees, and whether the account is zero-rated for grant recipients. Check each bank's current published fee schedule, because fees change annually."
+      },
+      {
+        "q": "Can I receive my SRD R370 into any bank account?",
+        "a": "Yes, as long as the account is in your name and the details you enter on the SRD portal match your ID document exactly. Mismatched names are a common reason payments fail."
+      }
+    ],
+    "sources": [
+      {
+        "title": "South African Social Security Agency (SASSA)",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "Department of Social Development",
+        "url": "https://www.dsd.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "How to Open a Bank Account for SASSA Payments",
+        "url": "/guides/how-to-open-bank-account-sassa-payments",
+        "isExternal": false
+      },
+      {
+        "title": "Fix 'Bank Details Pending'",
+        "url": "/guides/bank-details-pending-fix",
+        "isExternal": false
+      },
+      {
+        "title": "SRD R370 Grant Guide",
+        "url": "/grants/srd-r370-grant",
+        "isExternal": false
+      }
+    ],
+    "monetization": {
+      "vertical": "banking"
+    },
+    "nextSteps": [
+      {
+        "title": "How to open a bank account for SASSA payments",
+        "url": "/guides/how-to-open-bank-account-sassa-payments",
+        "description": "Documents and steps to open an account"
+      },
+      {
+        "title": "Fix 'Bank Details Pending'",
+        "url": "/guides/bank-details-pending-fix",
+        "description": "Unblock a delayed payment"
+      },
+      {
+        "title": "SRD R370 grant guide",
+        "url": "/grants/srd-r370-grant",
+        "description": "Eligibility, payment dates and how to apply"
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Person checking a banking app on a smartphone"
+  },
+  {
+    "id": "how-to-open-bank-account-sassa-payments",
+    "title": "How to Open a Bank Account for SASSA Payments in 2026",
+    "description": "Step-by-step: documents, where to apply, and how to link your new account so your SASSA grant or SRD R370 is paid correctly. Independent guide, no specific bank required.",
+    "category": "Banking & Payments",
+    "difficulty": "Easy",
+    "estimatedTime": "7 min read",
+    "tags": [
+      "open bank account sassa",
+      "sassa grant bank account",
+      "sassa banking details",
+      "how to receive sassa grant"
+    ],
+    "lastUpdated": "2026-08-20",
+    "author": "SASSA Help Hub Editorial Team",
+    "steps": [
+      {
+        "title": "Choose where to bank first",
+        "content": "Decide whether you want a traditional bank, a low-cost digital bank, Postbank, or cash collection at a retailer. SASSA does not require a specific bank, so compare options before you apply. See our comparison guide for factors to weigh."
+      },
+      {
+        "title": "Gather your documents",
+        "content": "You will typically need your original South African ID book or smart ID card, proof of residence (such as a utility bill or an affidavit if you live with family), and a working cellphone number in your name. Requirements differ slightly between banks, so confirm with the bank you choose."
+      },
+      {
+        "title": "Apply in branch or on the app",
+        "content": "Many banks let you open an account at a branch with your ID and proof of residence, while some low-cost and digital banks allow fully remote sign-up using your ID and a selfie for verification. Choose whichever you can complete reliably."
+      },
+      {
+        "title": "Make sure the account is in your own name",
+        "content": "Your SASSA payment must go to an account that matches your ID exactly. An account in someone else's name, or with a spelling mismatch, will be rejected and your payment will be delayed."
+      },
+      {
+        "title": "Get your account details",
+        "content": "You need the bank name, account number, and branch code (or confirmation that the account uses a universal branch code). Keep these safe and double-check them before submitting anywhere."
+      },
+      {
+        "title": "Update your SASSA banking details",
+        "content": "Log into the SRD portal at srd.sassa.gov.za (or the relevant SASSA channel) and enter your new account details. Verification usually takes a few working days. Only after verification will your grant be paid into the new account."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I open a bank account if I only receive a grant?",
+        "a": "Yes. Banks offer accounts for people with grant or low regular income. You do not need to be employed, but you do need a valid SA ID and the required documents."
+      },
+      {
+        "q": "How long before my grant pays into the new account?",
+        "a": "After you update your details on the SASSA/SRD portal, verification typically takes a few working days. Your next payment batch will use the corrected account once verification is complete."
+      },
+      {
+        "q": "What if I don't want a bank account?",
+        "a": "You can collect your grant in cash at participating retailers, or use Postbank. A bank account is optional, not mandatory."
+      }
+    ],
+    "sources": [
+      {
+        "title": "South African Social Security Agency (SASSA)",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Best Bank Accounts for SASSA Beneficiaries",
+        "url": "/guides/best-bank-accounts-sassa-beneficiaries",
+        "isExternal": false
+      },
+      {
+        "title": "Fix 'Bank Details Pending'",
+        "url": "/guides/bank-details-pending-fix",
+        "isExternal": false
+      },
+      {
+        "title": "SRD R370 Grant Guide",
+        "url": "/grants/srd-r370-grant",
+        "isExternal": false
+      }
+    ],
+    "monetization": {
+      "vertical": "banking"
+    },
+    "nextSteps": [
+      {
+        "title": "Best bank accounts compared",
+        "url": "/guides/best-bank-accounts-sassa-beneficiaries",
+        "description": "Compare low-fee options"
+      },
+      {
+        "title": "Fix 'Bank Details Pending'",
+        "url": "/guides/bank-details-pending-fix",
+        "description": "If your payment is delayed"
+      },
+      {
+        "title": "SRD R370 grant guide",
+        "url": "/grants/srd-r370-grant",
+        "description": "Eligibility and payment dates"
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1603796846098-2dfc64de9cb4?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "ID document and smartphone used to open a bank account"
+  },
+  {
+    "id": "sim-replacement-south-africa",
+    "title": "How to Replace Your Lost or Stolen SIM Card in South Africa (2026)",
+    "description": "Step-by-step: block your old SIM, visit a network store with your ID, and get a new SIM that keeps your number — important if your number is linked to SASSA.",
+    "category": "Manage Your Account",
+    "difficulty": "beginner",
+    "estimatedTime": "30 minutes",
+    "steps": [
+      {
+        "title": "Report the loss and block your number",
+        "content": "Contact your network (Vodacom, MTN, Cell C, or Telkom) as soon as possible to block the SIM so no one can use it. Most networks have a USSD or app option, or you can visit a store.",
+        "tips": [
+          "Act quickly — a blocked SIM cannot be used for SIM-swap fraud.",
+          "Have your ID number ready when you call."
+        ]
+      },
+      {
+        "title": "Find your nearest network store",
+        "content": "A SIM swap usually requires visiting a branded store with your ID. Some networks also allow RICA-compliant online or in-app replacements — check the network's official website for the current process.",
+        "tips": [
+          "Avoid informal 'agents' offering SIM swaps — use the official store."
+        ]
+      },
+      {
+        "title": "Take your proof of identity",
+        "content": "Bring your original South African ID book or smart ID card (or passport plus visa for foreign nationals) and any RICA documents you have.",
+        "tips": [
+          "RICA rules require the registered owner to be present."
+        ]
+      },
+      {
+        "title": "Get the SIM swapped to your number",
+        "content": "The consultant deactivates the old SIM and activates a new one against your existing number. Your number stays the same; only the physical SIM changes.",
+        "tips": [
+          "Test the new SIM with a call before you leave the store."
+        ]
+      },
+      {
+        "title": "Re-link important services",
+        "content": "Once the new SIM is active, verify you can receive SMS and access WhatsApp and the SRD portal. If your number actually changed, update SASSA with your new number using our lost phone number guide."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Will I lose my number?",
+        "a": "No. A SIM swap keeps your existing number; only the physical SIM card changes."
+      },
+      {
+        "q": "How much does a SIM swap cost?",
+        "a": "Fees vary by network and change over time. Check the current fee on the network's official website before you go."
+      },
+      {
+        "q": "Can someone else collect my SIM for me?",
+        "a": "No. RICA rules require the registered owner to be present with their ID."
+      }
+    ],
+    "tags": [
+      "sim swap",
+      "sim replacement",
+      "lost sim",
+      "rica",
+      "sassa phone number"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "Lost or Changed Your Phone Number",
+        "url": "/guides/lost-phone-number",
+        "isExternal": false
+      },
+      {
+        "title": "Affordable Data Bundles",
+        "url": "/guides/affordable-data-bundles-south-africa",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "ICASA (SIM swap & RICA rules)",
+        "url": "https://www.icasa.org.za"
+      },
+      {
+        "title": "SASSA Official Website",
+        "url": "https://www.sassa.gov.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "mobile"
+    },
+    "nextSteps": [
+      {
+        "title": "Keep your number active with affordable data",
+        "url": "/guides/affordable-data-bundles-south-africa",
+        "description": "Compare prepaid data options"
+      },
+      {
+        "title": "Update your SASSA phone number",
+        "url": "/guides/lost-phone-number",
+        "description": "If your number changed"
+      }
+    ]
+  },
+  {
+    "id": "affordable-data-bundles-south-africa",
+    "title": "Cheapest Data Bundles in South Africa (2026): How to Compare",
+    "description": "How to compare prepaid data prices across Vodacom, MTN, Cell C, and Telkom without overpaying — and why prices change every month.",
+    "category": "Apps, USSD & WhatsApp",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "steps": [
+      {
+        "title": "Know what you actually use",
+        "content": "Check your phone's data usage in settings to avoid buying too much or too little. Most people overestimate how much they need.",
+        "tips": [
+          "Streaming and video use the most data; status checks and WhatsApp use very little."
+        ]
+      },
+      {
+        "title": "Compare per-gigabyte value, not just the headline price",
+        "content": "A larger bundle is usually cheaper per gigabyte. Divide the price by the GB to see the real value.",
+        "tips": [
+          "Watch for 'night owl' or 'social' bundles that only work at certain times or on certain apps."
+        ]
+      },
+      {
+        "title": "Check each network's official rates",
+        "content": "Visit the network's website or dial their USSD balance code. Prices change and promotions come and go, so confirm before you buy.",
+        "tips": [
+          "Don't trust screenshots from social media — rates may be outdated."
+        ]
+      },
+      {
+        "title": "Consider once-off vs recurring bundles",
+        "content": "Some bundles expire in a few days, others last 30, 60, or 90 days. Pick the validity that matches how you use data."
+      },
+      {
+        "title": "Use free channels where available",
+        "content": "The Moya App offers free SASSA SRD status checks without using your data, and USSD codes (*120*69277#) also work without data."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the cheapest data in South Africa?",
+        "a": "It changes monthly and depends on the network and bundle size. Always check the current rates on each network's official site before buying."
+      },
+      {
+        "q": "Do bundles roll over?",
+        "a": "Some networks let unused data roll over if you top up before expiry. Check the terms on your network's site."
+      },
+      {
+        "q": "Can I use data for SASSA status checks?",
+        "a": "Yes, but you can also use the Moya App or USSD codes, which may not use your data."
+      }
+    ],
+    "tags": [
+      "data bundles",
+      "cheapest data",
+      "prepaid data",
+      "vodacom",
+      "mtn",
+      "cell c",
+      "telkom"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "Replace a Lost SIM",
+        "url": "/guides/sim-replacement-south-africa",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA WhatsApp Guide",
+        "url": "/guides/sassa-whatsapp",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "ICASA",
+        "url": "https://www.icasa.org.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "mobile"
+    },
+    "nextSteps": [
+      {
+        "title": "Replace a lost SIM card",
+        "url": "/guides/sim-replacement-south-africa",
+        "description": "If your number is lost"
+      },
+      {
+        "title": "SASSA WhatsApp guide",
+        "url": "/guides/sassa-whatsapp",
+        "description": "Check status without data"
+      }
+    ]
+  },
+  {
+    "id": "ways-to-make-extra-income-south-africa",
+    "title": "Ways to Earn Extra Income in South Africa (2026)",
+    "description": "Honest, realistic ways South Africans look for extra income — local work, selling goods, and free skills training. No 'get rich quick' promises.",
+    "category": "Money, Insurance & Jobs",
+    "difficulty": "beginner",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "Be realistic about 'quick money' offers",
+        "content": "Any scheme promising guaranteed income 'because you receive a SASSA grant' is almost always a scam. SASSA grants are not a route to loans or business funding.",
+        "tips": [
+          "If it sounds too good to be true, it is."
+        ]
+      },
+      {
+        "title": "Look for local, low-capital work",
+        "content": "Informal services that neighbours need — childcare, cleaning, gardening, hair braiding, transport, or sewing — can be started with little money."
+      },
+      {
+        "title": "Sell unused items",
+        "content": "Social marketplace apps let you turn unused goods into cash. Take clear photos and meet buyers in safe, public places."
+      },
+      {
+        "title": "Use free government and NGO skills programmes",
+        "content": "See our free skills courses guide for verified, low-cost learning options that can improve your prospects.",
+        "tips": [
+          "Avoid any 'course' that promises a guaranteed job in exchange for a large fee."
+        ]
+      },
+      {
+        "title": "Avoid loan-based 'income' schemes",
+        "content": "Taking a loan to 'start earning' usually creates debt, not income. Compare financial options carefully before borrowing."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I get a loan because I receive a SASSA grant?",
+        "a": "Receiving a grant does not qualify you for special loans, and borrowing against a grant is risky. Compare options carefully."
+      },
+      {
+        "q": "Are 'SASSA income' WhatsApp groups legit?",
+        "a": "No. Groups promising grant-linked income or loans are scams."
+      },
+      {
+        "q": "Where can I learn a skill for free?",
+        "a": "See our free skills courses guide for verified options."
+      }
+    ],
+    "tags": [
+      "extra income",
+      "side hustle",
+      "south africa jobs",
+      "skills",
+      "scam warning"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "Free Skills Courses",
+        "url": "/guides/free-skills-courses-south-africa",
+        "isExternal": false
+      },
+      {
+        "title": "Compare Financial Options",
+        "url": "/guides/compare-financial-options-south-africa",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "Department of Employment and Labour",
+        "url": "https://www.labour.gov.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "education"
+    },
+    "nextSteps": [
+      {
+        "title": "Free skills courses in South Africa",
+        "url": "/guides/free-skills-courses-south-africa",
+        "description": "Build skills at no cost"
+      },
+      {
+        "title": "Compare financial options carefully",
+        "url": "/guides/compare-financial-options-south-africa",
+        "description": "Avoid bad debt"
+      }
+    ]
+  },
+  {
+    "id": "free-skills-courses-south-africa",
+    "title": "Free Skills Courses in South Africa (2026): Where to Start",
+    "description": "Verified, free or low-cost learning options in South Africa — from government programmes to online platforms — to build employable skills.",
+    "category": "Money, Insurance & Jobs",
+    "difficulty": "beginner",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "Decide what skill you want",
+        "content": "Pick something with local demand — basic computer literacy, admin, sewing, caregiving, or a trade. A clear goal helps you finish."
+      },
+      {
+        "title": "Check government and SETA programmes",
+        "content": "Some programmes are free to unemployed South Africans. Verify current offerings on the official provider's website, as availability changes.",
+        "tips": [
+          "Be cautious of anyone charging a large fee to 'register' you for a free course."
+        ]
+      },
+      {
+        "title": "Use free online learning platforms",
+        "content": "Several global platforms offer free courses (some charge only for a certificate). These can be done on a phone."
+      },
+      {
+        "title": "Ask your local library or community centre",
+        "content": "Many offer free basic computer and literacy classes, and some provide internet access."
+      },
+      {
+        "title": "Watch for scams",
+        "content": "Never pay for a 'guaranteed job' that results from a course. A course builds skills; it does not guarantee employment."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these courses really free?",
+        "a": "Many are free or subsidised; some charge only for a certificate. Always confirm on the official provider's site."
+      },
+      {
+        "q": "Will a course get me a job?",
+        "a": "A course builds skills and improves your chances, but does not guarantee employment."
+      },
+      {
+        "q": "Do I need data or a computer?",
+        "a": "Some courses are mobile-friendly; libraries and community centres often provide free access."
+      }
+    ],
+    "tags": [
+      "free courses",
+      "skills training",
+      "online learning",
+      "SETA",
+      "south africa education"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "Ways to Earn Extra Income",
+        "url": "/guides/ways-to-make-extra-income-south-africa",
+        "isExternal": false
+      },
+      {
+        "title": "Compare Financial Options",
+        "url": "/guides/compare-financial-options-south-africa",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "Department of Higher Education and Training",
+        "url": "https://www.dhet.gov.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "education"
+    },
+    "nextSteps": [
+      {
+        "title": "Ways to earn extra income",
+        "url": "/guides/ways-to-make-extra-income-south-africa",
+        "description": "Put your skills to use"
+      },
+      {
+        "title": "Compare financial options carefully",
+        "url": "/guides/compare-financial-options-south-africa",
+        "description": "Manage money while learning"
+      }
+    ]
+  },
+  {
+    "id": "funeral-cover-south-africa-comparison",
+    "title": "Funeral Cover in South Africa: How to Compare (2026)",
+    "description": "An independent, plain-English guide to comparing funeral cover — what it pays out, waiting periods, and exclusions. SASSA grants are NOT affected by whether you have cover.",
+    "category": "Money, Insurance & Jobs",
+    "difficulty": "beginner",
+    "estimatedTime": "12 minutes",
+    "steps": [
+      {
+        "title": "Understand what funeral cover is",
+        "content": "It is a policy that pays a lump sum to your family on your death to help with funeral costs. It is optional and personal.",
+        "tips": [
+          "This page is independent and not affiliated with any insurer or with SASSA."
+        ]
+      },
+      {
+        "title": "Check the waiting period",
+        "content": "Most policies will not pay the full amount if death occurs within the first 6–12 months. Often only the premiums paid are returned in that early period.",
+        "tips": [
+          "Ask the provider exactly what is paid in the first year."
+        ]
+      },
+      {
+        "title": "Compare the payout amount vs the premium",
+        "content": "A higher payout costs more per month. Choose an amount your family would actually need, not the largest on offer."
+      },
+      {
+        "title": "Read the exclusions",
+        "content": "Check how natural vs accidental death is treated, and any age limits for covered members."
+      },
+      {
+        "title": "Confirm it is independent of SASSA",
+        "content": "Having or not having funeral cover does not change any SASSA grant you receive. SASSA does not require or endorse any cover."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does SASSA require me to have funeral cover?",
+        "a": "No. SASSA grants are paid regardless of any insurance you hold."
+      },
+      {
+        "q": "Will a payout affect my grant?",
+        "a": "A funeral payout goes to your beneficiaries, not to you, and does not affect your SASSA grant."
+      },
+      {
+        "q": "How much does cover cost?",
+        "a": "Premiums vary by age and payout size and change over time. Compare current quotes on the provider's official site."
+      }
+    ],
+    "tags": [
+      "funeral cover",
+      "funeral insurance",
+      "compare cover",
+      "south africa insurance"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "How Much Does Funeral Cover Cost?",
+        "url": "/guides/what-does-funeral-cover-cost",
+        "isExternal": false
+      },
+      {
+        "title": "Old Age Pension Guide",
+        "url": "/grants/old-age-pension",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "National Treasury (insurance regulation)",
+        "url": "https://www.treasury.gov.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "insurance"
+    },
+    "nextSteps": [
+      {
+        "title": "How much does funeral cover cost?",
+        "url": "/guides/what-does-funeral-cover-cost",
+        "description": "Understand pricing"
+      },
+      {
+        "title": "Old Age Pension guide",
+        "url": "/grants/old-age-pension",
+        "description": "Grant amounts and eligibility"
+      }
+    ]
+  },
+  {
+    "id": "what-does-funeral-cover-cost",
+    "title": "How Much Does Funeral Cover Cost in South Africa? (2026)",
+    "description": "What influences funeral cover premiums — age, payout size, and waiting periods — and why you should always get a current quote from the provider.",
+    "category": "Money, Insurance & Jobs",
+    "difficulty": "beginner",
+    "estimatedTime": "10 minutes",
+    "steps": [
+      {
+        "title": "Know the main price drivers",
+        "content": "Your age and the payout amount are the biggest factors. Older members and larger payouts cost more."
+      },
+      {
+        "title": "Get a current quote",
+        "content": "Prices change. Request a quote directly from the provider's official site rather than relying on old figures.",
+        "tips": [
+          "Compare at least two providers before deciding."
+        ]
+      },
+      {
+        "title": "Watch the waiting period",
+        "content": "Early-death limits mean the full payout may not apply in the first months. Understand this before you pay."
+      },
+      {
+        "title": "Check who is covered",
+        "content": "Spouse, children, and extended family may be added at extra cost. Confirm exactly who is included."
+      },
+      {
+        "title": "Compare before you commit",
+        "content": "Use our comparison guide to weigh payout against premium and exclusions."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is funeral cover mandatory for SASSA?",
+        "a": "No. It is a personal choice and unrelated to your grant."
+      },
+      {
+        "q": "Can I be refused cover?",
+        "a": "Providers may decline based on age or health; terms differ between insurers."
+      },
+      {
+        "q": "Does the payout count as income?",
+        "a": "No — it is paid to your beneficiaries to help with funeral costs."
+      }
+    ],
+    "tags": [
+      "funeral cover cost",
+      "funeral insurance price",
+      "premiums"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "Compare Funeral Cover",
+        "url": "/guides/funeral-cover-south-africa-comparison",
+        "isExternal": false
+      },
+      {
+        "title": "Child Support Grant Guide",
+        "url": "/grants/child-support-grant",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "National Treasury",
+        "url": "https://www.treasury.gov.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "insurance"
+    },
+    "nextSteps": [
+      {
+        "title": "Compare funeral cover options",
+        "url": "/guides/funeral-cover-south-africa-comparison",
+        "description": "Weigh payout vs premium"
+      },
+      {
+        "title": "Child Support Grant guide",
+        "url": "/grants/child-support-grant",
+        "description": "Grant amounts and eligibility"
+      }
+    ]
+  },
+  {
+    "id": "compare-financial-options-south-africa",
+    "title": "Compare Financial Options in South Africa (2026): A Neutral Guide",
+    "description": "How to think about loans, savings, and credit without falling into debt traps. Educational only — this page is not affiliated with SASSA or any lender.",
+    "category": "Money, Insurance & Jobs",
+    "difficulty": "beginner",
+    "estimatedTime": "15 minutes",
+    "steps": [
+      {
+        "title": "Know the difference between good and bad debt",
+        "content": "A loan for consumption that you cannot repay is dangerous. Borrow only what you can realistically pay back.",
+        "tips": [
+          "If you are unsure, speak to a free debt counsellor before signing."
+        ]
+      },
+      {
+        "title": "Check the real cost (interest + fees)",
+        "content": "Compare the total repayment, not just the monthly amount. A longer term lowers the monthly payment but raises the total cost."
+      },
+      {
+        "title": "Prefer saving for emergencies",
+        "content": "A small savings habit avoids high-cost loans later. Even a little set aside each month helps."
+      },
+      {
+        "title": "Beware 'grant-backed loan' scams",
+        "content": "No one may offer you a loan 'because you get a SASSA grant'. These are scams. Report them to SASSA and the National Credit Regulator.",
+        "tips": [
+          "Legitimate lenders do not target people based on their grant."
+        ]
+      },
+      {
+        "title": "Use the National Credit Regulator",
+        "content": "Only use registered credit providers. You can verify a lender on the NCR website before borrowing."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I get a loan because I receive a SASSA grant?",
+        "a": "A grant is not collateral and does not entitle you to a loan. Be wary of any lender targeting grant recipients."
+      },
+      {
+        "q": "Is this page affiliated with a lender?",
+        "a": "No. It is educational and independent. We do not recommend specific providers."
+      },
+      {
+        "q": "Where do I report a loan scam?",
+        "a": "Report to the National Credit Regulator and the SASSA fraud lines."
+      }
+    ],
+    "tags": [
+      "compare loans",
+      "financial options",
+      "debt",
+      "credit",
+      "south africa finance"
+    ],
+    "lastUpdated": "2026-08-01",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "Ways to Earn Extra Income",
+        "url": "/guides/ways-to-make-extra-income-south-africa",
+        "isExternal": false
+      },
+      {
+        "title": "Free Skills Courses",
+        "url": "/guides/free-skills-courses-south-africa",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "National Credit Regulator",
+        "url": "https://www.ncr.org.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "finance"
+    },
+    "nextSteps": [
+      {
+        "title": "Ways to earn extra income",
+        "url": "/guides/ways-to-make-extra-income-south-africa",
+        "description": "Build income instead of borrowing"
+      },
+      {
+        "title": "Free skills courses",
+        "url": "/guides/free-skills-courses-south-africa",
+        "description": "Improve your prospects"
+      }
+    ]
   }
 ]

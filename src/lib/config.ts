@@ -16,13 +16,20 @@ export const SRD_CONFIG = {
   grantName: "SRD R370",
 };
 
-// TODO(recheck): SRD R370 September 2026 date is still "TBC — not officially confirmed" in
-// public/data/paymentDates.json. No confirmed date exists as of 2026-08-20.
-// Re-check srd.sassa.gov.za / SASSA official channels during the last week of September
-// and update when confirmed — do NOT guess a date.
+// DATE GOVERNANCE: The authoritative, governance-tagged schedule lives in
+// public/data/payment-schedule-forecast.json, where each month carries:
+//   - per-grant status of "confirmed" (officially announced) vs "projected"
+//   - a governance block { source, sourceURL, lastVerified, notes }
+// The /dates/[month-year] template reads those fields and always labels
+// non-confirmed (projected) dates as such with an amber warning, and renders
+// the source + last-verified per month.
 //
-// NOTE: The September 2026 fourth payment day (grants under review) is also not yet
-// officially confirmed. Do not publish a specific date as official until SASSA announces it.
+// As of the September 2026 cycle: permanent grant dates (Older Persons,
+// Disability, Children's) are confirmed by SASSA, but the SRD R370 date and the
+// fourth payment day (grants under review) were still TBC. Do NOT publish a
+// specific SRD/fourth-payment date as official until SASSA announces it —
+// update the forecast JSON status field to "confirmed" and its source/lastVerified
+// only when an official announcement exists.
 //
 // USSD note: *120*69277# is the SRD status-check code (matches guides/ussd-codes). The old
 // *120*3227# value was retired — kept in git history only.

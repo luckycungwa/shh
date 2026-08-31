@@ -1,0 +1,352 @@
+[
+  {
+    "slug": "bank-transfer",
+    "provider": "Direct Bank Transfer",
+    "title": "SASSA Grant Bank Transfer — How to Receive Your Grant to Any Bank",
+    "description": "Receive your SASSA SRD or permanent grant directly into your South African bank account. Learn which banks work, how to set it up, and how to fix payment delays.",
+    "intro": "Direct bank transfer is the most common way SASSA beneficiaries receive their grants. Your monthly payment is deposited straight into your South African bank account. You can use any major bank — Absa, FNB, Standard Bank, Nedbank, Capitec, TymeBank, or Postbank — as long as the account is registered in your own name and the holder name matches your ID document exactly. Once your banking details are verified on the SRD portal, SASSA pays directly and you can track the 'Paid' status on your account.",
+    "how_it_works": [
+      "You provide your bank account number, branch code, and account holder name during application or when updating details",
+      "SASSA verifies the account against your ID before payment",
+      "SASSA releases the payment in a batch, and the money reflects in 1 to 3 business days",
+      "You see a 'Pay Day' date on your status once the batch is scheduled"
+    ],
+    "banks_supported": [
+      { "name": "Absa", "note": "Works for SASSA direct deposit" },
+      { "name": "FNB", "note": "Works for SASSA direct deposit" },
+      { "name": "Standard Bank", "note": "Works for SASSA direct deposit" },
+      { "name": "Nedbank", "note": "Works for SASSA direct deposit" },
+      { "name": "Capitec", "note": "Works for SASSA direct deposit" },
+      { "name": "TymeBank", "note": "Works for SASSA direct deposit" },
+      { "name": "Postbank", "note": "Postbank is the SASSA-preferred account" }
+    ],
+    "steps": [
+      { "title": "Log into the SRD portal", "text": "Go to srd.sassa.gov.za and log in with your ID number and registered phone number." },
+      { "title": "Go to Banking Details", "text": "Open the 'Banking Details' or 'Update Banking Details' section on the portal." },
+      { "title": "Enter your account details", "text": "Provide your bank name, account number, branch code, and holder name exactly as on your ID." },
+      { "title": "Submit and wait for verification", "text": "Verification usually takes 3 to 7 working days. Once verified, your future payments go to this account." },
+      { "title": "Check for a 'Pay Day'", "text": "When your status shows 'Approved', look for the 'Pay Day' date, then allow 1 to 3 business days for the money to reflect." }
+    ],
+    "faqs": [
+      { "q": "Can I receive my SASSA grant in any bank account?", "a": "Yes, as long as it is a South African bank account registered in your own name, and the account holder name matches your ID exactly. All major banks — Absa, FNB, Standard Bank, Nedbank, Capitec, TymeBank and Postbank — can receive SASSA payments." },
+      { "q": "Why is my status 'Bank Details Pending'?", "a": "It means your application is approved in principle but SASSA cannot verify your banking details. Update your details on the SRD portal and verification usually completes within 3 to 7 working days. See our full guide at /status/bank-details-pending." },
+      { "q": "How long does it take for the money to reflect?", "a": "After your 'Pay Day' date, bank transfers usually reflect within 1 to 3 business days depending on your bank." },
+      { "q": "Can I change my bank details at any time?", "a": "Yes. Log into the SRD portal and update your banking details. Make sure the account is in your name, and update it well before payment batches run to avoid delays." }
+    ],
+    "who_to_contact": [
+      { "label": "SRD Portal", "value": "srd.sassa.gov.za" },
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
+    "related": ["/status/bank-details-pending", "/status/approved", "/banking/postbank", "/payment-calendar", "/status/paid"],
+    "has_cta": true,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "postbank",
+    "provider": "Postbank",
+    "title": "SASSA Postbank — How to Receive Your Grant & Check Your Status",
+    "description": "Postbank is SASSA's preferred payment partner. Learn how to open a Postbank account, collect your grant, check your status, and use SASSA cash send.",
+    "intro": "Postbank is the South African Post Office's bank and SASSA's preferred payment partner. Many grants — including the SRD grant and all permanent grants — can be paid into a Postbank account, which you can access at any Post Office or Postbank branch. You can also use Postbank cash send to withdraw your grant at retail stores like Pick n Pay, Shoprite, Checkers, and Boxer. Postbank is free to open and is designed specifically for social grant recipients.",
+    "how_it_works": [
+      "Your grant is paid into your Postbank account each month",
+      "You withdraw at any Post Office, Postbank branch, or ATM",
+      "You can also use Postbank cash send to collect at retail stores",
+      "Postbank provides a free account with no monthly fees for grant recipients"
+    ],
+    "steps": [
+      { "title": "Open a Postbank account", "text": "Visit any Post Office or Postbank branch with your SA ID and proof of address to open a Postbank account. It is free." },
+      { "title": "Give SASSA your Postbank details", "text": "Update your banking details on the SRD portal with your Postbank account number and branch code." },
+      { "title": "Wait for verification", "text": "Postbank verification usually takes 3 to 7 working days." },
+      { "title": "Collect your payment", "text": "On your payment date, use your Postbank debit card or SASSA gold card at any Post Office, Postbank branch, or ATM." },
+      { "title": "Track your payment", "text": "Check your status for a 'Pay Day' date, then allow 1 to 3 business days for reflection." }
+    ],
+    "faqs": [
+      { "q": "How do I open a Postbank account for my SASSA grant?", "a": "Visit any Post Office or Postbank branch with your South African ID and proof of address. Postbank accounts for grant recipients are free and designed for this purpose." },
+      { "q": "Can I use Postbank cash send for my SASSA grant?", "a": "Yes. Postbank cash send lets you collect your grant at retail stores like Pick n Pay, Shoprite, Checkers, and Boxer using a payment SMS with a collection code. Only go to the store after you receive the SMS." },
+      { "q": "How do I check my SASSA status with Postbank?", "a": "Check your status the same way as any beneficiary — via the SRD portal, USSD (*120*69277#), WhatsApp (082 601 0111), or the Moya app. Your Postbank account just holds the money once you are paid." },
+      { "q": "What is the Postbank contact number?", "a": "Postbank's helpline is 0800 53 54 55 for general account and cash send queries." }
+    ],
+    "who_to_contact": [
+      { "label": "Postbank", "value": "0800 53 54 55" },
+      { "label": "SRD Portal", "value": "srd.sassa.gov.za" },
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": ["https://www.postbank.co.za", "https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
+    "related": ["/banking/bank-transfer", "/banking/cash-send-shoprite", "/payment-calendar", "/status/paid"],
+    "has_cta": true,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "cash-send-shoprite",
+    "provider": "Shoprite Cash Send",
+    "title": "SASSA Cash Send at Shoprite — How to Collect Your Grant",
+    "description": "Collect your SASSA grant at any Shoprite store using cash send. Learn the exact steps, collection codes, and how to fix a missing payment.",
+    "intro": "Cash Send at Shoprite lets you collect your SASSA grant in cash at any Shoprite store. Instead of a bank account, SASSA loads your payment and sends you an SMS with a collection code. You then take your ID and the code to the Shoprite counter to receive the cash. This is one of the most popular methods for beneficiaries who prefer cash, especially in areas with fewer bank branches.",
+    "how_it_works": [
+      "SASSA loads your grant as a cash send to Shoprite",
+      "You receive an SMS containing a collection code",
+      "You go to the Shoprite Money Market counter with your code and ID",
+      "Shoprite pays you the cash and you collect your grant"
+    ],
+    "steps": [
+      { "title": "Select Shoprite cash send as your payment method", "text": "Choose retail collection at Shoprite when you set up or update your payment details." },
+      { "title": "Wait for the collection SMS", "text": "SASSA sends the payment SMS with your collection code when your payment is ready. Do not go to the store before receiving it." },
+      { "title": "Go to the Shoprite Money Market counter", "text": "Visit any Shoprite store with your ID document and the collection code from the SMS." },
+      { "title": "Collect your cash", "text": "Present your code and ID to the cash send counter and collect your grant in cash." }
+    ],
+    "faqs": [
+      { "q": "How long after my status shows 'Approved' before the cash send SMS arrives?", "a": "Once your payment batch is processed and your status shows 'Paid', the SMS with your collection code typically arrives within 1 to 2 days. Do not go to the store until you receive it." },
+      { "q": "What if I did not receive the cash send SMS?", "a": "First make sure your phone number is active and your inbox is not full. If it still has not arrived after a few days, follow our missing grant payment guide at /guides/missing-grant-payment-guide before contacting SASSA." },
+      { "q": "Can I use cash send at Shoprite every month?", "a": "Yes, as long as you keep Shoprite as your selected payment method and your details stay valid. If you do not collect for three consecutive months, your grant may be suspended or cancelled." }
+    ],
+    "who_to_contact": [
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" },
+      { "label": "Shoprite Collection Counter", "value": "Bring your SMS code and ID" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.shoprite.co.za"],
+    "related": ["/banking/cash-send-checkers", "/banking/cash-send-pick-n-pay", "/status/paid", "/payment-calendar", "/status/bank-details-pending"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "cash-send-checkers",
+    "provider": "Checkers Cash Send",
+    "title": "SASSA Cash Send at Checkers — How to Collect Your Grant",
+    "description": "Collect your SASSA grant at Checkers stores using cash send. Learn the steps, the collection SMS code, and how to check your cash send status.",
+    "intro": "Cash Send at Checkers lets you collect your SASSA grant in cash at any Checkers store. SASSA loads your payment and sends an SMS with a collection code. You present the code and your ID at the Checkers money counter to receive your cash. Checkers and its sister brand Shoprite (both part of Shoprite Holdings) are among the most common retail collection points for SASSA grants.",
+    "how_it_works": [
+      "SASSA loads your grant as a cash send to Checkers",
+      "You receive an SMS with a collection code",
+      "You go to the Checkers money counter with your code and ID",
+      "Checkers pays you the cash"
+    ],
+    "steps": [
+      { "title": "Select Checkers as your payment method", "text": "Choose retail collection at Checkers when setting up or updating your payment details." },
+      { "title": "Wait for the collection SMS", "text": "Wait for the SMS containing your collection code before going to the store." },
+      { "title": "Go to the Checkers money counter", "text": "Go to a Checkers store with your ID and the collection code." },
+      { "title": "Collect your cash", "text": "Present your code and ID and collect your grant in cash." }
+    ],
+    "faqs": [
+      { "q": "Can I collect my grant at Checkers and Shoprite with the same code?", "a": "No. Your collection code is specific to the store you selected. Use the same brand you chose for that month. If you need to change, update your payment method on the SRD portal." },
+      { "q": "Is Checkers cash send free?", "a": "Collecting your SASSA grant at a retail store is free — SASSA does not charge for cash send, and neither do the retailers. Be wary of anyone charging a 'fee' to collect your grant." },
+      { "q": "What should I do if the money is not at the counter?", "a": "First confirm your status shows 'Paid' and that you have the correct collection SMS. If the money is not available, do not leave without asking the counter to check, and contact SASSA on 0800 60 10 11 if needed." }
+    ],
+    "who_to_contact": [
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" },
+      { "label": "Checkers Collection Counter", "value": "Bring your SMS code and ID" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.checkers.co.za"],
+    "related": ["/banking/cash-send-shoprite", "/banking/cash-send-pick-n-pay", "/status/paid", "/payment-calendar"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "cash-send-pick-n-pay",
+    "provider": "Pick n Pay Cash Send",
+    "title": "SASSA Cash Send at Pick n Pay — How to Collect Your Grant",
+    "description": "Collect your SASSA grant at Pick n Pay using cash send. Learn the steps, the collection code SMS, and how to check your cash send status.",
+    "intro": "Cash Send at Pick n Pay lets you collect your SASSA grant in cash at any Pick n Pay store. Like other retail collection methods, SASSA sends you an SMS with a collection code when your payment is ready. You take the code and your ID to the Pick n Pay money counter to receive your grant. Pick n Pay is one of the largest retail collection networks for SASSA grants in South Africa.",
+    "how_it_works": [
+      "SASSA loads your grant as a cash send to Pick n Pay",
+      "You receive an SMS with a collection code",
+      "You go to the Pick n Pay money counter with your code and ID",
+      "Pick n Pay pays you the cash"
+    ],
+    "steps": [
+      { "title": "Select Pick n Pay as your payment method", "text": "Choose retail collection at Pick n Pay when setting up or updating your payment details." },
+      { "title": "Wait for the collection SMS", "text": "Wait for the SMS containing your collection code before going to the store — do not go early." },
+      { "title": "Go to the Pick n Pay money counter", "text": "Go to a Pick n Pay store with your ID and the collection code." },
+      { "title": "Collect your cash", "text": "Present your code and ID and collect your grant in cash." }
+    ],
+    "faqs": [
+      { "q": "Which Pick n Pay stores offer SASSA cash send?", "a": "Most Pick n Pay stores with a money counter or till point can process SASSA cash send. If your store cannot, the cashier can direct you to the nearest one that can." },
+      { "q": "What if my collection code does not work?", "a": "Ask the cashier to re-check the code, confirm your status shows 'Paid', and that you are at the correct brand. If it still fails, contact SASSA on 0800 60 10 11." },
+      { "q": "Do I need to be paid first before the SMS arrives?", "a": "Yes. The collection SMS is only sent once your payment status is 'Paid'. If you see 'Approved' but no SMS, your payment batch has not run yet — check after the 15th." }
+    ],
+    "who_to_contact": [
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" },
+      { "label": "Pick n Pay Collection Counter", "value": "Bring your SMS code and ID" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.pnp.co.za"],
+    "related": ["/banking/cash-send-shoprite", "/banking/cash-send-boxer", "/status/paid", "/payment-calendar"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "cash-send-boxer",
+    "provider": "Boxer Cash Send",
+    "title": "SASSA Cash Send at Boxer — How to Collect Your Grant",
+    "description": "Collect your SASSA grant at Boxer stores using cash send. Learn the steps, the collection code, and how to check your cash send status.",
+    "intro": "Cash Send at Boxer lets you collect your SASSA grant in cash at any Boxer store. Boxer, now part of Pick n Pay, is a popular retail collection point for SASSA grants, especially in KwaZulu-Natal, Gauteng, Mpumalanga, and other provinces. You receive an SMS with a collection code and present it with your ID at the Boxer money counter to collect your grant.",
+    "how_it_works": [
+      "SASSA loads your grant as a cash send to Boxer",
+      "You receive an SMS with a collection code",
+      "You go to the Boxer money counter with your code and ID",
+      "Boxer pays you the cash"
+    ],
+    "steps": [
+      { "title": "Select Boxer as your payment method", "text": "Choose retail collection at Boxer when setting up or updating your payment details." },
+      { "title": "Wait for the collection SMS", "text": "Wait for the SMS with your collection code before going to the store." },
+      { "title": "Go to the Boxer money counter", "text": "Go to a Boxer store with your ID and the collection code." },
+      { "title": "Collect your cash", "text": "Present your code and ID and collect your grant in cash." }
+    ],
+    "faqs": [
+      { "q": "Is Boxer good for collecting SASSA grants?", "a": "Yes. Boxer is a large retail network with a strong presence in KwaZulu-Natal and other provinces, and it processes SASSA cash send at its money counters." },
+      { "q": "Can I collect at Boxer if I receive my grant at Pick n Pay?", "a": "Your collection code is for the store brand you selected. If you want to switch to Boxer, update your payment method on the SRD portal before the payment batch runs." },
+      { "q": "What should I bring to the counter?", "a": "Bring your ID document and the collection code from the SMS. The cashier needs both to release your grant." }
+    ],
+    "who_to_contact": [
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" },
+      { "label": "Boxer Collection Counter", "value": "Bring your SMS code and ID" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za", "https://www.boxer.co.za"],
+    "related": ["/banking/cash-send-pick-n-pay", "/banking/cash-send-shoprite", "/status/paid", "/payment-calendar"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "capitec",
+    "provider": "Capitec",
+    "title": "SASSA Grant Into Capitec — How to Receive & Check Your Status",
+    "description": "Receive your SASSA grant into a Capitec bank account. Learn how to set it up, how long it takes, and how to check your SASSA status with Capitec.",
+    "intro": "Capitec is one of South Africa's most popular banks with SASSA beneficiaries because it is affordable, has many branches and ATMs, and processes grant deposits quickly. You can receive your SASSA SRD or permanent grant directly into a Capitec bank account. To use Capitec, the account must be registered in your own name and your details must match your ID.",
+    "how_it_works": [
+      "You provide your Capitec account details on the SRD portal",
+      "SASSA verifies the account against your ID",
+      "SASSA pays your grant into the Capitec account on your payment date",
+      "You can withdraw or bank via the Capitec app, ATM, or branch"
+    ],
+    "steps": [
+      { "title": "Open a Capitec account (if you do not have one)", "text": "Open a Capitec bank account at any branch or via the Capitec app with your ID." },
+      { "title": "Enter your Capitec details on the SRD portal", "text": "Log into srd.sassa.gov.za and set your bank account to Capitec with your account number and branch code." },
+      { "title": "Wait for verification", "text": "Verification usually takes 3 to 7 working days." },
+      { "title": "Receive and check your payment", "text": "Once your status shows 'Paid', the money reflects in your Capitec account within 1 to 3 business days." }
+    ],
+    "faqs": [
+      { "q": "Can I check my SASSA status on the Capitec app?", "a": "The Capitec app shows your bank balance, so you can see when your grant reflects. For your official SASSA status (Approved/Declined/Paid), check the SRD portal, USSD (*120*69277#), WhatsApp, or Moya app." },
+      { "q": "How long does a Capitec SASSA payment take to reflect?", "a": "After your 'Pay Day', a Capitec payment usually reflects within 1 to 3 business days, like other banks." },
+      { "q": "Why is my Capitec bank details pending on SASSA?", "a": "This usually means the account holder name or number does not match, or the account is not in your name. Update your details on the SRD portal and ensure the account is registered in your own name." }
+    ],
+    "who_to_contact": [
+      { "label": "SRD Portal", "value": "srd.sassa.gov.za" },
+      { "label": "Capitec", "value": "Visit your nearest branch or app" },
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": ["https://www.capitecbank.co.za", "https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
+    "related": ["/banking/bank-transfer", "/status/bank-details-pending", "/status/paid", "/status/approved"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "tymebank",
+    "provider": "TymeBank",
+    "title": "SASSA Grant Into TymeBank — Guide to Receiving & Checking Your Status",
+    "description": "Receive your SASSA grant into a TymeBank account. Learn how to set it up, how long it takes, and how to update your TymeBank details on the SRD portal.",
+    "intro": "TymeBank is a popular digital bank in South Africa known for free and low-fee accounts that are simple to open. Many SASSA beneficiaries use TymeBank to receive their grants, especially the SRD R370 grant, because there are no monthly fees and it integrates easily with the SRD portal. TymeBank has no traditional branches — you open and manage your account through the app or kiosks in stores like Pick n Pay.",
+    "how_it_works": [
+      "You open a free TymeBank account via the app or a kiosk",
+      "You provide your TymeBank details on the SRD portal",
+      "SASSA verifies and pays your grant into the account",
+      "You manage and withdraw via the TymeBank app or cash withdrawal points"
+    ],
+    "steps": [
+      { "title": "Open a TymeBank account", "text": "Open a free TymeBank account using the TymeBank app or a kiosk at selected Pick n Pay stores." },
+      { "title": "Add your TymeBank details on the SRD portal", "text": "Log into srd.sassa.gov.za and enter your TymeBank account number and holder name." },
+      { "title": "Wait for verification", "text": "TymeBank details are usually verified within a few working days." },
+      { "title": "Receive your grant", "text": "Once 'Paid', the money reflects in your TymeBank account, and you can withdraw free at many cash points." }
+    ],
+    "faqs": [
+      { "q": "Can I check my SASSA status on TymeBank?", "a": "TymeBank shows your balance so you can see when your grant arrives, but for your official status use the SRD portal, WhatsApp, Moya, or USSD (*120*69277#)." },
+      { "q": "How long does a TymeBank SASSA payment take?", "a": "After your Pay Day, the money reflects within 1 to 3 business days." },
+      { "q": "Is a TymeBank account free for SASSA?", "a": "Yes — TymeBank's everyday account has no monthly subscription fees, making it a cost-effective choice for grant recipients." }
+    ],
+    "who_to_contact": [
+      { "label": "SRD Portal", "value": "srd.sassa.gov.za" },
+      { "label": "TymeBank", "value": "App support or 0860 999 119" },
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": ["https://www.tymebank.co.za", "https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
+    "related": ["/banking/bank-transfer", "/banking/capitec", "/status/bank-details-pending", "/status/paid"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "ekyc-biometric",
+    "provider": "eKYC Biometric Verification",
+    "title": "SASSA eKYC Biometric Verification Link — How to Complete It",
+    "description": "Complete your SASSA eKYC facial verification link to unlock your grant. Learn how the biometric verification works, the 72-hour window, and what to do if it fails.",
+    "intro": "eKYC (electronic Know Your Customer) biometric verification is a security step SASSA uses to confirm your identity using facial recognition. If you are flagged, SASSA sends you an SMS with a verification link. You open the link, complete the facial recognition process, and your identity is confirmed. This is increasingly required in 2026 and is essential to prevent your status changing to 'Self-Correction Required' or being declined.",
+    "how_it_works": [
+      "SASSA flags your application for enhanced identity verification",
+      "You receive an SMS with a biometric (facial recognition) verification link",
+      "You open the link and complete the facial scan with your phone camera",
+      "Your identity is confirmed and your application continues",
+      "The link is usually valid for a limited window (often 72 hours)"
+    ],
+    "steps": [
+      { "title": "Check your SMS for the link", "text": "Look for a SASSA SMS containing a biometric verification link and open it as soon as possible. The link usually expires within 72 hours." },
+      { "title": "Use good lighting and a quiet spot", "text": "Complete the facial scan in good lighting with no backlight, and follow the on-screen instructions to position your face correctly." },
+      { "title": "Complete the facial scan", "text": "The process takes about a minute. Blink or move as instructed to confirm you are a real person." },
+      { "title": "Wait for confirmation", "text": "After completing it, your status returns to normal within a few days. If it still shows a problem, contact SASSA on 0800 60 10 11." }
+    ],
+    "faqs": [
+      { "q": "Is the SASSA biometric link official?", "a": "Yes, but only if it comes in an SMS from SASSA. SASSA never asks for your PIN, OTP, or money. Be wary of fake links asking for payment. If unsure, verify on the official SRD portal." },
+      { "q": "What if I miss the 72-hour window?", "a": "If the link expires, your status may change to 'Self-Correction Required' or you may be declined. Contact SASSA on 0800 60 10 11 to request a new link, or appeal and explain what happened." },
+      { "q": "Why am I being asked to verify my identity?", "a": "Biometric verification is triggered when SASSA cannot automatically confirm your identity from Home Affairs records, or as an enhanced security check. It is becoming more common in 2026." },
+      { "q": "Does biometric verification cost money?", "a": "No. The link and the process are free. Anyone asking for payment to 'verify' you is a scammer." }
+    ],
+    "who_to_contact": [
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" },
+      { "label": "SRD Portal", "value": "srd.sassa.gov.za" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
+    "related": ["/status/identity-verification", "/decline-reason/self-correction-required", "/status/pending", "/banking/bank-transfer"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "update-phone-number",
+    "provider": "Phone Number Update",
+    "title": "How to Change Your Phone Number on SASSA — Update Your Details",
+    "description": "Change or update your cell phone number on the SASSA SRD portal. Learn why your number matters, how to update it, and what to do if you are locked out.",
+    "intro": "Your registered cell phone number is how SASSA sends you OTPs, status updates, payment SMS, and biometric verification links. If you change your number and do not update it on the SRD portal, you can lose access to your status and your payment. Keeping your number active and updated is one of the most important steps for receiving your grant without delays.",
+    "how_it_works": [
+      "Your number must be registered in your name (RICA'd)",
+      "SASSA verifies your identity using your number for OTPs",
+      "SASSA sends status and payment SMS to your registered number",
+      "If your number is wrong or inactive, you cannot receive updates or verification links"
+    ],
+    "steps": [
+      { "title": "Log into the SRD portal", "text": "Go to srd.sassa.gov.za and log in with your ID number and current phone number." },
+      { "title": "Go to Update Phone Number", "text": "Find the 'Update Phone Number' or 'Personal Details' section on the portal." },
+      { "title": "Enter your new number", "text": "Enter your new cell phone number. It must be registered in your name (RICA'd)." },
+      { "title": "Verify the change", "text": "You may receive an OTP on the new number to confirm the change. Complete it to save the update." },
+      { "title": "Keep your new number active", "text": "Make sure your new number is active and has network coverage so you receive future SMS updates." }
+    ],
+    "faqs": [
+      { "q": "Can I change my SASSA phone number without logging in?", "a": "In most cases you must log in to the SRD portal with your existing number. If you no longer have access to it, contact SASSA on 0800 60 10 11 for assistance." },
+      { "q": "What is a RICA'd phone number?", "a": "RICA is South Africa's law requiring all SIM cards to be registered in the name of a verifiable person. Use a number registered in your own name so SASSA and your bank can confirm your identity." },
+      { "q": "Why does my phone number matter for the SRD grant?", "a": "SASSA uses your number for OTP security, status notifications, payment SMS, and biometric verification links. An inactive or wrong number can delay your payment." },
+      { "q": "What if I changed my number but grant payments stopped?", "a": "Update your number on the SRD portal first. If payments are still missing, follow our missing grant payment guide and contact SASSA." }
+    ],
+    "who_to_contact": [
+      { "label": "SRD Portal", "value": "srd.sassa.gov.za" },
+      { "label": "SASSA Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": ["https://srd.sassa.gov.za", "https://www.sassa.gov.za"],
+    "related": ["/banking/bank-transfer", "/status/identity-verification", "/status/application-complete", "/status/paid"],
+    "has_cta": false,
+    "last_updated": "2026-08-31",
+    "author": "Lucky Cungwa"
+  }
+]

@@ -10,9 +10,15 @@ import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
 import EditorialMeta from "../../../components/EditorialMeta";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
+import AffiliateCTA from "../../../components/affiliate/AffiliateCTA";
+import NextStepCard from "../../../components/affiliate/NextStepCard";
+import EntityLinks from "../../../components/EntityLinks";
 import { howToSchema, faqPageSchema, breadcrumbSchema } from "../../../lib/schema";
 import { SITE_CONFIG } from "../../../lib/config";
 import { resolveTemplates } from "../../../lib/canonical-facts";
+import { type AffiliateVertical, ctaCopyFor } from "../../../lib/affiliate";
+import { type NextStepItem } from "../../../components/affiliate/NextStepCard";
+import { guideNextSteps } from "../../../lib/entities";
 
 interface GuideStep {
   title: string;
@@ -41,6 +47,8 @@ interface Guide {
   author: string;
   relatedLinks?: { title: string; url: string; isExternal: boolean }[];
   sources?: { title: string; url: string }[];
+  monetization?: { vertical: AffiliateVertical };
+  nextSteps?: NextStepItem[];
 }
 
 export async function generateStaticParams() {
@@ -93,6 +101,8 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
   const guide = guides.find((g) => g.id === id);
 
   if (!guide) notFound();
+
+  const contextualNext = guide.nextSteps && guide.nextSteps.length ? guide.nextSteps : guideNextSteps(guide);
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
@@ -279,6 +289,34 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
             )}
 
             <AdNetworkLoader />
+
+            {guide.monetization && (() => {
+              const copy = ctaCopyFor(guide.monetization!.vertical);
+              return (
+                <AffiliateCTA
+                  vertical={guide.monetization!.vertical}
+                  pagePath={`/guides/${id}`}
+                  title={copy.title}
+                  description={copy.description}
+                  ctaLabel={copy.ctaLabel}
+                  placement="in_content"
+                />
+              );
+            })()}
+
+            {contextualNext && (
+              <NextStepCard items={contextualNext} pagePath={`/guides/${id}`} />
+            )}
+
+            <EntityLinks
+              links={[
+                { title: "Compare all SASSA grants", url: "/grants" },
+                { title: "Grant status meanings", url: "/status" },
+                { title: "How to check your grant status", url: "/status-check" },
+              ]}
+              title="Keep exploring"
+              pagePath={`/guides/${id}`}
+            />
 
             {guide.relatedLinks && (
                <section className="bg-primary-gold/5 p-8 rounded-3xl border border-primary-gold/10 space-y-6">

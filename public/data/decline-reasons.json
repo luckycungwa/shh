@@ -340,5 +340,176 @@
             "/status/identity-verification",
             "/status/declined"
         ]
+    },
+    {
+        "slug": "invalid-bank-details",
+        "title": "SASSA Decline Reason: 'Bank Details Invalid' — What It Means & How to Fix",
+        "description": "SASSA declined your application because your banking details could not be verified. Learn how to update and verify your bank account so your grant is not blocked.",
+        "decline_code": "Invalid Bank Details",
+        "what_it_means": "SASSA could not verify the bank account details you provided during your application or payment setup. This is not an eligibility decline — it means the payment cannot be processed until your banking information is correct and verifiable. The account holder name must match your ID, the account must be active, and the details must be in the correct format.",
+        "common_triggers": [
+            "The account holder name you entered does not match your ID document",
+            "The bank account is closed, frozen, or deactivated",
+            "You entered an incorrect account number or branch code",
+            "The account is not linked to your ID number",
+            "You used a business or third-party account for your grant"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Log into the SRD portal",
+                "detail": "Go to srd.sassa.gov.za and log in with your ID number and registered phone number."
+            },
+            {
+                "step": "Update your banking details",
+                "detail": "Enter your full bank name, account number, branch code, and holder name exactly as on your ID."
+            },
+            {
+                "step": "Use a personal account",
+                "detail": "Use a bank account registered in your own name, linked to your ID. Third-party or business accounts cannot be used."
+            },
+            {
+                "step": "Submit and wait for verification",
+                "detail": "After submitting, verification usually takes 3 to 7 working days. Check your status after that."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Fix your banking details on the SRD portal and verification is usually completed within a week. This is one of the easiest declines to resolve.",
+        "tags": [
+            "invalid bank details",
+            "bank verification failed",
+            "update bank details",
+            "bank account"
+        ],
+        "last_updated": "2026-08-31",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/bank-details-pending",
+            "/status/declined"
+        ]
+    },
+    {
+        "slug": "self-correction-required",
+        "title": "SASSA Decline Reason: 'Self-Correction Required' — What It Means & How to Fix",
+        "description": "SASSA needs you to correct your own details after missing a biometric or verification step. Learn how to complete self-correction and avoid a decline.",
+        "decline_code": "Self-Correction Required",
+        "what_it_means": "SASSA requires you to complete a self-correction step — usually a biometric (facial recognition) verification or an update to your personal details — before your grant can continue. This status appears when you were flagged for enhanced security checks or when your details need to be confirmed by you. If you do not complete the self-correction within the given window, your status may move to 'Declined.'",
+        "common_triggers": [
+            "You missed a biometric verification SMS link and did not complete it in time",
+            "Your identity could not be verified automatically and needs your confirmation",
+            "You were asked to correct a name or surname mismatch",
+            "You need to submit updated residence or bank information"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Check your SMS for a link",
+                "detail": "SASSA typically sends a biometric verification link by SMS. Open it within the validity window (often 72 hours)."
+            },
+            {
+                "step": "Complete the facial verification",
+                "detail": "Follow the on-screen instructions to complete the facial recognition process using your phone."
+            },
+            {
+                "step": "Update your personal details",
+                "detail": "Use the 'Request Names and Surname Update' tool or update your residence information if asked."
+            },
+            {
+                "step": "Check your status after completing it",
+                "detail": "Once the self-correction is complete, your status should update within a few days."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Self-correction is usually successful if you complete the biometric or detail update quickly. If you miss the window, appeal and explain what happened.",
+        "tags": [
+            "self-correction",
+            "biometric verification",
+            "facial recognition",
+            "ekyc"
+        ],
+        "last_updated": "2026-08-31",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/identity-verification",
+            "/status/declined"
+        ]
+    },
+    {
+        "slug": "duplicate-application",
+        "title": "SASSA Decline Reason: 'Duplicate Application' — What It Means & How to Fix",
+        "description": "SASSA found more than one application linked to your ID number. Learn why duplicates happen and how to get the correct one processed.",
+        "decline_code": "Duplicate Application",
+        "what_it_means": "SASSA's system found more than one active or recent application linked to your ID number. This causes a decline because the system cannot determine which application is valid. Duplicates usually happen when you reapply before the previous application was closed, or when a family member or a copy of your ID was used to apply again. You only need one application on file.",
+        "common_triggers": [
+            "You submitted more than one application in a short period",
+            "You reapplied while an earlier application was still in the system",
+            "Someone else used your ID number to apply for a grant",
+            "A data error created a duplicate record"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Do not submit more applications",
+                "detail": "Submitting additional applications will only create more duplicates. Stop applying and let one process."
+            },
+            {
+                "step": "Contact SASSA to consolidate",
+                "detail": "Call the SASSA helpline on 0800 60 10 11 and ask them to identify and remove the duplicate application."
+            },
+            {
+                "step": "Appeal if needed",
+                "detail": "If the decline persists, lodge an appeal on the ITSAA portal explaining that only one application is valid."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Duplicates can usually be resolved by contacting SASSA to keep only one application. Fraudulent duplicates should be reported.",
+        "tags": [
+            "duplicate application",
+            "double application",
+            "multiple applications"
+        ],
+        "last_updated": "2026-08-31",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/pending",
+            "/status/declined"
+        ]
+    },
+    {
+        "slug": "income-not-proven",
+        "title": "SASSA Decline Reason: 'Income Not Proven' — What It Means & How to Fix",
+        "description": "SASSA could not confirm your income status. Learn why this happens and how to provide proof so your grant is not declined.",
+        "decline_code": "Income Not Proven",
+        "what_it_means": "SASSA could not verify or confirm your income situation, so it could not establish that you meet the income threshold requirement. This is different from a decline because you have income — it means SASSA could not confirm that you have no income or income below the limit. You may need to provide proof so your application can be assessed.",
+        "common_triggers": [
+            "Your banking information could not be fully checked",
+            "You did not provide complete income information on your application",
+            "There was a mismatch in the financial data SASSA could access",
+            "You have not received any income that SASSA could detect, leaving your situation unverified"
+        ],
+        "how_to_fix": [
+            {
+                "step": "Provide complete income details",
+                "detail": "Make sure your application states your income situation clearly and accurately."
+            },
+            {
+                "step": "Lodge an appeal with evidence",
+                "detail": "Appeal on the ITSAA portal and explain your income situation, providing bank statements if helpful."
+            },
+            {
+                "step": "Confirm your banking details",
+                "detail": "Ensure SASSA can access your bank accounts so it can verify your income level."
+            }
+        ],
+        "appeal_deadline": "90 days from the date of decline",
+        "success_rate": "Appeals succeed when you can clearly demonstrate that your income is below the threshold and provide supporting evidence.",
+        "tags": [
+            "income not proven",
+            "income verification",
+            "proof of income"
+        ],
+        "last_updated": "2026-08-31",
+        "author": "Lucky Cungwa",
+        "related_statuses": [
+            "/status/means-test-failed",
+            "/status/declined"
+        ]
     }
 ]

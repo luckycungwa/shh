@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Card, CardHeader, CardBody, Divider, Chip, Button } from "@nextui-org/react";
-import { FaCalendarAlt, FaInfoCircle, FaCheckCircle, FaPrint, FaHistory } from "react-icons/fa";
+import { FaCalendarAlt, FaInfoCircle, FaCheckCircle, FaPrint, FaHistory, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentMonthLabel, generateMonthSchedule } from "../../lib/config";
 
@@ -25,9 +25,11 @@ interface ScheduleMonth {
 export default function PaymentCalendarClient({
   paymentDates,
   historyData,
+  faqs = [],
 }: {
   paymentDates: PaymentDate[];
   historyData: ScheduleMonth[];
+  faqs?: { q: string; a: string }[];
 }) {
   const [selectedMonth, setSelectedMonth] = useState<string>("current");
   const currentSchedule = historyData.find((h) => selectedMonth === h.month_key);
@@ -227,6 +229,33 @@ export default function PaymentCalendarClient({
           </div>
         </aside>
       </div>
+
+      {faqs.length > 0 && (
+        <section className="mt-16 max-w-4xl mx-auto space-y-6">
+          <h2 className="text-3xl font-black text-center flex items-center justify-center gap-3">
+            <FaQuestionCircle className="text-primary-gold" /> Payment Date Questions
+          </h2>
+          <p className="text-center text-gray-500 dark:text-gray-400">
+            The most common questions about SRD batch windows, changing Pay Days, and late payments.
+          </p>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="group bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-100 dark:border-gray-800 open:shadow-md transition-shadow">
+                <summary className="cursor-pointer list-none p-5 font-bold text-sm md:text-base flex items-center justify-between gap-4 hover:text-primary-gold transition-colors">
+                  {faq.q}
+                  <span className="text-primary-gold text-xl leading-none group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+          <div className="text-center pt-4">
+            <Button as={NextLink} href="/status-check" color="primary" variant="flat" size="lg" className="font-bold px-10">
+              Check Your SRD Status
+            </Button>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

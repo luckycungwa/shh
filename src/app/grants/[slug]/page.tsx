@@ -10,8 +10,14 @@ import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
+import AffiliateCTA from "../../../components/affiliate/AffiliateCTA";
+import NextStepCard from "../../../components/affiliate/NextStepCard";
+import EntityLinks from "../../../components/EntityLinks";
+import ComparisonTable from "../../../components/affiliate/ComparisonTable";
 import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates, getFactMeta } from "../../../lib/canonical-facts";
+import { type AffiliateVertical, ctaCopyFor } from "../../../lib/affiliate";
+import { type NextStepItem } from "../../../components/affiliate/NextStepCard";
 
 interface GrantFaq {
   q: string;
@@ -42,6 +48,8 @@ interface GrantData {
   sources: string[];
   related: string[];
   sections: GrantSection[];
+  monetization?: { vertical: AffiliateVertical };
+  nextSteps?: NextStepItem[];
 }
 
 export async function generateStaticParams() {
@@ -246,6 +254,77 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
           </div>
 
           <AdNetworkLoader />
+
+          {data.monetization && (() => {
+            const copy = ctaCopyFor(data.monetization!.vertical);
+            return (
+              <AffiliateCTA
+                vertical={data.monetization!.vertical}
+                pagePath={`/grants/${data.slug}`}
+                title={copy.title}
+                description={copy.description}
+                ctaLabel={copy.ctaLabel}
+                placement="in_content"
+              />
+            );
+          })()}
+
+          {data.nextSteps && (
+            <NextStepCard items={data.nextSteps} pagePath={`/grants/${data.slug}`} />
+          )}
+
+          <EntityLinks
+            links={[
+              { title: "How to check your grant status", url: "/status-check" },
+              { title: "Grant status meanings", url: "/status" },
+              { title: "View the payment calendar", url: "/payment-calendar" },
+              { title: "Banking & payment methods", url: "/banking" },
+              { title: "How to appeal a declined grant", url: "/appeals/how-to-appeal" },
+            ]}
+            title="Grant help & next steps"
+            pagePath={`/grants/${data.slug}`}
+          />
+
+          {data.monetization?.vertical === "insurance" && (
+            <>
+              <div className="space-y-3">
+                <h2 className="text-2xl font-black">Thinking about funeral cover?</h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  This is a guide to what to compare — premiums, payouts, waiting periods, and exclusions all vary
+                  by provider, age, and payout size, and they change over time. SASSA does not require or endorse any
+                  cover, and taking out cover does not affect your grant.
+                </p>
+              </div>
+              <ComparisonTable
+                pagePath={`/grants/${data.slug}`}
+                columns={["Plan type", "What it covers", "Key things to check before you buy", "Action"]}
+                rows={[
+                  {
+                    label: "Individual cover",
+                    values: ["One person's funeral costs", "Premium, payout amount, waiting period, exclusions"],
+                    affiliateVertical: "insurance",
+                    affiliateLabel: "Compare options",
+                  },
+                  {
+                    label: "Family / multi-member cover",
+                    values: ["Cover for you and family members", "Who is included, extra cost per member, age limits"],
+                    affiliateVertical: "insurance",
+                    affiliateLabel: "Compare options",
+                  },
+                  {
+                    label: "Senior cover (60+)",
+                    values: ["Cover for older members", "Premium loading for age, maximum age at sign-up"],
+                    affiliateVertical: "insurance",
+                    affiliateLabel: "Compare options",
+                  },
+                ]}
+              />
+              <p className="text-xs text-gray-400">
+                We do not publish specific premiums or payout figures because they vary by provider and change
+                frequently. Always get a current written quote from the insurer before committing.
+              </p>
+            </>
+          )}
 
           <aside className="lg:col-span-4 space-y-8">
             <div className="sticky top-24 hidden lg:block space-y-8">

@@ -29,16 +29,15 @@ interface Guide {
 
 const guideCategories = [
   { label: "All Guides", value: "all" },
-  { label: "Applications", value: "Applications" },
-  { label: "Appeals", value: "Appeals" },
-  { label: "Banking", value: "Banking" },
-  { label: "Technology", value: "Technology" },
-  { label: "Eligibility", value: "Eligibility" },
-  { label: "Grant Management", value: "Grant Management" },
-  { label: "Scam Alert", value: "Scam Alert" },
-  { label: "Reference", value: "Reference" },
-  { label: "Account Management", value: "Account Management" },
-  { label: "Card Services", value: "Card Services" },
+  { label: "Apply for a Grant", value: "Apply for a Grant" },
+  { label: "Appeals & Reconsideration", value: "Appeals & Reconsideration" },
+  { label: "Banking & Payments", value: "Banking & Payments" },
+  { label: "Apps, USSD & WhatsApp", value: "Apps, USSD & WhatsApp" },
+  { label: "Eligibility & Requirements", value: "Eligibility & Requirements" },
+  { label: "Manage Your Grant", value: "Manage Your Grant" },
+  { label: "Manage Your Account", value: "Manage Your Account" },
+  { label: "Money, Insurance & Jobs", value: "Money, Insurance & Jobs" },
+  { label: "Safety & Scams", value: "Safety & Scams" },
 ];
 
 const faqs = [
@@ -48,11 +47,12 @@ const faqs = [
   { q: "What documents do I need to apply for a SASSA grant?", a: "You need your 13-digit South African ID number (or refugee/asylum permit), a valid cellphone number, and your banking details for payment." },
 ];
 
-export default function GuidesListPage() {
+export default function GuidesListPage({ searchParams }: { searchParams?: { cat?: string } }) {
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
 
-
+  const active = (searchParams && searchParams.cat) || "all";
+  const filteredGuides = active === "all" ? guides : guides.filter((g) => g.category === active);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
@@ -85,20 +85,27 @@ export default function GuidesListPage() {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-12 justify-center">
-        {guideCategories.map((cat) => (
-          <Chip
-            key={cat.value}
-            variant={cat.value === "all" ? "solid" : "flat"}
-            color="primary"
-            className="font-bold cursor-pointer hover:scale-105 transition-transform"
-          >
-            {cat.label}
-          </Chip>
-        ))}
+        {guideCategories.map((cat) => {
+          const isActive = cat.value === active;
+          const href = cat.value === "all" ? "/guides" : `/guides?cat=${encodeURIComponent(cat.value)}`;
+          return (
+            <NextLink
+              key={cat.value}
+              href={href}
+              className={`font-bold cursor-pointer hover:scale-105 transition-transform text-sm px-4 py-2 rounded-full ${
+                isActive
+                  ? "bg-primary-gold text-primary-black"
+                  : "bg-primary-gold/10 text-primary-gold border border-primary-gold/20"
+              }`}
+            >
+              {cat.label}
+            </NextLink>
+          );
+        })}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {guides.map((guide) => (
+        {filteredGuides.map((guide) => (
           <Card key={guide.id} className="p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all h-full">
             <CardHeader className="flex-col items-start gap-2 p-0 mb-6">
                <Chip size="sm" variant="flat" color="secondary" className="font-bold uppercase text-[10px]">
@@ -120,6 +127,43 @@ export default function GuidesListPage() {
             </CardBody>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-16 space-y-8">
+        <h2 className="text-3xl font-black text-center">New & Featured Guides</h2>
+        <p className="text-gray-600 dark:text-gray-400 text-center mb-8">Recently added guides for 2026</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {guides.filter((g) => [
+            "sim-replacement-south-africa",
+            "affordable-data-bundles-south-africa",
+            "ways-to-make-extra-income-south-africa",
+            "free-skills-courses-south-africa",
+            "funeral-cover-south-africa-comparison",
+            "what-does-funeral-cover-cost",
+            "compare-financial-options-south-africa",
+          ].includes(g.id)).map((guide) => (
+            <Card key={guide.id} className="p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all h-full">
+              <CardHeader className="flex-col items-start gap-2 p-0 mb-4">
+                <Chip size="sm" variant="flat" color="secondary" className="font-bold uppercase text-[10px]">
+                  {guide.category}
+                </Chip>
+                <h3 className="text-xl font-bold leading-tight">{guide.title}</h3>
+              </CardHeader>
+              <CardBody className="p-0 flex-grow">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed line-clamp-3">{guide.description}</p>
+                <div className="flex items-center justify-between mt-auto">
+                  <div className="flex items-center gap-4 text-xs font-bold text-gray-400">
+                    <p className="flex items-center gap-1"><FaClock /> {guide.estimatedTime}</p>
+                    <p className="flex items-center gap-1"><FaGraduationCap /> {guide.difficulty}</p>
+                  </div>
+                  <Button as={NextLink} href={`/guides/${guide.id}`} color="primary" variant="solid" className="font-bold">
+                    Start Guide
+                  </Button>
+                </div>
+              </CardBody>
+            </Card>
+          ))}
+        </div>
       </div>
 
       <Divider className="my-20" />

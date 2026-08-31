@@ -5,7 +5,9 @@ import { FaUserShield, FaExternalLinkAlt, FaExclamationTriangle, FaPhoneAlt, FaM
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
+import { breadcrumbSchema } from "../../lib/schema";
 import StatusCheckForm from "../../components/StatusCheckForm";
+import NextStepCard from "../../components/affiliate/NextStepCard";
 
 const currentMonthYear = "September 2026";
 const currentYear = "2026";
@@ -66,7 +68,7 @@ export default function StatusCheckPage() {
     },
     {
       q: "What does 'Pay Day' mean on my SASSA status?",
-      a: "'Pay Day' is the date SASSA releases your payment batch for the month. 'Approved' means you qualify; 'Pay Day' is when the money is actually sent. Once your status shows a Pay Day date, it can take up to 48 working hours for the money to reflect in your bank account. If your status is 'Approved' but there is no Pay Day yet, your payment is still being assigned to a batch — read our Approved status guide (/status/approved) for exactly what to do."
+      a: "'Pay Day' is the date SASSA releases your payment batch for the month. 'Approved' means you qualify; 'Pay Day' is when the money is actually sent. Once your status shows a Pay Day date, it usually takes 1 to 3 business days for the money to reflect in your bank account. If your status is 'Approved' but there is no Pay Day yet, your payment is still being assigned to a batch — read our Approved status guide (/status/approved) for exactly what to do."
     },
     {
       q: "The SRD portal is not working — how else can I check my status?",
@@ -91,6 +93,22 @@ export default function StatusCheckPage() {
     {
       q: "What does 'Bank Details Pending' mean?",
       a: "This means your application is approved, but SASSA does not have valid banking information to deposit the funds. You must update your details on the official SRD website immediately."
+    },
+    {
+      q: "My Pay Day is today but I have not received my money — why?",
+      a: "Pay Day is the day SASSA releases your payment batch — it is not the moment cash reaches your account. Bank transfers usually reflect within 1 to 3 business days after Pay Day, depending on your bank. If you collect at a retail point (Pick n Pay, Boxer, Shoprite, Checkers), wait for the payment SMS with your collection code before going to the store. If nothing has reflected after about 5 business days, follow our missing grant payment guide (/guides/missing-grant-payment-guide)."
+    },
+    {
+      q: "My Pay Day date changed or disappeared — what happened?",
+      a: "SASSA has not published an official explanation for changing Pay Days. Based on beneficiary reports, dates can shift or disappear when an application is moved to another payment batch or flagged for additional verification. Check your status again after the 15th of the month, when updates are most reliable. If your Pay Day stays missing, contact SASSA on 0800 60 10 11 with your reference number."
+    },
+    {
+      q: "I was approved last month but declined this month — why?",
+      a: "The SRD grant is reassessed every single month. A bank deposit that pushed you over the R624 threshold, an UIF or NSFAS record linked to your ID, or a verification mismatch can cause a decline for that specific month even if you were approved before. Check your decline reason on the portal, and see our appeal guide (/guides/appeal-guide) if you believe the decision is wrong."
+    },
+    {
+      q: "I have not received any SMS from SASSA — is that a problem?",
+      a: "Not always. SMS notifications depend on your registered number being active and can be delayed or undelivered. Your status on the official portal is the reliable source of truth — check it directly at srd.sassa.gov.za. Make sure your phone has signal, your inbox is not full, and the number on your application is still yours. If you lost the number, see our lost phone number guide (/guides/lost-phone-number)."
     }
   ];
 
@@ -114,6 +132,10 @@ export default function StatusCheckPage() {
     <div className="max-w-7xl mx-auto px-6 py-16">
       <JsonLd data={jsonLd} />
       <JsonLd data={faqJsonLd} />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Status Check", slug: "/status-check" },
+      ])} />
 
       <header className="text-center mb-16 space-y-6">
         <Chip color="success" variant="flat" className="font-bold uppercase">{currentMonthYear} Status Checker</Chip>
@@ -142,6 +164,15 @@ export default function StatusCheckPage() {
                     <StatusCheckForm />
                  </div>
 
+                 <NextStepCard
+                   pagePath="/status-check"
+                   items={[
+                     { title: "What does my status mean?", url: "/tools/status-explorer", description: "Look up any SRD status" },
+                     { title: "Missing payment troubleshooter", url: "/tools/payment-troubleshooter", description: "Why your money hasn't arrived" },
+                     { title: "Appeal deadline calculator", url: "/tools/appeal-deadline", description: "If your application was declined" },
+                   ]}
+                 />
+
                  <Divider />
 
                  <div className="text-center space-y-4">
@@ -161,15 +192,23 @@ export default function StatusCheckPage() {
                              <p className="text-sm font-bold">*120*69277#</p>
                           </div>
                        </div>
-                       <div className="flex items-center gap-3 p-4 bg-purple-50 dark:bg-purple-900/10 rounded-2xl border border-purple-100 dark:border-purple-800">
-                          <FaMobileAlt className="text-purple-500 text-lg flex-shrink-0" />
-                          <div>
-                             <p className="font-bold text-xs">WhatsApp</p>
-                             <p className="text-sm font-bold">082 601 0111</p>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
+                        <div className="flex items-center gap-3 p-4 bg-purple-50 dark:bg-purple-900/10 rounded-2xl border border-purple-100 dark:border-purple-800">
+                           <FaMobileAlt className="text-purple-500 text-lg flex-shrink-0" />
+                           <div>
+                              <p className="font-bold text-xs">WhatsApp</p>
+                              <p className="text-sm font-bold">082 601 0111</p>
+                           </div>
+                        </div>
+                     </div>
+                     <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+                        Step-by-step help:{" "}
+                        <NextLink href="/guides/ussd-codes" className="underline hover:text-primary-gold">USSD codes (no data needed)</NextLink>
+                        {" · "}
+                        <NextLink href="/guides/sassa-whatsapp" className="underline hover:text-primary-gold">WhatsApp guide</NextLink>
+                        {" · "}
+                        <NextLink href="/guides/moya-app-sassa" className="underline hover:text-primary-gold">Moya App (free data)</NextLink>
+                     </p>
+                  </div>
               </CardBody>
            </Card>
         </div>
@@ -242,6 +281,28 @@ export default function StatusCheckPage() {
            </div>
         </aside>
       </div>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-black text-center mb-2">Checked your status? Now find your situation.</h2>
+        <p className="text-center text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          The most common next questions after a status check — each link explains what it means and exactly what to do.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { href: "/status/approved", title: "Approved but no Pay Day", desc: "Why no date is showing yet and when to expect one." },
+            { href: "/guides/missing-grant-payment-guide", title: "Pay Day today, no money", desc: "What to check before contacting SASSA." },
+            { href: "/payment-calendar", title: "Payment date changed?", desc: "How SRD batch windows work and why dates shift." },
+            { href: "/status/pending", title: "Still Pending", desc: "How long verification takes and when to follow up." },
+            { href: "/status/declined", title: "Declined", desc: "Read your decline reason and how to appeal." },
+            { href: "/guides/bank-details-pending-fix", title: "Bank details problem", desc: "Fix 'Bank Details Pending' and get paid." },
+          ].map((item) => (
+            <NextLink key={item.href} href={item.href} className="group block p-5 bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-primary-gold/40 hover:shadow-lg transition-all">
+              <p className="font-bold text-sm group-hover:text-primary-gold transition-colors leading-tight mb-1">{item.title}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</p>
+            </NextLink>
+          ))}
+        </div>
+      </section>
 
       <article className="max-w-4xl mx-auto space-y-16 mt-24">
         <section className="space-y-8">
@@ -480,7 +541,7 @@ export default function StatusCheckPage() {
                    <p>Remember these three critical factors regarding your payment:</p>
                    <ul>
                       <li><strong>Batching:</strong> Not everyone is paid on the same day. If your application is approved late, you might only see funds later in the window.</li>
-                      <li><strong>Bank Reflection:</strong> Once your status shows a "Pay Day" date, it can take up to 48 working hours for the South African banking system to reflect the balance in your account.</li>
+                      <li><strong>Bank Reflection:</strong> Once your status shows a "Pay Day" date, it usually takes 1 to 3 business days for the South African banking system to reflect the balance in your account.</li>
                       <li><strong>SMS Confirmation:</strong> If you collect your grant at retail points (Pick n Pay, Boxer, Shoprite, Checkers), <strong>do not go to the store</strong> until you have received the payment SMS containing your collection code.</li>
                    </ul>
                 </div>

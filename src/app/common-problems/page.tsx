@@ -10,8 +10,10 @@ import {
 } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
+import AffiliateCTA from "../../components/affiliate/AffiliateCTA";
 import { buildMetadata } from "../../lib/seo";
 import { faqPageSchema } from "../../lib/schema";
+import { ctaCopyFor } from "../../lib/affiliate";
 
 export const metadata: Metadata = buildMetadata({
   title: "Common SASSA Problems — Find Your Solution Fast",
@@ -20,6 +22,20 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const categories = [
+  {
+    id: "srd-payment",
+    icon: FaMoneyCheckAlt,
+    title: "SRD Payment This Month",
+    description: "Payment-window help: approved without a Pay Day, Pay Day passed with no money, or a changing date.",
+    links: [
+      { href: "/status-check", label: "Check Your SRD Status First", desc: "See your current status and Pay Day date before anything else" },
+      { href: "/status/approved", label: "Approved but No Pay Day", desc: "Why no date is showing yet and what to do while you wait" },
+      { href: "/guides/missing-grant-payment-guide", label: "Pay Day Today but No Money", desc: "What to check step by step before contacting SASSA" },
+      { href: "/payment-calendar", label: "Payment Dates & Changing Pay Days", desc: "How SRD batch windows work and why dates can shift" },
+      { href: "/guides/bank-details-pending-fix", label: "Bank Details Pending — Payment Blocked", desc: "Approved but unpaid because SASSA cannot pay your account" },
+      { href: "/status/paid", label: "Status Says Paid, Money Not Received", desc: "Bank reflection times and what to do after 5 days" },
+    ],
+  },
   {
     id: "applications",
     icon: FaFileAlt,
@@ -77,7 +93,7 @@ const categories = [
       { href: "/payment-calendar", label: "SASSA Payment Dates 2026", desc: "Full payment schedule for all grants" },
       { href: "/guides/sassa-payment-methods", label: "Payment Methods Compared", desc: "Bank vs Postbank vs Cash Send vs Retail" },
       { href: "/guides/bank-details-pending-fix", label: "How to Change Banking Details", desc: "Update your bank account for grant payments" },
-      { href: "/guides/postbank-black-card-guide", label: "Gold Card Switch-Off — Get Your Black Card", desc: "The 31 August 2026 switch-off has passed — get your free Black Card now" },
+      { href: "/guides/postbank-black-card-guide", label: "Gold Card Switch-Off — Get Your Black Card", desc: "Gold Cards stop working after 31 August 2026 — get your free Black Card before the deadline" },
       { href: "/guides/grant-amounts-history", label: "Grant Amounts History 2020-2026", desc: "Historical grant amounts and increases" },
       { href: "/updates/update-2026-036", label: "September 2026 Payment Schedule", desc: "Latest confirmed payment dates" },
       { href: "/guides/fourth-payment-day-guide", label: "Grants Under Review — Paid on the Fourth Day", desc: "Fourth payment day for flagged beneficiaries" },
@@ -158,12 +174,13 @@ const categories = [
 ];
 
 const urgentAlert = {
-  title: "Gold Card Switched Off — Get Your Free Black Card",
-  desc: "SASSA Gold Cards stopped working after 31 August 2026. Your money is safe — collect your free Postbank Black Card from any Postbank service point now. The replacement is free.",
+  title: "Gold Card Deadline: Switch Before 31 August 2026",
+  desc: "SASSA Gold Cards will stop working after 31 August 2026. Your money stays safe in your Postbank account — collect your free Postbank Black Card from any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. The replacement is free. Dial *120*355# to find your nearest card site.",
   href: "/guides/postbank-black-card-guide",
 };
 
 export default function CommonProblemsPage() {
+  const financeCopy = ctaCopyFor("finance");
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
       <JsonLd data={faqPageSchema([
@@ -171,7 +188,7 @@ export default function CommonProblemsPage() {
         { q: "My application was declined — how do I appeal?", a: "Visit the official SRD appeals portal at srd.sassa.gov.za/appeals/appeal, enter your ID and phone number, select the declined month, and submit your explanation within 30 days." },
         { q: "My status says Approved but I have not been paid — why?", a: "An approved status means you qualified, but the payment date may not be assigned yet. Check back after the 20th of the month. If no payment date appears after 3 weeks, contact SASSA." },
         { q: "How do I change my banking details for SRD?", a: "Log into the SRD portal at srd.sassa.gov.za, go to 'Change Banking Details', enter your new account info, and wait for verification." },
-        { q: "My SASSA Gold Card has stopped working — what should I do?", a: "Your Gold Card was switched off after 31 August 2026. Get your free Postbank Black Card at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, USave) with your ID. Your money remains safe in your Postbank account." },
+        { q: "My SASSA Gold Card has stopped working — what should I do?", a: "SASSA Gold Cards stop working after 31 August 2026. Get your free Postbank Black Card at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. Your money remains safe in your Postbank account — you will access it with your Black Card once you have migrated." },
       ])} />
 
       <header className="text-center mb-16 max-w-3xl mx-auto">
@@ -247,6 +264,34 @@ export default function CommonProblemsPage() {
           </section>
         ))}
       </div>
+
+      <section className="mt-16 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 space-y-4">
+        <div className="flex items-center gap-3">
+          <div className="bg-primary-gold/10 p-2 rounded-xl">
+            <FaCreditCard className="text-primary-gold text-xl" />
+          </div>
+          <h2 className="text-2xl font-black text-gray-900 dark:text-white">Independent Financial Comparison</h2>
+        </div>
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          Educational only — this section is not affiliated with SASSA or any lender, and we do not recommend
+          specific providers. If you are comparing loans or credit, read our neutral guide first. SASSA grants are
+          not collateral for loans, and &quot;grant-backed loan&quot; offers are scams.
+        </p>
+        <AffiliateCTA
+          vertical="finance"
+          pagePath="/common-problems"
+          title={financeCopy.title}
+          description={financeCopy.description}
+          ctaLabel={financeCopy.ctaLabel}
+          placement="common_problems"
+        />
+        <NextLink
+          href="/guides/compare-financial-options-south-africa"
+          className="inline-flex items-center gap-2 text-sm font-bold text-primary-gold hover:underline"
+        >
+          Read the full comparison guide <FaArrowRight className="text-xs" />
+        </NextLink>
+      </section>
 
       <section className="mt-16 p-10 bg-primary-gold/5 rounded-3xl border border-primary-gold/10 text-center">
         <FaSearch className="text-4xl text-primary-gold mx-auto mb-4" />

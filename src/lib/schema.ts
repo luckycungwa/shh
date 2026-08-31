@@ -126,3 +126,33 @@ export function governmentOfficeSchema(name: string, address: string, town: stri
     ...geo,
   };
 }
+
+export function paymentScheduleSchema(
+  schedule: {
+    label: string;
+    grant: string;
+    date: string; // ISO date or TBC
+    status: "confirmed" | "projected" | string;
+    sourceURL?: string;
+  }[]
+) {
+  const events = schedule
+    .filter((s) => s.date && s.date !== "TBC")
+    .map((s) => ({
+      "@type": "Event",
+      name: `${s.grant} — ${s.label} Payment Date`,
+      startDate: s.date,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: s.status === "confirmed" ? "https://schema.org/EventScheduled" : "https://schema.org/EventPostponed",
+      ...(s.sourceURL ? { url: s.sourceURL, organizer: { "@type": "Organization", name: "SASSA" } } : {}),
+    }));
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: events.map((e, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: e,
+    })),
+  };
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "month_key": "september-2026",
+    "label": "September 2026",
+    "year": 2026,
+    "month": 9,
+    "older_persons": { "date": "2026-09-02", "day": "Wednesday", "status": "confirmed" },
+    "disability": { "date": "2026-09-03", "day": "Thursday", "status": "confirmed" },
+    "children": { "date": "2026-09-04", "day": "Friday", "status": "confirmed" },
+    "under_review": { "date": "TBC", "day": "Not yet confirmed", "status": "projected" },
+    "srd": { "date": "TBC", "day": "Expected in the last week of September", "status": "projected" },
+    "note": "SASSA has confirmed the September 2026 permanent grant dates. The SRD R370 and fourth payment day are not yet confirmed.",
+    "governance": {
+      "source": "SASSA official payment dates announcement",
+      "sourceURL": "https://www.sassa.gov.za",
+      "lastVerified": "2026-08-31",
+      "notes": "Permanent grant dates are confirmed by SASSA. SRD R370 and the fourth payment (under review) day remain TBC; they are shown as projected and must not be treated as official until SASSA announces them."
+    }
+  },
+  {
+    "month_key": "october-2026",
+    "label": "October 2026",
+    "year": 2026,
+    "month": 10,
+    "older_persons": { "date": "2026-10-02", "day": "Friday", "status": "projected" },
+    "disability": { "date": "2026-10-05", "day": "Monday", "status": "projected" },
+    "children": { "date": "2026-10-06", "day": "Tuesday", "status": "projected" },
+    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
+    "srd": { "date": "TBC", "day": "Expected in the last week of October", "status": "projected" },
+    "note": "October 2026 dates shown are projected based on SASSA's usual first-week pattern and will be confirmed by SASSA closer to the time.",
+    "governance": {
+      "source": "Projected from SASSA's usual first-week payment pattern; subject to official confirmation",
+      "sourceURL": "https://www.sassa.gov.za",
+      "lastVerified": "2026-08-31",
+      "notes": "All October 2026 dates are projected. SRD R370 is paid in the last week of the month; the exact 'Pay Day' is personal to each beneficiary on the official SRD portal."
+    }
+  },
+  {
+    "month_key": "november-2026",
+    "label": "November 2026",
+    "year": 2026,
+    "month": 11,
+    "older_persons": { "date": "2026-11-03", "day": "Tuesday", "status": "projected" },
+    "disability": { "date": "2026-11-04", "day": "Wednesday", "status": "projected" },
+    "children": { "date": "2026-11-05", "day": "Thursday", "status": "projected" },
+    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
+    "srd": { "date": "TBC", "day": "Expected in the last week of November", "status": "projected" },
+    "note": "November 2026 dates shown are projected based on SASSA's usual first-week pattern and will be confirmed by SASSA closer to the time.",
+    "governance": {
+      "source": "Projected from SASSA's usual first-week payment pattern; subject to official confirmation",
+      "sourceURL": "https://www.sassa.gov.za",
+      "lastVerified": "2026-08-31",
+      "notes": "All November 2026 dates are projected. SRD R370 is paid in the last week of the month; the exact 'Pay Day' is personal to each beneficiary on the official SRD portal."
+    }
+  },
+  {
+    "month_key": "december-2026",
+    "label": "December 2026",
+    "year": 2026,
+    "month": 12,
+    "older_persons": { "date": "2026-12-02", "day": "Wednesday", "status": "projected" },
+    "disability": { "date": "2026-12-03", "day": "Thursday", "status": "projected" },
+    "children": { "date": "2026-12-04", "day": "Friday", "status": "projected" },
+    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
+    "srd": { "date": "TBC", "day": "Expected in the last week of December", "status": "projected" },
+    "note": "December 2026 usually has early grant payments ahead of the festive season. These dates are projected and will be confirmed by SASSA closer to the time.",
+    "governance": {
+      "source": "Projected from SASSA's usual December early-payment pattern; subject to official confirmation",
+      "sourceURL": "https://www.sassa.gov.za",
+      "lastVerified": "2026-08-31",
+      "notes": "All December 2026 dates are projected. DHSA usually brings December payments forward ahead of the festive season; treat these as expected, not official."
+    }
+  }
+]

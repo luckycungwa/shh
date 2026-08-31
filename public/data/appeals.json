@@ -1,0 +1,271 @@
+[
+  {
+    "slug": "how-to-appeal",
+    "title": "How to Appeal a SASSA SRD Grant Rejection",
+    "description": "Step-by-step guide to appeal your rejected or declined SASSA SRD grant application on the ITSAA appeals portal. Learn how to submit an appeal, what to include, and how long it takes.",
+    "step_label": "Appeal Process",
+    "intro": "If your SRD R370 grant application was rejected or your grant was stopped, you can lodge an appeal on the official ITSAA appeal portal. An appeal is your formal request for SASSA to reconsider its decision.",
+    "how_it_works": [
+      "Appeals are submitted online through the official ITSAA appeals portal (srd-appeals.dsd.gov.za), not through a SASSA branch.",
+      "You must appeal within 90 days of your application being declined or your grant being stopped.",
+      "Once submitted, your appeal is assigned an appeal reference number which you should keep safe.",
+      "Appeals are processed in batches, which means your appeal decision may take 60 to 90 days.",
+      "You can check your appeal status at any time using the same portal with your ID number and phone number.",
+      "Winning your appeal can backdate your payments, but only after the appeal is approved.",
+      "You can only appeal once per rejection — resubmitting duplicates can delay the process."
+    ],
+    "portal": {
+      "name": "ITSAA Appeal Portal",
+      "url": "https://srd-appeals.dsd.gov.za",
+      "note": "Use your South African ID number and the phone number linked to your application."
+    },
+    "steps": [
+      { "title": "Go to the ITSAA appeal portal", "text": "Open the official SASSA SRD appeal portal at srd-appeals.dsd.gov.za on your phone or computer. It is mobile-friendly and works on any device." },
+      { "title": "Enter your ID number and phone number", "text": "Type in your 13-digit South African ID number and the cellphone number you used when you applied for the SRD grant." },
+      { "title": "Click 'Submit Appeal'", "text": "The portal will show your application summary. Look for the 'Submit Appeal' or 'Appeal' button and click it to start your appeal." },
+      { "title": "Choose a reason for your appeal", "text": "Select the reason for appealing, such as your income or bank details being incorrect. Provide a clear explanation of why you believe the decision was wrong." },
+      { "title": "Confirm your details and submit", "text": "Review your details, confirm you want to submit the appeal, and click submit. Save your appeal reference number." },
+      { "title": "Wait for the outcome", "text": "Appeals take 60 to 90 days on average. Your appeal decision does not guarantee approval, but it is the only official way to challenge a rejection." }
+    ],
+    "faqs": [
+      { "q": "Can I appeal a SASSA SRD rejection more than once?", "a": "No. You can only submit one appeal per rejection. Submitting duplicate appeals will not speed up the process and may delay it. If your appeal is unsuccessful, reapply for the SRD grant." },
+      { "q": "How do I appeal if I don't have internet access?", "a": "The appeal must be lodged on the ITSAA portal. If you don't have internet, ask a friend, family member, or a free Wi-Fi point at your local library or community centre to help you submit the appeal online." },
+      { "q": "Do I need to go to a SASSA office to appeal?", "a": "No. Appeals are handled online through the ITSAA portal. Visiting a SASSA branch will not submit your appeal; you must use the portal." },
+      { "q": "How long does a SASSA appeal take?", "a": "SASSA appeals generally take 60 to 90 days. On some occasions they can take longer if they are selected for deep review." }
+    ],
+    "who_to_contact": [
+      { "label": "ITSAA Appeal Portal", "value": "srd-appeals.dsd.gov.za" },
+      { "label": "SASSA SRD Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.sassa.gov.za/Pages/Contact-Us.aspx"
+    ],
+    "related": [
+      "/appeals/appeal-deadline",
+      "/appeals/appeal-status-check",
+      "/appeals/appeal-timeline",
+      "/guides/income-source-detected-appeal"
+    ],
+    "has_cta": false,
+    "last_updated": "2026-08-31"
+  },
+  {
+    "slug": "appeal-status-check",
+    "title": "How to Check Your SASSA SRD Appeal Status",
+    "description": "Check the status of your SASSA SRD grant appeal on the ITSAA appeal portal using your ID number and phone number. Learn what each appeal status means and how to track progress.",
+    "step_label": "Appeal Status Check",
+    "intro": "After you submit your appeal, you can track its progress on the ITSAA appeal portal. Your appeal status tells you whether it is still pending, approved, or was reconsidered.",
+    "how_it_works": [
+      "Your appeal status is checked on the same ITSAA portal where you submitted your appeal.",
+      "You need your 13-digit ID number and the phone number on your application to log in.",
+      "The status usually updates only after an appeal batch is processed — there is no real-time update.",
+      "Appeals pending for 60 to 90 days are normal and do not mean your appeal failed.",
+      "Check your appeal status once every few weeks to avoid unnecessary stress.",
+      "A 'Declined' appeal status is final and cannot be appealed again — you can reapply instead."
+    ],
+    "portal": {
+      "name": "ITSAA Appeal Portal",
+      "url": "https://srd-appeals.dsd.gov.za",
+      "note": "Use the same ID and phone number you used to submit the appeal."
+    },
+    "steps": [
+      { "title": "Open the ITSAA appeal portal", "text": "Go to srd-appeals.dsd.gov.za and click on the appeal status check section." },
+      { "title": "Enter your ID number and phone number", "text": "Enter the same 13-digit ID number and the cellphone number linked to your SRD application." },
+      { "title": "View your appeal status", "text": "The portal will display your appeal status: Pending, Approved, Declined, or Reconsideration." },
+      { "title": "Understand your result", "text": "If approved, payments will be arranged. If declined, your appeal is final and you can reapply for the SRD grant." },
+      { "title": "Check again in a few weeks", "text": "If your appeal is still pending, it is still being processed. Check again after a few weeks." }
+    ],
+    "faqs": [
+      { "q": "What does 'Pending' mean for my SASSA appeal?", "a": "'Pending' means your appeal is still being processed. It is normal for an appeal to remain pending for 60 to 90 days, so this does not mean your appeal failed." },
+      { "q": "Can I check my appeal status by SMS or USSD?", "a": "The appeal status is best checked on the ITSAA portal. The SRD status check channels (USSD *120*69277#, WhatsApp, the Moya app) show your application status, but for detailed appeal progress use the portal." },
+      { "q": "What if my appeal shows 'Declined'?", "a": "A declined appeal decision is final and cannot be appealed again. However, you can submit a new SRD application if circumstances like your income have changed." }
+    ],
+    "who_to_contact": [
+      { "label": "ITSAA Appeal Portal", "value": "srd-appeals.dsd.gov.za" },
+      { "label": "SASSA SRD Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za"
+    ],
+    "related": [
+      "/appeals/how-to-appeal",
+      "/appeals/appeal-timeline",
+      "/guides/appeal-guide",
+      "/status/appeal-pending"
+    ],
+    "has_cta": false,
+    "last_updated": "2026-08-31"
+  },
+  {
+    "slug": "appeal-deadline",
+    "title": "SASSA Appeal Deadline — How Long Do You Have to Appeal?",
+    "description": "Find out how long you have to appeal a declined SASSA SRD grant. The 90-day appeal window, what happens if you miss it, and how to submit on time.",
+    "step_label": "Appeal Deadline",
+    "intro": "There is a limited window to appeal a declined SASSA SRD grant decision. Knowing the deadline helps you act quickly and avoid losing your right to appeal.",
+    "how_it_works": [
+      "You have 90 days from the date your SRD application was declined to submit an appeal.",
+      "The 90-day window applies from the date of the rejection decision, not from when you noticed it.",
+      "Appeals submitted after the deadline may be rejected without review.",
+      "The appeal itself can take 60 to 90 days to be processed after you submit it — these are two separate timelines.",
+      "Missing the appeal deadline means you cannot appeal that specific rejection, but you can reapply.",
+      "Check your status regularly so you never miss the window."
+    ],
+    "steps": [
+      { "title": "Find your rejection date", "text": "Log into the SRD status portal to see when your application was declined. Your 90-day window starts from this date." },
+      { "title": "Submit your appeal before day 90", "text": "Lodge your appeal on the ITSAA portal srd-appeals.dsd.gov.za before the 90-day period ends." },
+      { "title": "Keep your appeal reference number", "text": "After submitting, save your appeal reference number so you can track progress." },
+      { "title": "Reapply if the deadline has passed", "text": "If you missed the 90-day deadline, submit a new SRD grant application instead of an appeal." }
+    ],
+    "faqs": [
+      { "q": "What is the deadline to appeal a SASSA SRD rejection?", "a": "You have 90 days from the date your SRD grant application was declined to submit an appeal on the ITSAA portal. After this period your appeal may be rejected without review." },
+      { "q": "What happens if I miss the SASSA appeal deadline?", "a": "If you miss the 90-day window, you can no longer appeal that rejection. You can, however, submit a new SRD application if your circumstances have changed." },
+      { "q": "Is the appeal deadline the same as the appeal processing time?", "a": "No. The 90-day deadline is how long you have to submit your appeal. Once submitted, the appeal itself takes a further 60 to 90 days to be processed." }
+    ],
+    "who_to_contact": [
+      { "label": "ITSAA Appeal Portal", "value": "srd-appeals.dsd.gov.za" },
+      { "label": "SASSA SRD Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za"
+    ],
+    "related": [
+      "/appeals/how-to-appeal",
+      "/appeals/appeal-status-check",
+      "/appeals/appeal-timeline"
+    ],
+    "has_cta": false,
+    "last_updated": "2026-08-31"
+  },
+  {
+    "slug": "reconsideration",
+    "title": "SASSA SRD Reconsideration — What It Means & How It Works",
+    "description": "Understand what a SASSA SRD reconsideration is, when it happens, and how it differs from an appeal. Find out what it means for your grant status.",
+    "step_label": "Reconsideration",
+    "intro": "A reconsideration is a review SASSA conducts when the information on your SRD application changes, such as your income being reassessed or your bank details being corrected.",
+    "how_it_works": [
+      "A reconsideration is different from an appeal — it happens automatically when your circumstances or information change.",
+      "It often occurs after you update your bank details, prove your income changed, or correct information on the SRD portal.",
+      "During reconsideration your status may change between 'Pending' and 'Under Review'.",
+      "A reconsideration does not guarantee approval — it is a re-evaluation of your eligibility.",
+      "The outcome of a reconsideration can restore your grant or confirm a rejection.",
+      "Respond quickly to any verification SMS or link during a reconsideration to avoid delays."
+    ],
+    "steps": [
+      { "title": "Notice the status change", "text": "Your SASSA status may change to 'Under Review' or 'Pending' when a reconsideration begins." },
+      { "title": "Provide any requested information", "text": "If SASSA sends you a verification link or asks for updated bank details, complete it promptly." },
+      { "title": "Check your new status", "text": "Once the review is complete, your status will update to reflect the reconsideration outcome." },
+      { "title": "Appeal if it is declined", "text": "If the reconsideration results in a decline, you still have the 90-day window to appeal." }
+    ],
+    "faqs": [
+      { "q": "What is the difference between a SASSA reconsideration and an appeal?", "a": "A reconsideration is an automatic re-review of your application when your information changes. An appeal is a formal request you submit on the ITSAA portal to challenge a decline decision." },
+      { "q": "How long does a SASSA reconsideration take?", "a": "Reconsiderations can take a few weeks depending on the complexity of your case. Updating your bank details may resolve it faster." },
+      { "q": "Can I speed up a reconsideration?", "a": "Make sure your bank details are correct and respond to any verification requests quickly. Correct, up-to-date information is the best way to speed things up." }
+    ],
+    "who_to_contact": [
+      { "label": "SASSA SRD Helpline", "value": "0800 60 10 11" },
+      { "label": "SRD Status Portal", "value": "srd.sassa.gov.za" }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za"
+    ],
+    "related": [
+      "/appeals/how-to-appeal",
+      "/status/under-review",
+      "/guides/bank-details-pending-fix"
+    ],
+    "has_cta": false,
+    "last_updated": "2026-08-31"
+  },
+  {
+    "slug": "itsaa",
+    "title": "ITSAA SASSA Appeal Portal — Login, Submit & Check Status",
+    "description": "Everything about the SASSA ITSAA appeal portal: how to log in with your ID and phone number, submit an SRD appeal, and track your appeal status.",
+    "step_label": "ITSAA Portal",
+    "intro": "The ITSAA (Independent Tribunal for Social Assistance Appeals) portal is where you submit and track your SASSA SRD grant appeal. It is the only official way to appeal a decline.",
+    "how_it_works": [
+      "The ITSAA portal is the official appeals system for SASSA SRD grants.",
+      "You log in using your 13-digit South African ID number and the phone number on your application.",
+      "No password is created — the system verifies you through your ID and phone number via OTP.",
+      "You can submit an appeal, view its progress, and see your final decision all in one place.",
+      "The portal works on a normal phone browser — no app needs to be downloaded.",
+      "Keep your appeal reference number after each submission to track progress."
+    ],
+    "portal": {
+      "name": "ITSAA Appeal Portal",
+      "url": "https://srd-appeals.dsd.gov.za",
+      "note": "Free to use. No app download required — works in any mobile browser."
+    },
+    "steps": [
+      { "title": "Open the ITSAA portal", "text": "Visit srd-appeals.dsd.gov.za in your mobile or desktop browser." },
+      { "title": "Enter your ID and phone number", "text": "Type your 13-digit ID number and the cellphone number linked to your SRD application." },
+      { "title": "Submit or check your appeal", "text": "You can submit a new appeal or check the status of a current one." },
+      { "title": "Keep your appeal reference", "text": "Save the reference number for future tracking and contact with SASSA." }
+    ],
+    "faqs": [
+      { "q": "Is the ITSAA SASSA appeal portal free?", "a": "Yes. The ITSAA appeal portal is a free government service. You only need a working internet connection and the phone number linked to your SRD application." },
+      { "q": "Do I need a password for the ITSAA portal?", "a": "No. You log in using your South African ID number and the phone number on your application. The system verifies you through an OTP sent to your phone." }
+    ],
+    "who_to_contact": [
+      { "label": "ITSAA Appeal Portal", "value": "srd-appeals.dsd.gov.za" },
+      { "label": "SASSA SRD Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za"
+    ],
+    "related": [
+      "/appeals/how-to-appeal",
+      "/appeals/appeal-status-check",
+      "/appeals/appeal-timeline"
+    ],
+    "has_cta": false,
+    "last_updated": "2026-08-31"
+  },
+  {
+    "slug": "appeal-timeline",
+    "title": "SASSA Appeal Timeline — How Long an SRD Appeal Takes",
+    "description": "See the full SASSA SRD appeal timeline: how long you have to appeal, how long processing takes, and when you can expect a decision and payment.",
+    "step_label": "Appeal Timeline",
+    "intro": "Understanding the SASSA appeal timeline helps you manage expectations. There are two main timeframes: how long you have to submit your appeal, and how long SASSA takes to decide it.",
+    "how_it_works": [
+      "You have 90 days from the decline date to submit your appeal.",
+      "After submission, SASSA processes appeals in batches, which usually takes 60 to 90 days.",
+      "Appeals are not decided in the order received — batches are processed together.",
+      "If your appeal is approved, backdated payments are arranged but can take additional days or weeks to reflect.",
+      "Complex appeals or those needing extra verification can take longer than 90 days.",
+      "Regularly checking your appeal status is the best way to know where you are in the timeline."
+    ],
+    "steps": [
+      { "title": "Note the decline date", "text": "Your 90-day appeal window begins on the date your SRD application was declined. Record this date." },
+      { "title": "Submit your appeal", "text": "Lodge your appeal on the ITSAA portal (srd-appeals.dsd.gov.za) within 90 days using your ID and phone number." },
+      { "title": "Track your appeal status", "text": "Check the same portal periodically. Your appeal will show as pending while it is being processed in batches." },
+      { "title": "Receive the decision", "text": "After 60 to 90 days, your appeal is approved or declined. Approved appeals are referred for payment." }
+    ],
+    "timeline": [
+      { "stage": "Application declined", "days": "Day 0", "note": "Your SRD application is declined and your 90-day appeal window begins." },
+      { "stage": "Submit your appeal", "days": "Within 90 days", "note": "Lodge your appeal on the ITSAA portal before the deadline." },
+      { "stage": "Appeal being processed", "days": "60–90 days", "note": "SASSA processes appeals in batches. Your status remains pending." },
+      { "stage": "Appeal decision", "days": "~Day 60–90+", "note": "Your appeal is either approved or declined." },
+      { "stage": "Payment arranged", "days": "Days–weeks after", "note": "If approved, backdated and current payments are arranged to your bank." }
+    ],
+    "faqs": [
+      { "q": "How long does a SASSA SRD appeal take in total?", "a": "From submission, an appeal usually takes 60 to 90 days to be decided. Add the time it might take for backdated payments to reflect after approval." },
+      { "q": "Why is my appeal taking longer than 90 days?", "a": "Complex appeals, missing information, or appeals selected for deep review can take longer. Check your appeal status on the ITSAA portal for updates." },
+      { "q": "When will I get paid after a successful appeal?", "a": "After your appeal is approved, SASSA arranges payments for approved periods. Money can take several days to a few weeks to reflect in your bank account." }
+    ],
+    "who_to_contact": [
+      { "label": "ITSAA Appeal Portal", "value": "srd-appeals.dsd.gov.za" },
+      { "label": "SASSA SRD Helpline", "value": "0800 60 10 11" }
+    ],
+    "sources": [
+      "https://srd-appeals.dsd.gov.za"
+    ],
+    "related": [
+      "/appeals/how-to-appeal",
+      "/appeals/appeal-status-check",
+      "/guides/appeal-timeline"
+    ],
+    "has_cta": false,
+    "last_updated": "2026-08-31"
+  }
+]

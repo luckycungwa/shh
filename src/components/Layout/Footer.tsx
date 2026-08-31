@@ -3,6 +3,7 @@ import { Link } from "@nextui-org/react";
 import Image from "next/image";
 import NextLink from "next/link";
 import { FaPhoneAlt, FaEnvelope, FaExternalLinkAlt, FaMapMarkerAlt, FaHeart, FaWhatsapp } from "react-icons/fa";
+import AffiliateDisclosure from "../affiliate/AffiliateDisclosure";
 
 const currentYear = new Date().getFullYear();
 
@@ -48,6 +49,9 @@ export default function FooterComponent() {
                 { label: "Scam Alerts", href: "/scam-alert" },
                 { label: "Common Problems", href: "/common-problems" },
                 { label: "Glossary", href: "/glossary" },
+                { label: "Appeal Deadline Calculator", href: "/tools/appeal-deadline" },
+                { label: "Payment Troubleshooter", href: "/tools/payment-troubleshooter" },
+                { label: "Status Meaning Explorer", href: "/tools/status-explorer" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -129,6 +133,9 @@ export default function FooterComponent() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/5">
+          <div className="mb-6">
+            <AffiliateDisclosure compact />
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-secondary-gray">
             <p>© {currentYear} SASSA Help Hub. Unofficial independent resource, not affiliated with SASSA or the South African government.</p>
             <p className="flex items-center gap-1.5">

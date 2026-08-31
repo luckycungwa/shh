@@ -9,8 +9,8 @@ import { buildMetadata } from "../lib/seo";
 import { getFact } from "../lib/canonical-facts";
 
 export const metadata = buildMetadata({
-  title: "SASSA Help Hub - Your Unofficial SASSA Resource",
-  description: `Your friendly, independent guide to SASSA grants, payment dates, and fraud protection. Updated for ${getCurrentYearString()} with SRD R370 news, status checks, and scam alerts.`,
+  title: "SASSA Help Hub — 2026 Payment Dates, SRD R370 Status Check & Grant Guides",
+  description: `Independent, unofficial SASSA guides for South Africans: 2026 grant payment dates, SRD R370 status checks, application steps, appeal help, and scam alerts — simplified and free.`,
   path: "",
   ogType: "website",
   noTemplate: true,
@@ -195,6 +195,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── What do you need help with? (problem-first) ── */}
+      <section className="max-w-7xl mx-auto px-6 py-24 w-full">
+        <div className="text-center mb-14">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-gold mb-3">Start Here</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight dark:text-white">What do you need help with?</h2>
+          <p className="text-lg text-secondary-gray-dark dark:text-secondary-gray mt-3 max-w-xl mx-auto">
+            Pick the situation that matches yours and we&rsquo;ll point you to the exact help.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "I want to apply for a grant", href: "/guides/apply-sassa-grants", icon: <FaFileAlt className="text-xl" /> },
+            { title: "I want to check my SRD status", href: "/status-check", icon: <FaUserCheck className="text-xl" /> },
+            { title: "My grant was declined — how do I appeal?", href: "/appeals/how-to-appeal", icon: <FaFileSignature className="text-xl" /> },
+            { title: "When will I be paid?", href: "/payment-calendar", icon: <FaCalendarAlt className="text-xl" /> },
+            { title: "I need to change my banking details", href: "/banking/update-phone-number", icon: <FaCreditCard className="text-xl" /> },
+            { title: "My payment hasn't arrived", href: "/guides/missing-grant-payment-guide", icon: <FaClock className="text-xl" /> },
+          ].map((item, i) => (
+            <NextLink key={i} href={item.href} className="group block">
+              <div className="h-full flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-primary-gold/40 hover:shadow-lg transition-all duration-300">
+                <div className="w-11 h-11 rounded-xl bg-primary-gold/10 flex items-center justify-center text-primary-gold group-hover:bg-primary-gold group-hover:text-primary-black transition-all shrink-0">
+                  {item.icon}
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-bold dark:text-white leading-snug text-sm sm:text-base">{item.title}</h3>
+                </div>
+                <FaArrowRight className="text-primary-gold text-sm group-hover:translate-x-1 transition-transform shrink-0" />
+              </div>
+            </NextLink>
+          ))}
+        </div>
+      </section>
+
       {/* ── Essential Tools ── */}
       <section className="max-w-7xl mx-auto px-6 py-28 w-full">
         <div className="text-center mb-16">
@@ -224,6 +258,85 @@ export default function HomePage() {
               </div>
             </NextLink>
           ))}
+        </div>
+      </section>
+
+      {/* ── Explore by Topic (Programmatic Verticals) ── */}
+      <section className="bg-primary-surface dark:bg-primary-dark/80 py-28 w-full border-y border-primary-gold/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-gold mb-3">Explore by Topic</p>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight dark:text-white">Answer Guides by Category</h2>
+            <p className="text-lg text-secondary-gray-dark dark:text-secondary-gray mt-3 max-w-xl mx-auto">
+              Deep-dive guides organised by the topics you search for most.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <NextLink href="/payment-calendar" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all"><FaCalendarAlt /></div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">Payment Dates & Calendar</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">Monthly schedules for the SRD R370 and all permanent grants.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/sassa-offices" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all">📍</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">SASSA Offices by City</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">Addresses, phones and tips for offices in all nine provinces.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/banking" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all"><FaCreditCard /></div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">Banking & Payment Methods</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">Bank transfer, Postbank, cash send and how to update your details.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/appeals" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all"><FaFileSignature /></div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">How to Appeal a Rejection</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">Submit, track and understand your SRD appeal on the ITSAA portal.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/status" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all">🔍</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">Grant Status Meanings</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">What each SASSA status means and what to do next.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/grants" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all">📋</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">All SASSA Grants Explained</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">Eligibility, amounts and application steps for every grant type.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/how-much-is-srd-grant" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all">💰</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">How Much Is the SRD Grant?</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">The R370 amount, the R624 income limit, and when it changes.</p>
+              </div>
+            </NextLink>
+
+            <NextLink href="/sassa-contact" className="group block">
+              <div className="h-full p-8 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-2xl text-primary-gold mb-6 group-hover:bg-primary-gold group-hover:text-primary-black transition-all">📞</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">SASSA Contact Numbers</h3>
+                <p className="text-sm text-secondary-gray-dark dark:text-secondary-gray leading-relaxed">Official helpline, WhatsApp, USSD and email — in one place.</p>
+              </div>
+            </NextLink>
+          </div>
         </div>
       </section>
 

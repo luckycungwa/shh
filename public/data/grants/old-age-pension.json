@@ -1,118 +1,133 @@
 {
-    "title":  "SASSA Old Age Pension 2026: Eligibility, Amounts \u0026 Payment Dates",
-    "description":  "Full details on the SASSA Older Persons Grant (Old Age Pension) up to R2,400/month. Who qualifies, required documents, step-by-step application process, payment amounts, and collection tips.",
-    "slug":  "grants/old-age-pension",
-    "pillar":  "grant-guide",
-    "last_updated":  "2026-08-20",
-    "reviewed_by":  "Lucky Cungwa",
-    "author":  "Lucky Cungwa",
-    "sources":  [
-                    "https://www.sassa.gov.za",
-                    "https://www.gov.za",
-                    "https://www.dsd.gov.za"
-                ],
-    "related":  [
-                    "/status/approved",
-                    "/status/pending",
-                    "/payment-calendar",
-                    "/eligibility-check",
-                    "/faq"
-                ],
-    "sections":  [
-                     {
-                         "type":  "intro",
-                         "title":  "What is the SASSA Older Persons Grant?",
-                         "content":  "The SASSA Older Persons Grant, commonly called the Old Age Pension, is a monthly payment from the South African government to citizens and permanent residents aged 60 and older. It is the most widely accessed permanent grant in South Africa, supporting millions of seniors who are no longer in formal employment. The grant is means-tested, meaning your income and assets must be below a certain threshold to qualify. As of 2026, the grant amounts are {{old_age_pension_amount_under75}} per month for beneficiaries under 75 and {{old_age_pension_amount_over75}} per month for those aged 75 and older."
-                     },
-                     {
-                         "type":  "eligibility",
-                         "title":  "Eligibility Requirements",
-                         "content":  "To qualify for the SASSA Older Persons Grant in 2026, you must meet all the following requirements: \u003cul\u003e\u003cli\u003e\u003cstrong\u003eAge:\u003c/strong\u003e You must be 60 years or older.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCitizenship or residency:\u003c/strong\u003e You must be a South African citizen, permanent resident, or refugee.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eIncome threshold:\u003c/strong\u003e Your income must not exceed {{old_age_income_threshold_single}} per month if single, or {{old_age_income_threshold_married}} combined if married.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eAsset threshold:\u003c/strong\u003e Your assets must not exceed {{old_age_asset_threshold_single}} for a single person or {{old_age_asset_threshold_married}} for a married couple. The value of your primary home is excluded.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eNot receiving another grant:\u003c/strong\u003e You cannot receive another social grant for yourself, though you may receive the Grant-in-Aid as a top-up.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eNot in state care:\u003c/strong\u003e You must not be living in a state-funded institution.\u003c/li\u003e\u003c/ul\u003e"
-                     },
-                     {
-                         "type":  "documents",
-                         "title":  "Required Documents",
-                         "content":  "You need the following to apply for the Older Persons Grant: \u003cul\u003e\u003cli\u003e\u003cstrong\u003e13-digit bar-coded ID\u003c/strong\u003e (green ID book or smart ID card)\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of income\u003c/strong\u003e — pension slip, bank statements (last 3 months), or an affidavit if you have no income\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of marital status\u003c/strong\u003e — marriage certificate, divorce decree, or spousal death certificate if applicable\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of residence\u003c/strong\u003e — utility bill or affidavit confirming your address\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eProof of assets\u003c/strong\u003e — property valuations, investment statements\u003c/li\u003e\u003c/ul\u003e"
-                     },
-                     {
-                         "type":  "steps",
-                         "title":  "How to Apply",
-                         "steps":  [
-                                       {
-                                           "title":  "Start Your Application (Online or In Person)",
-                                           "content":  "You can now start your Older Persons Grant application online via the official SASSA Services Portal at services.sassa.gov.za. Register an account, log in, and complete the online application for the Older Persons Grant. Alternatively, you can apply in person at your nearest SASSA office. Find your nearest office on our resources page."
-                                       },
-                                       {
-                                           "title":  "Bring All Required Documents",
-                                           "content":  "Take your ID, proof of income, proof of residence, and any other supporting documents to the office."
-                                       },
-                                       {
-                                           "title":  "Complete the Application Form",
-                                           "content":  "A SASSA official will help you fill out the application form. Make sure all information is accurate and matches your ID document."
-                                       },
-                                       {
-                                           "title":  "Receive Your Receipt",
-                                           "content":  "After submitting, you will receive a receipt with a reference number. Keep this safe — it is your proof of application."
-                                       },
-                                       {
-                                           "title":  "Wait for Processing",
-                                           "content":  "SASSA will process your application and conduct a means test. This usually takes between 30 and 90 days. You can check your application status at the same SASSA office."
-                                       }
-                                   ]
-                     },
-                     {
-                         "type":  "info",
-                         "title":  "Grant Amounts for 2026",
-                         "content":  "The Older Persons Grant amounts for 2026 are: \u003cul\u003e\u003cli\u003e\u003cstrong\u003eUnder 75 years:\u003c/strong\u003e {{old_age_pension_amount_under75}} per month\u003c/li\u003e\u003cli\u003e\u003cstrong\u003e75 years and older:\u003c/strong\u003e {{old_age_pension_amount_over75}} per month\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eGrant-in-Aid top-up:\u003c/strong\u003e If you need full-time care, you may qualify for an additional {{grant_in_aid_amount}} per month through the Grant-in-Aid\u003c/li\u003e\u003c/ul\u003ePayments are made on the first few working days of each month. For example, in September 2026, the Older Persons Grant will be paid on Wednesday, 2 September."
-                     },
-                     {
-                         "type":  "text",
-                         "title":  "Collection Methods",
-                         "content":  "You can collect your Older Persons Grant through: \u003cul\u003e\u003cli\u003e\u003cstrong\u003eBank transfer\u003c/strong\u003e — paid directly into your bank account\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eSASSA Gold Card\u003c/strong\u003e — withdraw from any Postbank ATM or SASSA pay point\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eRetail collection\u003c/strong\u003e — collect at Pick n Pay, Boxer, Shoprite, Checkers, or USave\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eHome delivery\u003c/strong\u003e — available for beneficiaries who are unable to travel due to illness or disability\u003c/li\u003e\u003c/ul\u003eYou do not need to withdraw your money on the first day. Your grant is safe in your account until you need it."
-                     },
-                     {
-                         "type":  "faq",
-                         "title":  "Frequently Asked Questions",
-                         "faqs":  [
-                                      {
-                                          "q":  "Can I work and still receive the Old Age Pension?",
-                                          "a":  "Yes, but your total monthly income must stay below the means test threshold. If you earn a pension from a former employer, SASSA will deduct this from your grant amount."
-                                      },
-                                      {
-                                          "q":  "What happens when I turn 75?",
-                                          "a":  "Your grant automatically increases to the higher amount for beneficiaries over 75. You do not need to reapply."
-                                      },
-                                      {
-                                          "q":  "Can I apply before I turn 60?",
-                                          "a":  "No, you must have reached your 60th birthday to qualify. You should apply as soon as possible after your birthday."
-                                      },
-                                      {
-                                          "q":  "Can I apply for the Old Age Grant online?",
-                                          "a":  "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. Register an account, log in, and complete the online application. You may still be asked to visit a SASSA office to submit physical documents like your ID and proof of residence."
-                                      },
-                                      {
-                                          "q":  "What if I am too frail to visit a SASSA office?",
-                                          "a":  "You can authorize a family member to apply on your behalf. They must bring a letter of authorization, your ID, and their own ID."
-                                      }
-                                  ]
-                     },
-                     {
-                         "type":  "references",
-                         "title":  "References",
-                         "references":  [
-                                            {
-                                                "title":  "SASSA Official Website",
-                                                "url":  "https://www.sassa.gov.za"
-                                            },
-                                            {
-                                                "title":  "Older Persons Act 2006",
-                                                "url":  "https://www.gov.za/documents/older-persons-act"
-                                            },
-                                            {
-                                                "title":  "Department of Social Development",
-                                                "url":  "https://www.dsd.gov.za"
-                                            }
-                                        ]
-                     }
-                 ]
+  "title": "SASSA Old Age Pension 2026: Eligibility, Amounts & Payment Dates",
+  "description": "Full details on the SASSA Older Persons Grant (Old Age Pension) up to R2,400/month. Who qualifies, required documents, step-by-step application process, payment amounts, and collection tips.",
+  "slug": "grants/old-age-pension",
+  "pillar": "grant-guide",
+  "last_updated": "2026-08-20",
+  "reviewed_by": "Lucky Cungwa",
+  "author": "Lucky Cungwa",
+  "sources": [
+    "https://www.sassa.gov.za",
+    "https://www.gov.za",
+    "https://www.dsd.gov.za"
+  ],
+  "related": [
+    "/status/approved",
+    "/status/pending",
+    "/payment-calendar",
+    "/eligibility-check",
+    "/faq"
+  ],
+  "sections": [
+    {
+      "type": "intro",
+      "title": "What is the SASSA Older Persons Grant?",
+      "content": "The SASSA Older Persons Grant, commonly called the Old Age Pension, is a monthly payment from the South African government to citizens and permanent residents aged 60 and older. It is the most widely accessed permanent grant in South Africa, supporting millions of seniors who are no longer in formal employment. The grant is means-tested, meaning your income and assets must be below a certain threshold to qualify. As of 2026, the grant amounts are {{old_age_pension_amount_under75}} per month for beneficiaries under 75 and {{old_age_pension_amount_over75}} per month for those aged 75 and older."
+    },
+    {
+      "type": "eligibility",
+      "title": "Eligibility Requirements",
+      "content": "To qualify for the SASSA Older Persons Grant in 2026, you must meet all the following requirements: <ul><li><strong>Age:</strong> You must be 60 years or older.</li><li><strong>Citizenship or residency:</strong> You must be a South African citizen, permanent resident, or refugee.</li><li><strong>Income threshold:</strong> Your income must not exceed {{old_age_income_threshold_single}} per month if single, or {{old_age_income_threshold_married}} combined if married.</li><li><strong>Asset threshold:</strong> Your assets must not exceed {{old_age_asset_threshold_single}} for a single person or {{old_age_asset_threshold_married}} for a married couple. The value of your primary home is excluded.</li><li><strong>Not receiving another grant:</strong> You cannot receive another social grant for yourself, though you may receive the Grant-in-Aid as a top-up.</li><li><strong>Not in state care:</strong> You must not be living in a state-funded institution.</li></ul>"
+    },
+    {
+      "type": "documents",
+      "title": "Required Documents",
+      "content": "You need the following to apply for the Older Persons Grant: <ul><li><strong>13-digit bar-coded ID</strong> (green ID book or smart ID card)</li><li><strong>Proof of income</strong> — pension slip, bank statements (last 3 months), or an affidavit if you have no income</li><li><strong>Proof of marital status</strong> — marriage certificate, divorce decree, or spousal death certificate if applicable</li><li><strong>Proof of residence</strong> — utility bill or affidavit confirming your address</li><li><strong>Proof of assets</strong> — property valuations, investment statements</li></ul>"
+    },
+    {
+      "type": "steps",
+      "title": "How to Apply",
+      "steps": [
+        {
+          "title": "Start Your Application (Online or In Person)",
+          "content": "You can now start your Older Persons Grant application online via the official SASSA Services Portal at services.sassa.gov.za. Register an account, log in, and complete the online application for the Older Persons Grant. Alternatively, you can apply in person at your nearest SASSA office. Find your nearest office on our resources page."
+        },
+        {
+          "title": "Bring All Required Documents",
+          "content": "Take your ID, proof of income, proof of residence, and any other supporting documents to the office."
+        },
+        {
+          "title": "Complete the Application Form",
+          "content": "A SASSA official will help you fill out the application form. Make sure all information is accurate and matches your ID document."
+        },
+        {
+          "title": "Receive Your Receipt",
+          "content": "After submitting, you will receive a receipt with a reference number. Keep this safe — it is your proof of application."
+        },
+        {
+          "title": "Wait for Processing",
+          "content": "SASSA will process your application and conduct a means test. This usually takes between 30 and 90 days. You can check your application status at the same SASSA office."
+        }
+      ]
+    },
+    {
+      "type": "info",
+      "title": "Grant Amounts for 2026",
+      "content": "The Older Persons Grant amounts for 2026 are: <ul><li><strong>Under 75 years:</strong> {{old_age_pension_amount_under75}} per month</li><li><strong>75 years and older:</strong> {{old_age_pension_amount_over75}} per month</li><li><strong>Grant-in-Aid top-up:</strong> If you need full-time care, you may qualify for an additional {{grant_in_aid_amount}} per month through the Grant-in-Aid</li></ul>Payments are made on the first few working days of each month. For example, in September 2026, the Older Persons Grant will be paid on Wednesday, 2 September."
+    },
+    {
+      "type": "text",
+      "title": "Collection Methods",
+      "content": "You can collect your Older Persons Grant through: <ul><li><strong>Bank transfer</strong> — paid directly into your bank account</li><li><strong>SASSA Gold Card</strong> — withdraw from any Postbank ATM or SASSA pay point</li><li><strong>Retail collection</strong> — collect at Pick n Pay, Boxer, Shoprite, Checkers, or USave</li><li><strong>Home delivery</strong> — available for beneficiaries who are unable to travel due to illness or disability</li></ul>You do not need to withdraw your money on the first day. Your grant is safe in your account until you need it."
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "q": "Can I work and still receive the Old Age Pension?",
+          "a": "Yes, but your total monthly income must stay below the means test threshold. If you earn a pension from a former employer, SASSA will deduct this from your grant amount."
+        },
+        {
+          "q": "What happens when I turn 75?",
+          "a": "Your grant automatically increases to the higher amount for beneficiaries over 75. You do not need to reapply."
+        },
+        {
+          "q": "Can I apply before I turn 60?",
+          "a": "No, you must have reached your 60th birthday to qualify. You should apply as soon as possible after your birthday."
+        },
+        {
+          "q": "Can I apply for the Old Age Grant online?",
+          "a": "Yes. You can start your application online via the official SASSA Services Portal at services.sassa.gov.za. Register an account, log in, and complete the online application. You may still be asked to visit a SASSA office to submit physical documents like your ID and proof of residence."
+        },
+        {
+          "q": "What if I am too frail to visit a SASSA office?",
+          "a": "You can authorize a family member to apply on your behalf. They must bring a letter of authorization, your ID, and their own ID."
+        }
+      ]
+    },
+    {
+      "type": "references",
+      "title": "References",
+      "references": [
+        {
+          "title": "SASSA Official Website",
+          "url": "https://www.sassa.gov.za"
+        },
+        {
+          "title": "Older Persons Act 2006",
+          "url": "https://www.gov.za/documents/older-persons-act"
+        },
+        {
+          "title": "Department of Social Development",
+          "url": "https://www.dsd.gov.za"
+        }
+      ]
+    }
+  ],
+  "monetization": {
+    "vertical": "insurance"
+  },
+  "nextSteps": [
+    {
+      "title": "Compare funeral cover options",
+      "url": "/guides/funeral-cover-south-africa-comparison",
+      "description": "Independent options"
+    },
+    {
+      "title": "How much does cover cost?",
+      "url": "/guides/what-does-funeral-cover-cost",
+      "description": "Understand pricing"
+    }
+  ]
 }

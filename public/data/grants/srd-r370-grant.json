@@ -212,5 +212,35 @@
         }
       ]
     }
+  ],
+  "monetization": {
+    "vertical": "banking"
+  },
+  "nextSteps": [
+    {
+      "title": "Choose how to receive your grant",
+      "url": "/guides/best-bank-accounts-sassa-beneficiaries",
+      "description": "Compare low-fee accounts for payments"
+    },
+    {
+      "title": "Fix 'Bank Details Pending'",
+      "url": "/guides/bank-details-pending-fix",
+      "description": "If your payment is delayed"
+    },
+    {
+      "title": "If your application was declined",
+      "url": "/guides/appeal-guide",
+      "description": "How to appeal an SRD decline"
+    },
+    {
+      "title": "Ways to earn extra income",
+      "url": "/guides/ways-to-make-extra-income-south-africa",
+      "description": "Realistic side income"
+    },
+    {
+      "title": "Free skills courses",
+      "url": "/guides/free-skills-courses-south-africa",
+      "description": "Build skills at no cost"
+    }
   ]
 }

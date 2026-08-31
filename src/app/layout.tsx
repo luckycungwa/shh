@@ -13,11 +13,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "SASSA Help Hub - Your Unofficial SASSA Resource",
+    default:
+      "SASSA Help Hub — 2026 Payment Dates, SRD R370 Status Check & Grant Guides",
     template: "%s | SASSA Help Hub",
   },
   description:
-    "SASSA Help Hub - Your independent unofficial guide for SASSA beneficiaries. Get 2026 payment dates, SRD R370 news, application help, and scam alerts.",
+    "Independent, unofficial SASSA guides for South Africans: 2026 grant payment dates, SRD R370 status checks, application steps, appeal help, and scam alerts — simplified and free.",
   keywords: [
     "SASSA news 2026",
     "SASSA payment dates 2026",
@@ -128,6 +129,27 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        {process.env.NEXT_PUBLIC_GA_ID ? (
+          <>
+            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="ga4-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { anonymize_ip: true, page_path: location.pathname });
+                `,
+              }}
+            />
+          </>
+        ) : null}
       </head>
       <body className={inter.className}>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-6 focus:py-3 focus:bg-primary-gold focus:text-primary-black focus:font-bold focus:rounded-xl focus:shadow-xl focus:outline-none">

@@ -1,0 +1,231 @@
+import fs from "fs";
+import path from "path";
+import React from "react";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Chip, Divider } from "@nextui-org/react";
+import { FaCalendarCheck, FaQuestionCircle, FaLink } from "react-icons/fa";
+import JsonLd from "../../../components/JsonLd";
+import EditorialFooter from "../../../components/EditorialFooter";
+import EditorialMeta from "../../../components/EditorialMeta";
+import AdNetworkLoader from "../../../components/AdNetworkLoader";
+import NextStepCard from "../../../components/affiliate/NextStepCard";
+import EntityLinks from "../../../components/EntityLinks";
+import { articleSchema, breadcrumbSchema, faqPageSchema, paymentScheduleSchema } from "../../../lib/schema";
+
+interface MonthSchedule {
+  month_key: string;
+  label: string;
+  year: number;
+  month: number;
+  older_persons: { date: string; day: string; status: string };
+  disability: { date: string; day: string; status: string };
+  children: { date: string; day: string; status: string };
+  under_review: { date: string; day: string; status: string };
+  srd: { date: string; day: string; status: string };
+  note: string;
+  governance?: { source: string; sourceURL: string; lastVerified: string; notes: string };
+}
+
+function readAll(): MonthSchedule[] {
+  return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/payment-schedule-forecast.json"), "utf8"));
+}
+
+function creditInfo(s: MonthSchedule, key: "older_persons" | "disability" | "children" | "under_review" | "srd") {
+  const grantNames: Record<string, string> = {
+    older_persons: "Older Persons Grant",
+    disability: "Disability Grant",
+    children: "Children's Grants",
+    under_review: "Grants Under Review",
+    srd: "SRD R370 Grant",
+  };
+  return {
+    key,
+    grant: grantNames[key],
+    ...s[key],
+  };
+}
+
+const grantRows = ["older_persons", "disability", "children", "under_review", "srd"] as const;
+
+export function generateStaticParams() {
+  return readAll().map((s) => ({ "month-year": s.month_key }));
+}
+
+export function generateMetadata({ params }: { params: { "month-year": string } }): Metadata {
+  const s = readAll().find((x) => x.month_key === params["month-year"]);
+  if (!s) return { title: "Payment Dates Not Found" };
+  const title = `SASSA Payment Dates for ${s.label} — Full Grant Schedule`;
+  const description = `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
+  const url = `https://www.sassahelphub.co.za/dates/${params["month-year"]}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    robots: { index: true, follow: true },
+    openGraph: { title, description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
+    twitter: { card: "summary_large_image", title, description, images: ["https://www.sassahelphub.co.za/logo.png"] },
+  };
+}
+
+export default function PaymentDatesPage({ params }: { params: { "month-year": string } }) {
+  const schedule = readAll().find((x) => x.month_key === params["month-year"]);
+  if (!schedule) notFound();
+
+  const title = `SASSA Payment Dates for ${schedule.label} — Full Grant Schedule`;
+  const description = `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
+
+  const faqs = [
+    { q: `What is the SRD R370 payment date for ${schedule.label}?`, a: `For ${schedule.label}, the SRD R370 grant is expected to be paid in the last week of the month${schedule.srd.status === "confirmed" ? ` on ${schedule.srd.day}` : ", but SASSA has not yet officially confirmed the exact date"}. Check the official SRD portal (srd.sassa.gov.za) for your own 'Pay Day' date — it is more reliable than any general schedule.` },
+    { q: "Why is the SRD payment date different from the permanent grants?", a: "Unlike permanent grants which are paid in the first week of each month, the SRD R370 is paid in batches during the last week of the month. Beneficiaries are not all paid on the same day — your personal 'Pay Day' appears on your status check." },
+    { q: "Can my payment date change after it appears?", a: "Yes. Payment dates can shift between batches or if your application needs additional verification. Check your status again after the 15th of the month, and use the official SRD portal as your source of truth." },
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      <JsonLd data={articleSchema(title, description, `/dates/${schedule.month_key}`, "Lucky Cungwa", "2026-08-31")} />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", slug: "/" },
+        { name: "Payment Calendar", slug: "/payment-calendar" },
+        { name: schedule.label, slug: `/dates/${schedule.month_key}` },
+      ])} />
+      <JsonLd data={faqPageSchema(faqs)} />
+      <JsonLd
+        data={paymentScheduleSchema(
+          grantRows.map((row) => {
+            const info = creditInfo(schedule, row);
+            return {
+              label: schedule.label,
+              grant: info.grant,
+              date: info.date,
+              status: info.status,
+              sourceURL: schedule.governance?.sourceURL,
+            };
+          })
+        )}
+      />
+
+      <nav className="text-sm text-gray-500 mb-8 flex gap-2">
+        <a href="/" className="hover:text-primary-gold">Home</a>
+        <span>/</span>
+        <a href="/payment-calendar" className="hover:text-primary-gold">Payment Calendar</a>
+        <span>/</span>
+        <span className="text-gray-900 dark:text-white font-medium">{schedule.label}</span>
+      </nav>
+
+      <article className="space-y-12">
+        <header className="space-y-6">
+          <Chip color="primary" variant="flat" className="font-bold uppercase text-xs">Payment Dates</Chip>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">{title}</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
+          <EditorialMeta lastVerified={schedule.governance?.lastVerified || "2026-08-31"} author="Lucky Cungwa" />
+          {schedule.srd.status !== "confirmed" && (
+            <div className="flex items-start gap-3 p-4 rounded-2xl border-2 border-amber-200 dark:border-amber-700/50 bg-amber-50 dark:bg-amber-900/10 text-sm text-amber-800 dark:text-amber-200">
+              <FaLink className="text-amber-500 mt-0.5 shrink-0" />
+              <p>
+                Some of these dates are <strong>projected</strong> and have not yet been officially confirmed by SASSA.
+                Always confirm with the official <a href="https://srd.sassa.gov.za" className="font-bold underline">SRD portal</a> or SASSA helpline before relying on them.
+              </p>
+            </div>
+          )}
+        </header>
+
+        <section className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-2xl border-l-8 border-blue-500">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+            <FaCalendarCheck className="text-primary-gold" /> {schedule.label} Payment Schedule
+          </h2>
+          <div className="space-y-3">
+            {grantRows.map((row) => {
+              const info = creditInfo(schedule, row);
+              return (
+                <div key={row} className="flex flex-wrap items-center justify-between gap-2 bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                  <div>
+                    <p className="font-bold">{info.grant}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{info.day}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-black text-primary-gold">{info.date}</p>
+                    <Chip size="sm" variant="flat" color={info.status === "confirmed" ? "success" : "warning"} className="font-bold uppercase text-[10px]">
+                      {info.status === "confirmed" ? "Confirmed" : "Projected"}
+                    </Chip>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-6">{schedule.note}</p>
+          {schedule.governance && (
+            <div className="mt-4 text-xs text-gray-500 dark:text-gray-400 space-y-1">
+              <p>
+                <span className="font-bold">Source:</span>{" "}
+                {schedule.governance.sourceURL ? (
+                  <a href={schedule.governance.sourceURL} target="_blank" rel="noopener noreferrer" className="text-primary-gold font-semibold underline">{schedule.governance.source}</a>
+                ) : (
+                  schedule.governance.source
+                )}
+              </p>
+              <p><span className="font-bold">Last verified:</span> {schedule.governance.lastVerified}</p>
+            </div>
+          )}
+          {schedule.governance?.notes && (
+            <p className="text-xs italic text-amber-700 dark:text-amber-300 mt-2">Note: {schedule.governance.notes}</p>
+          )}
+        </section>
+
+        <section className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700">
+          <h2 className="text-xl font-bold mb-4">Why Dates Matter & How to Confirm Yours</h2>
+          <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+            <li className="flex gap-3"><span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>Permanent grants (Older Persons, Disability, Children's) are paid in the first week of the month.</li>
+            <li className="flex gap-3"><span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>The SRD R370 grant is paid in batches in the last week of the month — not everyone is paid on the same day.</li>
+            <li className="flex gap-3"><span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>Your personal 'Pay Day' date on the SRD portal is the most reliable way to know when you will be paid.</li>
+            <li className="flex gap-3"><span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>If your Pay Day has passed and no money has arrived, allow 1 to 3 business days for bank reflection before acting.</li>
+          </ul>
+        </section>
+
+        {faqs.length > 0 && (
+          <>
+            <Divider />
+            <section>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                <FaQuestionCircle className="text-primary-gold" /> Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {faqs.map((faq, i) => (
+                  <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+                    <h3 className="text-lg font-bold mb-3 text-primary-gold">{faq.q}</h3>
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
+
+        <AdNetworkLoader />
+
+        <NextStepCard
+          pagePath={`/dates/${schedule.month_key}`}
+          items={[
+            { title: "View the full payment calendar", url: "/payment-calendar" },
+            { title: "What 'Approved' means & when you'll be paid", url: "/status/approved" },
+            { title: "Missing grant payment?", url: "/guides/missing-grant-payment-guide" },
+            { title: "Choose how to receive your payment", url: "/banking/bank-transfer" },
+          ]}
+        />
+
+        <EntityLinks
+          links={[
+            { title: "How to check your SRD status & pay day", url: "/status-check" },
+            { title: "What 'Paid' means", url: "/status/paid" },
+            { title: "Banking & payment methods", url: "/banking" },
+          ]}
+          title="When your grant arrives"
+          pagePath={`/dates/${schedule.month_key}`}
+        />
+
+        <Divider />
+        <EditorialFooter lastUpdated="2026-08-31" author="Lucky Cungwa" />
+      </article>
+    </div>
+  );
+}

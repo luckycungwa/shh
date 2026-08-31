@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
@@ -16,18 +18,58 @@ export const metadata: Metadata = buildMetadata({
   path: "/status",
 });
 
-const statuses = [
-  { slug: "application-complete", name: "Application Complete", desc: "Your application has been received and is in the queue for processing.", color: "primary" as const, action: "Wait for verification. Check back after the 15th." },
-  { slug: "pending", name: "Pending", desc: "SASSA is verifying your information. Most common status — wait 1–4 weeks.", color: "warning" as const, action: "Check back weekly. Ensure your phone number is active for OTPs." },
-  { slug: "bank-details-pending", name: "Bank Details Pending", desc: "Approved but payment blocked — needs valid banking information.", color: "danger" as const, action: "Update bank details on the SRD portal immediately." },
-  { slug: "identity-verification", name: "Identity Verification", desc: "SASSA needs to confirm your identity via biometrics or document check.", color: "warning" as const, action: "Check your SMS for a biometric verification link. Complete within 72 hours." },
-  { slug: "referred", name: "Referred", desc: "Flagged for manual human review. Takes 2–6 weeks.", color: "warning" as const, action: "Contact SASSA if no update after 4 weeks." },
-  { slug: "means-test-failed", name: "Means Test Failed", desc: "Income or assets above the threshold. You can appeal.", color: "danger" as const, action: "Lodge an appeal via the ITSAA portal within 90 days." },
-  { slug: "approved", name: "Approved", desc: "Your application passed all checks. Awaiting a Pay Day date.", color: "success" as const, action: "Check for a 'Pay Day' date. Funds arrive within 1–3 days of that date." },
-  { slug: "declined", name: "Declined", desc: "Application not approved for this month. You have 90 days to appeal.", color: "danger" as const, action: "Check the decline reason and appeal on srd-appeals.dsd.gov.za." },
-  { slug: "appeal-pending", name: "Appeal Pending", desc: "Your appeal has been received by ITSAA and is under review.", color: "warning" as const, action: "Wait 60–90 days for a decision. Keep your reference number." },
-  { slug: "paid", name: "Paid", desc: "Payment has been released. Money reflects within 1–3 business days.", color: "success" as const, action: "Check your bank account or collection point. Save the SMS confirmation." },
-];
+interface StatusRecord {
+  slug: string;
+  status_label: string;
+  title: string;
+  description: string;
+  what_it_means: string;
+  how_long: string;
+}
+
+function readStatuses(): StatusRecord[] {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/status-meanings.json"), "utf8"));
+  } catch {
+    return [];
+  }
+}
+
+const statusMeta: Record<string, { name: string; desc: string; action: string }> = {
+  "application-complete": { name: "Application Complete", desc: "Your application has been received and is in the queue for processing.", action: "Wait for verification. Check back after the 15th." },
+  pending: { name: "Pending", desc: "SASSA is verifying your information. Most common status — wait 1–4 weeks.", action: "Check back weekly. Ensure your phone number is active for OTPs." },
+  "bank-details-pending": { name: "Bank Details Pending", desc: "Approved but payment blocked — needs valid banking information.", action: "Update bank details on the SRD portal immediately." },
+  "identity-verification": { name: "Identity Verification", desc: "SASSA needs to confirm your identity via biometrics or document check.", action: "Check your SMS for a biometric verification link. Complete within 72 hours." },
+  referred: { name: "Referred", desc: "Flagged for manual human review. Takes 2–6 weeks.", action: "Contact SASSA if no update after 4 weeks." },
+  "means-test-failed": { name: "Means Test Failed", desc: "Income or assets above the threshold. You can appeal.", action: "Lodge an appeal via the ITSAA portal within 90 days." },
+  approved: { name: "Approved", desc: "Your application passed all checks. Awaiting a Pay Day date.", action: "Check for a 'Pay Day' date. Funds arrive within 1–3 days of that date." },
+  declined: { name: "Declined", desc: "Application not approved for this month. You have 90 days to appeal.", action: "Check the decline reason and appeal on srd-appeals.dsd.gov.za." },
+  "appeal-pending": { name: "Appeal Pending", desc: "Your appeal has been received by ITSAA and is under review.", action: "Wait 60–90 days for a decision. Keep your reference number." },
+  paid: { name: "Paid", desc: "Payment has been released. Money reflects within 1–3 business days.", action: "Check your bank account or collection point. Save the SMS confirmation." },
+  "under-review": { name: "Under Review", desc: "Your application is being re-examined before a final decision.", action: "Wait for the review to complete. Check your status after the 15th." },
+  cancelled: { name: "Cancelled", desc: "Your grant was cancelled. You can reapply at any time.", action: "Reapply on the SRD portal or appeal if it was an error." },
+  suspended: { name: "Suspended", desc: "Your grant was suspended, often after months of not collecting.", action: "Contact SASSA or reapply to restore your grant." },
+  "reapplication-required": { name: "Reapplication Required", desc: "SASSA needs you to submit a fresh application to continue.", action: "Reapply on the SRD portal with your ID number." },
+  "alternative-income-detected": { name: "Alternative Income Detected", desc: "SASSA found income from another source above the threshold.", action: "Appeal with proof that the deposits were not income." },
+  "uif-registered": { name: "UIF Registered", desc: "You appear on the UIF database, which blocks the SRD grant.", action: "Request UIF deregistration and appeal with proof." },
+  "nsfas-registered": { name: "NSFAS Registered", desc: "You appear on the NSFAS student funding database.", action: "Get a clearance letter from your university and appeal." },
+  "source-limit-exceeded": { name: "Source Limit Exceeded", desc: "Your deposits across all sources exceeded the allowed limit.", action: "Review deposits and appeal within 90 days." },
+  "application-invalid": { name: "Application Invalid", desc: "Your application was missing required or correct information.", action: "Correct your details or submit a new application." },
+  null: { name: "Null / No Status", desc: "No status is showing, often due to a data error or new application.", action: "Wait 24–48 hours, then check again or contact SASSA." },
+};
+
+const positiveSlugs = ["approved", "paid"];
+const dangerSlugs = ["bank-details-pending", "means-test-failed", "declined", "alternative-income-detected", "uif-registered", "nsfas-registered", "source-limit-exceeded", "application-invalid"];
+
+const allStatuses = readStatuses();
+
+const statuses = allStatuses
+  .filter((s) => statusMeta[s.slug])
+  .map((s) => {
+    const meta = statusMeta[s.slug];
+    const color = (positiveSlugs.includes(s.slug) ? "success" : dangerSlugs.includes(s.slug) ? "danger" : "warning") as "success" | "danger" | "warning";
+    return { slug: s.slug, name: meta.name, desc: meta.desc, color, action: meta.action };
+  });
 
 const faqs = [
   { q: "What does 'Pending' mean for my SASSA grant?", a: "Pending means SASSA is still cross-referencing your details with government databases including SARS, UIF, Home Affairs, and commercial banks. This status can persist for 1–4 weeks and is the most common status. It does not mean your application has failed." },

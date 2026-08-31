@@ -11,7 +11,8 @@
       "Arrive before 7:00 AM as queues form early.",
       "Bring original documents and at least 2 certified copies.",
       "The office is close to public transport on Steve Biko Road."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "johannesburg",
@@ -25,7 +26,8 @@
       "Park at nearby secure lots in Braamfontein; street parking is risky.",
       "Check the queue for 'New Applications' vs 'Status Queries' as they move at different speeds.",
       "Tuesdays and Wednesdays are generally less crowded than Mondays."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "cape-town",
@@ -39,7 +41,8 @@
       "Enter via the Adderley Street entrance for fastest access to the SASSA floor.",
       "Highly accessible via Metrorail and MyCiti bus systems.",
       "Peak times are usually between 10:00 AM and 1:00 PM."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "durban",
@@ -53,7 +56,8 @@
       "If the main office is full, ask about mobile outreach schedules for your township.",
       "Ensure your cellphone is fully charged as you may need to receive an OTP during your visit.",
       "Staff are fluent in isiZulu and English."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "bloemfontein",
@@ -67,7 +71,8 @@
       "The office is centrally located near the Bloemfontein Magistrate Court.",
       "Queue management is generally efficient, but bring a bottle of water for the wait.",
       "Ask for a reference number before leaving the counter."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "polokwane",
@@ -81,7 +86,8 @@
       "Arrive early if traveling from outside Polokwane city limits.",
       "The office is within walking distance of the main taxi rank.",
       "Check that your bank statements are stamped by your bank before arrival."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "mbombela",
@@ -95,7 +101,8 @@
       "Avoid visiting on the first two days of the month when grant payments start.",
       "Bring a pen to fill out forms while waiting in the queue.",
       "Parking is available but fills up by 8:30 AM."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "kimberley",
@@ -109,7 +116,8 @@
       "The office is in the city center; very easy to find.",
       "Queue for 'Old Age' grants usually has a dedicated shorter line.",
       "Verify your banking details at the 'Info' desk before joining the main queue."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "east-london",
@@ -123,7 +131,8 @@
       "The Quigney area can be windy; dress warmly if waiting outside.",
       "Secure your ID and phone while in the queue.",
       "The office is close to the East London harbor area."
-    ]
+    ],
+    "verified": true
   },
   {
     "id": "soweto",
@@ -137,6 +146,7 @@
       "This office experiences very high traffic; consider visiting the Maponya Mall branch if queues are excessive.",
       "Many staff speak multiple local languages including isiZulu, Sesotho, and English.",
       "Check your status online first to see if a physical visit is truly necessary."
-    ]
+    ],
+    "verified": true
   }
 ]
