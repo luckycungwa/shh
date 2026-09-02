@@ -134,6 +134,7 @@ export function paymentScheduleSchema(
     date: string; // ISO date or TBC
     status: "confirmed" | "projected" | string;
     sourceURL?: string;
+    pageURL?: string;
   }[]
 ) {
   const events = schedule
@@ -141,10 +142,36 @@ export function paymentScheduleSchema(
     .map((s) => ({
       "@type": "Event",
       name: `${s.grant} — ${s.label} Payment Date`,
+      description: `Scheduled payment of the ${s.grant} to SASSA beneficiaries for ${s.label}.`,
       startDate: s.date,
+      endDate: s.date,
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       eventStatus: s.status === "confirmed" ? "https://schema.org/EventScheduled" : "https://schema.org/EventPostponed",
-      ...(s.sourceURL ? { url: s.sourceURL, organizer: { "@type": "Organization", name: "SASSA" } } : {}),
+      location: {
+        "@type": "Place",
+        name: "SASSA / Postbank payment channel",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "ZA",
+        },
+      },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "ZAR",
+        availability: "https://schema.org/InStock",
+      },
+      performer: {
+        "@type": "Organization",
+        name: "SASSA",
+        url: "https://www.sassa.gov.za",
+      },
+      organizer: {
+        "@type": "Organization",
+        name: "SASSA",
+        url: "https://www.sassa.gov.za",
+      },
+      ...(s.pageURL ? { url: s.pageURL } : {}),
     }));
   return {
     "@context": "https://schema.org",

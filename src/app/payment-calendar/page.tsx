@@ -8,6 +8,7 @@ import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
 import { breadcrumbSchema, faqPageSchema, paymentScheduleSchema } from "../../lib/schema";
+import { SITE_CONFIG } from "../../lib/config";
 
 export const metadata: Metadata = buildMetadata({
   title: "SASSA Payment Calendar 2026 — All Grant Payment Dates",
@@ -63,6 +64,7 @@ export default function PaymentCalendarPage() {
               date: m[k]?.date || "TBC",
               status: m[k]?.status || "projected",
               sourceURL: m.governance?.sourceURL,
+              pageURL: `${SITE_CONFIG.url}/dates/${m.month_key}`,
             }))
           )
         )}

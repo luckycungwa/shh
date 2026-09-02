@@ -12,6 +12,7 @@ import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import NextStepCard from "../../../components/affiliate/NextStepCard";
 import EntityLinks from "../../../components/EntityLinks";
 import { articleSchema, breadcrumbSchema, faqPageSchema, paymentScheduleSchema } from "../../../lib/schema";
+import { SITE_CONFIG } from "../../../lib/config";
 
 interface MonthSchedule {
   month_key: string;
@@ -100,6 +101,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
               date: info.date,
               status: info.status,
               sourceURL: schedule.governance?.sourceURL,
+              pageURL: `${SITE_CONFIG.url}/dates/${schedule.month_key}`,
             };
           })
         )}
