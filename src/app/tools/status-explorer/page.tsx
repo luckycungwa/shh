@@ -17,7 +17,7 @@ const faqs = [
   { q: "What does 'Approved' mean for my SRD grant?", a: "Approved means you qualified for this month's payment. Check your Pay Day date — money is usually released in the last week of the month." },
   { q: "What does 'Pending' mean?", a: "Pending means SASSA is still verifying your details for the current month. No action needed unless it has been pending for more than 30 days." },
   { q: "What does 'Bank Details Pending' mean?", a: "SASSA cannot pay you because your banking details are unverified or rejected. Update them on srd.sassa.gov.za and wait for verification." },
-  { q: "What does 'Declined' mean?", a: "Your application did not pass the check for this month (often the income threshold). You can appeal within 30 days if you disagree." },
+  { q: "What does 'Declined' mean?", a: "Your application did not pass the check for this month (often the income threshold). You can appeal within 90 days on the official ITSAA appeals portal (srd-appeals.dsd.gov.za) if you disagree — act within the first 30 days if you can." },
 ];
 
 export default function StatusExplorerPage() {

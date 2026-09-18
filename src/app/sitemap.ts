@@ -147,10 +147,19 @@ export default async function sitemap() {
   const slugifyCity = (c: string) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   const citySlugStrip = (c: string) => c.replace(/\s*\(.*?\)\s*/g, " ").trim();
 
+  // Indexation rule (see src/lib/office-indexation.ts): the sitemap contains
+  // province hub pages plus ONLY curated city pages (officeCities.json
+  // records with unique descriptions/tips). Template-only province-derived
+  // city pages are noindexed at the route level and excluded here.
+  const curatedCityPaths = new Set<string>();
   const officePaths = new Set<string>();
   for (const c of officeCities) {
     const pSlug = provinceNameToSlug[c.province];
-    if (pSlug) officePaths.add(`/sassa-offices/${pSlug}/${slugifyCity(c.city)}`);
+    if (pSlug) {
+      const cityPath = `/sassa-offices/${pSlug}/${slugifyCity(c.city)}`;
+      curatedCityPaths.add(cityPath);
+      officePaths.add(cityPath);
+    }
   }
   for (const p of provinceSlugs) {
     try {
@@ -159,7 +168,8 @@ export default async function sitemap() {
       if (prov) {
         officePaths.add(`/sassa-offices/${p}`);
         [...(prov.main_offices || []), ...(prov.district_offices || [])].forEach((o: any) => {
-          officePaths.add(`/sassa-offices/${p}/${slugifyCity(citySlugStrip(o.town))}`);
+          const cityPath = `/sassa-offices/${p}/${slugifyCity(citySlugStrip(o.town))}`;
+          if (curatedCityPaths.has(cityPath)) officePaths.add(cityPath);
         });
       }
     } catch {}

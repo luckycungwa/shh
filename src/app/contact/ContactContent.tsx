@@ -24,19 +24,26 @@ export default function ContactContent() {
     { label: "Legal/Privacy", value: "legal" }
   ];
 
+  const SUPPORT_EMAIL = "support@sassahelphub.co.za";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Honeypot check — bots fill hidden fields
     if (honeypot) return;
     // Rate limit — less than 3 seconds is bot-like
     if (Date.now() - submittedAt < 3000) return;
+    // This site has no backend: compose a pre-addressed email in the
+    // visitor's own email app. Nothing is transmitted by this site itself,
+    // so we never claim a message was "received".
+    const subjectLabel = subjects.find((s) => s.value === formData.subject)?.label || "General Inquiry";
+    const subject = `[SHH Contact: ${subjectLabel}] ${formData.name}`.slice(0, 200);
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${subjectLabel}\n\n${formData.message}`;
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      onOpen();
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setHoneypot("");
-    }, 600);
+    window.location.href = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSending(false);
+    onOpen();
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    setHoneypot("");
   };
 
   return (
@@ -160,16 +167,20 @@ export default function ContactContent() {
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                    />
-                    <Button
-                       type="submit"
-                       color="primary"
-                       fullWidth
-                       isDisabled={sending}
-                       className="font-bold py-6 text-lg"
-                       endContent={sending ? undefined : <FaPaperPlane />}
-                    >
-                       {sending ? <Spinner size="sm" color="current" /> : "Send Message"}
-                    </Button>
+                     <Button
+                        type="submit"
+                        color="primary"
+                        fullWidth
+                        isDisabled={sending}
+                        className="font-bold py-6 text-lg"
+                        endContent={sending ? undefined : <FaPaperPlane />}
+                     >
+                        {sending ? <Spinner size="sm" color="current" /> : "Send via Email"}
+                     </Button>
+                     <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                       This opens your own email app with a message pre-addressed to {SUPPORT_EMAIL}.
+                       Nothing is sent automatically — your message only goes to us if you press Send in your email app.
+                     </p>
                 </form>
              </CardBody>
           </Card>
@@ -180,10 +191,10 @@ export default function ContactContent() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 text-2xl font-bold">Success!</ModalHeader>
-              <ModalBody>
-                <p className="text-lg">Thank you for reaching out to SASSA Help Hub. We have received your message and will reply within 2 business days.</p>
-              </ModalBody>
+               <ModalHeader className="flex flex-col gap-1 text-2xl font-bold">Check your email app</ModalHeader>
+               <ModalBody>
+                 <p className="text-lg">We have opened a pre-addressed email to {SUPPORT_EMAIL} in your email app with your message included. Nothing has been sent yet — press Send there to reach us, and we will reply within 2 business days. If no email app opened, email us directly at {SUPPORT_EMAIL}.</p>
+               </ModalBody>
               <ModalFooter>
                 <Button color="primary" onPress={onClose} className="font-bold">
                   Close

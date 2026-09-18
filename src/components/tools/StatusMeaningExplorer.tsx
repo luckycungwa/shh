@@ -28,7 +28,7 @@ const STATUSES: StatusInfo[] = [
     slug: "declined",
     label: "Declined",
     meaning: "Your application did not pass the check for this month (often the income threshold).",
-    action: "You can appeal within 30 days of the decline on the official SRD appeals portal if you disagree.",
+    action: "You can appeal within 90 days of the decline on the official ITSAA appeals portal (srd-appeals.dsd.gov.za) if you disagree — act within the first 30 days if you can.",
   },
   {
     slug: "bank-details-pending",
@@ -58,7 +58,7 @@ const STATUSES: StatusInfo[] = [
     slug: "paid",
     label: "Paid",
     meaning: "SASSA has released your payment.",
-    action: "Allow 2–5 business days for your bank or Postbank to reflect the money.",
+    action: "Allow 1 to 3 business days for your bank or Postbank to reflect the money.",
   },
   {
     slug: "means-test-failed",

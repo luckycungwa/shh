@@ -67,7 +67,7 @@ export default function FAQPage() {
 
       <div className="space-y-16">
         {Object.entries(grouped).map(([category, items]) => (
-          <section key={category}>
+          <section key={category} id={category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")} className="scroll-mt-24">
             <div className="flex items-center justify-between mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">
               <h2 className="text-3xl font-bold">{category}</h2>
               <Chip size="sm" variant="flat" color="primary">{items.length} questions</Chip>

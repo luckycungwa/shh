@@ -7,6 +7,7 @@ import NextLink from "next/link";
 import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
 import { buildMetadata } from "../lib/seo";
 import { getFact } from "../lib/canonical-facts";
+import HeroCarousel from "../components/HeroCarousel";
 
 export const metadata = buildMetadata({
   title: "SASSA Help Hub — 2026 Payment Dates, SRD R370 Status Check & Grant Guides",
@@ -82,6 +83,7 @@ export default function HomePage() {
 
       {/* ── Hero ── */}
       <section className="relative bg-primary-black min-h-[85vh] flex items-center overflow-hidden">
+        <HeroCarousel />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-gold/10 via-transparent to-primary-dark"></div>
         <div className="absolute inset-0 bg-grid opacity-20"></div>
         <div className="absolute inset-0 bg-shimmer"></div>

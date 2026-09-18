@@ -8,7 +8,7 @@ type HasPayDay = "" | "yes" | "no";
 type Passed = "" | "yes" | "no";
 
 // Guided, honest diagnostic for a missing SRD payment. Recommends real actions
-// (wait 2-5 business days, check portal, contact SASSA, appeal) without any
+// (wait 1-3 business days, check portal, contact SASSA, appeal) without any
 // financial or affiliate advice.
 export default function PaymentTroubleshooter() {
   const [status, setStatus] = useState<Status>("");
@@ -29,7 +29,7 @@ export default function PaymentTroubleshooter() {
     advice = {
       tone: "warn",
       title: "Your application was declined",
-      body: "You can appeal within 30 days of the decline on the official SRD appeals portal (srd.sassa.gov.za/appeals). Check our appeal guide for step-by-step help.",
+      body: "You can appeal within 90 days of the decline on the official ITSAA appeals portal (srd-appeals.dsd.gov.za) — act within the first 30 days if you can. Check our appeal guide for step-by-step help.",
     };
   } else if (status === "pending") {
     advice = {
@@ -53,17 +53,17 @@ export default function PaymentTroubleshooter() {
         };
       } else if (passed === "yes") {
         const d = parseInt(days, 10);
-        if (!isNaN(d) && d < 5) {
+        if (!isNaN(d) && d < 3) {
           advice = {
             tone: "ok",
             title: "Give it a few business days",
-            body: "Banks and Postbank can take 2–5 business days to reflect a payment after the Pay Day. Check again in a day or two before contacting anyone.",
+            body: "Banks and Postbank can take 1 to 3 business days to reflect a payment after the Pay Day. Check again in a day or two before contacting anyone.",
           };
         } else {
           advice = {
             tone: "warn",
-            title: "It has been 5+ days — time to act",
-            body: "If your status says Paid but the money has not arrived after 5 business days, confirm the bank details on your application, then contact SASSA on 0800 60 10 11 with your ID number ready.",
+            title: "It has been 3+ business days — time to act",
+            body: "If your status says Paid but the money has not arrived after 3 business days, confirm the bank details on your application, then contact SASSA on 0800 60 10 11 with your ID number ready.",
           };
         }
       }

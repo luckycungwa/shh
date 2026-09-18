@@ -9,6 +9,7 @@ import NextLink from "next/link";
 import JsonLd from "../../../../components/JsonLd";
 import EditorialFooter from "../../../../components/EditorialFooter";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../../lib/schema";
+import { isCuratedOfficeCity } from "../../../../lib/office-indexation";
 
 interface OfficeCity {
   id: string;
@@ -95,11 +96,15 @@ export function generateMetadata({ params }: { params: { province: string; city:
   const title = `SASSA Office in ${display}, ${provinceName} — Address & Contact`;
   const description = `Find the SASSA office in ${display}, ${provinceName}. Get the address, phone number, services offered and tips for visiting. Check your grant status online instead where possible.`;
   const url = `https://www.sassahelphub.co.za/sassa-offices/${params.province}/${params.city}`;
+  // Indexation rule (see src/lib/office-indexation.ts): only curated city
+  // pages are indexable; template-only province-derived pages are noindexed
+  // (but still followable for hub navigation).
+  const indexable = isCuratedOfficeCity(params.province, params.city);
   return {
     title,
     description,
     alternates: { canonical: url },
-    robots: { index: true, follow: true },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: { title, description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
     twitter: { card: "summary_large_image", title, description, images: ["https://www.sassahelphub.co.za/logo.png"] },
   };

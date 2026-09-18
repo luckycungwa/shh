@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   { q: "My SRD status says Approved but I haven't been paid — why?", a: "An Approved status means you qualified, but the Pay Day date may not be assigned yet. Payments are released in batches during the last week of the month." },
-  { q: "How long does it take for the money to reflect after Pay Day?", a: "Banks and Postbank typically take 2–5 business days to reflect the payment. Wait at least 5 business days before contacting SASSA." },
+  { q: "How long does it take for the money to reflect after Pay Day?", a: "Banks and Postbank typically take 1 to 3 business days to reflect the payment. If the money has not arrived after 3 business days, confirm your banking details and contact SASSA." },
   { q: "What if my banking details are wrong?", a: "Update your banking details on srd.sassa.gov.za. SASSA will verify them before the next payment run." },
 ];
 
@@ -44,8 +44,8 @@ export default function PaymentTroubleshooterPage() {
       <PaymentTroubleshooter />
 
       <p className="text-sm text-gray-400">
-        Payments can take 2–5 business days to reflect after your Pay Day. If you are still missing money after
-        that, confirm your banking details on the SRD portal and contact SASSA on 0800 60 10 11.
+        Payments can take 1 to 3 business days to reflect after your Pay Day. If you are still missing money after
+        3 business days, confirm your banking details on the SRD portal and contact SASSA on 0800 60 10 11.
       </p>
     </div>
   );

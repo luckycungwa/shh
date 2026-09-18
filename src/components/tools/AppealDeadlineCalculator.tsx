@@ -3,18 +3,21 @@
 import React, { useState } from "react";
 import { FaCalculator, FaExclamationCircle, FaCheckCircle, FaInfoCircle } from "react-icons/fa";
 
-// Honest appeal-deadline estimator. SRD appeals must generally be submitted
-// within 30 days of the decline decision. No data leaves the browser.
+// Honest appeal-deadline estimator. SRD appeals may be submitted up to
+// 90 days after the decline decision; acting within the first 30 days is
+// recommended. No data leaves the browser.
 export default function AppealDeadlineCalculator() {
   const [dateStr, setDateStr] = useState("");
-  const [result, setResult] = useState<{ deadline: string; daysLeft: number; passed: boolean } | null>(null);
+  const [result, setResult] = useState<{ deadline: string; daysLeft: number; passed: boolean; recommended: string } | null>(null);
 
   const compute = () => {
     if (!dateStr) return;
     const decline = new Date(dateStr + "T00:00:00");
     if (isNaN(decline.getTime())) return;
     const deadline = new Date(decline);
-    deadline.setDate(decline.getDate() + 30);
+    deadline.setDate(decline.getDate() + 90);
+    const recommended = new Date(decline);
+    recommended.setDate(decline.getDate() + 30);
     const now = new Date();
     const msPerDay = 86_400_000;
     const daysLeft = Math.ceil((deadline.getTime() - now.getTime()) / msPerDay);
@@ -22,6 +25,7 @@ export default function AppealDeadlineCalculator() {
       deadline: deadline.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }),
       daysLeft,
       passed: daysLeft < 0,
+      recommended: recommended.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }),
     });
   };
 
@@ -35,9 +39,9 @@ export default function AppealDeadlineCalculator() {
       </div>
 
       <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-        SRD appeals must generally be submitted within 30 days of the decline decision. Enter the date your
-        application was declined to see your estimated last day to appeal. This is a guide only — always confirm
-        on the official SRD appeals portal.
+        SRD appeals may be submitted up to 90 days after the decline decision, but acting within the first
+        30 days is recommended. Enter the date your application was declined to see your estimated last day
+        to appeal. This is a guide only — always confirm on the official ITSAA appeals portal.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-3">
@@ -71,12 +75,17 @@ export default function AppealDeadlineCalculator() {
           <div>
             <p className="font-bold text-gray-900 dark:text-white">
               {result.passed
-                ? "Your 30-day appeal window has likely closed"
+                ? "Your 90-day appeal window has likely closed"
                 : `You have about ${result.daysLeft} day${result.daysLeft === 1 ? "" : "s"} left to appeal`}
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               Estimated last day to appeal: <strong>{result.deadline}</strong>
             </p>
+            {!result.passed && (
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                Recommended: submit by <strong>{result.recommended}</strong> (within 30 days of the decline).
+              </p>
+            )}
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 flex items-center gap-1">
               <FaInfoCircle /> If the window has closed, contact SASSA on 0800 60 10 11 — in limited cases late
               appeals may still be considered.

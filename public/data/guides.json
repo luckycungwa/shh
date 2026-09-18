@@ -2778,6 +2778,10 @@
       {
         "q": "Are there truly free bank accounts in South Africa?",
         "a": "Postbank Black Card is the only fully free account. TymeBank and Capitec have no monthly fees but charge per ATM withdrawal."
+      },
+      {
+        "q": "Does SASSA force me to use a specific bank?",
+        "a": "No. SASSA does not require you to use any particular commercial bank. You can choose your own bank, use Postbank, or collect cash at a participating retailer."
       }
     ],
     "tags": [
@@ -2816,6 +2820,50 @@
         "title": "TymeBank",
         "url": "https://www.tymebank.co.za",
         "isExternal": true
+      },
+      {
+        "title": "How to Open a Bank Account for SASSA Payments",
+        "url": "/guides/how-to-open-bank-account-sassa-payments",
+        "isExternal": false
+      },
+      {
+        "title": "SRD R370 Grant Guide",
+        "url": "/grants/srd-r370-grant",
+        "isExternal": false
+      }
+    ],
+    "sources": [
+      {
+        "title": "South African Social Security Agency (SASSA)",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "Department of Social Development",
+        "url": "https://www.dsd.gov.za"
+      }
+    ],
+    "monetization": {
+      "vertical": "banking"
+    },
+    "nextSteps": [
+      {
+        "title": "How to open a bank account for SASSA payments",
+        "url": "/guides/how-to-open-bank-account-sassa-payments",
+        "description": "Documents and steps to open an account"
+      },
+      {
+        "title": "Fix 'Bank Details Pending'",
+        "url": "/guides/bank-details-pending-fix",
+        "description": "Unblock a delayed payment"
+      },
+      {
+        "title": "SRD R370 grant guide",
+        "url": "/grants/srd-r370-grant",
+        "description": "Eligibility, payment dates and how to apply"
       }
     ]
   },
@@ -3509,116 +3557,6 @@
     "imageAlt": "Calculator and bank statements with highlighted deduction amounts"
   },
   {
-    "id": "best-bank-accounts-sassa-beneficiaries",
-    "title": "Best Bank Accounts for SASSA Beneficiaries in 2026 (Low-Fee Options Compared)",
-    "description": "SASSA does not require you to use a specific bank. Compare low-fee accounts from Capitec, TymeBank, FNB, Nedbank and Postbank for receiving your grant — fees, ATM access, retail collection and digital banking.",
-    "category": "Banking & Payments",
-    "difficulty": "Easy",
-    "estimatedTime": "8 min read",
-    "tags": [
-      "sassa bank account",
-      "sassa payment methods",
-      "low fee bank account south africa",
-      "sassa grant payment",
-      "where to receive sassa grant"
-    ],
-    "lastUpdated": "2026-08-20",
-    "author": "SASSA Help Hub Editorial Team",
-    "steps": [
-      {
-        "title": "Understand that SASSA does not mandate a bank",
-        "content": "SASSA lets you receive your grant through a bank account of your choice, through Postbank, or by collecting cash at a retail point (Pick n Pay, Boxer, Shoprite, Checkers, USave, or Spar). You are free to compare banks and choose the one that suits you. No commercial bank is 'required' by SASSA."
-      },
-      {
-        "title": "Compare the real costs that matter to grant recipients",
-        "content": "When your income is a fixed monthly grant, account fees matter. Look at: the monthly account fee, ATM withdrawal fees (especially at your own bank vs other ATMs), the cost of sending and receiving money, minimum balance rules, and whether the account is truly zero-rated for social grant recipients. Banks change their fee schedules every year, so confirm the current figures on the bank's own website or by asking in branch before opening."
-      },
-      {
-        "title": "Check how you will actually access your money",
-        "content": "Consider ATM availability near you, whether the bank has a strong mobile app for balance checks and airtime/data purchases, and whether retail collection is supported. Many beneficiaries prefer an account that lets them withdraw at a supermarket till or a nearby ATM without large fees."
-      },
-      {
-        "title": "Look at digital and low-cost banks",
-        "content": "Some South African banks and mobile-banking platforms offer low or no monthly fees and fully digital onboarding. These can be a good fit if you mainly need to receive a grant, check your balance, and buy airtime or data. Traditional banks may offer more branches but higher fees — weigh convenience against cost."
-      },
-      {
-        "title": "Match the account to how you receive payments",
-        "content": "If you collect cash, retail collection may remove the need for a bank account entirely. If you want the money paid into an account, choose one where your grant arrives reliably and where you can withdraw or spend it cheaply. Your banking details must match your ID exactly, or SASSA cannot pay you."
-      },
-      {
-        "title": "Open, then update your SASSA banking details",
-        "content": "After you open an account, update your details on the SRD portal (srd.sassa.gov.za) or the relevant SASSA channel so your payment goes to the correct account. Wrong or mismatched details are the most common cause of delayed payments."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Does SASSA force me to use a specific bank?",
-        "a": "No. SASSA does not require you to use any particular commercial bank. You can choose your own bank, use Postbank, or collect cash at a participating retailer."
-      },
-      {
-        "q": "Which bank is cheapest for a SASSA grant?",
-        "a": "It depends on your usage. Compare the monthly fee, ATM withdrawal fees, and whether the account is zero-rated for grant recipients. Check each bank's current published fee schedule, because fees change annually."
-      },
-      {
-        "q": "Can I receive my SRD R370 into any bank account?",
-        "a": "Yes, as long as the account is in your name and the details you enter on the SRD portal match your ID document exactly. Mismatched names are a common reason payments fail."
-      }
-    ],
-    "sources": [
-      {
-        "title": "South African Social Security Agency (SASSA)",
-        "url": "https://www.sassa.gov.za"
-      },
-      {
-        "title": "SRD Grant Official Portal",
-        "url": "https://srd.sassa.gov.za"
-      },
-      {
-        "title": "Department of Social Development",
-        "url": "https://www.dsd.gov.za"
-      }
-    ],
-    "relatedLinks": [
-      {
-        "title": "How to Open a Bank Account for SASSA Payments",
-        "url": "/guides/how-to-open-bank-account-sassa-payments",
-        "isExternal": false
-      },
-      {
-        "title": "Fix 'Bank Details Pending'",
-        "url": "/guides/bank-details-pending-fix",
-        "isExternal": false
-      },
-      {
-        "title": "SRD R370 Grant Guide",
-        "url": "/grants/srd-r370-grant",
-        "isExternal": false
-      }
-    ],
-    "monetization": {
-      "vertical": "banking"
-    },
-    "nextSteps": [
-      {
-        "title": "How to open a bank account for SASSA payments",
-        "url": "/guides/how-to-open-bank-account-sassa-payments",
-        "description": "Documents and steps to open an account"
-      },
-      {
-        "title": "Fix 'Bank Details Pending'",
-        "url": "/guides/bank-details-pending-fix",
-        "description": "Unblock a delayed payment"
-      },
-      {
-        "title": "SRD R370 grant guide",
-        "url": "/grants/srd-r370-grant",
-        "description": "Eligibility, payment dates and how to apply"
-      }
-    ],
-    "image": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&h=400&fit=crop&auto=format",
-    "imageAlt": "Person checking a banking app on a smartphone"
-  },
-  {
     "id": "how-to-open-bank-account-sassa-payments",
     "title": "How to Open a Bank Account for SASSA Payments in 2026",
     "description": "Step-by-step: documents, where to apply, and how to link your new account so your SASSA grant or SRD R370 is paid correctly. Independent guide, no specific bank required.",
@@ -3685,8 +3623,8 @@
     ],
     "relatedLinks": [
       {
-        "title": "Best Bank Accounts for SASSA Beneficiaries",
-        "url": "/guides/best-bank-accounts-sassa-beneficiaries",
+        "title": "Best Bank Accounts for SASSA Beneficiaries Compared",
+        "url": "/guides/best-bank-accounts-sassa-2026",
         "isExternal": false
       },
       {
@@ -3706,7 +3644,7 @@
     "nextSteps": [
       {
         "title": "Best bank accounts compared",
-        "url": "/guides/best-bank-accounts-sassa-beneficiaries",
+        "url": "/guides/best-bank-accounts-sassa-2026",
         "description": "Compare low-fee options"
       },
       {

@@ -276,7 +276,7 @@ export function guideNextSteps(guide: {
   if (id === "sassa-online-security") {
     return [
       { title: "How to spot SASSA scams", url: "/guides/sassa-online-security" },
-      { title: "SASSA scams & fraud protection", url: "/scams" },
+      { title: "SASSA scams & fraud protection", url: "/scam-alert" },
       { title: "How to check your SRD status safely", url: "/status-check" },
     ];
   }
@@ -357,7 +357,7 @@ export function guideNextSteps(guide: {
       { title: "Lost or changed your SASSA phone number", url: "/guides/lost-phone-number" },
     ];
   }
-  if (id === "best-bank-accounts-sassa-2026" || id === "best-bank-accounts-sassa-beneficiaries") {
+  if (id === "best-bank-accounts-sassa-2026") {
     return [
       { title: "Compare low-fee bank accounts", url: "/guides/best-bank-accounts-sassa-2026" },
       { title: "Banking payment methods", url: "/banking" },
@@ -487,7 +487,7 @@ export function guideNextSteps(guide: {
       break;
     case "Scam Alert":
       b.add("How to spot SASSA scams", full("/guides/sassa-online-security"));
-      b.add("SASSA scams & fraud protection", full("/scams"));
+      b.add("SASSA scams & fraud protection", full("/scam-alert"));
       break;
     case "Eligibility":
       b.add("All SASSA grants at a glance", full("/grants"));

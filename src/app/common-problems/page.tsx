@@ -33,7 +33,7 @@ const categories = [
       { href: "/guides/missing-grant-payment-guide", label: "Pay Day Today but No Money", desc: "What to check step by step before contacting SASSA" },
       { href: "/payment-calendar", label: "Payment Dates & Changing Pay Days", desc: "How SRD batch windows work and why dates can shift" },
       { href: "/guides/bank-details-pending-fix", label: "Bank Details Pending — Payment Blocked", desc: "Approved but unpaid because SASSA cannot pay your account" },
-      { href: "/status/paid", label: "Status Says Paid, Money Not Received", desc: "Bank reflection times and what to do after 5 days" },
+      { href: "/status/paid", label: "Status Says Paid, Money Not Received", desc: "Bank reflection times and what to do after 3 business days" },
     ],
   },
   {
@@ -42,7 +42,7 @@ const categories = [
     title: "Application Problems",
     description: "Status checks, eligibility, documents, and what each status means.",
     links: [
-      { href: "/status", label: "All 10 Grant Status Meanings Explained", desc: "What each status means and what to do next" },
+      { href: "/status", label: "Grant Status Meanings Explained", desc: "What each status means and what to do next" },
       { href: "/status/pending", label: "Stuck on Pending for Weeks", desc: "Why it happens and when to take action" },
       { href: "/status/bank-details-pending", label: "Bank Details Pending — Payment Blocked", desc: "How to fix this status and get paid" },
       { href: "/status/identity-verification", label: "Identity Verification Required", desc: "Why SASSA needs to verify you and how to do it" },
@@ -168,7 +168,7 @@ const categories = [
       { href: "/faq#payments", label: "Payment Questions", desc: "When grants are paid, delays, and methods" },
       { href: "/faq#applications", label: "Application Questions", desc: "How to apply, who qualifies, and documents needed" },
       { href: "/faq#biometrics", label: "Biometric Questions", desc: "Facial recognition and identity verification" },
-      { href: "/faq#scams", label: "Fraud & Scam Questions", desc: "How to spot and report scams" },
+      { href: "/faq#fraud-scams", label: "Fraud & Scam Questions", desc: "How to spot and report scams" },
     ],
   },
 ];
@@ -185,7 +185,7 @@ export default function CommonProblemsPage() {
     <div className="max-w-6xl mx-auto px-6 py-16">
       <JsonLd data={faqPageSchema([
         { q: "My SASSA SRD status is stuck on Pending — what do I do?", a: "Pending means SASSA is still verifying your information. No action is needed unless it has been pending for more than 30 days — then contact SASSA on 0800 60 10 11." },
-        { q: "My application was declined — how do I appeal?", a: "Visit the official SRD appeals portal at srd.sassa.gov.za/appeals/appeal, enter your ID and phone number, select the declined month, and submit your explanation within 30 days." },
+        { q: "My application was declined — how do I appeal?", a: "Submit your appeal on the official ITSAA appeals portal at srd-appeals.dsd.gov.za using your ID number and the phone number on your application. You have up to 90 days from the decline — act within the first 30 days if you can." },
         { q: "My status says Approved but I have not been paid — why?", a: "An approved status means you qualified, but the payment date may not be assigned yet. Check back after the 20th of the month. If no payment date appears after 3 weeks, contact SASSA." },
         { q: "How do I change my banking details for SRD?", a: "Log into the SRD portal at srd.sassa.gov.za, go to 'Change Banking Details', enter your new account info, and wait for verification." },
         { q: "My SASSA Gold Card has stopped working — what should I do?", a: "SASSA Gold Cards stop working after 31 August 2026. Get your free Postbank Black Card at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. Your money remains safe in your Postbank account — you will access it with your Black Card once you have migrated." },

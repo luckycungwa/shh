@@ -38,7 +38,7 @@ export default function SassaContactPage() {
     },
     {
       q: "How do I report a SASSA scam or fraud?",
-      a: "Report SASSA-related fraud to the SASSA Fraud Hotline on 0800 701 701. If you suspect an online phishing scam asking for your OTP, banking PIN, or ID documents, stop communicating and report it — see our scam alert page for what to do.",
+      a: "Report SASSA-related fraud to SASSA on 0800 60 10 11. If you suspect an online phishing scam asking for your OTP, banking PIN, or ID documents, stop communicating and report it — see our scam alert page for what to do.",
     },
   ];
 
@@ -125,7 +125,7 @@ export default function SassaContactPage() {
             <CardBody className="space-y-3">
               <h3 className="text-xl font-bold text-red-800 dark:text-red-400 flex items-center gap-2"><FaExclamationTriangle /> Beware of SASSA Scams</h3>
               <p className="text-sm text-red-700 dark:text-red-300 leading-relaxed">
-                SASSA will <strong>never</strong> ask for your OTP, banking PIN, or security code over the phone, WhatsApp or SMS. If someone claiming to be SASSA asks for these, it is a scam. Hang up, stop messaging, and report it to the SASSA Fraud Hotline on <strong>0800 701 701</strong>.
+                SASSA will <strong>never</strong> ask for your OTP, banking PIN, or security code over the phone, WhatsApp or SMS. If someone claiming to be SASSA asks for these, it is a scam. Hang up, stop messaging, and report it to SASSA on <strong>0800 60 10 11</strong>.
               </p>
               <Button as={NextLink} href="/scam-alert" variant="flat" color="danger" size="sm" className="font-bold">Read the Scam Alert</Button>
             </CardBody>
