@@ -31,10 +31,10 @@ function readAll(): AppealPage[] {
 }
 
 const faqs = [
-  { q: "Where do I appeal a SASSA SRD rejection?", a: "You appeal on the official ITSAA appeal portal at srd-appeals.dsd.gov.za using your ID number and the phone number linked to your application." },
-  { q: "How long do I have to appeal?", a: "You have 90 days from the date your SRD grant was declined to submit your appeal." },
-  { q: "How long does an appeal take?", a: "Appeals usually take 60 to 90 days to be processed. Some complex appeals may take longer." },
-  { q: "Can I appeal more than once?", a: "No. You can only appeal once per rejection. A declined appeal is final — you can reapply instead." },
+  { q: "Where do I appeal a SASSA SRD rejection?", a: "Start by asking SASSA to reconsider the decision on the official SRD portal at srd.sassa.gov.za. If the reconsideration is refused, appeal to the Independent Tribunal (ITSAA) on the official appeals portal at srd-appeals.dsd.gov.za using your ID number and the phone number linked to your application. For the full step-by-step process, see our in-depth appeal guide at /guides/appeal-guide." },
+  { q: "How long do I have to appeal?", a: "For a reconsideration, act within the window shown on the SRD portal after your decline (SASSA asks you to request it quickly). If that is refused, you have 90 days from the date of the reconsideration outcome to appeal to the Tribunal (ITSAA). See the appeal deadline calculator at /tools/appeal-deadline." },
+  { q: "How long does an appeal take?", a: "Reconsideration outcomes are usually sent within about 30 days. Tribunal (ITSAA) appeals usually take 60 to 90 days to be processed, and some complex appeals take longer. Track progress on srd-appeals.dsd.gov.za." },
+  { q: "Can I appeal more than once?", a: "You get one reconsideration and one tribunal appeal per rejection. Do not reapply for the same decline - a decline is reassessed each month anyway, and re-submitting can reset your cycle. If your status specifically asks for a reapplication (such as 'Reapplication Pending'), see /guides/srd-reapplication." },
 ];
 
 export default function AppealsHubPage() {
@@ -90,6 +90,13 @@ export default function AppealsHubPage() {
         ))}
       </div>
 
+      <div className="rounded-2xl bg-primary-gold/5 border border-primary-gold/20 p-6 mb-12">
+        <p className="font-bold text-lg mb-1">Need the full walkthrough?</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          Our step-by-step guide covers finding your exact decline reason, gathering evidence, submitting the reconsideration, and appealing to ITSAA. See the <NextLink href="/guides/appeal-guide" className="underline font-bold text-primary-gold">official SRD appeal guide</NextLink>.
+        </p>
+      </div>
+
       <Divider className="my-16" />
 
       <section className="max-w-4xl mx-auto space-y-8">
@@ -110,8 +117,11 @@ export default function AppealsHubPage() {
         <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Ready to Appeal?</h2>
-            <p className="text-secondary-gray max-w-xl mx-auto">Head to the official ITSAA portal to submit your appeal. Use your ID number and the phone number on your application.</p>
-            <Button as="a" href="https://srd-appeals.dsd.gov.za" target="_blank" rel="noopener noreferrer" color="primary" className="font-bold px-10 py-7 text-lg">Go to ITSAA Appeal Portal</Button>
+            <p className="text-secondary-gray max-w-xl mx-auto">First ask SASSA for a reconsideration on the official SRD portal. If that is refused, submit your tribunal appeal on the ITSAA portal with your ID number and the phone number on your application.</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button as="a" href="https://srd-appeals.dsd.gov.za" target="_blank" rel="noopener noreferrer" color="primary" className="font-bold px-8 py-6 text-lg">Go to ITSAA Appeal Portal</Button>
+              <Button as="a" href="https://srd.sassa.gov.za" target="_blank" rel="noopener noreferrer" variant="bordered" className="font-bold px-8 py-6 text-lg text-white border-white/40">Request Reconsideration</Button>
+            </div>
           </CardBody>
         </Card>
       </section>

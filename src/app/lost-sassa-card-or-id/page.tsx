@@ -11,7 +11,7 @@ import { getFact } from "../../lib/canonical-facts";
 import NextStepCard from "../../components/affiliate/NextStepCard";
 
 const currentYear = getCurrentYearString();
-const lastUpdated = "2026-08-31";
+const lastUpdated = "2026-09-18";
 const goldCardFact = getFact("sassa_gold_card");
 const blackCardFact = getFact("postbank_black_card");
 const replacementCost = getFact("card_replacement_cost");
@@ -38,7 +38,7 @@ export default function LostSassaCardOrIdPage() {
     },
     {
       q: "What is the Postbank Black Card and do I need one?",
-      a: `${blackCardFact} The SASSA Gold Card is being phased out and will stop working after 31 August 2026, so all beneficiaries must migrate to the Postbank Black Card before the deadline to keep accessing their funds.`,
+      a: `${blackCardFact} The SASSA Gold Card stopped working after 31 August 2026, so every beneficiary must use a Postbank Black Card to access their funds. The replacement is still free at Postbank service points, well after the deadline.`,
     },
     {
       q: "What if my ID is stolen, not just my card?",
@@ -91,11 +91,11 @@ export default function LostSassaCardOrIdPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         <div className="p-8 rounded-3xl bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-200 dark:border-yellow-800">
-          <h3 className="text-xl font-bold text-yellow-800 dark:text-yellow-400 mb-3 flex items-center gap-2"><FaRegBell /> Card Migration Coming</h3>
+          <h3 className="text-xl font-bold text-yellow-800 dark:text-yellow-400 mb-3 flex items-center gap-2"><FaRegBell /> Card Migration: What It Means Now</h3>
           <p className="text-yellow-800 dark:text-yellow-300 leading-relaxed mb-3">{goldCardFact}</p>
           <p className="text-yellow-800 dark:text-yellow-300 leading-relaxed">{blackCardFact}</p>
           <p className="text-sm text-yellow-700 mt-3">
-            If you need to replace your card anyway, ask about migrating straight to the Postbank Black Card so you don&rsquo;t have to do it twice.
+            If you replace a lost card today, you get the Postbank Black Card directly &mdash; no need to migrate a second time.
           </p>
         </div>
         <div className="p-8 rounded-3xl bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800">

@@ -1176,5 +1176,178 @@
     ],
     "last_updated": "2026-08-31",
     "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "self-exclusion",
+    "status_label": "Self-Exclusion Response Found",
+    "title": "SASSA Status: 'Self-Exclusion Response Found' — What It Means & How to Fix It",
+    "description": "'Self-Exclusion Response Found' is a generic SRD decline message. The system found a disqualifying factor but does not say which one. Learn the likely causes and how to pin down and fix yours.",
+    "what_it_means": "'Self-Exclusion Response Found' comes from SASSA's automated means test. Each month the system cross-checks your ID against databases - UIF, NSFAS, SARS, the government payroll (PERSAL), the CIPC company register, your bank accounts - and when one of those checks finds something, it can report a generic 'self-exclusion response' instead of naming the exact source. Despite the name, it usually does not mean you excluded yourself. It means the system found a reason it believes you do not qualify, but it has not shown you which one. Your job is to identify the underlying check that failed.",
+    "why_it_happens": [
+      "The UIF database shows your ID as employed or receiving UIF benefits - often a stale registration a previous employer never closed",
+      "NSFAS lists you as an active funded student",
+      "Your ID appears on the government payroll (PERSAL), even for a contract that ended",
+      "You are registered at CIPC as a company director",
+      "Bank deposits in the assessed month totalled more than {{srd_income_limit}} - including money relatives sent you",
+      "You already receive another SASSA grant, which makes you ineligible for SRD"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Ask SASSA Which Check Failed",
+        "content": "Call 0800 60 10 11 and ask them to look up your application and name the specific reason behind the self-exclusion response. Agents can often see more detail than the portal shows."
+      },
+      {
+        "title": "Check the Databases Yourself",
+        "content": "Confirm your UIF status with the Department of Employment and Labour, check NSFAS for active funding, ask a former employer about a PERSAL record, and search the CIPC register for your name as a director."
+      },
+      {
+        "title": "Fix the Root Cause First",
+        "content": "Get a stale UIF registration deregistered (a UI-19 form from your previous employer), request an NSFAS clearance letter if funding ended, or have a PERSAL record closed. Correct the source data before you appeal."
+      },
+      {
+        "title": "Appeal Within 90 Days With Evidence",
+        "content": "Lodge an appeal at srd-appeals.dsd.gov.za with the letters and records that prove the flag was wrong. Successful appeals are paid back pay for the declined month."
+      },
+      {
+        "title": "Let the Monthly Cycle Work",
+        "content": "Even without an appeal, the grant reassesses monthly. Once the underlying database is corrected, a later month can be approved automatically."
+      }
+    ],
+    "what_not_to_do": [
+      "Do not reapply just because you see this message - the cause is usually a database flag, and a fresh application will hit the same flag.",
+      "Do not appeal without first identifying and fixing the underlying cause; a general appeal without evidence rarely wins.",
+      "Do not allow other people to deposit into your SRD account or use it for their transactions."
+    ],
+    "how_long": "Fixing the underlying record (UIF, NSFAS, PERSAL) depends on the source, but appeals run on the standard 60 to 90 days. Once the root cause is cleared, approval can return in a later monthly assessment.",
+    "check_methods": [
+      {
+        "label": "Online (SRD Portal)",
+        "value": "srd.sassa.gov.za - log in with your ID number and registered phone number"
+      },
+      {
+        "label": "USSD (Zero Data)",
+        "value": "Dial *120*69277# from any cellphone - free, no data needed"
+      },
+      {
+        "label": "WhatsApp",
+        "value": "Chat with SASSA on 082 601 0111 to check your status"
+      },
+      {
+        "label": "Helpline",
+        "value": "Call 0800 60 10 11 and ask which database check failed"
+      }
+    ],
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "DSD Appeals Portal",
+        "value": "srd-appeals.dsd.gov.za"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://srd-appeals.dsd.gov.za",
+      "https://www.labour.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/status/declined",
+      "/status/means-test-failed",
+      "/decline-reason/income-source-detected",
+      "/decline-reason/uif-registered",
+      "/decline-reason/nsfas-registered",
+      "/guides/appeal-guide"
+    ],
+    "last_updated": "2026-09-18",
+    "author": "Lucky Cungwa"
+  },
+  {
+    "slug": "application-not-found",
+    "status_label": "Application Not Found",
+    "title": "SASSA Status: 'Application Not Found' — What It Means & What to Do",
+    "description": "A 'Not Found' or 'No Record Found' result usually means the ID and phone number you checked with do not match your application, or no active application exists for you. Here is how to tell the difference and fix it.",
+    "what_it_means": "'Application Not Found' (also shown as 'No Record Found') means the SRD system has no active application for the ID number and cellphone number you entered. The most common cause is a phone number mismatch - your whole SRD file is tied to the cellphone number you applied with, so checking with a new or different number returns 'not found' even when your application is intact. It can also mean the application was never submitted successfully, was cancelled, or was deleted in a system reset. It is not the same as 'Declined', which means SASSA assessed you and said no.",
+    "why_it_happens": [
+      "You changed or lost your SIM and checked with a different cellphone number than the one on your application",
+      "You entered your ID number incorrectly, or the ID and phone combination does not match any record",
+      "The application was never completed or submitted successfully",
+      "Your application was cancelled or removed in an administrative reset",
+      "You are checking an older month or a different grant system than the one you applied on"
+    ],
+    "how_to_fix": [
+      {
+        "title": "Check With the Number You Applied With",
+        "content": "Re-enter your 13-digit ID and use the exact cellphone number from your application. If a new SIM is behind this, update your registered number on the SRD portal first, then check again."
+      },
+      {
+        "title": "Double-Check Your ID Number",
+        "content": "One wrong digit returns 'not found' every time. Compare the ID you enter on the portal with the number on your green ID book or smart card."
+      },
+      {
+        "title": "If It Still Says Not Found, Reapply",
+        "content": "If no active record exists and you qualify, submit a fresh application at srd.sassa.gov.za - it takes about ten minutes. There is nothing to lose: a new application is assessed on the normal monthly cycle."
+      },
+      {
+        "title": "Manage the SIM-Swap Case in Person",
+        "content": "If you lost your SIM and cannot receive the OTP to update your number, visit a SASSA office with your original ID to sort out the number on your file."
+      }
+    ],
+    "what_not_to_do": [
+      "Do not assume you are banned - 'not found' usually means a details mismatch, not a rejection.",
+      "Do not keep draining one application system if your number is wrong; fix the phone number on file first.",
+      "Do not pay anyone who offers to 'recover' a lost application - applications are free to check and reapply."
+    ],
+    "how_long": "Once you check with the correct ID and registered phone number, your status appears immediately. A fresh application usually shows its first result within 7 to 14 days, and is most reliably read after the 15th of the month.",
+    "check_methods": [
+      {
+        "label": "Online (SRD Portal)",
+        "value": "srd.sassa.gov.za - enter your ID and the EXACT phone number from your application"
+      },
+      {
+        "label": "USSD (Zero Data)",
+        "value": "Dial *120*69277# from the cellphone number registered on your application"
+      },
+      {
+        "label": "WhatsApp",
+        "value": "Chat with SASSA on 082 601 0111 and request your status"
+      },
+      {
+        "label": "Helpline",
+        "value": "Call 0800 60 10 11 to confirm what record SASSA holds for your ID"
+      }
+    ],
+    "who_to_contact": [
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
+      },
+      {
+        "label": "SRD Portal",
+        "value": "srd.sassa.gov.za"
+      },
+      {
+        "label": "Your Local SASSA Office",
+        "value": "Visit in person with your original ID"
+      }
+    ],
+    "sources": [
+      "https://srd.sassa.gov.za",
+      "https://www.sassa.gov.za"
+    ],
+    "related": [
+      "/guides/srd-reapplication",
+      "/status/reapplication-required",
+      "/guides/lost-phone-number",
+      "/status-check"
+    ],
+    "last_updated": "2026-09-18",
+    "author": "Lucky Cungwa"
   }
 ]

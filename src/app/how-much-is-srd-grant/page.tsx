@@ -11,7 +11,7 @@ import { getFact } from "../../lib/canonical-facts";
 import NextStepCard from "../../components/affiliate/NextStepCard";
 
 const currentYear = getCurrentYearString();
-const lastUpdated = "2026-08-31";
+const lastUpdated = "2026-09-18";
 const srdAmount = getFact("srd_grant_amount");
 const incomeLimit = getFact("srd_income_limit");
 const ageMin = getFact("srd_age_range_min");
@@ -37,6 +37,10 @@ export default function HowMuchIsSrdGrantPage() {
     {
       q: "Is the SRD grant permanent?",
       a: `No. The SRD grant is a temporary relief grant that must be extended by the Minister of Finance. The current extension runs until ${extensionDate}. You must also re-qualify every month, as SASSA re-checks your income and records monthly.`,
+    },
+    {
+      q: "Why do people still call it the R350 grant if the amount is R370?",
+      a: "The SRD grant started as R350 in 2020 during the COVID-19 pandemic and was called the 'R350 grant'. It was raised to R370 from April 2024, but the old name stuck. It is the same grant at the same official application: srd.sassa.gov.za. If someone tells you the grant 'went back to R350' or asks you to pay to get the 'new' R370, that is a scam.",
     },
     {
       q: "Do I have to reapply for the SRD grant every month?",

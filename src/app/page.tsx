@@ -151,7 +151,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="lg:ml-72 mt-4 text-xs font-semibold text-primary-black/70">
-            Main grant payments run 2&ndash;4 September 2026. The SRD R370 September date and the fourth payment day for grants under review are <strong>not yet officially confirmed</strong> &mdash; check your status for a &ldquo;Pay Day&rdquo; date once SASSA confirms. Avoid long queues by withdrawing later in the day or using a retail point.
+            Main grant payments run 2&ndash;4 September 2026. SASSA has confirmed the <strong>SRD R370 payment dates of 23 and 25 September 2026</strong>. The fourth payment day for grants under review remains unconfirmed &mdash; check your status for your personal &ldquo;Pay Day&rdquo; date and see the <a href="/dates/september-2026" className="underline font-bold">full September schedule</a>. Avoid long queues by withdrawing later in the day or using a retail point.
           </p>
         </div>
       </section>

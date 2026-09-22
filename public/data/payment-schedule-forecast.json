@@ -8,13 +8,13 @@
     "disability": { "date": "2026-09-03", "day": "Thursday", "status": "confirmed" },
     "children": { "date": "2026-09-04", "day": "Friday", "status": "confirmed" },
     "under_review": { "date": "TBC", "day": "Not yet confirmed", "status": "projected" },
-    "srd": { "date": "TBC", "day": "Expected in the last week of September", "status": "projected" },
-    "note": "SASSA has confirmed the September 2026 permanent grant dates. The SRD R370 and fourth payment day are not yet confirmed.",
+    "srd": { "date": "2026-09-23", "day": "Wednesday 23 & Friday 25 September", "status": "confirmed" },
+    "note": "SASSA has confirmed the September 2026 permanent grant dates and the SRD R370 payment dates of 23 and 25 September 2026. The fourth payment day for grants under review is not yet confirmed.",
     "governance": {
-      "source": "SASSA official payment dates announcement",
+      "source": "SASSA official September 2026 SRD payment dates announcement",
       "sourceURL": "https://www.sassa.gov.za",
-      "lastVerified": "2026-08-31",
-      "notes": "Permanent grant dates are confirmed by SASSA. SRD R370 and the fourth payment (under review) day remain TBC; they are shown as projected and must not be treated as official until SASSA announces them."
+      "lastVerified": "2026-09-22",
+      "notes": "Permanent grant dates and the SRD R370 payment dates of 23 and 25 September 2026 are confirmed by SASSA. Beneficiaries are paid in a batch on either 23 or 25 September depending on their 'Pay Day' date on the official SRD portal, not on both dates. The fourth payment day for grants under review remains TBC and is shown as projected."
     }
   },
   {

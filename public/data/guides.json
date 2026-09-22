@@ -25,7 +25,7 @@
       },
       {
         "title": "Apply Online (Fastest Option)",
-        "content": "Two official online portals are used for SASSA applications in 2026: <ul><li><strong>SRD grant:</strong> go to <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a>, enter your 13-digit ID number and mobile number, provide banking details, and submit. You can also apply via the official SASSA WhatsApp line (<a href=\"https://wa.me/27826010111\">082 601 0111</a>) or the Moya App.</li><li><strong>Permanent grants:</strong> go to <a href=\"https://services.sassa.gov.za\">services.sassa.gov.za</a>, the official SASSA Services Portal. Register an account, log in, and complete the online application for the Older Persons, Disability, Child Support, Foster Child, Care Dependency, Grant-in-Aid, or War Veterans Grant. You will be guided through the steps and may need to upload supporting documents.</li></ul>Always check that you are on the official .gov.za domain — never pay anyone to apply on your behalf. SASSA applications are free.",
+        "content": "Two official online portals are used for SASSA applications in 2026: <ul><li><strong>SRD grant:</strong> go to <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a>, enter your 13-digit ID number and mobile number, provide banking details, and submit. The Moya App also routes SRD applications into the same system.</li><li><strong>Permanent grants:</strong> go to <a href=\"https://services.sassa.gov.za\">services.sassa.gov.za</a>, the official SASSA Services Portal. Register an account, log in, and complete the online application for the Older Persons, Disability, Child Support, Foster Child, Care Dependency, Grant-in-Aid, or War Veterans Grant. You will be guided through the steps and may need to upload supporting documents.</li></ul>Always check that you are on the official .gov.za domain — never pay anyone to apply on your behalf. SASSA applications are free.",
         "tips": [
           "For the SRD application you will receive an SMS confirmation once submitted — keep it as proof.",
           "The SASSA Services Portal requires you to register and verify your identity the first time you log in."
@@ -274,6 +274,33 @@
         "title": "Lodge an Appeal on the ITSAA Portal",
         "url": "https://srd-appeals.dsd.gov.za",
         "isExternal": true
+      }
+    ],
+    "nextSteps": [
+      {
+        "title": "Check my appeal deadline",
+        "url": "/tools/appeal-deadline",
+        "description": "Calculator for reconsideration and tribunal windows"
+      },
+      {
+        "title": "Appeal hub",
+        "url": "/appeals",
+        "description": "Quick guides for every appeal step"
+      },
+      {
+        "title": "Income source detected decline",
+        "url": "/guides/income-source-detected-appeal",
+        "description": "Most common SRD decline reason"
+      },
+      {
+        "title": "When you must reapply instead",
+        "url": "/guides/srd-reapplication",
+        "description": "Reapplication vs appeal"
+      },
+      {
+        "title": "Track appeal status",
+        "url": "/status-check",
+        "description": "Check your SRD status"
       }
     ]
   },
@@ -585,7 +612,7 @@
         "content": "Once installed, open Moya and look for the 'SASSA SRD' or 'SRD Grant' section on the home screen or in the services menu. The app has a simple, icon-based interface. Tap on the SASSA SRD icon to open the service. If you do not see it immediately, use the search bar at the top and type 'SASSA'.",
         "tips": [
           "The Moya App interface may change with updates — the SASSA section is usually near the top.",
-          "Do not use any other app claiming to offer SASSA services — only Moya is officially partnered."
+          "Treat srd.sassa.gov.za as the authoritative source for your status — the app should show the same information."
         ]
       },
       {
@@ -616,7 +643,7 @@
     "faqs": [
       {
         "q": "Is the Moya App safe for SASSA SRD services?",
-        "a": "Yes. The Moya App is an official SASSA channel for checking SRD status and applying for grants. Your ID number and personal details are encrypted and protected. Always download Moya from the official Google Play or Apple App Store."
+        "a": "The Moya App is a popular free-data channel that routes into SASSA's SRD system and is widely used to check status and update details. Always verify your final status on the official portal at srd.sassa.gov.za before acting on what the app shows, and only download Moya from the official Google Play or Apple App Store."
       },
       {
         "q": "Do I need internet data for the Moya App SASSA services?",
@@ -647,88 +674,119 @@
   {
     "id": "ussd-codes",
     "title": "SASSA USSD Codes: Check Your Grant Status Without Internet (2026)",
-    "description": "You do not need a smartphone or data to check your SASSA status. Use these free USSD codes from any cellphone to check your SRD R370 grant, balance, and payment status.",
+    "description": "Dial these USSD codes from any cellphone to check your SASSA grant status without data. The SRD status code is *120*69277#. This guide also covers the Postbank site locator (*120*355#), the official Postbank SMS balance service, and codes that are not officially published.",
     "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
-    "estimatedTime": "2 minutes",
+    "estimatedTime": "3 minutes",
     "image": "https://images.unsplash.com/photo-1589496931914-67f415f2e85f?w=1200&h=400&fit=crop&auto=format",
     "imageAlt": "Old-style mobile phone keypad showing keypad dialing",
     "steps": [
       {
         "title": "What Are USSD Codes and Why Use Them?",
-        "content": "USSD (Unstructured Supplementary Service Data) codes work like instant commands for your phone. You dial a short code, press send, and information appears on your screen within seconds. Unlike apps or websites, USSD does not need internet data. It works on any phone — including old Nokia and feature phones — on any South African mobile network. SASSA provides several USSD codes for checking grant status, application status, and payment balances.",
+        "content": "USSD (Unstructured Supplementary Service Data) codes work like instant commands for your phone. You dial a short code, press send, and information appears on your screen within seconds. Unlike apps or websites, USSD does not need internet data. It works on any phone, including feature phones, on any South African mobile network. The most useful SASSA code is <strong>*120*69277#</strong>, which checks your SRD R370 status.",
         "tips": [
-          "USSD codes are free from all major South African networks (Vodacom, MTN, Cell C, Telkom).",
-          "You do not need airtime or data to use SASSA USSD codes."
+          "The SASSA SRD status code is free to dial.",
+          "Keep your 13-digit ID number ready before you dial."
         ]
       },
       {
-        "title": "Use *120*3210# for SASSA Grant Status (Postbank)",
-        "content": "Dial *120*3210# on your cellphone and press the call button. This code connects you to the Postbank SASSA balance check service. You will see a menu with options. Select the option for 'SASSA Grant Balance' or 'SASSA Status Check'. Enter your 13-digit ID number when prompted. The system will display your current grant status and any available balance. This code is best for checking whether a payment has been made to your Postbank account.",
+        "title": "Dial *120*69277# for SRD R370 Status",
+        "content": "Dial <strong>*120*69277#</strong> and press call. This is the dedicated code for SRD R370 grant status checks. After the menu appears, select the status option and enter your 13-digit ID number when prompted. The system tells you your status for the current month: Approved, Pending, Declined, or another status. This code reads the same database as the online SRD portal at srd.sassa.gov.za.",
         "tips": [
-          "Write down your balance after the session ends — USSD sessions time out after 60 seconds.",
-          "This code works best for Postbank/SASSA Gold Card holders."
+          "This code is for the SRD R370 grant, not permanent grants.",
+          "Check after the 15th of the month for the most reliable result."
         ]
       },
       {
-        "title": "Use *120*69277# for SRD R370 Status Check",
-        "content": "Dial *120*69277# and press call. This is the dedicated USSD code for SRD R370 grant status checks. After dialing, you will see a menu. Select 'Check Status'. Enter your 13-digit ID number when prompted. The system will tell you your status for the current month — Approved, Pending, Declined, or other statuses. This code accesses the same database as the online SRD portal.",
+        "title": "Dial *120*355# to Find Postbank Sites",
+        "content": "Dial <strong>*120*355#</strong> to locate your nearest Postbank site. Postbank publishes this code on its official website and on sassa.gov.za. Use it to find where you can get a Postbank Black Card (the replacement for the SASSA Gold Card, which stopped working on 31 August 2026) or to find ATM and branch services. It is a locator, not a balance check.",
         "tips": [
-          "This code is specifically for the SRD R370 grant, not for permanent grants.",
-          "Check your status after the 15th of each month for the most accurate result."
+          "Write down the site addresses before your phone session times out.",
+          "Bring your South African ID or temporary ID when you visit."
         ]
       },
       {
-        "title": "Use *134*7737# to Apply for SRD (Limited Use)",
-        "content": "Dial *134*7737# to access the SASSA application menu. This code was originally designed for applying to the SRD grant via USSD. It can still be used to check your application status and in some cases to reapply. However, the full application process is better done online at srd.sassa.gov.za because the USSD version asks for fewer details and may result in incomplete applications.",
+        "title": "Check a Postbank Balance by SMS, Not USSD",
+        "content": "Postbank does not publish a USSD code for balance enquiries. The official balance check is by SMS: from the cellphone number registered on your account, send <strong>'BAL'</strong>, a space, then the last four digits of your Postbank <strong>account number</strong> (not the card number) to <strong>32302</strong>. It costs about R1 and the balance returns by SMS. You can also use a Postbank ATM or call 0800 53 54 55. Be wary of USSD balance codes circulating online - Postbank does not publish one.",
         "tips": [
-          "If you applied via USSD, always verify your application status on the SRD portal later.",
-          "The USSD application method does not work for all phone numbers — use the portal if you can."
+          "Account number and card number are different - use the account number.",
+          "A wrong phone number gets you an 'invalid cell number' reply."
+        ]
+      },
+      {
+        "title": "The Old *134*7737# SRD Code (Unverified)",
+        "content": "The code <strong>*134*7737#</strong> appears on some websites as an SRD application or status code. It is not listed on the official sassa.gov.za pages covered in our research, and its availability is unverified. Do not rely on it for applying or reapplying. The confirmed way to apply for the SRD grant is the official portal at srd.sassa.gov.za, and the confirmed status code is *120*69277#.",
+        "tips": [
+          "When in doubt, use the portal - it is the source of truth.",
+          "Never pay anyone who claims to 'activate' a code for you."
         ]
       },
       {
         "title": "Troubleshooting USSD Issues",
-        "content": "If a USSD code does not work, try the following: ensure you are dialing exactly the right number (including the asterisks and hash), check that you have network signal, try switching your phone off and on, or insert your SIM into a different phone. If the code still does not work, call the SASSA helpline at 0800 60 10 11 to confirm which code works for your situation. Some networks may block certain USSD codes — ask your network provider to unblock them.",
+        "content": "If a USSD code does not work, ensure you are dialing exactly the right number including the asterisks and hash, check that you have network signal, switch the phone off and on, or insert your SIM into a different phone. If the code still fails, call the SASSA helpline at 0800 60 10 11. Some networks block certain USSD codes - ask your network provider to unblock them.",
         "tips": [
-          "Do not add any extra numbers before or after the USSD code — it must be exactly as shown.",
-          "If you get a 'Service Not Available' message, try again in an hour."
+          "Do not add any extra numbers before or after the code.",
+          "A 'Service Not Available' message usually clears within an hour."
         ]
       },
       {
         "title": "Other Ways to Check Your Status Without a Smartphone",
-        "content": "Besides USSD codes, there are three other ways to check your SASSA status on a phone that is not a smartphone or without internet data: <ul><li><strong>Toll-free helpline:</strong> call 0800 60 10 11 from any phone (the call is free, you do not need airtime). Follow the prompts and have your 13-digit ID number ready.</li><li><strong>SASSA WhatsApp line:</strong> message 082 601 0111 to check your SRD status.</li><li><strong>Ask a trusted helper:</strong> a family member, neighbour, or community worker can check your status for you online at srd.sassa.gov.za. Only share your ID number with someone you trust completely.</li></ul>If none of these work, visit your nearest SASSA office or a SASSA mobile unit in person — bring your ID document and the officer can look up your status on their system.",
+        "content": "If USSD is not working, three other channels check your status without data: <ul><li><strong>Toll-free helpline:</strong> call 0800 60 10 11 from any phone. Follow the prompts and have your 13-digit ID number ready.</li><li><strong>SASSA WhatsApp line:</strong> message 082 601 0111 to check your SRD status and review status.</li><li><strong>A trusted helper:</strong> a family member or community worker can check for you online at srd.sassa.gov.za. Only share your ID number with someone you trust completely.</li></ul>If none of these work, visit your nearest SASSA office with your ID and a staff member can look up your status.",
         "tips": [
-          "Keep your 13-digit ID number handy before you call or dial.",
-          "Never share your banking PIN or SASSA card PIN with anyone who offers to check your status."
+          "Never share your banking PIN or card PIN with anyone offering to check your status.",
+          "Keep your 13-digit ID handy before you dial or call."
         ]
       }
     ],
     "faqs": [
       {
         "q": "Are SASSA USSD codes free?",
-        "a": "Yes. All SASSA USSD codes (*120*3210#, *120*69277#, *134*7737#) are free from Vodacom, MTN, Cell C, and Telkom. You do not need airtime or data."
+        "a": "The SRD status code *120*69277# and the Postbank site locator *120*355# are free to dial. The Postbank SMS balance enquiry to 32302 costs about R1 per message. USSD balance codes from unofficial lists are not confirmed."
       },
       {
-        "q": "Which USSD code shows my SRD payment date?",
-        "a": "*120*69277# shows your current SRD status, including whether you are approved and any available payment information. For specific payment dates, check the SRD portal or your SMS notifications."
+        "q": "Which code shows my SRD payment date?",
+        "a": "*120*69277# shows your current SRD status, including whether you are Approved and any payment information shown for the month. For your exact 'Pay Day' date, the SRD portal at srd.sassa.gov.za is the authoritative source."
+      },
+      {
+        "q": "Can I check my Postbank card balance by USSD?",
+        "a": "Postbank does not publish a USSD balance code. Use the official SMS service (send BAL plus the last four digits of your account number to 32302, about R1), a Postbank ATM, or call 0800 53 54 55. Balance USSD codes shared on websites, such as *120*69#, are unverified."
+      },
+      {
+        "q": "What is the *120*3210# code I keep seeing?",
+        "a": "*120*3210# appears on some third-party lists as a SASSA status code. It is not published on the official sources we verify against, so treat it as unverified and prefer *120*69277# for SRD status."
       },
       {
         "q": "Can I check someone else's SASSA status for them?",
-        "a": "Yes, if you have their ID number and their permission. You can check online at srd.sassa.gov.za, via the WhatsApp line 082 601 0111, or through a USSD code. Only do this for people you trust, and never share their ID number further."
+        "a": "Yes, with their ID number and permission, on the SRD portal, via the WhatsApp line 082 601 0111, or through *120*69277#. Only do this for people you trust, and never pass their ID number on."
       }
     ],
     "tags": [
       "ussd codes",
       "sassa ussd",
+      "*120*69277#",
+      "*120*355#",
       "check status without internet",
-      "*120*3210#",
-      "*120*69277#"
+      "postbank sms balance"
     ],
-    "lastUpdated": "2026-07-07",
+    "lastUpdated": "2026-09-18",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "SASSA Official Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "Postbank Website",
+        "url": "https://www.postbank.co.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      }
+    ],
     "relatedLinks": [
       {
-        "title": "SASSA SRD Portal",
+        "title": "SRD Grant Official Portal",
         "url": "https://srd.sassa.gov.za",
         "isExternal": true
       },
@@ -737,80 +795,141 @@
         "url": "tel:0800601011",
         "isExternal": false
       }
+    ],
+    "monetization": {
+      "vertical": "mobile"
+    },
+    "nextSteps": [
+      {
+        "title": "Check a grant balance",
+        "url": "/guides/sassa-balance-check",
+        "description": "Bank USSD codes and Postbank SMS"
+      },
+      {
+        "title": "WhatsApp status checks",
+        "url": "/guides/sassa-whatsapp",
+        "description": "Two official SASSA numbers"
+      },
+      {
+        "title": "Postbank Black Card migration",
+        "url": "/updates/update-2026-033",
+        "description": "Gold cards no longer work"
+      },
+      {
+        "title": "SRD reapplication",
+        "url": "/guides/srd-reapplication",
+        "description": "When you must reapply"
+      }
     ]
   },
   {
     "id": "sassa-whatsapp",
-    "title": "SASSA WhatsApp Number 082 601 0111: Complete Guide 2026",
-    "description": "SASSA offers a 24/7 WhatsApp service for SRD grant applications, status checks, and appeals. Learn exactly how to use the SASSA WhatsApp line step by step.",
+    "title": "SASSA WhatsApp Numbers 082 601 0111 and 082 046 8553: Status, Reviews and Proof of Life",
+    "description": "SASSA runs two official WhatsApp channels. The self-service line 082 601 0111 checks SRD status, review status and proof-of-life checks. This guide shows the verified flow and what WhatsApp cannot do.",
     "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
-    "estimatedTime": "3 minutes",
+    "estimatedTime": "4 minutes",
     "image": "https://images.unsplash.com/photo-1611605698335-8b156f7f3b8a?w=1200&h=400&fit=crop&auto=format",
     "imageAlt": "WhatsApp chat interface on a smartphone screen",
     "steps": [
       {
-        "title": "Save the Official SASSA WhatsApp Number",
-        "content": "Open your phone contacts and save the number 082 601 0111 as 'SASSA SRD'. This is the ONLY official SASSA WhatsApp number. There are many fake SASSA WhatsApp numbers in circulation — always verify you are using 082 601 0111. SASSA will never ask you to pay for any WhatsApp service. If someone contacts you pretending to be SASSA on WhatsApp asking for money, block and report them.",
+        "title": "Use These Two Official SASSA Numbers",
+        "content": "SASSA has two official WhatsApp channels. The self-service line is <strong>082 601 0111</strong>. It handles Social Grants self-service, including SRD application status, review status and proof-of-life checks. The older SRD line is <strong>082 046 8553</strong> and is still active. Both appear on the official sassa.gov.za website. Every other number you find online is a scam lookalike. No SASSA WhatsApp service costs money, and no SASSA official ever asks for your banking PIN or card PIN in a chat.",
         "tips": [
-          "Do not search Google for 'SASSA WhatsApp number' — you may find scam numbers.",
-          "The SASSA WhatsApp number is 082 601 0111, not any other number."
+          "Save both numbers in your phone contacts so you do not mistype them later.",
+          "If someone texts you from any other number claiming to be SASSA, block and report them."
         ]
       },
       {
-        "title": "Send a Message to Start the Chatbot",
-        "content": "Open WhatsApp, find the SASSA contact you saved, and type 'Hi' or 'Hello'. Send the message. The SASSA chatbot will automatically reply within seconds. The chatbot is automated, not a human. It will show you a menu of options, including: Check Status, Apply for SRD Grant, Update Banking Details, and Appeal a Decision. Select the option you need by replying with the corresponding number.",
+        "title": "Start the Chat and Verify Your Identity",
+        "content": "Open WhatsApp, message 082 601 0111 and send the word 'Hi'. The reply walks you through the self-service menu. Pick 'Social Grants', then choose the grant you need help with. When asked, enter the mobile number you registered with SASSA, the one-time PIN sent to it, and your 13-digit ID number. This identity step is how SASSA matches the chat to your grant. The same chat works for the SRD grant and the permanent grants.",
         "tips": [
-          "Reply with the number shown in the menu (e.g., type '1' for Check Status).",
-          "The chatbot can be slow during peak hours — wait 30 seconds for each reply."
+          "Use the phone number you gave SASSA when you applied.",
+          "Wait for the next message instead of tapping through fast - the steps run in order."
         ]
       },
       {
-        "title": "Check Your SRD Status via WhatsApp",
-        "content": "Select 'Check Status' from the menu. The chatbot will ask for your 13-digit South African ID number. Type it and send. The system will look up your SRD grant status and reply with your current status for the most recent month. The reply will show whether you are Approved, Pending, or Declined. If you are approved, it may also show your payment date.",
+        "title": "Check Your Application Status",
+        "content": "After your identity is confirmed, select the application-status option. The reply shows your status for the latest month - Approved, Pending or Declined - drawn from the same database as srd.sassa.gov.za. If you are approved, the reply may also show your Pay Day date. Status can change month to month because SASSA re-checks income and records every cycle, so a status from last month says nothing about this month.",
         "tips": [
-          "Type only numbers — do not add spaces or dashes to your ID number.",
-          "The WhatsApp status check uses the same database as the SRD portal."
+          "Check the SRD portal as well if the WhatsApp reply and your expectations differ.",
+          "A Pending status is normal early in the month - verification runs mid-month."
         ]
       },
       {
-        "title": "Update Banking Details via WhatsApp",
-        "content": "Select 'Update Banking Details' from the chatbot menu. The chatbot will ask for your ID number and then your new banking details. You need to provide your bank name, account number, and branch code. The chatbot will confirm the details before submitting. SASSA will verify the new account within 3 to 7 working days.",
+        "title": "Use the Review and Proof-of-Life Options",
+        "content": "If SASSA flagged your grant for a review or a proof-of-life check, the self-service includes a review-status option. This is the 'Am I in Review?' pathway announced with the 2026 WhatsApp launch. Use it to confirm your review status instead of waiting for an SMS. Proof-of-life checks still have to be completed through the official eLife process or at a SASSA office in some cases - the WhatsApp option confirms your status first, so you know what is still needed.",
         "tips": [
-          "The bank account must be in your name — SASSA does not pay into third-party accounts.",
-          "Take a screenshot of the confirmation message as proof."
+          "Complete any proof-of-life or review step before your payment month closes to avoid a gap.",
+          "Need a review date? Check the fourth-payment-day guide for review-batch timing."
         ]
       },
       {
-        "title": "Submit an Appeal via WhatsApp",
-        "content": "Select the 'Appeal' option from the chatbot menu. You will be asked for your ID number and the month you want to appeal. The chatbot will ask you to choose the reason for the decline and provide a brief explanation. Your appeal is submitted directly to the Independent Tribunal (ITSAA). You will receive a reference number — write it down.",
+        "title": "What WhatsApp Cannot Do - Use the Portals for These",
+        "content": "WhatsApp is for status and review checks, not for every task. Banking details changes, a new SRD application, and appeals against a decline are all done on the official websites. Update banking details and reapply on srd.sassa.gov.za, and appeal a decline on srd-appeals.dsd.gov.za. Anything or anyone telling you that WhatsApp can fix a declined grant or change your bank details is not an official SASSA service.",
         "tips": [
-          "You can appeal one month at a time — repeat the process for each declined month.",
-          "Keep your reference number to check the appeal status later."
+          "Keep your SRD portal login safe - it is the only place you update banking details.",
+          "Appeals are free and run for 90 days from the decline date."
+        ]
+      },
+      {
+        "title": "Recognise WhatsApp Scams",
+        "content": "A real SASSA WhatsApp chat never asks for money, your banking PIN, your card PIN or your account password. It never promises to 'unlock', 'release' or 'speed up' a payment in exchange for a fee. If a chat asks for your OTP, it is a scam - SASSA sends OTPs to your phone for you to enter into an official flow, and never asks you to read them out. Report anything that looks wrong to the SASSA fraud hotline on 0800 60 10 11.",
+        "tips": [
+          "SASSA deposits approved grants automatically - nobody can charge a 'release' fee.",
+          "Forward suspicious chats to yourself first so there is a record before you report them."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "Is the SASSA WhatsApp service available 24/7?",
-        "a": "Yes, the SASSA WhatsApp chatbot operates 24 hours a day, 7 days a week. However, if your query requires human assistance, you can only reach an agent during business hours (Monday to Friday, 08:00 to 16:00)."
+        "q": "Is 082 601 0111 the only official SASSA WhatsApp number?",
+        "a": "No. SASSA has two official WhatsApp channels: the self-service line 082 601 0111 and the older SRD line 082 046 8553. Both are listed on sassa.gov.za. Any other number claiming to be SASSA is a scam."
       },
       {
-        "q": "Can I apply for the SRD grant via WhatsApp?",
-        "a": "Yes. You can submit a new SRD application through the SASSA WhatsApp chatbot. Select 'Apply for SRD' from the menu and follow the prompts. The application uses the same system as the online portal."
+        "q": "Can I check my SRD status on WhatsApp without data?",
+        "a": "WhatsApp needs at least a small data connection. If you have no data, dial the USSD code *120*69277# or call the toll-free helpline 0800 60 10 11 instead."
+      },
+      {
+        "q": "Does the WhatsApp line give me my payment date?",
+        "a": "When your status is Approved, the status reply often includes your Pay Day date. The SRD portal at srd.sassa.gov.za is the authoritative place to confirm it."
+      },
+      {
+        "q": "Can I appeal a declined grant through WhatsApp?",
+        "a": "No. Appeals are lodged on the official appeals portal at srd-appeals.dsd.gov.za. The WhatsApp self-service does not submit appeals."
+      },
+      {
+        "q": "Can WhatsApp fix a banking-details verification failure?",
+        "a": "No. Update your banking details on the official SRD portal at srd.sassa.gov.za. WhatsApp is for status and review checks."
+      },
+      {
+        "q": "Will SASSA message me first on WhatsApp?",
+        "a": "SASSA does not usually WhatsApp you first to ask for money or details. You start the official chat by messaging one of the two official numbers. If someone contacts you from another number with an urgent SASSA story, treat it as a scam."
       }
     ],
     "tags": [
       "sassa whatsapp",
-      "whatsapp sassa",
       "082 601 0111",
-      "sassa chatbot"
+      "082 046 8553",
+      "sassa status check",
+      "am i in review",
+      "proof of life whatsapp"
     ],
-    "lastUpdated": "2026-07-07",
+    "lastUpdated": "2026-09-18",
     "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Official SASSA Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      }
+    ],
     "relatedLinks": [
       {
-        "title": "SASSA WhatsApp Line",
+        "title": "SASSA Self-Service WhatsApp",
         "url": "https://wa.me/27826010111",
         "isExternal": true
       },
@@ -825,14 +944,24 @@
     },
     "nextSteps": [
       {
-        "title": "Compare affordable data bundles",
-        "url": "/guides/affordable-data-bundles-south-africa",
-        "description": "Stay connected for status checks"
+        "title": "Check status with USSD codes",
+        "url": "/guides/ussd-codes",
+        "description": "No data needed"
       },
       {
-        "title": "Replace a lost SIM card",
-        "url": "/guides/sim-replacement-south-africa",
-        "description": "If your number stopped working"
+        "title": "The SASSA self-service rollout",
+        "url": "/updates/update-2026-sassa-digital-services",
+        "description": "Kiosks, WhatsApp and Wi-Fi"
+      },
+      {
+        "title": "What a review really means",
+        "url": "/guides/fourth-payment-day-guide",
+        "description": "Review-batch timing"
+      },
+      {
+        "title": "Update your banking details",
+        "url": "/guides/bank-details-pending-fix",
+        "description": "Verified steps"
       }
     ]
   },
@@ -1145,7 +1274,7 @@
       },
       {
         "title": "September 2026: Approved One Month, Declined the Next",
-        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in August and 'Declined' in September -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For September 2026, SASSA has not yet confirmed the SRD payment date, so you may also see 'Approved' with no 'Pay Day' for a while. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
+        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in August and 'Declined' in September -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For September 2026, SASSA has confirmed the SRD payment dates of [23 and 25 September](/dates/september-2026); until your status shows a 'Pay Day' date, it is normal to see 'Approved' with no date - your batch date appears once the September payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
         "tips": [
           "A decline for one month never cancels your application for the next.",
           "Check your status after the 15th of each month for the most reliable result."
@@ -1177,7 +1306,7 @@
       "sassa reapplication",
       "grant review"
     ],
-    "lastUpdated": "2026-08-20",
+    "lastUpdated": "2026-09-22",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -1339,7 +1468,7 @@
       },
       {
         "title": "Spot Fake WhatsApp Numbers and SMS Messages",
-        "content": "SASSA's only official WhatsApp number is 082 601 0111. Scammers use similar numbers like 082 046 8554 or 082 046 8552. Always check the number carefully. SASSA sends SMS messages from short codes, not from regular cellphone numbers. If you receive an SMS asking you to click a link and 'verify your grant', check the URL before clicking. Fake SMS messages often have spelling errors and create urgency ('your grant will be cancelled').",
+        "content": "SASSA runs two official WhatsApp channels: the SASSA Self-Service line at <strong>082 601 0111</strong> and the SRD line at <strong>082 046 8553</strong>. Any other number — like 082 046 8554 or 082 046 8552 — is a scam lookalike. Always check the number carefully. SASSA sends status SMS messages from short codes, not from regular cellphone numbers. If you receive an SMS asking you to click a link and 'verify your grant', check the URL before clicking. Fake SMS messages often have spelling errors and create urgency ('your grant will be cancelled').",
         "tips": [
           "SASSA will never ask you to send money via eWallet or airtime.",
           "If an SMS says 'click here to receive your grant', it is a scam — SASSA deposits automatically."
@@ -1426,7 +1555,7 @@
       },
       {
         "title": "Complete Life Certification via WhatsApp",
-        "content": "You can also complete life certification through the SASSA WhatsApp line at 082 601 0111. Send 'Hi' to start the chatbot, then select 'Life Certification' from the menu. Follow the prompts to verify your identity. The WhatsApp method is ideal if you have a smartphone but limited data — WhatsApp uses minimal data.",
+        "content": "The SASSA Self-Service WhatsApp (082 601 0111) includes review and proof-of-life checks. Send 'Hi', pick your grant type, and verify your identity with your mobile number and OTP. If SASSA has flagged your grant for a review, use the review/proof-of-life option to confirm your status instead of waiting for an SMS. If the WhatsApp self-service does not resolve it, complete the life certification on the official eLife portal or at a SASSA office.",
         "tips": [
           "Save 082 601 0111 in your phone contacts to find it easily.",
           "The WhatsApp method does not require facial recognition — you answer verification questions instead."
@@ -1729,16 +1858,16 @@
         "title": "Fix via the Moya App (No Data Needed)",
         "content": "Download the Moya App from the Google Play Store or Apple App Store. Open the app and look for the 'SASSA SRD' section. Select 'Update Banking Details'. Enter your 13-digit ID number. Enter your bank name, account number, and branch code. Submit the update. The Moya App uses free data for SASSA services, so you do not need to buy airtime or data. The Moya App method is often faster than the web portal because it does not require an SMS OTP link.",
         "tips": [
-          "The Moya App is SASSA's recommended channel for SRD applications — do not use any other app that claims to be official.",
+          "Use the Moya App or the SRD portal to update banking details — never share your banking PIN anywhere.",
           "If you updated your details on the portal already, do not update again on Moya — it may create a conflict."
         ]
       },
       {
-        "title": "Fix via SASSA WhatsApp Line",
-        "content": "Open WhatsApp and send a message to 082 601 0111. Type 'Hi' to start the chatbot. Select 'Update Banking Details' from the menu. Enter your 13-digit ID number when prompted. Enter your bank name, account number, and branch code. The chatbot will confirm the details before submitting. Take a screenshot of the confirmation message as proof. The WhatsApp method works well if you have limited data — WhatsApp uses very little data compared to a web browser.",
+        "title": "Fix via the SRD Portal (Recommended, Confirmed Channel)",
+        "content": "The confirmed way to update banking details is on the official SRD portal at srd.sassa.gov.za. Log in, go to 'Update Banking Details', and submit your bank name, account number, and branch code. SASSA verifies the account against the name on your ID before the next payment batch. The self-service WhatsApp (082 601 0111) and the Moya App route into the same SASSA system if they offer the option, but the portal is the channel SASSA publishes as the official method for banking changes.",
         "tips": [
-          "082 601 0111 is the ONLY official SASSA WhatsApp number — verify it carefully.",
-          "SASSA will never ask for your banking PIN or password on WhatsApp."
+          "The bank account must be registered in your name — SASSA does not pay into third-party accounts.",
+          "Take a screenshot of the confirmation message as proof."
         ]
       },
       {
@@ -3205,6 +3334,14 @@
         "content": "SASSA notifies beneficiaries selected for review via SMS before the payment cycle begins. The SMS explains that your grant has been flagged for review and that you will be paid on the fourth payment day. Check your phone messages carefully - the SMS may come from an official SASSA number. If you missed the SMS because your contact details are outdated, you will only discover you are under review when your payment does not arrive on the normal day. If you did not receive an SMS, check your status on the official portal - it is the source of truth."
       },
       {
+        "title": "Check Your Review Status on the Official WhatsApp Line",
+        "tips": [
+          "The WhatsApp status check works on Android; iPhone users should use the SRD portal.",
+          "The same official line handles review and proof-of-life checks for selected beneficiaries."
+        ],
+        "content": "You do not have to wait for an SMS. The official SASSA self-service WhatsApp line (<strong>082 601 0111</strong>) can show your status without airtime. Send 'Hi' to the number, pick your grant type, and verify your identity with your mobile number and one-time PIN. If your grant has been flagged for a review, use the review/proof-of-life option to confirm your identity instead of waiting for a notification. This is a genuine service run by SASSA, not a third party. Our WhatsApp guide (/guides/sassa-whatsapp) walks through the menus step by step."
+      },
+      {
         "title": "What Documents May Be Requested?",
         "tips": [
           "Make copies of all documents before going to the office.",
@@ -3218,7 +3355,7 @@
           "Complete the review within the same month - do not delay until the next payment cycle.",
           "If you are bedridden or frail, contact SASSA about a home visit option."
         ],
-        "content": "After the review is complete, SASSA updates your record. If you still qualify, your grant returns to the normal three-day payment cycle from the following month. If the review finds a problem - such as a data mismatch or income above the threshold - your grant may be declined for that month, and you can appeal. Some beneficiaries can complete the review online through the SASSA eLife Certification portal using facial recognition. The eLife portal has known technical issues - if it fails after several attempts, visit an office. See our eLife certification troubleshooting guide (/guides/elife-certification-troubleshooting) for help."
+        "content": "After the review is complete, SASSA updates your record. If you still qualify, your grant returns to the normal three-day payment cycle from the following month. If the review finds a problem - such as a data mismatch or income above the threshold - your grant may be declined for that month, and you can appeal. Some beneficiaries can complete the review online through the SASSA eLife Certification portal using facial recognition, and selected beneficiaries can also confirm their review on the official SASSA WhatsApp line (082 601 0111) using the proof-of-life option - see our <a href=\"/guides/life-certification\">life certification guide</a>. The eLife portal has known technical issues - if it fails after several attempts, visit an office. See our eLife certification troubleshooting guide (/guides/elife-certification-troubleshooting) for help."
       },
       {
         "title": "Historical Example: August 2026 (Already Passed)",
@@ -3271,12 +3408,16 @@
         "q": "Can I complete the review online instead of visiting an office?"
       },
       {
-        "a": "No. SASSA has not yet officially confirmed a fourth payment date for September 2026. Do not rely on third-party dates. Check the official SRD portal for your 'Pay Day' date and read our September 2026 payment update (/updates/update-2026-036) for the latest confirmed information.",
+        "a": "No. SASSA has not yet officially confirmed a fourth payment date for September 2026. Do not rely on third-party dates. Check the official SRD portal for your 'Pay Day' date and read our September 2026 SRD payment update (/updates/update-2026-037) for the latest confirmed information.",
         "q": "Is there a confirmed fourth payment day for September 2026?"
       },
       {
         "a": "Wait 2 to 3 business days after your Pay Day date, confirm your banking details are correct, and check whether your status is 'Referred' or 'Under Review'. If the money still has not arrived, follow our missing grant payment guide (/guides/missing-grant-payment-guide) and call SASSA on 0800 60 10 11 if needed.",
         "q": "What if I was approved but did not receive my payment?"
+      },
+      {
+        "q": "Can I check my review status on WhatsApp?",
+        "a": "Yes. Message the official SASSA self-service line at 082 601 0111, send 'Hi', pick your grant type, and verify your identity with your mobile number and OTP. If SASSA has flagged your grant for a review, use the review/proof-of-life option to confirm your status without waiting for an SMS. The status check works well on Android; iPhone users should use the SRD portal."
       }
     ],
     "tags": [
@@ -3286,7 +3427,7 @@
       "grant under review",
       "elife certification"
     ],
-    "lastUpdated": "2026-08-20",
+    "lastUpdated": "2026-09-22",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -4309,6 +4450,438 @@
         "title": "Free skills courses",
         "url": "/guides/free-skills-courses-south-africa",
         "description": "Improve your prospects"
+      }
+    ]
+  },
+  {
+    "id": "official-sassa-portal-guide",
+    "title": "The Official SASSA Websites: SRD Portal, Services Portal and Appeals Portal",
+    "description": "There are three official SASSA websites for three different jobs: srd.sassa.gov.za for the R370, services.sassa.gov.za for permanent grants, and srd-appeals.dsd.gov.za for appeals. This guide maps each site and shows how to spot fakes.",
+    "category": "Manage Your Account",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Laptop screen showing a government services website",
+    "steps": [
+      {
+        "title": "Know the Three Official SASSA Websites",
+        "content": "Every official SASSA website ends in <strong>.gov.za</strong>. Each one has a different job, so use the right site for the right task:\n\n| Website | What it is for |\n|---|---|\n| <strong>srd.sassa.gov.za</strong> | SRD R370: apply, reapply, check monthly status, update banking details |\n| <strong>services.sassa.gov.za</strong> | Permanent grants (older persons, disability, child support, foster, care dependency, grant-in-aid): apply and track |\n| <strong>srd-appeals.dsd.gov.za</strong> | Appeal a declined SRD grant (the Independent Tribunal) |\n| <strong>sassa.gov.za</strong> | Forms, office finder, payment schedule, official announcements |",
+        "tips": [
+          "Bookmark these four addresses so you never click a lookalike site again.",
+          "If the address does not end in .gov.za, it is not an official SASSA site."
+        ]
+      },
+      {
+        "title": "Use the SRD Portal for Your R370 Grant",
+        "content": "Sign in at srd.sassa.gov.za with your 13-digit ID number and the cellphone number you registered with SASSA. A one-time PIN (OTP) arrives by SMS and codes each login. On this portal you can apply, reapply, check whether your status is Approved, Pending or Declined, and change the bank account your grant is paid into. There is no trick to it - the OTP step is what keeps outsiders out of your grant.",
+        "tips": [
+          "Always use the phone number you gave SASSA when you applied.",
+          "Your status can change month to month - check the portal rather than relying on memory."
+        ]
+      },
+      {
+        "title": "Use the Services Portal for Permanent Grants",
+        "content": "services.sassa.gov.za is where permanent grant applications happen - older persons, disability, child support, foster child, care dependency and the rest. You create an applicant profile with your ID and phone number, then apply for the grant, upload supporting documents and track progress. Approved permanent grants are also reviewed periodically, and the portal shows review status.",
+        "tips": [
+          "Keep scanned copies of your supporting documents - the portal asks you to upload them.",
+          "A permanent grant review does not cancel the grant - it rechecks that you still qualify."
+        ]
+      },
+      {
+        "title": "Use the Appeals Portal to Challenge a Decline",
+        "content": "If SASSA declines your SRD grant for a month, you can challenge it free of charge at srd-appeals.dsd.gov.za - the Independent Tribunal. You choose the declined month and the reason SASSA gave, explain your situation, upload supporting proof and note your reference number. Appeals must be lodged within 90 days of the decline. Successful appeals are paid the back pay for the declined month.",
+        "tips": [
+          "Submit one appeal per declined month - each month is a separate case.",
+          "Keep your reference number; you use it to track the appeal."
+        ]
+      },
+      {
+        "title": "Register and Sign In Smoothly",
+        "content": "The portals share one rhythm: your 13-digit ID plus your registered cellphone number, then an OTP by SMS. If the system says your details are not found, you are almost always on the wrong phone number - one from before a SIM swap or one you never registered. Update your cellphone number on the SRD portal first, then carry on. Passwords are case-sensitive, and each portal keeps its own login.",
+        "tips": [
+          "Lost your number since you applied? Fix it before you try to register.",
+          "Write your portal password somewhere safe - shared, not complex."
+        ]
+      },
+      {
+        "title": "Spot Fake Sites and Fake Apps",
+        "content": "Fake SASSA portals are the most common SASSA scam online. They look like the real thing, end in domains like .co.za or .com, and ask for banking PINs or card numbers while promising to 'unlock' or 'release' a payment. The real portals never ask for your banking PIN, card PIN or password, and the grant is never behind a fee. The SRD grant has no official smartphone app. When in doubt, open a trusted link from sassa.gov.za itself.",
+        "tips": [
+          "The real SRD grant costs nothing to apply for, check or appeal - anyone charging a fee is a scammer.",
+          "Type the portal address yourself instead of tapping links in SMS messages."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is it free to use the official SASSA websites?",
+        "a": "Yes. Applying, checking status, updating banking details and appealing are all free on the official portals. Anyone who charges you to 'process' these is scamming you."
+      },
+      {
+        "q": "Can I apply for permanent grants on the SRD portal?",
+        "a": "No. Use services.sassa.gov.za for permanent grants and srd.sassa.gov.za for the SRD R370. The two systems are separate."
+      },
+      {
+        "q": "Why can't I register on a SASSA portal?",
+        "a": "The usual cause is a cellphone number mismatch. Register and log in with the number you gave SASSA when you applied. If you changed numbers, update it on the SRD portal first."
+      },
+      {
+        "q": "Is there an official SASSA app?",
+        "a": "No. SASSA has announced a mobile app is in development, but no official SRD app exists yet. Every 'SASSA app' on app stores today is third-party or a scam."
+      },
+      {
+        "q": "How do I know I'm on a real SASSA site?",
+        "a": "Real SASSA addresses end in .gov.za: srd.sassa.gov.za, services.sassa.gov.za, srd-appeals.dsd.gov.za and sassa.gov.za. Anything claiming to be SASSA that does not end in .gov.za is fake."
+      }
+    ],
+    "tags": [
+      "official sassa website",
+      "srd.sassa.gov.za",
+      "services.sassa.gov.za",
+      "srd-appeals.dsd.gov.za",
+      "sassa portal",
+      "sassa login"
+    ],
+    "lastUpdated": "2026-09-18",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "SASSA Official Website",
+        "url": "https://www.sassa.gov.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za",
+        "isExternal": true
+      },
+      {
+        "title": "SASSA Services Portal",
+        "url": "https://services.sassa.gov.za",
+        "isExternal": true
+      },
+      {
+        "title": "SASSA Main Website",
+        "url": "https://www.sassa.gov.za",
+        "isExternal": true
+      }
+    ],
+    "monetization": {
+      "vertical": "finance"
+    },
+    "nextSteps": [
+      {
+        "title": "Check your grant status",
+        "url": "/status-check",
+        "description": "Fastest way to see approval and pay day"
+      },
+      {
+        "title": "Lost your phone number",
+        "url": "/guides/lost-phone-number",
+        "description": "Fix portal logins after a SIM swap"
+      },
+      {
+        "title": "Appeal a declined grant",
+        "url": "/guides/appeal-guide",
+        "description": "Free within 90 days"
+      },
+      {
+        "title": "Find a SASSA office",
+        "url": "/sassa-offices",
+        "description": "For in-person help"
+      }
+    ]
+  },
+  {
+    "id": "srd-reapplication",
+    "title": "SRD Reapplication: When You Must Reapply and When You Must Not",
+    "description": "You apply for the SRD R370 once - SASSA reassesses you every month. This guide explains the only times you really do need to reapply (status 'reapplication_required'), how to do it at srd.sassa.gov.za, and why a declined month needs an appeal, not a new application.",
+    "category": "Apply for a Grant",
+    "difficulty": "beginner",
+    "estimatedTime": "6 minutes",
+    "image": "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Person filling in an application form on a phone",
+    "steps": [
+      {
+        "title": "You Apply Once - SASSA Reassesses Every Month",
+        "content": "The SRD R370 application stays active after you submit it. You do not reapply each month. What happens every month is an automated recheck of your circumstances: your bank account deposits, UIF records, NSFAS status, SARS records and Home Affairs identity details. If nothing changed, you stay Approved. If something is flagged, you go to Declined for that month only. Your status flipping between months is normal, not a cancellation.",
+        "tips": [
+          "Check your status after the 15th of the month for the most reliable result.",
+          "Approved in one month does not guarantee Approved in the next - circumstances are rechecked."
+        ]
+      },
+      {
+        "title": "A Decline Is Not a Cancellation - Appeal, Don't Reapply",
+        "content": "If SASSA declines you for a month, submit an appeal, not a new application. SATSA declines carry a reason code (income source detected, identity verification failed, UIF registered, NSFAS registered and others). Read the code, then appeal that specific month at srd-appeals.dsd.gov.za within 90 days. Successful appeals are paid back pay. Reapplying when you are simply declined creates duplicate applications, which can flag your account and delay a genuine application.",
+        "tips": [
+          "One appeal per declined month - each month is a separate case.",
+          "Appeals are free and take about 60 to 90 days."
+        ]
+      },
+      {
+        "title": "The One Status That Means You Really Must Reapply",
+        "content": "If your status on the SRD portal shows <strong>reapplication_required</strong> (also seen as 'Reapplication Pending'), SASSA no longer holds an active application for you. That is different from a decline - it means your application lapsed, timed out or was administratively reset. Common causes: a compulsory reapplication window you did not refresh, an internal application expiry, a platform migration that did not carry older applications across, or a cancellation after a period of ineligibility (for example a UIF period). This reason cannot be appealed - the fix is a fresh application.",
+        "tips": [
+          "Not sure why you were reset? Check your status on srd.sassa.gov.za before acting.",
+          "Reapplication_required is one of the few reasons where reapply, not appeal, is the correct move."
+        ]
+      },
+      {
+        "title": "How to Reapply Step by Step",
+        "content": "Go to srd.sassa.gov.za and sign in with the same 13-digit ID number and cellphone number you used before. Submit a new application and answer every question honestly - the system cross-checks your answers against government databases. Since September 2025 the grant also uses biometric verification, so complete the facial scan or fingerprint step within the 72 hours if you are prompted, otherwise the application can stall. Then check your status around the 15th.",
+        "tips": [
+          "Use the exact same ID number and phone number as your old application.",
+          "Do not create a second profile - reuse the one already on file."
+        ]
+      },
+      {
+        "title": "What Reapplication Does and Does Not Give You",
+        "content": "A successful reapplication restores your grant from the current month's assessment onward. It does not automatically back-pay the months your application was lapsed. If some of those lapsed months are still inside the 90-day appeal window, appeal those months as well - in some cases SASSA has approved backdated payments for declined months even after a reapplication. Approved grant amounts flow to the payment method on file, so keep your banking details up to date too.",
+        "tips": [
+          "Appeal declined months alongside reapplying instead of waiting to see what happens.",
+          "Back pay is decided per month and per appeal - it is not automatic."
+        ]
+      },
+      {
+        "title": "Keep Your Application Active and Healthy",
+        "content": "Future resets are avoidable. Keep the cellphone number on your file current so SASSA can notify you and code your OTPs. Use one bank account and make sure nobody else's deposits push you over the R624 income line. Complete biometric verification within 72 hours when prompted. Update your details honestly when your situation changes. And never pay an agent to reapply for you - the official portal is free.",
+        "tips": [
+          "Lost your phone number? Update it on the SRD portal (see our phone-number guide).",
+          "A single stranger depositing into your account can tip you over the threshold."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need to reapply for the SRD grant every month?",
+        "a": "No. You apply once and SASSA reassesses your eligibility automatically every month. Reapply only when your status tells you to, such as 'reapplication_required'."
+      },
+      {
+        "q": "I was declined this month - should I reapply?",
+        "a": "No. A declined month is not a cancellation. Read the decline reason on the SRD portal and appeal that month within 90 days at srd-appeals.dsd.gov.za if you disagree. Reapplying instead can cause duplicate applications."
+      },
+      {
+        "q": "What does the 'reapplication_required' status mean?",
+        "a": "It means SASSA no longer has an active application for you - usually because it lapsed, timed out or was administratively reset. It is not an eligibility decline and cannot be appealed. You need to submit a fresh application at srd.sassa.gov.za."
+      },
+      {
+        "q": "How long does a new SRD application take to process?",
+        "a": "A few weeks in most cases. Check your status on the SRD portal after the 15th of the month. First you see Pending, then Approved with a Pay Day, or Declined with a reason."
+      },
+      {
+        "q": "Will reapplication back-pay the months my grant was lapsed?",
+        "a": "No, not automatically. Reapproval applies from the current month's assessment. If declined months are still within the 90-day appeal window, appeal them separately for possible back pay."
+      },
+      {
+        "q": "Can I reapply if I cancelled my SRD application myself?",
+        "a": "Yes. Go to srd.sassa.gov.za and submit a new application with the same ID number and phone number. Your eligibility is then reassessed from the current month."
+      }
+    ],
+    "tags": [
+      "srd reapplication",
+      "reapplication_required",
+      "reapply srd",
+      "srd application",
+      "sassa r370"
+    ],
+    "lastUpdated": "2026-09-18",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "SASSA Official Website",
+        "url": "https://www.sassa.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za",
+        "isExternal": true
+      },
+      {
+        "title": "SRD Appeals (DSD)",
+        "url": "https://srd-appeals.dsd.gov.za",
+        "isExternal": true
+      }
+    ],
+    "monetization": {
+      "vertical": "finance"
+    },
+    "nextSteps": [
+      {
+        "title": "Appeal a declined grant",
+        "url": "/guides/appeal-guide",
+        "description": "Free within 90 days"
+      },
+      {
+        "title": "Every decline reason explained",
+        "url": "/decline-reason/identity-verification-failed",
+        "description": "See what each code means"
+      },
+      {
+        "title": "Lost your phone number",
+        "url": "/guides/lost-phone-number",
+        "description": "Fix portal logins after a SIM swap"
+      },
+      {
+        "title": "SRD status meanings",
+        "url": "/status/approved",
+        "description": "Approved, Pending, Declined and more"
+      }
+    ]
+  },
+  {
+    "id": "sassa-balance-check",
+    "title": "SASSA Grant Balance Check: Bank USSD Codes, Postbank SMS and Card Tips",
+    "description": "How to check your SASSA grant balance depends on where the money lands. Verified USSD codes for Capitec, FNB, Standard Bank, Absa and Nedbank, the official Postbank SMS balance service, and the difference between a balance and an SRD status.",
+    "category": "Banking & Payments",
+    "difficulty": "beginner",
+    "estimatedTime": "5 minutes",
+    "image": "https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?w=1200&h=400&fit=crop&auto=format",
+    "imageAlt": "Person holding a mobile phone and a bank card",
+    "steps": [
+      {
+        "title": "Your Payment Channel Decides How to Check",
+        "content": "There is no single 'SASSA balance check'. The right method depends on where your grant is paid: into your own bank account, or onto a Postbank card (Black Card, or the old Gold Card). If SASSA pays into your bank, you check with that bank. If it pays onto a Postbank card, you check with Postbank. Meanwhile the SRD portal shows your application status - whether the grant was approved for a month - not the rand balance sitting on your card or in your account.",
+        "tips": [
+          "Check the pay-day notification first; the balance follows the payment.",
+          "Which method applies to you? Look at how your money arrived last month."
+        ]
+      },
+      {
+        "title": "Bank Account Payments: Verified USSD Codes",
+        "content": "If your SRD grant is paid into a normal bank account, dial your bank's cellphone banking code to check the balance - no data needed. These codes were verified against official bank pages:\n\n| Bank | Balance check (dial) |\n|---|---|\n| Capitec | *120*3279# |\n| FNB | *120*321# |\n| Standard Bank | *120*2345# |\n| Absa | *120*2272# |\n| Nedbank | *120*001# |\n| African Bank | *120*225# |\n\nYou may need your cellphone banking PIN the first time. Each bank still lists its code on its own website and on the back of its card - confirm there before relying on it.",
+        "tips": [
+          "Register your cellphone number with the bank first - USSD banking is tied to it.",
+          "These codes use airtime in some cases, not data, and most balance checks are free or a few cents."
+        ]
+      },
+      {
+        "title": "Postbank Cards: Use the Official SMS Balance Service",
+        "content": "Postbank's official balance check is by SMS, published on the Postbank website. From the cellphone number registered on your account, send: <strong>'BAL'</strong>, a space, then the last four digits of your Postbank <strong>account number</strong> (not the card number) to <strong>32302</strong>. You get your balance back by SMS; it costs about R1. Send it from a different phone and you get an 'invalid cell number' error. You can also use a Postbank ATM balance enquiry for free, or call 0800 53 54 55.",
+        "tips": [
+          "Account number and card number are different - use the account number.",
+          "Save the number 32302 in your phone so the SMS is quick to send on pay day."
+        ]
+      },
+      {
+        "title": "*120*355# Is a Site Locator, Not a Balance Code",
+        "content": "The code *120*355# helps you find your nearest Postbank site - it is not a balance enquiry. Notably, Postbank does not publish a USSD balance code at all. The *120*69# balance menu you will see on some websites is not from Postbank and is unverified. Stick to the confirmed methods: the SMS service above, a Postbank ATM, or the call centre.",
+        "tips": [
+          "A website telling you to 'dial this code for your SASSA balance' is usually seeking clicks, not helping.",
+          "Never enter your PIN into a USSD session sent to you by SMS - dial only the codes you trust."
+        ]
+      },
+      {
+        "title": "Balance vs Status - They Are Two Different Things",
+        "content": "The USSD code *120*69277# and the SRD portal tell you your grant status - Approved, Pending or Declined, and the Pay Day date when approved. They do not show what is left on your card or in your bank account. To see the actual money, use your bank's USSD/app/ATM (bank payments) or Postbank's SMS service (card payments). Two queries, two answers: status says you were approved, balance says the money is there.",
+        "tips": [
+          "Approved with no payment arrived yet? The Pay Day date on the portal tells you what day to expect it.",
+          "Declined for the month? That is a status problem, not a balance problem - you may need to appeal."
+        ]
+      },
+      {
+        "title": "Check Safely, Especially on Pay Day",
+        "content": "On pay day the networks are congested - if a USSD or SMS request times out, wait a few minutes and retry. Never share your banking PIN, card PIN or OTP with anyone who contacts you about a 'balance check'. If your Postbank card locks after three wrong PIN attempts, you must visit a branch or service point. And if your balance looks short, check recent deposits against the R624 income line, because one stranger's deposit can trigger a declined month.",
+        "tips": [
+          "SASSA will never call and ask you to 'verify' by reading out an OTP or PIN.",
+          "Blocked card? Visit any Postbank service point - you will not sort it over SMS."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need internet data to check my SASSA balance?",
+        "a": "No. USSD and SMS balance checks work without data on any phone. They may use a small amount of airtime, but no data bundle is required."
+      },
+      {
+        "q": "Is the Postbank SMS balance service free?",
+        "a": "No - it costs about R1 per enquiry. The balance reply arrives by SMS from the registered cellphone number only."
+      },
+      {
+        "q": "Can I check my Postbank card balance by USSD?",
+        "a": "Postbank does not publish a USSD balance code. The official methods are the SMS service (send BAL plus the last four digits of your account number to 32302), Postbank ATM, or the call centre on 0800 53 54 55. USSD codes circulating online, like *120*69#, are unverified."
+      },
+      {
+        "q": "What is the *120*69277# USSD code for?",
+        "a": "It is the SASSA SRD status check - it shows whether your SRD grant is Approved, Pending or Declined for a month, not how much money is on your card."
+      },
+      {
+        "q": "My SRD is paid into a bank account. How do I check the balance?",
+        "a": "Use that bank's own channel - Capitec *120*3279#, FNB *120*321#, Standard Bank *120*2345#, Absa *120*2272#, Nedbank *120*001#, or each bank's app and ATM."
+      },
+      {
+        "q": "Why does my balance look lower than expected?",
+        "a": "Check recent deposits first. If a deposit pushed your total over the R624 income threshold in a month, that month may be declined. Check your SRD status on the portal, and appeal within 90 days if the decline is wrong."
+      }
+    ],
+    "tags": [
+      "sassa balance check",
+      "sassa card balance",
+      "postbank balance",
+      "bank ussd codes",
+      "srd balance"
+    ],
+    "lastUpdated": "2026-09-18",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Postbank SMS Balance Enquiry",
+        "url": "https://www.postbank.co.za/Questions/smsbalancenquiry.html"
+      },
+      {
+        "title": "Postbank Official Website",
+        "url": "https://www.postbank.co.za"
+      },
+      {
+        "title": "SRD Grant Official Portal",
+        "url": "https://srd.sassa.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Postbank SMS Balance Enquiry",
+        "url": "https://www.postbank.co.za/Questions/smsbalancenquiry.html",
+        "isExternal": true
+      },
+      {
+        "title": "Postbank Website",
+        "url": "https://www.postbank.co.za",
+        "isExternal": true
+      }
+    ],
+    "monetization": {
+      "vertical": "finance"
+    },
+    "nextSteps": [
+      {
+        "title": "SASSA USSD codes explained",
+        "url": "/guides/ussd-codes",
+        "description": "Status codes and other services"
+      },
+      {
+        "title": "Postbank Black Card migration",
+        "url": "/updates/update-2026-033",
+        "description": "Gold cards no longer work"
+      },
+      {
+        "title": "Check your grant status",
+        "url": "/status-check",
+        "description": "Approved, Pending or Declined"
+      },
+      {
+        "title": "Payment calendar",
+        "url": "/payment-calendar",
+        "description": "When pay days fall"
       }
     ]
   }

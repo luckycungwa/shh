@@ -25,11 +25,11 @@ export const SRD_CONFIG = {
 // the source + last-verified per month.
 //
 // As of the September 2026 cycle: permanent grant dates (Older Persons,
-// Disability, Children's) are confirmed by SASSA, but the SRD R370 date and the
-// fourth payment day (grants under review) were still TBC. Do NOT publish a
-// specific SRD/fourth-payment date as official until SASSA announces it —
-// update the forecast JSON status field to "confirmed" and its source/lastVerified
-// only when an official announcement exists.
+// Disability, Children's) and the SRD R370 batch dates (23 & 25 September) are
+// confirmed by SASSA, but the fourth payment day (grants under review) is still
+// TBC. Do NOT publish a specific fourth-payment date as official until SASSA
+// announces it — update the forecast JSON status field to "confirmed" and its
+// source/lastVerified only when an official announcement exists.
 //
 // USSD note: *120*69277# is the SRD status-check code (matches guides/ussd-codes). The old
 // *120*3227# value was retired — kept in git history only.

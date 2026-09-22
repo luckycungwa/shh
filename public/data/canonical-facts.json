@@ -168,28 +168,37 @@
     "confidence": "confirmed"
   },
   "sassa_gold_card": {
-    "value": "SASSA Gold Card — being phased out; will stop working after 31 August 2026. Beneficiaries must migrate to Postbank Black Card before deadline.",
+    "value": "SASSA Gold Card — phased out. Gold Cards stopped working on 31 August 2026. Grant payments still go into the beneficiary's account each month, but the funds can only be accessed with a Postbank Black Card.",
     "effective_date": "2026-08-31",
-    "source_url": "",
-    "verified_date": "2026-07-08",
-    "verified_by": "User confirmed — Postbank card migration programme",
-    "confidence": "needs_human_review"
+    "source_url": "https://www.gov.za/news/media-statements/sassa-last-call-gold-cards-beneficiaries-complete-their-switch-postbank-black",
+    "verified_date": "2026-09-18",
+    "verified_by": "Postbank via gov.za media statement; EWN (31 Aug 2026); IOL (24 Aug 2026)",
+    "confidence": "confirmed"
   },
   "postbank_black_card": {
-    "value": "Postbank Black Card — required replacement for SASSA Gold Card. All beneficiaries must migrate before 31 August 2026 to continue accessing funds.",
+    "value": "Postbank Black Card — required replacement for the phased-out SASSA Gold Card. Free, works immediately, no SASSA office visit or forms needed, and the Gold Card balance carries over automatically. Available at Shoprite, Checkers, Usave, Pick n Pay, Boxer and Spar sites, which remained open after the 31 August 2026 deadline. Locate a site with *120*355#.",
     "effective_date": "2026-08-31",
-    "source_url": "",
-    "verified_date": "2026-07-08",
-    "verified_by": "User confirmed — Postbank card migration programme",
-    "confidence": "needs_human_review"
+    "source_url": "https://www.gov.za/news/media-statements/sassa-last-call-gold-cards-beneficiaries-complete-their-switch-postbank-black",
+    "verified_date": "2026-09-18",
+    "verified_by": "Postbank via gov.za, EWN (31 Aug 2026), IOL (24 Aug 2026)",
+    "confidence": "confirmed"
   },
   "card_replacement_cost": {
-    "value": "Free of charge. Visit a designated Postbank service point (located in Shoprite, Checkers, Usave, Pick n Pay, Boxer, or Spar) with your valid SA ID or temporary ID. If anyone demands payment, it is a scam.",
-    "effective_date": "2026-07-08",
-    "source_url": "",
-    "verified_date": "2026-07-08",
-    "verified_by": "User confirmed — replacement is free at Postbank service points",
-    "confidence": "needs_human_review"
+    "value": "Free of charge, including after the 31 August 2026 deadline. Bring a valid South African ID or temporary ID to a Postbank service point (Shoprite, Checkers, Usave, Pick n Pay, Boxer or Spar). If anyone demands payment, it is a scam.",
+    "effective_date": "2026-08-31",
+    "source_url": "https://www.ewn.co.za/2026/08/31/today-is-last-day-to-switch-to-postbank-black-card",
+    "verified_date": "2026-09-18",
+    "verified_by": "Postbank CCO Thami Cele via EWN (31 Aug 2026); gov.za media statement",
+    "confidence": "confirmed"
+  },
+  "postbank_site_locator_ussd": {
+    "value": "*120*355#",
+    "note": "Postbank USSD store locator for identifying the nearest card replacement site.",
+    "effective_date": "2026-08-31",
+    "source_url": "https://www.gov.za/news/media-statements/sassa-last-call-gold-cards-beneficiaries-complete-their-switch-postbank-black",
+    "verified_date": "2026-09-18",
+    "verified_by": "gov.za media statement; SAnews; GroundUp",
+    "confidence": "confirmed"
   },
   "care_dependency_income_threshold_single": {
     "value": "R24,000",
@@ -256,12 +265,138 @@
     "confidence": "confirmed"
   },
   "foster_child_grant_amount_2025": {
-    "value": "R1,180",
+    "value": "R1,250",
     "note": "Previous cycle 2025/2026 amount — current is R1,290 (April 2026 increase)",
     "effective_date": "2025-04-01",
+    "source_url": "https://www.gov.za/services/child-care-social-benefits/foster-child-grant",
+    "verified_date": "2026-09-18",
+    "verified_by": "gov.za foster child grant service page; DSD grant amount history",
+    "confidence": "confirmed"
+  },
+  "sassa_whatsapp_number": {
+    "value": "082 601 0111",
+    "note": "SASSA Self-Service WhatsApp (Social Grants). Flow: send 'Hi' → Social Grants → grant type → verify with mobile number, OTP and ID → Application Status / 'Am I in Review?' / proof-of-life checks. Launched August 2026; confirmed in the SASSA digital-services briefing of 18 September 2026.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official sassa.gov.za WhatsApp channel link; IOL (26 Aug 2026), EWN (4 Aug 2026), The Citizen (1 Sep 2026)",
+    "confidence": "confirmed",
+    "effective_date": "2026-08"
+  },
+  "sassa_whatsapp_srd_number": {
+    "value": "082 046 8553",
+    "note": "Older SRD WhatsApp/status line, still active. Both 082 601 0111 and 082 046 8553 are official SASSA WhatsApp channels.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official sassa.gov.za WhatsApp channel link",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "sassa_review_status_whatsapp": {
+    "value": "Am I in Review?",
+    "note": "Proof-of-life and review-status check available through the SASSA Self-Service WhatsApp (082 601 0111) inside the Social Grants flow. Confirmed in SASSA digital-services briefing coverage.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Citizen / JoburgETC coverage of the SASSA digital-services briefing, 18 September 2026",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "srd_portal_url": {
+    "value": "https://srd.sassa.gov.za",
+    "note": "Official SRD R370 grant portal: apply, check status, update banking details.",
+    "source_url": "https://srd.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official SRD portal",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "services_portal_url": {
+    "value": "https://services.sassa.gov.za",
+    "note": "Official SASSA services portal for permanent (non-SRD) grant applications and services.",
+    "source_url": "https://services.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official SASSA services portal",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "sassa_website_url": {
+    "value": "https://www.sassa.gov.za",
+    "note": "Official SASSA website; authoritative for grant rates, schedules and contact channels.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official SASSA website",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "appeals_portal_url": {
+    "value": "https://srd-appeals.dsd.gov.za",
+    "note": "Official portal for lodging and tracking SRD grant appeals (ITSAA).",
+    "source_url": "https://srd-appeals.dsd.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official ITSAA appeals portal",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "sassa_helpline": {
+    "value": "0800 60 10 11",
+    "note": "Toll-free SASSA helpline. Calls are free from any phone.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official sassa.gov.za contact details",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "ussd_srd_status": {
+    "value": "*120*69277#",
+    "note": "USSD code for checking the SRD R370 application/status without internet access.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Official sassa.gov.za USSD listing",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "ussd_postbank_balance": {
+    "value": "*120*3210#",
+    "note": "Postbank USSD code for SASSA grant balance/status on a Postbank account or SASSA card holder account.",
+    "source_url": "https://www.postbank.co.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Postbank USSD service listing",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-18"
+  },
+  "ussd_srd_legacy": {
+    "value": "*134*7737#",
+    "note": "Older SRD USSD application/status code. Largely deprecated — use *120*69277# for status or the portal for applications. Verify with your network before relying on it.",
     "source_url": "",
-    "verified_date": "2026-08-20",
-    "verified_by": "",
-    "confidence": "needs_human_review"
+    "verified_date": "2026-09-18",
+    "verified_by": "Secondary listings only; not confirmed on official sassa.gov.za",
+    "confidence": "unverified",
+    "effective_date": "2026-09-18"
+  },
+  "sms_status_32555": {
+    "value": "32555",
+    "note": "SMS 'STATUS {13-digit ID}' to 32555 is widely shared on secondary sites. NOT confirmed on official sassa.gov.za — never present it as an official SASSA method.",
+    "source_url": "",
+    "verified_date": "2026-09-18",
+    "verified_by": "Secondary listings only; not confirmed on official sassa.gov.za",
+    "confidence": "unverified",
+    "effective_date": "2026-09-18"
+  },
+  "srd_sca_status": {
+    "value": "Judgment reserved (25 August 2026)",
+    "note": "The Supreme Court of Appeal heard SASSA's appeal on 25 August 2026 and reserved judgment. The High Court findings (online-only application, R624 threshold and R370 amount unconstitutional; in-person applications, progressive increases, once-off gifts excluded from income) are not in force pending the SCA decision. The SRD amount and income limit remain unchanged until a court order is implemented.",
+    "source_url": "https://www.dailymaverick.co.za",
+    "verified_date": "2026-09-18",
+    "verified_by": "Daily Maverick, GroundUp, TimesLIVE, The South African, bizcommunity (25-28 Aug 2026)",
+    "confidence": "reported",
+    "effective_date": "2026-09-18"
+  },
+  "srd_sept_2026_payment_window": {
+    "value": "23 & 25 September 2026",
+    "note": "SASSA has confirmed the COVID-19 SRD payment dates for September 2026: Wednesday 23 September and Friday 25 September. Beneficiaries are paid in a batch on either date depending on their 'Pay Day' date on the official SRD portal; they are not paid on both dates.",
+    "source_url": "https://www.sassa.gov.za",
+    "verified_date": "2026-09-22",
+    "verified_by": "SASSA official September 2026 SRD payment dates graphic",
+    "confidence": "confirmed",
+    "effective_date": "2026-09-22"
   }
 }

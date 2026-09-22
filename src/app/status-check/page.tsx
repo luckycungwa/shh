@@ -528,14 +528,14 @@ export default function StatusCheckPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
              <div className="space-y-6">
                 <p className="text-lg text-gray-600 dark:text-gray-400">
-                  For <strong>{currentMonthYear}</strong>, the SRD payment date has <strong>not yet been officially confirmed</strong>. The grant is normally paid in a batch window in the last week of the month:
+                  For <strong>{currentMonthYear}</strong>, SASSA has confirmed the SRD R370 payment dates of <strong>23 and 25 September 2026</strong>. The grant is paid in batches on those dates:
                 </p>
                 <Card className="p-8 bg-primary-gold/10 border-primary-gold border-2 rounded-[2.5rem] shadow-xl">
-                   <p className="text-center font-black text-3xl text-primary-black mb-2">TBC — last week of the month</p>
-                   <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">Not yet officially confirmed</p>
+                   <p className="text-center font-black text-3xl text-primary-black mb-2">23 &amp; 25 September 2026</p>
+                   <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">Confirmed by SASSA</p>
                 </Card>
                 <p className="text-sm text-amber-700 dark:text-amber-400 font-semibold">
-                  Do not rely on third-party dates. Check your status on the official SRD portal for a &ldquo;Pay Day&rdquo; date once SASSA confirms, and only collect once you receive the payment SMS.
+                  Do not rely on third-party dates. Check your status on the official SRD portal for your personal &ldquo;Pay Day&rdquo; date (either 23 or 25 September), and only collect once you receive the payment SMS.
                 </p>
                 <div className="prose prose-sm dark:prose-invert">
                    <p>Remember these three critical factors regarding your payment:</p>
@@ -563,11 +563,12 @@ export default function StatusCheckPage() {
                     </div>
                     <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
                        <span className="font-bold">SRD R370</span>
-                       <Chip color="warning" variant="flat">TBC — not yet confirmed</Chip>
+                       <Chip color="success" variant="flat">Wed 23 &amp; Fri 25 Sep</Chip>
                     </div>
                  </div>
-                <div className="mt-8">
+                <div className="mt-8 space-y-3">
                    <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</Button>
+                   <NextLink href="/dates/september-2026" className="block text-center text-sm font-bold text-primary-gold underline">See the full September 2026 schedule</NextLink>
                 </div>
              </div>
           </div>

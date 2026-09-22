@@ -53,11 +53,25 @@ export function generateStaticParams() {
   return readAll().map((s) => ({ "month-year": s.month_key }));
 }
 
+function toFriendlyDate(iso: string): string {
+  if (!iso || !iso.includes("-")) return iso || "";
+  const [y, m, d] = iso.split("-").map(Number);
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return `${d} ${months[m - 1]} ${y}`;
+}
+
 export function generateMetadata({ params }: { params: { "month-year": string } }): Metadata {
   const s = readAll().find((x) => x.month_key === params["month-year"]);
   if (!s) return { title: "Payment Dates Not Found" };
-  const title = `SASSA Payment Dates for ${s.label} — Full Grant Schedule`;
-  const description = `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
+  const title = `SASSA ${s.label} Grant Schedule — All Grant Payment Dates`;
+  const confirmedDays = grantRows
+    .filter((row) => s[row].status === "confirmed")
+    .map((row) => creditInfo(s, row))
+    .map((info) => `${info.grant}: ${toFriendlyDate(info.date)}`)
+    .join(", ");
+  const description = confirmedDays
+    ? `${s.label} SASSA payment dates, confirmed: ${confirmedDays}. Official schedule for the Older Persons, Disability, Children's and SRD R370 grants.`
+    : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
   const url = `https://www.sassahelphub.co.za/dates/${params["month-year"]}`;
   return {
     title,
@@ -73,18 +87,25 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
   const schedule = readAll().find((x) => x.month_key === params["month-year"]);
   if (!schedule) notFound();
 
-  const title = `SASSA Payment Dates for ${schedule.label} — Full Grant Schedule`;
-  const description = `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
+  const title = `SASSA ${schedule.label} Grant Schedule — All Grant Payment Dates`;
+  const confirmedDays = grantRows
+    .filter((row) => schedule[row].status === "confirmed")
+    .map((row) => creditInfo(schedule, row))
+    .map((info) => `${info.grant}: ${toFriendlyDate(info.date)}`)
+    .join(", ");
+  const description = confirmedDays
+    ? `${schedule.label} SASSA payment dates, confirmed: ${confirmedDays}. Official schedule for the Older Persons, Disability, Children's and SRD R370 grants.`
+    : `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
 
   const faqs = [
-    { q: `What is the SRD R370 payment date for ${schedule.label}?`, a: `For ${schedule.label}, the SRD R370 grant is expected to be paid in the last week of the month${schedule.srd.status === "confirmed" ? ` on ${schedule.srd.day}` : ", but SASSA has not yet officially confirmed the exact date"}. Check the official SRD portal (srd.sassa.gov.za) for your own 'Pay Day' date — it is more reliable than any general schedule.` },
+    { q: `What is the SRD R370 payment date for ${schedule.label}?`, a: `For ${schedule.label}, the SRD R370 grant is ${schedule.srd.status === "confirmed" ? `paid in batches in the last week of the month on ${schedule.srd.day}` : "expected to be paid in the last week of the month, but SASSA has not yet officially confirmed the exact date"}. Check the official SRD portal (srd.sassa.gov.za) for your own 'Pay Day' date — it is more reliable than any general schedule.` },
     { q: "Why is the SRD payment date different from the permanent grants?", a: "Unlike permanent grants which are paid in the first week of each month, the SRD R370 is paid in batches during the last week of the month. Beneficiaries are not all paid on the same day — your personal 'Pay Day' appears on your status check." },
     { q: "Can my payment date change after it appears?", a: "Yes. Payment dates can shift between batches or if your application needs additional verification. Check your status again after the 15th of the month, and use the official SRD portal as your source of truth." },
   ];
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      <JsonLd data={articleSchema(title, description, `/dates/${schedule.month_key}`, "Lucky Cungwa", "2026-08-31")} />
+      <JsonLd data={articleSchema(title, description, `/dates/${schedule.month_key}`, "Lucky Cungwa", "2026-09-22")} />
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
         { name: "Payment Calendar", slug: "/payment-calendar" },
@@ -121,7 +142,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
           <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">{title}</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
           <EditorialMeta lastVerified={schedule.governance?.lastVerified || "2026-08-31"} author="Lucky Cungwa" />
-          {schedule.srd.status !== "confirmed" && (
+          {grantRows.some((row) => schedule[row].status !== "confirmed") && (
             <div className="flex items-start gap-3 p-4 rounded-2xl border-2 border-amber-200 dark:border-amber-700/50 bg-amber-50 dark:bg-amber-900/10 text-sm text-amber-800 dark:text-amber-200">
               <FaLink className="text-amber-500 mt-0.5 shrink-0" />
               <p>
@@ -226,7 +247,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
         />
 
         <Divider />
-        <EditorialFooter lastUpdated="2026-08-31" author="Lucky Cungwa" />
+        <EditorialFooter lastUpdated="2026-09-22" author="Lucky Cungwa" />
       </article>
     </div>
   );
