@@ -9,7 +9,7 @@ export interface SearchRecord {
 export function searchIndex(query: string, entries: SearchRecord[]): SearchRecord[] {
   const q = query.trim().toLowerCase();
   if (!q) return [];
-  const terms = q.split(/[\s\-]+/).filter((t) => t.length > 1);
+  const terms = q.split(/[\s-]+/).filter((t) => t.length > 1);
   const scored: { rec: SearchRecord; score: number }[] = [];
 
   for (const rec of entries) {

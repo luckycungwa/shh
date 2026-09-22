@@ -75,7 +75,7 @@ function countWordsInSections(data) {
   if (data.content) text += " " + data.content;
   if (data.steps) text += " " + JSON.stringify(data.steps);
   if (data.faqs) text += " " + JSON.stringify(data.faqs);
-  return text.replace(/[#*`_>\-\[\]()|]/g, " ").split(/\s+/).filter(Boolean).length;
+  return text.replace(/[#*`_>\-[]()|]/g, " ").split(/\s+/).filter(Boolean).length;
 }
 
 function faqCountOf(data) {

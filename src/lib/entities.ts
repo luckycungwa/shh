@@ -1,6 +1,6 @@
 import type { NextStepItem } from "../components/affiliate/NextStepCard";
 
-export interface EntityLink extends NextStepItem {}
+export type EntityLink = NextStepItem;
 
 class EntityLinkBuilder {
   private links: EntityLink[] = [];

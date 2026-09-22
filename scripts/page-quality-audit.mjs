@@ -39,7 +39,7 @@ function grade(score) {
 
 function normalizeText(s) {
   return (s || "")
-    .replace(/[\u00a0\u200b\u200c\u200d\ufeff]+/g, " ")
+    .replace(/(?:\u00a0|\u200b|\u200c|\u200d|\ufeff)+/gu, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -171,7 +171,7 @@ function extractPageMetrics(url, html) {
     if (d) lastUpdated = d.toISOString().slice(0, 10);
   }
 
-  const bylineMatch = mainText.match(/written by\s+([A-Z][A-Za-z '.\-]{2,60})/i);
+  const bylineMatch = mainText.match(/written by\s+([A-Z][A-Za-z '.-]{2,60})/i);
   const author = ldAuthor || (bylineMatch && bylineMatch[1].trim()) || null;
   const authorByline = !!(bylineMatch && bylineMatch[1]);
 
