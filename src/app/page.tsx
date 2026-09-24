@@ -4,9 +4,10 @@ import React from "react";
 import { Button, Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
 import { FaShieldAlt, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaClock, FaCheckCircle, FaRegBell, FaFileAlt } from "react-icons/fa";
 import NextLink from "next/link";
-import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
+import { getCurrentMonthLabel, getCurrentMonthKey, getCurrentYearString } from "../lib/config";
 import { buildMetadata } from "../lib/seo";
 import { getFact } from "../lib/canonical-facts";
+import { readForecast, stripRowsFor, srdDisplay, type MonthSchedule } from "../lib/payment-schedule";
 import HeroCarousel from "../components/HeroCarousel";
 
 export const metadata = buildMetadata({
@@ -35,8 +36,10 @@ export default function HomePage() {
     updates.push(...allSorted.filter(u => !updates.find(x => x.id === u.id)).slice(0, 3 - updates.length));
   }
 
-  const paymentDatesPath = path.join(process.cwd(), "public/data/paymentDates.json");
-  const paymentDates: { grant: string; date: string; day: string }[] = JSON.parse(fs.readFileSync(paymentDatesPath, "utf8"));
+  const forecast = readForecast();
+  const currentKey = getCurrentMonthKey();
+  const currentMonth: MonthSchedule | undefined = forecast.find((m) => m.month_key === currentKey);
+  const paymentDates = currentMonth ? stripRowsFor(currentMonth) : [];
 
   const tools = [
     {
@@ -145,14 +148,41 @@ export default function HomePage() {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <p className="text-[9px] font-black uppercase text-primary-black/60 tracking-wider mb-1">{p.grant}</p>
-                <p className="text-2xl font-black text-primary-black leading-none">{p.date === "TBC" ? "TBC" : new Date(p.date).getDate()}</p>
+                <p className="text-2xl font-black text-primary-black leading-none">
+                  {p.date === "TBC" || p.date === "TBA" ? p.date : new Date(p.date).getDate()}
+                </p>
                 <p className="text-[9px] font-bold text-primary-black/70 uppercase tracking-tight mt-0.5">{p.day}</p>
               </div>
             ))}
           </div>
-          <p className="lg:ml-72 mt-4 text-xs font-semibold text-primary-black/70">
-            Main grant payments run 2&ndash;4 September 2026. SASSA has confirmed the <strong>SRD R370 payment dates of 23 and 25 September 2026</strong>. The fourth payment day for grants under review remains unconfirmed &mdash; check your status for your personal &ldquo;Pay Day&rdquo; date and see the <a href="/dates/september-2026" className="underline font-bold">full September schedule</a>. Avoid long queues by withdrawing later in the day or using a retail point.
-          </p>
+          {currentMonth && (() => {
+            const monthName = currentMonth.label;
+            const f = (iso: string) => {
+              if (!iso || iso === "TBC" || iso === "TBA") return "";
+              const [y, m, d] = iso.split("-").map(Number);
+              return `${d} ${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][m - 1]}`;
+            };
+            const op = currentMonth.older_persons;
+            const dis = currentMonth.disability;
+            const ch = currentMonth.children;
+            const srd = srdDisplay(currentMonth.srd, currentMonth.label);
+            const allConfirmed = op.status === "confirmed" && dis.status === "confirmed" && ch.status === "confirmed";
+            const mainLine = allConfirmed
+              ? <>Main grant payments run {f(op.date)}, {f(dis.date)} and {f(ch.date)} {currentMonth.year}. </>
+              : <>Main grant payments for {monthName} are expected in the first week of the month, subject to official confirmation. </>;
+            const srdLine = srd.status === "confirmed"
+              ? <>SASSA has confirmed the <strong>SRD R370 payment dates of {srd.day}</strong>. </>
+              : <>The <strong>SRD R370 payment date for {monthName}</strong> is announced later in the month &mdash; check your status for your personal &ldquo;Pay Day&rdquo; date. </>;
+            const urLine = currentMonth.under_review.status === "confirmed"
+              ? null
+              : <>The fourth payment day for grants under review remains unconfirmed. </>;
+            return (
+              <p className="lg:ml-72 mt-4 text-xs font-semibold text-primary-black/70">
+                {mainLine}{srdLine}{urLine}See the{" "}
+                <a href={`/dates/${currentMonth.month_key}`} className="underline font-bold">full {monthName} schedule</a> and the <a href="/payment-calendar" className="underline font-bold">2026 payment calendar</a>. Avoid long queues by withdrawing later in the day or using a retail point.
+              </p>
+            );
+          })()}
         </div>
       </section>
 

@@ -372,6 +372,19 @@
       "https://www.sassa.gov.za",
       "https://srd.sassa.gov.za"
     ]
+  },
+  {
+    "id": "update-2026-038",
+    "title": "SASSA Confirms October 2026 Payment Dates - Older Persons Paid 2 October",
+    "summary": "SASSA has confirmed the October 2026 payment dates: Older Persons on Friday 2 October, Disability on Monday 5 October, and Children's Grants on Tuesday 6 October. The SRD R370 date is announced later in October.",
+    "content": "# SASSA Confirms October 2026 Payment Dates - Older Persons Paid 2 October\n\nThe South African Social Security Agency (SASSA) has confirmed the **October 2026 payment dates** for the permanent social grants. As always, Older Persons Grants are paid first, followed by Disability Grants and then Children's Grants.\n\n## October 2026 Confirmed Payment Dates\n\n| Grant Type | Payment Date |\n|---|---|\n| **Older Persons Grant** | Friday, 2 October 2026 |\n| **Disability Grant** | Monday, 5 October 2026 |\n| **Children's Grants** | Tuesday, 6 October 2026 |\n| **Grants Under Review** | Date not yet confirmed |\n| **SRD {{srd_grant_amount}} Grant** | Date not yet confirmed (announced later in October) |\n\n## Not Yet Confirmed: SRD and Fourth Payment Day\n\nTwo October 2026 dates are **not yet officially confirmed**:\n\n- The **SRD {{srd_grant_amount}}** payment date. The SRD is always paid in the last week of the month, but SASSA confirms the exact dates **later in the month**. Do not rely on third-party dates - only the official SRD portal is authoritative.\n- The **fourth payment day** for beneficiaries whose grants are under review.\n\nCheck your status on the official [SRD portal](https://srd.sassa.gov.za) - your personal **\"Pay Day\"** date is more reliable than any general schedule.\n\n## The Broader 2026/27 Calendar\n\nThe October dates align with the **DSD-approved 2026/27 payment schedule**. Looking ahead, the November dates (Older Persons 3 November, Disability 4 November, Children's 5 November) and December dates (2, 3 and 4 December) follow the same pattern. See the [2026 payment calendar](/payment-calendar) and the [full October schedule](/dates/october-2026) for all grant dates.\n\n## What Approved Means for October\n\nIf your status shows **\"Approved\"** but you do not yet see a **\"Pay Day\"** date, this is normal early in the month. SRD statuses are refreshed around the middle of each month, and a payment date is added once the payment batch is confirmed. Read more about what [Approved means](/status/approved).\n\n## Check Your Status\n\nAlways verify your grant status before heading out to collect. Use the [SRD portal](https://srd.sassa.gov.za) for SRD grants or visit your nearest SASSA office for permanent grants.\n\n[View the Full Payment Calendar](/payment-calendar) | [Check Your Status](/status-check) | [Full SRD Grant Guide](/grants/srd-r370-grant) | [Fix a Missing Payment](/guides/missing-grant-payment-guide)",
+    "date": "2026-09-24",
+    "type": "news",
+    "urgent": false,
+    "sources": [
+      "https://www.sassa.gov.za",
+      "https://srd.sassa.gov.za"
+    ]
   }
 ]
 

@@ -11,11 +11,6 @@ export const GRANT_CONFIG = {
   whatsappNumber: "082 601 0111",
 };
 
-export const SRD_CONFIG = {
-  batchStartDay: 25,
-  grantName: "SRD R370",
-};
-
 // DATE GOVERNANCE: The authoritative, governance-tagged schedule lives in
 // public/data/payment-schedule-forecast.json, where each month carries:
 //   - per-grant status of "confirmed" (officially announced) vs "projected"
@@ -24,12 +19,22 @@ export const SRD_CONFIG = {
 // non-confirmed (projected) dates as such with an amber warning, and renders
 // the source + last-verified per month.
 //
-// As of the September 2026 cycle: permanent grant dates (Older Persons,
-// Disability, Children's) and the SRD R370 batch dates (23 & 25 September) are
-// confirmed by SASSA, but the fourth payment day (grants under review) is still
-// TBC. Do NOT publish a specific fourth-payment date as official until SASSA
-// announces it — update the forecast JSON status field to "confirmed" and its
-// source/lastVerified only when an official announcement exists.
+// Confirmation rhythm (rule of thumb):
+//   - Permanent grant dates (Older Persons, Disability, Children's) for the
+//     NEXT month are confirmed in advance — typically mid-to-late the month
+//     before, per the DSD-approved annual schedule. e.g. SASSA confirmed the
+//     October 2026 dates (2/5/6 Oct) on 16 September 2026.
+//   - The SRD R370 dates change EVERY month and are only announced AFTER the
+//     ~20th of that same month. Until then they must render as TBA — never a
+//     guessed date. src/lib/payment-schedule.ts encodes this rule via
+//     srdDisplay(), so the homepage strip and the calendar can never
+//     contradict the displayed month.
+//   - The fourth payment day (grants under review) is confirmed separately,
+//     often later in the month; keep it TBC until SASSA announces it.
+//
+// Do NOT publish an unannounced date as official — update the forecast JSON
+// status field to "confirmed" and refresh its source/lastVerified only when an
+// official announcement exists (see the September 2026 cycle as reference).
 //
 // USSD note: *120*69277# is the SRD status-check code (matches guides/ussd-codes). The old
 // *120*3227# value was retired — kept in git history only.
@@ -61,60 +66,20 @@ export function getCurrentMonthYearKey(): string {
   return `${now.toLocaleDateString("en-ZA", { month: "long" })} ${now.getFullYear()}`;
 }
 
-export function getSRDBatchWindow(month: number, year: number): { start: Date; end: Date } {
-  const start = new Date(year, month, SRD_CONFIG.batchStartDay);
-  const end = new Date(year, month + 1, 0);
-  return { start, end };
+// Matches the month_key format used in public/data/payment-schedule-forecast.json.
+// Uses the same "after the 20th, show next month" rule as getCurrentMonthLabel()
+// so the homepage strip and the displayed heading never contradict.
+export function getCurrentMonthKey(): string {
+  const now = new Date();
+  const target = now.getDate() > 20
+    ? new Date(now.getFullYear(), now.getMonth() + 1, 1)
+    : new Date(now.getFullYear(), now.getMonth(), 1);
+  return `${target.toLocaleDateString("en-ZA", { month: "long" }).toLowerCase()}-${target.getFullYear()}`;
 }
 
 export function isMonthPast(month: number, year: number): boolean {
   const now = new Date();
   return year < now.getFullYear() || (year === now.getFullYear() && month < now.getMonth());
-}
-
-const CONFIRMED_SCHEDULE: Record<string, { older_persons: string; disability: string; children: string }> = {
-  "2026-08": { older_persons: "2026-08-04", disability: "2026-08-05", children: "2026-08-06" },
-  "2026-09": { older_persons: "2026-09-02", disability: "2026-09-03", children: "2026-09-04" },
-  "2026-10": { older_persons: "2026-10-02", disability: "2026-10-05", children: "2026-10-06" },
-  "2026-11": { older_persons: "2026-11-03", disability: "2026-11-04", children: "2026-11-05" },
-  "2026-12": { older_persons: "2026-12-02", disability: "2026-12-03", children: "2026-12-04" },
-};
-
-export function generateMonthSchedule(): { month: string; dates: string[]; srdStart: string; srdEnd: string; confirmed: boolean }[] {
-  const now = new Date();
-  const months: { month: string; dates: string[]; srdStart: string; srdEnd: string; confirmed: boolean }[] = [];
-  // Generate from current month through December 2026
-  const endMonthIndex = 11;
-  const endYear = 2026;
-  const totalMonths = (endYear - now.getFullYear()) * 12 + (endMonthIndex - now.getMonth()) + 1;
-  const count = Math.max(0, Math.min(totalMonths, 12));
-
-  for (let i = 0; i < count; i++) {
-    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
-    const year = d.getFullYear();
-    const month = d.getMonth();
-    const monthKey = `${year}-${String(month + 1).padStart(2, "0")}`;
-    const label = d.toLocaleDateString("en-ZA", { month: "long", year: "numeric" });
-    const confirmed = !!CONFIRMED_SCHEDULE[monthKey];
-
-    let dates: string[];
-    if (confirmed) {
-      const c = CONFIRMED_SCHEDULE[monthKey];
-      dates = [c.older_persons, c.disability, c.children];
-    } else {
-      const baseDay = new Date(year, month, 1).getDay();
-      const secondWorkingDay = baseDay <= 1 ? 2 : baseDay === 6 ? 4 : 2;
-      dates = [
-        `${year}-${String(month + 1).padStart(2, "0")}-${String(secondWorkingDay).padStart(2, "0")}`,
-        `${year}-${String(month + 1).padStart(2, "0")}-${String(secondWorkingDay + 1).padStart(2, "0")}`,
-        `${year}-${String(month + 1).padStart(2, "0")}-${String(secondWorkingDay + 4).padStart(2, "0")}`,
-      ];
-    }
-    const srdWindow = getSRDBatchWindow(month, year);
-    const fmt = (dt: Date) => `${year}-${String(month + 1).padStart(2, "0")}-${String(dt.getDate()).padStart(2, "0")}`;
-    months.push({ month: label, dates, srdStart: fmt(srdWindow.start), srdEnd: fmt(srdWindow.end), confirmed });
-  }
-  return months;
 }
 
 export function getSiteUrl(path: string = ""): string {

@@ -96,3 +96,20 @@ All 253 static routes prerender; new updates, guides, and status pages are gener
 - Two verification surfaces remain intentional: SMS `STATUS {ID}` -> 32555 and GovChat-as-method are recorded as **unverified / not official** and are never published as methods.
 
 All actions in this report were completed against dated 2026 sources (gov.za, sassa.gov.za, srd.sassa.gov.za, srd-appeals.dsd.gov.za, postbank.co.za, treasury.gov.za, plus dated reporting from IOL, EWN, Citizen, Daily Maverick, GroundUp, TimesLIVE, The South African, bizcommunity). No competitor site was used as a source of fact.
+---
+
+## 10. Phase 2 - Indexation diagnosis & status-intent fixes (2026-09-22)
+
+Diagnostic (GSC 3-month + live URL inspections) confirmed the **status cluster works but is mostly unindexed**:
+- Sitemap is correct (184 URLs; all 22 `/status/[slug]` + 4 `/dates/[month-year]` present). All template routes render HTTP 200 with proper titles/metadata/canonicals.
+- Google has indexed only 3 of 22 status pages (`declined`, `appeal-pending` `referred`) and **none** of the `/dates/*` pages; `/status` hub was "URL unknown to Google". Root cause: crawl/indexation priority, not a technical defect.
+- Cannibalisation confirmed: `/payment-calendar` (8,083 clicks) absorbs status-intent queries (e.g. `srd status check` pos 12.3, `sassa status check` pos 21.3) that should land on `/status-check`.
+
+Executed in code (build + lint clean):
+1. **`/payment-calendar`** - added a "What does each SASSA status mean?" link block deep-linking the `/status` hub + `approved`/`pending`/`paid`/`declined`/`bank-details-pending` (feeds crawl equity from an indexed, high-traffic page into the unindexed cluster).
+2. **`/status-check`** - added `/status` hub link card ("What does my status mean?") to the post-check situations grid.
+3. **`/payment-calendar` metadata** - retitled to "SASSA Payment Calendar September & October 2026 - SRD R370 & All Grant Dates" with month-fresh meta (601K-impression page, 1.3% CTR).
+
+Out-of-code actions recorded for the site owner:
+- Use GSC URL Inspection to **Request Indexing** on `/status` hub + priority status pages (`approved`, `pending`, `bank-details-pending`) and `/dates/september-2026`.
+- GSC flags `/guides/bank-details-pending-fix` as 404 - **stale record**; live verification returns 200 (confirmed 2026-09-22).

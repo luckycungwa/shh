@@ -4,7 +4,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
-import { FaMapMarkerAlt, FaPhone, FaClock, FaQuestionCircle } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
@@ -16,10 +16,12 @@ interface Province {
   capital: string;
   description: string;
   srd_challenges: string;
-  main_offices: { town: string; address: string; phone: string }[];
-  district_offices: { town: string; address: string; phone: string }[];
+  main_offices: { town: string; address?: string; phone?: string; verified?: boolean }[];
+  district_offices: { town: string; address?: string; phone?: string; verified?: boolean }[];
   collection_points: { retailer: string; towns: string[] }[];
   payment_collection: string;
+  regional_office?: { town: string; address?: string; phone?: string; hours?: string };
+  last_updated: string;
 }
 
 function readProvinces(): Province[] {
@@ -54,19 +56,18 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
   const province = readProvinces().find((p) => p.slug === params.province);
   if (!province) notFound();
 
-  const allOffices = [...province.main_offices, ...province.district_offices];
   const title = `SASSA Offices in ${province.name} — Contact Details & Locations`;
   const description = `Find SASSA offices in ${province.name}. Addresses, phone numbers, contact details, grant collection points and office hours for all ${province.name} SASSA branches.`;
 
   const faqs = [
-    { q: `Where is the main SASSA office in ${province.name}?`, a: `The main SASSA office is in ${province.capital}. You can also visit district offices listed on this page. All SASSA offices handle grant applications, status queries, and appeals.` },
+    { q: `Where is the main SASSA office in ${province.name}?`, a: `The SASSA regional office for ${province.name} is in ${province.regional_office?.town || province.capital}. You can also visit district offices listed on this page. All SASSA offices handle grant applications, status queries, and appeals.` },
     { q: `What services does a SASSA office in ${province.name} provide?`, a: `SASSA offices in ${province.name} handle grant applications, SRD applications, status queries, updating personal details, appeals, and disability grant assessments.` },
     { q: "Do I need to visit a SASSA office in person?", a: "Many services like SRD applications and status checks can be done online (srd.sassa.gov.za) or via WhatsApp (082 601 0111). Visit a branch only when you need to update documents or for services that cannot be done online." },
   ];
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <JsonLd data={articleSchema(title, description, `/sassa-offices/${province.slug}`, "Lucky Cungwa", "2026-08-31")} />
+      <JsonLd data={articleSchema(title, description, `/sassa-offices/${province.slug}`, "Lucky Cungwa", province.last_updated)} />
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
         { name: "SASSA Offices", slug: "/sassa-offices" },
@@ -90,9 +91,13 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
         </header>
 
         <section className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-2xl border-l-8 border-blue-500">
-          <h2 className="text-2xl font-bold mb-4">About SASSA in {province.name}</h2>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{province.description}</p>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">{province.srd_challenges}</p>
+          <h2 className="text-2xl font-bold mb-4">About SASSA Offices in {province.name}</h2>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            SASSA services in {province.name} run through the regional office in {province.regional_office?.town || province.capital} plus the main and district branches listed below. Offices handle grant and SRD applications, status queries, updating personal details, appeals, and assessments.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+            Before travelling, many things — applications, status checks and banking changes — can be done online. Need eligibility facts and application steps instead of addresses? See the <NextLink href={`/province/${province.slug}`} className="underline font-bold">SASSA grants guide for {province.name}</NextLink>.
+          </p>
         </section>
 
         <section>
@@ -103,8 +108,15 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
                 <Card className="p-5 hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 group-hover:border-primary-gold/30 h-full">
                   <CardBody className="p-0 space-y-2">
                     <p className="font-bold text-lg group-hover:text-primary-gold transition-colors">{o.town}</p>
-                    <p className="flex items-center gap-2 text-sm text-gray-500"><FaMapMarkerAlt className="text-primary-gold flex-shrink-0" /> {o.address}</p>
-                    <p className="flex items-center gap-2 text-sm text-gray-500"><FaPhone className="text-primary-gold flex-shrink-0" /> {o.phone}</p>
+                    {o.verified === true && o.address && (
+                      <p className="flex items-center gap-2 text-sm text-gray-500"><FaMapMarkerAlt className="text-primary-gold flex-shrink-0" /> {o.address}</p>
+                    )}
+                    {o.verified === true && o.phone && (
+                      <p className="flex items-center gap-2 text-sm text-gray-500"><FaPhone className="text-primary-gold flex-shrink-0" /> {o.phone}</p>
+                    )}
+                    {o.verified !== true && (
+                      <p className="text-xs font-semibold text-amber-600 dark:text-amber-400">Details not independently verified — call SASSA on 0800 60 10 11 to confirm before travelling.</p>
+                    )}
                     <span className="text-xs font-bold text-primary-gold group-hover:underline">View office details</span>
                   </CardBody>
                 </Card>
@@ -122,8 +134,15 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
                   <Card className="p-5 hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 group-hover:border-primary-gold/30 h-full">
                     <CardBody className="p-0 space-y-2">
                       <p className="font-bold text-lg group-hover:text-primary-gold transition-colors">{o.town}</p>
-                      <p className="flex items-center gap-2 text-sm text-gray-500"><FaMapMarkerAlt className="text-primary-gold flex-shrink-0" /> {o.address}</p>
-                      <p className="flex items-center gap-2 text-sm text-gray-500"><FaPhone className="text-primary-gold flex-shrink-0" /> {o.phone}</p>
+                      {o.verified === true && o.address && (
+                        <p className="flex items-center gap-2 text-sm text-gray-500"><FaMapMarkerAlt className="text-primary-gold flex-shrink-0" /> {o.address}</p>
+                      )}
+                      {o.verified === true && o.phone && (
+                        <p className="flex items-center gap-2 text-sm text-gray-500"><FaPhone className="text-primary-gold flex-shrink-0" /> {o.phone}</p>
+                      )}
+                      {o.verified !== true && (
+                        <p className="text-xs font-semibold text-amber-600 dark:text-amber-400">Details not independently verified — call SASSA on 0800 60 10 11 to confirm before travelling.</p>
+                      )}
                       <span className="text-xs font-bold text-primary-gold group-hover:underline">View office details</span>
                     </CardBody>
                   </Card>
@@ -146,6 +165,35 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
           </div>
         </section>
 
+        <section className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-700">
+          <h2 className="text-2xl font-bold mb-4">Visiting a SASSA Office in {province.name}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600 dark:text-gray-400">
+            <div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">What to bring</h3>
+              <ul className="list-disc ml-5 space-y-1">
+                <li>Your South African ID (or the ID of the beneficiary)</li>
+                <li>Any SASSA SMS or letter about your application</li>
+                <li>Proof of residence in {province.name}</li>
+                <li>Bank details if you need to change your payment method</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Tips for a faster visit</h3>
+              <ul className="list-disc ml-5 space-y-1">
+                <li>Offices are busiest in the first and last weeks of the month — mid-month visits are quicker</li>
+                <li>Come early if you must queue; bring water and make a plan for the day</li>
+                <li>Do not pay third parties to "help" you — SASSA office services are free</li>
+                <li>Try the online channels below before travelling</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-2 text-sm">
+            <Chip variant="flat">Helpline: 0800 60 10 11</Chip>
+            <Chip variant="flat">WhatsApp: 082 601 0111</Chip>
+            <Chip variant="flat">SRD portal: srd.sassa.gov.za</Chip>
+          </div>
+        </section>
+
         <Divider />
         <section>
           <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
@@ -163,14 +211,17 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
           <Card className="bg-primary-black text-white p-10 rounded-[2rem]">
             <CardBody className="space-y-5">
               <h2 className="text-2xl font-black">Looking for a specific office?</h2>
-              <p className="text-secondary-gray">Check your grant status online first — you may not need to visit a branch.</p>
-              <Button as={NextLink} href="/status-check" color="primary" className="font-bold px-8 py-6">Check SASSA Status</Button>
+              <p className="text-secondary-gray">Check your grant status online first — you may not need to visit a branch. Need eligibility or application facts instead? See the grants guide for {province.name}.</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button as={NextLink} href="/status-check" color="primary" className="font-bold px-8 py-6">Check SASSA Status</Button>
+                <Button as={NextLink} href={`/province/${province.slug}`} variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">SASSA Grants in {province.name}</Button>
+              </div>
             </CardBody>
           </Card>
         </section>
 
         <Divider />
-        <EditorialFooter lastUpdated="31 August 2026" author="Lucky Cungwa" />
+        <EditorialFooter lastUpdated="23 September 2026" author="Lucky Cungwa" />
       </article>
     </div>
   );

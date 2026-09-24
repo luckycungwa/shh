@@ -8,28 +8,27 @@
     "srd_challenges": "Many rural beneficiaries in the Eastern Cape struggle with smartphone access and internet connectivity. The USSD codes (*120*69277#) and WhatsApp line (082 601 0111) are the most practical status check methods for this province.",
     "main_offices": [
       {
-        "town": "Bhisho",
-        "address": "Independence Avenue, Bhisho",
-        "phone": "040 608 7100",
-        "verified": false
-      },
-      {
         "town": "Gqeberha (Port Elizabeth)",
         "address": "80 Buckingham Road, Gqeberha",
         "phone": "041 408 6000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "East London",
-        "address": "3 Hill Street, East London",
-        "phone": "043 705 8000",
-        "verified": false
+        "address": "BKB Building, Cnr Fitzpatrick & Merino Road, Quigney",
+        "phone": "043 707 6472",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "SA Government contact directory & SASSA Annual Report 2024/25",
+        "verification": "verified"
       },
       {
         "town": "Mthatha",
         "address": "Victoria Street, Mthatha",
         "phone": "047 532 6001",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -37,31 +36,36 @@
         "town": "Port Alfred",
         "address": "5 Victoria Drive, Port Alfred",
         "phone": "046 604 1100",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Queenstown",
         "address": "56 Ebden Street, Queenstown",
         "phone": "045 808 4000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Graaff-Reinet",
         "address": "40 Church Street, Graaff-Reinet",
         "phone": "049 807 5000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Mount Frere",
         "address": "Main Street, Mount Frere",
         "phone": "039 255 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Libode",
         "address": "SASSA Building, Libode",
         "phone": "047 553 8000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -109,17 +113,21 @@
       }
     ],
     "regional_office": {
-      "town": "Bhisho",
-      "address": "Independence Avenue, Bhisho",
-      "phone": "040 608 7100",
-      "hours": "Mon-Fri 8:00-16:00"
+      "town": "East London",
+      "address": "BKB Building, Cnr Fitzpatrick & Merino Road, Quigney",
+      "phone": "043 707 6472",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "SA Government contact directory & SASSA Annual Report 2024/25",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -32.8482,
       "lng": 27.4427
     },
     "payment_collection": "SASSA grants can be collected at Post Office branches, Pick n Pay, Boxer, Shoprite, and Spar stores across all Eastern Cape districts. Postbank Black Card holders can use any ATM.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "free-state",
@@ -131,27 +139,33 @@
     "main_offices": [
       {
         "town": "Bloemfontein",
-        "address": "61 St Andrew Street, Bloemfontein",
-        "phone": "051 410 4000",
-        "verified": false
+        "address": "Cnr St. Andrew Street & Aliwal Street",
+        "phone": "051 410 8339",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "Official SASSA contact pages (sassa.gov.za)",
+        "verification": "verified"
       },
       {
         "town": "Welkom",
         "address": "Stateway Road, Welkom",
         "phone": "057 357 9000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Bethlehem",
         "address": "Cnr Church & Muller Street, Bethlehem",
         "phone": "058 303 5600",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Sasolburg",
         "address": "Cnr Steen & Kokerboom Street, Sasolburg",
         "phone": "016 970 7000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -159,13 +173,15 @@
         "town": "Kroonstad",
         "address": "24 Charlotte Street, Kroonstad",
         "phone": "056 216 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Phuthaditjhaba",
         "address": "Government Building, Phuthaditjhaba",
         "phone": "058 713 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -210,16 +226,20 @@
     ],
     "regional_office": {
       "town": "Bloemfontein",
-      "address": "61 St Andrew Street, Bloemfontein",
-      "phone": "051 410 4000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "Cnr St. Andrew Street & Aliwal Street",
+      "phone": "051 410 8339",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "Official SASSA contact pages (sassa.gov.za)",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -29.1201,
       "lng": 26.2299
     },
     "payment_collection": "Post Office branches are the primary collection points. Checkers, Shoprite, and Pick n Pay stores across the Free State also offer cash collection for SRD grant recipients.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "gauteng",
@@ -231,33 +251,38 @@
     "main_offices": [
       {
         "town": "Johannesburg",
-        "address": "78 Marshall Street, Johannesburg",
-        "phone": "011 241 8000",
-        "verified": false
+        "address": "222 Smit Street, Braamfontein",
+        "phone": "011 241 8581",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+        "verification": "verified"
       },
       {
         "town": "Pretoria",
         "address": "262 Lilian Ngoyi Street, Pretoria",
         "phone": "012 315 7000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Soweto",
-        "address": "1656 Mooki Street, Orlando East",
-        "phone": "011 935 5600",
-        "verified": false
+        "verified": false,
+        "verification": "partially_verified"
       },
       {
         "town": "Tembisa",
         "address": "3278 Reverend Naude Street, Tembisa",
         "phone": "011 921 6600",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Vereeniging",
         "address": "32 Beaconsfield Road, Vereeniging",
         "phone": "016 430 0500",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -265,19 +290,15 @@
         "town": "Krugersdorp",
         "address": "46 Luipaard Street, Krugersdorp",
         "phone": "011 663 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Midrand",
         "address": "Cnr Old Pretoria Road & New Road, Midrand",
         "phone": "011 315 5000",
-        "verified": false
-      },
-      {
-        "town": "Centurion",
-        "address": "123 Gerhard Street, Centurion",
-        "phone": "012 645 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -338,16 +359,20 @@
     ],
     "regional_office": {
       "town": "Johannesburg",
-      "address": "78 Marshall Street, Johannesburg",
-      "phone": "011 241 8000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "222 Smit Street, Braamfontein",
+      "phone": "011 241 8581",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -26.2041,
       "lng": 28.0473
     },
     "payment_collection": "All major retailers participate in cash collection: Pick n Pay, Shoprite, Boxer, Spar, and Checkers. Postbank Black Card holders can use any ATM. Gauteng has the highest density of collection points in the country.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "kwazulu-natal",
@@ -359,33 +384,40 @@
     "main_offices": [
       {
         "town": "Pietermaritzburg",
-        "address": "181 Church Street, Pietermaritzburg",
-        "phone": "033 341 8000",
-        "verified": false
+        "address": "1 Bank Street, Pietermaritzburg",
+        "phone": "033 846 3300",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+        "verification": "verified"
       },
       {
         "town": "Durban",
         "address": "191 Anton Lembede Street, Durban",
         "phone": "031 312 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Richards Bay",
         "address": "Cnr Kruger & West Street, Richards Bay",
         "phone": "035 780 6000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Ladysmith",
         "address": "125 Murchison Street, Ladysmith",
         "phone": "036 637 7000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Port Shepstone",
         "address": "182 Bisset Street, Port Shepstone",
         "phone": "039 688 9000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -393,31 +425,36 @@
         "town": "Stanger (KwaDukuza)",
         "address": "25 King Shaka Street, Stanger",
         "phone": "032 437 5000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Eshowe",
         "address": "Main Road, Eshowe",
         "phone": "035 474 2000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Vryheid",
         "address": "Cnr Landros & Mark Street, Vryheid",
         "phone": "034 980 8000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Dundee",
         "address": "52 Victoria Road, Dundee",
         "phone": "034 212 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Mtubatuba",
         "address": "Main Street, Mtubatuba",
         "phone": "035 550 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -483,16 +520,20 @@
     ],
     "regional_office": {
       "town": "Pietermaritzburg",
-      "address": "181 Church Street, Pietermaritzburg",
-      "phone": "033 341 8000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "1 Bank Street, Pietermaritzburg",
+      "phone": "033 846 3300",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -29.6168,
       "lng": 30.3928
     },
     "payment_collection": "Post Office branches and retailer collection points available in all districts. Mobile collection units serve deep rural areas in northern KZN. Cardholders can use SASSA ATMs in Durban and Pietermaritzburg.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "limpopo",
@@ -504,27 +545,31 @@
     "main_offices": [
       {
         "town": "Polokwane",
-        "address": "95 Marshall Street, Polokwane",
-        "phone": "015 230 2000",
-        "verified": false
+        "address": "43 Landros Mare Street, Polokwane",
+        "phone": "015 291 7604",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "Official SASSA contact pages (sassa.gov.za)",
+        "verification": "verified"
       },
       {
         "town": "Tzaneen",
         "address": "Cnr Agatha & Peace Street, Tzaneen",
         "phone": "015 306 8600",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Lebowakgomo",
         "address": "Block A, Lebowakgomo",
         "phone": "015 632 4000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Thohoyandou",
-        "address": "Old Parliamentary Building, Thohoyandou",
-        "phone": "015 963 2000",
-        "verified": false
+        "verified": false,
+        "verification": "partially_verified"
       }
     ],
     "district_offices": [
@@ -532,19 +577,22 @@
         "town": "Mokopane",
         "address": "Cnr Thabo Mbeki & Church Street, Mokopane",
         "phone": "015 491 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Giyani",
         "address": "Government Building, Giyani",
         "phone": "015 812 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Modimolle",
         "address": "Cnr Chris Hani & Rooiberg Road, Modimolle",
         "phone": "014 717 4000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -590,16 +638,20 @@
     ],
     "regional_office": {
       "town": "Polokwane",
-      "address": "95 Marshall Street, Polokwane",
-      "phone": "015 230 2000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "43 Landros Mare Street, Polokwane",
+      "phone": "015 291 7604",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "Official SASSA contact pages (sassa.gov.za)",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -23.8969,
       "lng": 29.4484
     },
     "payment_collection": "Post Office branches are the main collection points. Mobile SASSA pay points operate in remote villages on scheduled dates. Pick n Pay and Shoprite in town centres offer cash collection.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "mpumalanga",
@@ -611,21 +663,26 @@
     "main_offices": [
       {
         "town": "Mbombela (Nelspruit)",
-        "address": "30 Branders Street, Mbombela",
-        "phone": "013 754 5000",
-        "verified": false
+        "address": "18 Ferreira Street, Mbombela",
+        "phone": "013 754 9377",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+        "verification": "verified"
       },
       {
         "town": "Witbank (eMalahleni)",
         "address": "Cnr Mandela & Oos Streets, eMalahleni",
         "phone": "013 690 8000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Secunda",
         "address": "Cnr FW De Klerk & Syfer Road, Secunda",
         "phone": "017 634 9000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -633,13 +690,15 @@
         "town": "Ermelo",
         "address": "Cnr Kerk & Joubert Street, Ermelo",
         "phone": "017 819 2000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Piet Retief",
         "address": "69 Kerk Street, Piet Retief",
         "phone": "017 829 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -684,16 +743,20 @@
     ],
     "regional_office": {
       "town": "Mbombela",
-      "address": "30 Branders Street, Mbombela",
-      "phone": "013 754 5000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "18 Ferreira Street, Mbombela",
+      "phone": "013 754 9377",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -25.4667,
       "lng": 30.9667
     },
     "payment_collection": "Post Office branches available in all district towns. Boxer and Shoprite stores offer cash collection in urban centres. Mobile pay points serve deep rural areas on scheduled dates.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "north-west",
@@ -705,21 +768,26 @@
     "main_offices": [
       {
         "town": "Mahikeng",
-        "address": "Cnr University & Albert Luthuli Drive, Mahikeng",
-        "phone": "018 397 3000",
-        "verified": false
+        "address": "SASSA House ERF 3139, Corner Sekame & Dr James Moroka, Mega City",
+        "phone": "018 397 3317",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "sassa.gov.za & SA Government contact pages",
+        "verification": "verified"
       },
       {
         "town": "Rustenburg",
         "address": "80 Nelson Mandela Drive, Rustenburg",
         "phone": "014 590 6000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Klerksdorp",
         "address": "Cnr Margaretha & CR Swart Street, Klerksdorp",
         "phone": "018 468 7000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -727,19 +795,22 @@
         "town": "Brits",
         "address": "Cnr Tom Street & R511, Brits",
         "phone": "012 259 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Zeerust",
         "address": "36 Kerk Street, Zeerust",
         "phone": "018 642 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Vryburg",
         "address": "73 Market Street, Vryburg",
         "phone": "053 927 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -779,16 +850,20 @@
     ],
     "regional_office": {
       "town": "Mahikeng",
-      "address": "Cnr University & Albert Luthuli Drive, Mahikeng",
-      "phone": "018 397 3000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "SASSA House ERF 3139, Corner Sekame & Dr James Moroka, Mega City",
+      "phone": "018 397 3317",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "sassa.gov.za & SA Government contact pages",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -25.8652,
       "lng": 25.6413
     },
     "payment_collection": "Post Office branches in all district towns. Boxer, Shoprite, and Pick n Pay available in urban centres. Mobile pay points serve farming communities.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "northern-cape",
@@ -800,21 +875,26 @@
     "main_offices": [
       {
         "town": "Kimberley",
-        "address": "1 Compound Road, Kimberley",
-        "phone": "053 831 6000",
-        "verified": false
+        "address": "Perm Building, 33 Du Toitspan Road",
+        "phone": "053 065 0478",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "SA Government contact directory (SASSA lists 053 802 4900)",
+        "verification": "verified"
       },
       {
         "town": "Upington",
         "address": "Cnr Scott & Mark Street, Upington",
         "phone": "054 331 9000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Springbok",
         "address": "Hospital Street, Springbok",
         "phone": "027 718 2000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -822,13 +902,15 @@
         "town": "Kuruman",
         "address": "34 Main Street, Kuruman",
         "phone": "053 712 4000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "De Aar",
         "address": "Cnr Church & Circular Road, De Aar",
         "phone": "053 631 2000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -867,16 +949,20 @@
     ],
     "regional_office": {
       "town": "Kimberley",
-      "address": "1 Compound Road, Kimberley",
-      "phone": "053 831 6000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "Perm Building, 33 Du Toitspan Road",
+      "phone": "053 065 0478",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "SA Government contact directory (SASSA lists 053 802 4900)",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -28.7307,
       "lng": 24.7621
     },
     "payment_collection": "Post Office branches are the primary collection points. Mobile SASSA pay points visit remote towns on scheduled dates. Limited retailer participation in deep rural areas.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   },
   {
     "slug": "western-cape",
@@ -888,33 +974,40 @@
     "main_offices": [
       {
         "town": "Cape Town",
-        "address": "9 Dorp Street, Cape Town",
-        "phone": "021 469 7000",
-        "verified": false
+        "address": "Golden Acre, Adderley Street",
+        "phone": "021 469 0370",
+        "verified": true,
+        "verified_at": "2026-09-23",
+        "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+        "verification": "verified"
       },
       {
         "town": "Stellenbosch",
         "address": "23 Bird Street, Stellenbosch",
         "phone": "021 887 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "George",
         "address": "70 Courtney Street, George",
         "phone": "044 803 7000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Worcester",
         "address": "54 High Street, Worcester",
         "phone": "023 348 3000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Khayelitsha",
         "address": "Cnr Spine & Bonga Road, Khayelitsha",
         "phone": "021 361 2400",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "district_offices": [
@@ -922,25 +1015,29 @@
         "town": "Paarl",
         "address": "155 Main Street, Paarl",
         "phone": "021 860 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Oudtshoorn",
         "address": "94 High Street, Oudtshoorn",
         "phone": "044 279 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Vredenburg",
         "address": "6 Kerk Street, Vredenburg",
         "phone": "022 701 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       },
       {
         "town": "Beaufort West",
         "address": "60 Donkin Street, Beaufort West",
         "phone": "023 416 1000",
-        "verified": false
+        "verified": false,
+        "verification": "unverified"
       }
     ],
     "districts": [
@@ -1002,15 +1099,19 @@
     ],
     "regional_office": {
       "town": "Cape Town",
-      "address": "9 Dorp Street, Cape Town",
-      "phone": "021 469 7000",
-      "hours": "Mon-Fri 8:00-16:00"
+      "address": "Golden Acre, Adderley Street",
+      "phone": "021 469 0370",
+      "hours": "Mon-Fri 8:00-16:00",
+      "verified": true,
+      "verified_at": "2026-09-23",
+      "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+      "verification": "verified"
     },
     "coordinates": {
       "lat": -33.9249,
       "lng": 18.4241
     },
     "payment_collection": "All major retailers participate in the Western Cape. Post Office branches are well-distributed. Cash Send collection at Pick n Pay and Boxer available for SRD recipients without bank accounts.",
-    "last_updated": "2026-07-07"
+    "last_updated": "2026-09-23"
   }
 ]

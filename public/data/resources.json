@@ -1,6 +1,9 @@
 [
   {
     "id": "office-001",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
     "name": "SASSA Head Office",
     "address": "SASSA House, 501 Prodinsa Building, Cnr Steve Biko and Pretorius Streets",
     "city": "Pretoria",
@@ -47,10 +50,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-002",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
     "name": "SASSA Gauteng Regional Office",
     "address": "222 Smit Street, Braamfontein",
     "city": "Johannesburg",
@@ -95,16 +102,20 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-003",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za)",
     "name": "SASSA Limpopo Regional Office",
     "address": "43 Landros Mare Street",
     "city": "Polokwane",
     "province": "Limpopo",
     "postalCode": "0699",
-    "phone": "015 291 7439",
+    "phone": "015 291 7604",
     "email": "GrantEnquiries@sassa.gov.za",
     "hours": {
       "weekdays": "08:00 - 16:00",
@@ -142,10 +153,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-004",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za)",
     "name": "SASSA Free State Regional Office",
     "address": "Cnr St. Andrew Street & Aliwal Street",
     "city": "Bloemfontein",
@@ -190,10 +205,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-005",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
     "name": "SASSA KwaZulu-Natal Regional Office",
     "address": "1 Bank Street",
     "city": "Pietermaritzburg",
@@ -238,10 +257,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-006",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
     "name": "SASSA Mpumalanga Regional Office",
     "address": "18 Ferreira Street",
     "city": "Mbombela",
@@ -284,10 +307,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-007",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "sassa.gov.za & SA Government contact pages",
     "name": "SASSA North West Regional Office",
     "address": "SASSA House ERF 3139, Corner Sekame and Dr James Moroka",
     "city": "Mmabatho",
@@ -331,10 +358,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-008",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "SA Government contact directory",
     "name": "SASSA Northern Cape Regional Office",
     "address": "Permanent 'Perm' Building, 33 Du Toitspan Road",
     "city": "Kimberley",
@@ -377,10 +408,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-009",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "SA Government contact directory & SASSA Annual Report 2024/25",
     "name": "SASSA Eastern Cape Regional Office",
     "address": "BKB Building, Cnr Fitzpatrick & Merino Road, Quigney",
     "city": "East London",
@@ -423,10 +458,14 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   },
   {
     "id": "office-010",
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
     "name": "SASSA Western Cape Regional Office",
     "address": "Golden Acre, Adderley Street",
     "city": "Cape Town",
@@ -471,6 +510,7 @@
         "url": "https://www.sassa.gov.za",
         "isExternal": true
       }
-    ]
+    ],
+    "verification": "verified"
   }
 ]

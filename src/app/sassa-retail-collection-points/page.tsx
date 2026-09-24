@@ -10,7 +10,7 @@ import { getCurrentYearString } from "../../lib/config";
 import NextStepCard from "../../components/affiliate/NextStepCard";
 
 const currentYear = getCurrentYearString();
-const lastUpdated = "2026-08-31";
+const lastUpdated = "2026-09-23";
 
 export const metadata: Metadata = buildMetadata({
   title: `SASSA Grant Collection Points in ${currentYear}: Shoprite, Checkers, Pick n Pay & More`,
@@ -30,7 +30,7 @@ export default function RetailCollectionPointsPage() {
     },
     {
       q: "Can I use a SASSA Gold Card or Postbank Black Card to pay at a shop?",
-      a: "Yes, once your payment is loaded onto your card you can pay for purchases at the store. Note that the SASSA Gold Card is being phased out — beneficiaries must migrate to the Postbank Black Card before 31 August 2026 to keep using it.",
+      a: "Yes, once your payment is loaded onto your card you can pay for purchases at the store. Note that the SASSA Gold Card stopped working after 31 August 2026 — every beneficiary now uses the free Postbank Black Card, which is still available at Postbank service points with your ID.",
     },
     {
       q: "What ID do I need to collect my grant at a retail point?",

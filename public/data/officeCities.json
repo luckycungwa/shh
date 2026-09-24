@@ -12,7 +12,10 @@
       "Bring original documents and at least 2 certified copies.",
       "The office is close to public transport on Steve Biko Road."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "johannesburg",
@@ -27,7 +30,10 @@
       "Check the queue for 'New Applications' vs 'Status Queries' as they move at different speeds.",
       "Tuesdays and Wednesdays are generally less crowded than Mondays."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "cape-town",
@@ -42,7 +48,10 @@
       "Highly accessible via Metrorail and MyCiti bus systems.",
       "Peak times are usually between 10:00 AM and 1:00 PM."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "durban",
@@ -57,7 +66,10 @@
       "Ensure your cellphone is fully charged as you may need to receive an OTP during your visit.",
       "Staff are fluent in isiZulu and English."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "bloemfontein",
@@ -72,7 +84,10 @@
       "Queue management is generally efficient, but bring a bottle of water for the wait.",
       "Ask for a reference number before leaving the counter."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "polokwane",
@@ -80,14 +95,17 @@
     "city": "Polokwane",
     "province": "Limpopo",
     "address": "43 Landros Mare Street",
-    "phone": "015 291 7439",
+    "phone": "015 291 7604",
     "description": "Limpopo's primary SASSA hub, managing a high volume of agricultural and rural grant applications.",
     "localTips": [
       "Arrive early if traveling from outside Polokwane city limits.",
       "The office is within walking distance of the main taxi rank.",
       "Check that your bank statements are stamped by your bank before arrival."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "mbombela",
@@ -102,7 +120,10 @@
       "Bring a pen to fill out forms while waiting in the queue.",
       "Parking is available but fills up by 8:30 AM."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "kimberley",
@@ -117,7 +138,10 @@
       "Queue for 'Old Age' grants usually has a dedicated shorter line.",
       "Verify your banking details at the 'Info' desk before joining the main queue."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "east-london",
@@ -132,21 +156,23 @@
       "Secure your ID and phone while in the queue.",
       "The office is close to the East London harbor area."
     ],
-    "verified": true
+    "verified": true,
+    "verified_at": "2026-09-23",
+    "source": "Official SASSA contact pages (sassa.gov.za) & SA Government directory",
+    "verification": "verified"
   },
   {
     "id": "soweto",
     "name": "SASSA Soweto Office",
     "city": "Soweto",
     "province": "Gauteng",
-    "address": "Luthuli House, Chris Hani Road",
-    "phone": "011 983 2000",
-    "description": "One of the most essential offices in Gauteng, serving the large community of Soweto.",
+    "description": "One of the most essential offices in Gauteng, serving the large community of Soweto. Street-level contact details for this branch are not published by SASSA — confirm the nearest service point with the national helpline 0800 60 10 11 before travelling.",
     "localTips": [
       "This office experiences very high traffic; consider visiting the Maponya Mall branch if queues are excessive.",
       "Many staff speak multiple local languages including isiZulu, Sesotho, and English.",
       "Check your status online first to see if a physical visit is truly necessary."
     ],
-    "verified": true
+    "verified": false,
+    "verification": "partially_verified"
   }
 ]

@@ -130,13 +130,17 @@ export default function CityOfficePage({ params }: { params: { province: string;
 
   const address = officeCity?.address || provinceOfficeEntry?.address || "";
   const phone = officeCity?.phone || provinceOfficeEntry?.phone || "";
+  const displayAddress =
+    address ||
+    "Street address not published by SASSA. Call 0800 60 10 11 to confirm the nearest service point before travelling.";
+  const displayPhone = phone || "0800 60 10 11 (national helpline)";
   const verified = officeCity?.verified ?? provinceOfficeEntry?.verified ?? false;
   const tips = officeCity?.localTips || [];
   const summary = officeCity?.description || `The SASSA office in ${display}, ${provinceName} provides grant applications, SRD applications, status queries and appeal assistance.`;
 
   const faqs = [
-    { q: `Where is the SASSA office in ${display}?`, a: `The SASSA office in ${display} is located at ${address}. Always confirm the address and hours before travelling, as offices can relocate or change hours.` },
-    { q: `How do I contact the SASSA office in ${display}?`, a: `You can call the ${display} SASSA office on ${phone}. For general SASSA queries, call the national helpline 0800 60 10 11.` },
+    { q: `Where is the SASSA office in ${display}?`, a: `The SASSA office in ${display} is located at ${displayAddress}. Always confirm the address and hours before travelling, as offices can relocate or change hours.` },
+    { q: `How do I contact the SASSA office in ${display}?`, a: `You can call the ${display} SASSA office on ${displayPhone}. For general SASSA queries, call the national helpline 0800 60 10 11.` },
     { q: "Do I need to visit this SASSA office in person?", a: "Many services can be done remotely: SRD applications and status checks at srd.sassa.gov.za, or via WhatsApp on 082 601 0111. Visit the branch only for services you cannot do online." },
   ];
 
@@ -183,14 +187,14 @@ export default function CityOfficePage({ params }: { params: { province: string;
               <FaMapMarkerAlt className="text-primary-gold mt-1" />
               <div>
                 <p className="font-bold text-sm">Address</p>
-                <p className="text-gray-600 dark:text-gray-400">{address}</p>
+                <p className="text-gray-600 dark:text-gray-400">{displayAddress}</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <FaPhone className="text-primary-gold mt-1" />
               <div>
                 <p className="font-bold text-sm">Phone</p>
-                <p className="text-gray-600 dark:text-gray-400">{phone || "Contact SASSA helpline 0800 60 10 11"}</p>
+                <p className="text-gray-600 dark:text-gray-400">{displayPhone}</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -257,7 +261,7 @@ export default function CityOfficePage({ params }: { params: { province: string;
         )}
 
         <Divider />
-        <EditorialFooter lastUpdated="31 August 2026" author="Lucky Cungwa" />
+        <EditorialFooter lastUpdated="23 September 2026" author="Lucky Cungwa" />
       </article>
     </div>
   );

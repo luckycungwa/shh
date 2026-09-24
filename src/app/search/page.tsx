@@ -9,11 +9,14 @@ import type { SearchRecord } from "../../lib/search";
 import { breadcrumbSchema, faqPageSchema } from "../../lib/schema";
 import SearchBox from "../../components/tools/SearchBox";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Search SASSA Help Hub — Find Guides, Statuses & Payment Info",
-  description: "Search all SASSA Help Hub guides, status meanings, decline reasons, banking methods, appeals, payment dates and FAQs in one place.",
-  path: "/search",
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: "Search SASSA Help Hub — Find Guides, Statuses & Payment Info",
+    description: "Search all SASSA Help Hub guides, status meanings, decline reasons, banking methods, appeals, payment dates and FAQs in one place.",
+    path: "/search",
+  }),
+  robots: { index: false, follow: true },
+};
 
 export default function SearchPage() {
   const index: SearchRecord[] = buildSearchIndex();

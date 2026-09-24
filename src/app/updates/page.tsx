@@ -34,8 +34,10 @@ export default function UpdatesListPage() {
   const filtered = updates
     .filter((u: any) => u.tag !== "monthly-payment-schedule")
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  const alerts = filtered.filter(u => u.type === "alert");
-  const news = filtered.filter(u => u.type !== "alert");
+  const alertFreshnessWindow = 90 * 24 * 60 * 60 * 1000;
+  const isFreshAlert = (u: Update) => new Date(u.date).getTime() >= Date.now() - alertFreshnessWindow;
+  const alerts = filtered.filter(u => u.type === "alert" && isFreshAlert(u));
+  const news = filtered.filter(u => u.type !== "alert" || !isFreshAlert(u));
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">

@@ -93,7 +93,7 @@ const categories = [
       { href: "/payment-calendar", label: "SASSA Payment Dates 2026", desc: "Full payment schedule for all grants" },
       { href: "/guides/sassa-payment-methods", label: "Payment Methods Compared", desc: "Bank vs Postbank vs Cash Send vs Retail" },
       { href: "/guides/bank-details-pending-fix", label: "How to Change Banking Details", desc: "Update your bank account for grant payments" },
-      { href: "/guides/postbank-black-card-guide", label: "Gold Card Switch-Off — Get Your Black Card", desc: "Gold Cards stop working after 31 August 2026 — get your free Black Card before the deadline" },
+      { href: "/guides/postbank-black-card-guide", label: "Gold Card Switch-Off — Get Your Black Card", desc: "Gold Cards stopped working on 31 August 2026 — get your free Black Card now" },
       { href: "/guides/grant-amounts-history", label: "Grant Amounts History 2020-2026", desc: "Historical grant amounts and increases" },
       { href: "/updates/update-2026-036", label: "September 2026 Payment Schedule", desc: "Latest confirmed payment dates" },
       { href: "/guides/fourth-payment-day-guide", label: "Grants Under Review — Paid on the Fourth Day", desc: "Fourth payment day for flagged beneficiaries" },
@@ -173,9 +173,9 @@ const categories = [
   },
 ];
 
-const urgentAlert = {
-  title: "Gold Card Deadline: Switch Before 31 August 2026",
-  desc: "SASSA Gold Cards will stop working after 31 August 2026. Your money stays safe in your Postbank account — collect your free Postbank Black Card from any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. The replacement is free. Dial *120*355# to find your nearest card site.",
+const migrationNotice = {
+  title: "Gold Card Switch-Off Passed — Get Your Free Postbank Black Card",
+  desc: "SASSA Gold Cards stopped working on 31 August 2026. The free Postbank Black Card replacement is still available at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. Your money stays safe in your Postbank account. Dial *120*355# to find your nearest card site.",
   href: "/guides/postbank-black-card-guide",
 };
 
@@ -188,7 +188,7 @@ export default function CommonProblemsPage() {
         { q: "My application was declined — how do I appeal?", a: "Submit your appeal on the official ITSAA appeals portal at srd-appeals.dsd.gov.za using your ID number and the phone number on your application. You have up to 90 days from the decline — act within the first 30 days if you can." },
         { q: "My status says Approved but I have not been paid — why?", a: "An approved status means you qualified, but the payment date may not be assigned yet. Check back after the 20th of the month. If no payment date appears after 3 weeks, contact SASSA." },
         { q: "How do I change my banking details for SRD?", a: "Log into the SRD portal at srd.sassa.gov.za, go to 'Change Banking Details', enter your new account info, and wait for verification." },
-        { q: "My SASSA Gold Card has stopped working — what should I do?", a: "SASSA Gold Cards stop working after 31 August 2026. Get your free Postbank Black Card at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. Your money remains safe in your Postbank account — you will access it with your Black Card once you have migrated." },
+        { q: "My SASSA Gold Card has stopped working — what should I do?", a: "SASSA Gold Cards stopped working on 31 August 2026. The free Postbank Black Card replacement is still available at any Postbank service point (Shoprite, Checkers, Pick n Pay, Boxer, Spar, Usave) with your ID. Your money remains safe in your Postbank account — you will access it with your Black Card once you migrate." },
       ])} />
 
       <header className="text-center mb-16 max-w-3xl mx-auto">
@@ -204,18 +204,18 @@ export default function CommonProblemsPage() {
       </header>
 
       <NextLink
-        href={urgentAlert.href}
-        className="block mb-16 p-6 bg-red-50 dark:bg-red-900/10 border-2 border-red-200 dark:border-red-800 rounded-3xl hover:bg-red-100 dark:hover:bg-red-900/20 transition-all group"
+        href={migrationNotice.href}
+        className="block mb-16 p-6 bg-amber-50 dark:bg-amber-900/10 border-2 border-amber-200 dark:border-amber-800 rounded-3xl hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-all group"
       >
         <div className="flex items-start gap-4">
-          <div className="bg-red-500 p-3 rounded-2xl flex-shrink-0">
-            <FaExclamationTriangle className="text-white text-xl" />
+          <div className="bg-amber-500 p-3 rounded-2xl flex-shrink-0">
+            <FaCreditCard className="text-white text-xl" />
           </div>
           <div className="flex-1">
-            <p className="font-black text-lg text-red-800 dark:text-red-300 group-hover:underline">{urgentAlert.title}</p>
-            <p className="text-red-600 dark:text-red-400 mt-1">{urgentAlert.desc}</p>
+            <p className="font-black text-lg text-amber-800 dark:text-amber-300 group-hover:underline">{migrationNotice.title}</p>
+            <p className="text-amber-700 dark:text-amber-400 mt-1">{migrationNotice.desc}</p>
           </div>
-          <FaArrowRight className="text-red-400 mt-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+          <FaArrowRight className="text-amber-400 mt-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
         </div>
       </NextLink>
 

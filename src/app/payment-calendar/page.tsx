@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
@@ -9,33 +7,16 @@ import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
 import { breadcrumbSchema, faqPageSchema, paymentScheduleSchema } from "../../lib/schema";
 import { SITE_CONFIG } from "../../lib/config";
+import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from "../../lib/payment-schedule";
 
 export const metadata: Metadata = buildMetadata({
-  title: "SASSA Payment Calendar 2026 — All Grant Payment Dates",
-  description: "View the full SASSA payment calendar for 2026. Dates for the Older Persons, Disability, Children's and SRD R370 grants by month. Check when SASSA pays grants each month.",
+  title: "SASSA Payment Calendar 2026 — Confirmed October, November & December Dates",
+  description: "Check when SASSA pays the SRD R370 and permanent grants. October 2026 payment dates confirmed (2, 5 & 6 October), November and December dates follow the DSD-approved 2026/27 schedule.",
   path: "/payment-calendar",
 });
 
-interface MonthSchedule {
-  month_key: string;
-  label: string;
-  year: number;
-  month: number;
-  older_persons: { date: string; status: string };
-  disability: { date: string; status: string };
-  children: { date: string; status: string };
-  under_review: { date: string; status: string };
-  srd: { date: string; status: string };
-  note: string;
-  governance?: { source: string; sourceURL: string; lastVerified: string; notes: string };
-}
-
 function readAll(): MonthSchedule[] {
-  try {
-    return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/payment-schedule-forecast.json"), "utf8"));
-  } catch {
-    return [];
-  }
+  return readForecast();
 }
 
 const faqs = [
@@ -57,16 +38,19 @@ export default function PaymentCalendarPage() {
       <JsonLd data={faqPageSchema(faqs)} />
       <JsonLd
         data={paymentScheduleSchema(
-          months.flatMap((m) =>
-            (["older_persons", "disability", "children", "srd"] as const).map((k) => ({
+          months.flatMap((m) => {
+            const rows: MonthSchedule = m;
+            const srd = srdDisplay(rows.srd, rows.label);
+            const underReview = underReviewDisplay(rows.under_review);
+            return (["older_persons", "disability", "children", "under_review", "srd"] as const).map((k) => ({
               label: m.label,
-              grant: k === "older_persons" ? "Older Persons Grant" : k === "disability" ? "Disability Grant" : k === "children" ? "Children's Grants" : "SRD R370 Grant",
-              date: m[k]?.date || "TBC",
-              status: m[k]?.status || "projected",
+              grant: k === "older_persons" ? "Older Persons Grant" : k === "disability" ? "Disability Grant" : k === "children" ? "Children's Grants" : k === "under_review" ? "Grants Under Review" : "SRD R370 Grant",
+              date: k === "srd" ? srd.date : k === "under_review" ? underReview.date : m[k].date,
+              status: k === "srd" ? srd.status : k === "under_review" ? underReview.status : m[k].status,
               sourceURL: m.governance?.sourceURL,
               pageURL: `${SITE_CONFIG.url}/dates/${m.month_key}`,
-            }))
-          )
+            }));
+          })
         )}
       />
 
@@ -101,7 +85,7 @@ export default function PaymentCalendarPage() {
                 <h2 className="text-2xl font-bold group-hover:text-primary-gold transition-colors">{m.label}</h2>
                 <div className="text-sm text-gray-500 space-y-1">
                   <p>Older Persons: <span className="font-semibold text-gray-800 dark:text-gray-200">{m.older_persons.date}</span></p>
-                  <p>SRD R370: <span className="font-semibold text-gray-800 dark:text-gray-200">{m.srd.date}</span></p>
+                  <p>SRD R370: <span className="font-semibold text-gray-800 dark:text-gray-200">{srdDisplay(m.srd, m.label).date}</span></p>
                 </div>
               </CardBody>
             </Card>
@@ -117,6 +101,21 @@ export default function PaymentCalendarPage() {
           <li className="flex gap-3"><span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>Use the SASSA WhatsApp line on <span className="font-bold">082 601 0111</span> for quick answers.</li>
           <li className="flex gap-3"><span className="w-2 h-2 bg-primary-gold rounded-full mt-2 flex-shrink-0"></span>If your payment has not arrived 3 business days after your Pay Day, contact SASSA on <span className="font-bold">0800 60 10 11</span>.</li>
         </ul>
+      </div>
+
+      <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800 mb-12">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><FaQuestionCircle className="text-primary-gold" /> What does each SASSA status mean?</h2>
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+          The date you are paid depends on the status of your application. Understand what each status means and what to do next:
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <NextLink href="/status" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">All status meanings</NextLink>
+          <NextLink href="/status/approved" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Approved but no Pay Day</NextLink>
+          <NextLink href="/status/pending" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Pending</NextLink>
+          <NextLink href="/status/paid" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Paid</NextLink>
+          <NextLink href="/status/declined" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Declined</NextLink>
+          <NextLink href="/status/bank-details-pending" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Bank details pending</NextLink>
+        </div>
       </div>
 
       <Divider className="my-16" />

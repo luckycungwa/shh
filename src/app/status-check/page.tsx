@@ -5,12 +5,24 @@ import { FaUserShield, FaExternalLinkAlt, FaExclamationTriangle, FaPhoneAlt, FaM
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
+import { getCurrentMonthYearKey, getCurrentYearString } from "../../lib/config";
 import { breadcrumbSchema } from "../../lib/schema";
+import { readForecast, srdDisplay } from "../../lib/payment-schedule";
 import StatusCheckForm from "../../components/StatusCheckForm";
 import NextStepCard from "../../components/affiliate/NextStepCard";
 
-const currentMonthYear = "September 2026";
-const currentYear = "2026";
+const currentMonthYear = getCurrentMonthYearKey();
+const currentYear = getCurrentYearString();
+
+// Render an ISO date (2026-09-02) as a compact chip label ("Wed, 2 Sep 2026"),
+// or pass through non-ISO placeholders such as "TBC"/"TBA" unchanged.
+function toChipDate(iso: string): string {
+  if (!iso || !iso.includes("-")) return iso || "";
+  const [y, m, d] = iso.split("-").map(Number);
+  const weekday = new Date(y, m - 1, d).toLocaleDateString("en-ZA", { weekday: "short" });
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${weekday}, ${d} ${months[m - 1]} ${y}`;
+}
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -22,6 +34,21 @@ export const metadata: Metadata = {
 };
 
 export default function StatusCheckPage() {
+  // Status-check targets the ACTUAL current month (e.g. "September 2026") —
+  // that is what the heading and metadata use, and it must match the forecast
+  // entry for the same month so the confirmed dates shown are always current.
+  const forecast = readForecast();
+  const schedule = forecast.find((m) => m.label === currentMonthYear);
+  const srdConfirmed = !!schedule && schedule.srd.status === "confirmed";
+  const srdRow = schedule ? { ...srdDisplay(schedule.srd, schedule.label) } : null;
+  const permanentRows = schedule
+    ? [
+        { grant: "Older Persons", row: schedule.older_persons },
+        { grant: "Disability Grant", row: schedule.disability },
+        { grant: "Children's Grants", row: schedule.children },
+      ]
+    : [];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -289,6 +316,7 @@ export default function StatusCheckPage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
+            { href: "/status", title: "What does my status mean?", desc: "Full guide to every SASSA SRD status." },
             { href: "/status/approved", title: "Approved but no Pay Day", desc: "Why no date is showing yet and when to expect one." },
             { href: "/guides/missing-grant-payment-guide", title: "Pay Day today, no money", desc: "What to check before contacting SASSA." },
             { href: "/payment-calendar", title: "Payment date changed?", desc: "How SRD batch windows work and why dates shift." },
@@ -519,59 +547,76 @@ export default function StatusCheckPage() {
            </div>
         </section>
 
-        <section className="space-y-8">
-          <h2 className="text-4xl font-black">{currentMonthYear} Payment Dates & Schedule</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Unlike permanent social grants (such as the Old Age or Disability grants), the Social Relief of Distress (SRD) R370 grant does not have a fixed, set-in-stone date for every month. Instead, SASSA processes these in batches based on verification cycles.
-          </p>
+<section className="space-y-8">
+           <h2 className="text-4xl font-black">{currentMonthYear} Payment Dates & Schedule</h2>
+           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+             Unlike permanent social grants (such as the Old Age or Disability grants), the Social Relief of Distress (SRD) R370 grant does not have a fixed, set-in-stone date for every month. Instead, SASSA processes these in batches based on verification cycles.
+           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-             <div className="space-y-6">
-                <p className="text-lg text-gray-600 dark:text-gray-400">
-                  For <strong>{currentMonthYear}</strong>, SASSA has confirmed the SRD R370 payment dates of <strong>23 and 25 September 2026</strong>. The grant is paid in batches on those dates:
-                </p>
-                <Card className="p-8 bg-primary-gold/10 border-primary-gold border-2 rounded-[2.5rem] shadow-xl">
-                   <p className="text-center font-black text-3xl text-primary-black mb-2">23 &amp; 25 September 2026</p>
-                   <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">Confirmed by SASSA</p>
-                </Card>
-                <p className="text-sm text-amber-700 dark:text-amber-400 font-semibold">
-                  Do not rely on third-party dates. Check your status on the official SRD portal for your personal &ldquo;Pay Day&rdquo; date (either 23 or 25 September), and only collect once you receive the payment SMS.
-                </p>
-                <div className="prose prose-sm dark:prose-invert">
-                   <p>Remember these three critical factors regarding your payment:</p>
-                   <ul>
-                      <li><strong>Batching:</strong> Not everyone is paid on the same day. If your application is approved late, you might only see funds later in the window.</li>
-                      <li><strong>Bank Reflection:</strong> Once your status shows a "Pay Day" date, it usually takes 1 to 3 business days for the South African banking system to reflect the balance in your account.</li>
-                      <li><strong>SMS Confirmation:</strong> If you collect your grant at retail points (Pick n Pay, Boxer, Shoprite, Checkers), <strong>do not go to the store</strong> until you have received the payment SMS containing your collection code.</li>
-                   </ul>
+           {schedule ? (
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="space-y-6">
+                   <p className="text-lg text-gray-600 dark:text-gray-400">
+                     {srdConfirmed ? (
+                       <>For <strong>{schedule.label}</strong>, SASSA has confirmed the SRD R370 payment dates of <strong>{srdRow.day}</strong>. The grant is paid in batches on those dates:</>
+                     ) : (
+                       <>For <strong>{schedule.label}</strong>, SASSA has not yet confirmed the SRD R370 payment dates. They are announced later in the month — check the official SRD portal for your personal &ldquo;Pay Day&rdquo; date once confirmed:</>
+                     )}
+                   </p>
+<Card className="p-8 bg-primary-gold/10 border-primary-gold border-2 rounded-[2.5rem] shadow-xl">
+                     <p className={`text-center font-black ${srdConfirmed ? "text-2xl" : "text-3xl"} text-primary-black mb-2`}>
+                       {srdConfirmed ? srdRow.day : srdRow.date}
+                     </p>
+                     <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">
+                       {srdConfirmed ? "Confirmed by SASSA" : "To be confirmed"}
+                     </p>
+                     {!srdConfirmed && (
+                       <p className="text-center text-xs font-semibold text-gray-500 mt-2">{srdRow.day}</p>
+                     )}
+                 </Card>
+                   <p className="text-sm text-amber-700 dark:text-amber-400 font-semibold">
+                     {srdConfirmed ? (
+                       <>Do not rely on third-party dates. Check your status on the official SRD portal for your personal &ldquo;Pay Day&rdquo; date ({srdRow.day}), and only collect once you receive the payment SMS.</>
+                     ) : (
+                       <>Do not rely on third-party dates. Once SASSA confirms the {schedule.label} SRD dates, check your status on the official SRD portal for your personal &ldquo;Pay Day&rdquo; date, and only collect once you receive the payment SMS.</>
+                     )}
+                   </p>
+                   <div className="prose prose-sm dark:prose-invert">
+                      <p>Remember these three critical factors regarding your payment:</p>
+                      <ul>
+                         <li><strong>Batching:</strong> Not everyone is paid on the same day. If your application is approved late, you might only see funds later in the window.</li>
+                         <li><strong>Bank Reflection:</strong> Once your status shows a "Pay Day" date, it usually takes 1 to 3 business days for the South African banking system to reflect the balance in your account.</li>
+                         <li><strong>SMS Confirmation:</strong> If you collect your grant at retail points (Pick n Pay, Boxer, Shoprite, Checkers), <strong>do not go to the store</strong> until you have received the payment SMS containing your collection code.</li>
+                      </ul>
+                   </div>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800">
+                    <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {schedule.label} Grant Dates</h4>
+                    <div className="space-y-4">
+                       {permanentRows.map(({ grant, row }) => (
+                         <div key={grant} className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+                            <span className="font-bold">{grant}</span>
+                            <Chip color={row.status === "confirmed" ? "success" : "warning"} variant="flat">{row.status === "confirmed" ? toChipDate(row.date) : "TBC"}</Chip>
+                         </div>
+                       ))}
+                       <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+                          <span className="font-bold">SRD R370</span>
+                          <Chip color={srdConfirmed ? "success" : "warning"} variant="flat">{srdConfirmed ? "Confirmed" : "TBA"}</Chip>
+                       </div>
+                    </div>
+                   <div className="mt-8 space-y-3">
+                      <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</Button>
+                      <NextLink href={`/dates/${schedule.month_key}`} className="block text-center text-sm font-bold text-primary-gold underline">See the full {schedule.label} schedule</NextLink>
+                   </div>
                 </div>
              </div>
+           ) : (
              <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800">
-                 <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {currentMonthYear.split(" ")[0]} Grant Dates</h4>
-                 <div className="space-y-4">
-                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                       <span className="font-bold">Older Persons</span>
-                       <Chip color="success" variant="flat">Wed, 2 Sep 2026</Chip>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                       <span className="font-bold">Disability Grant</span>
-                       <Chip color="success" variant="flat">Thu, 3 Sep 2026</Chip>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                       <span className="font-bold">Children's Grants</span>
-                       <Chip color="success" variant="flat">Fri, 4 Sep 2026</Chip>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                       <span className="font-bold">SRD R370</span>
-                       <Chip color="success" variant="flat">Wed 23 &amp; Fri 25 Sep</Chip>
-                    </div>
-                 </div>
-                <div className="mt-8 space-y-3">
-                   <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</Button>
-                   <NextLink href="/dates/september-2026" className="block text-center text-sm font-bold text-primary-gold underline">See the full September 2026 schedule</NextLink>
-                </div>
+               <p className="text-lg text-gray-600 dark:text-gray-400">
+                 Confirmations for {currentMonthYear} are not listed in our schedule yet. Check the official SRD portal (srd.sassa.gov.za) for your personal &ldquo;Pay Day&rdquo; date, or see our <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">payment calendar</NextLink> for confirmed months.
+               </p>
              </div>
-          </div>
+           )}
 
           <div className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-3xl border-l-8 border-blue-500">
             <p className="font-black text-blue-900 dark:text-blue-400 mb-2 text-xl">Handy Tip:</p>

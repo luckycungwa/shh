@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -13,23 +11,10 @@ import NextStepCard from "../../../components/affiliate/NextStepCard";
 import EntityLinks from "../../../components/EntityLinks";
 import { articleSchema, breadcrumbSchema, faqPageSchema, paymentScheduleSchema } from "../../../lib/schema";
 import { SITE_CONFIG } from "../../../lib/config";
-
-interface MonthSchedule {
-  month_key: string;
-  label: string;
-  year: number;
-  month: number;
-  older_persons: { date: string; day: string; status: string };
-  disability: { date: string; day: string; status: string };
-  children: { date: string; day: string; status: string };
-  under_review: { date: string; day: string; status: string };
-  srd: { date: string; day: string; status: string };
-  note: string;
-  governance?: { source: string; sourceURL: string; lastVerified: string; notes: string };
-}
+import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from "../../../lib/payment-schedule";
 
 function readAll(): MonthSchedule[] {
-  return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/payment-schedule-forecast.json"), "utf8"));
+  return readForecast();
 }
 
 function creditInfo(s: MonthSchedule, key: "older_persons" | "disability" | "children" | "under_review" | "srd") {
@@ -40,10 +25,15 @@ function creditInfo(s: MonthSchedule, key: "older_persons" | "disability" | "chi
     under_review: "Grants Under Review",
     srd: "SRD R370 Grant",
   };
+  const row = key === "srd"
+    ? srdDisplay(s.srd, s.label)
+    : key === "under_review"
+      ? underReviewDisplay(s.under_review)
+      : s[key];
   return {
     key,
     grant: grantNames[key],
-    ...s[key],
+    ...row,
   };
 }
 
@@ -105,7 +95,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
-      <JsonLd data={articleSchema(title, description, `/dates/${schedule.month_key}`, "Lucky Cungwa", "2026-09-22")} />
+      <JsonLd data={articleSchema(title, description, `/dates/${schedule.month_key}`, "Lucky Cungwa", schedule.governance?.lastVerified || "2026-09-24")} />
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
         { name: "Payment Calendar", slug: "/payment-calendar" },
@@ -247,7 +237,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
         />
 
         <Divider />
-        <EditorialFooter lastUpdated="2026-09-22" author="Lucky Cungwa" />
+        <EditorialFooter lastUpdated={schedule.governance?.lastVerified || "2026-09-24"} author="Lucky Cungwa" />
       </article>
     </div>
   );

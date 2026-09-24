@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { Card, CardBody, Chip, Divider } from "@nextui-org/react";
-import { FaQuestionCircle, FaInfoCircle, FaSearch, FaExternalLinkAlt } from "react-icons/fa";
+import { FaQuestionCircle, FaSearch, FaExternalLinkAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
@@ -20,7 +20,30 @@ interface FAQItem {
   category: string;
   tags: string[];
   lastUpdated: string;
+  linkedPage?: { label: string; url: string };
 }
+
+const CATEGORY_ORDER = [
+  "SRD application",
+  "SRD status",
+  "payments",
+  "banking",
+  "appeals",
+  "eligibility",
+  "scams & security",
+  "other grants",
+];
+
+const CATEGORY_LABELS: Record<string, string> = {
+  "SRD application": "SRD Applications",
+  "SRD status": "SRD Status & Checks",
+  payments: "Payments & Amounts",
+  banking: "Banking & Payment Methods",
+  appeals: "Appeals",
+  eligibility: "Eligibility & Documents",
+  "scams & security": "Scams & Security",
+  "other grants": "Other SASSA Grants",
+};
 
 export const metadata: Metadata = buildMetadata({
   title: "SASSA FAQ — Answers to Your Grant Questions",
@@ -33,11 +56,13 @@ export default function FAQPage() {
   const faqs: FAQItem[] = JSON.parse(fs.readFileSync(faqsPath, "utf8"));
 
   const grouped = faqs.reduce<Record<string, FAQItem[]>>((acc, faq) => {
-    const cat = faq.category || "General";
+    const cat = faq.category || "other grants";
     if (!acc[cat]) acc[cat] = [];
     acc[cat].push(faq);
     return acc;
   }, {});
+
+  const orderedCategories = CATEGORY_ORDER.filter(c => grouped[c]);
 
   const faqData = faqs.map(f => ({ q: resolveTemplates(f.question), a: resolveTemplates(f.answer) }));
 
@@ -66,10 +91,12 @@ export default function FAQPage() {
       </div>
 
       <div className="space-y-16">
-        {Object.entries(grouped).map(([category, items]) => (
+        {orderedCategories.map((category) => {
+          const items = grouped[category];
+          return (
           <section key={category} id={category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")} className="scroll-mt-24">
             <div className="flex items-center justify-between mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">
-              <h2 className="text-3xl font-bold">{category}</h2>
+              <h2 className="text-3xl font-bold">{CATEGORY_LABELS[category] || category}</h2>
               <Chip size="sm" variant="flat" color="primary">{items.length} questions</Chip>
             </div>
             <div className="space-y-4">
@@ -87,6 +114,14 @@ export default function FAQPage() {
                       className="prose prose-sm dark:prose-invert max-w-none"
                        dangerouslySetInnerHTML={{ __html: resolveTemplates(faq.answer) }}
                     />
+                    {faq.linkedPage && (
+                      <NextLink
+                        href={faq.linkedPage.url}
+                        className="inline-flex items-center gap-2 mt-4 text-primary-gold font-semibold underline"
+                      >
+                        {faq.linkedPage.label} <FaExternalLinkAlt className="text-xs" />
+                      </NextLink>
+                    )}
                     {faq.tags && faq.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2 mt-4">
                         {faq.tags.map((tag, i) => (
@@ -102,7 +137,8 @@ export default function FAQPage() {
               ))}
             </div>
           </section>
-        ))}
+          );
+        })}
       </div>
 
       <Divider className="my-16" />

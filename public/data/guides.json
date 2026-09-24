@@ -1755,8 +1755,16 @@
         "title": "Bank Account Deposit (Fastest & Safest)",
         "content": "Having your SASSA grant paid directly into your bank account is the fastest and safest method. The money is deposited directly by SASSA into your account on your Pay Day date. You can withdraw it immediately without waiting for an SMS code or visiting a collection point. Your bank account must be registered in your own name — SASSA does not pay into third-party accounts. Major South African banks (Capitec, FNB, Standard Bank, Nedbank, Absa, Bank Zero, TymeBank, Discovery Bank) all accept SASSA deposits.",
         "tips": [
-          "Bank transfers reflect faster at Capitec and FNB (often same day) vs traditional banks (next day).",
+          "Deposits usually reflect 2 to 3 business days after your pay date; Capitec and FNB often show them sooner.",
           "Never close your bank account while waiting for a SASSA payment — it will cause delays."
+        ]
+      },
+      {
+        "title": "How Long Until Your Grant Reflects?",
+        "content": "Each payment method has a different reflection time after your assigned pay date. Bank account deposits usually take 2 to 3 business days. Postbank Black Card funds are normally loaded on the release date. Cash Send at Pick n Pay or Boxer is usually available the same day or the next business day once your SMS collection code arrives.",
+        "tips": [
+          "Check your status page first to confirm your exact pay date before calling.",
+          "If nothing has reflected after 3 business days, call SASSA on 0800 60 10 11."
         ]
       },
       {
@@ -1994,7 +2002,7 @@
       },
       {
         "title": "Fix 6: Visit a SASSA Office as Last Resort",
-        "content": "If you have tried all the fixes above and the biometric verification still fails, visit your nearest SASSA office in person. Bring your ID document. Explain that you are unable to complete the online biometric verification. The SASSA officer will verify your identity manually using your fingerprints or by comparing your ID photo to your face. This takes longer but is guaranteed to work.",
+        "content": "If you have tried all the fixes above and the biometric verification still fails, visit your nearest SASSA office in person. Bring your ID document. Explain that you are unable to complete the online biometric verification. The SASSA officer will verify your identity manually using your fingerprints or by comparing your ID photo to your face. This takes longer, but in-person manual verification successfully resolves most cases.",
         "tips": [
           "Go early in the morning (before 08:00) to avoid long queues.",
           "If you cannot travel due to disability or illness, call 0800 60 10 11 to request a home visit."

@@ -1,4 +1,6 @@
 import React from "react";
+import fs from "fs";
+import path from "path";
 import type { Metadata } from "next";
 import { Chip, Divider } from "@nextui-org/react";
 import { FaMapMarkerAlt, FaPhone, FaClock, FaSearch } from "react-icons/fa";
@@ -16,107 +18,35 @@ export const metadata: Metadata = buildMetadata({
   ogType: "article",
 });
 
-const provinces = [
-  {
-    name: "Eastern Cape",
-    capital: "Bhisho",
-    description: "The Eastern Cape has over 30 SASSA local offices serving communities across the province. The provincial office coordinates grant distribution for one of South Africa's largest beneficiary populations.",
-    offices: [
-      { town: "Bhisho (Provincial Office)", address: "Independence Avenue, Bhisho", phone: "040 608 7100", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Port Elizabeth (Gqeberha)", address: "80 Buckingham Road, Gqeberha", phone: "041 408 6000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "East London", address: "3 Hill Street, East London", phone: "043 705 8000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Mthatha", address: "Victoria Street, Mthatha", phone: "047 532 6001", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "Free State",
-    capital: "Bloemfontein",
-    description: "The Free State provincial SASSA office oversees grant distribution across the province, with local offices in all district municipalities.",
-    offices: [
-      { town: "Bloemfontein (Provincial Office)", address: "61 St Andrew Street, Bloemfontein", phone: "051 410 4000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Welkom", address: "Stateway Road, Welkom", phone: "057 357 9000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Bethlehem", address: "Cnr Church & Muller Street, Bethlehem", phone: "058 303 5600", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Sasolburg", address: "Cnr Steen & Kokerboom Street, Sasolburg", phone: "016 970 7000", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "Gauteng",
-    capital: "Johannesburg",
-    description: "As South Africa's most populous province, Gauteng has the highest number of SASSA offices and beneficiaries. The provincial office handles several million social grant recipients.",
-    offices: [
-      { town: "Johannesburg (Provincial Office)", address: "78 Marshall Street, Johannesburg", phone: "011 241 8000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Pretoria", address: "262 Lilian Ngoyi Street, Pretoria", phone: "012 315 7000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Soweto", address: "1656 Mooki Street, Orlando East, Soweto", phone: "011 935 5600", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Tembisa", address: "3278 Reverend Naude Street, Tembisa", phone: "011 921 6600", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Vereeniging", address: "32 Beaconsfield Road, Vereeniging", phone: "016 430 0500", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "KwaZulu-Natal",
-    capital: "Pietermaritzburg",
-    description: "KwaZulu-Natal has one of the largest social grant beneficiary populations. The provincial office coordinates payments through local offices in all districts.",
-    offices: [
-      { town: "Pietermaritzburg (Provincial Office)", address: "181 Church Street, Pietermaritzburg", phone: "033 341 8000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Durban", address: "191 Anton Lembede Street, Durban", phone: "031 312 3000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Richards Bay", address: "Cnr Kruger & West Street, Richards Bay", phone: "035 780 6000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Ladysmith", address: "125 Murchison Street, Ladysmith", phone: "036 637 7000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Port Shepstone", address: "182 Bisset Street, Port Shepstone", phone: "039 688 9000", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "Limpopo",
-    capital: "Polokwane",
-    description: "Limpopo province has a high concentration of rural SASSA beneficiaries. The provincial office focuses on reaching remote communities through mobile office units.",
-    offices: [
-      { town: "Polokwane (Provincial Office)", address: "95 Marshall Street, Polokwane", phone: "015 230 2000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Tzaneen", address: "Cnr Agatha & Peace Street, Tzaneen", phone: "015 306 8600", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Lebowakgomo", address: "Block A, Lebowakgomo", phone: "015 632 4000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Thohoyandou", address: "Old parliamentary Building, Thohoyandou", phone: "015 963 2000", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "Mpumalanga",
-    capital: "Mbombela (Nelspruit)",
-    description: "Mpumalanga's SASSA provincial office coordinates grant distribution across three district municipalities, serving a mix of urban and rural communities.",
-    offices: [
-      { town: "Mbombela (Provincial Office)", address: "30 Branders Street, Mbombela", phone: "013 754 5000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Witbank (eMalahleni)", address: "Cnr Mandela & Oos Streets, eMalahleni", phone: "013 690 8000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Secunda", address: "Cnr FW De Klerk & Syfer Road, Secunda", phone: "017 634 9000", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "North West",
-    capital: "Mahikeng",
-    description: "North West province's SASSA offices serve a widespread rural population. The provincial office coordinates with local offices and mobile units.",
-    offices: [
-      { town: "Mahikeng (Provincial Office)", address: "Cnr University & Albert Luthuli Drive, Mahikeng", phone: "018 397 3000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Rustenburg", address: "80 Nelson Mandela Drive, Rustenburg", phone: "014 590 6000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Klerksdorp", address: "Cnr Margaretha & CR Swart Street, Klerksdorp", phone: "018 468 7000", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "Northern Cape",
-    capital: "Kimberley",
-    description: "As South Africa's largest but least populated province, Northern Cape SASSA offices serve far-flung communities across vast distances.",
-    offices: [
-      { town: "Kimberley (Provincial Office)", address: "1 Compound Road, Kimberley", phone: "053 831 6000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Upington", address: "Cnr Scott & Mark Street, Upington", phone: "054 331 9000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Springbok", address: "Hospital Street, Springbok", phone: "027 718 2000", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-  {
-    name: "Western Cape",
-    capital: "Cape Town",
-    description: "The Western Cape SASSA provincial office manages grant distribution through local offices across the province, including metro and rural offices.",
-    offices: [
-      { town: "Cape Town (Provincial Office)", address: "9 Dorp Street, Cape Town", phone: "021 469 7000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Stellenbosch", address: "23 Bird Street, Stellenbosch", phone: "021 887 3000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "George", address: "70 Courtney Street, George", phone: "044 803 7000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Worcester", address: "54 High Street, Worcester", phone: "023 348 3000", hours: "Mon–Fri 07:30–16:00" },
-      { town: "Khayelitsha", address: "Cnr Spine & Bonga Road, Khayelitsha", phone: "021 361 2400", hours: "Mon–Fri 07:30–16:00" },
-    ],
-  },
-];
+interface ProvinceOffice {
+  town: string;
+  address?: string;
+  phone?: string;
+  hours?: string;
+  verified?: boolean;
+}
+
+interface ProvinceDirectory {
+  name: string;
+  capital: string;
+  description: string;
+  offices: ProvinceOffice[];
+}
+
+const provinces: ProvinceDirectory[] = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "public/data/provinces.json"), "utf8")
+).map((p: any) => ({
+  name: p.name,
+  capital: p.capital,
+  description: p.description,
+  offices: [
+    ...(p.regional_office
+      ? [{ town: `${p.regional_office.town} (Regional Office)`, address: p.regional_office.address, phone: p.regional_office.phone, hours: p.regional_office.hours, verified: true }]
+      : []),
+    ...(p.main_offices || []).map((o: any) => ({ town: o.town, address: o.address, phone: o.phone, verified: o.verified })),
+    ...(p.district_offices || []).map((o: any) => ({ town: o.town, address: o.address, phone: o.phone, verified: o.verified })),
+  ],
+}));
 
 export default function SassaOfficesPage() {
   return (
@@ -161,9 +91,18 @@ export default function SassaOfficesPage() {
                   <div key={oi} className="border border-gray-100 dark:border-gray-700 rounded-xl p-5 hover:shadow-md transition-shadow">
                     <p className="font-bold text-primary-gold mb-2">{office.town}</p>
                     <div className="space-y-1.5 text-sm text-gray-500">
-                      <p className="flex items-center gap-2"><FaMapMarkerAlt className="flex-shrink-0" /> {office.address}</p>
-                      <p className="flex items-center gap-2"><FaPhone className="flex-shrink-0" /> {office.phone}</p>
-                      <p className="flex items-center gap-2"><FaClock className="flex-shrink-0" /> {office.hours}</p>
+                      {office.verified === true && office.address && (
+                        <p className="flex items-center gap-2"><FaMapMarkerAlt className="flex-shrink-0" /> {office.address}</p>
+                      )}
+                      {office.verified === true && office.phone && (
+                        <p className="flex items-center gap-2"><FaPhone className="flex-shrink-0" /> {office.phone}</p>
+                      )}
+                      {office.verified === true && office.hours && (
+                        <p className="flex items-center gap-2"><FaClock className="flex-shrink-0" /> {office.hours}</p>
+                      )}
+                      {office.verified !== true && (
+                        <p className="text-xs font-semibold text-amber-600 dark:text-amber-400">Details not independently verified — call SASSA on 0800 60 10 11 to confirm before travelling.</p>
+                      )}
                     </div>
                   </div>
                 ))}
