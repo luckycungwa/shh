@@ -6,6 +6,16 @@ import JsonLd from "../../../components/JsonLd";
 import PaymentTroubleshooter from "../../../components/tools/PaymentTroubleshooter";
 import { buildMetadata } from "../../../lib/seo";
 import { breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
+import { getFact } from "../../../lib/canonical-facts";
+
+// Contact details come from canonical-facts.json so this page can never
+// disagree with the other tools; a missing fact renders without a number.
+const factOrNull = (key: string): string | null => {
+  const raw = getFact(key);
+  return raw.startsWith("{{") || raw.trim() === "" ? null : raw;
+};
+
+const HELPLINE = factOrNull("sassa_helpline");
 
 export const metadata: Metadata = buildMetadata({
   title: "Missing SASSA Payment Troubleshooter (2026)",
@@ -24,7 +34,7 @@ export default function PaymentTroubleshooterPage() {
     <div className="max-w-3xl mx-auto px-6 py-12 space-y-8">
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
-        { name: "Tools", slug: "/tools/status-explorer" },
+        { name: "Tools", slug: "/tools" },
         { name: "Payment Troubleshooter", slug: "/tools/payment-troubleshooter" },
       ])} />
       <JsonLd data={faqPageSchema(faqs)} />
@@ -45,8 +55,19 @@ export default function PaymentTroubleshooterPage() {
 
       <p className="text-sm text-gray-400">
         Payments can take 1 to 3 business days to reflect after your Pay Day. If you are still missing money after
-        3 business days, confirm your banking details on the SRD portal and contact SASSA on 0800 60 10 11.
+        3 business days, confirm your banking details on the SRD portal and contact SASSA
+        {HELPLINE ? ` on ${HELPLINE}` : ""}.
       </p>
+
+      <div className="text-sm text-gray-500 flex flex-wrap items-center gap-x-4 gap-y-2 pt-4 border-t border-gray-100 dark:border-gray-800">
+        <span className="font-bold text-gray-600 dark:text-gray-400">Related tools:</span>
+        <NextLink href="/tools/status-explorer" className="font-bold text-primary-gold hover:underline">
+          What does my status mean?
+        </NextLink>
+        <NextLink href="/payment-calendar" className="font-bold text-primary-gold hover:underline">
+          Payment calendar
+        </NextLink>
+      </div>
     </div>
   );
 }

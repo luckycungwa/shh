@@ -52,6 +52,8 @@ export default function FooterComponent() {
                 { label: "Appeal Deadline Calculator", href: "/tools/appeal-deadline" },
                 { label: "Payment Troubleshooter", href: "/tools/payment-troubleshooter" },
                 { label: "Status Meaning Explorer", href: "/tools/status-explorer" },
+                { label: "Means Test Calculator", href: "/tools/means-test-calculator" },
+                { label: "Scam Message Checker", href: "/tools/scam-message-checker" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>

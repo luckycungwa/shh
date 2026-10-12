@@ -112,6 +112,7 @@ export default function LostSassaCardOrIdPage() {
         pagePath="/lost-sassa-card-or-id"
         items={[
           { title: "Report a scam or identity theft", url: "/scam-alert", description: "What to do if someone uses your details" },
+          { title: "Check a suspicious message", url: "/tools/scam-message-checker", description: "See if a payment or ID request is a scam" },
           { title: "Check / update my status", url: "/status-check", description: "Make sure your payment is on track" },
           { title: "Update my payment method", url: "/guides/bank-details-pending-fix", description: "Confirm how you receive your grant" },
           { title: "Find a Postbank/SASSA service point", url: "/sassa-offices", description: "Locate a replacement card point" },

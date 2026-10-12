@@ -61,6 +61,8 @@ const categories = [
       { href: "/guides/bulk-means-test", label: "Understanding the Means Test", desc: "How income and assets are assessed" },
       { href: "/guides/sassa-grant-renewal", label: "Why Your Grant Is Checked Every Month", desc: "Monthly reassessment explained" },
       { href: "/eligibility-check", label: "SASSA Grant Eligibility Checker", desc: "Check which grants you qualify for" },
+      { href: "/tools/means-test-calculator", label: "SASSA Means Test Calculator", desc: "Estimate whether your income passes the test" },
+      { href: "/tools/status-explorer", label: "What Does My Status Mean?", desc: "Look up any SASSA status and its next step" },
       { href: "/glossary", label: "SASSA Glossary of Terms", desc: "Understand SASSA terminology" },
     ],
   },
@@ -70,6 +72,7 @@ const categories = [
     title: "Declined Applications & Appeals",
     description: "Your application was declined — here is why and how to appeal.",
     links: [
+      { href: "/tools/appeal-deadline", label: "Appeal Deadline Calculator", desc: "Work out your exact last day to appeal" },
       { href: "/guides/appeal-guide", label: "How to Appeal a Declined SRD Application", desc: "Full step-by-step appeal process" },
       { href: "/guides/appeal-timeline", label: "How Long Does an Appeal Take?", desc: "Appeal timeline and how to track it" },
       { href: "/status/appeal-pending", label: "Appeal Pending — What Now?", desc: "What happens after you submit an appeal" },
@@ -135,6 +138,7 @@ const categories = [
     description: "Protect yourself from SASSA-related scams and phishing.",
     links: [
       { href: "/scam-alert", label: "SASSA Scam & Fraud Alerts", desc: "Latest scams targeting grant beneficiaries" },
+      { href: "/tools/scam-message-checker", label: "SASSA Scam Message Checker", desc: "Paste a suspicious SMS and check for common scam signs" },
       { href: "/guides/sassa-online-security", label: "Online Security Guide", desc: "How to spot fake SASSA websites" },
       { href: "/scam-alert", label: "How to Report SASSA Fraud", desc: "Step-by-step fraud reporting guide" },
     ],

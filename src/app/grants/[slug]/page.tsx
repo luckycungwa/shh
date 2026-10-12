@@ -277,6 +277,7 @@ export default function GrantGuidePage({ params }: { params: { slug: string } })
             links={[
               { title: "How to check your grant status", url: "/status-check" },
               { title: "Grant status meanings", url: "/status" },
+              { title: "Check if you qualify (means test)", url: "/tools/means-test-calculator" },
               { title: "View the payment calendar", url: "/payment-calendar" },
               { title: "Banking & payment methods", url: "/banking" },
               { title: "How to appeal a declined grant", url: "/appeals/how-to-appeal" },

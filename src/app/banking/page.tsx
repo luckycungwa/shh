@@ -145,6 +145,19 @@ export default function BankingHubPage() {
         </div>
       </section>
 
+      <section className="max-w-4xl mx-auto mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <NextLink href="/tools/payment-troubleshooter" className="group block p-6 rounded-2xl border border-primary-gold/20 bg-primary-gold/5 hover:border-primary-gold/40 transition-colors">
+            <p className="font-black text-lg group-hover:text-primary-gold transition-colors">Missing a payment?</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Use the payment troubleshooter to find the likely cause and next step.</p>
+          </NextLink>
+          <NextLink href="/tools/status-explorer" className="group block p-6 rounded-2xl border border-primary-gold/20 bg-primary-gold/5 hover:border-primary-gold/40 transition-colors">
+            <p className="font-black text-lg group-hover:text-primary-gold transition-colors">Not sure what &quot;Bank Details Pending&quot; means?</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Look up any SASSA status and the right action in the Status Meaning Explorer.</p>
+          </NextLink>
+        </div>
+      </section>
+
       <section className="text-center mt-20">
         <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">

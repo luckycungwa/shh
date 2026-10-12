@@ -67,7 +67,11 @@ export default function GrantsListingPage() {
           SASSA administers two categories of grants: <strong>permanent grants</strong> (Old Age, Disability, Child Support, Foster Child, Care Dependency, Grant-in-Aid, War Veterans) which are paid monthly on a fixed schedule, and the <strong>temporary SRD R370 grant</strong> which is paid in the last week of each month.
         </p>
         <p className="text-blue-800 dark:text-blue-300 leading-relaxed">
-          To qualify for any grant, you must pass the <strong>means test</strong> which evaluates your income and assets. Each grant has specific age, health, or caregiving requirements. Click any grant below to see full eligibility criteria and application steps.
+          To qualify for any grant, you must pass the <strong>means test</strong> which evaluates your income and assets. Each grant has specific age, health, or caregiving requirements. Click any grant below to see full eligibility criteria and application steps. You can also{" "}
+          <NextLink href="/tools/means-test-calculator" className="font-bold text-primary-gold hover:underline">
+            compare your income and assets against each grant&apos;s means-test thresholds
+          </NextLink>{" "}
+          in our calculator before you read on.
         </p>
       </div>
 

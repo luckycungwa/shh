@@ -8,7 +8,19 @@ import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
 import { getCurrentYearString } from "../../lib/config";
 import { breadcrumbSchema } from "../../lib/schema";
+import { getFact } from "../../lib/canonical-facts";
 import JsonLd from "../../components/JsonLd";
+
+// The fraud hotline comes from canonical-facts.json so this page can never
+// disagree with the tools or the FAQ pages; a missing fact drops the number
+// rather than showing a placeholder.
+const factOrNull = (key: string): string | null => {
+  const raw = getFact(key);
+  return raw.startsWith("{{") || raw.trim() === "" ? null : raw;
+};
+
+const HELPLINE = factOrNull("sassa_helpline");
+const HELPLINE_TEL = HELPLINE ? `tel:${HELPLINE.replace(/[^\d+]/g, "")}` : null;
 
 export const metadata: Metadata = buildMetadata({
   title: `SASSA Scam Alerts ${getCurrentYearString()} — Protect Yourself from Fraud`,
@@ -62,6 +74,13 @@ export default function ScamAlertPage() {
                  <p className="text-sm text-gray-600">Never hand your SASSA card or PIN to anyone, even someone claiming to be an official.</p>
               </div>
            </div>
+           <p className="text-sm text-gray-600 mt-6">
+              Not sure whether a message you received is real?{" "}
+              <NextLink href="/tools/scam-message-checker" className="font-bold text-red-700 dark:text-red-400 hover:underline">
+                 Check it with the Scam Message Checker
+              </NextLink>
+              .
+           </p>
         </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -100,7 +119,7 @@ export default function ScamAlertPage() {
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="space-y-2">
                  <p className="font-bold flex items-center gap-2"><FaExclamationCircle className="text-red-500" /> SASSA Fraud Hotline</p>
-                 <p className="text-sm text-gray-600">Call the toll-free fraud hotline on <strong>0800 60 10 11</strong>. You do not have to give your name.</p>
+                 <p className="text-sm text-gray-600">Call the toll-free fraud hotline{HELPLINE ? <> on <strong>{HELPLINE}</strong></> : ""}. You do not have to give your name.</p>
               </div>
               <div className="space-y-2">
                  <p className="font-bold flex items-center gap-2"><FaExclamationCircle className="text-red-500" /> Nearest SASSA Office</p>
@@ -125,10 +144,28 @@ export default function ScamAlertPage() {
                  <p className="text-xl text-secondary-gray max-w-2xl mx-auto">
                     Report it immediately to SASSA and the South African Police Service (SAPS).
                  </p>
-                 <div className="flex flex-wrap justify-center gap-6">
-                    <Button color="primary" className="font-bold px-8 py-6" size="lg">Call SASSA Fraud: 0800 60 10 11</Button>
-                    <Button variant="bordered" className="text-white border-white/30 font-bold px-8 py-6" size="lg">Contact SAPS</Button>
-                 </div>
+                  <div className="flex flex-wrap justify-center gap-6">
+                     <Button
+                        as="a"
+                        href={HELPLINE_TEL ?? "/contact"}
+                        color="primary"
+                        className="font-bold px-8 py-6"
+                        size="lg"
+                     >
+                        {HELPLINE ? `Call SASSA Fraud: ${HELPLINE}` : "SASSA Contact Details"}
+                     </Button>
+                     <Button
+                        as="a"
+                        href="https://www.saps.gov.za"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="bordered"
+                        className="text-white border-white/30 font-bold px-8 py-6"
+                        size="lg"
+                     >
+                        Contact SAPS
+                     </Button>
+                  </div>
               </CardBody>
            </Card>
         </section>

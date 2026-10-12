@@ -2,30 +2,62 @@
 
 import React, { useState } from "react";
 import { FaCalculator, FaExclamationCircle, FaCheckCircle, FaInfoCircle } from "react-icons/fa";
+import { getFact } from "../../lib/canonical-facts";
 
-// Honest appeal-deadline estimator. SRD appeals may be submitted up to
-// 90 days after the decline decision; acting within the first 30 days is
-// recommended. No data leaves the browser.
+// Appeal windows are read from canonical-facts.json: the gazetted 90-day
+// lodgement window and SASSA's 30-day recommendation. A missing fact must
+// never surface as a number, so both are resolved once through these guards.
+const factOrNull = (key: string): string | null => {
+  const raw = getFact(key);
+  return raw.startsWith("{{") || raw.trim() === "" ? null : raw;
+};
+
+const daysOrNull = (key: string): number | null => {
+  const raw = factOrNull(key);
+  if (raw === null) return null;
+  const n = parseInt(raw.replace(/[^\d]/g, ""), 10);
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
+
+const APPEAL_WINDOW_DAYS = daysOrNull("appeal_lodgement_window_days");
+const APPEAL_RECOMMENDED_DAYS = daysOrNull("appeal_recommended_days");
+const HELPLINE = factOrNull("sassa_helpline");
+
+type AppealResult = {
+  deadline: string;
+  daysLeft: number;
+  passed: boolean;
+  windowDays: number;
+  recommended: string | null;
+  recommendedDays: number | null;
+};
+
 export default function AppealDeadlineCalculator() {
   const [dateStr, setDateStr] = useState("");
-  const [result, setResult] = useState<{ deadline: string; daysLeft: number; passed: boolean; recommended: string } | null>(null);
+  const [result, setResult] = useState<AppealResult | null>(null);
 
   const compute = () => {
-    if (!dateStr) return;
+    if (APPEAL_WINDOW_DAYS === null || !dateStr) return;
     const decline = new Date(dateStr + "T00:00:00");
     if (isNaN(decline.getTime())) return;
     const deadline = new Date(decline);
-    deadline.setDate(decline.getDate() + 90);
-    const recommended = new Date(decline);
-    recommended.setDate(decline.getDate() + 30);
+    deadline.setDate(decline.getDate() + APPEAL_WINDOW_DAYS);
     const now = new Date();
     const msPerDay = 86_400_000;
     const daysLeft = Math.ceil((deadline.getTime() - now.getTime()) / msPerDay);
+    let recommended: string | null = null;
+    if (APPEAL_RECOMMENDED_DAYS !== null) {
+      const recommendedDate = new Date(decline);
+      recommendedDate.setDate(decline.getDate() + APPEAL_RECOMMENDED_DAYS);
+      recommended = recommendedDate.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" });
+    }
     setResult({
       deadline: deadline.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }),
       daysLeft,
       passed: daysLeft < 0,
-      recommended: recommended.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }),
+      windowDays: APPEAL_WINDOW_DAYS,
+      recommended,
+      recommendedDays: APPEAL_RECOMMENDED_DAYS,
     });
   };
 
@@ -38,11 +70,20 @@ export default function AppealDeadlineCalculator() {
         <h2 className="text-xl font-black text-gray-900 dark:text-white">SRD Appeal Deadline Calculator</h2>
       </div>
 
-      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-        SRD appeals may be submitted up to 90 days after the decline decision, but acting within the first
-        30 days is recommended. Enter the date your application was declined to see your estimated last day
-        to appeal. This is a guide only — always confirm on the official ITSAA appeals portal.
-      </p>
+      {APPEAL_WINDOW_DAYS === null ? (
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          Our verified data does not currently include the appeal window, so this calculator cannot work out a
+          deadline. Confirm the deadline on the official ITSAA appeals portal before relying on any date.
+        </p>
+      ) : (
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          {APPEAL_RECOMMENDED_DAYS !== null
+            ? `SRD appeals may be submitted up to ${APPEAL_WINDOW_DAYS} days after the decline decision, but acting within the first ${APPEAL_RECOMMENDED_DAYS} days is recommended.`
+            : `SRD appeals may be submitted up to ${APPEAL_WINDOW_DAYS} days after the decline decision.`}{" "}
+          Enter the date your application was declined to see your estimated last day to appeal. This is a guide
+          only — always confirm on the official ITSAA appeals portal.
+        </p>
+      )}
 
       <div className="flex flex-col sm:flex-row gap-3">
         <input
@@ -53,7 +94,8 @@ export default function AppealDeadlineCalculator() {
         />
         <button
           onClick={compute}
-          className="bg-primary-black text-white font-bold px-5 py-3 rounded-xl hover:bg-gray-800 transition-colors"
+          disabled={APPEAL_WINDOW_DAYS === null}
+          className="bg-primary-black text-white font-bold px-5 py-3 rounded-xl hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Calculate
         </button>
@@ -75,20 +117,21 @@ export default function AppealDeadlineCalculator() {
           <div>
             <p className="font-bold text-gray-900 dark:text-white">
               {result.passed
-                ? "Your 90-day appeal window has likely closed"
+                ? `Your ${result.windowDays}-day appeal window has likely closed`
                 : `You have about ${result.daysLeft} day${result.daysLeft === 1 ? "" : "s"} left to appeal`}
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               Estimated last day to appeal: <strong>{result.deadline}</strong>
             </p>
-            {!result.passed && (
+            {!result.passed && result.recommended !== null && (
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                Recommended: submit by <strong>{result.recommended}</strong> (within 30 days of the decline).
+                Recommended: submit by <strong>{result.recommended}</strong> (within {result.recommendedDays} days
+                of the decline).
               </p>
             )}
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 flex items-center gap-1">
-              <FaInfoCircle /> If the window has closed, contact SASSA on 0800 60 10 11 — in limited cases late
-              appeals may still be considered.
+              <FaInfoCircle /> If the window has closed, contact SASSA{HELPLINE ? ` on ${HELPLINE}` : ""} — in
+              limited cases late appeals may still be considered.
             </p>
           </div>
         </div>

@@ -49,18 +49,20 @@
   },
   "child_support_income_threshold_single": {
     "value": "R5,800",
+    "note": "Monthly means-test income threshold for a single caregiver. This grant has no asset test — the leaflet records N/A for both asset columns.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "child_support_income_threshold_married": {
     "value": "R11,600",
+    "note": "Monthly means-test income threshold for married caregivers combined. This grant has no asset test — the leaflet records N/A for both asset columns.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "old_age_pension_amount_under75": {
@@ -79,36 +81,49 @@
     "verified_by": "DSD Official News — www.dsd.gov.za",
     "confidence": "confirmed"
   },
+  "older_persons_min_age": {
+    "value": "60",
+    "note": "Minimum age for the Older Person's Grant — 'Be 60 years of age or older' (SASSA Grant Booklet 2026, page 3). The same booklet sets the Disability Grant at 18 to 59.",
+    "effective_date": "2026-04-01",
+    "source_url": "https://sassa.gov.za/documents/uploads/SASSA_Grant_Booklet_-_2026_compressed.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Grant Booklet 2026, page 3 (sassa.gov.za)",
+    "confidence": "confirmed"
+  },
   "old_age_income_threshold_single": {
     "value": "R9,350",
+    "note": "Monthly means-test income threshold for a single applicant. The leaflet also shows an annual equivalent; only the monthly figure is stored here.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "old_age_income_threshold_married": {
     "value": "R18,700",
+    "note": "Monthly means-test income threshold for a married couple (combined). The leaflet also shows an annual equivalent; only the monthly figure is stored here.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "old_age_asset_threshold_single": {
     "value": "R1,584,000",
+    "note": "Total assets under the means test for a single applicant — a one-off total value, not a monthly or annual figure.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "old_age_asset_threshold_married": {
     "value": "R3,168,000",
+    "note": "Total assets under the means test for a married couple (combined) — a one-off total value, not a monthly or annual figure.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "disability_grant_amount": {
@@ -121,18 +136,20 @@
   },
   "disability_income_threshold_single": {
     "value": "R9,350",
+    "note": "Monthly means-test income threshold for a single applicant. The leaflet also shows an annual equivalent; only the monthly figure is stored here.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "disability_income_threshold_married": {
     "value": "R18,700",
+    "note": "Monthly means-test income threshold for a married couple (combined). The leaflet also shows an annual equivalent; only the monthly figure is stored here.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "foster_child_grant_amount": {
@@ -202,66 +219,74 @@
   },
   "care_dependency_income_threshold_single": {
     "value": "R24,000",
+    "note": "Monthly means-test income threshold for a single applicant. This grant has no asset test — the leaflet records N/A for both asset columns.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "care_dependency_income_threshold_married": {
     "value": "R48,000",
+    "note": "Monthly means-test income threshold for a married applicant (combined). This grant has no asset test — the leaflet records N/A for both asset columns.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "disability_asset_threshold_single": {
     "value": "R1,584,000",
+    "note": "Total assets under the means test for a single applicant — a one-off total value, not a monthly or annual figure.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "disability_asset_threshold_married": {
     "value": "R3,168,000",
+    "note": "Total assets under the means test for a married couple (combined) — a one-off total value, not a monthly or annual figure.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "war_veterans_income_threshold_single": {
     "value": "R9,350",
+    "note": "Monthly means-test income threshold for a single applicant. The leaflet also shows an annual equivalent; only the monthly figure is stored here.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "war_veterans_income_threshold_married": {
     "value": "R18,700",
+    "note": "Monthly means-test income threshold for a married couple (combined). The leaflet also shows an annual equivalent; only the monthly figure is stored here.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "war_veterans_asset_threshold_single": {
     "value": "R1,584,000",
+    "note": "Total assets under the means test for a single applicant — a one-off total value, not a monthly or annual figure.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "war_veterans_asset_threshold_married": {
     "value": "R3,168,000",
+    "note": "Total assets under the means test for a married couple (combined) — a one-off total value, not a monthly or annual figure.",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.treasury.gov.za/documents/national%20budget/2026/default.aspx",
-    "verified_date": "2026-08-20",
-    "verified_by": "National Treasury 2026 Budget / SASSA May 2026 means-test explainer (income R112,200/R224,400 annual; assets R1,584,000/R3,168,000; care-dependency R288,000/R576,000 annual)",
+    "source_url": "https://sassa.gov.za/documents/uploads/sassa_means_test_leaflet.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA Means Test leaflet, effective 01 April 2026 (sassa.gov.za)",
     "confidence": "confirmed"
   },
   "foster_child_grant_amount_2025": {
@@ -335,6 +360,24 @@
     "verified_by": "Official ITSAA appeals portal",
     "confidence": "confirmed",
     "effective_date": "2026-09-18"
+  },
+  "appeal_lodgement_window_days": {
+    "value": "90",
+    "note": "Statutory window to lodge an appeal: within 90 days after the decision being appealed (Government Gazette 46459, GN 2120, regulation 2(a)). Regulation 13(1) allows the Independent Tribunal to consider a late appeal if good cause is shown.",
+    "effective_date": "2022-05-31",
+    "source_url": "https://www.gov.za/sites/default/files/gcis_document/202206/46459rg11437gon2120.pdf",
+    "verified_date": "2026-10-08",
+    "verified_by": "Government Gazette 46459 (GN 2120), regulations 2(a) and 13(1) — Social Assistance Act appeal regulations",
+    "confidence": "confirmed"
+  },
+  "appeal_recommended_days": {
+    "value": "30",
+    "note": "SASSA recommends lodging within 30 days of the decision while evidence is still fresh. This is a SASSA recommendation reported in the press, not a gazetted regulation — the statutory maximum window is 90 days (see appeal_lodgement_window_days).",
+    "effective_date": "2022-12-15",
+    "source_url": "http://www.skillsportal.co.za/news/here-are-important-timelines-sassa-grant-appeals",
+    "verified_date": "2026-10-08",
+    "verified_by": "SASSA statement reported by Skills Portal (15 December 2022); also reported by TimesLIVE (17 September 2021)",
+    "confidence": "reported"
   },
   "sassa_helpline": {
     "value": "0800 60 10 11",

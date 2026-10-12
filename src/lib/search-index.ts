@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { SearchRecord } from "./search";
+import { getActiveTools, TOOL_CLUSTERS } from "./tools/registry";
 
 const readJson = (rel: string): any[] => {
   try {
@@ -9,6 +10,9 @@ const readJson = (rel: string): any[] => {
     return [];
   }
 };
+
+const clusterLabel = (id: string): string =>
+  TOOL_CLUSTERS.find((c) => c.id === id)?.label ?? "Tools";
 
 /** Builds a flat, serializable index of every searchable page across all verticals. */
 export function buildSearchIndex(): SearchRecord[] {
@@ -19,8 +23,21 @@ export function buildSearchIndex(): SearchRecord[] {
     { title: "How Much Is the SASSA SRD Grant?", description: "R370 per month, R624 income limit, when it changes and who qualifies.", url: "/how-much-is-srd-grant", category: "SRD Grant" },
     { title: "Lost SASSA Card or ID", description: "Report a lost or stolen card, replace it free, protect your grant from fraud.", url: "/lost-sassa-card-or-id", category: "Cards & ID" },
     { title: "SASSA Grant Retail Collection Points", description: "Collect your grant at Shoprite, Checkers, Pick n Pay, Boxer, Usave and Spar.", url: "/sassa-retail-collection-points", category: "Collection Points" },
+    { title: "SASSA Help Hub Tools", description: "All free tools in one place: status meanings, missing payments, appeal deadlines and eligibility.", url: "/tools", category: "Tools" },
   ];
   out.push(...staticHubs);
+
+  // Tools, from the registry. Every active tool is searchable, and the category
+  // doubles as the cluster so "appeal" or "payment" searches surface the right
+  // tool without needing the word "tool" in the title.
+  for (const t of getActiveTools()) {
+    out.push({
+      title: t.title,
+      description: t.tagline,
+      url: t.path,
+      category: clusterLabel(t.cluster),
+    });
+  }
 
   // Guides
   for (const g of readJson("public/data/guides.json")) {

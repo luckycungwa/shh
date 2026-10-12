@@ -37,6 +37,20 @@ const faqs = [
   { q: "Can I appeal more than once?", a: "You get one reconsideration and one tribunal appeal per rejection. Do not reapply for the same decline - a decline is reassessed each month anyway, and re-submitting can reset your cycle. If your status specifically asks for a reapplication (such as 'Reapplication Pending'), see /guides/srd-reapplication." },
 ];
 
+// Turn internal paths mentioned in FAQ answers (e.g. /tools/appeal-deadline)
+// into real, crawlable internal links instead of plain text.
+function renderAnswer(text: string) {
+  return text.split(/(\/[a-z0-9][a-z0-9/-]*)/i).map((part, i) =>
+    /^\/[a-z0-9]/i.test(part) ? (
+      <NextLink key={i} href={part} className="underline font-bold text-primary-gold hover:no-underline">
+        {part}
+      </NextLink>
+    ) : (
+      <React.Fragment key={i}>{part}</React.Fragment>
+    )
+  );
+}
+
 export default function AppealsHubPage() {
   const pages = readAll();
 
@@ -97,6 +111,17 @@ export default function AppealsHubPage() {
         </p>
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+        <NextLink href="/tools/appeal-deadline" className="group block p-6 rounded-2xl border border-primary-gold/20 bg-primary-gold/5 hover:border-primary-gold/40 transition-colors">
+          <p className="font-black text-lg group-hover:text-primary-gold transition-colors">Appeal Deadline Calculator</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Work out your exact last day to appeal from your decline date.</p>
+        </NextLink>
+        <NextLink href="/status/declined" className="group block p-6 rounded-2xl border border-primary-gold/20 bg-primary-gold/5 hover:border-primary-gold/40 transition-colors">
+          <p className="font-black text-lg group-hover:text-primary-gold transition-colors">Find your decline reason &amp; fix</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">See why you were declined and the steps to correct it.</p>
+        </NextLink>
+      </div>
+
       <Divider className="my-16" />
 
       <section className="max-w-4xl mx-auto space-y-8">
@@ -107,7 +132,7 @@ export default function AppealsHubPage() {
               <h3 className="text-xl font-bold mb-3 text-primary-gold flex items-start gap-3">
                 <FaQuestionCircle className="mt-1 flex-shrink-0" /> {faq.q}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{renderAnswer(faq.a)}</p>
             </div>
           ))}
         </div>

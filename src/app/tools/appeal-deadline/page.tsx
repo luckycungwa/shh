@@ -6,6 +6,28 @@ import JsonLd from "../../../components/JsonLd";
 import AppealDeadlineCalculator from "../../../components/tools/AppealDeadlineCalculator";
 import { buildMetadata } from "../../../lib/seo";
 import { breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
+import { getFact } from "../../../lib/canonical-facts";
+
+// Appeal windows and contact details are read from canonical-facts.json so
+// this page and the calculator can never disagree; a missing fact renders
+// without a number rather than a placeholder.
+const factOrNull = (key: string): string | null => {
+  const raw = getFact(key);
+  return raw.startsWith("{{") || raw.trim() === "" ? null : raw;
+};
+
+const daysOrNull = (key: string): number | null => {
+  const raw = factOrNull(key);
+  if (raw === null) return null;
+  const n = parseInt(raw.replace(/[^\d]/g, ""), 10);
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
+
+const APPEAL_WINDOW_DAYS = daysOrNull("appeal_lodgement_window_days");
+const APPEAL_RECOMMENDED_DAYS = daysOrNull("appeal_recommended_days");
+const HELPLINE = factOrNull("sassa_helpline");
+const APPEALS_PORTAL_HOST = factOrNull("appeals_portal_url")?.replace(/^https?:\/\//, "") ?? null;
+const APPEALS_PORTAL_REF = APPEALS_PORTAL_HOST ? ` (${APPEALS_PORTAL_HOST})` : "";
 
 export const metadata: Metadata = buildMetadata({
   title: "SRD Appeal Deadline Calculator (2026)",
@@ -14,17 +36,33 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const faqs = [
-  { q: "How long do I have to appeal a declined SRD grant?", a: "You have up to 90 days from the date of the decline decision to submit an appeal on the official ITSAA appeals portal (srd-appeals.dsd.gov.za). Act within the first 30 days if you can — evidence is easier to gather while it is fresh." },
-  { q: "What if I missed the appeal deadline?", a: "Contact SASSA on 0800 60 10 11 — in limited cases late appeals may still be considered, but this is not guaranteed. If the window has closed, you can usually reapply in the next monthly assessment cycle if you still qualify." },
-  { q: "Where do I submit my appeal?", a: "Submit your appeal on the official ITSAA appeals portal at srd-appeals.dsd.gov.za using the ID number and phone number on your application." },
+  {
+    q: "How long do I have to appeal a declined SRD grant?",
+    a: APPEAL_WINDOW_DAYS !== null
+      ? `You have up to ${APPEAL_WINDOW_DAYS} days from the date of the decline decision to submit an appeal on the official ITSAA appeals portal${APPEALS_PORTAL_REF}.${APPEAL_RECOMMENDED_DAYS !== null ? ` Act within the first ${APPEAL_RECOMMENDED_DAYS} days if you can — evidence is easier to gather while it is fresh.` : ""}`
+      : "The appeal window for a declined SRD grant is set by regulation. Check the official ITSAA appeals portal for the current deadline and lodge your appeal as soon as possible.",
+  },
+  {
+    q: "What if I missed the appeal deadline?",
+    a: `Contact SASSA${HELPLINE ? ` on ${HELPLINE}` : ""} — in limited cases late appeals may still be considered, but this is not guaranteed. If the window has closed, you can usually reapply in the next monthly assessment cycle if you still qualify.`,
+  },
+  {
+    q: "Where do I submit my appeal?",
+    a: `Submit your appeal on the official ITSAA appeals portal${APPEALS_PORTAL_HOST ? ` at ${APPEALS_PORTAL_HOST}` : ""} using the ID number and phone number on your application.`,
+  },
 ];
+
+const headerLead =
+  APPEAL_WINDOW_DAYS !== null
+    ? `If your SRD R370 application was declined, you have up to ${APPEAL_WINDOW_DAYS} days to appeal${APPEAL_RECOMMENDED_DAYS !== null ? ` — but act within the first ${APPEAL_RECOMMENDED_DAYS} days if you can` : ""}. Use this tool to estimate ${APPEAL_RECOMMENDED_DAYS !== null ? "both dates" : "your deadline"}.`
+    : "If your SRD R370 application was declined, use this tool to estimate your appeal deadline.";
 
 export default function AppealDeadlinePage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-12 space-y-8">
       <JsonLd data={breadcrumbSchema([
         { name: "Home", slug: "/" },
-        { name: "Tools", slug: "/tools/status-explorer" },
+        { name: "Tools", slug: "/tools" },
         { name: "Appeal Deadline Calculator", slug: "/tools/appeal-deadline" },
       ])} />
       <JsonLd data={faqPageSchema(faqs)} />
@@ -36,18 +74,30 @@ export default function AppealDeadlinePage() {
       <header className="space-y-3">
         <h1 className="text-4xl font-black tracking-tight">SRD Appeal Deadline Calculator</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-          If your SRD R370 application was declined, you have up to 90 days to appeal — but act within the first
-          30 days if you can. Use this tool to estimate both dates. It is free, independent, and nothing you enter leaves your browser.
+          {headerLead}{" "}
+          It is free, independent, and nothing you enter leaves your browser.
         </p>
       </header>
 
       <AppealDeadlineCalculator />
 
       <p className="text-sm text-gray-400">
-        This calculator estimates the 90-day appeal window plus the recommended 30-day action date. Always confirm the exact deadline on the
-        official ITSAA appeals portal (srd-appeals.dsd.gov.za). SASSA Help Hub is an independent, unofficial
-        resource.
+        {APPEAL_WINDOW_DAYS !== null
+          ? `This calculator estimates the ${APPEAL_WINDOW_DAYS}-day appeal window${APPEAL_RECOMMENDED_DAYS !== null ? ` plus the recommended ${APPEAL_RECOMMENDED_DAYS}-day action date` : ""}.`
+          : "This calculator estimates your appeal deadline from the official appeal window."}{" "}
+        Always confirm the exact deadline on the official ITSAA appeals portal{APPEALS_PORTAL_REF}. SASSA Help Hub
+        is an independent, unofficial resource.
       </p>
+
+      <div className="text-sm text-gray-500 flex flex-wrap items-center gap-x-4 gap-y-2 pt-4 border-t border-gray-100 dark:border-gray-800">
+        <span className="font-bold text-gray-600 dark:text-gray-400">Related tools:</span>
+        <NextLink href="/status/declined" className="font-bold text-primary-gold hover:underline">
+          Find your decline reason &amp; fix
+        </NextLink>
+        <NextLink href="/appeals" className="font-bold text-primary-gold hover:underline">
+          Full appeal guide
+        </NextLink>
+      </div>
     </div>
   );
 }

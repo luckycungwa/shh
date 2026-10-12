@@ -9,6 +9,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
+import { faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
 
@@ -139,6 +140,9 @@ export default async function UpdatePage({ params }: { params: { id: string } })
     <div className="max-w-5xl mx-auto px-6 py-12">
       <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
+      {update.faqs && update.faqs.length > 0 && (
+        <JsonLd data={faqPageSchema(update.faqs)} />
+      )}
       <Breadcrumbs className="mb-8">
         <BreadcrumbItem href="/">Home</BreadcrumbItem>
         <BreadcrumbItem href="/updates">Grant Updates</BreadcrumbItem>

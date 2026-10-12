@@ -17,13 +17,43 @@ import {
   DropdownItem,
   DropdownTrigger,
 } from "@nextui-org/react";
-import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins, FaWhatsapp, FaWrench, FaSearch } from "react-icons/fa";import NextLink from "next/link";
+import { FaHome, FaInfoCircle, FaNewspaper, FaQuestionCircle, FaShieldAlt, FaPhoneAlt, FaFileAlt, FaMapMarkerAlt, FaCalendarAlt, FaUserCheck, FaCheckCircle, FaCoins, FaWhatsapp, FaWrench, FaSearch, FaBookOpen, FaArrowRight, FaBalanceScale } from "react-icons/fa";import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "../ThemeToggle";
+import { getActiveTools } from "../../lib/tools/registry";
+
+/** Maps the icon names held in the tool registry onto components. */
+const TOOL_ICONS: Record<string, React.ElementType> = {
+  FaWrench,
+  FaSearch,
+  FaBookOpen,
+  FaCalendarAlt,
+  FaCheckCircle,
+  FaArrowRight,
+  FaBalanceScale,
+  FaShieldAlt,
+};
+
+interface ToolMenuItem {
+  key: string;
+  title: string;
+  path: string;
+  icon: string;
+}
+
+const ALL_TOOLS_KEY = "all-tools";
 
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
+  const tools = getActiveTools();
+
+  // NextUI's DropdownMenu is a collection component, so it takes `items` plus a
+  // render function rather than a mapped list of children.
+  const toolMenuItems: ToolMenuItem[] = [
+    ...tools.map((t) => ({ key: t.slug, title: t.title, path: t.path, icon: t.icon })),
+    { key: ALL_TOOLS_KEY, title: "All tools", path: "/tools", icon: "FaArrowRight" },
+  ];
 
   const isActive = (href: string, altPaths?: string[]) => {
     if (href === "/") return pathname === "/";
@@ -44,7 +74,7 @@ export default function NavbarComponent() {
     { name: "Payment Dates", href: "/payment-calendar", icon: <FaCalendarAlt /> },
     { name: "Grants", href: "/grants", icon: <FaCoins /> },
     { name: "SRD Grant Guide", href: "/grants/srd-r370-grant", icon: <FaFileAlt /> },
-    { name: "Tools", href: "/tools/status-explorer", icon: <FaWrench />, altPaths: ["/tools/payment-troubleshooter", "/tools/appeal-deadline"] },
+    { name: "Tools", href: "/tools", icon: <FaWrench /> },
     { name: "News & Updates", href: "/updates", icon: <FaNewspaper /> },
     { name: "Eligibility", href: "/eligibility-check", icon: <FaCheckCircle /> },
     { name: "FAQ", href: "/faq", icon: <FaQuestionCircle /> },
@@ -114,26 +144,43 @@ export default function NavbarComponent() {
         <NavbarItem>
           <Dropdown>
             <DropdownTrigger>
-              <span className="px-3 py-1.5 rounded-lg transition-all duration-200 text-foreground hover:bg-gray-100 dark:hover:bg-white/5 flex items-center gap-1">
+              <span
+                aria-current={isActive("/tools") ? "page" : undefined}
+                className={`px-3 py-1.5 rounded-lg transition-all duration-200 flex items-center gap-1 ${
+                  isActive("/tools")
+                    ? "bg-primary-gold/10 text-primary-gold font-bold"
+                    : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"
+                }`}
+              >
                 Tools
               </span>
             </DropdownTrigger>
-            <DropdownMenu className="w-56">
-              <DropdownItem key="status-explorer">
-                <Link as={NextLink} href="/tools/status-explorer" className="flex items-center gap-2 text-sm" onClick={() => setIsMenuOpen(false)}>
-                  <FaWrench className="text-primary-gold" /> Status Meaning Explorer
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="payment-troubleshooter">
-                <Link as={NextLink} href="/tools/payment-troubleshooter" className="flex items-center gap-2 text-sm" onClick={() => setIsMenuOpen(false)}>
-                  <FaSearch className="text-primary-gold" /> Payment Troubleshooter
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="appeal-deadline">
-                <Link as={NextLink} href="/tools/appeal-deadline" className="flex items-center gap-2 text-sm" onClick={() => setIsMenuOpen(false)}>
-                  <FaCalendarAlt className="text-primary-gold" /> Appeal Deadline Calculator
-                </Link>
-              </DropdownItem>
+            <DropdownMenu items={toolMenuItems} className="w-64">
+              {(item) => {
+                const Icon = TOOL_ICONS[item.icon] ?? FaWrench;
+                const isAllTools = item.key === ALL_TOOLS_KEY;
+                return (
+                  <DropdownItem
+                    key={item.key}
+                    className={isAllTools ? "font-bold" : undefined}
+                  >
+                    <Link
+                      as={NextLink}
+                      href={item.path}
+                      className="flex items-center justify-between gap-2 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <span className="flex items-center gap-2">
+                        <Icon className="text-primary-gold" />
+                        <span className={isAllTools ? "text-primary-gold" : undefined}>{item.title}</span>
+                      </span>
+                      {!isAllTools && isActive(item.path) && (
+                        <FaArrowRight className="text-xs text-primary-gold" />
+                      )}
+                    </Link>
+                  </DropdownItem>
+                );
+              }}
             </DropdownMenu>
           </Dropdown>
         </NavbarItem>

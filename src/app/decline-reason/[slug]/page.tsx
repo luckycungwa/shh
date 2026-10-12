@@ -9,7 +9,7 @@ import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
-import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
+import { articleSchema, breadcrumbSchema, howToSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 import EntityLinks from "../../../components/EntityLinks";
 
@@ -68,6 +68,13 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
         { name: "Declined", slug: "/status/declined" },
         { name: reason.decline_code, slug: `/decline-reason/${reason.slug}` },
       ])} />
+      {reason.how_to_fix?.length > 0 && (
+        <JsonLd data={howToSchema(
+          `How to fix a "${reason.decline_code}" SRD decline`,
+          reason.description,
+          reason.how_to_fix.map((s) => ({ title: s.step, text: s.detail })),
+        )} />
+      )}
 
       <nav className="text-sm text-gray-500 mb-8 flex gap-2">
         <a href="/" className="hover:text-primary-gold">Home</a>
@@ -152,6 +159,8 @@ export default function DeclineReasonPage({ params }: { params: { slug: string }
             { title: "How to appeal a declined grant", url: "/appeals/how-to-appeal" },
             { title: "Reconsideration explained", url: "/appeals/reconsideration" },
             { title: "Check your appeal status", url: "/appeals/appeal-status-check" },
+            { title: "Appeal deadline calculator", url: "/tools/appeal-deadline" },
+            { title: "Check if you still qualify (means test)", url: "/tools/means-test-calculator" },
             { title: "All decline reasons & fixes", url: "/status/declined" },
           ]}
           pagePath={`/decline-reason/${reason.slug}`}

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { getActiveTools } from "../lib/tools/registry";
 
 const BASE_URL = "https://www.sassahelphub.co.za";
 
@@ -34,18 +35,15 @@ export default async function sitemap() {
     { path: "/status", priority: 0.8, changeFreq: "weekly" as const },
     { path: "/scam-alert", priority: 0.7, changeFreq: "weekly" as const },
     { path: "/resources", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/tools", priority: 0.8, changeFreq: "monthly" as const },
     { path: "/about", priority: 0.6, changeFreq: "monthly" as const },
     { path: "/privacy-policy", priority: 0.3, changeFreq: "yearly" as const },
     { path: "/contact", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/disclaimer", priority: 0.3, changeFreq: "yearly" as const },
     { path: "/terms-of-service", priority: 0.3, changeFreq: "yearly" as const },
-    { path: "/eligibility-check", priority: 0.7, changeFreq: "monthly" as const },
     { path: "/glossary", priority: 0.6, changeFreq: "monthly" as const },
     { path: "/sassa-offices", priority: 0.7, changeFreq: "monthly" as const },
     { path: "/common-problems", priority: 0.7, changeFreq: "monthly" as const },
-    { path: "/tools/appeal-deadline", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/tools/payment-troubleshooter", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/tools/status-explorer", priority: 0.6, changeFreq: "monthly" as const },
     { path: "/sassa-contact", priority: 0.8, changeFreq: "monthly" as const },
     { path: "/how-much-is-srd-grant", priority: 0.8, changeFreq: "monthly" as const },
     { path: "/lost-sassa-card-or-id", priority: 0.6, changeFreq: "monthly" as const },
@@ -182,8 +180,19 @@ export default async function sitemap() {
     return { path: p.path, lastMod, priority: p.priority, changeFreq: p.changeFreq };
   });
 
+  // Tool URLs come from the tool registry, which only lists tools that exist.
+  // /eligibility-check is no longer listed here: the registry owns that URL so
+  // there is exactly one place where a tool's canonical path is defined.
+  const toolUrls = getActiveTools().map((t) => ({
+    path: t.path,
+    lastMod: mostRecentDate(allContentDates),
+    priority: t.priority,
+    changeFreq: t.changeFreq,
+  }));
+
   const allEntries = [
     ...staticUrls,
+    ...toolUrls,
     ...updateUrls,
     ...guideUrls,
     ...grantUrls,
@@ -198,10 +207,19 @@ export default async function sitemap() {
     ...Array.from(officePaths).map((p) => ({ path: p, lastMod: provinceMod, priority: 0.6, changeFreq: "monthly" as const })),
   ];
 
-  return allEntries.map(({ path: p, lastMod, priority, changeFreq }) => ({
-    url: `${BASE_URL}${p}`,
-    lastModified: lastMod,
-    changeFrequency: changeFreq,
-    priority,
-  }));
+  // Guard against a path being emitted twice (e.g. a tool also listed as a static
+  // page). First entry wins so the curated static definition is kept.
+  const seenPaths = new Set<string>();
+  return allEntries
+    .filter(({ path: p }) => {
+      if (seenPaths.has(p)) return false;
+      seenPaths.add(p);
+      return true;
+    })
+    .map(({ path: p, lastMod, priority, changeFreq }) => ({
+      url: `${BASE_URL}${p}`,
+      lastModified: lastMod,
+      changeFrequency: changeFreq,
+      priority,
+    }));
 }
