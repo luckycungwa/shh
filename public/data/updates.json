@@ -1,5 +1,24 @@
 [
   {
+    "id": "update-2026-november-review",
+    "title": "October 2026 Grants Paid — but SASSA Is Reviewing the November Payment Dates",
+    "summary": "October's Older Persons, Disability and Children's grants have been paid. SASSA is now reviewing the November 2026 payment cycle because 4 November is the Local Government Elections public holiday — so the November dates are not confirmed yet. Here is what it means and what to do if your October payment is missing.",
+    "content": "# October 2026 Grants Paid — but SASSA Is Reviewing the November Payment Dates\n\nOctober's permanent grants — Older Persons (Friday 2 October), Disability (Monday 5 October) and Children's Grants (Tuesday 6 October) — have now been paid. Eligibility for all of them is unchanged.\n\nAttention now turns to November. On **29 September 2026** SASSA said it is **reviewing the November 2026 payment cycle** because **4 November 2026 is the Local Government Elections public holiday**. The dates in the approved 2026/27 schedule (Older Persons 3 November, Disability 4 November, Children's Grants 5 November, fourth payment day 6 November) are therefore **not confirmed for November**. SASSA will announce the revised arrangement once consultations with stakeholders are done.\n\n## What This Means for You\n\n- **Eligible beneficiaries will still be paid.** A review of payment *dates* does not affect whether you qualify or how much you get.\n- **Do not treat the 3/4/5 November dates as final yet.** They are marked 'projected' on our [payment calendar](/payment-calendar) until SASSA confirms the new arrangement.\n- **The SRD R370 date is separate.** It is paid in batches in the last week of the month and is only announced after mid-month — check your own 'Pay Day' on the SRD portal.\n\n## If Your October Payment Has Not Arrived\n\nMost payments reflect within a few business days of your pay day. If yours is still missing:\n\n1. Check your status on the official SRD portal (srd.sassa.gov.za) — it should show 'Approved' or 'Paid' with a pay day.\n2. Confirm your banking details are correct and in your own name.\n3. Use our [payment troubleshooter](/tools/payment-troubleshooter) to work out the exact next step, or read the [missing payment guide](/guides/missing-grant-payment-guide).\n4. Still stuck? Phone the SASSA helpline on **0800 60 10 11**.\n\n## How to Confirm Your Own Dates\n\n- Older Persons, Disability and Children's grants are paid in the first week of the month.\n- The SRD R370 grant is paid in batches in the last week — your personal 'Pay Day' is on the SRD portal.\n- Always confirm the current schedule on our [payment calendar](/payment-calendar) before making arrangements.\n\n## Sources\n\n- SASSA media statement: 'SASSA to Review November 2026 Social Grant payment arrangements' (29 September 2026) — https://sassa.gov.za/documents/uploads/Media_Statement.pdf\n- IOL, Cape Argus and The Witness reporting, 30 September 2026.",
+    "date": "2026-10-12",
+    "type": "news",
+    "urgent": true,
+    "sources": [
+      "https://sassa.gov.za/documents/uploads/Media_Statement.pdf",
+      "https://iol.co.za/news/south-africa/2026-09-30-sassa-reviews-november-grant-payment-dates-ahead-of-local-government-elections/",
+      "https://www.sassa.gov.za"
+    ],
+    "faqs": [
+      { "q": "Will my November 2026 SASSA grant still be paid?", "a": "Yes. SASSA is reviewing the November payment dates, not eligibility. All eligible beneficiaries will still receive their grants. Only the exact payment days may change because 4 November 2026 is the Local Government Elections public holiday." },
+      { "q": "What are the November 2026 SASSA payment dates?", "a": "They are not confirmed yet. The approved 2026/27 schedule lists Older Persons 3 November, Disability 4 November, Children's Grants 5 November and the fourth payment day 6 November, but SASSA is reviewing these because of the 4 November election holiday. Treat them as projected until SASSA announces the revised arrangement." },
+      { "q": "My October 2026 grant has not arrived — what should I do?", "a": "Allow a few business days after your pay day for bank reflection. Check your status on srd.sassa.gov.za, confirm your banking details are correct, then use the SASSA Help Hub payment troubleshooter. If it is still missing, phone the SASSA helpline on 0800 60 10 11." }
+    ]
+  },
+  {
     "id": "update-2026-sassa-digital-services",
     "title": "SASSA Expands Digital Services: WhatsApp Channels, Office Kiosks and Free Wi-Fi",
     "summary": "SASSA announced new WhatsApp channels for SRD and grant enquiries, review-status checks, self-service kiosks and free Wi-Fi at offices. Here is what is live and how to confirm what your office offers.",

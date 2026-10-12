@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Chip, Divider } from "@nextui-org/react";
-import { FaCalendarCheck, FaQuestionCircle, FaLink } from "react-icons/fa";
+import { FaCalendarCheck, FaQuestionCircle, FaLink, FaExclamationTriangle } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import EditorialMeta from "../../../components/EditorialMeta";
@@ -87,6 +87,11 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
     ? `${schedule.label} SASSA payment dates, confirmed: ${confirmedDays}. Official schedule for the Older Persons, Disability, Children's and SRD R370 grants.`
     : `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
 
+  const todayISO = new Date().toISOString().slice(0, 10);
+  const datesPassed = [schedule.older_persons.date, schedule.disability.date, schedule.children.date].every(
+    (d) => d && d !== "TBC" && d !== "TBA" && d <= todayISO,
+  );
+
   const faqs = [
     { q: `What is the SRD R370 payment date for ${schedule.label}?`, a: `For ${schedule.label}, the SRD R370 grant is ${schedule.srd.status === "confirmed" ? `paid in batches in the last week of the month on ${schedule.srd.day}` : "expected to be paid in the last week of the month, but SASSA has not yet officially confirmed the exact date"}. Check the official SRD portal (srd.sassa.gov.za) for your own 'Pay Day' date — it is more reliable than any general schedule.` },
     { q: "Why is the SRD payment date different from the permanent grants?", a: "Unlike permanent grants which are paid in the first week of each month, the SRD R370 is paid in batches during the last week of the month. Beneficiaries are not all paid on the same day — your personal 'Pay Day' appears on your status check." },
@@ -139,6 +144,21 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
                 Some of these dates are <strong>projected</strong> and have not yet been officially confirmed by SASSA.
                 Always confirm with the official <a href="https://srd.sassa.gov.za" className="font-bold underline">SRD portal</a> or SASSA helpline before relying on them.
               </p>
+            </div>
+          )}
+          {datesPassed && (
+            <div className="flex items-start gap-3 p-4 rounded-2xl border-2 border-rose-200 dark:border-rose-700/50 bg-rose-50 dark:bg-rose-900/10 text-sm text-rose-800 dark:text-rose-200">
+              <FaExclamationTriangle className="text-rose-500 mt-0.5 shrink-0" />
+              <div className="space-y-1">
+                <p>
+                  <strong>These payment days have already passed.</strong> If your money has not arrived yet, do not panic &mdash; most payments reflect within a few business days. Check what to do next:
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Check your status &mdash; does it show <strong>Approved</strong> or <strong>Paid</strong>?</li>
+                  <li>Give it a few business days for the payment to reflect in your bank account.</li>
+                  <li>Still nothing? Use our <a href="/tools/payment-troubleshooter" className="font-bold underline">payment troubleshooter</a> or phone the SASSA helpline on <strong>0800 60 10 11</strong>.</li>
+                </ul>
+              </div>
             </div>
           )}
         </header>
@@ -221,6 +241,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
           items={[
             { title: "View the full payment calendar", url: "/payment-calendar" },
             { title: "What 'Approved' means & when you'll be paid", url: "/status/approved" },
+            { title: "Payment troubleshooting", url: "/tools/payment-troubleshooter" },
             { title: "Missing grant payment?", url: "/guides/missing-grant-payment-guide" },
             { title: "Choose how to receive your payment", url: "/banking/bank-transfer" },
           ]}

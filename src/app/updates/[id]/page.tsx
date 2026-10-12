@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Metadata } from "next";
-import { Avatar, Card, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem } from "@nextui-org/react";
-import { FaClock, FaCalendarAlt, FaUserEdit, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaArrowLeft, FaListUl, FaLink } from "react-icons/fa";
+import { Avatar, Card, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip } from "@nextui-org/react";
+import { FaClock, FaCalendarAlt, FaUserEdit, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaArrowLeft, FaListUl, FaLink, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
@@ -202,15 +202,23 @@ export default async function UpdatePage({ params }: { params: { id: string } })
            </div>
 
            {update.faqs && update.faqs.length > 0 && (
-              <section className="space-y-6 pt-12">
-                 <h2 className="text-3xl font-black">Frequently Asked Questions</h2>
-                 <Accordion variant="splitted">
+              <section className="space-y-4 pt-12">
+                 <h2 className="text-3xl font-black flex items-center gap-3">
+                    <FaQuestionCircle className="text-primary-gold" /> Frequently Asked Questions
+                 </h2>
+                 <div className="space-y-3">
                     {update.faqs.map((faq, i) => (
-                      <AccordionItem key={i} title={faq.q} className="font-bold">
-                         <p className="font-normal text-gray-600 dark:text-gray-400 pb-4">{faq.a}</p>
-                      </AccordionItem>
+                      <details key={i} className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <summary className="flex items-center gap-3 p-4 cursor-pointer list-none font-bold hover:bg-gray-50 dark:hover:bg-gray-800/50 [&::-webkit-details-marker]:hidden">
+                          <FaQuestionCircle className="text-primary-gold flex-shrink-0" />
+                          <span>{faq.q}</span>
+                        </summary>
+                        <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+                          <p className="font-normal text-gray-600 dark:text-gray-400">{resolveTemplates(faq.a)}</p>
+                        </div>
+                      </details>
                     ))}
-                 </Accordion>
+                 </div>
               </section>
            )}
 

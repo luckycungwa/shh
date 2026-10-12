@@ -31,8 +31,8 @@
     "governance": {
       "source": "SASSA official October 2026 payment dates announcement (reported 16 September 2026)",
       "sourceURL": "https://www.sassa.gov.za",
-      "lastVerified": "2026-09-24",
-      "notes": "Permanent grant dates for October 2026 (Older Persons 2 Oct, Disability 5 Oct, Children's 6 Oct) are confirmed by SASSA and match the DSD-approved 2026/27 payment schedule. The SRD R370 October date is not yet announced; it is paid in the last week of the month and is confirmed later in October. The fourth payment day for grants under review remains TBC."
+      "lastVerified": "2026-10-12",
+      "notes": "Permanent grant dates for October 2026 (Older Persons 2 Oct, Disability 5 Oct, Children's 6 Oct) were confirmed by SASSA on 16 September 2026 and match the DSD-approved 2026/27 payment schedule; these payment days have now passed. As of this 12 October 2026 verification, SASSA had not yet announced the October SRD R370 date — it is published in the last week of the month, so check the SRD portal for your personal 'Pay Day'. The fourth payment day for grants under review remains TBC."
     }
   },
   {
@@ -40,17 +40,17 @@
     "label": "November 2026",
     "year": 2026,
     "month": 11,
-    "older_persons": { "date": "2026-11-03", "day": "Tuesday", "status": "confirmed" },
-    "disability": { "date": "2026-11-04", "day": "Wednesday", "status": "confirmed" },
-    "children": { "date": "2026-11-05", "day": "Thursday", "status": "confirmed" },
+    "older_persons": { "date": "2026-11-03", "day": "Tuesday", "status": "projected" },
+    "disability": { "date": "2026-11-04", "day": "Wednesday", "status": "projected" },
+    "children": { "date": "2026-11-05", "day": "Thursday", "status": "projected" },
     "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
     "srd": { "date": "TBC", "day": "Expected in the last week of November — confirmed after mid-month", "status": "projected" },
-    "note": "The November 2026 permanent grant dates follow the DSD-approved 2026/27 payment schedule: Older Persons paid Tuesday 3 November, Disability Wednesday 4 November and Children's Grants Thursday 5 November. The SRD R370 date is paid in the last week of November and is only announced after mid-month — check the official SRD portal for your personal 'Pay Day'.",
+    "note": "SASSA announced on 29 September 2026 that it is reviewing the November 2026 payment cycle because the Disability Grant date (4 November 2026) falls on the Local Government Elections public holiday. The dates from the approved 2026/27 schedule — Older Persons 3 November, Disability 4 November, Children's Grants 5 November and the fourth payment day 6 November — are therefore NOT yet confirmed for November. SASSA will announce the revised arrangement in due course. All eligible beneficiaries will still be paid.",
     "governance": {
-      "source": "DSD-approved 2026/27 SASSA payment schedule",
-      "sourceURL": "https://www.gov.za",
-      "lastVerified": "2026-09-24",
-      "notes": "Permanent grant dates for November 2026 (Older Persons 3 Nov, Disability 4 Nov, Children's 5 Nov) are confirmed per the DSD-approved 2026/27 payment schedule. The SRD R370 November date is not yet announced; it is paid in the last week of the month and is confirmed later in November. The fourth payment day for grants under review remains TBC."
+      "source": "SASSA media statement: SASSA to Review November 2026 Social Grant payment arrangements (29 September 2026)",
+      "sourceURL": "https://sassa.gov.za/documents/uploads/Media_Statement.pdf",
+      "lastVerified": "2026-10-12",
+      "notes": "Per SASSA's 29 September 2026 statement, the November 2026 payment cycle is under review because 4 November 2026 is the Local Government Elections public holiday. The approved 2026/27 dates (3/4/5 Nov, fourth day 6 Nov) are shown as projected, not confirmed, until SASSA publishes the revised November schedule. Verified against the official SASSA media statement (sassa.gov.za) and reporting by IOL, Cape Argus and The Witness on 30 September 2026. All eligible beneficiaries will still receive their grants."
     }
   },
   {

@@ -10,8 +10,8 @@ import { SITE_CONFIG } from "../../lib/config";
 import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from "../../lib/payment-schedule";
 
 export const metadata: Metadata = buildMetadata({
-  title: "SASSA Payment Calendar 2026 — Confirmed October, November & December Dates",
-  description: "Check when SASSA pays the SRD R370 and permanent grants. October 2026 payment dates confirmed (2, 5 & 6 October), November and December dates follow the DSD-approved 2026/27 schedule.",
+  title: "SASSA Payment Calendar 2026 — October, November & December Grant Dates",
+  description: "Check when SASSA pays the SRD R370 and permanent grants. October 2026 dates were paid on 2, 5 and 6 October. November dates are under review because 4 November is the Local Government Elections public holiday; December follows the DSD-approved 2026/27 schedule.",
   path: "/payment-calendar",
 });
 
@@ -86,6 +86,9 @@ export default function PaymentCalendarPage() {
                 <div className="text-sm text-gray-500 space-y-1">
                   <p>Older Persons: <span className="font-semibold text-gray-800 dark:text-gray-200">{m.older_persons.date}</span></p>
                   <p>SRD R370: <span className="font-semibold text-gray-800 dark:text-gray-200">{srdDisplay(m.srd, m.label).date}</span></p>
+                  {!(m.older_persons.status === "confirmed" && m.disability.status === "confirmed" && m.children.status === "confirmed") && (
+                    <p className="pt-1"><Chip size="sm" variant="flat" color="warning" className="font-bold uppercase text-[10px]">Under review / projected</Chip></p>
+                  )}
                 </div>
               </CardBody>
             </Card>
