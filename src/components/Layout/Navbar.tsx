@@ -87,7 +87,6 @@ export default function NavbarComponent() {
   return (
     <Navbar
       isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
       isBordered
       maxWidth="xl"
       className="bg-white/80 dark:bg-primary-dark/80 backdrop-blur-xl backdrop-saturate-150 border-b border-primary-gold/10"
@@ -97,7 +96,8 @@ export default function NavbarComponent() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          onPress={() => setIsMenuOpen((open) => !open)}
+          className="lg:hidden"
         />
         <NavbarBrand>
           <NextLink href="/" className="flex items-center gap-2">
@@ -110,7 +110,7 @@ export default function NavbarComponent() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-1" justify="center">
+      <NavbarContent className="hidden lg:flex gap-1" justify="center">
         <NavbarItem>
           <Link as={NextLink} href="/" aria-current={isActive("/") ? "page" : undefined} className={`px-3 py-1.5 rounded-lg transition-all duration-200 ${isActive("/") ? "bg-primary-gold/10 text-primary-gold font-bold" : "text-foreground hover:bg-gray-100 dark:hover:bg-white/5"}`}>
             Home

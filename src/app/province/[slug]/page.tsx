@@ -21,6 +21,7 @@ import { articleSchema, breadcrumbSchema, governmentOfficeSchema } from "../../.
 import { resolveTemplates, getFact } from "../../../lib/canonical-facts";
 import { getCurrentYearString } from "../../../lib/config";
 import NextLink from "next/link";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface RegionalOffice {
   town: string;
@@ -54,7 +55,7 @@ const grants = [
   { slug: "old-age-pension", name: "Old Age Pension", amount: "R2,400/month", desc: "For citizens aged 60+ who pass the means test." },
   { slug: "disability-grant", name: "Disability Grant", amount: "R2,400/month", desc: "For adults with a medical disability preventing employment." },
   { slug: "child-support-grant", name: "Child Support Grant", amount: "R580/month", desc: "For primary caregivers of children under 18." },
-  { slug: "foster-child-grant", name: "Foster Child Grant", amount: "R1,290/month", desc: "For foster parents with a children's court order." },
+  { slug: "foster-child-grant", name: "Foster Child Grant", amount: "R1,300/month", desc: "For foster parents with a children's court order." },
   { slug: "care-dependency-grant", name: "Care Dependency Grant", amount: "R2,400/month", desc: "For caregivers of children with severe disabilities." },
   { slug: "grant-in-aid", name: "Grant-in-Aid", amount: "R580/month", desc: "Supplementary grant for Old Age/Disability recipients needing care." },
   { slug: "war-veterans-grant", name: "War Veterans Grant", amount: "R2,420/month", desc: "For WWII and Korean War veterans." },
@@ -70,8 +71,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const province = data.find((p) => p.slug === params.slug);
   if (!province) return { title: "Province Not Found" };
   const url = `https://www.sassahelphub.co.za/province/${params.slug}`;
-  const title = `SASSA Grants in ${province.name} ${getCurrentYearString()}: Eligibility & How to Apply`;
-  const desc = `Which SASSA grants are available in ${province.name}? ${province.population_served}. Eligibility facts, application help, payment collection and direct links to the ${province.name} SASSA office directory.`;
+  const title = clampTitle(`SASSA Grants in ${province.name} ${getCurrentYearString()}: Eligibility & How to Apply`);
+  const desc = clampDescription(`Which SASSA grants are available in ${province.name}? ${province.population_served}. Eligibility facts, application help, payment collection and direct links to the ${province.name} SASSA office directory.`);
   return {
     title,
     description: desc,

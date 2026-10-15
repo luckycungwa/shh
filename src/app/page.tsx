@@ -92,19 +92,19 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-shimmer"></div>
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary-gold/5 blur-3xl animate-float"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-primary-gold/5 blur-3xl animate-float-slow"></div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full pt-10 pb-40 sm:pt-0 sm:pb-0">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-gold/10 border border-primary-gold/20 text-primary-gold text-sm font-semibold mb-8 animate-fade-in-down">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-gold/10 border border-primary-gold/20 text-primary-gold text-sm font-semibold mb-6 sm:mb-8 animate-fade-in-down">
               <FaRegBell className="animate-shimmer" />
               Updated for {getCurrentMonthLabel()}
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 tracking-tight leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 sm:mb-8 tracking-tight leading-[1.05]">
               Navigate SASSA with{" "}
               <span className="text-gradient underline decoration-primary-gold/30 underline-offset-8 decoration-2">
                 Clarity
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-secondary-gray/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-secondary-gray/80 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
               Your friendly, independent guide to South African social grants, payment dates, and fraud protection.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -196,13 +196,13 @@ export default function HomePage() {
       {/* ── Stats ── */}
       <section className="bg-primary-surface dark:bg-primary-dark border-y border-primary-gold/5 mb-4">
         <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
-              <div key={i} className="flex items-center gap-4 p-4 rounded-xl hover:bg-primary-gold/5 transition-colors duration-300">
+              <div key={i} className="flex flex-col items-center text-center gap-2 p-3 rounded-xl sm:flex-row sm:items-center sm:text-left sm:gap-4 sm:p-4 hover:bg-primary-gold/5 transition-colors duration-300">
                 <div className="w-12 h-12 rounded-xl bg-primary-gold/10 flex items-center justify-center text-primary-gold shrink-0">
                   {stat.icon}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-2xl font-black text-primary-black dark:text-white leading-none">{stat.value}</p>
                   <p className="text-[11px] font-bold uppercase tracking-wider text-secondary-gray mt-1">{stat.label}</p>
                 </div>

@@ -40,17 +40,17 @@
     "label": "November 2026",
     "year": 2026,
     "month": 11,
-    "older_persons": { "date": "2026-11-03", "day": "Tuesday", "status": "projected" },
-    "disability": { "date": "2026-11-04", "day": "Wednesday", "status": "projected" },
-    "children": { "date": "2026-11-05", "day": "Thursday", "status": "projected" },
-    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
+    "older_persons": { "date": "2026-10-30", "day": "Friday", "status": "confirmed" },
+    "disability": { "date": "2026-11-02", "day": "Monday", "status": "confirmed" },
+    "children": { "date": "2026-11-03", "day": "Tuesday", "status": "confirmed" },
+    "under_review": { "date": "2026-11-05", "day": "Thursday", "status": "confirmed" },
     "srd": { "date": "TBC", "day": "Expected in the last week of November — confirmed after mid-month", "status": "projected" },
-    "note": "SASSA announced on 29 September 2026 that it is reviewing the November 2026 payment cycle because the Disability Grant date (4 November 2026) falls on the Local Government Elections public holiday. The dates from the approved 2026/27 schedule — Older Persons 3 November, Disability 4 November, Children's Grants 5 November and the fourth payment day 6 November — are therefore NOT yet confirmed for November. SASSA will announce the revised arrangement in due course. All eligible beneficiaries will still be paid.",
+    "note": "SASSA confirmed the revised November 2026 payment dates on 14 October 2026, brought forward ahead of the Local Government Elections public holiday on 4 November 2026: Older Persons will be paid Friday 30 October, Disability on Monday 2 November and Children's Grants on Tuesday 3 November 2026. The fourth payment day, Thursday 5 November 2026, is for beneficiaries whose grants fall within the review process. The SRD R370 date is paid in the last week of November and is only announced after mid-month — check the official SRD portal for your personal 'Pay Day'. All eligible beneficiaries will still be paid.",
     "governance": {
-      "source": "SASSA media statement: SASSA to Review November 2026 Social Grant payment arrangements (29 September 2026)",
-      "sourceURL": "https://sassa.gov.za/documents/uploads/Media_Statement.pdf",
-      "lastVerified": "2026-10-12",
-      "notes": "Per SASSA's 29 September 2026 statement, the November 2026 payment cycle is under review because 4 November 2026 is the Local Government Elections public holiday. The approved 2026/27 dates (3/4/5 Nov, fourth day 6 Nov) are shown as projected, not confirmed, until SASSA publishes the revised November schedule. Verified against the official SASSA media statement (sassa.gov.za) and reporting by IOL, Cape Argus and The Witness on 30 September 2026. All eligible beneficiaries will still receive their grants."
+      "source": "SASSA media statement: SASSA announces revised November 2026 social grant payment dates ahead of Local Government Elections (14 October 2026)",
+      "sourceURL": "https://sassa.gov.za/documents/uploads/SASSA_ANNOUNCES_REVISED_NOVEMBER_2026_SOCIAL_GRANT_PAYMENT_DATES_AHEAD_OF_LOCAL_GOVERNMENT_ELECTIONS.pdf",
+      "lastVerified": "2026-10-15",
+      "notes": "Per SASSA's 14 October 2026 media statement (spokesperson Dr Paseka Letsatsi), the November 2026 payment cycle was brought forward because 4 November 2026 is the Local Government Elections public holiday. Revised confirmed dates: Older Persons 30 October, Disability 2 November, Children's Grants 3 November, and the fourth payment day (for grants under review) 5 November 2026. The National Treasury approved the revised dates. Verified directly against the official SASSA media statement PDF (sassa.gov.za), corroborated by SAnews/gov.za, IOL, SABC and The Citizen. All eligible beneficiaries will still receive their grants."
     }
   },
   {

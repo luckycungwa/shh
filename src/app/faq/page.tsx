@@ -112,7 +112,7 @@ export default function FAQPage() {
                   <div className="px-5 pb-5 border-t border-gray-100 dark:border-gray-700 pt-4">
                     <div
                       className="prose prose-sm dark:prose-invert max-w-none"
-                       dangerouslySetInnerHTML={{ __html: resolveTemplates(faq.answer) }}
+                       dangerouslySetInnerHTML={{ __html: resolveTemplates(faq.answer).replace(/<h4(\s[^>]*)?>/gi, "<h3$1>").replace(/<\/h4>/gi, "</h3>") }}
                     />
                     {faq.linkedPage && (
                       <NextLink

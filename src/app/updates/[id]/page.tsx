@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
 import { faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 import AdNetworkLoader from "../../../components/AdNetworkLoader";
 
 interface Update {
@@ -46,14 +47,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 
   const url = `https://www.sassahelphub.co.za/updates/${id}`;
+  const title = clampTitle(update.title);
+  const description = clampDescription(update.summary);
   return {
-    title: update.title,
-    description: update.summary,
+    title,
+    description,
     alternates: { canonical: url },
     robots: update.noindex ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
-      title: update.title,
-      description: update.summary,
+      title,
+      description,
       url,
       type: "article",
       siteName: "SASSA Help Hub",
@@ -64,8 +67,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     },
     twitter: {
       card: "summary_large_image",
-      title: update.title,
-      description: update.summary,
+      title,
+      description,
       images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };
@@ -198,7 +201,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
            )}
 
            <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-black prose-a:text-primary-gold prose-strong:text-gray-900 dark:prose-strong:text-white leading-relaxed prose-h2:scroll-mt-32">
-               <ReactMarkdown rehypePlugins={[rehypeSlug]}>{resolveTemplates(update.content)}</ReactMarkdown>
+               <ReactMarkdown rehypePlugins={[rehypeSlug]}>{resolveTemplates(update.content).replace(/^#\s+[^\r\n]*(?:\r?\n)+/, "")}</ReactMarkdown>
            </div>
 
            {update.faqs && update.faqs.length > 0 && (

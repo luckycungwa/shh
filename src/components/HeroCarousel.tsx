@@ -130,18 +130,18 @@ export default function HeroCarousel() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary-black/70 via-primary-black/55 to-primary-dark/90" />
 
       {/* Caption card: current grant type with amount, qualifier and guide link */}
-      <div className="absolute bottom-6 inset-x-6 z-20 flex items-end justify-between gap-4">
+      <div className="absolute bottom-4 inset-x-4 sm:bottom-6 sm:inset-x-6 z-20 flex items-end justify-between gap-3 sm:gap-4">
         <NextLink
           href={active.href}
           key={active.href}
-          className="block max-w-xs px-5 py-4 rounded-2xl bg-primary-black/60 border border-primary-gold/30 backdrop-blur-sm hover:bg-primary-black/80 hover:border-primary-gold/50 transition-colors animate-fade-in"
+          className="block max-w-[68%] sm:max-w-xs px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-primary-black/60 border border-primary-gold/30 backdrop-blur-sm hover:bg-primary-black/80 hover:border-primary-gold/50 transition-colors animate-fade-in"
           aria-label={`Learn about the ${active.label}: ${active.amount}`}
         >
           <span className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-primary-gold">
             <span className="w-2 h-2 rounded-full bg-primary-gold animate-glow-pulse" />
             {active.label}
           </span>
-          <span className="block text-2xl font-black text-white mt-1">{active.amount}</span>
+          <span className="block text-xl sm:text-2xl font-black text-white mt-1">{active.amount}</span>
           <span className="hidden sm:block text-xs text-secondary-gray mt-1">{active.qualifier}</span>
           <span className="block text-xs font-bold text-primary-gold mt-2">View the full guide →</span>
         </NextLink>

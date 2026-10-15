@@ -106,7 +106,7 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredGuides.map((guide) => (
-          <Card key={guide.id} className="p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all h-full">
+          <Card key={guide.id} as={NextLink} href={`/guides/${guide.id}`} className="group p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-gold/40 transition-all h-full cursor-pointer">
             <CardHeader className="flex-col items-start gap-2 p-0 mb-6">
                <Chip size="sm" variant="flat" color="secondary" className="font-bold uppercase text-[10px]">
                   {guide.category}
@@ -120,9 +120,9 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
                      <p className="flex items-center gap-1"><FaClock /> {guide.estimatedTime}</p>
                      <p className="flex items-center gap-1"><FaGraduationCap /> {guide.difficulty}</p>
                   </div>
-                  <Button as={NextLink} href={`/guides/${guide.id}`} color="primary" variant="solid" className="font-bold">
+                  <span className="inline-flex items-center justify-center font-bold rounded-xl px-4 py-2 text-sm bg-primary-gold text-primary-black group-hover:bg-primary-gold-light transition-colors">
                     Start Guide
-                  </Button>
+                  </span>
                </div>
             </CardBody>
           </Card>
@@ -142,7 +142,7 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
             "what-does-funeral-cover-cost",
             "compare-financial-options-south-africa",
           ].includes(g.id)).map((guide) => (
-            <Card key={guide.id} className="p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all h-full">
+            <Card key={guide.id} as={NextLink} href={`/guides/${guide.id}`} className="group p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-gold/40 transition-all h-full cursor-pointer">
               <CardHeader className="flex-col items-start gap-2 p-0 mb-4">
                 <Chip size="sm" variant="flat" color="secondary" className="font-bold uppercase text-[10px]">
                   {guide.category}
@@ -156,9 +156,9 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
                     <p className="flex items-center gap-1"><FaClock /> {guide.estimatedTime}</p>
                     <p className="flex items-center gap-1"><FaGraduationCap /> {guide.difficulty}</p>
                   </div>
-                  <Button as={NextLink} href={`/guides/${guide.id}`} color="primary" variant="solid" className="font-bold">
+                  <span className="inline-flex items-center justify-center font-bold rounded-xl px-4 py-2 text-sm bg-primary-gold text-primary-black group-hover:bg-primary-gold-light transition-colors">
                     Start Guide
-                  </Button>
+                  </span>
                 </div>
               </CardBody>
             </Card>

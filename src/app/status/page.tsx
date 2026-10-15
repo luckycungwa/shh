@@ -55,7 +55,7 @@ const statusMeta: Record<string, { name: string; desc: string; action: string }>
   "nsfas-registered": { name: "NSFAS Registered", desc: "You appear on the NSFAS student funding database.", action: "Get a clearance letter from your university and appeal." },
   "source-limit-exceeded": { name: "Source Limit Exceeded", desc: "Your deposits across all sources exceeded the allowed limit.", action: "Review deposits and appeal within 90 days." },
   "application-invalid": { name: "Application Invalid", desc: "Your application was missing required or correct information.", action: "Correct your details or submit a new application." },
-  null: { name: "Null / No Status", desc: "No status is showing, often due to a data error or new application.", action: "Wait 24–48 hours, then check again or contact SASSA." },
+  "no-status": { name: "Null / No Status", desc: "No status is showing, often due to a data error or new application.", action: "Wait 24–48 hours, then check again or contact SASSA." },
 };
 
 const positiveSlugs = ["approved", "paid"];

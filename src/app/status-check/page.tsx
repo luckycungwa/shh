@@ -516,7 +516,7 @@ export default function StatusCheckPage() {
               </div>
               <div className="space-y-6">
                 <Card className="p-10 bg-red-50 dark:bg-red-900/10 rounded-[2rem] border-none shadow-sm">
-                   <h4 className="font-black text-red-900 dark:text-red-400 text-xl mb-4 flex items-center gap-2"><FaExclamationTriangle /> Common Biometric Failures</h4>
+                   <h3 className="font-black text-red-900 dark:text-red-400 text-xl mb-4 flex items-center gap-2"><FaExclamationTriangle /> Common Biometric Failures</h3>
                    <ul className="text-sm text-red-800 dark:text-red-300 space-y-4">
                       <li className="flex gap-3">
                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mt-1.5 flex-shrink-0"></span>
@@ -533,7 +533,7 @@ export default function StatusCheckPage() {
                    </ul>
                 </Card>
                 <div className="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-[2.5rem] border border-blue-100 dark:border-blue-800">
-                   <h4 className="font-bold text-blue-900 dark:text-blue-400 mb-4">Why am I being flagged?</h4>
+                   <h3 className="font-bold text-blue-900 dark:text-blue-400 mb-4">Why am I being flagged?</h3>
                    <p className="text-sm text-blue-800 dark:text-blue-300 leading-relaxed">
                      SASSA's integrity system triggers eKYC if:
                    </p>
@@ -591,7 +591,7 @@ export default function StatusCheckPage() {
                    </div>
                 </div>
                 <div className="bg-gray-50 dark:bg-gray-900 p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800">
-                    <h4 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {schedule.label} Grant Dates</h4>
+                    <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><FaCalendarAlt className="text-primary-gold" /> Other {schedule.label} Grant Dates</h3>
                     <div className="space-y-4">
                        {permanentRows.map(({ grant, row }) => (
                          <div key={grant} className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
@@ -648,7 +648,7 @@ export default function StatusCheckPage() {
            </div>
 
            <div className="p-10 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-[2rem] bg-gray-50/50 dark:bg-gray-900/50">
-              <h4 className="text-2xl font-black mb-6 text-center">3 Actionable Steps to Protect Your {currentMonthYear} Eligibility</h4>
+              <h3 className="text-2xl font-black mb-6 text-center">3 Actionable Steps to Protect Your {currentMonthYear} Eligibility</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                  <div className="text-center space-y-3">
                     <div className="mx-auto w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600"><FaCheckCircle className="text-2xl" /></div>
@@ -716,16 +716,16 @@ export default function StatusCheckPage() {
           <div className="space-y-4">
             {fullFaqData.map((faq, i) => (
               <div key={i} className="bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                <h4 className="text-xl font-bold mb-4 text-primary-gold">{faq.q}</h4>
+                <h3 className="text-xl font-bold mb-4 text-primary-gold">{faq.q}</h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
               </div>
             ))}
             <div className="bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-gray-700">
-                <h4 className="text-xl font-bold mb-4 text-primary-gold">What should I do if my {currentMonthYear.split(" ")[0]} status is 'Self-Correction Required'?</h4>
+                <h3 className="text-xl font-bold mb-4 text-primary-gold">What should I do if my {currentMonthYear.split(" ")[0]} status is 'Self-Correction Required'?</h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">This status appears when there is a mismatch in your personal details or banking information. You must log in to the SRD website and use the 'Update Details' tool to fix the errors. Once corrected, the system will re-process your application within 7 working days.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-gray-700">
-                <h4 className="text-xl font-bold mb-4 text-primary-gold">How do I verify if a SASSA SMS is a scam?</h4>
+                <h3 className="text-xl font-bold mb-4 text-primary-gold">How do I verify if a SASSA SMS is a scam?</h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">SASSA SMS messages will never ask for your bank PIN, full CVV number, or a "processing fee." If an SMS asks you to pay money to receive your grant, it is 100% a scam. Report such messages to the SAPS or the SASSA fraud line.</p>
             </div>
           </div>

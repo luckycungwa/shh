@@ -80,6 +80,7 @@ const nextConfig = {
       { source: '/guides/postbank-black-card', destination: '/guides/postbank-black-card-guide', statusCode: 301 },
       { source: '/guides/status-check-no-phone', destination: '/guides/ussd-codes', statusCode: 301 },
       { source: '/guides/best-bank-accounts-sassa-beneficiaries', destination: '/guides/best-bank-accounts-sassa-2026', statusCode: 301 },
+      { source: '/status/null', destination: '/status/no-status', statusCode: 301 },
       { source: '/updates/update-2026-005', destination: '/guides/grant-amounts-history', statusCode: 301 },
       { source: '/updates/update-2026-006', destination: '/grants/child-support-grant', statusCode: 301 },
       { source: '/updates/update-2026-007', destination: '/sassa-offices', statusCode: 301 },

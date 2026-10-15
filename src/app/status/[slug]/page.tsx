@@ -16,6 +16,7 @@ import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/sch
 import { ctaCopyFor } from "../../../lib/affiliate";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 import { nextStepsFor } from "../../../lib/entities";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface StatusMeaning {
   slug: string;
@@ -54,14 +55,16 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const status = data.find((s) => s.slug === params.slug);
   if (!status) return { title: "Status Not Found" };
   const url = `https://www.sassahelphub.co.za/status/${params.slug}`;
+  const title = clampTitle(resolveTemplates(status.title));
+  const description = clampDescription(resolveTemplates(status.description));
   return {
-    title: resolveTemplates(status.title),
-    description: resolveTemplates(status.description),
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
     openGraph: {
-      title: status.title,
-      description: status.description,
+      title,
+      description,
       url,
       type: "article",
       siteName: "SASSA Help Hub",
@@ -70,8 +73,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     },
     twitter: {
       card: "summary_large_image",
-      title: status.title,
-      description: status.description,
+      title,
+      description,
       images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };

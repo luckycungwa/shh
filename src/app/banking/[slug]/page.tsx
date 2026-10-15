@@ -14,6 +14,7 @@ import NextStepCard from "../../../components/affiliate/NextStepCard";
 import EntityLinks from "../../../components/EntityLinks";
 import { articleSchema, breadcrumbSchema, faqPageSchema, howToSchema } from "../../../lib/schema";
 import { nextStepsFor } from "../../../lib/entities";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface BankingMethod {
   slug: string;
@@ -45,14 +46,16 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const method = readAll().find((m) => m.slug === params.slug);
   if (!method) return { title: "Payment Method Not Found" };
   const url = `https://www.sassahelphub.co.za/banking/${params.slug}`;
+  const title = clampTitle(method.title);
+  const description = clampDescription(method.description);
   return {
-    title: method.title,
-    description: method.description,
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
     openGraph: {
-      title: method.title,
-      description: method.description,
+      title,
+      description,
       url,
       type: "article",
       siteName: "SASSA Help Hub",
@@ -61,8 +64,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     },
     twitter: {
       card: "summary_large_image",
-      title: method.title,
-      description: method.description,
+      title,
+      description,
       images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };

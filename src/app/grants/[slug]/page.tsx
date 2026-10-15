@@ -16,6 +16,7 @@ import EntityLinks from "../../../components/EntityLinks";
 import ComparisonTable from "../../../components/affiliate/ComparisonTable";
 import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../../lib/schema";
 import { resolveTemplates, getFactMeta } from "../../../lib/canonical-facts";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 import { type AffiliateVertical, ctaCopyFor } from "../../../lib/affiliate";
 import { type NextStepItem } from "../../../components/affiliate/NextStepCard";
 
@@ -63,8 +64,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const filePath = path.join(process.cwd(), "public/data/grants", `${params.slug}.json`);
     const data: GrantData = JSON.parse(fs.readFileSync(filePath, "utf8"));
     const url = `https://www.sassahelphub.co.za/grants/${params.slug}`;
-    const title = resolveTemplates(data.title);
-    const description = resolveTemplates(data.description);
+    const title = clampTitle(resolveTemplates(data.title));
+    const description = clampDescription(resolveTemplates(data.description));
     return {
       title,
       description,

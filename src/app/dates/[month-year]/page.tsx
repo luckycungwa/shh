@@ -1,6 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import NextLink from "next/link";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 import { Chip, Divider } from "@nextui-org/react";
 import { FaCalendarCheck, FaQuestionCircle, FaLink, FaExclamationTriangle } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
@@ -53,15 +55,15 @@ function toFriendlyDate(iso: string): string {
 export function generateMetadata({ params }: { params: { "month-year": string } }): Metadata {
   const s = readAll().find((x) => x.month_key === params["month-year"]);
   if (!s) return { title: "Payment Dates Not Found" };
-  const title = `SASSA ${s.label} Grant Schedule — All Grant Payment Dates`;
+  const title = clampTitle(`SASSA ${s.label} Grant Schedule — All Grant Payment Dates`);
   const confirmedDays = grantRows
     .filter((row) => s[row].status === "confirmed")
     .map((row) => creditInfo(s, row))
     .map((info) => `${info.grant}: ${toFriendlyDate(info.date)}`)
     .join(", ");
-  const description = confirmedDays
+  const description = clampDescription(confirmedDays
     ? `${s.label} SASSA payment dates, confirmed: ${confirmedDays}. Official schedule for the Older Persons, Disability, Children's and SRD R370 grants.`
-    : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
+    : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`);
   const url = `https://www.sassahelphub.co.za/dates/${params["month-year"]}`;
   return {
     title,
@@ -91,6 +93,13 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
   const datesPassed = [schedule.older_persons.date, schedule.disability.date, schedule.children.date].every(
     (d) => d && d !== "TBC" && d !== "TBA" && d <= todayISO,
   );
+
+  // Adjacent months, in chronological order, for prev/next navigation. Only
+  // link to months that actually exist in the forecast data (safe at both ends).
+  const monthsByTime = readAll().slice().sort((a, b) => a.year * 12 + a.month - (b.year * 12 + b.month));
+  const monthIdx = monthsByTime.findIndex((m) => m.month_key === schedule.month_key);
+  const prevMonth = monthIdx > 0 ? monthsByTime[monthIdx - 1] : null;
+  const nextMonth = monthIdx >= 0 && monthIdx < monthsByTime.length - 1 ? monthsByTime[monthIdx + 1] : null;
 
   const faqs = [
     { q: `What is the SRD R370 payment date for ${schedule.label}?`, a: `For ${schedule.label}, the SRD R370 grant is ${schedule.srd.status === "confirmed" ? `paid in batches in the last week of the month on ${schedule.srd.day}` : "expected to be paid in the last week of the month, but SASSA has not yet officially confirmed the exact date"}. Check the official SRD portal (srd.sassa.gov.za) for your own 'Pay Day' date — it is more reliable than any general schedule.` },
@@ -256,6 +265,29 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
           title="When your grant arrives"
           pagePath={`/dates/${schedule.month_key}`}
         />
+
+        {(prevMonth || nextMonth) && (
+          <nav aria-label="Payment dates by month" className="flex flex-col sm:flex-row gap-3">
+            {prevMonth && (
+              <NextLink
+                href={`/dates/${prevMonth.month_key}`}
+                className="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 hover:border-primary-gold transition-colors"
+              >
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">&larr; Previous month</span>
+                <span className="block font-bold text-gray-900 dark:text-white">{prevMonth.label} Payment Dates</span>
+              </NextLink>
+            )}
+            {nextMonth && (
+              <NextLink
+                href={`/dates/${nextMonth.month_key}`}
+                className="flex-1 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 hover:border-primary-gold transition-colors sm:text-right"
+              >
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Next month &rarr;</span>
+                <span className="block font-bold text-gray-900 dark:text-white">{nextMonth.label} Payment Dates</span>
+              </NextLink>
+            )}
+          </nav>
+        )}
 
         <Divider />
         <EditorialFooter lastUpdated={schedule.governance?.lastVerified || "2026-09-24"} author="Lucky Cungwa" />

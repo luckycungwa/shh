@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { getActiveTools } from "../lib/tools/registry";
+import { isIndexableUpdate } from "../lib/updates";
 
 const BASE_URL = "https://www.sassahelphub.co.za";
 
@@ -73,13 +74,9 @@ export default async function sitemap() {
   const guideListDate = mostRecentDate(guideDates);
   const allContentDates = [...updateDates, ...guideDates, ...grantDates, ...faqDates];
 
-  const redirectedUpdates = [
-    "update-2026-001", "update-2026-005", "update-2026-006", "update-2026-007",
-    "update-2026-008", "update-2026-009", "update-2026-013", "update-2026-015",
-    "update-2026-018", "update-2026-021", "update-2026-022", "update-2026-025",
-    "update-2026-026", "update-2026-027", "update-2026-030", "update-2026-032",
-  ];
-  const updateUrls = updates.filter((u: any) => u.tag !== "monthly-payment-schedule" && !u.noindex && !redirectedUpdates.includes(u.id)).map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate, priority: 0.7, changeFreq: "monthly" as const }));
+  // Indexability rules are shared with the /updates hub so the two never
+  // disagree about which updates are live, canonical pages. See src/lib/updates.ts.
+  const updateUrls = updates.filter((u: any) => isIndexableUpdate(u)).map((u: any) => ({ path: `/updates/${u.id}`, lastMod: u.date || updateListDate, priority: 0.7, changeFreq: "monthly" as const }));
   const guideUrls = guides.map((g: any) => ({ path: `/guides/${g.id}`, lastMod: g.lastUpdated || guideListDate, priority: 0.8, changeFreq: "monthly" as const }));
 
   const grantSlugs = [

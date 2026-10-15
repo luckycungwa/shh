@@ -13,6 +13,7 @@ import NextStepCard from "../../../components/affiliate/NextStepCard";
 import EntityLinks from "../../../components/EntityLinks";
 import { articleSchema, breadcrumbSchema, faqPageSchema, howToSchema } from "../../../lib/schema";
 import { nextStepsFor } from "../../../lib/entities";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface AppealPage {
   slug: string;
@@ -44,13 +45,15 @@ export function generateMetadata({ params }: { params: { step: string } }): Meta
   const page = readAll().find((a) => a.slug === params.step);
   if (!page) return { title: "Appeal Guide Not Found" };
   const url = `https://www.sassahelphub.co.za/appeals/${params.step}`;
+  const title = clampTitle(page.title);
+  const description = clampDescription(page.description);
   return {
-    title: page.title,
-    description: page.description,
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
-    openGraph: { title: page.title, description: page.description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
-    twitter: { card: "summary_large_image", title: page.title, description: page.description, images: ["https://www.sassahelphub.co.za/logo.png"] },
+    openGraph: { title, description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
+    twitter: { card: "summary_large_image", title, description, images: ["https://www.sassahelphub.co.za/logo.png"] },
   };
 }
 

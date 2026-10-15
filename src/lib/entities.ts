@@ -42,6 +42,7 @@ const BANKING_NEXT: Record<string, EntityLink[]> = {
     { title: "View the payment calendar", url: "/payment-calendar" },
     { title: "SRD payment not received — what to do", url: "/guides/missing-grant-payment-guide" },
     { title: "How to check your SRD status", url: "/status-check" },
+    { title: "Postbank card payments", url: "/banking/postbank" },
     { title: "Compare other payment methods", url: "/banking" },
   ],
   postbank: [
@@ -422,6 +423,7 @@ export function guideNextSteps(guide: {
   }
   if (id === "ways-to-make-extra-income-south-africa") {
     return [
+      { title: "Starting a small business while on SRD", url: "/guides/micro-business-srd" },
       { title: "Free skills courses", url: "/guides/free-skills-courses-south-africa" },
       { title: "SRD R370 grant rules", url: "/grants/srd-r370-grant" },
       { title: "Income source detected decline reason", url: "/decline-reason/income-source-detected" },

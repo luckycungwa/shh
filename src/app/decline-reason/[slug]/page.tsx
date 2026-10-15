@@ -12,6 +12,7 @@ import AdNetworkLoader from "../../../components/AdNetworkLoader";
 import { articleSchema, breadcrumbSchema, howToSchema } from "../../../lib/schema";
 import { resolveTemplates } from "../../../lib/canonical-facts";
 import EntityLinks from "../../../components/EntityLinks";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface DeclineReason {
   slug: string;
@@ -39,16 +40,18 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const reason = data.find((r) => r.slug === params.slug);
   if (!reason) return { title: "Decline Reason Not Found" };
   const url = `https://www.sassahelphub.co.za/decline-reason/${params.slug}`;
+  const title = clampTitle(reason.title);
+  const description = clampDescription(reason.description);
   return {
-    title: reason.title,
-    description: reason.description,
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
-    openGraph: { title: reason.title, description: reason.description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
+    openGraph: { title, description, url, type: "article", siteName: "SASSA Help Hub", locale: "en_ZA", images: [{ url: "https://www.sassahelphub.co.za/logo.png", width: 790, height: 790 }] },
     twitter: {
       card: "summary_large_image",
-      title: reason.title,
-      description: reason.description,
+      title,
+      description,
       images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };

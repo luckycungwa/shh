@@ -9,7 +9,7 @@
     "steps": [
       {
         "title": "Choose the Right Grant for Your Situation",
-        "content": "Before applying, confirm which SASSA grant fits your circumstances. The main options are: <ul><li><strong>SRD R370 grant</strong> — for unemployed South Africans aged 18–59 with income below R624/month. Applied for online only.</li><li><strong>Older Persons (Old Age) Grant</strong> — for citizens aged 60+ who pass the means test. Pays R2,400/month (under 75) or R2,420 (75+).</li><li><strong>Disability Grant</strong> — for adults aged 18–59 with a medical disability preventing employment. Pays R2,400/month.</li><li><strong>Child Support Grant</strong> — for primary caregivers of children under 18. Pays R580/month per child.</li><li><strong>Foster Child Grant</strong> — for foster parents with a children's court order. Pays R1,290/month.</li><li><strong>Care Dependency Grant</strong> — for caregivers of children with severe disabilities. Pays R2,400/month.</li><li><strong>Grant-in-Aid</strong> — a R580/month top-up for Old Age or Disability recipients who need full-time care.</li><li><strong>War Veterans Grant</strong> — for WWII or Korean War veterans. Pays R2,420/month.</li></ul>You can only receive one primary grant at a time (plus the Grant-in-Aid top-up). Use our <a href=\"/eligibility-check\">eligibility checker</a> and browse the <a href=\"/grants\">grant guides</a> to compare options.",
+        "content": "Before applying, confirm which SASSA grant fits your circumstances. The main options are: <ul><li><strong>SRD R370 grant</strong> — for unemployed South Africans aged 18–59 with income below R624/month. Applied for online only.</li><li><strong>Older Persons (Old Age) Grant</strong> — for citizens aged 60+ who pass the means test. Pays R2,400/month (under 75) or R2,420 (75+).</li><li><strong>Disability Grant</strong> — for adults aged 18–59 with a medical disability preventing employment. Pays R2,400/month.</li><li><strong>Child Support Grant</strong> — for primary caregivers of children under 18. Pays R580/month per child.</li><li><strong>Foster Child Grant</strong> — for foster parents with a children's court order. Pays R1,300/month.</li><li><strong>Care Dependency Grant</strong> — for caregivers of children with severe disabilities. Pays R2,400/month.</li><li><strong>Grant-in-Aid</strong> — a R580/month top-up for Old Age or Disability recipients who need full-time care.</li><li><strong>War Veterans Grant</strong> — for WWII or Korean War veterans. Pays R2,420/month.</li></ul>You can only receive one primary grant at a time (plus the Grant-in-Aid top-up). Use our <a href=\"/eligibility-check\">eligibility checker</a> and browse the <a href=\"/grants\">grant guides</a> to compare options.",
         "tips": [
           "The SRD grant is the only grant you can apply for entirely online via srd.sassa.gov.za.",
           "Permanent grants can now be started online via the SASSA Services Portal, but you may still be asked to visit an office for documents."
@@ -1009,9 +1009,9 @@
       },
       {
         "title": "Foster Child Grant Amount History",
-        "content": "The Foster Child Grant was R1,070 per month in 2020. It increased to R1,250 in 2024, then R1,290 in April 2026. This grant is paid for children placed in foster care by a children's court. Unlike the Child Support Grant which continues until age 18, the Foster Child Grant can continue until age 21 if the child is still in education or training.",
+        "content": "The Foster Child Grant was R1,070 per month in 2020. It increased to R1,250 in 2024, then R1,290 in April 2026, and R1,300 in October 2026. This grant is paid for children placed in foster care by a children's court. Unlike the Child Support Grant which continues until age 18, the Foster Child Grant can continue until age 21 if the child is still in education or training.",
         "tips": [
-          "Foster Child Grant increased by R40 in 2026.",
+          "Foster Child Grant rose by R40 in April 2026 and a further R10 in October 2026 (R1,250 to R1,290 to R1,300).",
           "This grant is separate from and cannot be combined with the Child Support Grant."
         ]
       },
@@ -1353,7 +1353,7 @@
     "steps": [
       {
         "title": "Grant Comparison at a Glance (2026)",
-        "content": "SASSA administers eight main grant types in 2026. The SRD R370 is for unemployed 18-59 year olds with income under R624/month. The Old Age Grant pays R2,400 (60-74) or R2,420 (75+) for seniors who pass the means test. The Disability Grant pays R2,400 for adults with a medical disability. The Child Support Grant pays R580 per child for caregivers earning under R5,800 (single) or R11,600 (couple). The Foster Child Grant pays R1,290 per foster child. Each grant has different rules and application processes.",
+        "content": "SASSA administers eight main grant types in 2026. The SRD R370 is for unemployed 18-59 year olds with income under R624/month. The Old Age Grant pays R2,400 (60-74) or R2,420 (75+) for seniors who pass the means test. The Disability Grant pays R2,400 for adults with a medical disability. The Child Support Grant pays R580 per child for caregivers earning under R5,800 (single) or R11,600 (couple). The Foster Child Grant pays R1,300 per foster child (it rose from R1,290 in October 2026). Each grant has different rules and application processes.",
         "tips": [
           "You can only receive one SASSA grant at a time — choose the highest one you qualify for.",
           "The SRD is the only grant that is reassessed every single month."
@@ -1659,7 +1659,7 @@
       },
       {
         "title": "Additional Documents for Child Support & Foster Child Grants",
-        "content": "For the Child Support Grant (R580/month per child): the child's birth certificate, your ID, proof of residence, proof of income. For the Foster Child Grant (R1,290/month): the child's birth certificate, the <strong>children's court order</strong> placing the child in your care, your ID, proof of residence, proof of income. The court order is mandatory for the Foster Child Grant — a letter from the child's parent is not sufficient.",
+        "content": "For the Child Support Grant (R580/month per child): the child's birth certificate, your ID, proof of residence, proof of income. For the Foster Child Grant (R1,300/month): the child's birth certificate, the <strong>children's court order</strong> placing the child in your care, your ID, proof of residence, proof of income. The court order is mandatory for the Foster Child Grant — a letter from the child's parent is not sufficient.",
         "tips": [
           "You can apply for the Child Support Grant while pregnant — the grant starts after the child is born.",
           "The Foster Child Grant court order must be issued by a children's court, not a maintenance court."

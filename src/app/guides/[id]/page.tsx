@@ -19,6 +19,7 @@ import { resolveTemplates } from "../../../lib/canonical-facts";
 import { type AffiliateVertical, ctaCopyFor } from "../../../lib/affiliate";
 import { type NextStepItem } from "../../../components/affiliate/NextStepCard";
 import { guideNextSteps } from "../../../lib/entities";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface GuideStep {
   title: string;
@@ -70,14 +71,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 
   const url = `https://www.sassahelphub.co.za/guides/${id}`;
+  const title = clampTitle(guide.title);
+  const description = clampDescription(guide.description);
   return {
-    title: guide.title,
-    description: guide.description,
+    title,
+    description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
     openGraph: {
-      title: guide.title,
-      description: guide.description,
+      title,
+      description,
       url,
       type: "article",
       siteName: "SASSA Help Hub",
@@ -87,8 +90,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     },
     twitter: {
       card: "summary_large_image",
-      title: guide.title,
-      description: guide.description,
+      title,
+      description,
       images: ["https://www.sassahelphub.co.za/logo.png"],
     },
   };

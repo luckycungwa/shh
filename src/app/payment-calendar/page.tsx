@@ -11,7 +11,7 @@ import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from
 
 export const metadata: Metadata = buildMetadata({
   title: "SASSA Payment Calendar 2026 — October, November & December Grant Dates",
-  description: "Check when SASSA pays the SRD R370 and permanent grants. October 2026 dates were paid on 2, 5 and 6 October. November dates are under review because 4 November is the Local Government Elections public holiday; December follows the DSD-approved 2026/27 schedule.",
+  description: "Check when SASSA pays the SRD R370 and permanent grants. October 2026 dates were paid on 2, 5 and 6 October. November dates are now confirmed — Older Persons 30 October, Disability 2 November, Children's Grants 3 November and the fourth payment day 5 November 2026; December follows the DSD-approved 2026/27 schedule.",
   path: "/payment-calendar",
 });
 

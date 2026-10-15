@@ -10,6 +10,7 @@ import JsonLd from "../../../../components/JsonLd";
 import EditorialFooter from "../../../../components/EditorialFooter";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../../lib/schema";
 import { isCuratedOfficeCity } from "../../../../lib/office-indexation";
+import { clampTitle, clampDescription } from "../../../../lib/seo";
 
 interface OfficeCity {
   id: string;
@@ -93,8 +94,8 @@ function slugify(s: string) {
 export function generateMetadata({ params }: { params: { province: string; city: string } }): Metadata {
   const provinceName = PROVINCE_NAMES[params.province] || params.province;
   const display = params.city.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-  const title = `SASSA Office in ${display}, ${provinceName} — Address & Contact`;
-  const description = `Find the SASSA office in ${display}, ${provinceName}. Get the address, phone number, services offered and tips for visiting. Check your grant status online instead where possible.`;
+  const title = clampTitle(`SASSA Office in ${display}, ${provinceName} — Address & Contact`);
+  const description = clampDescription(`Find the SASSA office in ${display}, ${provinceName}. Get the address, phone number, services offered and tips for visiting. Check your grant status online instead where possible.`);
   const url = `https://www.sassahelphub.co.za/sassa-offices/${params.province}/${params.city}`;
   // Indexation rule (see src/lib/office-indexation.ts): only curated city
   // pages are indexable; template-only province-derived pages are noindexed

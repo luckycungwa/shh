@@ -12,7 +12,7 @@ const curYear = getCurrentYearString();
 
 export const metadata: Metadata = buildMetadata({
   title: `All SASSA Grants ${curYear}: Complete Guides for Every Grant Type`,
-  description: `Browse complete guides for every SASSA grant: SRD R370, Old Age Pension R2,400, Disability R2,400, Child Support R580, Foster Child R1,290, Care Dependency R2,400, Grant-in-Aid R580, and War Veterans R2,420.`,
+  description: `Browse complete guides for every SASSA grant: SRD R370, Old Age Pension R2,400, Disability R2,400, Child Support R580, Foster Child R1,300, Care Dependency R2,400, Grant-in-Aid R580, and War Veterans R2,420.`,
   path: "/grants",
 });
 
@@ -21,7 +21,7 @@ const grants = [
   { slug: "old-age-pension", name: "Old Age Pension", amount: "R2,400/month", desc: "For citizens aged 60+ who pass the means test.", color: "primary" as const },
   { slug: "disability-grant", name: "Disability Grant", amount: "R2,400/month", desc: "For adults with a medical disability preventing employment.", color: "secondary" as const },
   { slug: "child-support-grant", name: "Child Support Grant", amount: "R580/month", desc: "For primary caregivers of children under 18.", color: "success" as const },
-  { slug: "foster-child-grant", name: "Foster Child Grant", amount: "R1,290/month", desc: "For foster parents with a children's court order.", color: "danger" as const },
+  { slug: "foster-child-grant", name: "Foster Child Grant", amount: "R1,300/month", desc: "For foster parents with a children's court order.", color: "danger" as const },
   { slug: "care-dependency-grant", name: "Care Dependency Grant", amount: "R2,400/month", desc: "For caregivers of children with severe disabilities.", color: "warning" as const },
   { slug: "grant-in-aid", name: "Grant-in-Aid", amount: "R580/month", desc: "Supplementary grant for Old Age/Disability recipients needing care.", color: "primary" as const },
   { slug: "war-veterans-grant", name: "War Veterans Grant", amount: "R2,420/month", desc: "For WWII and Korean War veterans.", color: "danger" as const },

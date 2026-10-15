@@ -82,7 +82,7 @@ export default function LostSassaCardOrIdPage() {
           <div key={i} className="flex gap-6 p-8 bg-white dark:bg-gray-900 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
             <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-gold text-primary-black flex items-center justify-center font-black text-xl shadow-md">{s.step}</div>
             <div>
-              <h3 className="text-xl font-bold mb-2 flex items-center gap-2"><span className="text-primary-gold">{s.icon}</span> {s.title}</h3>
+              <h2 className="text-xl font-bold mb-2 flex items-center gap-2"><span className="text-primary-gold">{s.icon}</span> {s.title}</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{s.body}</p>
             </div>
           </div>

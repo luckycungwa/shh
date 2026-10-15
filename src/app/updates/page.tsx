@@ -7,6 +7,7 @@ import { Card, CardHeader, CardBody, Button, Chip, Divider } from "@nextui-org/r
 import { FaNewspaper, FaClock, FaArrowRight, FaRss, FaBell, FaInfoCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentYearString } from "../../lib/config";
+import { isIndexableUpdate } from "../../lib/updates";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -32,7 +33,7 @@ export default function UpdatesListPage() {
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
 
   const filtered = updates
-    .filter((u: any) => u.tag !== "monthly-payment-schedule")
+    .filter((u: any) => isIndexableUpdate(u))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const alertFreshnessWindow = 90 * 24 * 60 * 60 * 1000;
   const isFreshAlert = (u: Update) => new Date(u.date).getTime() >= Date.now() - alertFreshnessWindow;

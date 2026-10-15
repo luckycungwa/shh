@@ -153,11 +153,20 @@
     "confidence": "confirmed"
   },
   "foster_child_grant_amount": {
+    "value": "R1,300",
+    "effective_date": "2026-10-01",
+    "source_url": "https://www.gov.za/sites/default/files/gcis_document/202603/54397reg11960gon7276.pdf",
+    "verified_date": "2026-10-13",
+    "verified_by": "Government Gazette No. 54397, Government Notice R.7287 (23 March 2026): Foster Child Grant R1,300 with effect from 1 October 2026. Corroborated by the Parliament of South Africa 2026/27 budget release. Note: the gov.za foster child grant service page still shows the April figure (R1,290).",
+    "confidence": "confirmed"
+  },
+  "foster_child_grant_amount_april_2026": {
     "value": "R1,290",
+    "note": "April 2026 amount — superseded by R1,300 from 1 October 2026",
     "effective_date": "2026-04-01",
-    "source_url": "https://www.gov.za/services/child-care-social-benefits/foster-child-grant",
-    "verified_date": "2026-08-20",
-    "verified_by": "DSD official announcement (Foster Child Grant increased to R1,290, effective April 2026) + gov.za foster child grant service page",
+    "source_url": "https://www.gov.za/sites/default/files/gcis_document/202603/54397reg11960gon7276.pdf",
+    "verified_date": "2026-10-13",
+    "verified_by": "Government Gazette No. 54397, Government Notice R.7287 (23 March 2026)",
     "confidence": "confirmed"
   },
   "war_veterans_grant_amount": {
@@ -291,7 +300,7 @@
   },
   "foster_child_grant_amount_2025": {
     "value": "R1,250",
-    "note": "Previous cycle 2025/2026 amount — current is R1,290 (April 2026 increase)",
+    "note": "Previous cycle 2025/2026 amount — increased to R1,290 in April 2026 and to R1,300 in October 2026",
     "effective_date": "2025-04-01",
     "source_url": "https://www.gov.za/services/child-care-social-benefits/foster-child-grant",
     "verified_date": "2026-09-18",

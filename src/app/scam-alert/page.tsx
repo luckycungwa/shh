@@ -137,7 +137,7 @@ export default function ScamAlertPage() {
         </section>
 
         <section className="text-center py-12">
-           <Card className="bg-primary-black text-white p-12 overflow-hidden relative">
+           <Card className="bg-primary-black text-white p-6 sm:p-12 overflow-hidden relative">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-gold opacity-10 rounded-full -mr-32 -mt-32"></div>
               <CardBody className="relative z-10 space-y-6">
                  <h2 className="text-4xl font-black">Been Scammed?</h2>
@@ -149,7 +149,7 @@ export default function ScamAlertPage() {
                         as="a"
                         href={HELPLINE_TEL ?? "/contact"}
                         color="primary"
-                        className="font-bold px-8 py-6"
+                        className="font-bold px-8 py-6 whitespace-normal"
                         size="lg"
                      >
                         {HELPLINE ? `Call SASSA Fraud: ${HELPLINE}` : "SASSA Contact Details"}

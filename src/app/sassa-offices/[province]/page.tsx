@@ -9,6 +9,7 @@ import NextLink from "next/link";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
+import { clampTitle, clampDescription } from "../../../lib/seo";
 
 interface Province {
   slug: string;
@@ -39,8 +40,8 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { province: string } }): Metadata {
   const province = readProvinces().find((p) => p.slug === params.province);
   if (!province) return { title: "Province Not Found" };
-  const title = `SASSA Offices in ${province.name} — Contact Details & Locations`;
-  const description = `Find SASSA offices in ${province.name}. Addresses, phone numbers, contact details, grant collection points and office hours for all ${province.name} SASSA branches.`;
+  const title = clampTitle(`SASSA Offices in ${province.name} — Contact Details & Locations`);
+  const description = clampDescription(`Find SASSA offices in ${province.name}. Addresses, phone numbers, contact details, grant collection points and office hours for all ${province.name} SASSA branches.`);
   const url = `https://www.sassahelphub.co.za/sassa-offices/${params.province}`;
   return {
     title,
