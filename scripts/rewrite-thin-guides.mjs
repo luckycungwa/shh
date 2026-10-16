@@ -120,7 +120,7 @@ const appealGuide = {
 };
 
 const csgGuide = {
-  id: "guide-001",
+  id: "apply-child-support-grant",
   title: "How to Apply for the SASSA Child Support Grant in 2026",
   description:
     "Step-by-step guide to applying for the SASSA Child Support Grant in 2026: eligibility rules and the income means test, the documents you need, how to apply online, in person or by post, what happens after you apply, the payment amount and dates, common mistakes that cause delays, and what to do if your application is declined.",
@@ -231,7 +231,7 @@ const csgGuide = {
 };
 
 const data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
-const replacements = { "appeal-guide": appealGuide, "guide-001": csgGuide };
+const replacements = { "appeal-guide": appealGuide, "apply-child-support-grant": csgGuide };
 
 let updated = 0;
 for (let i = 0; i < data.length; i++) {

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import {nextui} from "@nextui-org/react";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: [
@@ -68,5 +69,5 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui(), typography()],
 }

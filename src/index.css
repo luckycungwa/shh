@@ -41,6 +41,18 @@
   .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4, .dark .prose h5, .dark .prose h6 {
     @apply text-white;
   }
+
+  /* Markdown tables (updates): keep wide tables usable on small screens */
+  .prose table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .prose thead th {
+    @apply whitespace-nowrap;
+  }
 }
 
 @layer utilities {

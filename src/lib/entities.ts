@@ -197,7 +197,7 @@ export function guideNextSteps(guide: {
       { title: "Common decline reasons & fixes", url: "/status/declined" },
     ];
   }
-  if (id === "guide-001") {
+  if (id === "apply-child-support-grant") {
     return [
       { title: "Child Support Grant overview", url: "/grants/child-support-grant" },
       { title: "Document checklist for your grant", url: "/guides/document-checklist" },

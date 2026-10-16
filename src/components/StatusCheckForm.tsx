@@ -1,14 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button, Chip, Spinner } from "@nextui-org/react";
-import {
-  FaExternalLinkAlt,
-  FaCheckCircle,
-  FaPhoneAlt,
-  FaMobileAlt,
-  FaShieldAlt,
-} from "react-icons/fa";
+import { Button, Chip } from "@nextui-org/react";
+import { FaExternalLinkAlt, FaShieldAlt } from "react-icons/fa";
+
+const OFFICIAL_STATUS_URL = "https://srd.sassa.gov.za";
 
 function validateId(id: string): string | null {
   if (!/^\d{13}$/.test(id)) {
@@ -39,29 +35,12 @@ function validatePhone(phone: string): string | null {
   return null;
 }
 
-function maskId(id: string): string {
-  if (id.length < 4) return "•••••••••••••";
-
-  return `•••••••••${id.slice(-4)}`;
-}
-
-function maskPhone(phone: string): string {
-  const normalized = normalizePhone(phone);
-
-  if (normalized.length < 4) return "••••••••••";
-
-  return `••••••${normalized.slice(-4)}`;
-}
-
 export default function StatusCheckForm() {
   const [idNumber, setIdNumber] = useState("");
   const [phone, setPhone] = useState("");
 
   const [idError, setIdError] = useState<string | null>(null);
   const [phoneError, setPhoneError] = useState<string | null>(null);
-
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,139 +55,12 @@ export default function StatusCheckForm() {
 
     /*
      * Important:
-     * This form does NOT send the user's details to our server.
-     * The values remain in React/browser memory only.
+     * This form does NOT send the user's details to our server. The values
+     * remain in React/browser memory only. A valid entry simply hands the
+     * user straight to the official SASSA portal to run the real check.
      */
-    setLoading(true);
-
-    // No fake API request or artificial delay.
-    setSubmitted(true);
-    setLoading(false);
+    window.open(OFFICIAL_STATUS_URL, "_blank", "noopener,noreferrer");
   };
-
-  const resetForm = () => {
-    setIdNumber("");
-    setPhone("");
-    setIdError(null);
-    setPhoneError(null);
-    setSubmitted(false);
-  };
-
-  if (submitted) {
-    return (
-      <div className="space-y-6 text-center animate-in fade-in slide-in-from-bottom-4 duration-300">
-        {/* Success icon */}
-        <div className="flex justify-center">
-          <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/20 flex items-center justify-center">
-            <FaCheckCircle className="text-3xl text-green-600" />
-          </div>
-        </div>
-
-        {/* Heading */}
-        <div>
-          <h3 className="text-2xl font-black mb-2">
-            Ready to Check Your Status
-          </h3>
-
-          <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-            Your details have only been used on this page. Continue to the
-            official SASSA website to perform your actual status check.
-          </p>
-        </div>
-
-        {/* Masked details */}
-        <div className="max-w-sm mx-auto space-y-3">
-          <div className="flex justify-between items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700">
-            <span className="text-xs font-bold text-gray-400 uppercase">
-              ID Number
-            </span>
-
-            <span className="font-mono font-bold text-base tracking-wide">
-              {maskId(idNumber)}
-            </span>
-          </div>
-
-          <div className="flex justify-between items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700">
-            <span className="text-xs font-bold text-gray-400 uppercase">
-              Cellphone
-            </span>
-
-            <span className="font-mono font-bold text-base tracking-wide">
-              {maskPhone(phone)}
-            </span>
-          </div>
-        </div>
-
-        {/* Primary CTA */}
-        <div className="space-y-3 pt-2">
-          <Button
-            as="a"
-            href="https://srd.sassa.gov.za"
-            target="_blank"
-            rel="noopener noreferrer"
-            color="primary"
-            size="lg"
-            className="w-full h-14 font-bold text-base shadow-lg"
-            endContent={<FaExternalLinkAlt className="text-sm" />}
-          >
-            Continue to SASSA Status Check
-          </Button>
-
-          <p className="text-xs text-gray-400 dark:text-gray-500 leading-relaxed">
-            The official SASSA website will open in a new tab. You will enter
-            your details directly on the official portal.
-          </p>
-
-          <Button
-            variant="light"
-            size="sm"
-            onPress={resetForm}
-            className="font-bold"
-          >
-            Start Over
-          </Button>
-        </div>
-
-        {/* Alternative contact methods */}
-        <div className="grid grid-cols-2 gap-3 pt-2">
-          <div className="flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-900/10 rounded-2xl border border-blue-100 dark:border-blue-800">
-            <FaPhoneAlt className="text-blue-500 text-base flex-shrink-0" />
-
-            <div className="text-left">
-              <p className="font-bold text-[11px]">SASSA Helpline</p>
-              <p className="text-xs font-bold">0800 60 10 11</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 p-3 bg-green-50 dark:bg-green-900/10 rounded-2xl border border-green-100 dark:border-green-800">
-            <FaMobileAlt className="text-green-500 text-base flex-shrink-0" />
-
-            <div className="text-left">
-              <p className="font-bold text-[11px]">USSD</p>
-              <p className="text-xs font-bold">*120*69277#</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Privacy notice */}
-        <div className="flex items-start gap-3 p-4 bg-green-50 dark:bg-green-900/10 rounded-2xl border border-green-100 dark:border-green-800 text-left">
-          <FaShieldAlt className="text-green-600 mt-0.5 flex-shrink-0" />
-
-          <div>
-            <p className="font-bold text-sm text-green-800 dark:text-green-300 mb-1">
-              Your information stays on this page
-            </p>
-
-            <p className="text-xs text-green-700 dark:text-green-400 leading-relaxed">
-              This form does not send your ID number or cellphone number to our
-              servers. Your information is only held in your browser while
-              using this form.
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -327,17 +179,10 @@ export default function StatusCheckForm() {
           type="submit"
           color="primary"
           size="lg"
-          isDisabled={loading}
-          className="w-full h-14 font-bold text-base shadow-lg"
-          endContent={
-            !loading ? <FaCheckCircle className="text-sm" /> : undefined
-          }
+          className="w-full h-14 font-bold text-base shadow-lg text-black dark:text-white"
+          endContent={<FaExternalLinkAlt className="text-sm" />}
         >
-          {loading ? (
-            <Spinner size="sm" color="current" />
-          ) : (
-            "Continue to Status Check"
-          )}
+          Go to Official SASSA Status Check
         </Button>
 
         {/* Privacy notice */}

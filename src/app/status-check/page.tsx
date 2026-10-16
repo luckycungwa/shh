@@ -176,11 +176,11 @@ export default function StatusCheckPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
         <div className="lg:col-span-8">
-           <Card className="p-1 md:p-12 border-2 border-primary-gold/30 shadow-2xl rounded-[2rem] bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+           <Card className="p-1 md:p-12 border-2 sm:border-primary-gold/30 shadow-2xl rounded-[2rem] bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
               <CardBody className="space-y-12">
                  <div className="space-y-6 text-center md:text-left">
                     <h2 className="text-4xl font-normal flex items-center gap-3 justify-center md:justify-start">
-                       <FaUserShield className="text-primary-gold hidden md:block" /> Check My Status
+                       <FaUserShield className="text-primary-gold hidden md:block font-bold" /> Check My Status
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400">
                        Enter your ID and phone number below to prepare for the official SASSA portal. Your details stay on your device — we never collect them.

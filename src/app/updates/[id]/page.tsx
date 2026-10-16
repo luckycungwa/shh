@@ -7,6 +7,7 @@ import { FaClock, FaCalendarAlt, FaUserEdit, FaExternalLinkAlt, FaThumbsUp, FaTh
 import NextLink from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 import { notFound } from "next/navigation";
 import JsonLd from "../../../components/JsonLd";
 import { faqPageSchema } from "../../../lib/schema";
@@ -201,7 +202,7 @@ export default async function UpdatePage({ params }: { params: { id: string } })
            )}
 
            <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-black prose-a:text-primary-gold prose-strong:text-gray-900 dark:prose-strong:text-white leading-relaxed prose-h2:scroll-mt-32">
-               <ReactMarkdown rehypePlugins={[rehypeSlug]}>{resolveTemplates(update.content).replace(/^#\s+[^\r\n]*(?:\r?\n)+/, "")}</ReactMarkdown>
+               <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>{resolveTemplates(update.content).replace(/^#\s+[^\r\n]*(?:\r?\n)+/, "")}</ReactMarkdown>
            </div>
 
            {update.faqs && update.faqs.length > 0 && (

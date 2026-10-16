@@ -104,7 +104,7 @@ Payment problems (/guides/missing-grant-payment-guide)
 **Pillar:** `/grants`
 **Supporting Pages:**
 - `/grants/child-support-grant`
-- `/guides/guide-001` (Child Support application)
+- `/guides/apply-child-support-grant` (Child Support application)
 - `/eligibility-check`
 **Linking Strategy:**
 - Transition users from SRD to permanent grants.

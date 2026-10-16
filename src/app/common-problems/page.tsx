@@ -54,7 +54,7 @@ const categories = [
       { href: "/status/approved", label: "Approved — When Do I Get Paid?", desc: "What happens after approval and payment timelines" },
       { href: "/status/declined", label: "Application Declined", desc: "Common decline reasons and how to appeal" },
       { href: "/status/paid", label: "Status Shows Paid but No Money", desc: "What to do if your money hasn't arrived" },
-      { href: "/guides/guide-001", label: "How to Apply for Child Support Grant", desc: "Step-by-step application for CSG" },
+      { href: "/guides/apply-child-support-grant", label: "How to Apply for Child Support Grant", desc: "Step-by-step application for CSG" },
       { href: "/guides/apply-sassa-grants", label: "How to Apply for Any SASSA Grant", desc: "Online and in-person application hub" },
       { href: "/grants/srd-r370-grant", label: "How to Apply for SRD R370 Grant", desc: "Online application process for the SRD grant" },
       { href: "/guides/document-checklist", label: "SASSA Documents Checklist", desc: "What documents to bring for each grant type" },

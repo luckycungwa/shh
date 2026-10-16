@@ -23,7 +23,7 @@ Legend — **Status:** ✅ well covered · 🟡 partially covered · 🔴 gap.
 | SRD R370 (amount, eligibility, dates, appeals) | `grants/srd-r370-grant`, guides `micro-business-srd`, `appeal-guide`, `income-source-detected-appeal`, `srd-reapplication`, updates `-028` decline codes | ✅ | Refreshed dates to current cycle (16 Oct). Keep SRD date TBA until announced. | — |
 | Older Persons Grant | `grants/old-age-pension`, guides `grant-amounts-history`, `life-certification` | ✅ | Refreshed Sept→Oct/Nov dates (16 Oct). | — |
 | Disability Grant | `grants/disability-grant` | ✅ | Current-month date block added (paid 5 Oct; next 2 Nov). | — |
-| Child Support Grant | `grants/child-support-grant`, `guide-001` | ✅ | Current-month date block added (paid 6 Oct; next 3 Nov). | — |
+| Child Support Grant | `grants/child-support-grant`, `apply-child-support-grant` | ✅ | Current-month date block added (paid 6 Oct; next 3 Nov). | — |
 | Foster Child Grant | `grants/foster-child-grant`, update `-foster-child-1300` (13 Oct) | ✅ | R1,300 from Oct 2026 verified (Gazette 54397); current-month date block added (paid 6 Oct; next 3 Nov). | — |
 | Care Dependency Grant | `grants/care-dependency-grant` | ✅ | Date block added and corrected to the children's payment day (paid 6 Oct; next 3 Nov) — the page previously said it was paid with the Disability Grant. Means-test copy still to confirm vs leaflet. | P3 |
 | Grant-in-Aid | `grants/grant-in-aid` | 🟡 | Verify top-up amount cross-references canonical fact `grant_in_aid_amount`. | P3 |
@@ -31,7 +31,7 @@ Legend — **Status:** ✅ well covered · 🟡 partially covered · 🔴 gap.
 | Grant reviews / verification | guides `grant-verification-process`, `fourth-payment-day-guide` (refreshed 16 Oct), `sassa-update-information`, `bulk-means-test` | ✅ | Covered well. | — |
 | Beneficiary Biometric Enrolment & the review-response timeline (30 + 60 = 90 days to respond; 30 days to apply for restoration; lapse after one month's notice) | guides `biometric-fix-guide`, `grant-verification-process`; statuses `under-review`, `suspended`; update `-sassa-grant-controls` (9 Oct) | ✅ | Published 16 Oct: staged timeline + official sources in one place (guide, both statuses, update); Beneficiary Biometric Enrolment explained in `biometric-fix-guide`. Sources: PMG NW4444/NW4094/NW1941/NW4450; SASSA Grant Booklet 2026. | — |
 | Eligibility & means test (income/asset thresholds) | guides `micro-business-srd`, `bulk-means-test`, `alternative-id-grants`; canonical facts (means-test leaflet 01 Apr 2026) | ✅ | Thresholds centralised in `canonical-facts.json`. | — |
-| Applications (online & in person) | guides `apply-sassa-grants`, `guide-001`, `document-checklist`, `official-sassa-portal-guide` | ✅ | — | — |
+| Applications (online & in person) | guides `apply-sassa-grants`, `apply-child-support-grant`, `document-checklist`, `official-sassa-portal-guide` | ✅ | — | — |
 | Banking & payments | guides `sassa-payment-methods`, `missing-grant-payment-guide`, `bank-details-pending-fix`, `how-to-open-bank-account-sassa-payments`, `best-bank-accounts-sassa-2026` | ✅ | Update `-payment-method-changes` (7 Oct) covers frequent-change warning. | — |
 | Postbank Black Card / Gold Card phase-out | guide `postbank-black-card-guide`, update `-033` | ✅ | Gold Card dead 31 Aug 2026 (canonical fact). | — |
 | Appeals & reconsideration | guides `appeal-guide`, `appeal-timeline`, `income-source-detected-appeal`; canonical facts (90-day window) | ✅ | — | — |

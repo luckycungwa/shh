@@ -96,6 +96,26 @@ site is checked.
 
 ---
 
+### 2026-10-16 — URL hygiene round (legacy guide slug → descriptive slug + 301)
+
+**Reason:** AI-citation analysis (Ahrefs, "Why ChatGPT Cites One Page Over Another") plus TECH-01:
+`/guides/guide-001` was the site's one opaque, non-natural-language slug. Natural-language slugs are
+cited more often by answer engines. Owner approved a one-off re-slug accepting the URL-age reset.
+
+| # | File | Change | Basis |
+|---|---|---|---|
+| 1 | `public/data/guides.json` | Guide `id` `guide-001` → `apply-child-support-grant` (the `id` is the URL param); related-link URL updated | TECH-01; L3 of `docs/seo/sassa-ai-citation-analysis.md` |
+| 2 | `next.config.js` | Added permanent 301: `/guides/guide-001` → `/guides/apply-child-support-grant` | Preserve the old URL's link equity/age path |
+| 3 | `src/lib/entities.ts`, `src/app/common-problems/page.tsx`, `public/data/updates.json`, `scripts/rewrite-thin-guides.mjs` | Updated all internal references to the new slug | Internal-link integrity |
+
+**Verification:** `npm run validate:content`, `npm run lint` and `npm run build` all pass (2026-10-16);
+old URL 301s and drops from the live sitemap after deploy.
+
+**Not claimed:** No page is asserted to be re-indexed or live until the deploy workflow runs and the
+site is checked.
+
+---
+
 ## 3. Recurring workflow
 
 1. **Research** official sources (`sassa.gov.za/newsroom/media-statements`, `srd.sassa.gov.za`, DSD,

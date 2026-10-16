@@ -109,7 +109,7 @@
       },
       {
         "title": "Child Support Grant Application Guide",
-        "url": "/guides/guide-001",
+        "url": "/guides/apply-child-support-grant",
         "isExternal": false
       },
       {
@@ -305,7 +305,7 @@
     ]
   },
   {
-    "id": "guide-001",
+    "id": "apply-child-support-grant",
     "title": "How to Apply for the SASSA Child Support Grant in 2026",
     "description": "Step-by-step guide to applying for the SASSA Child Support Grant in 2026: eligibility rules and the income means test, the documents you need, how to apply online, in person or by post, what happens after you apply, the payment amount and dates, common mistakes that cause delays, and what to do if your application is declined.",
     "category": "Apply for a Grant",
