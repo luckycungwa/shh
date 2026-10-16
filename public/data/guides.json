@@ -1273,8 +1273,8 @@
         ]
       },
       {
-        "title": "September 2026: Approved One Month, Declined the Next",
-        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in August and 'Declined' in September -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For September 2026, SASSA has confirmed the SRD payment dates of [23 and 25 September](/dates/september-2026); until your status shows a 'Pay Day' date, it is normal to see 'Approved' with no date - your batch date appears once the September payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
+        "title": "October 2026: Approved One Month, Declined the Next",
+        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in September and 'Declined' in October -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For October 2026, SASSA had not yet confirmed the SRD payment date as at 12 October 2026 -- the SRD date is announced in the last week of the month; until your status shows a 'Pay Day' date, it is normal to see 'Approved' with no date - your batch date appears once the October payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
         "tips": [
           "A decline for one month never cancels your application for the next.",
           "Check your status after the 15th of each month for the most reliable result."
@@ -1306,7 +1306,7 @@
       "sassa reapplication",
       "grant review"
     ],
-    "lastUpdated": "2026-09-22",
+    "lastUpdated": "2026-10-16",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -2007,9 +2007,22 @@
           "Go early in the morning (before 08:00) to avoid long queues.",
           "If you cannot travel due to disability or illness, call 0800 60 10 11 to request a home visit."
         ]
+      },
+      {
+        "title": "What Is SASSA Beneficiary Biometric Enrolment?",
+        "content": "<p><strong>Beneficiary Biometric Enrolment</strong> is SASSA's programme to capture your fingerprints or a facial scan as an identity check before a grant is approved or continued. It is different from the online eKYC selfie above: enrolment is done in person at a SASSA office, while eKYC is the online facial check some beneficiaries are asked to complete.</p><p><strong>When it applies:</strong> compulsory biometric enrolment for new applicants started in <strong>September 2025</strong>, and face-to-face biometric verification was fully rolled out from <strong>1 September 2026</strong>. The online system is being upgraded, with the online social grant system expected to go live by the end of <strong>November 2026</strong> (Portfolio Committee on Social Development, 17 September 2026).</p><p><strong>What to bring:</strong> your original 13-digit barcode ID (Smart ID card or green ID book), and any documents SASSA asked for in your review or application notice. The officer captures your fingerprints or a facial scan and updates your record.</p><p><strong>What it does not do:</strong> SASSA states that biometric enrolment does not delay or stop a grant, except where your identity cannot be confirmed or fraud is detected. Between September 2025 and March 2026 SASSA biometrically verified <strong>997,379</strong> beneficiaries (Parliamentary reply NW1941, 18 May 2026).</p>",
+        "tips": [
+          "Biometric enrolment is in person at a SASSA office — the online eKYC selfie is a separate step.",
+          "Bring your original ID: a photocopy cannot be used for a fingerprint or facial scan.",
+          "If online facial verification keeps failing at home, you can complete the biometric step with fingerprints at your nearest office."
+        ]
       }
     ],
     "faqs": [
+      {
+        "q": "What is SASSA Beneficiary Biometric Enrolment?",
+        "a": "It is SASSA's identity check where your fingerprints or a facial scan are captured before a grant is approved or continued. It is done in person at a SASSA office and applies to new applicants (since September 2025) and to beneficiaries asked to verify. SASSA says it does not delay or stop a grant unless your identity cannot be confirmed or fraud is detected."
+      },
       {
         "q": "How many times can I retry the biometric verification?",
         "a": "You typically get 3 attempts per verification link. After 3 failures, the link expires and you must request a new one via the SRD portal or by calling SASSA."
@@ -2033,9 +2046,10 @@
       "ekyc sassa",
       "facial recognition sassa",
       "self-correction required",
-      "liveness detection failed"
+      "liveness detection failed",
+      "beneficiary biometric enrolment"
     ],
-    "lastUpdated": "2026-07-24",
+    "lastUpdated": "2026-10-16",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -2536,22 +2550,30 @@
   {
     "id": "grant-verification-process",
     "title": "SASSA Grant Reviews & Verification Process (Complete Guide)",
-    "description": "Complete guide to SASSA grant reviews and verification. If you received an SMS or letter asking you to visit a SASSA office, here is exactly what will happen, what documents to bring, and what to do if you miss your appointment.",
+    "description": "Complete guide to SASSA grant reviews and verification for 2026/27. If you received an SMS or letter asking you to visit a SASSA office, here is exactly what will happen, what documents to bring, and what to do if you miss your appointment.",
     "category": "Manage Your Grant",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "steps": [
       {
         "title": "Why SASSA Is Doing Verification",
-        "content": "SASSA conducts targeted verification to ensure that grant payments go to the right people. The verification process announced in April 2025 is part of SASSA's ongoing integrity measures. It targets two specific groups: beneficiaries using alternative forms of identification (non-13-digit SA ID numbers), and beneficiaries flagged by the bulk means test (whose bank accounts show deposits they did not declare). The goal is not to stop grants — it is to make sure the information SASSA has on file is accurate. SASSA is required by law to verify beneficiary information regularly. If your information is correct, the verification will be quick and your grant continues unchanged.",
+        "content": "<p>SASSA conducts targeted verification to make sure that grant payments go to the right people. It is part of SASSA's ongoing integrity measures and is aimed at beneficiaries using alternative forms of identification (non-13-digit SA ID numbers) and beneficiaries flagged by data cross-checks — for example when a bank account shows deposits that were not declared. The goal is not to stop grants — it is to make sure the information SASSA has on file is accurate. SASSA is required by law to verify beneficiary information regularly.</p><p><strong>October 2026 update:</strong> In its 2025/26 audit, the Auditor-General told Parliament that SASSA paid over <strong>R1.33 billion</strong> to ineligible beneficiaries (down from R2.3 billion the year before), including payments made after death and to government employees earning above the threshold. SASSA defended its reviews in a statement on 9 October 2026, saying the checks are integrity controls and are not designed to terminate grants arbitrarily. SASSA also clarified the difference between an assessment and a review: a review is an administrative control to confirm you still qualify, and it does not automatically mean your grant is cancelled. If your information is correct, the process is quick and your grant continues unchanged. <a href=\"/updates/update-2026-sassa-grant-controls\">Read the full SASSA statement in our grant-controls update</a>.</p>",
         "tips": [
           "This verification is routine — it does not mean you are accused of fraud.",
           "SASSA will contact you directly — do not respond to unsolicited calls or messages."
         ]
       },
       {
+        "title": "The 2026/27 Review Wave: What Is Happening Now",
+        "content": "<p>SASSA is reviewing a large number of grants during the 2026/27 financial year. Here are the confirmed facts, with official sources:</p><ul><li><strong>More than 350,000 beneficiaries</strong> are targeted for review in 2026/27 (Parliamentary reply NW4094, 17 September 2026).</li><li>In 2025/26, <strong>169,049</strong> beneficiaries received a notice but did not present themselves, and their grants lapsed, were cancelled or terminated. Of those, <strong>31,759</strong> later presented, were found to still qualify, and had their grants restored (Parliamentary reply NW4450, 17 September 2026).</li><li>In the first quarter of 2026/27, SASSA reviewed <strong>105,508</strong> grants (Parliamentary reply NW4444, 17 September 2026).</li><li>Across the first two quarters, about <strong>259,000</strong> reviews were initiated — including about 104,000 Child Support Grants and 102,000 Older Persons Grants — with about <strong>201,000</strong> beneficiaries responding and roughly 60,000 suspension notices issued (Portfolio Committee on Social Development, 17 September 2026).</li><li>SASSA has said reviews will <strong>pause temporarily in November and December 2026</strong>, and biometric verification (face to face) was rolled out from 1 September 2026.</li></ul><p><strong>Key point:</strong> if you receive a review notice, do not ignore it. Most beneficiaries who attend and still qualify keep their grant, and grants can be restored even after they lapse.</p>",
+        "tips": [
+          "The figures change as the financial year progresses — always confirm the current position with SASSA on 0800 60 10 11.",
+          "A review notice is not an accusation of fraud. It is a routine eligibility check."
+        ]
+      },
+      {
         "title": "How Will You Know If You Are Selected?",
-        "content": "If you are selected for verification or a grant review, SASSA will contact you through official channels. This may be: an SMS from a SASSA-registered short code asking you to visit your nearest SASSA office, a formal letter delivered to your address on SASSA letterhead, or a phone call from your local SASSA office.\n\n**Review SMS Notifications:** SASSA sends SMS messages to beneficiaries selected for review before the payment cycle begins. A genuine review SMS will tell you that your grant has been flagged for review, instruct you to visit a SASSA office, and include the documents you need to bring. Genuine SASSA SMS messages come from registered short codes — not regular cellphone numbers or WhatsApp. They will never ask for your banking PIN, SASSA card PIN, or passwords. If you receive a message asking for this information, it is a scam. Check your phone messages carefully — if your contact details are outdated, you may miss the notification and only discover you are under review when your payment does not arrive on the normal day.\n\nThe communication will tell you which documents to bring and which office to visit. Important: SASSA will never ask for your banking PIN, SASSA card PIN, or passwords over the phone or SMS. If someone contacts you asking for this information, it is a scam. If you are unsure whether the contact is real, call the SASSA helpline on 0800 60 10 11 to verify before taking any action.",
+        "content": "<p>If you are selected for verification or a grant review, SASSA will contact you through official channels. This may be: an SMS from a SASSA-registered short code asking you to visit your nearest SASSA office, a formal letter delivered to your address on SASSA letterhead, or a phone call from your local SASSA office.</p><p><strong>Review SMS Notifications:</strong> SASSA sends SMS messages to beneficiaries selected for review before the payment cycle begins. A genuine review SMS will tell you that your grant has been flagged for review, instruct you to visit a SASSA office, and include the documents you need to bring. Genuine SASSA SMS messages come from registered short codes — not regular cellphone numbers or WhatsApp. They will never ask for your banking PIN, SASSA card PIN, or passwords. If you receive a message asking for this information, it is a scam. Check your phone messages carefully — if your contact details are outdated, you may miss the notification and only discover you are under review when your payment does not arrive on the normal day.</p><p>The communication will tell you which documents to bring and which office to visit. Important: SASSA will never ask for your banking PIN, SASSA card PIN, or passwords over the phone or SMS. If someone contacts you asking for this information, it is a scam. If you are unsure whether the contact is real, call the SASSA helpline on 0800 60 10 11 to verify before taking any action.</p>",
         "tips": [
           "SASSA does not have the capacity to call every beneficiary — if you are selected, the contact will be official and verifiable.",
           "If you receive an SMS with a link to click, check the URL carefully — real SASSA links end in .gov.za.",
@@ -2560,7 +2582,7 @@
       },
       {
         "title": "Review Appointments: What to Expect",
-        "content": "When SASSA contacts you for a review, they will ask you to visit your nearest SASSA office for an appointment. Here is what you need to know:\n\n**How Appointments Work:** Review appointments are not pre-scheduled with a specific time. You visit the SASSA office during working hours (08:00 to 15:00, Monday to Friday), take a queue ticket, and wait for your number to be called. There is no online booking system for review appointments.\n\n**What Happens During the Appointment:** The SASSA officer will review your documents, compare them against the information in the SASSA system, update your contact details and income declaration as needed, and confirm whether your information is correct. The actual document review takes 15 to 30 minutes, not including waiting time.\n\n**How to Reschedule:** If you cannot attend on the date SMSsed to you, call the SASSA helpline on 0800 60 10 11 to reschedule. Do not simply skip the appointment — failing to attend may result in suspension. If you are too ill or disabled to visit an office, request a home visit when you call.\n\n**What If You Missed the SMS?** If you lost the SMS or letter asking you to come for a review, go to your nearest SASSA office with your ID document and explain that you received a review request. The officer can look up your record and proceed without the original message.",
+        "content": "<p>When SASSA contacts you for a review, they will ask you to visit your nearest SASSA office for an appointment. Here is what you need to know:</p><p><strong>How Appointments Work:</strong> Review appointments are not pre-scheduled with a specific time. You visit the SASSA office during working hours (08:00 to 15:00, Monday to Friday), take a queue ticket, and wait for your number to be called. There is no online booking system for review appointments.</p><p><strong>What Happens During the Appointment:</strong> The SASSA officer will review your documents, compare them against the information in the SASSA system, update your contact details and income declaration as needed, and confirm whether your information is correct. The actual document review takes 15 to 30 minutes, not including waiting time.</p><p><strong>How to Reschedule:</strong> If you cannot attend on the date SMSsed to you, call the SASSA helpline on 0800 60 10 11 to reschedule. Do not simply skip the appointment — failing to attend may result in suspension. If you are too ill or disabled to visit an office, request a home visit when you call.</p><p><strong>What If You Missed the SMS?</strong> If you lost the SMS or letter asking you to come for a review, go to your nearest SASSA office with your ID document and explain that you received a review request. The officer can look up your record and proceed without the original message.</p>",
         "tips": [
           "Go early in the morning (before 08:00) to avoid the longest queues.",
           "Tuesday to Thursday are generally less busy than Monday and Friday.",
@@ -2585,11 +2607,11 @@
       },
       {
         "title": "What Happens If You Do Not Attend the Review or Verification?",
-        "content": "If SASSA asks you to attend a review or verification and you do not go, your grant may be suspended or declined. SASSA cannot continue paying a grant without verifying that the beneficiary's information is current and accurate.\n\n**Suspension Timeline:** If you miss the review, your grant may be suspended in the next payment cycle. You will not receive payments until the review is completed. If you continue to ignore the request, your grant may lapse entirely under the Social Assistance Act. A lapsed grant requires reapplying from scratch — your old application cannot be reinstated.\n\n**How to Reinstate:** If your grant is suspended due to non-attendance, it can be reinstated once you visit a SASSA office with your documents. You will also receive any back payments owed from the date of suspension. Visit your SASSA office as soon as possible — do not wait for another SMS.\n\nThe key message: do not ignore the request. Even if you think your information is correct, attend the review to confirm it officially. Failure to attend creates unnecessary problems that take time to resolve.\n\n**August 2026 note:** SASSA has confirmed that beneficiaries flagged for review will be paid on Friday, 07 August 2026 — the fourth payment day — not the normal three-day cycle. After receiving payment, you must still complete the review at a SASSA office before the end of August. [Read the full announcement](/updates/update-2026-028).",
+        "content": "<p>If SASSA asks you to attend a review or verification and you do not go, your grant can be suspended and later lapsed. SASSA cannot keep paying a grant while verification of your situation is outstanding.</p><p><strong>The staged timeline (2026/27):</strong></p><ul><li><strong>Day 1 to 30:</strong> after SASSA notifies you, you have an initial <strong>30 days</strong> to submit the information and documents requested.</li><li><strong>Day 31 to 90:</strong> if there is no response, SASSA allows a further <strong>60 days</strong> before the grant is suspended — so you have up to <strong>90 days in total</strong> from the notice to present yourself (Parliamentary replies NW4094 and NW4444, 17 September 2026).</li><li><strong>If you still do not respond:</strong> the grant is suspended. You then have <strong>30 days from the suspension</strong> to apply for restoration (SASSA Grant Booklet 2026).</li><li><strong>If there is still no response:</strong> the grant can be lapsed after <strong>one month's notice</strong> (Parliamentary reply NW1941, 18 May 2026).</li></ul><p><strong>How to reinstate:</strong> if you attend after a suspension and SASSA confirms you still qualify, the suspension is lifted and you are <strong>back-paid for the period you were suspended</strong>. In 2025/26, <strong>31,759</strong> beneficiaries whose grants had lapsed later presented, were found to still qualify, and had their grants restored (Parliamentary reply NW4450, 17 September 2026).</p><p><strong>Do not ignore the request or wait for a reminder — the review process pauses in November and December 2026.</strong> Even if you think your information is correct, attend the review to confirm it officially. If your grant has been suspended or lapsed, visit your nearest SASSA office with your ID and documents as soon as possible, or call 0800 60 10 11. <a href=\"/updates/update-2026-sassa-grant-controls\">Read the full SASSA statement in our grant-controls update</a>.</p>",
         "tips": [
           "If you cannot attend on the scheduled date, call the SASSA helpline to reschedule — do not just skip it.",
           "If you are too ill or disabled to visit an office, call 0800 60 10 11 to request a home visit.",
-          "A suspension can be reversed by completing the review, but a lapse cannot."
+          "A suspension can be reversed by completing the review. Even a lapsed grant can be restored if you present yourself later and still qualify."
         ]
       },
       {
@@ -2620,11 +2642,23 @@
       },
       {
         "q": "I received an SMS about a grant review — is it real and what do I do?",
-        "a": "Genuine SASSA review SMS messages come from registered short codes and tell you to visit a SASSA office. They never ask for your PIN, OTP, or banking password. If you are unsure, call 0800 60 10 11 to verify. For detailed guidance on identifying real vs fake SMS messages, see our guide on [what to do if SASSA asks you to update your information](/guides/sassa-update-information)."
+        "a": "Genuine SASSA review SMS messages come from registered short codes and tell you to visit a SASSA office. They never ask for your PIN, OTP, or banking password. If you are unsure, call 0800 60 10 11 to verify. For detailed guidance on identifying real vs fake SMS messages, see our guide on what to do if SASSA asks you to update your information."
       },
       {
         "q": "Can I reschedule my review appointment?",
         "a": "Yes. If you cannot attend on the date given, call the SASSA helpline on 0800 60 10 11 to reschedule. Do not simply skip the appointment — failing to attend may result in your grant being suspended."
+      },
+      {
+        "q": "Is a SASSA review the same as a cancellation?",
+        "a": "No. A review is an administrative check to confirm that you still qualify. It is not a cancellation, and it does not automatically mean your grant is stopped. SASSA clarified on 9 October 2026 that reviews are integrity controls and are not a programme to terminate grants arbitrarily."
+      },
+      {
+        "q": "How long do I have to present myself for a SASSA review?",
+        "a": "SASSA allows up to 90 days from the date of the notice: an initial 30 days to submit the requested information, and a further 60 days before the grant may be suspended (Parliamentary reply NW4444, 17 September 2026). Do not wait — visit your nearest SASSA office or call 0800 60 10 11 as soon as you receive a notice. Reviews pause in November and December 2026, so attend early."
+      },
+      {
+        "q": "My grant was suspended or lapsed after a review — can I get it back?",
+        "a": "Yes, in many cases. If you present yourself and SASSA confirms you still qualify, the suspension is lifted and you are back-paid for the suspended period. If your grant has already been suspended, apply for restoration within 30 days of the suspension (SASSA Grant Booklet 2026). In 2025/26, 31,759 beneficiaries whose grants had lapsed later presented and had their grants restored (Parliamentary reply NW4450). Visit a SASSA office with your ID and documents as soon as possible."
       }
     ],
     "tags": [
@@ -2636,9 +2670,14 @@
       "grant review appointment",
       "sassa review sms",
       "suspension risk",
-      "sassa verification process"
+      "sassa verification process",
+      "sassa review 2026",
+      "sassa grant review 2026 27",
+      "sassa assessment vs review",
+      "sassa 90 days review",
+      "sassa grant restored after review"
     ],
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-10-16",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -2648,6 +2687,34 @@
       {
         "title": "SASSA SRD Grant Portal",
         "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "SASSA — Strengthens Social Grant Controls (9 October 2026)",
+        "url": "https://www.sassa.gov.za/newsroom/media-statements"
+      },
+      {
+        "title": "PMG — Parliamentary reply NW4094: review notices and the 90-day period (17 September 2026)",
+        "url": "https://pmg.org.za/committee-question/40753/"
+      },
+      {
+        "title": "PMG — Parliamentary reply NW4450: grants lapsed and restored (17 September 2026)",
+        "url": "https://pmg.org.za/committee-question/40792/"
+      },
+      {
+        "title": "PMG — Parliamentary reply NW4444: 30-day and 60-day review periods (17 September 2026)",
+        "url": "https://pmg.org.za/committee-question/40790/"
+      },
+      {
+        "title": "PMG — Parliamentary reply NW1941: suspension and lapse timelines (18 May 2026)",
+        "url": "https://pmg.org.za/committee-question/37674/"
+      },
+      {
+        "title": "PMG — Portfolio Committee on Social Development: 259,000 reviews, Nov–Dec pause (17 September 2026)",
+        "url": "https://pmg.org.za/committee-meeting/42085/"
+      },
+      {
+        "title": "SASSA — Grant Booklet 2026: restoration within 30 days of suspension",
+        "url": "https://sassa.gov.za/documents/uploads/SASSA_Grant_Booklet_-_2026_compressed.pdf"
       },
       {
         "title": "Department of Social Development",
@@ -2696,8 +2763,33 @@
         "isExternal": false
       },
       {
-        "title": "SASSA Reminds Beneficiaries Under Review: You'll Be Paid Friday, 07 August 2026",
-        "url": "/updates/update-2026-028",
+        "title": "SASSA Tightens Grant Controls — What the 'Integrity' Checks Mean for Your Grant",
+        "url": "/updates/update-2026-sassa-grant-controls",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Status: 'Suspended' — What It Means & How to Reinstate",
+        "url": "/status/suspended",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Status: 'Under Review' — What It Means & What Happens Next",
+        "url": "/status/under-review",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Bulk Means Test Explained",
+        "url": "/guides/bulk-means-test",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Grant Suspensions During 2026 Integrity Checks",
+        "url": "/updates/update-2026-010",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA August 2026: Grant Review Payments on 7 August — What to Know",
+        "url": "/updates/update-2026-034",
         "isExternal": false
       }
     ]
@@ -3368,10 +3460,10 @@
       {
         "title": "Historical Example: August 2026 (Already Passed)",
         "tips": [
-          "Do not assume September has a confirmed fourth payment date - SASSA has not announced it yet.",
+          "Do not assume October has a confirmed fourth payment date - as at 12 October 2026 SASSA had not announced it yet.",
           "Your status is the only reliable source for your personal pay day."
         ],
-        "content": "<strong>This is historical information for context only.</strong> In August 2026, SASSA announced that beneficiaries whose grants were under review would be paid on <strong>Friday, 7 August 2026</strong> - the fourth payment day for that month, after Older Persons (4 August), Disability (5 August) and Children's Grants (6 August). That date has passed. For the current month, check the SASSA payment calendar (/payment-calendar) for the confirmed dates and the latest announcement in our September 2026 payment update (/updates/update-2026-036)."
+        "content": "<strong>This is historical information for context only.</strong> In August 2026, SASSA announced that beneficiaries whose grants were under review would be paid on <strong>Friday, 7 August 2026</strong> - the fourth payment day for that month, after Older Persons (4 August), Disability (5 August) and Children's Grants (6 August). That date has passed. For the current month, check the SASSA payment calendar (/payment-calendar) for the confirmed dates and the latest announcement in our <a href=\"/updates/update-2026-november-dates-confirmed\">latest confirmed payment dates update</a>."
       },
       {
         "title": "What If You Were Approved but Did Not Receive Payment?",
@@ -3416,8 +3508,8 @@
         "q": "Can I complete the review online instead of visiting an office?"
       },
       {
-        "a": "No. SASSA has not yet officially confirmed a fourth payment date for September 2026. Do not rely on third-party dates. Check the official SRD portal for your 'Pay Day' date and read our September 2026 SRD payment update (/updates/update-2026-037) for the latest confirmed information.",
-        "q": "Is there a confirmed fourth payment day for September 2026?"
+        "a": "No. As at 12 October 2026 SASSA had not yet officially confirmed a fourth payment date for October 2026. Do not rely on third-party dates. Check the official SRD portal for your 'Pay Day' date and the SASSA payment calendar (/payment-calendar) for the latest confirmed dates.",
+        "q": "Is there a confirmed fourth payment day for October 2026?"
       },
       {
         "a": "Wait 2 to 3 business days after your Pay Day date, confirm your banking details are correct, and check whether your status is 'Referred' or 'Under Review'. If the money still has not arrived, follow our missing grant payment guide (/guides/missing-grant-payment-guide) and call SASSA on 0800 60 10 11 if needed.",
@@ -3435,7 +3527,7 @@
       "grant under review",
       "elife certification"
     ],
-    "lastUpdated": "2026-09-22",
+    "lastUpdated": "2026-10-16",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -3449,8 +3541,8 @@
         "isExternal": false
       },
       {
-        "title": "September 2026 Payment Update",
-        "url": "/updates/update-2026-036",
+        "title": "November 2026 Payment Dates Confirmed",
+        "url": "/updates/update-2026-november-dates-confirmed",
         "isExternal": false
       },
       {

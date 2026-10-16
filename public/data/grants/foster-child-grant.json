@@ -3,7 +3,7 @@
   "description": "Your guide to the SASSA Foster Child Grant (R1,300/month). Court order requirements, who qualifies, required documents, payment amounts, and key differences from the Child Support Grant.",
   "slug": "grants/foster-child-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-10-13",
+  "last_updated": "2026-10-16",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -68,7 +68,7 @@
     {
       "type": "info",
       "title": "Payment Dates & Amounts 2026",
-      "content": "The Foster Child Grant amount is {{foster_child_grant_amount}} per child per month in 2026. Payments are usually made from the 6th of each month. The grant is awarded for 2 years at a time, after which it must be reviewed and extended by the children's court. You can receive the grant for multiple foster children in your care."
+      "content": "The Foster Child Grant amount is {{foster_child_grant_amount}} per child per month in 2026. Payments are made on the children's grant payment day each month. <strong>In October 2026, the Foster Child Grant was paid on Tuesday, 6 October</strong>, and the next payment is <strong>Tuesday, 3 November 2026</strong> (the November cycle, brought forward ahead of the 4 November Local Government Elections public holiday) — both confirmed by SASSA. The grant is awarded for 2 years at a time, after which it must be reviewed and extended by the children's court. You can receive the grant for multiple foster children in your care."
     },
     {
       "type": "faq",

@@ -1,9 +1,9 @@
 {
   "title": "SASSA SRD R370 Grant 2026: Eligibility, Payment Dates & How to Apply",
-  "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, September 2026 payment dates, what 'Approved' means, and what to do if your application is declined.",
+  "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, the latest confirmed 2026 payment dates, what 'Approved' means, and what to do if your application is declined.",
   "slug": "grants/srd-r370-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-09-18",
+  "last_updated": "2026-10-16",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -71,12 +71,12 @@
     {
       "type": "info",
       "title": "Payment Dates for 2026",
-      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, the official payment window for August 2026 was 24-26 August (confirmed by SASSA). <strong>For September 2026, SASSA has confirmed the SRD {{srd_grant_amount}} payment dates of 23 and 25 September</strong>. Beneficiaries are paid in a batch on either 23 or 25 September depending on their 'Pay Day' date on the portal - you are not paid on both dates. The fourth payment day for grants under review remains unconfirmed. Once your status shows a 'Pay Day' date, it is confirmed for you. After your 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day - your money is safe in your account."
+      "content": "The SRD {{srd_grant_amount}} grant does not have a fixed payment date like permanent grants. Instead, payments are processed in batches during the last week of each month. For example, SASSA confirmed the <strong>September 2026 SRD {{srd_grant_amount}} payment dates of 23 and 25 September</strong>. <strong>For October 2026, SASSA had not yet announced the SRD {{srd_grant_amount}} payment date as at 12 October 2026</strong> — the SRD date is announced after mid-month and paid in the last week of the month. Check the official SRD portal for your personal 'Pay Day' date. The fourth payment day for grants under review is not yet confirmed. Once your status shows a 'Pay Day' date, it is confirmed for you. After your 'Pay Day' date, it can take up to 48 business hours for the money to reflect in your account. You do not need to withdraw everything on the first day - your money is safe in your account."
     },
     {
       "type": "info",
-      "title": "September 2026: Confirmed and Pending Payment Dates",
-      "content": "SASSA has confirmed the <strong>September 2026</strong> payment dates for the permanent grants: Older Persons Grant on <strong>Wednesday, 2 September</strong>, Disability Grant on <strong>Thursday, 3 September</strong>, and Children's Grants on <strong>Friday, 4 September</strong>. SASSA has also confirmed the <strong>SRD {{srd_grant_amount}} payment dates of <strong>23 and 25 September 2026</strong></strong> - you will be paid on one of those two batch dates depending on your 'Pay Day' date on the portal. The fourth payment day for grants under review is not yet confirmed. Read our <a href=\"/updates/update-2026-037\">September 2026 SRD payment update</a>, the <a href=\"/dates/september-2026\">full September 2026 schedule</a> and the <a href=\"/payment-calendar\">payment calendar</a> for the latest confirmed dates."
+      "title": "October 2026: Confirmed and Pending Payment Dates",
+      "content": "SASSA confirmed the <strong>October 2026</strong> payment dates for the permanent grants: Older Persons Grant on <strong>Friday, 2 October</strong>, Disability Grant on <strong>Monday, 5 October</strong>, and Children's Grants on <strong>Tuesday, 6 October</strong> - these dates have now passed. As at 12 October 2026 SASSA had not yet announced the <strong>October {{srd_grant_amount}} SRD payment date</strong>; it is published in the last week of the month, so check the SRD portal for your personal 'Pay Day'. The fourth payment day for grants under review is not yet confirmed. Read the <a href=\"/dates/october-2026\">full October 2026 schedule</a> and the <a href=\"/payment-calendar\">payment calendar</a> for the latest confirmed dates, and the <a href=\"/dates/november-2026\">November 2026 schedule</a> for the next cycle."
     },
     {
       "type": "text",
@@ -126,11 +126,11 @@
     },
     {
       "type": "faq",
-      "title": "September 2026: Frequently Asked Questions",
+      "title": "October 2026: Frequently Asked Questions",
       "faqs": [
         {
-          "q": "What is the confirmed SRD payment date for September 2026?",
-          "a": "SASSA has officially confirmed the SRD payment dates for September 2026: <strong>Wednesday, 23 September and Friday, 25 September</strong>. You are paid in a batch on either 23 or 25 September depending on your 'Pay Day' date on the portal - not on both dates. Check the official SRD portal for your own 'Pay Day' date and read the September 2026 SRD payment update (/updates/update-2026-037) for the latest."
+          "q": "What is the confirmed SRD payment date for October 2026?",
+          "a": "As at 12 October 2026 SASSA had not yet announced the October 2026 SRD payment date. The SRD is paid in batches in the last week of the month and the date is published after mid-month, so check the official SRD portal for your own 'Pay Day' date. For reference, SASSA confirmed the September 2026 SRD payment dates of 23 and 25 September."
         },
         {
           "q": "My status shows 'Approved' but I have no 'Pay Day' date. What does this mean?",

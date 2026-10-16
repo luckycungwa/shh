@@ -41,6 +41,15 @@ function creditInfo(s: MonthSchedule, key: "older_persons" | "disability" | "chi
 
 const grantRows = ["older_persons", "disability", "children", "under_review", "srd"] as const;
 
+// A row is only truly "projected" when SASSA has given a working date that is
+// not yet confirmed. TBA/TBC rows are not projections — the date has simply not
+// been announced yet, so they must not be labelled as if a date were guessed.
+function rowStatusLabel(date: string, status: string): string {
+  if (status === "confirmed") return "Confirmed";
+  if (date === "TBA" || date === "TBC") return "Not yet announced";
+  return "Projected";
+}
+
 export function generateStaticParams() {
   return readAll().map((s) => ({ "month-year": s.month_key }));
 }
@@ -94,6 +103,13 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
     (d) => d && d !== "TBC" && d !== "TBA" && d <= todayISO,
   );
 
+  // Only name the grants that are genuinely not yet confirmed, so the banner
+  // never implies the already-confirmed dates on the page are uncertain.
+  const unconfirmedGrants = grantRows
+    .filter((row) => schedule[row].status !== "confirmed")
+    .map((row) => creditInfo(schedule, row).grant);
+  const confirmedCount = grantRows.length - unconfirmedGrants.length;
+
   // Adjacent months, in chronological order, for prev/next navigation. Only
   // link to months that actually exist in the forecast data (safe at both ends).
   const monthsByTime = readAll().slice().sort((a, b) => a.year * 12 + a.month - (b.year * 12 + b.month));
@@ -146,11 +162,12 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
           <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">{title}</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
           <EditorialMeta lastVerified={schedule.governance?.lastVerified || "2026-08-31"} author="Lucky Cungwa" />
-          {grantRows.some((row) => schedule[row].status !== "confirmed") && (
+          {unconfirmedGrants.length > 0 && (
             <div className="flex items-start gap-3 p-4 rounded-2xl border-2 border-amber-200 dark:border-amber-700/50 bg-amber-50 dark:bg-amber-900/10 text-sm text-amber-800 dark:text-amber-200">
               <FaLink className="text-amber-500 mt-0.5 shrink-0" />
               <p>
-                Some of these dates are <strong>projected</strong> and have not yet been officially confirmed by SASSA.
+                <strong>{unconfirmedGrants.join(", ")}</strong> {unconfirmedGrants.length === 1 ? "is" : "are"} not yet officially confirmed by SASSA.{" "}
+                {confirmedCount > 0 && `The other ${confirmedCount} date${confirmedCount === 1 ? "" : "s"} on this page ${confirmedCount === 1 ? "is" : "are"} confirmed. `}
                 Always confirm with the official <a href="https://srd.sassa.gov.za" className="font-bold underline">SRD portal</a> or SASSA helpline before relying on them.
               </p>
             </div>
@@ -188,7 +205,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
                   <div className="text-right">
                     <p className="font-black text-primary-gold">{info.date}</p>
                     <Chip size="sm" variant="flat" color={info.status === "confirmed" ? "success" : "warning"} className="font-bold uppercase text-[10px]">
-                      {info.status === "confirmed" ? "Confirmed" : "Projected"}
+                      {rowStatusLabel(info.date, info.status)}
                     </Chip>
                   </div>
                 </div>

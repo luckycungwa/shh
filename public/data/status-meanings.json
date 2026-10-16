@@ -664,12 +664,13 @@
     "status_label": "Under Review",
     "title": "SASSA Status: 'Under Review' — What It Means & What Happens Next",
     "description": "Under Review means SASSA is re-examining your application before a final decision. Learn why this happens, how long it takes, and what to do.",
-    "what_it_means": "'Under Review' means SASSA is actively re-examining your application before making a final decision. This is similar to 'Referred' but is often shown when your application has already been provisionally assessed and is being double-checked — for example after an appeal, a banking detail change, or a data mismatch. It is not a decline, and it is not a cancellation. It simply means your file is being checked again by the system or by a SASSA official before a Pay Day is assigned or a decision is confirmed.",
+    "what_it_means": "'Under Review' means SASSA is actively re-examining your application before making a final decision. This is similar to 'Referred' but is often shown when your application has already been provisionally assessed and is being double-checked — for example after an appeal, a banking detail change, or a data mismatch. It is not a decline, and it is not a cancellation. It simply means your file is being checked again by the system or by a SASSA official before a Pay Day is assigned or a decision is confirmed. This status is also used during SASSA's 2026/27 grant-review programme. If you received an SMS or letter asking you to visit a SASSA office, your grant will show as 'Under Review' while that check is outstanding. You have up to 90 days from the notice to present yourself — an initial 30 days to submit the requested information, and a further 60 days before the grant may be suspended. A review is an administrative control to confirm you still qualify — it is not a cancellation. See our full grant review guide for step-by-step help.",
     "why_it_happens": [
       "Your application was flagged for a second check after a banking detail change or status update",
       "You recently lodged an appeal and SASSA is re-evaluating your case",
       "A data mismatch between your application and a government database triggered a manual review",
-      "Your grant is being verified for the new month's payment cycle"
+      "Your grant is being verified for the new month's payment cycle",
+      "You received a grant review notice and have not yet presented yourself at a SASSA office"
     ],
     "how_to_fix": [
       {
@@ -687,6 +688,10 @@
       {
         "title": "Contact SASSA After 30 Days",
         "content": "If the status stays Under Review for more than 30 days, call the SASSA helpline on 0800 60 10 11."
+      },
+      {
+        "title": "Received a Review Notice? Attend Within 90 Days",
+        "content": "If SASSA sent you an SMS or letter to attend a grant review, do not ignore it. SASSA allows up to 90 days from the notice: an initial 30 days to submit the requested information, and a further 60 days before the grant may be suspended. Bring your ID and the documents SASSA asked for. A review is not a cancellation — if you still qualify, your grant continues."
       }
     ],
     "how_long": "'Under Review' typically lasts 2 to 4 weeks, but can take longer if the review is complex or if there is a backlog.",
@@ -708,9 +713,10 @@
       "/status/referred",
       "/status/pending",
       "/status/approved",
-      "/faq"
+      "/faq",
+      "/guides/grant-verification-process"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-16",
     "author": "Lucky Cungwa"
   },
   {
@@ -767,9 +773,10 @@
     "status_label": "Suspended",
     "title": "SASSA Status: 'Suspended' — What It Means & How to Reinstate",
     "description": "'Suspended' means your SASSA grant has been temporarily halted. Learn why grants get suspended and the exact steps to get yours reinstated.",
-    "what_it_means": "'Suspended' means your grant payments have been temporarily halted. A suspension is the step that comes before cancellation. It most commonly happens after you do not collect your grant for three consecutive months. Unlike a cancellation, a suspension may be reversible by contacting SASSA and confirming you want to continue receiving the grant. If the suspension is not resolved, it can lead to your grant being cancelled.",
+    "what_it_means": "'Suspended' means your grant payments have been temporarily halted. A suspension is the step that comes before cancellation. It most commonly happens after you do not collect your grant for three consecutive months, and it is also used during SASSA's 2026/27 grant-review programme when a beneficiary has not responded to a review notice. A grant is suspended after the review response period (an initial 30 days to submit information, plus a further 60 days) has passed without a response. Unlike a cancellation, a suspension may be reversible by attending the outstanding review: if SASSA confirms you still qualify, the suspension is lifted and you are back-paid for the suspended period. Once suspended, apply for restoration within 30 days of the suspension before the grant can be lapsed. See our full grant review guide for step-by-step help.",
     "why_it_happens": [
       "You did not collect your grant for three consecutive months",
+      "You did not respond to a grant review notice within 90 days",
       "SASSA flagged your application for additional verification",
       "Your banking details became invalid and were not updated",
       "A system review paused your payment while checks ran"
@@ -786,6 +793,10 @@
       {
         "title": "Update Your Details",
         "content": "Make sure your banking details and phone number are correct before reapplying."
+      },
+      {
+        "title": "Attend Your Grant Review",
+        "content": "If the suspension followed a missed grant review, visit your nearest SASSA office with your ID and documents to complete the review. If you still qualify, the grant is reinstated and you are back-paid for the suspended period. Apply for restoration within 30 days of the suspension — after that the grant can be lapsed."
       }
     ],
     "how_long": "Processing a reinstatement or reapplication can take up to a full monthly cycle. Check your status after the 15th.",
@@ -806,9 +817,11 @@
     "related": [
       "/status/cancelled",
       "/guides/sassa-grant-renewal",
-      "/payment-calendar"
+      "/payment-calendar",
+      "/guides/grant-verification-process",
+      "/status/under-review"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-16",
     "author": "Lucky Cungwa"
   },
   {

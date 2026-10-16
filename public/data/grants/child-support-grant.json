@@ -3,7 +3,7 @@
   "description": "Everything you need to know about the SASSA Child Support Grant — R580 per child per month. Who qualifies, required documents, how to apply, and why applications get declined.",
   "slug": "grants/child-support-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-08-20",
+  "last_updated": "2026-10-16",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -63,7 +63,7 @@
     {
       "type": "info",
       "title": "Payment Dates & Amounts 2026",
-      "content": "The Child Support Grant amount is {{child_support_grant_amount}} per child per month in 2026. Payments are made from the 6th of each month. If you have multiple children who qualify, you will receive that amount for each child. Payments are made to the primary caregiver, not the child."
+      "content": "The Child Support Grant amount is {{child_support_grant_amount}} per child per month in 2026. Payments are made on the children's grant payment day each month. <strong>In October 2026, the Child Support Grant was paid on Tuesday, 6 October</strong>, and the next payment is <strong>Tuesday, 3 November 2026</strong> (the November cycle, brought forward ahead of the 4 November Local Government Elections public holiday) — both confirmed by SASSA. See the <a href=\"/dates/october-2026\">October 2026 schedule</a> and the <a href=\"/dates/november-2026\">November 2026 schedule</a>. If you have multiple children who qualify, you will receive that amount for each child. Payments are made to the primary caregiver, not the child."
     },
     {
       "type": "faq",

@@ -3,7 +3,7 @@
     "description":  "Step-by-step guide to the SASSA Disability Grant (R2,400/month). Who qualifies, how the medical assessment works, required documents, payment dates, and how to appeal a denial.",
     "slug":  "grants/disability-grant",
     "pillar":  "grant-guide",
-    "last_updated":  "2026-08-20",
+    "last_updated":  "2026-10-16",
     "reviewed_by":  "Lucky Cungwa",
     "author":  "Lucky Cungwa",
     "sources":  [
@@ -68,7 +68,7 @@
                      {
                          "type":  "info",
                          "title":  "Payment Amounts \u0026 Dates",
-                         "content":  "The Disability Grant amount is {{disability_grant_amount}} per month in 2026. Payments are made in the first week of each month, typically from the 4th to the 6th. If your grant is approved temporarily, you will need to reapply when it expires. A new medical assessment will be required to confirm that the disability persists."
+                         "content":  "The Disability Grant amount is {{disability_grant_amount}} per month in 2026. Payments are made in the first week of each month. <strong>In October 2026, the Disability Grant was paid on Monday, 5 October</strong>, and the next Disability payment is <strong>Monday, 2 November 2026</strong> (the November cycle, brought forward ahead of the 4 November Local Government Elections public holiday) \u2014 both confirmed by SASSA. See the <a href=\"/dates/october-2026\">October 2026 schedule</a> and the <a href=\"/dates/november-2026\">November 2026 schedule</a>. If your grant is approved temporarily, you will need to reapply when it expires; a new medical assessment will be required to confirm that the disability persists."
                      },
                      {
                          "type":  "faq",
