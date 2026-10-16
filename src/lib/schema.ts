@@ -137,8 +137,12 @@ export function paymentScheduleSchema(
     pageURL?: string;
   }[]
 ) {
+  // Only emit an Event when the date is a real ISO 8601 date. Placeholder
+  // values ("TBA" for an unannounced SRD date, "TBC" for an unconfirmed fourth
+  // payment day) are not dates and must never reach Event.startDate, or Google
+  // Search reports "Date/time not in ISO 8601 format in field startDate".
   const events = schedule
-    .filter((s) => s.date && s.date !== "TBC")
+    .filter((s) => !!s.date && /^\d{4}-\d{2}-\d{2}/.test(s.date))
     .map((s) => ({
       "@type": "Event",
       name: `${s.grant} — ${s.label} Payment Date`,
