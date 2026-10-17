@@ -8,7 +8,7 @@ import { buildMetadata } from "../../lib/seo";
 import { getCurrentMonthYearKey, getCurrentYearString } from "../../lib/config";
 import { breadcrumbSchema } from "../../lib/schema";
 import { readForecast, srdDisplay } from "../../lib/payment-schedule";
-import StatusCheckForm from "../../components/StatusCheckForm";
+import OfficialStatusCheck from "../../components/OfficialStatusCheck";
 import NextStepCard from "../../components/affiliate/NextStepCard";
 
 const currentMonthYear = getCurrentMonthYearKey();
@@ -183,12 +183,12 @@ export default function StatusCheckPage() {
                        <FaUserShield className="text-primary-gold hidden md:block font-bold" /> Check My Status
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400">
-                       Enter your ID and phone number below to prepare for the official SASSA portal. Your details stay on your device — we never collect them.
+                       This page walks you through checking your SRD R370 status in three simple steps. The check itself is done on the official SASSA website, srd.sassa.gov.za.
                     </p>
                  </div>
 
                  <div className="bg-white dark:bg-gray-800 rounded-3xl border-2 border-primary-gold/20 p-4 md:p-8">
-                    <StatusCheckForm />
+                    <OfficialStatusCheck />
                  </div>
 
                  <NextStepCard
