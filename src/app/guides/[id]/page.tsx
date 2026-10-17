@@ -67,6 +67,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   if (!guide) {
     return {
       title: "Guide Not Found",
+      robots: { index: false, follow: false },
     };
   }
 
