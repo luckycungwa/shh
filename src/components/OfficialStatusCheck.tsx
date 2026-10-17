@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Chip } from "@nextui-org/react";
 import { FaExternalLinkAlt, FaShieldAlt } from "react-icons/fa";
 
-const OFFICIAL_STATUS_URL = "https://srd.sassa.gov.za";
+const OFFICIAL_STATUS_URL = "https://srd.sassa.gov.za/sc19/status";
 
 const STEPS = [
   {
