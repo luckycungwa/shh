@@ -45,6 +45,42 @@ export function underReviewDisplay(row: GrantDateRow): GrantDateRow {
   return { date: "TBC", day: "Only if your grant is under review — date not yet confirmed", status: "projected" };
 }
 
+function localISODate(date: Date): string {
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}-${month}-${day}`;
+}
+
+export function getDisplayedMonth(
+  forecast: MonthSchedule[],
+  now: Date = new Date(),
+): MonthSchedule | undefined {
+  const currentKey = `${now.toLocaleDateString("en-ZA", { month: "long" }).toLowerCase()}-${now.getFullYear()}`;
+  const currentIndex = forecast.findIndex((m) => m.month_key === currentKey);
+  const current = currentIndex >= 0 ? forecast[currentIndex] : undefined;
+
+  if (current) {
+    const todayISO = localISODate(now);
+    const confirmedDates = [
+      current.older_persons,
+      current.disability,
+      current.children,
+      current.srd,
+      current.under_review,
+    ]
+      .filter((row) => row.status === "confirmed" && /^\d{4}-\d{2}-\d{2}$/.test(row.date))
+      .map((row) => row.date)
+      .sort();
+    const lastConfirmedDate = confirmedDates[confirmedDates.length - 1];
+
+    if (!lastConfirmedDate || lastConfirmedDate >= todayISO) return current;
+    if (now.getDate() <= 20) return current;
+    return forecast[currentIndex + 1] ?? current;
+  }
+
+  return forecast[0];
+}
+
 export interface StripRow extends GrantDateRow {
   grant: string;
 }

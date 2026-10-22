@@ -4,10 +4,10 @@ import React from "react";
 import { Button, Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
 import { FaShieldAlt, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaClock, FaCheckCircle, FaRegBell, FaFileAlt } from "react-icons/fa";
 import NextLink from "next/link";
-import { getCurrentMonthLabel, getCurrentMonthKey, getCurrentYearString } from "../lib/config";
+import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
 import { buildMetadata } from "../lib/seo";
 import { getFact } from "../lib/canonical-facts";
-import { readForecast, stripRowsFor, srdDisplay, type MonthSchedule } from "../lib/payment-schedule";
+import { readForecast, stripRowsFor, srdDisplay, getDisplayedMonth, type MonthSchedule } from "../lib/payment-schedule";
 import HeroCarousel from "../components/HeroCarousel";
 
 export const metadata = buildMetadata({
@@ -37,8 +37,8 @@ export default function HomePage() {
   }
 
   const forecast = readForecast();
-  const currentKey = getCurrentMonthKey();
-  const currentMonth: MonthSchedule | undefined = forecast.find((m) => m.month_key === currentKey);
+  const currentMonth: MonthSchedule | undefined = getDisplayedMonth(forecast);
+  const monthLabel = currentMonth?.label ?? getCurrentMonthLabel();
   const paymentDates = currentMonth ? stripRowsFor(currentMonth) : [];
 
   const tools = [
@@ -96,7 +96,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-gold/10 border border-primary-gold/20 text-primary-gold text-sm font-semibold mb-6 sm:mb-8 animate-fade-in-down">
               <FaRegBell className="animate-shimmer" />
-              Updated for {getCurrentMonthLabel()}
+              Updated for {monthLabel}
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 sm:mb-8 tracking-tight leading-[1.05]">
               Navigate SASSA with{" "}
@@ -137,7 +137,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center gap-6 mb-8 lg:mb-0 lg:absolute lg:left-6 lg:top-1/2 lg:-translate-y-1/2">
             <div className="text-center lg:text-left">
               <p className="text-primary-black/60 text-xs font-bold uppercase tracking-[0.2em]">Payment Schedule</p>
-              <h2 className="text-3xl lg:text-4xl font-black text-primary-black leading-tight italic">{getCurrentMonthLabel()}</h2>
+              <h2 className="text-3xl lg:text-4xl font-black text-primary-black leading-tight italic">{monthLabel}</h2>
             </div>
           </div>
           <div className="lg:ml-72 grid grid-cols-2 md:grid-cols-4 gap-3">
