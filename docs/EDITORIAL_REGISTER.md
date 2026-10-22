@@ -20,10 +20,11 @@ gap found, what was created/updated, and what must happen next.
 
 | Topic | Official source (pub date) | Existing pages checked | Gap found | Action | Slug | Status | Last review | Next action |
 |---|---|---|---|---|---|---|---|---|
-| SRD R370 dates (current cycle) | SASSA SRD announcement (Sept: 22 Sep 2026) | `grants/srd-r370-grant`, `/dates/october-2026` | Page still advertised "September 2026" as current in October | Refresh dates to current cycle; SRD stays TBA/projected | `grants/srd-r370-grant` | Updated 16 Oct 2026 | 2026-10-16 | Set SRD row to `confirmed` when SASSA announces |
+| SRD R370 dates (current cycle) | SASSA October 2026 SRD announcement (22 Oct 2026) | `grants/srd-r370-grant`, `/dates/october-2026`, `update-2026-038` | October SRD row still `TBA`/`projected` after SASSA confirmed 22–23 October | Confirmed SRD dates in the forecast, rewrote `update-2026-038`, refreshed the grant page and date guidance | `update-2026-038`, `grants/srd-r370-grant` | Updated 22 Oct 2026 | 2026-10-22 | Confirm the November SRD row when SASSA announces it |
 | Older Persons dates (current cycle) | DSD 2026/27 schedule; SASSA Nov revised dates (14 Oct 2026) | `grants/old-age-pension`, `/dates/october-2026`, `/dates/november-2026` | Page pinned to September; missed Nov bring-forward (30 Oct) | Refresh to Oct paid + next 30 Oct | `grants/old-age-pension` | Updated 16 Oct 2026 | 2026-10-16 | None until December cycle |
 | Fourth payment day | SASSA statements; forecast JSON | `fourth-payment-day-guide` | Guide FAQ + example pinned to September | Refresh to October; link latest confirmed update | `fourth-payment-day-guide` | Updated 16 Oct 2026 | 2026-10-16 | Re-check each month |
-| Monthly reassessment explainer | SRD assessment rules | `sassa-grant-renewal` | Example used Aug→Sept | Refresh to Sept→Oct; SRD TBA wording | `sassa-grant-renewal` | Updated 16 Oct 2026 | 2026-10-16 | None |
+| Monthly reassessment explainer | SRD assessment rules | `sassa-grant-renewal` | Example was Sept→Oct with SRD `TBA` wording | Refreshed to a month-neutral example and the confirmed 22–23 Oct SRD dates | `sassa-grant-renewal` | Updated 22 Oct 2026 | 2026-10-22 | None |
+| November content priorities (Google Trends, ZA) | Google Trends export 15–22 Oct 2026 (demand signal only) | All date, status and SRD pages | November demand overtook October; "approved but no pay date", ID-number status checks and festive-season dates rising | Created a prioritised backlog; no new pages approved | `docs/NOVEMBER_2026_CONTENT_BACKLOG.md` | Backlog 22 Oct 2026 | 2026-10-22 | Execute P1 items; re-run Trends mid-November |
 | Review suspension & restoration timeline (30 + 60 = 90 days to respond; 30 days to apply for restoration; lapse after 1 month's notice) | PMG replies NW4444 & NW4094 (17 Sep 2026), NW1941 (18 May 2026), NW4450 (17 Sep 2026); SASSA Grant Booklet 2026 | `grant-verification-process`, `status/under-review`, `status/suspended`, `update-2026-sassa-grant-controls` | Site said "suspended in the next payment cycle" (unsupported); the staged 30/60/90-day timeline and the 30-day restoration window were not stated in one place; press was cited where official replies exist | Published the staged timeline + official sources across the guide, both statuses and the update; removed the "next payment cycle" claim; fixed the broken `-028` related link | `grant-verification-process` | Updated 16 Oct 2026 | 2026-10-16 | Re-check if SASSA revises the timelines |
 | Beneficiary Biometric Enrolment | PMG NW1941 (18 May 2026); Portfolio Committee meeting (17 Sep 2026) | `biometric-fix-guide`, `sassa-update-information` | Not explained as a named programme | Added a "What Is SASSA Beneficiary Biometric Enrolment?" section + FAQ to `biometric-fix-guide` | `biometric-fix-guide` | Updated 16 Oct 2026 | 2026-10-16 | None |
 | Current-month date blocks (Disability, Care Dependency, War Veterans) | SASSA revised November 2026 dates (14 Oct 2026); DSD 2026/27 schedule | `grants/disability-grant`, `grants/care-dependency-grant`, `grants/war-veterans-grant`, `grants/child-support-grant`, `grants/foster-child-grant` | No current-month date block (parity gap) | Applied the older-persons pattern to all five grant pages; corrected Care Dependency grouping (children's day, not disability) | — | Updated 16 Oct 2026 | 2026-10-16 | Re-check each month under the ≤ 3-round model |
@@ -113,6 +114,49 @@ old URL 301s and drops from the live sitemap after deploy.
 
 **Not claimed:** No page is asserted to be re-indexed or live until the deploy workflow runs and the
 site is checked.
+
+---
+
+### 2026-10-22 — October SRD confirmed (22–23 October) + November Trends backlog
+
+**Official source:** SASSA official October 2026 SRD R370 payment-dates announcement (verified 22 October 2026;
+the supplied SASSA poster states Thursday 22 and Friday 23 October 2026 and confirms the extension to
+31 March 2027). Permanent October dates (2, 5, 6 October) were already confirmed on 16 September 2026.
+
+| # | File | Change | Basis |
+|---|---|---|---|
+| 1 | `public/data/payment-schedule-forecast.json` | October `srd` changed from `TBA`/`projected` to `2026-10-22`/`confirmed`; note and governance rewritten (`lastVerified` 22 Oct 2026) | SASSA announcement; batch/pay-day rule preserved |
+| 2 | `public/data/updates.json` (`update-2026-038`) | Rewrote the September article in place as "SASSA SRD R370 Payment Dates for October 2026: 22 and 23 October Confirmed"; date 22 Oct 2026; added `seoTitle` and `metaDescription` | Confirmed dates; same URL avoids a competing page |
+| 3 | `src/app/updates/[id]/page.tsx` | Added optional `seoTitle` / `metaDescription` support; absolute title bypasses the brand suffix | 56-char title / 162-char description could not be expressed through `clampTitle`/`clampDescription` |
+| 4 | `public/data/grants/srd-r370-grant.json` | Replaced "October not yet announced" wording in the payment-dates section, the October section and the FAQ; `last_updated` 22 Oct 2026 | Removes a direct contradiction with the forecast and article |
+| 5 | `public/data/guides.json` | `sassa-grant-renewal` example made month-neutral and refreshed to the confirmed dates; `fourth-payment-day-guide` "as at" date refreshed; both `lastUpdated` 22 Oct 2026 | Accuracy; no new pages |
+| 6 | `src/app/payment-calendar/page.tsx` | Metadata description now names the 22–23 October SRD dates | Keeps the hub snippets current |
+| 7 | `docs/NOVEMBER_2026_CONTENT_BACKLOG.md` | New Trends-backed November backlog (A–E, P1–P3, do-not list) | Google Trends export 15–22 Oct 2026 (relative interest only) |
+
+**Verification:** `npm run validate:content`, `npx tsc --noEmit`, `npm run lint` and `npm run build` all pass (22 Oct 2026).
+
+**Not claimed:** No page is asserted to be re-indexed or live until the deploy workflow runs and the site is
+checked. Trends interest is relative, not search volume.
+
+---
+
+### 2026-10-22 — `/payment-calendar`: November snippet + confirmed block (November P1 #1)
+
+**Official source:** SASSA media statement, 14 October 2026 — "SASSA announces revised November 2026 social grant
+payment dates ahead of Local Government Elections". Read as text and verified 22 October 2026: Older Persons Friday
+30 October, Disability Monday 2 November, Children's Grants Tuesday 3 November, fourth payment day Thursday
+5 November (for grants under review); National Treasury approved the revised dates; SRD R370 not announced.
+
+| # | File | Change | Basis |
+|---|---|---|---|
+| 1 | `src/app/payment-calendar/page.tsx` | Title → "SASSA Payment Dates for November 2026" (renders at 54 chars; the old title truncated to "— October"); H1 → "SASSA Payment Calendar 2026: November Dates"; description rewritten to lead with November; added a confirmed November block (all four dates, election context, SRD TBA, source link, links to `/dates/november-2026`, `fourth-payment-day-guide`, `/status-check`); three November FAQs; "Payment not reflecting" link | GSC 3 months: 8,786 clicks / 677,533 impressions / 1.30% CTR / position 8.94; November cluster 15,795 impressions at ~0.37% |
+| 2 | `docs/NOVEMBER_2026_CONTENT_BACKLOG.md` | P1 reassigned: hub first; ID-number method to `/status-check` only; "approved but no Pay Day" → P2; festive season gated | GSC page/query evidence; `/dates/november-2026` and `/tools/status-explorer` have 0 impressions |
+
+**Verification:** `npm run validate:content` 0 errors, `npx tsc --noEmit` clean, `npm run lint` 0 errors
+(103 pre-existing warnings), `npm run build` succeeded (258 prerendered HTML files). Built page: title 54 chars,
+description 156 chars, one H1, canonical `/payment-calendar`, FAQ schema present.
+
+**Not claimed:** No indexation, ranking or CTR improvement is asserted. Google has not been asked to recrawl.
 
 ---
 

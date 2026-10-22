@@ -10,8 +10,8 @@ import { SITE_CONFIG } from "../../lib/config";
 import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from "../../lib/payment-schedule";
 
 export const metadata: Metadata = buildMetadata({
-  title: "SASSA Payment Calendar 2026 — October, November & December Grant Dates",
-  description: "Check when SASSA pays the SRD R370 and permanent grants. October 2026 dates were paid on 2, 5 and 6 October. November dates are now confirmed — Older Persons 30 October, Disability 2 November, Children's Grants 3 November and the fourth payment day 5 November 2026; December follows the DSD-approved 2026/27 schedule.",
+  title: "SASSA Payment Dates for November 2026",
+  description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 dates TBA.",
   path: "/payment-calendar",
 });
 
@@ -19,15 +19,27 @@ function readAll(): MonthSchedule[] {
   return readForecast();
 }
 
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+function prettyDate(iso: string): string {
+  const [year, month, day] = iso.split("-").map(Number);
+  if (!year || !month || !day) return iso;
+  return `${day} ${MONTH_NAMES[month - 1]} ${year}`;
+}
+
 const faqs = [
-  { q: "When does SASSA pay the SRD R370 grant each month?", a: "The SRD R370 grant is paid in batches during the last week of each month. Beneficiaries are not all paid on the same day — check your personal 'Pay Day' date on the official SRD portal (srd.sassa.gov.za)." },
-  { q: "When are the permanent SASSA grants paid?", a: "Permanent grants — the Older Persons, Disability, War Veterans and Children's grants — are paid in the first week of each month. The exact day depends on the grant type." },
+  { q: "When are the SASSA November 2026 payment dates?", a: "SASSA confirmed the November 2026 cycle on 14 October 2026. Older Persons grants are paid on Friday 30 October, Disability grants on Monday 2 November, Children's grants on Tuesday 3 November, and the fourth payment day on Thursday 5 November 2026. The fourth day is for beneficiaries whose grants are under review." },
+  { q: "Why were the November 2026 SASSA dates moved earlier?", a: "SASSA brought the November cycle forward ahead of the Local Government Elections so payments would not clash with the election period. National Treasury approved the revised dates, and all eligible beneficiaries are still paid." },
+  { q: "Have the SRD R370 dates for November 2026 been announced?", a: "Not yet. SRD R370 is paid in batches during the last week of the month, and SASSA announces the dates after mid-month. Check your personal 'Pay Day' on the official SRD portal (srd.sassa.gov.za) rather than relying on one date for everyone." },
+  { q: "When are the permanent SASSA grants paid?", a: "Permanent grants — the Older Persons, Disability, War Veterans and Children's grants — are usually paid in the first week of each month, but the exact day depends on the grant type and SASSA can revise a cycle, as it did for November 2026." },
   { q: "Are the dates on this calendar guaranteed?", a: "Dates for months that are close are confirmed by SASSA; dates further out are projected based on SASSA's usual pattern and are marked 'projected'. Always confirm your personal date on the official SRD portal." },
-  { q: "Why haven't I been paid even though the date has passed?", a: "Allow 1 to 3 business days for the payment to reflect in your bank account after your Pay Day. If it still hasn't arrived and your status is 'Approved', contact the SASSA helpline on 0800 60 10 11." },
+  { q: "Why haven't I been paid even though the date has passed?", a: "Allow 1 to 3 business days for the payment to reflect in your bank account after your Pay Day. If it still hasn't arrived and your status is 'Approved', read our missing grant payment guide or contact the SASSA helpline on 0800 60 10 11." },
 ];
 
 export default function PaymentCalendarPage() {
   const months = readAll();
+  const november = months.find((m) => m.month_key === "november-2026");
+  const novSource = november?.governance?.sourceURL;
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
@@ -63,13 +75,54 @@ export default function PaymentCalendarPage() {
       <header className="space-y-6 mb-12">
         <Chip color="primary" variant="flat" className="font-bold uppercase text-xs">Payment Calendar</Chip>
         <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-          SASSA Payment Calendar 2026
+          SASSA Payment Calendar 2026: November Dates
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
           Check when SASSA pays the Older Persons, Disability, Children's and SRD R370 grants.
-          See every month's payment dates in one place.
+          The confirmed November 2026 dates are below, with every other month in one place.
         </p>
       </header>
+
+      {november && (
+        <section className="mb-12 bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <Chip color="success" variant="flat" size="sm" className="font-bold uppercase text-xs">Confirmed</Chip>
+            <span className="text-xs text-gray-500">Checked against SASSA's 14 October 2026 statement on 22 October 2026</span>
+          </div>
+          <h2 className="text-3xl font-black mb-3">November 2026 SASSA payment dates</h2>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 max-w-3xl">
+            SASSA brought the November 2026 cycle forward ahead of the Local Government Elections, with National Treasury approval,
+            so payments would not clash with the election period. All eligible beneficiaries are still paid.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+            {[
+              { grant: "Older Persons Grant", row: november.older_persons },
+              { grant: "Disability Grant", row: november.disability },
+              { grant: "Children's Grants", row: november.children },
+              { grant: "Fourth payment day (grants under review)", row: november.under_review },
+            ].map(({ grant, row }) => (
+              <div key={grant} className="bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-100 dark:border-gray-700">
+                <p className="text-sm text-gray-500">{grant}</p>
+                <p className="font-bold text-lg">{row.day} {prettyDate(row.date)}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <span className="font-bold">SRD R370:</span> {srdDisplay(november.srd, november.label).day}. Check your own date on the{" "}
+            <a href="https://srd.sassa.gov.za" className="font-bold text-primary-gold underline">SRD status portal</a>.
+          </p>
+          <div className="flex flex-wrap gap-3 mt-6">
+            <NextLink href="/dates/november-2026" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Full November 2026 schedule</NextLink>
+            <NextLink href="/guides/fourth-payment-day-guide" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Fourth payment day explained</NextLink>
+            <NextLink href="/status-check" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Check your SASSA status</NextLink>
+          </div>
+          {novSource && (
+            <p className="text-xs text-gray-500 mt-4">
+              Source: <a href={novSource} target="_blank" rel="noopener noreferrer" className="underline">SASSA media statement, 14 October 2026</a>
+            </p>
+          )}
+        </section>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {months.map((m) => (
@@ -118,6 +171,7 @@ export default function PaymentCalendarPage() {
           <NextLink href="/status/paid" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Paid</NextLink>
           <NextLink href="/status/declined" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Declined</NextLink>
           <NextLink href="/status/bank-details-pending" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Bank details pending</NextLink>
+          <NextLink href="/guides/missing-grant-payment-guide" className="text-sm font-bold text-primary-gold bg-primary-gold/5 px-4 py-2 rounded-full border border-primary-gold/20 hover:bg-primary-gold/10 transition-colors">Payment not reflecting</NextLink>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 # SASSA Help Hub — Topic Coverage Matrix & Validated Editorial Backlog
 
-**Owner:** Lucky Cungwa · **Created:** 16 October 2026 · **Last reviewed:** 16 October 2026
+**Owner:** Lucky Cungwa · **Created:** 16 October 2026 · **Last reviewed:** 22 October 2026
 **Method:** Coverage mapped against the live site inventory (8 grant pages, 42 guides, 35 updates)
 and cross-checked against official SASSA / DSD / National Treasury publications.
 **Companion documents:** `docs/EDITORIAL_REGISTER.md` (register + publication log),
@@ -20,7 +20,7 @@ Legend — **Status:** ✅ well covered · 🟡 partially covered · 🔴 gap.
 
 | Topic / area | Existing coverage (by page) | Status | Gap / next action | Priority |
 |---|---|---|---|---|
-| SRD R370 (amount, eligibility, dates, appeals) | `grants/srd-r370-grant`, guides `micro-business-srd`, `appeal-guide`, `income-source-detected-appeal`, `srd-reapplication`, updates `-028` decline codes | ✅ | Refreshed dates to current cycle (16 Oct). Keep SRD date TBA until announced. | — |
+| SRD R370 (amount, eligibility, dates, appeals) | `grants/srd-r370-grant`, guides `micro-business-srd`, `appeal-guide`, `income-source-detected-appeal`, `srd-reapplication`, updates `-028` decline codes, `-038` | ✅ | October SRD confirmed as 22–23 Oct (22 Oct). Keep the November SRD date TBA until announced. | — |
 | Older Persons Grant | `grants/old-age-pension`, guides `grant-amounts-history`, `life-certification` | ✅ | Refreshed Sept→Oct/Nov dates (16 Oct). | — |
 | Disability Grant | `grants/disability-grant` | ✅ | Current-month date block added (paid 5 Oct; next 2 Nov). | — |
 | Child Support Grant | `grants/child-support-grant`, `apply-child-support-grant` | ✅ | Current-month date block added (paid 6 Oct; next 3 Nov). | — |
@@ -37,7 +37,7 @@ Legend — **Status:** ✅ well covered · 🟡 partially covered · 🔴 gap.
 | Appeals & reconsideration | guides `appeal-guide`, `appeal-timeline`, `income-source-detected-appeal`; canonical facts (90-day window) | ✅ | — | — |
 | Reinstatement / lapsed grants | guide `guide-reinstate-grant` | ✅ | — | — |
 | Fraud & scams | guide `sassa-online-security`, update `-035` (EC officials dismissed) | 🟡 | Add scam-specific alert if a new official warning is issued. | P3 |
-| Payment dates & calendar | `/payment-calendar`, `/dates/[month]`, forecast JSON | ✅ | Governed; now validated by `scripts/validate-content.mjs`. | — |
+| Payment dates & calendar | `/payment-calendar`, `/dates/[month]`, forecast JSON | ✅ | October fully confirmed (SRD 22–23 Oct); November permanent dates 30 Oct, 2, 3, 5 Nov. Governed and validated by `scripts/validate-content.mjs`. | — |
 | Deadlines (SRD extension, appeal windows) | canonical facts `srd_extension_date`, `appeal_lodgement_window_days` | ✅ | — | — |
 | Policy changes (SRD→BIS, SCA case) | updates `-014`, `-srd-court-sca`; canonical fact `srd_sca_status` | ✅ | Re-checked 16 Oct 2026 — SCA judgment still reserved; no change needed. Re-check after any ruling. | P3 |
 | USSD / WhatsApp / Moya / eLife tools | guides `ussd-codes`, `sassa-whatsapp`, `moya-app-sassa`, `elife-certification-troubleshooting`, `biometric-fix-guide` | ✅ | — | — |
@@ -49,6 +49,11 @@ Legend — **Status:** ✅ well covered · 🟡 partially covered · 🔴 gap.
 
 Only items confirmable against an official source are listed. Items that could not be
 verified are excluded rather than guessed at.
+
+> **22 Oct 2026 — demand-backed November backlog:** the Google Trends analysis and the prioritised
+> November actions (including the "approved but no pay date" and ID-number status-check gaps) now live in
+> `docs/NOVEMBER_2026_CONTENT_BACKLOG.md`. It uses relative search interest only and proposes no new
+> pages until an existing page has been ruled out.
 
 | # | Opportunity | Type | Official source | Existing pages checked | Decision |
 |---|---|---|---|---|---|
