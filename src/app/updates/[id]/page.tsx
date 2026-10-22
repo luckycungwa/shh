@@ -25,6 +25,8 @@ interface Update {
   urgent: boolean;
   noindex?: boolean;
   author?: string;
+  seoTitle?: string;
+  metaDescription?: string;
   sources?: { title: string; url: string }[];
   faqs?: { q: string; a: string }[];
 }
@@ -48,15 +50,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 
   const url = `https://www.sassahelphub.co.za/updates/${id}`;
-  const title = clampTitle(update.title);
-  const description = clampDescription(update.summary);
+  const socialTitle = update.seoTitle || clampTitle(update.title);
+  const title = update.seoTitle ? { absolute: update.seoTitle } : clampTitle(update.title);
+  const description = update.metaDescription || clampDescription(update.summary);
   return {
     title,
     description,
     alternates: { canonical: url },
     robots: update.noindex ? { index: false, follow: true } : { index: true, follow: true },
     openGraph: {
-      title,
+      title: socialTitle,
       description,
       url,
       type: "article",
@@ -68,7 +71,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: socialTitle,
       description,
       images: ["https://www.sassahelphub.co.za/logo.png"],
     },

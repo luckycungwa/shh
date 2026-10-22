@@ -1273,8 +1273,8 @@
         ]
       },
       {
-        "title": "October 2026: Approved One Month, Declined the Next",
-        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in September and 'Declined' in October -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For October 2026, SASSA had not yet confirmed the SRD payment date as at 12 October 2026 -- the SRD date is announced in the last week of the month; until your status shows a 'Pay Day' date, it is normal to see 'Approved' with no date - your batch date appears once the October payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
+        "title": "Approved One Month, Declined the Next",
+        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in one month and 'Declined' in the next -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For October 2026, SASSA confirmed the SRD payment dates as 22 and 23 October 2026 -- you are paid on one of those dates according to your own 'Pay Day', so until your status shows that date it is normal to see 'Approved' with no date - your batch date appears once the October payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
         "tips": [
           "A decline for one month never cancels your application for the next.",
           "Check your status after the 15th of each month for the most reliable result."
@@ -1306,7 +1306,7 @@
       "sassa reapplication",
       "grant review"
     ],
-    "lastUpdated": "2026-10-16",
+    "lastUpdated": "2026-10-22",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -3460,7 +3460,7 @@
       {
         "title": "Historical Example: August 2026 (Already Passed)",
         "tips": [
-          "Do not assume October has a confirmed fourth payment date - as at 12 October 2026 SASSA had not announced it yet.",
+          "Do not assume October has a confirmed fourth payment date - as at 22 October 2026 SASSA had not announced it yet.",
           "Your status is the only reliable source for your personal pay day."
         ],
         "content": "<strong>This is historical information for context only.</strong> In August 2026, SASSA announced that beneficiaries whose grants were under review would be paid on <strong>Friday, 7 August 2026</strong> - the fourth payment day for that month, after Older Persons (4 August), Disability (5 August) and Children's Grants (6 August). That date has passed. For the current month, check the SASSA payment calendar (/payment-calendar) for the confirmed dates and the latest announcement in our <a href=\"/updates/update-2026-november-dates-confirmed\">latest confirmed payment dates update</a>."
@@ -3508,7 +3508,7 @@
         "q": "Can I complete the review online instead of visiting an office?"
       },
       {
-        "a": "No. As at 12 October 2026 SASSA had not yet officially confirmed a fourth payment date for October 2026. Do not rely on third-party dates. Check the official SRD portal for your 'Pay Day' date and the SASSA payment calendar (/payment-calendar) for the latest confirmed dates.",
+        "a": "No. As at 22 October 2026 SASSA had not yet officially confirmed a fourth payment date for October 2026. Do not rely on third-party dates. Check the official SRD portal for your 'Pay Day' date and the SASSA payment calendar (/payment-calendar) for the latest confirmed dates.",
         "q": "Is there a confirmed fourth payment day for October 2026?"
       },
       {
@@ -3527,7 +3527,7 @@
       "grant under review",
       "elife certification"
     ],
-    "lastUpdated": "2026-10-16",
+    "lastUpdated": "2026-10-22",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
