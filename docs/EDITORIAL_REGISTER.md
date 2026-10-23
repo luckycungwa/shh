@@ -175,6 +175,7 @@ description 156 chars, one H1, canonical `/payment-calendar`, FAQ schema present
 | 6 | `src/app/status-check/page.tsx` | Added "Check your SASSA status with your ID number" steps and an ID-only FAQ; description now leads with the ID-number method | November backlog P1 #2: method query +80% / +40% |
 | 7 | `public/data/status-meanings.json` | `/status/approved` title → "SASSA Approved but No Pay Day: Next Steps" (58 rendered), description and opening paragraph now answer the no-pay-date state first | November backlog P2 #4: query +4,700% / +300% on a small base |
 | 8 | `public/data/guides.json` | `/guides/moya-app-sassa` title → "Moya App SASSA Status Check & Payment Dates" (59 rendered), 154-char description, status/payment-date step, three new FAQs and a link to the payment calendar | November backlog P2 #6: breakout app + status + dates query |
+| 9 | `public/data/grants/srd-r370-grant.json`, `src/app/status-check/page.tsx` | Both pages now say R350 and R370 are the same grant (raised April 2024); status-check adds a direct R350-vs-R370 FAQ and an intro sentence | November backlog P2 #7: R350 terms grow +20% to +30% |
 
 **Verification:** `npx tsc --noEmit` clean, `npm run validate:content` 0 errors/0 warnings, `npm run lint` 0 errors
 (103 pre-existing warnings), `npm run build` succeeded. Built `/dates/*`: October 55-char title / 125-char
@@ -183,6 +184,7 @@ description, November 56 / 143, December 56 / 124; no "Grant Schedule — All" r
 Homepage build now shows October and the 22–23 October SRD batch. `/status-check` title 52 chars, description 153.
 `/status/approved` title 58 chars, description 160, H1 "SASSA Approved but No Pay Day: Next Steps".
 `/guides/moya-app-sassa` title 59 chars (43 + suffix), description 154; new status/date step and FAQs in built HTML.
+R350 alias sentence and status-check FAQ present in the built grant and status-check HTML.
 
 **Not claimed:** No indexation, ranking or CTR improvement is asserted. Google has not been asked to recrawl.
 Deployment was not performed; the changes are committed locally and not pushed.
