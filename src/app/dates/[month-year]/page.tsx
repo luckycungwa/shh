@@ -19,6 +19,14 @@ function readAll(): MonthSchedule[] {
   return readForecast();
 }
 
+const LONG_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+function toFriendlyDate(iso: string): string {
+  if (!iso || !iso.includes("-")) return iso || "";
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${d} ${LONG_MONTHS[m - 1]} ${y}`;
+}
+
 function creditInfo(s: MonthSchedule, key: "older_persons" | "disability" | "children" | "under_review" | "srd") {
   const grantNames: Record<string, string> = {
     older_persons: "Older Persons Grant",
@@ -36,6 +44,7 @@ function creditInfo(s: MonthSchedule, key: "older_persons" | "disability" | "chi
     key,
     grant: grantNames[key],
     ...row,
+    displayDate: row.date === "TBC" || row.date === "TBA" ? row.date : toFriendlyDate(row.date),
   };
 }
 
@@ -54,24 +63,41 @@ export function generateStaticParams() {
   return readAll().map((s) => ({ "month-year": s.month_key }));
 }
 
-function toFriendlyDate(iso: string): string {
-  if (!iso || !iso.includes("-")) return iso || "";
-  const [y, m, d] = iso.split("-").map(Number);
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  return `${d} ${months[m - 1]} ${y}`;
+const SHORT_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const WEEKDAY_NAMES = /\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b\s*/gi;
+
+function toShortDate(iso: string): string {
+  if (!iso || !iso.includes("-")) return "";
+  const [, m, d] = iso.split("-").map(Number);
+  return `${d} ${SHORT_MONTHS[m - 1]}`;
+}
+
+// A compact, complete list of the confirmed dates. Using short dates keeps the
+// meta description inside the 160-character cap instead of cutting off mid-grant.
+function confirmedSummary(s: MonthSchedule): string {
+  const names: Record<string, string> = {
+    older_persons: "Older Persons",
+    disability: "Disability",
+    children: "Children's",
+    under_review: "Fourth day",
+  };
+  const parts = (["older_persons", "disability", "children", "under_review"] as const)
+    .filter((key) => s[key].status === "confirmed")
+    .map((key) => `${names[key]} ${toShortDate(s[key].date)}`);
+  if (s.srd.status === "confirmed") {
+    const range = (s.srd.day || "").replace(WEEKDAY_NAMES, "").trim() || toShortDate(s.srd.date);
+    parts.push(`SRD R370 ${range}`);
+  }
+  return parts.join(", ");
 }
 
 export function generateMetadata({ params }: { params: { "month-year": string } }): Metadata {
   const s = readAll().find((x) => x.month_key === params["month-year"]);
   if (!s) return { title: "Payment Dates Not Found" };
-  const title = clampTitle(`SASSA ${s.label} Grant Schedule — All Grant Payment Dates`);
-  const confirmedDays = grantRows
-    .filter((row) => s[row].status === "confirmed")
-    .map((row) => creditInfo(s, row))
-    .map((info) => `${info.grant}: ${toFriendlyDate(info.date)}`)
-    .join(", ");
-  const description = clampDescription(confirmedDays
-    ? `${s.label} SASSA payment dates, confirmed: ${confirmedDays}. Official schedule for the Older Persons, Disability, Children's and SRD R370 grants.`
+  const title = clampTitle(`SASSA ${s.label} Grant Payment Dates`);
+  const summary = confirmedSummary(s);
+  const description = clampDescription(summary
+    ? `${s.label} SASSA payment dates: ${summary}.${s.srd.status === "confirmed" ? "" : " SRD R370 not yet announced."}`
     : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`);
   const url = `https://www.sassahelphub.co.za/dates/${params["month-year"]}`;
   return {
@@ -88,14 +114,10 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
   const schedule = readAll().find((x) => x.month_key === params["month-year"]);
   if (!schedule) notFound();
 
-  const title = `SASSA ${schedule.label} Grant Schedule — All Grant Payment Dates`;
-  const confirmedDays = grantRows
-    .filter((row) => schedule[row].status === "confirmed")
-    .map((row) => creditInfo(schedule, row))
-    .map((info) => `${info.grant}: ${toFriendlyDate(info.date)}`)
-    .join(", ");
-  const description = confirmedDays
-    ? `${schedule.label} SASSA payment dates, confirmed: ${confirmedDays}. Official schedule for the Older Persons, Disability, Children's and SRD R370 grants.`
+  const title = `SASSA ${schedule.label} Grant Payment Dates`;
+  const summary = confirmedSummary(schedule);
+  const description = summary
+    ? `${schedule.label} SASSA payment dates, confirmed: ${summary}.${schedule.srd.status === "confirmed" ? "" : " The SRD R370 date is announced after mid-month."}`
     : `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
 
   const todayISO = new Date().toISOString().slice(0, 10);
@@ -203,7 +225,7 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
                     <p className="text-sm text-gray-500 dark:text-gray-400">{info.day}</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-black text-primary-gold">{info.date}</p>
+                    <p className="font-black text-primary-gold">{info.displayDate}</p>
                     <Chip size="sm" variant="flat" color={info.status === "confirmed" ? "success" : "warning"} className="font-bold uppercase text-[10px]">
                       {rowStatusLabel(info.date, info.status)}
                     </Chip>
