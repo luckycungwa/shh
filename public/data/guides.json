@@ -591,8 +591,8 @@
   },
   {
     "id": "moya-app-sassa",
-    "title": "How to Use the Moya App for SASSA SRD: Status Checks & Banking Updates",
-    "description": "The Moya App is a free data-free messaging platform that now offers SASSA SRD services. Learn how to check your status, update banking details, and appeal using Moya.",
+    "title": "Moya App SASSA Status Check & Payment Dates",
+    "description": "Use the free Moya app to check your SASSA SRD status and payment date, update banking details, and appeal. See what Moya shows and when to use the portal.",
     "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
@@ -616,12 +616,13 @@
         ]
       },
       {
-        "title": "Check Your SRD Grant Status",
-        "content": "Inside the SASSA section, select 'Check Status'. You will be prompted to enter your 13-digit South African ID number. After entering it, your current SRD status for the most recent month will be displayed. The app shows the same information as the official srd.sassa.gov.za portal but in a simpler, mobile-friendly format.",
-        "tips": [
-          "The Moya App shows only the latest month's status — use the SRD portal for your full history.",
-          "You do not need to re-enter your ID every time — Moya saves it securely."
-        ]
+      "title": "Check Your Status and Payment Date",
+      "content": "Inside the SASSA section, select 'Check Status'. You will be prompted to enter your 13-digit South African ID number. After entering it, your current SRD status for the most recent month will be displayed. If a Pay Day is shown, that is the date SASSA has scheduled your payment batch — not the day the money lands in your account. If no Pay Day is shown, your payment has not been scheduled yet. The app reads the same SRD system as the official srd.sassa.gov.za portal but presents it in a simpler, mobile-friendly format.",
+      "tips": [
+        "The Moya App shows only the latest month's status — use the SRD portal for your full history.",
+        "A Pay Day is a batch date: allow 1 to 3 business days after it for the money to reflect.",
+        "If the app has no Pay Day but the portal does, trust the portal — app screens can lag."
+      ]
       },
       {
         "title": "Update Your Banking Details via Moya",
@@ -645,31 +646,47 @@
         "q": "Is the Moya App safe for SASSA SRD services?",
         "a": "The Moya App is a popular free-data channel that routes into SASSA's SRD system and is widely used to check status and update details. Always verify your final status on the official portal at srd.sassa.gov.za before acting on what the app shows, and only download Moya from the official Google Play or Apple App Store."
       },
-      {
-        "q": "Do I need internet data for the Moya App SASSA services?",
-        "a": "No. Moya offers free data for SASSA SRD services. You can check your status, update banking details, and submit appeals without using your mobile data allowance."
-      }
-    ],
+    {
+      "q": "Do I need internet data for the Moya App SASSA services?",
+      "a": "No. Moya offers free data for SASSA SRD services. You can check your status, update banking details, and submit appeals without using your mobile data allowance."
+    },
+    {
+      "q": "Can I check my SASSA payment date on the Moya app?",
+      "a": "Moya shows your current SRD status for the latest month and, when SASSA has scheduled it, a Pay Day. A Pay Day is the date the payment batch runs, not the day the money reflects — allow 1 to 3 business days. If Moya shows no Pay Day, the batch has not been scheduled yet; check again after the 15th, when statuses are usually updated."
+    },
+    {
+      "q": "Why does the Moya app show a different status to the SRD portal?",
+      "a": "Moya reads from the same SRD system, but app screens can lag behind the portal after a status change. Treat srd.sassa.gov.za as authoritative and check again before you act. If the two still disagree after 24 hours, use the portal result and contact SASSA on 0800 60 10 11."
+    },
+    {
+      "q": "Can I update my banking details on Moya before pay day?",
+      "a": "Yes, Moya offers a banking-details update, but changes take 3 to 5 working days to verify and may not apply to a batch already scheduled. If your Pay Day is close, confirm the change was accepted before relying on it, and do not close the old account until the new details are verified."
+    }
+  ],
     "tags": [
       "moya app",
       "moya sassa",
       "free data sassa",
       "sassa status check app"
     ],
-    "lastUpdated": "2026-07-07",
-    "author": "Lucky Cungwa",
-    "relatedLinks": [
-      {
-        "title": "Download Moya App",
-        "url": "https://moya.app",
-        "isExternal": true
-      },
-      {
-        "title": "SASSA SRD Portal",
-        "url": "https://srd.sassa.gov.za",
-        "isExternal": true
-      }
-    ]
+  "lastUpdated": "2026-10-23",
+  "author": "Lucky Cungwa",
+  "relatedLinks": [
+    {
+      "title": "SASSA payment calendar",
+      "url": "/payment-calendar"
+    },
+    {
+      "title": "Download Moya App",
+      "url": "https://moya.app",
+      "isExternal": true
+    },
+    {
+      "title": "SASSA SRD Portal",
+      "url": "https://srd.sassa.gov.za",
+      "isExternal": true
+    }
+  ]
   },
   {
     "id": "ussd-codes",
