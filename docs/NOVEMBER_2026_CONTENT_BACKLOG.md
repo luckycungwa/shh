@@ -10,8 +10,9 @@
 `docs/TOPIC_COVERAGE_MATRIX.md` (coverage matrix).
 
 **Status 23 October 2026:** P1 #1 implemented on `/payment-calendar` — metadata title, H1, description and a
-confirmed November 2026 block with FAQs. P1 #2 implemented on `/status-check` (ID-number steps + FAQ). Dates-page
-metadata and readable date tables fixed 23 October. "Approved but no Pay Day" remains P2.
+confirmed November 2026 block with FAQs. P1 #2 implemented on `/status-check` (ID-number steps + FAQ). P2 #4
+implemented on `/status/approved` (title, description and opening answer lead with "approved but no Pay Day").
+Dates-page metadata and readable date tables fixed 23 October.
 
 ---
 
@@ -145,7 +146,7 @@ answer; do not build a second generic dates page.
 | November dates | `/payment-calendar` (hub) → `/dates/november-2026` | Hub holds the demand but its snippet truncated to "October"; the month page has 0 GSC impressions | **Done 22 Oct:** hub title/H1/description rewritten around November, confirmed block added. **Done 23 Oct:** month-page title/description shortened and readable date tables |
 | October dates | `/dates/october-2026`, `update-2026-038` | Now fully confirmed (SRD 22–23 Oct) | No further work this cycle |
 | Status check | `/status-check`, `/tools/status-explorer` | Strong; covers status meanings | **Done 23 Oct:** ID-number steps + FAQ added; approved/no-date section left to P2 |
-| Approved, no Pay Day | `/status/approved` | Exists, partly covered | Expand the answer at the top of the page |
+| Approved, no Pay Day | `/status/approved` | Exists, partly covered | **Done 23 Oct:** title, description and opening paragraph lead with the no-pay-date answer |
 | R350/R370 alias + dates | `/grants/srd-r370-grant` | Refreshed 22 Oct | Add "R350 is now R370" once, plus date/status answer |
 | Moya app | `/guides/moya-app-sassa` | Exists | Add a payment-dates/status section |
 | Historical months | `/dates/may-2026`, `/dates/july-2026` | Exist | Verify accuracy + indexability only |
@@ -167,7 +168,7 @@ answer; do not build a second generic dates page.
 
 | # | Opportunity | Target page(s) | Why now |
 |---|---|---|---|
-| 4 | Answer "approved but no Pay Day" | `/status/approved` | High intent (+4,700% / +300%) but a small measured base — 9 clicks / 153 impressions — so it follows the visibility work |
+| 4 | Answer "approved but no Pay Day" | `/status/approved` | **Done 23 Oct 2026.** High intent (+4,700% / +300%) but a small measured base — 9 clicks / 153 impressions — so it followed the visibility work |
 | 5 | Generic "SASSA grant payment dates" | `/payment-calendar` | Fastest-growing generic cluster (+30% to +50%); served by the 22 Oct hub rewrite |
 | 6 | Moya app status/date checking | `/guides/moya-app-sassa` | Breakout query combining app + status + dates |
 | 7 | R350 vs R370 clarity | `/grants/srd-r370-grant`, `/status-check` | R350 terms grow faster (+20% to +30%) than R370 |
