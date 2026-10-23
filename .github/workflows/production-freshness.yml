@@ -1,0 +1,31 @@
+name: Production freshness
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-freshness
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the expected production commit
+        uses: actions/checkout@v4
+
+      - name: Check deployment and published content
+        env:
+          EXPECTED_COMMIT_SHA: ${{ github.sha }}
+          DEPLOYMENT_WAIT_SECONDS: "900"
+          DEPLOYMENT_POLL_SECONDS: "30"
+        run: npm run check:production-freshness

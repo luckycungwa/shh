@@ -1,5 +1,5 @@
 import React from "react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Card, CardHeader, CardBody, Divider, Button, Chip } from "@nextui-org/react";
 import { FaUserShield, FaExternalLinkAlt, FaExclamationTriangle, FaPhoneAlt, FaMobileAlt, FaCheckCircle, FaSearch, FaCalendarAlt } from "react-icons/fa";
 import NextLink from "next/link";
@@ -11,8 +11,7 @@ import { readForecast, srdDisplay } from "../../lib/payment-schedule";
 import OfficialStatusCheck from "../../components/OfficialStatusCheck";
 import NextStepCard from "../../components/affiliate/NextStepCard";
 
-const currentMonthYear = getCurrentMonthYearKey();
-const currentYear = getCurrentYearString();
+export const revalidate = 900;
 
 // Render an ISO date (2026-09-02) as a compact chip label ("Wed, 2 Sep 2026"),
 // or pass through non-ISO placeholders such as "TBC"/"TBA" unchanged.
@@ -24,16 +23,21 @@ function toChipDate(iso: string): string {
   return `${weekday}, ${d} ${months[m - 1]} ${y}`;
 }
 
-export const metadata: Metadata = {
-  ...buildMetadata({
-    title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
-    description: `Check your SASSA SRD status for ${currentMonthYear} with your ID number. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
-    path: "/status-check",
-  }),
-  keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
-};
+export function generateMetadata(): Metadata {
+  const currentMonthYear = getCurrentMonthYearKey();
+  return {
+    ...buildMetadata({
+      title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
+      description: `Check your SASSA SRD status for ${currentMonthYear} with your ID number. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
+      path: "/status-check",
+    }),
+    keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
+  };
+}
 
 export default function StatusCheckPage() {
+  const currentMonthYear = getCurrentMonthYearKey();
+  const currentYear = getCurrentYearString();
   // Status-check targets the ACTUAL current month (e.g. "September 2026") —
   // that is what the heading and metadata use, and it must match the forecast
   // entry for the same month so the confirmed dates shown are always current.

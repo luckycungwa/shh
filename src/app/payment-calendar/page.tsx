@@ -9,6 +9,8 @@ import { breadcrumbSchema, faqPageSchema, paymentScheduleSchema } from "../../li
 import { SITE_CONFIG } from "../../lib/config";
 import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from "../../lib/payment-schedule";
 
+export const revalidate = 900;
+
 export const metadata: Metadata = buildMetadata({
   title: "SASSA Payment Dates for November 2026",
   description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 date TBA.",

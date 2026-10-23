@@ -10,6 +10,8 @@ import { getFact } from "../lib/canonical-facts";
 import { readForecast, stripRowsFor, srdDisplay, getDisplayedMonth, type MonthSchedule } from "../lib/payment-schedule";
 import HeroCarousel from "../components/HeroCarousel";
 
+export const revalidate = 900;
+
 export const metadata = buildMetadata({
   title: "SASSA Help Hub — 2026 Payment Dates, SRD R370 Status Check & Grant Guides",
   description: `Independent, unofficial SASSA guides for South Africans: 2026 grant payment dates, SRD R370 status checks, application steps, appeal help, and scam alerts — simplified and free.`,

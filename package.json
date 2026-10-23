@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "validate:content": "node scripts/validate-content.mjs"
+    "validate:content": "node scripts/validate-content.mjs",
+    "check:production-freshness": "node scripts/check-production-freshness.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

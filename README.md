@@ -77,6 +77,8 @@ src/
 3. **Build Command** - `npm run build`
 4. **Output Directory** - `.next` (default)
 
+The homepage, payment calendar, and status-check page revalidate every 15 minutes. The GitHub Actions **Production freshness** workflow checks that production serves the latest `main` commit and matching schedule/update data, and reports stale deployments or content in the Actions tab. It runs after pushes to `main` and every 30 minutes.
+
 ## 📄 Legal & Compliance
 
 ### Disclaimer
