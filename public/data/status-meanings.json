@@ -351,9 +351,9 @@
   {
     "slug": "approved",
     "status_label": "Approved",
-    "title": "SASSA Status: 'Approved' — What It Means & When You Will Be Paid",
-    "description": "'Approved' means your SASSA application was successful. Learn what happens next, what 'Approved but no Pay Day' means, when to expect payment, and what to do if your payment date has passed.",
-    "what_it_means": "'Approved' is the status every applicant wants to see. It means SASSA has verified your information and you qualify for the grant. Your application has passed all the checks — identity verification, means test, bank verification, and cross-referencing with other government databases. However, 'Approved' does NOT mean the money is in your account yet. Approved means you qualify; 'Paid' means the money has been released. Between the two, SASSA assigns a 'Pay Day' date that tells you when your payment batch will run. If you see 'Approved' but no Pay Day, your payment is still being processed for disbursement — this is normal for a few days to a week after approval. It does not mean anything is wrong, and it does not mean you will definitely be paid — approval is conditional on your details staying valid until the batch runs. Keep checking your status, and make sure your banking details are correct and your phone is active.",
+    "title": "SASSA Approved but No Pay Day: Next Steps",
+    "description": "Approved but no Pay Day? SASSA has confirmed you qualify but has not scheduled your payment batch yet. See what it means, how long to wait, and what to do next.",
+    "what_it_means": "'Approved but no Pay Day' means SASSA has approved your grant for the month but has not yet scheduled your payment batch. 'Approved' is the status every applicant wants to see. It means SASSA has verified your information and you qualify for the grant. Your application has passed all the checks — identity verification, means test, bank verification, and cross-referencing with other government databases. However, 'Approved' does NOT mean the money is in your account yet. Approved means you qualify; 'Paid' means the money has been released. Between the two, SASSA assigns a 'Pay Day' date that tells you when your payment batch will run. If you see 'Approved' but no Pay Day, your payment is still being processed for disbursement — this is normal for a few days to a week after approval. It does not mean anything is wrong, and it does not mean you will definitely be paid — approval is conditional on your details staying valid until the batch runs. Keep checking your status, and make sure your banking details are correct and your phone is active.",
     "why_it_happens": [
       "You met all eligibility criteria for the grant",
       "Your identity was successfully verified with Home Affairs",
@@ -451,7 +451,7 @@
       "/grants/srd-r370-grant",
       "/status/bank-details-pending"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
