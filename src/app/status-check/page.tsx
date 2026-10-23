@@ -78,6 +78,10 @@ export default function StatusCheckPage() {
 
   const fullFaqData = [
     {
+      q: "Is the R350 grant the same as the SRD R370 grant?",
+      a: "Yes. The grant introduced in 2020 as R350 is now R370, and the old name stuck. There is no separate R350 grant and no separate application — check the same SRD status at srd.sassa.gov.za, USSD (*120*69277#) or WhatsApp. Anyone charging a fee for an 'R350' application, or promising a separate R350 payout, is running a scam."
+    },
+    {
       q: "How long does SASSA status check take?",
       a: "The online check is instant. Once you enter your details on the official portal, the results for the current and previous months should appear within seconds."
     },
@@ -187,7 +191,7 @@ export default function StatusCheckPage() {
                        <FaUserShield className="text-primary-gold hidden md:block font-bold" /> Check My Status
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400">
-                       This page walks you through checking your SRD R370 status in three simple steps. The check itself is done on the official SASSA website, srd.sassa.gov.za.
+                       This page walks you through checking your SRD R370 status in three simple steps. The check itself is done on the official SASSA website, srd.sassa.gov.za. The grant is still widely called R350, but the amount is R370.
                     </p>
                  </div>
 

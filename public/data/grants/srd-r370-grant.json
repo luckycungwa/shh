@@ -3,7 +3,7 @@
   "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, the latest confirmed 2026 payment dates, what 'Approved' means, and what to do if your application is declined.",
   "slug": "grants/srd-r370-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-10-22",
+  "last_updated": "2026-10-23",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -25,7 +25,7 @@
     {
       "type": "intro",
       "title": "What is the SRD R370 Grant?",
-      "content": "The Social Relief of Distress (SRD) grant, commonly known as the SASSA SRD R370 grant, is a temporary monthly payment from the South African government to unemployed adults who are not receiving any other form of social assistance. Originally introduced as a R350 grant during the COVID-19 pandemic in 2020, it was increased to {{srd_grant_amount}} and has become a vital lifeline for millions of South Africans. As of 2026, the grant continues to be a vital lifeline, with cover basic needs like food, transport, and essentials. The grant is paid in the last week of each month."
+      "content": "The Social Relief of Distress (SRD) grant, commonly known as the SASSA SRD R370 grant, is a temporary monthly payment from the South African government to unemployed adults who are not receiving any other form of social assistance. Originally introduced as a R350 grant during the COVID-19 pandemic in 2020, it was increased to {{srd_grant_amount}} in April 2024. The old R350 name still refers to this same grant, and it has become a vital lifeline for millions of South Africans. As of 2026, the grant continues to be a vital lifeline, with cover basic needs like food, transport, and essentials. The grant is paid in the last week of each month."
     },
     {
       "type": "eligibility",
