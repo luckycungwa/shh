@@ -132,6 +132,12 @@ export default async function sitemap() {
 
   const scheduleData = readJson(path.join(process.cwd(), "public/data/payment-schedule-forecast.json"));
   const scheduleKeys = scheduleData.map((s: any) => s.month_key).filter(Boolean);
+  // Each month's page reflects that month's verified schedule, so use its own
+  // lastVerified date rather than one shared status date.
+  const scheduleMods: Record<string, string> = {};
+  for (const s of scheduleData) {
+    if (s.month_key && s.governance?.lastVerified) scheduleMods[s.month_key] = s.governance.lastVerified;
+  }
 
   const officeCities = readJson(path.join(process.cwd(), "public/data/officeCities.json"));
   const provinceNameToSlug: Record<string, string> = {
@@ -200,7 +206,7 @@ export default async function sitemap() {
     ...bankingSlugs.map((s) => ({ path: `/banking/${s}`, lastMod: bankingLastMod, priority: 0.7, changeFreq: "monthly" as const })),
     ...(appealSlugs.length ? [{ path: "/appeals", lastMod: appealLastMod, priority: 0.7, changeFreq: "monthly" as const }] : []),
     ...appealSlugs.map((s) => ({ path: `/appeals/${s}`, lastMod: appealLastMod, priority: 0.7, changeFreq: "monthly" as const })),
-    ...scheduleKeys.map((s) => ({ path: `/dates/${s}`, lastMod: statusMod, priority: 0.7, changeFreq: "monthly" as const })),
+    ...scheduleKeys.map((s) => ({ path: `/dates/${s}`, lastMod: scheduleMods[s] || statusMod, priority: 0.7, changeFreq: "monthly" as const })),
     ...Array.from(officePaths).map((p) => ({ path: p, lastMod: provinceMod, priority: 0.6, changeFreq: "monthly" as const })),
   ];
 
