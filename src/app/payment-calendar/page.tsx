@@ -11,7 +11,7 @@ import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from
 
 export const metadata: Metadata = buildMetadata({
   title: "SASSA Payment Dates for November 2026",
-  description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 dates TBA.",
+  description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 date TBA.",
   path: "/payment-calendar",
 });
 
@@ -137,8 +137,8 @@ export default function PaymentCalendarPage() {
                 </div>
                 <h2 className="text-2xl font-bold group-hover:text-primary-gold transition-colors">{m.label}</h2>
                 <div className="text-sm text-gray-500 space-y-1">
-                  <p>Older Persons: <span className="font-semibold text-gray-800 dark:text-gray-200">{m.older_persons.date}</span></p>
-                  <p>SRD R370: <span className="font-semibold text-gray-800 dark:text-gray-200">{srdDisplay(m.srd, m.label).date}</span></p>
+                  <p>Older Persons: <span className="font-semibold text-gray-800 dark:text-gray-200">{prettyDate(m.older_persons.date)}</span></p>
+                  <p>SRD R370: <span className="font-semibold text-gray-800 dark:text-gray-200">{prettyDate(srdDisplay(m.srd, m.label).date)}</span></p>
                   {!(m.older_persons.status === "confirmed" && m.disability.status === "confirmed" && m.children.status === "confirmed") && (
                     <p className="pt-1"><Chip size="sm" variant="flat" color="warning" className="font-bold uppercase text-[10px]">Under review / projected</Chip></p>
                   )}

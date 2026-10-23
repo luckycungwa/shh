@@ -430,7 +430,7 @@ export default function StatusCheckPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-green-600 text-xl mb-4 flex items-center gap-2"><FaCheckCircle /> APPROVED</p>
-              <p className="text-gray-500 leading-relaxed">Your application was successful for the selected month. Look for a 'Pay Day' date — if none is shown yet, your payment is still being processed for disbursement. Approved does not mean paid yet. Learn more in our <NextLink href="/status/approved" className="text-primary-gold underline font-bold">Approved status guide</NextLink> and check the <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">{currentMonthYear} payment calendar</NextLink> for batch windows.</p>
+              <p className="text-gray-500 leading-relaxed">Your application was successful for the selected month. Look for a 'Pay Day' date — if none is shown yet, your payment is still being processed for disbursement. Approved does not mean paid yet. Learn more in our <NextLink href="/status/approved" className="text-primary-gold underline font-bold">Approved status guide</NextLink> and check the <NextLink href="/payment-calendar" className="text-primary-gold underline font-bold">SASSA payment calendar</NextLink> for batch windows.</p>
             </div>
             <div className="p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
               <p className="font-bold text-blue-600 text-xl mb-4 flex items-center gap-2"><FaSearch /> PENDING</p>
