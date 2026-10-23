@@ -27,7 +27,7 @@ function toChipDate(iso: string): string {
 export const metadata: Metadata = {
   ...buildMetadata({
     title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
-    description: `Verify your SASSA SRD status check for ${currentMonthYear}. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
+    description: `Check your SASSA SRD status for ${currentMonthYear} with your ID number. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
     path: "/status-check",
   }),
   keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
@@ -88,6 +88,10 @@ export default function StatusCheckPage() {
     {
       q: "Can I check my status without a phone number?",
       a: "No, the mobile number registered to your application is required to verify your identity on the official portal, USSD (*120*69277#), or WhatsApp. If you have lost your phone or no longer have that number, you cannot verify online — contact SASSA on 0800 60 10 11 or visit a SASSA office with your ID, and see our lost phone number guide (/guides/lost-phone-number) for the steps to update your number."
+    },
+    {
+      q: "Can I check my SASSA status with only my ID number?",
+      a: "No — the official SRD portal, USSD (*120*69277#) and WhatsApp all ask for your 13-digit ID number plus the mobile number registered on your application. Your ID identifies you; the registered number verifies the check. If you no longer have that number, update it through SASSA or visit an office — see our lost phone number guide (/guides/lost-phone-number). Avoid third-party sites that promise an ID-only check."
     },
     {
       q: "Why is my SASSA status not updating / stuck on the same status?",
@@ -393,6 +397,22 @@ export default function StatusCheckPage() {
                 <Chip color="primary" variant="flat">Mobile Phone Required</Chip>
                 <Chip color="primary" variant="flat">Instant Result</Chip>
              </div>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 p-10 rounded-[2rem] border border-gray-100 dark:border-gray-700 space-y-5">
+             <h3 className="text-2xl font-bold">Check your SASSA status with your ID number</h3>
+             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Your 13-digit ID number is the key to every official status check. You also need the mobile number registered on your SASSA application, because the portal uses it to confirm the check is yours.
+             </p>
+             <ol className="list-decimal list-inside space-y-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+                <li><strong>Open the official portal</strong> at <a href="https://srd.sassa.gov.za" className="text-primary-gold underline">srd.sassa.gov.za</a>. Do not use look-alike sites.</li>
+                <li><strong>Enter your 13-digit ID number</strong> exactly as it appears on your green ID book or smart card — no spaces or extra digits.</li>
+                <li><strong>Enter the mobile number</strong> you used when you applied. If your number has changed, update it first.</li>
+                <li><strong>Submit and read the result.</strong> Check the status and any Pay Day shown for the month. If no Pay Day appears, your payment is still being processed.</li>
+             </ol>
+             <p className="text-sm text-gray-500 dark:text-gray-400">
+                Lost the registered number? You cannot complete an online check with your ID alone — see our <NextLink href="/guides/lost-phone-number" className="text-primary-gold underline font-bold">lost phone number guide</NextLink> or call SASSA on 0800 60 10 11. The same ID-and-phone check works on USSD <strong>*120*69277#</strong> and WhatsApp <strong>082 601 0111</strong>.
+             </p>
           </div>
 
           <h2 className="text-4xl font-black mt-16">Choosing the Right Channel for Your Status Update</h2>
