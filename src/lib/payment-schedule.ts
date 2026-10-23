@@ -5,6 +5,8 @@ export interface GrantDateRow {
   date: string;
   day: string;
   status: string;
+  /** Final day of a multi-day payment window, when SASSA confirms more than one date. */
+  endDate?: string;
 }
 
 export interface MonthSchedule {
@@ -68,8 +70,8 @@ export function getDisplayedMonth(
       current.srd,
       current.under_review,
     ]
-      .filter((row) => row.status === "confirmed" && /^\d{4}-\d{2}-\d{2}$/.test(row.date))
-      .map((row) => row.date)
+      .filter((row) => row.status === "confirmed" && /^\d{4}-\d{2}-\d{2}$/.test(row.endDate ?? row.date))
+      .map((row) => row.endDate ?? row.date)
       .sort();
     const lastConfirmedDate = confirmedDates[confirmedDates.length - 1];
 

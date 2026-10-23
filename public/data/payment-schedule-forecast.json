@@ -26,7 +26,7 @@
     "disability": { "date": "2026-10-05", "day": "Monday", "status": "confirmed" },
     "children": { "date": "2026-10-06", "day": "Tuesday", "status": "confirmed" },
     "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
-    "srd": { "date": "2026-10-22", "day": "Thursday 22 & Friday 23 October", "status": "confirmed" },
+    "srd": { "date": "2026-10-22", "endDate": "2026-10-23", "day": "Thursday 22 & Friday 23 October", "status": "confirmed" },
     "note": "SASSA confirmed the October 2026 SRD R370 payment dates as Thursday 22 and Friday 23 October 2026. The permanent grant dates for October were Older Persons on Friday 2 October, Disability on Monday 5 October and Children's Grants on Tuesday 6 October. Beneficiaries are paid in a batch on either 22 or 23 October depending on their personal 'Pay Day' date on the official SRD portal, not on both dates.",
     "governance": {
       "source": "SASSA official October 2026 SRD R370 payment dates announcement",
