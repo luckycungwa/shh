@@ -362,31 +362,22 @@
     "effective_date": "2026-09-18"
   },
   "appeals_portal_url": {
-    "value": "https://srd-appeals.dsd.gov.za",
-    "note": "Official portal for lodging and tracking SRD grant appeals (ITSAA).",
-    "source_url": "https://srd-appeals.dsd.gov.za",
-    "verified_date": "2026-09-18",
-    "verified_by": "Official ITSAA appeals portal",
+    "value": "https://srd.sassa.gov.za/appeals/appeal",
+    "note": "Official portal for lodging and tracking SRD grant appeals, decided by the Independent Tribunal for Social Assistance Appeals.",
+    "source_url": "https://srd.sassa.gov.za/appeals/appeal",
+    "verified_date": "2026-10-23",
+    "verified_by": "Official SASSA SRD Appeals Portal",
     "confidence": "confirmed",
     "effective_date": "2026-09-18"
   },
   "appeal_lodgement_window_days": {
     "value": "90",
-    "note": "Statutory window to lodge an appeal: within 90 days after the decision being appealed (Government Gazette 46459, GN 2120, regulation 2(a)). Regulation 13(1) allows the Independent Tribunal to consider a late appeal if good cause is shown.",
+    "note": "Statutory window to lodge an appeal: within 90 days after the decision being appealed (Government Gazette 46459, GN 2120, regulation 2(a)). For SRD appeals, the SRD-specific rules state that an appeal submitted outside the 90-day period will not be considered; there is no late-appeal route for SRD appeals.",
     "effective_date": "2022-05-31",
     "source_url": "https://www.gov.za/sites/default/files/gcis_document/202206/46459rg11437gon2120.pdf",
     "verified_date": "2026-10-08",
-    "verified_by": "Government Gazette 46459 (GN 2120), regulations 2(a) and 13(1) — Social Assistance Act appeal regulations",
+    "verified_by": "Government Gazette 46459 (GN 2120), regulation 2(a), read with the SRD-specific appeal rules",
     "confidence": "confirmed"
-  },
-  "appeal_recommended_days": {
-    "value": "30",
-    "note": "SASSA recommends lodging within 30 days of the decision while evidence is still fresh. This is a SASSA recommendation reported in the press, not a gazetted regulation — the statutory maximum window is 90 days (see appeal_lodgement_window_days).",
-    "effective_date": "2022-12-15",
-    "source_url": "http://www.skillsportal.co.za/news/here-are-important-timelines-sassa-grant-appeals",
-    "verified_date": "2026-10-08",
-    "verified_by": "SASSA statement reported by Skills Portal (15 December 2022); also reported by TimesLIVE (17 September 2021)",
-    "confidence": "reported"
   },
   "sassa_helpline": {
     "value": "0800 60 10 11",

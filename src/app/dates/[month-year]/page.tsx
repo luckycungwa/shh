@@ -94,11 +94,16 @@ function confirmedSummary(s: MonthSchedule): string {
 export function generateMetadata({ params }: { params: { "month-year": string } }): Metadata {
   const s = readAll().find((x) => x.month_key === params["month-year"]);
   if (!s) return { title: "Payment Dates Not Found" };
-  const title = clampTitle(`SASSA ${s.label} Grant Payment Dates`);
+  const electionMonth = s.month_key === "november-2026";
+  const title = electionMonth
+    ? "SASSA November 2026 Dates: Election Clash"
+    : clampTitle(`SASSA ${s.label} Grant Payment Dates`);
   const summary = confirmedSummary(s);
-  const description = clampDescription(summary
-    ? `${s.label} SASSA payment dates: ${summary}.${s.srd.status === "confirmed" ? "" : " SRD R370 not yet announced."}`
-    : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`);
+  const description = electionMonth
+    ? clampDescription("SASSA moved the November 2026 grant dates because 4 November is the Local Government Elections holiday. Older Persons 30 Oct, Disability 2 Nov, Children 3 Nov.")
+    : clampDescription(summary
+      ? `${s.label} SASSA payment dates: ${summary}.${s.srd.status === "confirmed" ? "" : " SRD R370 not yet announced."}`
+      : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`);
   const url = `https://www.sassahelphub.co.za/dates/${params["month-year"]}`;
   return {
     title,
@@ -114,11 +119,16 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
   const schedule = readAll().find((x) => x.month_key === params["month-year"]);
   if (!schedule) notFound();
 
-  const title = `SASSA ${schedule.label} Grant Payment Dates`;
+  const electionMonth = schedule.month_key === "november-2026";
+  const title = electionMonth
+    ? "SASSA November 2026 Dates: Election Clash"
+    : `SASSA ${schedule.label} Grant Payment Dates`;
   const summary = confirmedSummary(schedule);
-  const description = summary
-    ? `${schedule.label} SASSA payment dates, confirmed: ${summary}.${schedule.srd.status === "confirmed" ? "" : " The SRD R370 date is announced after mid-month."}`
-    : `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
+  const description = electionMonth
+    ? "SASSA moved the November 2026 grant dates because 4 November is the Local Government Elections holiday. Older Persons 30 Oct, Disability 2 Nov, Children 3 Nov."
+    : summary
+      ? `${schedule.label} SASSA payment dates, confirmed: ${summary}.${schedule.srd.status === "confirmed" ? "" : " The SRD R370 date is announced after mid-month."}`
+      : `View the ${schedule.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`;
 
   const todayISO = new Date().toISOString().slice(0, 10);
   const datesPassed = [schedule.older_persons.date, schedule.disability.date, schedule.children.date].every(
@@ -144,6 +154,17 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
     { q: "Why is the SRD payment date different from the permanent grants?", a: "Unlike permanent grants which are paid in the first week of each month, the SRD R370 is paid in batches during the last week of the month. Beneficiaries are not all paid on the same day — your personal 'Pay Day' appears on your status check." },
     { q: "Can my payment date change after it appears?", a: "Yes. Payment dates can shift between batches or if your application needs additional verification. Check your status again after the 15th of the month, and use the official SRD portal as your source of truth." },
   ];
+
+  if (schedule.month_key === "november-2026") {
+    faqs.unshift({
+      q: "Is there a SASSA grant schedule election clash in November 2026?",
+      a: "Yes, in the sense that 4 November 2026 is the Local Government Elections public holiday and would have fallen inside the normal November payment window. SASSA moved the cycle forward: Older Persons 30 October, Disability 2 November, Children's Grants 3 November, and the fourth payment day 5 November 2026.",
+    });
+    faqs.push({
+      q: "Will the election stop or cancel my SASSA grant?",
+      a: "No. The election changed the payment dates, not eligibility or amounts. All eligible beneficiaries will still be paid.",
+    });
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
@@ -252,6 +273,26 @@ export default function PaymentDatesPage({ params }: { params: { "month-year": s
             <p className="text-xs italic text-amber-700 dark:text-amber-300 mt-2">Note: {schedule.governance.notes}</p>
           )}
         </section>
+
+        {electionMonth && (
+          <section className="bg-amber-50 dark:bg-amber-900/10 p-6 rounded-2xl border border-amber-200 dark:border-amber-700/50">
+            <h2 className="text-xl font-bold mb-4">SASSA November 2026 Grant Schedule: Election Clash Explained</h2>
+            <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <p>
+                4 November 2026 is the Local Government Elections public holiday. SASSA normally pays permanent grants in the first week of the month, so the election would have fallen inside the November payment window. To avoid paying on a public holiday, SASSA brought the cycle forward with National Treasury approval.
+              </p>
+              <p>
+                This is a <strong>date change</strong>, not an eligibility change. All eligible beneficiaries will still be paid, and the grant amounts do not change. Older Persons are paid on <strong>Friday 30 October</strong>, Disability on <strong>Monday 2 November</strong>, Children&apos;s Grants on <strong>Tuesday 3 November</strong>, and the fourth payment day for grants under review is <strong>Thursday 5 November</strong>.
+              </p>
+              <p>
+                SRD R370 is separate. It is still paid in the last week of November, with the exact date announced after mid-month. If you see a post saying the election has &quot;cancelled&quot; the November grants, that is false &mdash; the payments were moved, not stopped.
+              </p>
+              <p>
+                <a href="/updates/update-2026-november-dates-confirmed" className="font-bold underline text-primary-gold">Read the full November 2026 dates update</a>.
+              </p>
+            </div>
+          </section>
+        )}
 
         <section className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-bold mb-4">Why Dates Matter & How to Confirm Yours</h2>

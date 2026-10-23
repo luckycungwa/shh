@@ -1,9 +1,9 @@
 {
-  "title": "SASSA Older Persons Grant 2026: Eligibility, Amounts & Payment Dates",
-  "description": "Full details on the SASSA Older Persons Grant (Old Age Pension) up to R2,400/month. Who qualifies, required documents, step-by-step application process, payment amounts, and the latest confirmed 2026 payment dates.",
+  "title": "SASSA Old Age Grant 2026: Amount",
+  "description": "SASSA Older Persons (old age) grant 2026: amount, income and asset limits, documents, online application and confirmed payment dates.",
   "slug": "grants/old-age-pension",
   "pillar": "grant-guide",
-  "last_updated": "2026-10-16",
+  "last_updated": "2026-10-23",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -16,13 +16,24 @@
     "/status/pending",
     "/payment-calendar",
     "/eligibility-check",
-    "/faq"
+    "/faq",
+    "/guides/apply-sassa-grants",
+    "/guides/document-checklist",
+    "/guides/grant-verification-process",
+    "/guides/sassa-deductions-explained",
+    "/guides/life-certification",
+    "/dates/november-2026"
   ],
   "sections": [
     {
       "type": "intro",
       "title": "What is the SASSA Older Persons Grant?",
       "content": "The SASSA Older Persons Grant, commonly called the Old Age Pension, is a monthly payment from the South African government to citizens and permanent residents aged 60 and older. It is the most widely accessed permanent grant in South Africa, supporting millions of seniors who are no longer in formal employment. The grant is means-tested, meaning your income and assets must be below a certain threshold to qualify. As of 2026, the grant amounts are {{old_age_pension_amount_under75}} per month for beneficiaries under 75 and {{old_age_pension_amount_over75}} per month for those aged 75 and older."
+    },
+    {
+      "type": "info",
+      "title": "SASSA Old Age Grant 2026: Quick Answer",
+      "content": "<p><strong>SASSA old age grant 2026:</strong> the Older Persons Grant pays {{old_age_pension_amount_under75}} a month for beneficiaries under 75 and {{old_age_pension_amount_over75}} for those 75 and older. You can apply online at services.sassa.gov.za or at a SASSA office. You need your 13-digit ID, proof of income (or an affidavit), proof of residence, proof of marital status and proof of assets. The grant is means-tested. SASSA does not publish a guaranteed processing time, so apply as early as you can and keep your receipt.</p><p><strong>Next payment:</strong> the November 2026 Older Persons payment is <strong>Friday 30 October 2026</strong>, brought forward because of the 4 November Local Government Elections public holiday. The December payment is <strong>Wednesday 2 December 2026</strong>. <a href=\"/dates/november-2026\">See the November 2026 schedule</a>.</p>"
     },
     {
       "type": "eligibility",
@@ -93,6 +104,34 @@
         {
           "q": "What if I am too frail to visit a SASSA office?",
           "a": "You can authorize a family member to apply on your behalf. They must bring a letter of authorization, your ID, and their own ID."
+        },
+        {
+          "q": "How much is the SASSA old age grant in 2026?",
+          "a": "The Older Persons Grant pays {{old_age_pension_amount_under75}} a month for beneficiaries under 75 and {{old_age_pension_amount_over75}} a month for those aged 75 and older. If you need full-time care, you may also qualify for the Grant-in-Aid top-up."
+        },
+        {
+          "q": "How do I apply for the SASSA old age grant online?",
+          "a": "Start at services.sassa.gov.za, the official SASSA Services Portal. Register an account, log in, and complete the Older Persons Grant application. You may still be asked to visit a SASSA office to submit original documents or complete a biometric check. Applications are free."
+        },
+        {
+          "q": "When is the old age grant paid in November 2026?",
+          "a": "The November 2026 Older Persons payment is Friday 30 October 2026. SASSA brought the cycle forward because 4 November 2026 is the Local Government Elections public holiday. The next Older Persons payment after that is Wednesday 2 December 2026."
+        },
+        {
+          "q": "What is the income threshold for the SASSA old age grant?",
+          "a": "For 2026, the income threshold is {{old_age_income_threshold_single}} a month for a single person and {{old_age_income_threshold_married}} combined for a married couple. Your assets must not exceed {{old_age_asset_threshold_single}} for a single person or {{old_age_asset_threshold_married}} for a married couple. The value of your primary home is excluded."
+        },
+        {
+          "q": "Can I receive the old age grant and a private pension?",
+          "a": "Yes, but your private pension counts as income in the means test. If your total income is above the threshold, you may not qualify or you may receive a reduced grant. Declare the pension when you apply and when your income changes."
+        },
+        {
+          "q": "What happens if my old age grant is under review?",
+          "a": "A review is an administrative check that you still qualify. It is not an automatic cancellation. Attend the appointment or respond within the deadline with your ID, proof of income and any documents SASSA asks for. If you ignore it, the grant can be suspended. See our SASSA grant review and verification guide for the full process."
+        },
+        {
+          "q": "How do I check my SASSA old age grant status?",
+          "a": "Old age grant applications are not checked on the SRD portal. Use the reference number on your application receipt, visit the SASSA office where you applied, or call 0800 60 10 11. Ask for the specific status of your Older Persons Grant application."
         }
       ]
     },

@@ -1,12 +1,16 @@
 [
   {
     "id": "apply-sassa-grants",
-    "title": "How to Apply for SASSA Grants (Online & In Person) in 2026",
-    "description": "Step-by-step guide to applying for any SASSA grant in 2026 — SRD R370 online, permanent grants online via the SASSA Services Portal, or in person at a SASSA office. Includes required documents and what happens after you apply.",
+    "title": "SASSA Online Application 2026",
+    "description": "Apply for SASSA grants online or in person in 2026: SRD R370, old age, disability and child support, documents, steps and processing times.",
     "category": "Apply for a Grant",
     "difficulty": "beginner",
     "estimatedTime": "15 minutes",
     "steps": [
+      {
+        "title": "SASSA Online Application 2026: The Short Answer",
+        "content": "<p>The official <strong>SASSA online application</strong> route depends on the grant:</p><ul><li><strong>SRD R370:</strong> apply at <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a>. This is the only online route for SRD.</li><li><strong>Older Persons, Disability, Child Support, Foster Child, Care Dependency, Grant-in-Aid and War Veterans:</strong> start at <a href=\"https://services.sassa.gov.za\">services.sassa.gov.za</a>, the SASSA Services Portal.</li></ul><p>Applications are free. You will need your 13-digit ID, proof of income (or an affidavit), proof of residence, and a bank account in your name. Some grants also need medical reports or court orders. You may still be asked to visit a SASSA office to submit original documents or complete a biometric check.</p><p><strong>Do not use a paid agent.</strong> No one can “speed up” a SASSA application. If a website asks for payment to apply, it is not SASSA.</p>"
+      },
       {
         "title": "Choose the Right Grant for Your Situation",
         "content": "Before applying, confirm which SASSA grant fits your circumstances. The main options are: <ul><li><strong>SRD R370 grant</strong> — for unemployed South Africans aged 18–59 with income below R624/month. Applied for online only.</li><li><strong>Older Persons (Old Age) Grant</strong> — for citizens aged 60+ who pass the means test. Pays R2,400/month (under 75) or R2,420 (75+).</li><li><strong>Disability Grant</strong> — for adults aged 18–59 with a medical disability preventing employment. Pays R2,400/month.</li><li><strong>Child Support Grant</strong> — for primary caregivers of children under 18. Pays R580/month per child.</li><li><strong>Foster Child Grant</strong> — for foster parents with a children's court order. Pays R1,300/month.</li><li><strong>Care Dependency Grant</strong> — for caregivers of children with severe disabilities. Pays R2,400/month.</li><li><strong>Grant-in-Aid</strong> — a R580/month top-up for Old Age or Disability recipients who need full-time care.</li><li><strong>War Veterans Grant</strong> — for WWII or Korean War veterans. Pays R2,420/month.</li></ul>You can only receive one primary grant at a time (plus the Grant-in-Aid top-up). Use our <a href=\"/eligibility-check\">eligibility checker</a> and browse the <a href=\"/grants\">grant guides</a> to compare options.",
@@ -55,7 +59,7 @@
       },
       {
         "q": "How long does a SASSA grant application take?",
-        "a": "Submitting the application takes about 15 minutes online. SASSA then processes it within 30 to 90 days. The SRD grant is assessed on a monthly cycle with status updates usually available after the 15th of each month."
+        "a": "Submitting the application takes about 15 minutes online. SASSA does not publish a guaranteed processing time for permanent grants; decisions can take weeks or longer depending on verification. The SRD grant is assessed monthly, with status updates usually available after the 15th."
       },
       {
         "q": "Is there a fee to apply for a SASSA grant?",
@@ -68,6 +72,22 @@
       {
         "q": "Can I apply for more than one SASSA grant?",
         "a": "No. You can only receive one primary SASSA grant at a time. The only exception is the Grant-in-Aid, which is a supplementary top-up for people already receiving the Old Age or Disability Grant."
+      },
+      {
+        "q": "What is the SASSA online application portal?",
+        "a": "For the SRD R370 grant, the official portal is srd.sassa.gov.za. For permanent grants such as Older Persons, Disability, Child Support, Foster Child, Care Dependency, Grant-in-Aid and War Veterans, use the SASSA Services Portal at services.sassa.gov.za."
+      },
+      {
+        "q": "Can I apply for the old age grant online?",
+        "a": "Yes. You can start an Older Persons Grant application on the SASSA Services Portal at services.sassa.gov.za. You may still be asked to visit a SASSA office to submit original documents or complete a biometric check."
+      },
+      {
+        "q": "Can I apply for SASSA grants on my phone?",
+        "a": "Yes. Use the browser on your phone to open srd.sassa.gov.za for SRD or services.sassa.gov.za for permanent grants. There is no official SASSA app for permanent grant applications; the Moya App is a free-data route for SRD."
+      },
+      {
+        "q": "What documents do I upload for a SASSA online application?",
+        "a": "You normally need your 13-digit South African ID, proof of income (or an affidavit), proof of residence, and a bank account in your name. Grant-specific documents such as a medical report or children’s court order may also be required. Upload clear photos or scans and keep the originals for an office visit."
       }
     ],
     "tags": [
@@ -76,7 +96,7 @@
       "apply for sassa online",
       "sassa application documents"
     ],
-    "lastUpdated": "2026-07-07",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -126,110 +146,124 @@
         "title": "SASSA Services Portal (Online Applications)",
         "url": "https://services.sassa.gov.za",
         "isExternal": true
+      },
+      {
+        "title": "SASSA Older Persons (Old Age) Grant",
+        "url": "/grants/old-age-pension",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Disability Grant",
+        "url": "/grants/disability-grant",
+        "isExternal": false
       }
     ]
   },
   {
     "id": "appeal-guide",
-    "title": "How to Appeal a Declined SASSA SRD Application (Step-by-Step)",
-    "description": "Your SASSA SRD R370 application was declined — that is not the end of the road. Every declined applicant can dispute the decision, first with a SASSA reconsideration and then with an appeal to the Independent Tribunal for Social Assistance Appeals (ITSAA). This step-by-step 2026 guide shows you exactly how to find your decline reason, gather the right evidence, submit your appeal online or by WhatsApp, track it, and what to do if the appeal also fails.",
+    "title": "How to Appeal a Declined SASSA SRD Application",
+    "description": "A step-by-step guide to the official SASSA SRD appeal: check the declined month, lodge within 90 days using your ID, phone and PIN, and track the tribunal outcome.",
     "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
-    "estimatedTime": "20 minutes",
+    "estimatedTime": "15 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
     "imageAlt": "Paper document with a stamp reading 'Appeal'",
     "steps": [
       {
-        "title": "Find Out Exactly Why Your SRD Was Declined",
-        "content": "Every decline has a reason, and a strong appeal is built around that reason. Log in at the official SRD portal at srd.sassa.gov.za with your ID number and cellphone number, or use our SRD status checker, and read the exact status next to your application. The most common 2026 decline reasons are: UIF registered, NSFAS registered, income source detected, identity verification failed, bank details pending, means test failed, and age outside range. Before you do anything else, read the page for your specific decline reason on our site so you understand what SASSA's automated system actually flagged.",
+        "title": "Check the declined month and the decision date",
+        "content": "Open the SRD status portal and find the exact month that was declined. Write down the decline reason and the date of the decision. The 90-day appeal window runs from that decision date, not from the day you first notice the status. Each month has its own decision, so an appeal for one month does not cover another.",
         "tips": [
-          "Write down your exact decline reason and the date it appeared on the portal — you will need both when you appeal.",
-          "Do not wait. The reconsideration window is 30 days and starts from the day the decision appears."
+          "Check the month, not a single overall application status.",
+          "Do not wait for a new month before appealing an older declined month."
         ]
       },
       {
-        "title": "Understand the Two-Step Appeals Process",
-        "content": "There are two separate levels of dispute, and you must do them in order. Step one is a reconsideration: you ask SASSA to look at your application again within 30 days of the decline, free of charge, at srd.sassa.gov.za. Step two is an appeal to the Independent Tribunal for Social Assistance Appeals (ITSAA): you have 90 days from the date of the reconsideration outcome to take the case further at srd-appeals.dsd.gov.za. If you try to appeal straight to the Tribunal without a reconsideration first, your case will usually be sent back and you will lose time.",
+        "title": "Understand what the tribunal can reassess",
+        "content": "An SRD appeal is decided by the Independent Tribunal for Social Assistance Appeals. The tribunal reassesses SASSA's decision on the information that was available when you applied. You cannot add new evidence at the appeal stage, and there is no document upload in the SRD appeal form. This is different from a fresh application, where you can update your details for a future month.",
         "tips": [
-          "You do not need a lawyer for either step — both are designed for applicants to complete on their own.",
-          "Keep every reference number you receive: the SRD application number, the reconsideration number, and the ITSAA case number."
+          "Do not pay anyone to \"prepare evidence\" for an SRD appeal.",
+          "If your information was wrong, correct it on the SRD portal for future months."
         ]
       },
       {
-        "title": "Gather Evidence That Matches Your Decline Reason",
-        "content": "Your appeal is only as strong as your proof. If SASSA flagged you as UIF or NSFAS registered, get an official letter or statement from that fund showing you are not registered or are not receiving payments. If you received income source detected, prepare bank statements showing the money was a family transfer, stokvel payout, or a once-off gift and not a salary. If identity verification failed, make sure your ID number, cellphone number and banking details are exactly right before you submit. Where you cannot get a document, a sworn affidavit can carry the explanation.",
+        "title": "Lodge the appeal on the official portal",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal. Enter your 13-digit ID number and the 10-digit phone number used for your SRD application, then tap send pin. Enter the 6-digit PIN sent to that phone. The portal shows the months with declined outcomes; open the month you want to appeal.",
         "tips": [
-          "Photograph or scan your documents clearly and save them as PDF or JPG before you start the online form.",
-          "Never hide real income — SASSA cross-checks your bank accounts, UIF and NSFAS records every month."
+          "The ID and phone number must match SASSA's records.",
+          "Old guides may list srd-appeals.dsd.gov.za; that address does not work. Use srd.sassa.gov.za."
         ]
       },
       {
-        "title": "Submit Your Reconsideration Online",
-        "content": "Go to srd.sassa.gov.za and log in with your ID number and cellphone number. Under your declined application you will see the option to apply for reconsideration. Answer the questions honestly, upload your supporting documents, and confirm the submission. You will receive an SMS with a reference number. Most reconsideration outcomes are sent within 30 days. If SASSA upholds the decline, the same portal will show that you now have the option to appeal to the Independent Tribunal.",
+        "title": "Choose the reason that fits your case",
+        "content": "Select the appeal reason from the list the portal shows. Examples include identity verification fixed, no alternative income source, not registered for UIF, and not registered for NSFAS. The reason must describe your actual case; the tribunal decides on the record SASSA already has.",
         "tips": [
-          "Take a screenshot of each step so you have proof if something goes wrong and you need to contact SASSA.",
-          "Use a stable internet connection — the SRD portal times out if you leave the page idle."
+          "Read the decline reason first so you choose the matching appeal reason.",
+          "If no listed reason fits, do not invent one; follow up with SASSA before submitting."
         ]
       },
       {
-        "title": "Appeal to the Independent Tribunal (ITSAA)",
-        "content": "If your reconsideration is refused, go to srd-appeals.dsd.gov.za to lodge a formal appeal with the Independent Tribunal for Social Assistance Appeals. Register with your ID number and mobile number, select the SRD R370 grant and the exact decline reason, explain in your own words why the decision is wrong, and attach the same evidence you used in the reconsideration. The Tribunal aims to decide within 90 days, and the outcome is sent by SMS. If the portal will not accept your phone number, you can email the Tribunal instead.",
+        "title": "Submit and keep proof",
+        "content": "Tap apply to record the appeal against that month. Take a screenshot of the confirmation. The appeal is linked to your ID number and the month, so you check that month's outcome later on the same portal rather than looking for a separate reference number.",
         "tips": [
-          "Lodge your appeal before the 90-day window closes - the Tribunal counts from the date of the reconsideration outcome.",
-          "Keep the SMS or email confirming your appeal submission - you need the case number to track it.",
-          "If the portal rejects your phone number, email the Tribunal using the contact details on srd-appeals.dsd.gov.za."
+          "Do not submit a second appeal for the same month; the portal rejects duplicates for that period.",
+          "Keep the phone number active because the PIN and decision are sent to it."
         ]
       },
       {
-        "title": "Track Your Appeal and Know the Timeline",
-        "content": "Once you have submitted, you can follow progress on the ITSAA portal using your case number. If a decision goes in your favour, SASSA pays the back pay for the months your grant was wrongly stopped, into the bank account or payment method on your application. If your appeal runs past 90 days without a decision, contact the Tribunal directly. For a full breakdown of what happens at every stage, from day 0 to the decision, see our guide to SASSA appeal timelines.",
+        "title": "Track the tribunal outcome",
+        "content": "The Independent Tribunal must finalise the appeal within 90 days of receiving it. Check the same month on https://srd.sassa.gov.za/appeals/appeal with a new PIN. The decision is also communicated electronically. An approved appeal sets aside the decline; a declined appeal confirms it for that month.",
         "tips": [
-          "Check your SMS inbox and your SRD portal status every week while the appeal is open.",
-          "The decision SMS sometimes takes a day or two longer than the portal update — trust the portal."
+          "Check once a week rather than every day.",
+          "If more than 90 days pass with no outcome, follow up through official SASSA channels."
         ]
       },
       {
-        "title": "What to Do If Your Appeal Is Declined",
-        "content": "A refused appeal does not ban you from the grant. Because the SRD R370 application window reopens each month, you can apply again in a later application period as long as you still qualify: your income must be below R624 per month and you must be between the ages of 18 and 59. If the decline reason was income-related, sort out the issue that changed your circumstances before re-applying. If you believe the system is still wrong, contact the SASSA SRD call centre and ask for a manual check of your file, with your ID number at hand.",
+        "title": "Know what happens after the decision",
+        "content": "If the appeal succeeds, SASSA must implement the tribunal's decision, but the appeal decision does not create a fixed payment date. Check your SRD status and the payment schedule. If the appeal is declined, you can submit a new SRD application for a later month if you still qualify. A refused appeal for one month does not ban you from applying again.",
         "tips": [
-          "A re-application is a brand-new application, not an extension — answer every question again and keep your proof.",
-          "Keep all reference numbers and SMS messages until the new application is approved."
+          "A new application is assessed on the information you provide for that month.",
+          "Do not pay anyone who claims they can reopen a closed appeal."
         ]
       }
     ],
     "faqs": [
       {
         "q": "How long do I have to appeal a declined SASSA SRD grant?",
-        "a": "You have 30 days from the decline to submit a SASSA reconsideration at srd.sassa.gov.za. If that is refused, you then have 90 days from the reconsideration outcome to appeal to the Independent Tribunal for Social Assistance Appeals (ITSAA)."
+        "a": "You have 90 days from the date of the decision to lodge an appeal on the official portal. The SRD appeal rules say an appeal lodged after that period will not be considered."
       },
       {
-        "q": "What is the difference between a reconsideration and an ITSAA appeal?",
-        "a": "A reconsideration is the first step, where SASSA re-examines your application itself within 30 days. An ITSAA appeal is the second step, heard by the independent Tribunal at srd-appeals.dsd.gov.za, and you can only lodge it after a reconsideration has been refused."
+        "q": "Do I need a reconsideration before I can appeal?",
+        "a": "No. There is no separate reconsideration step that must be completed before an SRD appeal. You can lodge the appeal directly on the official portal within 90 days. A review of your information for future months is not a substitute for the appeal."
       },
       {
-        "q": "Can I appeal more than once?",
-        "a": "For the same decline you get one reconsideration and one appeal. However, you can submit a brand-new SRD application in a later monthly application window if you still meet the income and age rules."
+        "q": "What is the difference between a reconsideration and an appeal?",
+        "a": "A reconsideration is a review of your information, often after you correct details. An appeal is a formal challenge to a declined month, decided by the Independent Tribunal. The appeal is lodged on the official portal and is subject to the 90-day window."
+      },
+      {
+        "q": "Can I add new bank statements or affidavits to my appeal?",
+        "a": "No. The SRD appeal rules say you may not submit evidence or information that was not provided to SASSA at the time of the application. The tribunal reassesses the decision on the information SASSA already had."
       },
       {
         "q": "Will I get back pay if my appeal succeeds?",
-        "a": "Yes. If a reconsideration or Tribunal appeal is decided in your favour, SASSA pays the grant you missed from the date the payments stopped, into your bank account or your chosen payment method."
+        "a": "An approved appeal means the tribunal set aside the declined decision. SASSA must then implement the outcome. The appeal decision does not guarantee a payment date, so check your SRD status and the SASSA payment schedule."
       },
       {
-        "a": "The ITSAA appeal window is 90 days from the outcome of your reconsideration. If you missed it, you can still try to lodge a late appeal on srd-appeals.dsd.gov.za and explain the reason for the delay — late appeals are considered in some cases. Because the SRD is reassessed every month, the most reliable path is simply to reapply in the next monthly window if you still qualify (income below R624, aged 18 to 59). For a missed reconsideration (30 days from the decline), contact the SASSA SRD call centre on 0800 60 10 11 and ask for a manual review of your file.",
-        "q": "I missed the 90-day appeal deadline — what can I do?"
+        "q": "I missed the 90-day appeal deadline. What can I do?",
+        "a": "The SRD rules do not provide a late-appeal route. You cannot reopen that month by appeal. Submit a new SRD application for a later month if you still qualify, and do not pay anyone who promises to reopen a closed appeal."
       },
       {
-        "a": "If srd-appeals.dsd.gov.za will not load or rejects your phone number, first check that your ID number and cellphone number exactly match the ones on your SRD application. Try a different browser, clear your cache, or use a laptop instead of a phone. If the portal still will not accept your number, you can email the Independent Tribunal instead — the Tribunal's contact details are listed on the srd-appeals.dsd.gov.za website. As a last resort, contact the SASSA SRD call centre on 0800 60 10 11 or visit a SASSA office with your ID and your decline SMS so an agent can assist.",
-        "q": "The appeal portal is not working / it won't accept my phone number — what do I do?"
+        "q": "The appeal portal will not accept my phone number. What should I do?",
+        "a": "Check that the ID number and phone number exactly match your SRD application. If your phone number changed, update it on the SRD portal first. Try another browser, and contact the SASSA helpline on 0800 60 10 11 if it still fails."
       }
     ],
     "tags": [
-      "SASSA appeal 2026",
-      "SRD reconsideration",
-      "ITSAA appeal",
-      "declined SRD R370"
+      "SASSA appeal",
+      "SRD appeal",
+      "ITSAA",
+      "declined SRD",
+      "90-day appeal"
     ],
-    "lastUpdated": "2026-08-20",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -242,7 +276,7 @@
       },
       {
         "title": "SRD Appeals Portal (Independent Tribunal)",
-        "url": "https://srd-appeals.dsd.gov.za"
+        "url": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
         "title": "Department of Social Development",
@@ -256,23 +290,23 @@
         "isExternal": false
       },
       {
-        "title": "Income Source Detected: Deep-Dive Appeal Guide",
+        "title": "Check an Appeal Status",
+        "url": "/appeals/appeal-status-check",
+        "isExternal": false
+      },
+      {
+        "title": "SRD Appeal Deadline",
+        "url": "/appeals/appeal-deadline",
+        "isExternal": false
+      },
+      {
+        "title": "Income Source Detected: Appeal Guide",
         "url": "/guides/income-source-detected-appeal",
         "isExternal": false
       },
       {
-        "title": "How Long Does a SASSA Appeal Take?",
-        "url": "/guides/appeal-timeline",
-        "isExternal": false
-      },
-      {
-        "title": "Common SASSA Problems",
-        "url": "/common-problems",
-        "isExternal": false
-      },
-      {
-        "title": "Lodge an Appeal on the ITSAA Portal",
-        "url": "https://srd-appeals.dsd.gov.za",
+        "title": "Official SRD Appeals Portal",
+        "url": "https://srd.sassa.gov.za/appeals/appeal",
         "isExternal": true
       }
     ],
@@ -280,27 +314,27 @@
       {
         "title": "Check my appeal deadline",
         "url": "/tools/appeal-deadline",
-        "description": "Calculator for reconsideration and tribunal windows"
+        "description": "Work out the 90-day SRD appeal window"
       },
       {
         "title": "Appeal hub",
         "url": "/appeals",
-        "description": "Quick guides for every appeal step"
+        "description": "Quick guides for each appeal step"
       },
       {
         "title": "Income source detected decline",
         "url": "/guides/income-source-detected-appeal",
-        "description": "Most common SRD decline reason"
+        "description": "What the flag means and how to appeal"
       },
       {
-        "title": "When you must reapply instead",
+        "title": "Reapplication vs appeal",
         "url": "/guides/srd-reapplication",
-        "description": "Reapplication vs appeal"
+        "description": "When a new application is the right route"
       },
       {
-        "title": "Track appeal status",
-        "url": "/status-check",
-        "description": "Check your SRD status"
+        "title": "Check appeal status",
+        "url": "/appeals/appeal-status-check",
+        "description": "Use your ID, phone and PIN"
       }
     ]
   },
@@ -364,9 +398,9 @@
       },
       {
         "title": "What to Do If Your Application Is Declined",
-        "content": "If SASSA declines your application, you will receive the reason in the SMS. Many declines are for a simple data error or a means test result that can be disputed. You have 30 days to ask SASSA to reconsider the decision, and then 90 days to appeal to the Independent Tribunal for Social Assistance Appeals if needed — the same process we explain in our guide to appealing a declined SASSA application. If the reason was that your income is over the threshold, wait until your income drops and re-apply with updated proof.",
+        "content": "If SASSA declines your application, the SMS gives the reason. Some declines are caused by a correctable data error; others reflect the income test for that month. You can appeal a declined month on the official SASSA SRD Appeals Portal within 90 days: https://srd.sassa.gov.za/appeals/appeal. The tribunal reassesses the information SASSA already had, so documents gathered afterwards cannot be added to the appeal. If your income has since dropped, apply again for a future month with updated information.",
         "tips": [
-          "Check your decline reason on our status pages so you fix the real issue before re-applying.",
+          "Check the exact decline reason before you act, and do not confuse a fresh application with an appeal of an earlier month.",
           "Do not submit a duplicate application while an existing one is still being processed — it can confuse the system."
         ]
       }
@@ -440,7 +474,8 @@
         "url": "/payment-calendar",
         "isExternal": false
       }
-    ]
+    ],
+    "last_updated": "2026-10-23"
   },
   {
     "id": "guide-reinstate-grant",
@@ -592,7 +627,7 @@
   {
     "id": "moya-app-sassa",
     "title": "Moya App SASSA Status Check & Payment Dates",
-    "description": "Use the free Moya app to check your SASSA SRD status and payment date, update banking details, and appeal. See what Moya shows and when to use the portal.",
+    "description": "Use the free Moya app to check your SASSA SRD status and payment date, update banking details, and see why appeals must go through the official portal.",
     "category": "Apps, USSD & WhatsApp",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
@@ -616,13 +651,13 @@
         ]
       },
       {
-      "title": "Check Your Status and Payment Date",
-      "content": "Inside the SASSA section, select 'Check Status'. You will be prompted to enter your 13-digit South African ID number. After entering it, your current SRD status for the most recent month will be displayed. If a Pay Day is shown, that is the date SASSA has scheduled your payment batch — not the day the money lands in your account. If no Pay Day is shown, your payment has not been scheduled yet. The app reads the same SRD system as the official srd.sassa.gov.za portal but presents it in a simpler, mobile-friendly format.",
-      "tips": [
-        "The Moya App shows only the latest month's status — use the SRD portal for your full history.",
-        "A Pay Day is a batch date: allow 1 to 3 business days after it for the money to reflect.",
-        "If the app has no Pay Day but the portal does, trust the portal — app screens can lag."
-      ]
+        "title": "Check Your Status and Payment Date",
+        "content": "Inside the SASSA section, select 'Check Status'. You will be prompted to enter your 13-digit South African ID number. After entering it, your current SRD status for the most recent month will be displayed. If a Pay Day is shown, that is the date SASSA has scheduled your payment batch — not the day the money lands in your account. If no Pay Day is shown, your payment has not been scheduled yet. The app reads the same SRD system as the official srd.sassa.gov.za portal but presents it in a simpler, mobile-friendly format.",
+        "tips": [
+          "The Moya App shows only the latest month's status — use the SRD portal for your full history.",
+          "A Pay Day is a batch date: allow 1 to 3 business days after it for the money to reflect.",
+          "If the app has no Pay Day but the portal does, trust the portal — app screens can lag."
+        ]
       },
       {
         "title": "Update Your Banking Details via Moya",
@@ -633,11 +668,11 @@
         ]
       },
       {
-        "title": "Submit an Appeal Through Moya",
-        "content": "You can also submit a SASSA SRD appeal using the Moya App. Go to the 'Appeals' section in the SASSA menu. Select the month you want to appeal, choose the reason for your decline, and write a short explanation. The app submits your appeal directly to the Independent Tribunal (ITSAA). You will receive a reference number for tracking.",
+        "title": "Know What Moya Cannot Do",
+        "content": "Moya can show SRD status and may offer a banking-details route, but it is not the official appeals channel. An SRD appeal must be lodged on https://srd.sassa.gov.za/appeals/appeal with your 13-digit ID number, the 10-digit phone number on your SRD application and the 6-digit PIN sent to that phone. Do not rely on an in-app appeal button or a reference number from a third-party app.",
         "tips": [
-          "Keep your reference number — you need it to check your appeal status.",
-          "The Moya App appeal process is identical to using the ITSAA website."
+          "Use Moya as a convenience, not as the authoritative record.",
+          "Always confirm the appeal outcome on the official appeals portal."
         ]
       }
     ],
@@ -646,47 +681,52 @@
         "q": "Is the Moya App safe for SASSA SRD services?",
         "a": "The Moya App is a popular free-data channel that routes into SASSA's SRD system and is widely used to check status and update details. Always verify your final status on the official portal at srd.sassa.gov.za before acting on what the app shows, and only download Moya from the official Google Play or Apple App Store."
       },
-    {
-      "q": "Do I need internet data for the Moya App SASSA services?",
-      "a": "No. Moya offers free data for SASSA SRD services. You can check your status, update banking details, and submit appeals without using your mobile data allowance."
-    },
-    {
-      "q": "Can I check my SASSA payment date on the Moya app?",
-      "a": "Moya shows your current SRD status for the latest month and, when SASSA has scheduled it, a Pay Day. A Pay Day is the date the payment batch runs, not the day the money reflects — allow 1 to 3 business days. If Moya shows no Pay Day, the batch has not been scheduled yet; check again after the 15th, when statuses are usually updated."
-    },
-    {
-      "q": "Why does the Moya app show a different status to the SRD portal?",
-      "a": "Moya reads from the same SRD system, but app screens can lag behind the portal after a status change. Treat srd.sassa.gov.za as authoritative and check again before you act. If the two still disagree after 24 hours, use the portal result and contact SASSA on 0800 60 10 11."
-    },
-    {
-      "q": "Can I update my banking details on Moya before pay day?",
-      "a": "Yes, Moya offers a banking-details update, but changes take 3 to 5 working days to verify and may not apply to a batch already scheduled. If your Pay Day is close, confirm the change was accepted before relying on it, and do not close the old account until the new details are verified."
-    }
-  ],
+      {
+        "q": "Do I need internet data for the Moya App SASSA services?",
+        "a": "Moya says it offers free data for some SASSA services. Status checks may work without using your data allowance, but the official appeal must still be lodged on the SRD appeals portal."
+      },
+      {
+        "q": "Can I check my SASSA payment date on the Moya app?",
+        "a": "Moya shows your current SRD status for the latest month and, when SASSA has scheduled it, a Pay Day. A Pay Day is the date the payment batch runs, not the day the money reflects — allow 1 to 3 business days. If Moya shows no Pay Day, the batch has not been scheduled yet; check again after the 15th, when statuses are usually updated."
+      },
+      {
+        "q": "Why does the Moya app show a different status to the SRD portal?",
+        "a": "Moya reads from the same SRD system, but app screens can lag behind the portal after a status change. Treat srd.sassa.gov.za as authoritative and check again before you act. If the two still disagree after 24 hours, use the portal result and contact SASSA on 0800 60 10 11."
+      },
+      {
+        "q": "Can I update my banking details on Moya before pay day?",
+        "a": "Yes, Moya offers a banking-details update, but changes take 3 to 5 working days to verify and may not apply to a batch already scheduled. If your Pay Day is close, confirm the change was accepted before relying on it, and do not close the old account until the new details are verified."
+      },
+      {
+        "q": "Can I submit a SASSA appeal through Moya?",
+        "a": "No. The SRD appeal is lodged on the official portal at https://srd.sassa.gov.za/appeals/appeal. Moya may show status information, but it is not the place to lodge or track the Independent Tribunal appeal."
+      }
+    ],
     "tags": [
       "moya app",
       "moya sassa",
       "free data sassa",
       "sassa status check app"
     ],
-  "lastUpdated": "2026-10-23",
-  "author": "Lucky Cungwa",
-  "relatedLinks": [
-    {
-      "title": "SASSA payment calendar",
-      "url": "/payment-calendar"
-    },
-    {
-      "title": "Download Moya App",
-      "url": "https://moya.app",
-      "isExternal": true
-    },
-    {
-      "title": "SASSA SRD Portal",
-      "url": "https://srd.sassa.gov.za",
-      "isExternal": true
-    }
-  ]
+    "lastUpdated": "2026-10-23",
+    "author": "Lucky Cungwa",
+    "relatedLinks": [
+      {
+        "title": "SASSA payment calendar",
+        "url": "/payment-calendar"
+      },
+      {
+        "title": "Download Moya App",
+        "url": "https://moya.app",
+        "isExternal": true
+      },
+      {
+        "title": "SASSA SRD Portal",
+        "url": "https://srd.sassa.gov.za",
+        "isExternal": true
+      }
+    ],
+    "last_updated": "2026-10-23"
   },
   {
     "id": "ussd-codes",
@@ -883,7 +923,7 @@
       },
       {
         "title": "What WhatsApp Cannot Do - Use the Portals for These",
-        "content": "WhatsApp is for status and review checks, not for every task. Banking details changes, a new SRD application, and appeals against a decline are all done on the official websites. Update banking details and reapply on srd.sassa.gov.za, and appeal a decline on srd-appeals.dsd.gov.za. Anything or anyone telling you that WhatsApp can fix a declined grant or change your bank details is not an official SASSA service.",
+        "content": "WhatsApp is for status and review checks, not for every task. Banking details changes, a new SRD application, and appeals against a decline are all done on the official websites. Update banking details and reapply on srd.sassa.gov.za, and appeal a decline on https://srd.sassa.gov.za/appeals/appeal. Anything or anyone telling you that WhatsApp can fix a declined grant or change your bank details is not an official SASSA service.",
         "tips": [
           "Keep your SRD portal login safe - it is the only place you update banking details.",
           "Appeals are free and run for 90 days from the decline date."
@@ -913,7 +953,7 @@
       },
       {
         "q": "Can I appeal a declined grant through WhatsApp?",
-        "a": "No. Appeals are lodged on the official appeals portal at srd-appeals.dsd.gov.za. The WhatsApp self-service does not submit appeals."
+        "a": "No. Appeals are lodged on the official appeals portal at https://srd.sassa.gov.za/appeals/appeal. The WhatsApp self-service does not submit appeals."
       },
       {
         "q": "Can WhatsApp fix a banking-details verification failure?",
@@ -1117,7 +1157,7 @@
       },
       {
         "title": "How to Appeal a Stokvel or e-Wallet Decline",
-        "content": "Go to srd-appeals.dsd.gov.za and select the month that was declined. Choose 'Income Source Detected' as the reason. In your explanation, state clearly: 'This deposit was not income. It was a stokvel savings payout from [group name].' or 'This was a once-off family e-wallet transfer, not regular income.' Attach a bank statement showing the deposit and a letter from your stokvel group explaining the payout structure (if applicable).",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal and select the month that was declined. Choose 'Income Source Detected' as the reason. In your explanation, state clearly: 'This deposit was not income. It was a stokvel savings payout from [group name].' or 'This was a once-off family e-wallet transfer, not regular income.' Attach a bank statement showing the deposit and a letter from your stokvel group explaining the payout structure (if applicable).",
         "tips": [
           "Be specific about the date and amount of the deposit.",
           "If possible, get a written statement from your stokvel members confirming it was savings."
@@ -1154,7 +1194,7 @@
     "relatedLinks": [
       {
         "title": "Submit SRD Appeal",
-        "url": "https://srd-appeals.dsd.gov.za",
+        "url": "https://srd.sassa.gov.za/appeals/appeal",
         "isExternal": true
       },
       {
@@ -1166,63 +1206,71 @@
   },
   {
     "id": "appeal-timeline",
-    "title": "How Long Does a SASSA Appeal Take? Full 2026 Timeline & Tracking Guide",
-    "description": "SASSA SRD appeals take 60 to 90 days. This guide explains the full process, what happens at each stage, how to check your appeal status, and what to do if it is taking too long.",
+    "title": "How Long Does a SASSA SRD Appeal Take?",
+    "description": "The SRD appeal has two 90-day periods: lodge within 90 days of the decision, then the tribunal must finalise it within 90 days of receiving it.",
     "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
-    "estimatedTime": "10 minutes",
+    "estimatedTime": "8 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
     "imageAlt": "Calendar with papers and a pen showing a timeline",
     "steps": [
       {
-        "title": "Submit Your Appeal (Day 0)",
-        "content": "The appeal process starts when you submit your appeal on the ITSAA portal at srd-appeals.dsd.gov.za. You can also appeal via the SASSA WhatsApp line or Moya App. Your appeal must be submitted within 90 days of the decline. After submission, you will receive a reference number. Write this down — you need it to track your appeal. One appeal per month, one month at a time.",
+        "title": "SASSA decision (day 0)",
+        "content": "SASSA records a decision for the month. The 90-day window to lodge an appeal starts on that decision date. Check the exact month and reason on the SRD status portal before you start.",
         "tips": [
-          "Submit your appeal as early as possible — do not wait until the 90-day deadline.",
-          "Take a screenshot of the confirmation page showing your reference number."
+          "Each month has its own decision and its own window.",
+          "Write down the decision date and the decline reason."
         ]
       },
       {
-        "title": "Acknowledgment Receipt (Day 1–3)",
-        "content": "Within 1 to 3 working days, you should receive an SMS or email confirming that the Independent Tribunal for Social Assistance Appeals (ITSAA) has received your appeal. This acknowledgment includes your appeal reference number. If you do not receive this within 5 days, contact the SASSA helpline to confirm your appeal was logged correctly.",
+        "title": "Lodge the appeal (within 90 days)",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal. Enter your 13-digit ID number and the 10-digit phone number used on your SRD application, then enter the 6-digit PIN sent to that phone. Open the declined month and choose an appeal reason. There is no separate reference number to create; the appeal is linked to your ID and the month.",
         "tips": [
-          "The acknowledgment SMS comes from ITSAA, not from SASSA.",
-          "If you changed your phone number, the SMS will go to your old number — check the portal instead."
+          "Do not wait until the last day in case the portal is unavailable.",
+          "The portal rejects an appeal after the cutoff and rejects a duplicate for the same month."
         ]
       },
       {
-        "title": "Case Assignment & Review (Day 7–30)",
-        "content": "Your appeal is assigned to an independent tribunal member. The tribunal member reviews: your original application, SASSA's reason for decline, and any evidence you submitted with your appeal. The tribunal may request additional information from SASSA. During this period, your appeal status on the ITSAA portal will show as 'Appeal Pending'. No action is needed from you — you are waiting for the tribunal's decision.",
+        "title": "Tribunal receives the appeal",
+        "content": "The Independent Tribunal must finalise the appeal within 90 days from the date it receives the appeal. During this period the month may show as pending. Pending means no decision is recorded yet; it is not an approval or a decline.",
         "tips": [
-          "Do not submit a second appeal during this period — it slows down the process.",
-          "The tribunal is independent of SASSA, so they can overrule SASSA's decision."
+          "The tribunal reassesses the information SASSA already had.",
+          "You cannot add new evidence at the appeal stage."
         ]
       },
       {
-        "title": "Decision Issued (Day 30–60)",
-        "content": "The tribunal makes a decision: Appeal Approved or Appeal Declined. If approved, ITSAA notifies SASSA to process payment. If declined, the letter explains why. You will receive an SMS with the outcome. You can also check the ITSAA portal using your reference number. If your appeal is approved, SASSA will pay you for the declined month within 7 to 14 working days.",
+        "title": "Decision communicated",
+        "content": "The tribunal communicates its decision electronically, and the outcome is recorded against the month on the appeals portal. An approved appeal sets aside the declined decision. A declined appeal confirms the decision for that month.",
         "tips": [
-          "An approved appeal means you receive back pay for that specific declined month.",
-          "If your appeal is declined, you can request reasons in writing from ITSAA."
+          "Check the month you appealed, not a single overall status.",
+          "Keep the phone number on your application active."
         ]
       },
       {
-        "title": "What If Your Appeal Exceeds 90 Days?",
-        "content": "If your appeal has been pending for more than 90 days, you can escalate. Call the SASSA helpline at 0800 60 10 11 and ask for a status update on your appeal. You can also contact the Department of Social Development directly at 012 312 7726. If the delay continues, visit your nearest SASSA office with your reference number and ask them to follow up with ITSAA.",
+        "title": "SASSA implements the decision",
+        "content": "If the appeal succeeds, SASSA must implement the outcome. Payment timing is separate from the tribunal decision and is not guaranteed by it. Check your SRD status and the SASSA payment schedule for the next step.",
         "tips": [
-          "Keep a log of every call — note the date, time, and who you spoke to.",
-          "Legal Aid South Africa (0800 110 110) can assist if your appeal is unreasonably delayed."
+          "Do not pay anyone to \"release\" an appeal payment.",
+          "If more than 90 days pass after lodging with no outcome, follow up through official channels."
         ]
       }
     ],
     "faqs": [
       {
+        "q": "How long does a SASSA SRD appeal take in total?",
+        "a": "You have 90 days from the decision to lodge the appeal, and the tribunal then has up to 90 days from receiving it to finalise it. If you lodge on the last day of your window, the two periods can add up to about six months. That is the legal maximum, not a promise that a decision will take that long."
+      },
+      {
         "q": "Why is my SASSA appeal taking more than 90 days?",
-        "a": "High volumes of appeals (cause delays (SASSA does not publish exact figures). The tribunal processes appeals in order of receipt. If yours is taking longer, call 0800 60 10 11 and ask for a status update."
+        "a": "The 90-day period is a deadline for the tribunal, not a guarantee. If it passes with no outcome, check the portal and follow up through official SASSA channels. Do not pay anyone who claims they can speed up the tribunal."
       },
       {
         "q": "Can I check my SASSA appeal status online?",
-        "a": "Yes. Go to srd-appeals.dsd.gov.za, enter your ID number and reference number, and you will see whether your appeal is Pending, Approved, or Declined."
+        "a": "Yes. Go to https://srd.sassa.gov.za/appeals/appeal, enter your ID number and the phone number on your SRD application, then enter the PIN sent to that phone. The portal shows the outcome for each month."
+      },
+      {
+        "q": "When will I be paid after a successful appeal?",
+        "a": "There is no fixed payment date in the appeal decision. An approved appeal means the tribunal set aside the decline; SASSA must then implement the outcome. Check your SRD status and the payment schedule."
       }
     ],
     "tags": [
@@ -1232,18 +1280,23 @@
       "srd appeal pending",
       "appeal status"
     ],
-    "lastUpdated": "2026-07-07",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
-        "title": "ITSAA Appeals Portal",
-        "url": "https://srd-appeals.dsd.gov.za",
+        "title": "Lodge or Check an Appeal",
+        "url": "https://srd.sassa.gov.za/appeals/appeal",
         "isExternal": true
       },
       {
-        "title": "Legal Aid South Africa",
-        "url": "https://www.legal-aid.co.za",
-        "isExternal": true
+        "title": "SRD Appeal Deadline",
+        "url": "/appeals/appeal-deadline",
+        "isExternal": false
+      },
+      {
+        "title": "How to Appeal",
+        "url": "/appeals/how-to-appeal",
+        "isExternal": false
       }
     ]
   },
@@ -1259,7 +1312,7 @@
     "steps": [
       {
         "title": "How Monthly Reassessment Works",
-        "content": "Every month, SASSA runs an automated check on every SRD grant recipient. The system scans government databases to see if your situation has changed. It checks: Department of Home Affairs (identity still valid), your bank accounts (deposits still under R624), SARS (no new income), UIF (no unemployment benefits), and NSFAS (no student funding). If everything is fine, you stay approved. If anything changed, you may be declined for that month — even if you were approved the month before.",
+        "content": "Every month, SASSA runs an automated check on every SRD grant recipient. The system scans government databases to see if your situation has changed. It checks: Department of Home Affairs (identity still valid), your bank accounts (deposits still under R624), SARS (no new income), UIF (no unemployment benefits), and NSFAS (no student funding). If everything is fine, you stay approved. If anything changed, you may be declined for that month — even if you were approved the month before.<p><strong>Assessment vs review:</strong> this monthly check is an assessment of your SRD eligibility. It is not the same as a grant review or verification notice. If SASSA asks you to attend an office, see our <a href=\"/guides/grant-verification-process\">SASSA grant review and verification guide</a>.</p>",
         "tips": [
           "You do not need to reapply each month — SASSA automatically reassesses you.",
           "A decline in one month does not affect the next month — you can be approved again."
@@ -1283,7 +1336,7 @@
       },
       {
         "title": "What to Do If You Are Declined After Being Approved",
-        "content": "Getting declined after months of approval does not mean you did anything wrong. It may mean the system detected something new. Check your status on the SRD portal to see the specific reason. If you believe the decline is incorrect, submit an appeal within 90 days. Your grant can be reinstated for future months even without an appeal — the assessment resets each month — but an appeal is needed to get back pay for the declined month.",
+        "content": "Getting declined after months of approval does not mean you did anything wrong. It may mean the system detected something new. Check your status on the SRD portal to see the specific reason. If you believe the decline is incorrect, submit an appeal within 90 days. Your grant can be reinstated for future months even without an appeal — the assessment resets each month — but an appeal is the way to challenge the declined month; payment timing is separate.",
         "tips": [
           "You can be approved in January, declined in February, and approved again in March.",
           "Always appeal declined months — you are entitled to the money if you qualify."
@@ -1291,7 +1344,7 @@
       },
       {
         "title": "Approved One Month, Declined the Next",
-        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in one month and 'Declined' in the next -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For October 2026, SASSA confirmed the SRD payment dates as 22 and 23 October 2026 -- you are paid on one of those dates according to your own 'Pay Day', so until your status shows that date it is normal to see 'Approved' with no date - your batch date appears once the October payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days to claim back pay for that month.",
+        "content": "The SRD grant is assessed afresh for every month. It is completely normal for your status to show 'Approved' in one month and 'Declined' in the next -- or the reverse -- because your circumstances are re-checked each cycle. This is not a penalty and it does not mean your grant has been cancelled. For October 2026, SASSA confirmed the SRD payment dates as 22 and 23 October 2026 -- you are paid on one of those dates according to your own 'Pay Day', so until your status shows that date it is normal to see 'Approved' with no date - your batch date appears once the October payment batch is released. Check your [status](/status-check) on the official portal, read what [Approved means](/status/approved), and if you were declined, appeal within 90 days if the record is wrong. New evidence cannot be added at the appeal stage.",
         "tips": [
           "A decline for one month never cancels your application for the next.",
           "Check your status after the 15th of each month for the most reliable result."
@@ -1313,7 +1366,7 @@
       },
       {
         "q": "Why was my SRD approved last month but declined this month?",
-        "a": "SASSA assesses SRD eligibility fresh every single month. Approval in one month does not guarantee approval in the next, because your circumstances are re-checked against your bank accounts, UIF, SARS, NSFAS and Home Affairs records each cycle. A bank deposit that pushed your total over R624, a UIF payment received, an NSFAS record still showing as active, or a Home Affairs data update can each trigger a decline for the new month — even if nothing about your situation feels different to you. A decline for one month does not affect your application for the following month, and it does not mean you lost the grant permanently. Check the specific decline reason on the SRD portal, then see our guides for the most common reasons: [income source detected](/decline-reason/income-source-detected), [UIF registered](/decline-reason/uif-registered), [NSFAS registered](/decline-reason/nsfas-registered), and [identity verification failed](/decline-reason/identity-verification-failed). If the decline is wrong, lodge an appeal within 90 days to get back pay for that month."
+        "a": "SASSA assesses SRD eligibility fresh every single month. Approval in one month does not guarantee approval in the next, because your circumstances are re-checked against your bank accounts, UIF, SARS, NSFAS and Home Affairs records each cycle. A bank deposit that pushed your total over R624, a UIF payment received, an NSFAS record still showing as active, or a Home Affairs data update can each trigger a decline for the new month — even if nothing about your situation feels different to you. A decline for one month does not affect your application for the following month, and it does not mean you lost the grant permanently. Check the specific decline reason on the SRD portal, then see our guides for the most common reasons: [income source detected](/decline-reason/income-source-detected), [UIF registered](/decline-reason/uif-registered), [NSFAS registered](/decline-reason/nsfas-registered), and [identity verification failed](/decline-reason/identity-verification-failed). If the decline is wrong, lodge an appeal within 90 days if the record is wrong."
       }
     ],
     "tags": [
@@ -1323,7 +1376,7 @@
       "sassa reapplication",
       "grant review"
     ],
-    "lastUpdated": "2026-10-22",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -1354,6 +1407,11 @@
       {
         "title": "SASSA Helpline",
         "url": "tel:0800601011",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Grant Review or Verification Notice",
+        "url": "/guides/grant-verification-process",
         "isExternal": false
       }
     ]
@@ -1461,7 +1519,7 @@
     "steps": [
       {
         "title": "Know the Official SASSA Websites",
-        "content": "SASSA has only a few official websites. Committing these URLs to memory will protect you from most scams: srd.sassa.gov.za (SRD applications and status), www.sassa.gov.za (main SASSA site), srd-appeals.dsd.gov.za (appeals), and srd.dsd.gov.za (additional SRD services). Any website that looks similar but uses a different domain — like sassa-status-check.co.za, srd-sassa-gov.za, or sassahelp.co.za — is fake. Scammers buy domains that look like the real one to trick you.",
+        "content": "SASSA has only a few official websites. Committing these URLs to memory will protect you from most scams: srd.sassa.gov.za (SRD applications and status), www.sassa.gov.za (main SASSA site), https://srd.sassa.gov.za/appeals/appeal (appeals), and srd.dsd.gov.za (additional SRD services). Any website that looks similar but uses a different domain — like sassa-status-check.co.za, srd-sassa-gov.za, or sassahelp.co.za — is fake. Scammers buy domains that look like the real one to trick you.",
         "tips": [
           "The real SASSA websites all end in .gov.za — no exceptions.",
           "Bookmark the official URLs in your browser so you never type them from memory."
@@ -2119,10 +2177,9 @@
       },
       {
         "title": "Using the Moya App for SASSA Tasks and Small Earnings",
-        "content": "The Moya App is a free, data-free messaging platform that offers SASSA SRD services such as status checks, banking detail updates, and appeals. Moya also lets you earn airtime, data, or MoyaPoints by completing small tasks and surveys. Because these earnings are paid out as airtime, data, or app credits rather than a bank deposit, they do not create a deposit that counts toward the R624 total. Always download the Moya App from the official Google Play or Apple App Store. Note that Moya's SASSA services do not cover biometric uploads — you need your own data for that.",
+        "content": "The Moya App is a free, data-free messaging platform that offers SASSA SRD services such as status checks and banking detail updates. Moya also lets you earn airtime, data, or MoyaPoints by completing small tasks and surveys. Because these earnings are paid out as airtime, data, or app credits rather than a bank deposit, they do not create a deposit that counts toward the R624 total. Always download the Moya App from the official Google Play or Apple App Store. Note that Moya's SASSA services do not cover biometric uploads — you need your own data for that, and Moya cannot lodge an SRD appeal.",
         "tips": [
-          "MoyaPoints and airtime earnings are not bank deposits, so they do not count toward the R624 deposit total.",
-          "Use Moya for SASSA status checks and banking updates — it is free of data charges for those services."
+          "Use Moya for status checks, not as the official appeals channel."
         ]
       },
       {
@@ -2138,15 +2195,15 @@
         "content": "Some online platforms pay out in airtime, vouchers, or app credits that never enter a South African bank account. Because the R624 check is based on bank deposits, those credits do not appear in the deposit check. However, they are still income: you must answer SASSA honestly when you apply or appeal, and SASSA may cross-check other records such as payroll, UIF, SARS, or Home Affairs data. If you are paid into PayPal or a crypto wallet, that money only counts toward the R624 deposit check when it is transferred into a bank account linked to your ID number.",
         "tips": [
           "Income paid into PayPal or a crypto wallet only becomes a deposit when you move it into a South African bank account linked to your ID.",
-          "Keep total monthly deposits below R624 and keep proof of your income to support an appeal."
+          "Keep proof of your income for future applications; an appeal uses the record SASSA already had."
         ]
       },
       {
         "title": "How to Appeal If Your SRD Was Declined",
-        "content": "If SASSA declined your grant because your deposits exceeded R624, you can appeal. Go to srd-appeals.dsd.gov.za and select the declined month. Choose the reason that matches your situation (such as 'Income Source Detected'), and in your explanation describe your circumstances honestly, for example: 'I run a small informal business selling vegetables. The deposit of RXXX was from a once-off sale, not a salary. My income for the month was still below R624.' Write truthfully — a false appeal is more likely to be rejected. If your total deposits genuinely exceeded R624, the appeal may not succeed. If you were close to the limit or the decline was due to a misunderstanding, the Independent Tribunal may rule in your favour. Submit your appeal within 90 days of the decline.",
+        "content": "If SASSA declined your grant because your deposits exceeded R624, you can appeal. Go to https://srd.sassa.gov.za/appeals/appeal and select the declined month. Choose the reason that matches your situation (such as 'Income Source Detected'), and in your explanation describe your circumstances honestly, for example: 'I run a small informal business selling vegetables. The deposit of RXXX was from a once-off sale, not a salary. My income for the month was still below R624.' Write truthfully — a false appeal is more likely to be rejected. If your total deposits genuinely exceeded R624, the appeal may not succeed. If you were close to the limit or the decline was due to a misunderstanding, the Independent Tribunal may rule in your favour. Submit your appeal within 90 days of the decline.",
         "tips": [
           "Every declined month must be appealed separately within 90 days.",
-          "Keep bank statements and proof of income so you can support your appeal with evidence."
+          "Keep bank statements for future applications and record corrections; they cannot be uploaded to the SRD appeal."
         ]
       }
     ],
@@ -2190,7 +2247,7 @@
       },
       {
         "title": "Submit SRD Appeal",
-        "url": "https://srd-appeals.dsd.gov.za",
+        "url": "https://srd.sassa.gov.za/appeals/appeal",
         "isExternal": true
       },
       {
@@ -2218,87 +2275,88 @@
         "url": "/guides/free-skills-courses-south-africa",
         "description": "Build skills at no cost"
       }
-    ]
+    ],
+    "last_updated": "2026-10-23"
   },
   {
     "id": "income-source-detected-appeal",
-    "title": "How to Fix 'Income Source Detected' SASSA Decline: Step-by-Step ITSAA Appeal Guide",
-    "description": "Your SRD was declined because SASSA says they detected 'alternative income'. Most of the time this is a mistake — a family transfer, stokvel payout, or once-off deposit. Here is exactly how to appeal to the Independent Tribunal and get your back pay.",
+    "title": "Income Source Detected: SASSA Appeal Guide",
+    "description": "SASSA flagged an alternative income source. See what the check means, what the tribunal can reassess, and how to appeal the declined month within 90 days.",
     "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
-    "estimatedTime": "15 minutes",
+    "estimatedTime": "10 minutes",
     "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=400&fit=crop&auto=format",
     "imageAlt": "Paper document with a stamp reading 'Appeal'",
     "steps": [
       {
-        "title": "Understand Why You Got 'Income Source Detected'",
-        "content": "When SASSA declines your SRD and shows 'Income Source Detected', it means their automated system found deposits in your bank accounts that pushed your total monthly deposits over R624. This is the most common decline reason in 2026 — the system scans all bank accounts linked to your ID number. It counts every deposit: salary, family gift, stokvel payout, e-wallet transfer, refund, even money you transferred from your own savings account. The system does not know the difference between a salary and a gift from your mother. If that total exceeds R624, you are declined. The good news: this is the most winnable appeal category because many deposits are not actually 'income'.",
+        "title": "Understand what \"Income Source Detected\" means",
+        "content": "\"Income Source Detected\" means SASSA's checks found an alternative income source for that month. The check can use bank and government records, and a family transfer, once-off deposit or old record can trigger a flag. It does not automatically prove you earned a salary, but it does mean SASSA did not accept that you met the income test for that month.",
         "tips": [
-          "Check your bank statements for the declined month to identify what deposit triggered the flag.",
-          "The most common false positives: family support transfers, stokvel payouts, and retailer refunds."
+          "Do not assume the flag is wrong; first identify what SASSA recorded.",
+          "The SRD income threshold is R624 per month."
         ]
       },
       {
-        "title": "Gather Your Evidence Before You Appeal",
-        "content": "Before opening the ITSAA portal, gather your evidence. You will need: your bank statement for the declined month showing the specific deposit, proof that the deposit was not income (a letter from your stokvel, a family member's affidavit saying they sent you money as a gift, or a receipt showing the deposit was a refund), your 13-digit ID number, and your original SRD application reference number if you have it. The quality of your evidence determines whether you win. A vague explanation like 'that money was not income' is weaker than 'I have attached a bank statement and an affidavit from my sister confirming she sent me R500 for my child's school fees.' Take screenshots of relevant SMS or WhatsApp conversations showing the purpose of the transfer.",
+        "title": "Check the decline reason and decision date",
+        "content": "Open the SRD status portal and confirm the exact month, the reason shown and the decision date. The 90-day appeal window runs from that date. If several months were declined, each month is a separate decision with its own window.",
         "tips": [
-          "Request a free bank statement from your bank's app or visit a branch — most give 3 months free.",
-          "If you know who sent you the money, ask them to write a brief letter explaining the purpose."
+          "Write down the month and the reason before opening the appeals portal.",
+          "Do not wait for a later month before appealing an older one."
         ]
       },
       {
-        "title": "Access the ITSAA Appeals Portal",
-        "content": "Go to srd-appeals.dsd.gov.za on your phone or computer. This is the official Independent Tribunal for Social Assistance Appeals website. On the homepage, enter your 13-digit SA ID number. Select the month that was declined from the dropdown. Click Submit. The system will look up your application and show your decline reason. If you see multiple declined months, you must submit a separate appeal for each month — one appeal per month, one month at a time.",
+        "title": "Decide whether an appeal fits",
+        "content": "An appeal is for a decision you disagree with, not a way to add new proof. The tribunal reassesses the information SASSA already had. If the record shows income above the threshold and that record is correct, an appeal is unlikely to succeed. If the record is wrong or does not reflect your position for that month, you can appeal the declined month.",
         "tips": [
-          "Bookmark srd-appeals.dsd.gov.za — it is the only legitimate appeals portal.",
-          "If the portal does not load, try Chrome — some older browsers have compatibility issues."
+          "Correct wrong bank or contact details on the SRD portal for future months.",
+          "A correction for future months does not change the month you are appealing."
         ]
       },
       {
-        "title": "Write Your Appeal Explanation",
-        "content": "This is the most important step. The form has a text box where you explain why the deposit should not count as income. Write clearly and factually. A good explanation: 'On 15 March 2026, my sister sent me R500 via eWallet for my child's school uniform. This was a once-off family gift, not a salary or regular income. My total bank deposits for March were R500 plus my SRD grant of R370, totalling R870. I did not receive any salary, UIF, or other income. I have attached my bank statement and an affidavit from my sister as proof.' Be specific about dates, amounts, and the source. If you attached documents, mention them. If the deposit was a stokvel payout, explain it was your own savings being returned.",
+        "title": "Lodge the appeal on the official portal",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal. Enter your 13-digit ID number and the 10-digit phone number used on your SRD application, then tap send pin. Enter the 6-digit PIN sent to that phone. Open the declined month and choose the reason that matches your case, such as no alternative income source.",
         "tips": [
-          "Do not lie — ITSAA can request bank statements from SASSA to verify your claims.",
-          "Keep your explanation between 3 to 6 sentences — tribunal members read hundreds per day."
+          "The SRD appeal form is a short reason selection, not a document-upload form.",
+          "The ID and phone number must match SASSA's records."
         ]
       },
       {
-        "title": "Upload Supporting Documents",
-        "content": "The ITSAA portal allows document uploads (PDF, JPG, PNG — max 5MB per file). Upload your bank statement highlighting the specific deposit, any supporting letters or affidavits, and any SMS or WhatsApp screenshots. If you cannot upload documents from your phone, you can still submit the appeal without attachments — just be very specific in your written explanation. The tribunal may contact you for documents later. Review everything before clicking Submit. Once submitted, you cannot edit your appeal.",
+        "title": "Do not rely on new evidence",
+        "content": "The SRD appeal rules say you may not submit evidence or information that was not provided to SASSA when you applied. That means bank statements, affidavits or WhatsApp screenshots gathered after the application cannot be added to the SRD appeal. The tribunal decides on the information SASSA already had.",
         "tips": [
-          "Take clear photos with good lighting — blurry documents are not accepted as evidence.",
-          "Use a scanning app like CamScanner if you do not have a scanner."
+          "Do not pay anyone to \"prepare an evidence pack\" for an SRD appeal.",
+          "If you need to update your details, use the SRD portal for a future month."
         ]
       },
       {
-        "title": "Track Your Appeal Status",
-        "content": "After submitting, you will receive an acknowledgment SMS from ITSAA within 1 to 3 working days. The SMS includes your appeal reference number — write it down. Check your status anytime at srd-appeals.dsd.gov.za. Statuses: 'Appeal Pending' (under review), 'Appeal Approved' (you won), 'Appeal Declined' (tribunal agreed with SASSA). Most appeals take 60 to 90 days, but simple cases with clear evidence can be resolved in 30 days. If approved, SASSA will pay you within 7 to 14 working days.",
+        "title": "Track the outcome and plan the next month",
+        "content": "The tribunal must finalise the appeal within 90 days of receiving it. Check the same month on the appeals portal with a new PIN. An approved appeal sets aside the decline; a declined appeal confirms it for that month. Either way, you can submit a new SRD application for a later month if you still qualify.",
         "tips": [
-          "Check your appeal status once per week — not daily.",
-          "If your appeal exceeds 90 days with no decision, call 0800 60 10 11 and ask for a status update."
-        ]
-      },
-      {
-        "title": "What to Do If Your Appeal Is Declined",
-        "content": "If ITSAA declines your appeal, first read the reason carefully. If you have new evidence, submit a fresh appeal for the same month with the new evidence. If your appeal was declined because your deposits genuinely exceeded R624, focus on keeping future months under the limit. You can request reasons in writing from ITSAA by calling 0800 60 10 11. If you believe the system is fundamentally wrong, escalate to the Department of Social Development at 012 312 7726 or visit your nearest SASSA office with your evidence.",
-        "tips": [
-          "A declined appeal does not affect future months — you can still be approved for the next month.",
-          "Legal Aid SA (0800 110 110) can assist if you want to challenge the decision further."
+          "Check once a week rather than every day.",
+          "A declined appeal for one month does not ban you from applying again."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "How long does an 'Income Source Detected' appeal take?",
-        "a": "Most appeals are decided within 60 to 90 days. Simple cases with clear evidence can be approved in 30 days. During peak periods, the tribunal may take the full 90 days."
+        "q": "How long does an \"Income Source Detected\" appeal take?",
+        "a": "The Independent Tribunal must finalise the appeal within 90 days of receiving it. That is the legal limit, not a promise of an earlier decision."
       },
       {
         "q": "Can I appeal if the deposit was actually my salary?",
-        "a": "If you received a salary that pushed you over R624, you genuinely exceeded the threshold and the appeal is unlikely to succeed. However, if the income was once-off, mention this — the tribunal has discretion."
+        "a": "If the record shows income above the R624 threshold for that month and the record is correct, an appeal is unlikely to succeed. An appeal reassesses the existing record; it is not a route to explain away income that SASSA correctly recorded."
       },
       {
-        "q": "Can I appeal through Moya App or WhatsApp?",
-        "a": "Yes, both methods work. However, they do not allow document uploads. For an 'Income Source Detected' appeal where evidence matters, use the ITSAA website."
+        "q": "Can I upload bank statements or an affidavit?",
+        "a": "No. The SRD appeal rules do not allow evidence or information that was not provided at application, and the SRD appeal form does not provide a document upload. The tribunal reassesses the information SASSA already had."
+      },
+      {
+        "q": "Can I appeal through the Moya app or WhatsApp?",
+        "a": "No. Those channels can show your SRD application status, but the appeal must be lodged on the official appeals portal at https://srd.sassa.gov.za/appeals/appeal."
+      },
+      {
+        "q": "What if my appeal is declined?",
+        "a": "A declined appeal means the tribunal confirmed SASSA's decision for that month. You can submit a new SRD application for a later month if you still qualify and your circumstances have changed."
       }
     ],
     "tags": [
@@ -2308,12 +2366,12 @@
       "sassa appeal",
       "bank deposit decline"
     ],
-    "lastUpdated": "2026-07-27",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
-        "title": "Submit ITSAA Appeal",
-        "url": "https://srd-appeals.dsd.gov.za",
+        "title": "Lodge or Check an Appeal",
+        "url": "https://srd.sassa.gov.za/appeals/appeal",
         "isExternal": true
       },
       {
@@ -2332,9 +2390,9 @@
         "isExternal": false
       },
       {
-        "title": "Legal Aid South Africa",
-        "url": "https://www.legal-aid.co.za",
-        "isExternal": true
+        "title": "How to Appeal",
+        "url": "/appeals/how-to-appeal",
+        "isExternal": false
       }
     ]
   },
@@ -2566,12 +2624,16 @@
   },
   {
     "id": "grant-verification-process",
-    "title": "SASSA Grant Reviews & Verification Process (Complete Guide)",
-    "description": "Complete guide to SASSA grant reviews and verification for 2026/27. If you received an SMS or letter asking you to visit a SASSA office, here is exactly what will happen, what documents to bring, and what to do if you miss your appointment.",
+    "title": "SASSA Grant Reviews & Suspension",
+    "description": "SASSA social grant reviews 2026: what a review notice means, assessment vs review, data matching, non-compliance suspensions and missed appointments.",
     "category": "Manage Your Grant",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
     "steps": [
+      {
+        "title": "SASSA Social Grant Reviews: The Short Answer",
+        "content": "<p>A <strong>SASSA social grant review</strong> is a check that your grant is still going to the right person. It is not a new application, and it is not a cancellation. SASSA may review a grant when its records show a possible change in income, identity, bank account, marital status or residence. A <strong>grant assessment</strong> usually refers to the routine check SASSA runs on an application or on monthly SRD eligibility; a <strong>review</strong> is a separate administrative check that can ask you to attend an office. If you receive a review notice, respond within the deadline. Ignoring it can lead to a <strong>non-compliance suspension</strong>.</p><p>SASSA has not published a formal definition of “AI data matching”. Its public statements describe <strong>data cross-checks</strong> against records held by other government departments and banks. Treat “AI” as a description of automated matching, not an official SASSA term. The practical point is the same: if your records do not match, you may be asked to verify them.</p><p><strong>What to do first:</strong> check that the SMS or letter is genuine, note the deadline, gather your ID and income documents, and go to the SASSA office named in the notice. If you are unsure, call <strong>0800 60 10 11</strong>. Do not pay anyone to “clear” a review.</p>"
+      },
       {
         "title": "Why SASSA Is Doing Verification",
         "content": "<p>SASSA conducts targeted verification to make sure that grant payments go to the right people. It is part of SASSA's ongoing integrity measures and is aimed at beneficiaries using alternative forms of identification (non-13-digit SA ID numbers) and beneficiaries flagged by data cross-checks — for example when a bank account shows deposits that were not declared. The goal is not to stop grants — it is to make sure the information SASSA has on file is accurate. SASSA is required by law to verify beneficiary information regularly.</p><p><strong>October 2026 update:</strong> In its 2025/26 audit, the Auditor-General told Parliament that SASSA paid over <strong>R1.33 billion</strong> to ineligible beneficiaries (down from R2.3 billion the year before), including payments made after death and to government employees earning above the threshold. SASSA defended its reviews in a statement on 9 October 2026, saying the checks are integrity controls and are not designed to terminate grants arbitrarily. SASSA also clarified the difference between an assessment and a review: a review is an administrative control to confirm you still qualify, and it does not automatically mean your grant is cancelled. If your information is correct, the process is quick and your grant continues unchanged. <a href=\"/updates/update-2026-sassa-grant-controls\">Read the full SASSA statement in our grant-controls update</a>.</p>",
@@ -2638,6 +2700,10 @@
           "If you complete life certification online, it does not automatically complete the verification process — they are separate.",
           "Ask the SASSA officer whether you also need to complete life certification while you are there."
         ]
+      },
+      {
+        "title": "Common SASSA Grant Review Problems (and Fixes)",
+        "content": "<p>Most review problems are administrative, not a sign that your grant is gone. Here are the common ones and what to do:</p><ul><li><strong>You lost the SMS or letter.</strong> Go to your nearest SASSA office with your ID and explain that you received a review request. The officer can look up your record.</li><li><strong>You missed the appointment.</strong> Call <strong>0800 60 10 11</strong> and ask to reschedule. Do not wait for a second SMS.</li><li><strong>Your documents do not match.</strong> Bring the originals plus an affidavit explaining the difference. Bank statements and proof of income are the usual sticking points.</li><li><strong>Your phone number is outdated.</strong> Update it at a SASSA office so you receive the next notice. See our <a href=\"/guides/lost-phone-number\">lost phone number guide</a>.</li><li><strong>Your grant was suspended.</strong> Apply for restoration within <strong>30 days</strong> of the suspension. If you still qualify, the suspension can be lifted and you may be back-paid.</li><li><strong>Someone demands payment to fix the review.</strong> That is a scam. SASSA reviews are free. Report it on <strong>0800 60 10 11</strong>.</li></ul>"
       }
     ],
     "faqs": [
@@ -2676,6 +2742,26 @@
       {
         "q": "My grant was suspended or lapsed after a review — can I get it back?",
         "a": "Yes, in many cases. If you present yourself and SASSA confirms you still qualify, the suspension is lifted and you are back-paid for the suspended period. If your grant has already been suspended, apply for restoration within 30 days of the suspension (SASSA Grant Booklet 2026). In 2025/26, 31,759 beneficiaries whose grants had lapsed later presented and had their grants restored (Parliamentary reply NW4450). Visit a SASSA office with your ID and documents as soon as possible."
+      },
+      {
+        "q": "What is a SASSA social grant review?",
+        "a": "A social grant review is an administrative check that your grant is still going to the right person. SASSA may ask you to confirm your identity, income, bank account or living arrangements. A review is not a new application and it does not automatically cancel your grant."
+      },
+      {
+        "q": "Is a SASSA grant assessment the same as a review?",
+        "a": "No. An assessment is the routine check SASSA runs on an application or on monthly SRD eligibility. A review is a separate administrative check that can require you to attend a SASSA office. A review does not automatically mean your grant is cancelled."
+      },
+      {
+        "q": "Does SASSA use AI data matching for grant reviews?",
+        "a": "SASSA has not published a formal “AI data matching” policy. Its public statements describe automated data cross-checks against records held by other government departments and banks. Some people call this AI; the practical point is that a mismatch can trigger a review. If your details are correct, attend and confirm them."
+      },
+      {
+        "q": "What is a non-compliance grant suspension?",
+        "a": "A non-compliance suspension happens when you do not respond to a review, do not update requested information, or do not complete a required verification. It is not the same as being found ineligible. If you respond and still qualify, the suspension can be lifted and you may be back-paid for the suspended period."
+      },
+      {
+        "q": "What are the most common SASSA grant review problems?",
+        "a": "The most common problems are a lost SMS or letter, a missed appointment, documents that do not match SASSA records, an outdated phone number, and not knowing which office to visit. Go to any SASSA office with your ID if you lost the notice, or call 0800 60 10 11 to reschedule."
       }
     ],
     "tags": [
@@ -2694,7 +2780,7 @@
       "sassa 90 days review",
       "sassa grant restored after review"
     ],
-    "lastUpdated": "2026-10-16",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -2807,6 +2893,16 @@
       {
         "title": "SASSA August 2026: Grant Review Payments on 7 August — What to Know",
         "url": "/updates/update-2026-034",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Grant Renewal & Monthly Reassessment",
+        "url": "/guides/sassa-grant-renewal",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Grant Deductions & Disputes",
+        "url": "/guides/sassa-deductions-explained",
         "isExternal": false
       }
     ]
@@ -3246,8 +3342,8 @@
   },
   {
     "id": "postbank-black-card-guide",
-    "title": "SASSA Gold Card to Black Card Guide",
-    "description": "The SASSA Gold Card switch-off date (31 August 2026) has passed. Find out what happens if you still have a Gold Card, whether you can still access your grant, and how to get your free Postbank Black Card now.",
+    "title": "SASSA Gold Card Deadline 2026",
+    "description": "The SASSA Gold Card deadline passed on 31 August 2026. What to do if you missed it, how to get the free Postbank Black Card, and where to collect your grant.",
     "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "10 minutes",
@@ -3259,6 +3355,10 @@
           "Your grant payments continue to be paid into your Postbank account regardless of which card you hold."
         ],
         "content": "SASSA and Postbank announced that SASSA Gold Cards stopped working after <strong>31 August 2026</strong> at ATMs, retail stores and payment points. That deadline has now passed. The free replacement is the <strong>Postbank Black Card</strong>, and it is still available. If your Gold Card has stopped working, the fix is simple: get your free Black Card from any Postbank service point."
+      },
+      {
+        "title": "Missed the 31 August 2026 Card Switch Deadline?",
+        "content": "<p>The card switch deadline has passed. SASSA and Postbank have not announced a new deadline for Gold Cards, and the old cards stopped working at ATMs, retailers and pay points after <strong>31 August 2026</strong>. If you still have a Gold Card, do not wait for another announcement — collect your free Postbank Black Card now.</p><p><strong>What “missed the deadline” means in practice:</strong></p><ul><li>Your grant is still paid into your Postbank account. The money is not lost.</li><li>Your Gold Card may be declined at an ATM or store.</li><li>You can collect with your South African ID at a SASSA pay point or designated retail collection point while you wait for a Black Card.</li><li>The Black Card is free, and any balance on the old card carries over.</li></ul><p>If a shop or agent tells you the deadline can only be fixed by paying a fee, walk away. The replacement is free. Report demands for payment to Postbank on <strong>0800 53 54 55</strong> or the SASSA fraud hotline on <strong>0800 60 10 11</strong>.</p>"
       },
       {
         "title": "What If You Still Have a Gold Card?",
@@ -3361,6 +3461,18 @@
       {
         "a": "Check your status on the official portal for your 'Pay Day' date, confirm your grant is not under review, and wait for the payment SMS if collecting at retail. If the money has genuinely not been paid, follow the missing grant payment guide and call 0800 60 10 11. Your grant accumulates safely in your Postbank account if uncollected.",
         "q": "What should I do if money is not accessible?"
+      },
+      {
+        "q": "What is the SASSA card switch deadline?",
+        "a": "The Gold Card switch-off date was 31 August 2026. Gold Cards stopped working at ATMs, retailers and payment points after that date. The free replacement is the Postbank Black Card."
+      },
+      {
+        "q": "What if I missed the SASSA card deadline?",
+        "a": "Your grant is still paid into your Postbank account. Collect your free Black Card at a Postbank service point with your South African ID. Until then, you can collect with your ID at a SASSA pay point or designated retail collection point."
+      },
+      {
+        "q": "Is there a new deadline for Gold Cards?",
+        "a": "SASSA and Postbank have not announced a new Gold Card deadline. Treat 31 August 2026 as the switch-off date and replace the card now. The Black Card is free."
       }
     ],
     "tags": [
@@ -3370,7 +3482,7 @@
       "gold card replacement",
       "august 31 deadline"
     ],
-    "lastUpdated": "2026-08-20",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -3396,6 +3508,11 @@
       {
         "title": "Report a Scam",
         "url": "/scam-alert",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Payment Methods Compared",
+        "url": "/guides/sassa-payment-methods",
         "isExternal": false
       }
     ],
@@ -3706,8 +3823,8 @@
   },
   {
     "id": "sassa-deductions-explained",
-    "title": "SASSA Grant Deductions Explained",
-    "description": "Money missing from your SASSA grant? Learn about loan repayments, funeral policies, and other deductions — and how to stop unauthorised ones.",
+    "title": "SASSA Grant Deductions & Disputes",
+    "description": "SASSA grant deductions explained: loan and funeral policy deductions, how to check them, and how to dispute an unauthorised pensioner grant deduction.",
     "category": "Banking & Payments",
     "difficulty": "beginner",
     "estimatedTime": "8 minutes",
@@ -3753,6 +3870,10 @@
         ]
       },
       {
+        "title": "How to Dispute a Pensioner Grant Deduction",
+        "content": "<p>If you receive an Older Persons or Disability Grant and money is being deducted that you did not authorise, treat it as a deduction dispute. Work through it in this order:</p><ol><li><strong>Get the deduction record.</strong> Ask SASSA for a payment history or deduction breakdown. Note the organisation name, the amount, and the date each deduction started. Keep the printout or SMS.</li><li><strong>Check your consent.</strong> Loan and funeral deductions normally require your written consent. If you never signed, say so in writing.</li><li><strong>Contact the organisation first.</strong> Ask for the debit order or policy to be cancelled and for a refund of deductions taken after cancellation. Keep a copy of the letter, email or reference number.</li><li><strong>Ask SASSA to suspend the deduction.</strong> If the organisation does not stop, visit a SASSA office and request a deduction suspension, especially if the deduction is causing hardship. SASSA can pause most third-party deductions.</li><li><strong>Escalate.</strong> If the deduction is unauthorised or continues after cancellation, report it to the SASSA fraud hotline on <strong>0800 60 10 11</strong>. For a credit provider, ask SASSA for the correct complaint route.</li></ol><p><strong>Do not stop a legitimate loan repayment</strong> unless the loan is settled or you have written confirmation. Stopping a valid debit order can create arrears. The dispute is about the amount, consent, or continuation after cancellation — not about avoiding a debt you owe.</p>"
+      },
+      {
         "title": "Can You Opt Out of All Deductions?",
         "content": "Yes, in most cases you can opt out of voluntary deductions. Loan repayments can only be stopped once the loan is fully repaid. Funeral policy deductions can be cancelled by contacting the insurer. Electricity and school feeding deductions require you to contact your municipality or school to opt out. If you are experiencing financial hardship, visit a SASSA office and request a 'deduction suspension' — SASSA has the authority to pause most third-party deductions temporarily.",
         "tips": [
@@ -3773,6 +3894,22 @@
       {
         "q": "How do I check what is being deducted from my grant?",
         "a": "Call SASSA on 0800 60 10 11, visit a SASSA office for a payment history printout, or check your bank statement for the name of the organisation receiving the deduction."
+      },
+      {
+        "q": "How do I dispute a deduction from my pension grant?",
+        "a": "Ask SASSA for a deduction breakdown, identify the organisation and amount, and check whether you signed consent. Contact the organisation to cancel or refund, then ask SASSA for a deduction suspension if it does not stop. Report unauthorised deductions to 0800 60 10 11."
+      },
+      {
+        "q": "Can SASSA stop a deduction from my grant?",
+        "a": "SASSA can pause most third-party deductions, especially where the deduction is causing hardship or is disputed. Visit a SASSA office with your ID and payment history and ask for a deduction suspension. A legitimate loan repayment may still need to be settled."
+      },
+      {
+        "q": "What if a funeral policy keeps deducting after I cancelled?",
+        "a": "Contact the insurer in writing and ask for cancellation confirmation and a refund of deductions taken after cancellation. If the deductions continue, take the confirmation to SASSA and ask for a deduction suspension, then report it to the SASSA fraud hotline on 0800 60 10 11."
+      },
+      {
+        "q": "Can I dispute a loan deduction from my SASSA grant?",
+        "a": "Yes, if the amount is wrong, you did not consent, or deductions continue after the loan is settled. Loan repayments themselves are legal and regulated; the maximum deduction is 33.3% of your grant. Ask for the deduction record and raise the dispute with the lender and SASSA."
       }
     ],
     "tags": [
@@ -3782,7 +3919,7 @@
       "funeral policy sassa",
       "unauthorised deductions"
     ],
-    "lastUpdated": "2026-07-28",
+    "lastUpdated": "2026-10-23",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -3808,6 +3945,11 @@
       {
         "title": "Fix Missing Grant Payments",
         "url": "/guides/missing-grant-payment-guide",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Grant Review or Verification Notice",
+        "url": "/guides/grant-verification-process",
         "isExternal": false
       }
     ],
@@ -4573,7 +4715,7 @@
   {
     "id": "official-sassa-portal-guide",
     "title": "The Official SASSA Websites: SRD Portal, Services Portal and Appeals Portal",
-    "description": "There are three official SASSA websites for three different jobs: srd.sassa.gov.za for the R370, services.sassa.gov.za for permanent grants, and srd-appeals.dsd.gov.za for appeals. This guide maps each site and shows how to spot fakes.",
+    "description": "There are three official SASSA websites for three different jobs: srd.sassa.gov.za for the R370, services.sassa.gov.za for permanent grants, and https://srd.sassa.gov.za/appeals/appeal for appeals. This guide maps each site and shows how to spot fakes.",
     "category": "Manage Your Account",
     "difficulty": "beginner",
     "estimatedTime": "5 minutes",
@@ -4582,7 +4724,7 @@
     "steps": [
       {
         "title": "Know the Three Official SASSA Websites",
-        "content": "Every official SASSA website ends in <strong>.gov.za</strong>. Each one has a different job, so use the right site for the right task:\n\n| Website | What it is for |\n|---|---|\n| <strong>srd.sassa.gov.za</strong> | SRD R370: apply, reapply, check monthly status, update banking details |\n| <strong>services.sassa.gov.za</strong> | Permanent grants (older persons, disability, child support, foster, care dependency, grant-in-aid): apply and track |\n| <strong>srd-appeals.dsd.gov.za</strong> | Appeal a declined SRD grant (the Independent Tribunal) |\n| <strong>sassa.gov.za</strong> | Forms, office finder, payment schedule, official announcements |",
+        "content": "Every official SASSA website ends in <strong>.gov.za</strong>. Each one has a different job, so use the right site for the right task:\n\n| Website | What it is for |\n|---|---|\n| <strong>srd.sassa.gov.za</strong> | SRD R370: apply, reapply, check monthly status, update banking details |\n| <strong>services.sassa.gov.za</strong> | Permanent grants (older persons, disability, child support, foster, care dependency, grant-in-aid): apply and track |\n| <strong>https://srd.sassa.gov.za/appeals/appeal</strong> | Appeal a declined SRD grant (the Independent Tribunal) |\n| <strong>sassa.gov.za</strong> | Forms, office finder, payment schedule, official announcements |",
         "tips": [
           "Bookmark these four addresses so you never click a lookalike site again.",
           "If the address does not end in .gov.za, it is not an official SASSA site."
@@ -4606,18 +4748,18 @@
       },
       {
         "title": "Use the Appeals Portal to Challenge a Decline",
-        "content": "If SASSA declines your SRD grant for a month, you can challenge it free of charge at srd-appeals.dsd.gov.za - the Independent Tribunal. You choose the declined month and the reason SASSA gave, explain your situation, upload supporting proof and note your reference number. Appeals must be lodged within 90 days of the decline. Successful appeals are paid the back pay for the declined month.",
+        "content": "If SASSA declines your SRD grant for a month, you can appeal that month at https://srd.sassa.gov.za/appeals/appeal. Enter your 13-digit ID number and the 10-digit phone number on your SRD application, then the 6-digit PIN sent to that phone. Open the declined month and choose an appeal reason. The appeal must be lodged within 90 days of the decision, and the tribunal reassesses the information SASSA already had: you cannot add new evidence at this stage. The tribunal must finalise the appeal within 90 days of receiving it.",
         "tips": [
-          "Submit one appeal per declined month - each month is a separate case.",
-          "Keep your reference number; you use it to track the appeal."
+          "Submit one appeal per declined month; the portal rejects a duplicate for the same period.",
+          "Check the outcome on the same portal using your ID, phone and a new PIN."
         ]
       },
       {
         "title": "Register and Sign In Smoothly",
-        "content": "The portals share one rhythm: your 13-digit ID plus your registered cellphone number, then an OTP by SMS. If the system says your details are not found, you are almost always on the wrong phone number - one from before a SIM swap or one you never registered. Update your cellphone number on the SRD portal first, then carry on. Passwords are case-sensitive, and each portal keeps its own login.",
+        "content": "The portals use your 13-digit ID plus your registered cellphone number, then send a one-time PIN by SMS. If the system says your details are not found, the usual cause is a phone number that changed or was never registered. Update your cellphone number on the SRD portal first. The SRD portal does not use a password; the PIN sent to your phone is the check.",
         "tips": [
           "Lost your number since you applied? Fix it before you try to register.",
-          "Write your portal password somewhere safe - shared, not complex."
+          "Never share your PIN with anyone who offers to \"check\" your grant."
         ]
       },
       {
@@ -4648,14 +4790,14 @@
       },
       {
         "q": "How do I know I'm on a real SASSA site?",
-        "a": "Real SASSA addresses end in .gov.za: srd.sassa.gov.za, services.sassa.gov.za, srd-appeals.dsd.gov.za and sassa.gov.za. Anything claiming to be SASSA that does not end in .gov.za is fake."
+        "a": "Real SASSA addresses end in .gov.za: srd.sassa.gov.za, services.sassa.gov.za, https://srd.sassa.gov.za/appeals/appeal and sassa.gov.za. Anything claiming to be SASSA that does not end in .gov.za is fake."
       }
     ],
     "tags": [
       "official sassa website",
       "srd.sassa.gov.za",
       "services.sassa.gov.za",
-      "srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "sassa portal",
       "sassa login"
     ],
@@ -4734,10 +4876,10 @@
       },
       {
         "title": "A Decline Is Not a Cancellation - Appeal, Don't Reapply",
-        "content": "If SASSA declines you for a month, submit an appeal, not a new application. SATSA declines carry a reason code (income source detected, identity verification failed, UIF registered, NSFAS registered and others). Read the code, then appeal that specific month at srd-appeals.dsd.gov.za within 90 days. Successful appeals are paid back pay. Reapplying when you are simply declined creates duplicate applications, which can flag your account and delay a genuine application.",
+        "content": "If SASSA declines you for a month, appeal that month rather than submitting a new application for it. The decline carries a reason code (income source detected, identity verification failed, UIF registered, NSFAS registered and others). Read the code, then appeal that specific month at https://srd.sassa.gov.za/appeals/appeal within 90 days of the decision. The appeal reassesses the information SASSA already had; you cannot add new evidence at that stage. Reapplying for the same declined month creates duplicate records and does not reopen the appeal.",
         "tips": [
           "One appeal per declined month - each month is a separate case.",
-          "Appeals are free and take about 60 to 90 days."
+          "The Independent Tribunal must finalise the appeal within 90 days of receiving it."
         ]
       },
       {
@@ -4758,10 +4900,10 @@
       },
       {
         "title": "What Reapplication Does and Does Not Give You",
-        "content": "A successful reapplication restores your grant from the current month's assessment onward. It does not automatically back-pay the months your application was lapsed. If some of those lapsed months are still inside the 90-day appeal window, appeal those months as well - in some cases SASSA has approved backdated payments for declined months even after a reapplication. Approved grant amounts flow to the payment method on file, so keep your banking details up to date too.",
+        "content": "A successful reapplication restores your grant from the current month's assessment onward. It does not automatically back-pay lapsed months. If a declined month is still inside its 90-day appeal window, appeal it separately. An approved appeal sets aside the declined decision, but payment timing is a separate step and is not guaranteed by the appeal decision. Keep your banking details up to date for future payments.",
         "tips": [
-          "Appeal declined months alongside reapplying instead of waiting to see what happens.",
-          "Back pay is decided per month and per appeal - it is not automatic."
+          "Appeal declined months separately instead of assuming a reapplication covers them.",
+          "Do not pay anyone to \"recover\" back pay."
         ]
       },
       {
@@ -4780,7 +4922,7 @@
       },
       {
         "q": "I was declined this month - should I reapply?",
-        "a": "No. A declined month is not a cancellation. Read the decline reason on the SRD portal and appeal that month within 90 days at srd-appeals.dsd.gov.za if you disagree. Reapplying instead can cause duplicate applications."
+        "a": "No. A declined month is not a cancellation. Read the decline reason on the SRD portal and appeal that month within 90 days at https://srd.sassa.gov.za/appeals/appeal if you disagree. Reapplying instead can cause duplicate applications."
       },
       {
         "q": "What does the 'reapplication_required' status mean?",
@@ -4792,7 +4934,7 @@
       },
       {
         "q": "Will reapplication back-pay the months my grant was lapsed?",
-        "a": "No, not automatically. Reapproval applies from the current month's assessment. If declined months are still within the 90-day appeal window, appeal them separately for possible back pay."
+        "a": "No, not automatically. Reapproval applies from the current month's assessment. If declined months are still within the 90-day appeal window, appeal them separately. An approved appeal sets aside the decision, but payment timing is separate."
       },
       {
         "q": "Can I reapply if I cancelled my SRD application myself?",
@@ -4826,7 +4968,7 @@
       },
       {
         "title": "SRD Appeals (DSD)",
-        "url": "https://srd-appeals.dsd.gov.za",
+        "url": "https://srd.sassa.gov.za/appeals/appeal",
         "isExternal": true
       }
     ],

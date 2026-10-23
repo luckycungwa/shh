@@ -285,7 +285,7 @@
   {
     "id": "faq-010",
     "question": "Can I appeal a rejected SASSA application in 2026?",
-    "answer": "<p>If your SASSA application is rejected, you can appeal within 90 days. Here’s how:</p><h4>Appeal Steps:</h4><ol><li><strong>Visit the SASSA office</strong> where you applied</li><li><strong>Bring:</strong> Rejection letter, ID, and new evidence</li><li><strong>Submit appeal form</strong> with reasons for disagreement</li><li><strong>Wait for review:</strong> 30-60 days for a decision</li></ol><h4>Grounds for Appeal:</h4><ul><li>Incorrect means test results</li><li>Medical assessment disputes</li><li>Application errors</li><li>New supporting documents</li></ul><h4>Next Steps:</h4><ul><li>If denied again, escalate to the Independent Tribunal for Social Assistance Appeals</li><li>Contact the Tribunal at 012 400 2700 or <a href='mailto:appeals@dsd.gov.za'>appeals@dsd.gov.za</a></li><li>Get free help from community advice offices</li></ul><p><strong>Key Note:</strong> Appeals are FREE. Avoid scams promising faster appeals. Check our <a href='/guides/appeal-guide'>appeals guide</a> for tips.</p>",
+    "answer": "<p>The route depends on the grant type and the decision letter. For the SRD R370 grant, appeal a declined month on the official SASSA SRD Appeals Portal at <a href='https://srd.sassa.gov.za/appeals/appeal'>https://srd.sassa.gov.za/appeals/appeal</a> within 90 days. Enter your 13-digit ID number, the phone number on your SRD application and the 6-digit PIN sent to that phone, then choose the reason that fits. The SRD appeal form has no document upload and the tribunal reassesses the information SASSA already had. For other grants, follow the appeal instructions in your decision letter or ask your SASSA office.</p><p><strong>Key note:</strong> Appeals are free. Avoid anyone who promises a faster outcome or asks you to pay for an appeal.</p>",
     "category": "appeals",
     "tags": [
       "SASSA appeal 2026",
@@ -294,7 +294,7 @@
       "grant review"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-10-23",
     "relatedLinks": [
       {
         "title": "SASSA Appeals Guide",
@@ -1237,16 +1237,16 @@
   {
     "id": "faq-042",
     "question": "What should I do if my SASSA biometric verification fails in 2026?",
-    "answer": "<p>If your SASSA biometric verification fails (e.g., unreadable fingerprints, system errors):</p><ol><li><strong>Try Alternative:</strong> Use facial recognition if fingerprints fail.</li><li><strong>Contact SASSA:</strong> Call 0800 60 10 11 or visit an office with your ID.</li><li><strong>Provide Documents:</strong> Submit ID, proof of address, or other verification.</li><li><strong>Appeal:</strong> If unresolved, appeal within 90 days via the Department of Social Development.</li></ol><p><strong>Common Issues:</strong> Poor fingerprint quality, system glitches, or mismatched records. Check our <a href='/guides'>biometrics guide</a> for solutions.</p>",
+    "answer": "<p>If your SASSA biometric verification fails (for example, unreadable fingerprints or a system error):</p><ol><li><strong>Try the alternative:</strong> Use facial recognition if fingerprints fail.</li><li><strong>Contact SASSA:</strong> Call 0800 60 10 11 or visit an office with your ID.</li><li><strong>Provide what is requested:</strong> Submit your ID and any proof of address or verification document SASSA asks for.</li><li><strong>If a month is declined:</strong> Appeal that month within 90 days on the official SASSA SRD Appeals Portal at https://srd.sassa.gov.za/appeals/appeal. A biometric problem on its own is not an appeal reason, and the appeal form does not accept new documents.</li></ol><p><strong>Common issues:</strong> Poor fingerprint quality, system glitches, or mismatched records. Check our <a href='/guides/biometric-fix-guide'>biometric verification guide</a> for solutions.</p>",
     "category": "SRD application",
     "tags": [
       "SASSA biometric failure 2026",
       "fingerprint issues",
       "facial recognition",
-      "appeal verification"
+      "biometric verification"
     ],
     "helpful": 1,
-    "lastUpdated": "2026-07-29",
+    "lastUpdated": "2026-10-23",
     "relatedLinks": [
       {
         "title": "SASSA Biometrics Guide",
@@ -1647,13 +1647,13 @@
     "id": "faq-060",
     "category": "appeals",
     "question": "My SASSA appeal was declined - is there anything else I can do?",
-    "answer": "<p>For that specific month, the appeal decision is final within SASSA's system - you cannot submit a second appeal for the same month. Future months are assessed independently, so keep checking your status. If you believe the process was unlawful or unfair, you can pursue judicial review through the courts; Legal Aid South Africa (0800 110 110) offers free advice where you qualify.</p>",
+    "answer": "<p>For that specific month, SASSA does not provide a second appeal for the same month. Future months are assessed independently, so keep checking your status. If you believe the process was unlawful or unfair, seek independent legal advice; Legal Aid South Africa (0800 110 110) offers free advice where you qualify.</p>",
     "tags": [
       "appeal declined",
       "ITSAA",
       "judicial review"
     ],
-    "lastUpdated": "2026-09-23",
+    "lastUpdated": "2026-10-23",
     "linkedPage": {
       "label": "How to appeal a declined SRD application",
       "url": "/guides/appeal-guide"

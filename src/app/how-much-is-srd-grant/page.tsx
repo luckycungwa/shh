@@ -126,7 +126,7 @@ export default function HowMuchIsSrdGrantPage() {
             The SRD grant is meant for people with very little or no income. SASSA checks your bank accounts and other records each month. If more than <strong>{incomeLimit}</strong> flows through accounts linked to your ID in a month, the system assumes you do not need the grant and declines you for that month.
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            This includes money you might not think of as "income" — a family member sending you money, a stokvel payout, informal sales, or interest earned. If you are declined for this reason and the money was not regular income, you can appeal with proof.
+            This includes money you might not think of as "income" — a family member sending you money, a stokvel payout, informal sales, or interest earned. If you are declined for this reason and the record is wrong, you can appeal the month within 90 days; the appeal reassesses the information SASSA already had, so new proof cannot be added.
           </p>
           <NextStepCard
             pagePath="/how-much-is-srd-grant"

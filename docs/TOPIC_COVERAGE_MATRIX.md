@@ -82,3 +82,27 @@ Rules: never publish an unannounced date as official; SRD stays `TBA`/`projected
 `under_review` stays `TBC` until announced; every change must update `governance.lastVerified`
 with a real source URL. `scripts/validate-content.mjs` enforces the structural rules (statuses,
 TBA/TBC sentinels, weekday↔date agreement, SRD ≥ 15th, governance presence, verification freshness).
+
+
+---
+
+## 4. Appeal accuracy correction (23 October 2026)
+
+The appeal cluster was corrected against the live official portal and the SRD appeal rules. This was a
+correctness pass, not a new-page expansion.
+
+- **Official route:** `https://srd.sassa.gov.za/appeals/appeal`, using the 13-digit ID, the phone number
+  on the SRD application and the 6-digit PIN; outcomes are per declined month.
+- **Rules reflected:** 90 days from the decision; no late SRD appeal; tribunal finalises within 90 days
+  of receipt; the tribunal reassesses the information SASSA already had.
+- **Evidence limit:** the SRD appeal form is a reason-selection flow with no document upload. Bank
+  statements, affidavits and clearance letters gathered afterwards cannot be added. Correcting UIF,
+  NSFAS, PERSAL or Home Affairs records helps future monthly assessments, not the past appeal.
+- **Removed:** the dead `srd-appeals.dsd.gov.za` host, the 30-day reconsideration-first step,
+  60-90-day processing claims, back-pay guarantees, third-party appeal reference numbers and the claim
+  that Moya can lodge an SRD appeal.
+- **Pages/data touched:** `appeals.json`, `decline-reasons.json`, `status-meanings.json`,
+  `guides.json`, `updates.json`, `faqs.json`, `canonical-facts.json`, the appeals hub, deadline
+  tool/calculator, status and common-problems pages, status-explorer and payment troubleshooter.
+- **Open editorial point:** several older updates still mention the historical stokvel example. Their
+  appeal mechanics are now accurate; no new page was created.

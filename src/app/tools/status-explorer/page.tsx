@@ -26,7 +26,6 @@ const daysOrNull = (key: string): number | null => {
 };
 
 const APPEAL_WINDOW_DAYS = daysOrNull("appeal_lodgement_window_days");
-const APPEAL_RECOMMENDED_DAYS = daysOrNull("appeal_recommended_days");
 const HELPLINE = factOrNull("sassa_helpline");
 const APPEALS_PORTAL_HOST = factOrNull("appeals_portal_url")?.replace(/^https?:\/\//, "") ?? null;
 const APPEALS_PORTAL_REF = APPEALS_PORTAL_HOST ? ` (${APPEALS_PORTAL_HOST})` : "";
@@ -39,8 +38,8 @@ export const metadata: Metadata = buildMetadata({
 
 const DECLINED_FAQ =
   APPEAL_WINDOW_DAYS !== null
-    ? `Your application did not pass the check for this month (often the income threshold). You can appeal within ${APPEAL_WINDOW_DAYS} days on the official ITSAA appeals portal${APPEALS_PORTAL_REF} if you disagree${APPEAL_RECOMMENDED_DAYS !== null ? ` — act within the first ${APPEAL_RECOMMENDED_DAYS} days if you can` : ""}.`
-    : "Your application did not pass the check for this month (often the income threshold). You can appeal on the official ITSAA appeals portal if you disagree with the decision.";
+    ? `Your application did not pass the check for this month (often the income threshold). You can appeal within ${APPEAL_WINDOW_DAYS} days on the official SASSA SRD Appeals Portal${APPEALS_PORTAL_REF} if you disagree.`
+    : "Your application did not pass the check for this month (often the income threshold). You can appeal on the official SASSA SRD Appeals Portal if you disagree with the decision.";
 
 const faqs = [
   { q: "What does 'Approved' mean for my SRD grant?", a: "Approved means you qualified for this month's payment. Check your Pay Day date — money is usually released in the last week of the month." },

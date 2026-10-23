@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 import React from "react";
 import type { Metadata } from "next";
@@ -10,8 +10,8 @@ import { buildMetadata } from "../../lib/seo";
 import { faqPageSchema, breadcrumbSchema } from "../../lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "SASSA SRD Appeal Guide — How to Appeal a Rejection",
-  description: "How to appeal a declined SASSA SRD grant on the ITSAA portal. Step-by-step guides for submitting an appeal, checking appeal status, deadlines, and timelines.",
+  title: "SASSA SRD Appeal Guide: How to Appeal",
+  description: "How to appeal a declined SASSA SRD grant on the official portal. Check the 90-day deadline, lodge with your ID, phone and PIN, and track the tribunal outcome.",
   path: "/appeals",
 });
 
@@ -31,14 +31,13 @@ function readAll(): AppealPage[] {
 }
 
 const faqs = [
-  { q: "Where do I appeal a SASSA SRD rejection?", a: "Start by asking SASSA to reconsider the decision on the official SRD portal at srd.sassa.gov.za. If the reconsideration is refused, appeal to the Independent Tribunal (ITSAA) on the official appeals portal at srd-appeals.dsd.gov.za using your ID number and the phone number linked to your application. For the full step-by-step process, see our in-depth appeal guide at /guides/appeal-guide." },
-  { q: "How long do I have to appeal?", a: "For a reconsideration, act within the window shown on the SRD portal after your decline (SASSA asks you to request it quickly). If that is refused, you have 90 days from the date of the reconsideration outcome to appeal to the Tribunal (ITSAA). See the appeal deadline calculator at /tools/appeal-deadline." },
-  { q: "How long does an appeal take?", a: "Reconsideration outcomes are usually sent within about 30 days. Tribunal (ITSAA) appeals usually take 60 to 90 days to be processed, and some complex appeals take longer. Track progress on srd-appeals.dsd.gov.za." },
-  { q: "Can I appeal more than once?", a: "You get one reconsideration and one tribunal appeal per rejection. Do not reapply for the same decline - a decline is reassessed each month anyway, and re-submitting can reset your cycle. If your status specifically asks for a reapplication (such as 'Reapplication Pending'), see /guides/srd-reapplication." },
+  { q: "Where do I appeal a SASSA SRD rejection?", a: "Lodge the appeal on the official SASSA SRD appeals portal at https://srd.sassa.gov.za/appeals/appeal. Enter your 13-digit ID number and the 10-digit phone number used for your SRD application, then enter the 6-digit PIN sent to that phone. There is no separate reconsideration step that must be completed first. For the full process, see /guides/appeal-guide." },
+  { q: "How long do I have to appeal?", a: "You have 90 days from the date of the decision to lodge an appeal. The SRD appeal rules do not provide a late-appeal route. Use /tools/appeal-deadline to estimate the last day, then confirm the cutoff on the official portal." },
+  { q: "How long does an appeal take?", a: "The Independent Tribunal must finalise the appeal within 90 days of receiving it. That is a deadline for the tribunal, not a guarantee of an earlier decision. The outcome is communicated electronically and recorded against the month on the appeals portal." },
+  { q: "Can I appeal more than once?", a: "You can lodge one appeal per declined month. The portal rejects a second appeal for the same period. If your circumstances change, submit a new SRD application for a later month rather than trying to reopen the same month." },
+  { q: "Can I add new evidence to my appeal?", a: "No. The SRD appeal rules say you may only rely on information and evidence that was available to SASSA when you applied. The tribunal reassesses the existing record; it is not a document-upload process." },
 ];
 
-// Turn internal paths mentioned in FAQ answers (e.g. /tools/appeal-deadline)
-// into real, crawlable internal links instead of plain text.
 function renderAnswer(text: string) {
   return text.split(/(\/[a-z0-9][a-z0-9/-]*)/i).map((part, i) =>
     /^\/[a-z0-9]/i.test(part) ? (
@@ -74,16 +73,17 @@ export default function AppealsHubPage() {
           How to Appeal a Denied SASSA Grant
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
-          Got your SRD application rejected? You can appeal. Follow our step-by-step guides
-          to submit your appeal on the ITSAA portal, check your status, and understand the timeline.
+          Got your SRD application declined? You can appeal the specific month within 90 days of the decision.
+          These guides cover lodging on the official portal, checking the outcome and understanding the timeline.
         </p>
       </header>
 
       <div className="bg-red-50 dark:bg-red-900/10 border-2 border-red-200 dark:border-red-800 rounded-2xl p-6 mb-12">
-        <p className="font-bold text-red-800 dark:text-red-200">Important: appeal on time</p>
+        <p className="font-bold text-red-800 dark:text-red-200">Important: appeal within 90 days</p>
         <p className="text-red-700 dark:text-red-100 text-sm mt-1">
-          You have <strong>90 days</strong> from the decline date to submit your appeal on the
-          official portal <a href="https://srd-appeals.dsd.gov.za" className="underline font-bold" target="_blank" rel="noopener noreferrer">srd-appeals.dsd.gov.za</a>. Appeals take 60 to 90 days to process.
+          You have <strong>90 days</strong> from the decision date to lodge an appeal on the official portal{" "}
+          <a href="https://srd.sassa.gov.za/appeals/appeal" className="underline font-bold" target="_blank" rel="noopener noreferrer">https://srd.sassa.gov.za/appeals/appeal</a>.
+          The Independent Tribunal must then finalise the appeal within 90 days of receiving it.
         </p>
       </div>
 
@@ -107,18 +107,19 @@ export default function AppealsHubPage() {
       <div className="rounded-2xl bg-primary-gold/5 border border-primary-gold/20 p-6 mb-12">
         <p className="font-bold text-lg mb-1">Need the full walkthrough?</p>
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          Our step-by-step guide covers finding your exact decline reason, gathering evidence, submitting the reconsideration, and appealing to ITSAA. See the <NextLink href="/guides/appeal-guide" className="underline font-bold text-primary-gold">official SRD appeal guide</NextLink>.
+          Our step-by-step guide covers finding the declined month, the 90-day deadline, what the tribunal can
+          reassess, and how to track the outcome. See the <NextLink href="/guides/appeal-guide" className="underline font-bold text-primary-gold">official SRD appeal guide</NextLink>.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         <NextLink href="/tools/appeal-deadline" className="group block p-6 rounded-2xl border border-primary-gold/20 bg-primary-gold/5 hover:border-primary-gold/40 transition-colors">
           <p className="font-black text-lg group-hover:text-primary-gold transition-colors">Appeal Deadline Calculator</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Work out your exact last day to appeal from your decline date.</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Work out your last day to appeal from the decision date.</p>
         </NextLink>
         <NextLink href="/status/declined" className="group block p-6 rounded-2xl border border-primary-gold/20 bg-primary-gold/5 hover:border-primary-gold/40 transition-colors">
           <p className="font-black text-lg group-hover:text-primary-gold transition-colors">Find your decline reason &amp; fix</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">See why you were declined and the steps to correct it.</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">See why you were declined and what to check next.</p>
         </NextLink>
       </div>
 
@@ -142,10 +143,10 @@ export default function AppealsHubPage() {
         <Card className="bg-primary-black text-white p-12 rounded-[2rem]">
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Ready to Appeal?</h2>
-            <p className="text-secondary-gray max-w-xl mx-auto">First ask SASSA for a reconsideration on the official SRD portal. If that is refused, submit your tribunal appeal on the ITSAA portal with your ID number and the phone number on your application.</p>
+            <p className="text-secondary-gray max-w-xl mx-auto">Lodge the appeal for the declined month on the official portal with your ID number, the phone number on your application and the PIN sent to that phone.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button as="a" href="https://srd-appeals.dsd.gov.za" target="_blank" rel="noopener noreferrer" color="primary" className="font-bold px-8 py-6 text-lg">Go to ITSAA Appeal Portal</Button>
-              <Button as="a" href="https://srd.sassa.gov.za" target="_blank" rel="noopener noreferrer" variant="bordered" className="font-bold px-8 py-6 text-lg text-white border-white/40">Request Reconsideration</Button>
+              <Button as="a" href="https://srd.sassa.gov.za/appeals/appeal" target="_blank" rel="noopener noreferrer" color="primary" className="font-bold px-8 py-6 text-lg">Go to Official Appeal Portal</Button>
+              <Button as="a" href="/appeals/appeal-status-check" variant="bordered" className="font-bold px-8 py-6 text-lg text-white border-white/40">Check an Appeal Status</Button>
             </div>
           </CardBody>
         </Card>

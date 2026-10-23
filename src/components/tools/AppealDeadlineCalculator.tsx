@@ -1,12 +1,9 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { FaCalculator, FaExclamationCircle, FaCheckCircle, FaInfoCircle } from "react-icons/fa";
 import { getFact } from "../../lib/canonical-facts";
 
-// Appeal windows are read from canonical-facts.json: the gazetted 90-day
-// lodgement window and SASSA's 30-day recommendation. A missing fact must
-// never surface as a number, so both are resolved once through these guards.
 const factOrNull = (key: string): string | null => {
   const raw = getFact(key);
   return raw.startsWith("{{") || raw.trim() === "" ? null : raw;
@@ -20,7 +17,6 @@ const daysOrNull = (key: string): number | null => {
 };
 
 const APPEAL_WINDOW_DAYS = daysOrNull("appeal_lodgement_window_days");
-const APPEAL_RECOMMENDED_DAYS = daysOrNull("appeal_recommended_days");
 const HELPLINE = factOrNull("sassa_helpline");
 
 type AppealResult = {
@@ -28,8 +24,6 @@ type AppealResult = {
   daysLeft: number;
   passed: boolean;
   windowDays: number;
-  recommended: string | null;
-  recommendedDays: number | null;
 };
 
 export default function AppealDeadlineCalculator() {
@@ -45,19 +39,11 @@ export default function AppealDeadlineCalculator() {
     const now = new Date();
     const msPerDay = 86_400_000;
     const daysLeft = Math.ceil((deadline.getTime() - now.getTime()) / msPerDay);
-    let recommended: string | null = null;
-    if (APPEAL_RECOMMENDED_DAYS !== null) {
-      const recommendedDate = new Date(decline);
-      recommendedDate.setDate(decline.getDate() + APPEAL_RECOMMENDED_DAYS);
-      recommended = recommendedDate.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" });
-    }
     setResult({
       deadline: deadline.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }),
       daysLeft,
       passed: daysLeft < 0,
       windowDays: APPEAL_WINDOW_DAYS,
-      recommended,
-      recommendedDays: APPEAL_RECOMMENDED_DAYS,
     });
   };
 
@@ -73,15 +59,13 @@ export default function AppealDeadlineCalculator() {
       {APPEAL_WINDOW_DAYS === null ? (
         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
           Our verified data does not currently include the appeal window, so this calculator cannot work out a
-          deadline. Confirm the deadline on the official ITSAA appeals portal before relying on any date.
+          deadline. Confirm the deadline on the official SRD appeals portal before relying on any date.
         </p>
       ) : (
         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-          {APPEAL_RECOMMENDED_DAYS !== null
-            ? `SRD appeals may be submitted up to ${APPEAL_WINDOW_DAYS} days after the decline decision, but acting within the first ${APPEAL_RECOMMENDED_DAYS} days is recommended.`
-            : `SRD appeals may be submitted up to ${APPEAL_WINDOW_DAYS} days after the decline decision.`}{" "}
-          Enter the date your application was declined to see your estimated last day to appeal. This is a guide
-          only — always confirm on the official ITSAA appeals portal.
+          An SRD appeal must be lodged within {APPEAL_WINDOW_DAYS} days of the decision. Enter the decision date
+          to see the estimated last day to appeal. This is a guide only - always confirm on the official SRD
+          appeals portal.
         </p>
       )}
 
@@ -123,15 +107,10 @@ export default function AppealDeadlineCalculator() {
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               Estimated last day to appeal: <strong>{result.deadline}</strong>
             </p>
-            {!result.passed && result.recommended !== null && (
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                Recommended: submit by <strong>{result.recommended}</strong> (within {result.recommendedDays} days
-                of the decline).
-              </p>
-            )}
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 flex items-center gap-1">
-              <FaInfoCircle /> If the window has closed, contact SASSA{HELPLINE ? ` on ${HELPLINE}` : ""} — in
-              limited cases late appeals may still be considered.
+              <FaInfoCircle /> {result.passed
+                ? `The SRD rules do not provide a late-appeal route. Apply again for a later month if you qualify${HELPLINE ? `, or contact SASSA on ${HELPLINE}` : ""}.`
+                : "The portal enforces the cutoff. Do not wait until the last day in case the portal is unavailable."}
             </p>
           </div>
         </div>

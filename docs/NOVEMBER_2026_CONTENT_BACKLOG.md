@@ -14,7 +14,9 @@ confirmed November 2026 block with FAQs. P1 #2 implemented on `/status-check` (I
 implemented on `/status/approved` (title, description and opening answer lead with "approved but no Pay Day").
 P2 #6 implemented on `/guides/moya-app-sassa` (status + payment-date step and FAQs). P2 #7 implemented on
 `/grants/srd-r370-grant` and `/status-check` (R350 alias stated plainly). Dates-page metadata and readable date
-tables fixed 23 October.
+tables fixed 23 October. Appeal accuracy correction also completed 23 October: the live appeal
+copy now uses the official SASSA SRD Appeals Portal, the 90-day rule, the per-month flow and the
+no-new-evidence limit; the old 30-day step and DSD host are gone from live content.
 
 ---
 

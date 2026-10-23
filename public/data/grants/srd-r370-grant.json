@@ -96,7 +96,7 @@
     {
       "type": "text",
       "title": "What If My SRD Grant Was Cancelled?",
-      "content": "If your SRD status shows your grant was cancelled, do not panic. Cancellation can happen if you did not collect for three consecutive months, if you no longer meet the eligibility criteria, or if SASSA flagged your application during verification. A cancelled grant is not a permanent ban - you can <strong>reapply</strong> at any time on the official <a href=\"https://srd.sassa.gov.za\">SRD portal</a> with your 13-digit ID number. Your reapplication is assessed on the same monthly cycle as new applications. If you believe the cancellation is an error, lodge an appeal within 90 days to claim back pay. See our <a href=\"/guides/sassa-grant-renewal\">renewal guide</a> for the full steps."
+      "content": "If your SRD status shows your grant was cancelled, do not panic. Cancellation can happen if you did not collect for three consecutive months, if you no longer meet the eligibility criteria, or if SASSA flagged your application during verification. A cancelled grant is not a permanent ban - you can <strong>reapply</strong> at any time on the official <a href=\"https://srd.sassa.gov.za\">SRD portal</a> with your 13-digit ID number. Your reapplication is assessed on the same monthly cycle as new applications. If a specific month was declined, you can appeal that month within 90 days. A cancellation with no declined month is handled by reapplying, not by an appeal. See our <a href=\"/guides/sassa-grant-renewal\">renewal guide</a> for the full steps."
     },
     {
       "type": "steps",

@@ -111,7 +111,7 @@ export default function StatusCheckPage() {
     },
     {
       q: "What is my SASSA reference number and where do I find it?",
-      a: "Your reference number is the application/reference ID that appears on your status check and in your SMS updates. It is shown on the official SRD portal after you log in with your ID and phone number, and in the status-check SMS or WhatsApp replies. Keep it handy when contacting SASSA on 0800 60 10 11 or lodging an appeal — it helps agents find your file faster."
+      a: "Your reference number is the application/reference ID that appears on your status check and in your SMS updates. It is shown on the official SRD portal after you log in with your ID and phone number, and in the status-check SMS or WhatsApp replies. Keep it handy when contacting SASSA on 0800 60 10 11 — it helps agents find your file faster."
     },
     {
       q: `Does the SRD grant increase in ${currentYear}?`,
@@ -303,7 +303,7 @@ export default function StatusCheckPage() {
                   <li>
                      <NextLink href="/guides/grant-verification-process" className="text-sm font-bold hover:text-primary-gold flex items-center gap-2">
                         <span className="w-1 h-1 bg-primary-gold rounded-full"></span>
-                        Grant Reviews & Verification Guide
+                        SASSA Grant Review or Suspension?
                      </NextLink>
                   </li>
                   <li>
@@ -361,7 +361,7 @@ export default function StatusCheckPage() {
             <Card className="p-8 border-none shadow-sm bg-gray-50 dark:bg-gray-900 rounded-[2rem]">
                <h3 className="text-xl font-bold mb-4">Example: How a Gift Can Trigger a Decline</h3>
                <p className="text-sm text-gray-500 leading-relaxed">
-                 Suppose a friend sends you R700 to help with rent. This would put you over the R624 income threshold, and SASSA's automated system would flag it as "Alternative Income." You would need to appeal and provide proof that the deposit was a gift, not regular income. This is one of the most common reasons for unexpected declines.
+                 Suppose a friend sends you R700 to help with rent. This would put you over the R624 income threshold, and SASSA's automated system would flag it as "Alternative Income." You could appeal the month if the record is wrong, but the tribunal reassesses the information SASSA already had; new proof of a gift cannot be added at the appeal stage. This is one of the most common reasons for unexpected declines.
                </p>
             </Card>
             <Card className="p-8 border-none shadow-sm bg-gray-50 dark:bg-gray-900 rounded-[2rem]">
@@ -706,11 +706,11 @@ export default function StatusCheckPage() {
                  <ul className="space-y-4">
                     <li className="flex gap-3">
                        <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
-                       <p className="text-sm">Lodge your appeal within <strong>30 days</strong> of receiving your decline status. While the legal limit is 90 days, early action is prioritized.</p>
+                       <p className="text-sm">Lodge your appeal within <strong>90 days</strong> of the decision. The SRD rules do not provide a late-appeal route, so do not wait until the last day.</p>
                     </li>
                      <li className="flex gap-3">
                         <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
-                        <p className="text-sm">Use the DSD appeals portal: <a href="https://srd-appeals.dsd.gov.za" className="text-primary-gold underline">srd-appeals.dsd.gov.za</a>.</p>
+                        <p className="text-sm">Use the SASSA SRD Appeals Portal: <a href="https://srd.sassa.gov.za/appeals/appeal" className="text-primary-gold underline">https://srd.sassa.gov.za/appeals/appeal</a>.</p>
                      </li>
                     <li className="flex gap-3">
                        <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
@@ -718,14 +718,14 @@ export default function StatusCheckPage() {
                     </li>
                     <li className="flex gap-3">
                        <FaCheckCircle className="text-primary-gold flex-shrink-0 mt-1" />
-                       <p className="text-sm">Provide a clear reason. For example: "I am no longer receiving UIF, I have a clearance certificate to prove this."</p>
+                       <p className="text-sm">Choose the appeal reason that fits. The tribunal reassesses the information SASSA already had; new evidence cannot be added at this stage.</p>
                     </li>
                  </ul>
               </div>
               <div className="space-y-6">
                  <h3 className="text-2xl font-bold">Why Appeals Take Time</h3>
                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    The Independent Tribunal is a separate entity from SASSA. This separation ensures fairness, but it also means the data exchange takes time. Expect an appeal outcome between <strong>60 to 90 days</strong> after submission. If successful, you will receive backpay for all the months that were unfairly declined.
+                    The Independent Tribunal is a separate entity from SASSA. This separation ensures fairness, but it also means the data exchange takes time. The Independent Tribunal must finalise the appeal within <strong>90 days of receiving it</strong>. If the appeal succeeds, the decline is set aside; payment timing is a separate step and is not guaranteed by the decision.
                  </p>
                  <Button as={NextLink} href="/guides/appeal-guide" color="primary" variant="flat" size="lg" className="font-bold w-full py-8 text-xl">Read Full Appeal Guide</Button>
               </div>

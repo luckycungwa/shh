@@ -25,7 +25,7 @@ const terms = [
   { term: "USSD", definition: "Unstructured Supplementary Service Data — short codes like *120*69277# that work on any phone without internet to check your SASSA grant status." },
   { term: "RICA", definition: "Regulation of Interception of Communications Act — a South African law requiring all SIM cards to be registered with your ID number and proof of address." },
   { term: "SC19 Form", definition: "The official name of the SRD grant application form. It is available only online at srd.sassa.gov.za." },
-  { term: "Back Pay", definition: "Money paid to you for months you were incorrectly declined. If your appeal is approved, SASSA pays you for all the months you missed." },
+  { term: "Back Pay", definition: "Money paid for earlier months after a reinstatement or correction, where SASSA pays it. An appeal decision sets aside the declined decision, but it does not by itself guarantee a payment date or back pay." },
   { term: "Life Certification", definition: `An annual process where SASSA confirms you are still alive and eligible. In ${getCurrentYearString()}, this can be done digitally via the SASSA self-service portal.` },
   { term: "Self-Service Portal", definition: `SASSA's online system introduced in ${getCurrentYearString()} that allows beneficiaries to complete life certification, update profiles, and check status without visiting an office.` },
   { term: "Postbank", definition: "The state-owned bank that manages SASSA grant payments. Postbank issues the SASSA Gold Card (now Black Card) for grant collections." },

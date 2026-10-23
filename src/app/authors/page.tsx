@@ -25,7 +25,7 @@ const authors = [
 ];
 
 const verificationProcess = [
-  "Facts are checked against official sources where available — sassa.gov.za, srd.sassa.gov.za, srd-appeals.dsd.gov.za, services.sassa.gov.za, gov.za, and treasury.gov.za — and the sources are listed on the relevant page.",
+  "Facts are checked against official sources where available — sassa.gov.za, srd.sassa.gov.za, https://srd.sassa.gov.za/appeals/appeal, services.sassa.gov.za, gov.za, and treasury.gov.za — and the sources are listed on the relevant page.",
   "Grant amounts, income thresholds, and effective dates are drawn from a single canonical facts table so the same figure is never stated differently across two pages.",
   "Each page records its last-updated date, and guides are reviewed when SASSA announces changes to amounts, thresholds, or processes.",
   "Where a claim cannot be confirmed against an official source, the page says so instead of guessing.",

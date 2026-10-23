@@ -22,7 +22,6 @@ const daysOrNull = (key: string): number | null => {
 };
 
 const APPEAL_WINDOW_DAYS = daysOrNull("appeal_lodgement_window_days");
-const APPEAL_RECOMMENDED_DAYS = daysOrNull("appeal_recommended_days");
 const HELPLINE = factOrNull("sassa_helpline");
 const USSD = factOrNull("ussd_srd_status");
 const SRD_HOST = factOrNull("srd_portal_url")?.replace(/^https?:\/\//, "") ?? null;
@@ -64,8 +63,8 @@ export default function PaymentTroubleshooter() {
       title: "Your application was declined",
       body:
         APPEAL_WINDOW_DAYS !== null
-          ? `You can appeal within ${APPEAL_WINDOW_DAYS} days of the decline on the official ITSAA appeals portal${APPEALS_PORTAL_REF}${APPEAL_RECOMMENDED_DAYS !== null ? ` — act within the first ${APPEAL_RECOMMENDED_DAYS} days if you can` : ""}. Check our appeal guide for step-by-step help below.`
-          : `You can appeal on the official ITSAA appeals portal${APPEALS_PORTAL_REF}. Check our appeal guide for step-by-step help below.`,
+          ? `You can appeal within ${APPEAL_WINDOW_DAYS} days of the decline on the official SASSA SRD Appeals Portal${APPEALS_PORTAL_REF}. Check our appeal guide for step-by-step help below.`
+          : `You can appeal on the official SASSA SRD Appeals Portal${APPEALS_PORTAL_REF}. Check our appeal guide for step-by-step help below.`,
       link: { href: "/appeals/how-to-appeal", label: "Step-by-step appeal guide" },
     };
   } else if (status === "pending") {

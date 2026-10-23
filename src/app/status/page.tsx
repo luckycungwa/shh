@@ -43,17 +43,17 @@ const statusMeta: Record<string, { name: string; desc: string; action: string }>
   referred: { name: "Referred", desc: "Flagged for manual human review. Takes 2–6 weeks.", action: "Contact SASSA if no update after 4 weeks." },
   "means-test-failed": { name: "Means Test Failed", desc: "Income or assets above the threshold. You can appeal.", action: "Lodge an appeal via the ITSAA portal within 90 days." },
   approved: { name: "Approved", desc: "Your application passed all checks. Awaiting a Pay Day date.", action: "Check for a 'Pay Day' date. Funds arrive within 1–3 days of that date." },
-  declined: { name: "Declined", desc: "Application not approved for this month. You have 90 days to appeal.", action: "Check the decline reason and appeal on srd-appeals.dsd.gov.za." },
-  "appeal-pending": { name: "Appeal Pending", desc: "Your appeal has been received by ITSAA and is under review.", action: "Wait 60–90 days for a decision. Keep your reference number." },
+  declined: { name: "Declined", desc: "Application not approved for this month. You have 90 days to appeal.", action: "Check the decline reason and appeal on https://srd.sassa.gov.za/appeals/appeal." },
+  "appeal-pending": { name: "Appeal Pending", desc: "Your appeal has been received by ITSAA and is under review.", action: "The tribunal must finalise it within 90 days of receiving it. Check the month on the official portal." },
   paid: { name: "Paid", desc: "Payment has been released. Money reflects within 1–3 business days.", action: "Check your bank account or collection point. Save the SMS confirmation." },
   "under-review": { name: "Under Review", desc: "Your application is being re-examined before a final decision.", action: "Wait for the review to complete. Check your status after the 15th." },
   cancelled: { name: "Cancelled", desc: "Your grant was cancelled. You can reapply at any time.", action: "Reapply on the SRD portal or appeal if it was an error." },
   suspended: { name: "Suspended", desc: "Your grant was suspended, often after months of not collecting.", action: "Contact SASSA or reapply to restore your grant." },
   "reapplication-required": { name: "Reapplication Required", desc: "SASSA needs you to submit a fresh application to continue.", action: "Reapply on the SRD portal with your ID number." },
-  "alternative-income-detected": { name: "Alternative Income Detected", desc: "SASSA found income from another source above the threshold.", action: "Appeal with proof that the deposits were not income." },
-  "uif-registered": { name: "UIF Registered", desc: "You appear on the UIF database, which blocks the SRD grant.", action: "Request UIF deregistration and appeal with proof." },
-  "nsfas-registered": { name: "NSFAS Registered", desc: "You appear on the NSFAS student funding database.", action: "Get a clearance letter from your university and appeal." },
-  "source-limit-exceeded": { name: "Source Limit Exceeded", desc: "Your deposits across all sources exceeded the allowed limit.", action: "Review deposits and appeal within 90 days." },
+  "alternative-income-detected": { name: "Alternative Income Detected", desc: "SASSA found income from another source above the threshold.", action: "Appeal within 90 days if the record is wrong. The tribunal reassesses the existing information." },
+  "uif-registered": { name: "UIF Registered", desc: "You appear on the UIF database, which blocks the SRD grant.", action: "Check the UIF record and appeal the month if the record was wrong." },
+  "nsfas-registered": { name: "NSFAS Registered", desc: "You appear on the NSFAS student funding database.", action: "Check the NSFAS record and appeal the month if the record was wrong." },
+  "source-limit-exceeded": { name: "Source Limit Exceeded", desc: "Your deposits across all sources exceeded the allowed limit.", action: "Appeal within 90 days if the record is wrong. New evidence cannot be added." },
   "application-invalid": { name: "Application Invalid", desc: "Your application was missing required or correct information.", action: "Correct your details or submit a new application." },
   "no-status": { name: "Null / No Status", desc: "No status is showing, often due to a data error or new application.", action: "Wait 24–48 hours, then check again or contact SASSA." },
 };
@@ -76,7 +76,7 @@ const faqs = [
   { q: "Why did my status change from 'Approved' to 'Declined'?", a: "SASSA re-evaluates eligibility every month. If new information appears — such as a bank deposit pushing your income over R624 — your status will be updated. You can appeal a declined status." },
   { q: "What should I do if my status is 'Bank Details Pending'?", a: "Update your banking information immediately on srd.sassa.gov.za. Without valid bank details, SASSA cannot process your payment even if your application is approved." },
   { q: "How long does 'Referred' status take?", a: "Referred means your application has been flagged for manual review by a SASSA official. This can take 2–6 weeks. If it takes longer, call the SASSA helpline at 0800 60 10 11." },
-  { q: "What happens after my appeal is approved?", a: "If ITSAA approves your appeal, SASSA will process back payment for all the months you were unfairly declined. You will receive a lump sum in your bank account." },
+  { q: "What happens after my appeal is approved?", a: "An approved appeal means the Independent Tribunal set aside the declined decision for that month. SASSA must then implement the outcome, but the decision does not guarantee a payment date. Check your SRD status and the SASSA payment schedule." },
   { q: "Can I check my SASSA status without internet?", a: "Yes. Dial *120*69277# from any cellphone to check your SRD R370 status for free. You do not need data or airtime." },
 ];
 
@@ -164,7 +164,7 @@ export default function StatusListingPage() {
               <tr className="border-t border-gray-100 dark:border-gray-800"><td className="p-4 font-bold">Pending</td><td className="p-4 text-yellow-600">Maybe</td><td className="p-4">1–4 weeks</td><td className="p-4">Wait and check back</td></tr>
               <tr className="border-t border-gray-100 dark:border-gray-800"><td className="p-4 font-bold">Declined</td><td className="p-4 text-red-600 font-bold">No</td><td className="p-4">N/A</td><td className="p-4">Appeal within 90 days</td></tr>
               <tr className="border-t border-gray-100 dark:border-gray-800"><td className="p-4 font-bold">Bank Details Pending</td><td className="p-4 text-yellow-600">Blocked</td><td className="p-4">Until updated</td><td className="p-4">Update bank details now</td></tr>
-              <tr className="border-t border-gray-100 dark:border-gray-800"><td className="p-4 font-bold">Appeal Pending</td><td className="p-4 text-yellow-600">Under Review</td><td className="p-4">60–90 days</td><td className="p-4">Wait for ITSAA decision</td></tr>
+              <tr className="border-t border-gray-100 dark:border-gray-800"><td className="p-4 font-bold">Appeal Pending</td><td className="p-4 text-yellow-600">Under Review</td><td className="p-4">Up to 90 days from receipt</td><td className="p-4">Wait for ITSAA decision</td></tr>
             </tbody>
           </table>
         </div>

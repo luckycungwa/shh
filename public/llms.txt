@@ -34,7 +34,7 @@
 
 - SASSA Helpline: 0800 60 10 11
 - SRD Portal: https://srd.sassa.gov.za
-- Appeals Portal: https://srd-appeals.dsd.gov.za
+- Appeals Portal: https://srd.sassa.gov.za/appeals/appeal
 - SASSA WhatsApp: 082 046 8553
 - USSD Codes: *120*69277# (SRD status), *120*3210# (Postbank balance), *134*7737# (apply)
 

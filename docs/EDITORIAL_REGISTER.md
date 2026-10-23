@@ -189,6 +189,41 @@ R350 alias sentence and status-check FAQ present in the built grant and status-c
 **Not claimed:** No indexation, ranking or CTR improvement is asserted. Google has not been asked to recrawl.
 Deployment was not performed; the changes are committed locally and not pushed.
 
+### 2026-10-23 - SRD appeal accuracy correction (official portal, 90-day rules, no new evidence)
+
+**Reason:** Several appeal pages and data entries used a dead DSD appeals host, described a 30-day
+reconsideration-first step, promised back pay, or told users to upload bank statements, affidavits or
+clearance letters. The official SRD appeal is a reason-selection flow, not a document-upload flow.
+
+**Official sources:** `https://srd.sassa.gov.za/appeals/appeal` ("Lodge an Appeal or Check an Appeal
+Status"); the portal flow uses a 13-digit ID number, the 10-digit phone number on the SRD application,
+a 6-digit PIN and a per-month outcome; the SRD appeal rules provide a 90-day lodgement window, no late
+appeal, and a tribunal decision within 90 days of receipt. The tribunal reassesses the information SASSA
+already had. Gazette 46459 / GN 2120 reg 2(a) is the general 90-day basis; the SRD-specific rules add the
+no-late-appeal position.
+
+| # | File | Change | Basis |
+|---|---|---|---|
+| 1 | `public/data/appeals.json` | Rewrote six appeal entries: official portal, 90 days, per-month outcome, no late appeal, no reconsideration-first step, no new evidence, no reference number | Official portal + SRD appeal rules |
+| 2 | `public/data/decline-reasons.json` | Removed upload/evidence steps and back-pay promises from 12 decline entries; separated future record correction from an appeal of the existing record | Same |
+| 3 | `public/data/status-meanings.json` | Corrected nine status/appeal entries; 90-day tribunal finalisation; removed 60-90-day and upload claims; cancellation is not a declined month | Same |
+| 4 | `public/data/guides.json` | Rewrote the appeal, timeline and income-source guides; corrected Moya, portal, reapplication, renewal and child-support steps; Moya cannot lodge an appeal | Same |
+| 5 | `public/data/updates.json` | Corrected historical appeal copy, removed the 30-day step, fixed the Moya and stokvel titles, restored the June decline article, and kept update IDs/dates | Same |
+| 6 | `public/data/faqs.json` | Replaced the general appeal FAQ and biometric FAQ; removed the dead DSD route, the new-evidence promise and the "final decision" wording from the appeal-declined FAQ | Same |
+| 7 | `public/data/canonical-facts.json` | `appeals_portal_url` verified against the live portal; `appeal_lodgement_window_days` states 90 days, no late SRD appeal; removed `appeal_recommended_days` | Live portal + Gazette 46459 |
+| 8 | `src/app/appeals/page.tsx`, `src/app/tools/appeal-deadline/page.tsx`, `src/components/tools/AppealDeadlineCalculator.tsx` | Appeals hub and deadline tool rewritten; no 30-day recommendation; no late-appeal claim | Same |
+| 9 | `src/app/status-check/page.tsx`, `src/app/status/page.tsx`, `src/app/common-problems/page.tsx`, `src/app/how-much-is-srd-grant/page.tsx`, `src/app/glossary/page.tsx` | Removed upload/proof and back-pay promises; corrected portal label and 90-day wording | Same |
+| 10 | `src/app/tools/status-explorer/page.tsx`, `src/components/tools/PaymentTroubleshooter.tsx` | Removed the recommended-day clause; portal label is SASSA SRD Appeals Portal | Same |
+| 11 | `scripts/rewrite-thin-guides.mjs` | Generator appeal guide replaced with the corrected text; CSG 30-day reconsideration copy neutralised | Same |
+
+**Verification:** `npm run validate:content` 0 errors / 0 warnings; `npx tsc --noEmit` clean;
+`npm run lint` 0 errors (unused-code and `any` warnings only); `npm run build` succeeded
+(262 static pages). All `public/data` JSON parses. Repo grep leaves the dead host only in explanatory
+"that address does not work" notes.
+
+**Not claimed:** No indexation, ranking or payment outcome is asserted. The tribunal's actual decision
+and any payment timing remain separate from the appeal being lodged. Deployment was not performed.
+
 ---
 
 ## 3. Recurring workflow

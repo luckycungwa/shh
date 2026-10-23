@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import NextLink from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
@@ -8,9 +8,6 @@ import { buildMetadata } from "../../../lib/seo";
 import { breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
 import { getFact } from "../../../lib/canonical-facts";
 
-// Appeal windows and contact details are read from canonical-facts.json so
-// this page and the calculator can never disagree; a missing fact renders
-// without a number rather than a placeholder.
 const factOrNull = (key: string): string | null => {
   const raw = getFact(key);
   return raw.startsWith("{{") || raw.trim() === "" ? null : raw;
@@ -24,14 +21,13 @@ const daysOrNull = (key: string): number | null => {
 };
 
 const APPEAL_WINDOW_DAYS = daysOrNull("appeal_lodgement_window_days");
-const APPEAL_RECOMMENDED_DAYS = daysOrNull("appeal_recommended_days");
 const HELPLINE = factOrNull("sassa_helpline");
 const APPEALS_PORTAL_HOST = factOrNull("appeals_portal_url")?.replace(/^https?:\/\//, "") ?? null;
 const APPEALS_PORTAL_REF = APPEALS_PORTAL_HOST ? ` (${APPEALS_PORTAL_HOST})` : "";
 
 export const metadata: Metadata = buildMetadata({
   title: "SRD Appeal Deadline Calculator (2026)",
-  description: "Work out your last day to appeal a declined SRD R370 grant. Free, independent tool — no data leaves your browser.",
+  description: "Work out your last day to appeal a declined SRD grant. Free, independent tool - no data leaves your browser.",
   path: "/tools/appeal-deadline",
 });
 
@@ -39,23 +35,23 @@ const faqs = [
   {
     q: "How long do I have to appeal a declined SRD grant?",
     a: APPEAL_WINDOW_DAYS !== null
-      ? `You have up to ${APPEAL_WINDOW_DAYS} days from the date of the decline decision to submit an appeal on the official ITSAA appeals portal${APPEALS_PORTAL_REF}.${APPEAL_RECOMMENDED_DAYS !== null ? ` Act within the first ${APPEAL_RECOMMENDED_DAYS} days if you can — evidence is easier to gather while it is fresh.` : ""}`
-      : "The appeal window for a declined SRD grant is set by regulation. Check the official ITSAA appeals portal for the current deadline and lodge your appeal as soon as possible.",
+      ? `You have ${APPEAL_WINDOW_DAYS} days from the date of the decision to lodge an appeal on the official SRD appeals portal${APPEALS_PORTAL_REF}. The portal enforces the cutoff, and the SRD rules do not provide a late-appeal route.`
+      : "The appeal window for a declined SRD grant is set by regulation. Check the official SRD appeals portal for the deadline.",
   },
   {
     q: "What if I missed the appeal deadline?",
-    a: `Contact SASSA${HELPLINE ? ` on ${HELPLINE}` : ""} — in limited cases late appeals may still be considered, but this is not guaranteed. If the window has closed, you can usually reapply in the next monthly assessment cycle if you still qualify.`,
+    a: `The SRD appeal rules say an appeal lodged after the 90-day period will not be considered. You cannot reopen that month by appeal. Submit a new SRD application for a later month if you still qualify${HELPLINE ? `, and contact SASSA on ${HELPLINE} if you need help` : ""}.`,
   },
   {
     q: "Where do I submit my appeal?",
-    a: `Submit your appeal on the official ITSAA appeals portal${APPEALS_PORTAL_HOST ? ` at ${APPEALS_PORTAL_HOST}` : ""} using the ID number and phone number on your application.`,
+    a: `Submit the appeal on the official SRD appeals portal${APPEALS_PORTAL_HOST ? ` at ${APPEALS_PORTAL_HOST}` : ""}. Enter your 13-digit ID number, the 10-digit phone number on your application and the 6-digit PIN sent to that phone.`,
   },
 ];
 
 const headerLead =
   APPEAL_WINDOW_DAYS !== null
-    ? `If your SRD R370 application was declined, you have up to ${APPEAL_WINDOW_DAYS} days to appeal${APPEAL_RECOMMENDED_DAYS !== null ? ` — but act within the first ${APPEAL_RECOMMENDED_DAYS} days if you can` : ""}. Use this tool to estimate ${APPEAL_RECOMMENDED_DAYS !== null ? "both dates" : "your deadline"}.`
-    : "If your SRD R370 application was declined, use this tool to estimate your appeal deadline.";
+    ? `If your SRD application was declined, you have ${APPEAL_WINDOW_DAYS} days from the decision date to appeal. Use this tool to estimate your last day.`
+    : "If your SRD application was declined, use this tool to estimate your appeal deadline.";
 
 export default function AppealDeadlinePage() {
   return (
@@ -83,9 +79,9 @@ export default function AppealDeadlinePage() {
 
       <p className="text-sm text-gray-400">
         {APPEAL_WINDOW_DAYS !== null
-          ? `This calculator estimates the ${APPEAL_WINDOW_DAYS}-day appeal window${APPEAL_RECOMMENDED_DAYS !== null ? ` plus the recommended ${APPEAL_RECOMMENDED_DAYS}-day action date` : ""}.`
+          ? `This calculator estimates the ${APPEAL_WINDOW_DAYS}-day appeal window from the decision date.`
           : "This calculator estimates your appeal deadline from the official appeal window."}{" "}
-        Always confirm the exact deadline on the official ITSAA appeals portal{APPEALS_PORTAL_REF}. SASSA Help Hub
+        Always confirm the exact deadline on the official SRD appeals portal{APPEALS_PORTAL_REF}. SASSA Help Hub
         is an independent, unofficial resource.
       </p>
 

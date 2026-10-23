@@ -298,7 +298,7 @@
     "status_label": "Means Test Failed",
     "title": "SASSA Status: 'Means Test Failed' — What It Means & How to Appeal",
     "description": "'Means Test Failed' means SASSA found that your income or assets exceed the allowed limit. Learn what this means and how to appeal.",
-    "what_it_means": "'Means Test Failed' means SASSA's automated system checked your financial situation and determined that you have income or assets above the threshold for the grant you applied for. For the SRD grant, the threshold is R624 per month. For permanent grants, the thresholds are higher. This status is not necessarily permanent — if the system made an error, you can appeal the decision.",
+    "what_it_means": "'Means Test Failed' means SASSA's checks found income or assets above the limit for the month. For the SRD grant, the income threshold is R624 per month. It is not a permanent ban: you can appeal the specific month within 90 days if you disagree with the information SASSA used. The appeal reassesses the existing record; it is not a route to upload new proof.",
     "why_it_happens": [
       "Your bank account received deposits totaling more than R624 in a month",
       "You received a payment from a family member or friend that pushed you over the limit",
@@ -308,27 +308,27 @@
     ],
     "how_to_fix": [
       {
-        "title": "Review Your Bank Deposits",
-        "content": "Check your bank statements for the month in question. Identify any deposits that may have triggered the alert."
+        "title": "Check the month and decision date",
+        "content": "Open the SRD status portal and confirm the exact month and decision date. The 90-day appeal window runs from that date."
       },
       {
-        "title": "Lodge an Appeal",
-        "content": "Go to srd-appeals.dsd.gov.za and submit an appeal explaining why the income detected should not disqualify you."
+        "title": "Lodge an appeal if the record is wrong",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal with your ID number, phone number and PIN. Open the declined month and choose the reason that fits."
       },
       {
-        "title": "Provide Supporting Evidence",
-        "content": "If a family member sent you money that was a gift (not income), provide an affidavit explaining this."
+        "title": "Do not rely on new evidence",
+        "content": "The SRD appeal rules do not allow evidence that was not available when you applied. Bank statements or affidavits gathered afterwards cannot be added to the SRD appeal."
       },
       {
-        "title": "Isolate Your Bank Account",
-        "content": "Do not allow anyone else to use your bank account for their transactions. SASSA cannot distinguish between 'loans' and 'income.'"
+        "title": "Correct future assessments",
+        "content": "If your bank or contact details are wrong, update them on the SRD portal so later monthly checks use accurate information."
       }
     ],
-    "how_long": "Appeals are processed within 60 to 90 days. If successful, you will receive back pay for the months that were incorrectly declined.",
+    "how_long": "The Independent Tribunal must finalise an appeal within 90 days of receiving it. An approved appeal sets aside the decline; payment timing is separate and is not guaranteed by the decision.",
     "who_to_contact": [
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
         "label": "SASSA Helpline",
@@ -336,16 +336,16 @@
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "https://www.sassa.gov.za"
     ],
     "related": [
       "/status/declined",
       "/guides/appeal-guide",
-      "/grants/srd-r370-grant",
-      "/eligibility-check"
+      "/guides/income-source-detected-appeal",
+      "/tools/appeal-deadline"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -457,9 +457,9 @@
   {
     "slug": "declined",
     "status_label": "Declined",
-    "title": "SASSA Status: 'Declined' — What It Means, Why & How to Appeal",
-    "description": "'Declined' means your application was not approved. Learn the common reasons, what to do next, and how to submit a successful appeal.",
-    "what_it_means": "'Declined' means SASSA has evaluated your application and determined that you do not qualify for the grant for the month in question. This can happen for many reasons, and it does not necessarily mean you will never qualify. The decline applies to each month separately — even if you were declined this month, you may be approved in a future month if your circumstances change. You have the right to appeal a decline within 90 days.",
+    "title": "SASSA 'Declined': What It Means and How to Appeal",
+    "description": "A declined SRD status means SASSA did not approve that month. See what to check, how to appeal within 90 days, and what the tribunal can reassess.",
+    "what_it_means": "'Declined' means SASSA did not approve your SRD application for that month. Each month is assessed separately, so a decline for one month does not automatically cancel later months. You can appeal the declined month within 90 days of the decision, but the appeal cannot use evidence that was not available to SASSA when you applied.",
     "why_it_happens": [
       "Your income exceeded the R624 threshold due to deposits in your bank account",
       "UIF or NSFAS records show you are registered with them",
@@ -470,23 +470,23 @@
     ],
     "how_to_fix": [
       {
-        "title": "Check the Decline Reason",
-        "content": "Log into the SRD portal and look for the specific reason code for your decline."
+        "title": "Check the decline reason and date",
+        "content": "Use the SRD status portal to see the reason shown for that month and the date of the decision. The 90-day appeal window runs from that date."
       },
       {
-        "title": "Lodge an Appeal",
-        "content": "Go to srd-appeals.dsd.gov.za within 30 days (you have up to 90 days, but early appeals are processed faster)."
+        "title": "Lodge an appeal within 90 days",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal with your 13-digit ID number, the 10-digit phone number on your application and the 6-digit PIN. Open the declined month and choose the appeal reason that fits."
       },
       {
-        "title": "Provide Evidence",
-        "content": "If the decline was due to income detection, provide proof that the deposits were not regular income."
+        "title": "Use only information SASSA already had",
+        "content": "The tribunal reassesses the decision on the information available at application. You cannot add new bank statements, affidavits or other evidence at the appeal stage."
       },
       {
-        "title": "Fix the Root Cause",
-        "content": "Close unused bank accounts, stop others from using your account, or update your personal details if there was a name mismatch."
+        "title": "Fix the root cause for future months",
+        "content": "If the decline came from outdated bank or contact details, correct them on the SRD portal so later monthly assessments use accurate information."
       }
     ],
-    "how_long": "Appeals take 60 to 90 days to process. If successful, you will receive back pay for all the months that were incorrectly declined.",
+    "how_long": "The Independent Tribunal must finalise an appeal within 90 days of receiving it. If the appeal is declined, you can apply again for a later month if you still qualify.",
     "faqs": [
       {
         "q": "I was approved last month but declined this month — why?",
@@ -503,85 +503,86 @@
     ],
     "who_to_contact": [
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
         "label": "SASSA Helpline",
         "value": "0800 60 10 11"
-      },
-      {
-        "label": "SASSA Office",
-        "value": "Visit our offices page"
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
-      "https://srd.sassa.gov.za",
-      "https://www.sassa.gov.za"
+      "https://srd.sassa.gov.za/appeals/appeal",
+      "https://www.gov.za/sites/default/files/gcis_document/202204/46271rg11428gon2042.pdf",
+      "https://www.sassa.gov.za/social-grants/srd"
     ],
     "related": [
       "/status/means-test-failed",
       "/guides/appeal-guide",
-      "/grants/srd-r370-grant",
+      "/appeals/how-to-appeal",
       "/decline-reason/income-source-detected",
       "/faq"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
     "slug": "appeal-pending",
     "status_label": "Appeal Pending",
-    "title": "SASSA Status: 'Appeal Pending' — What It Means & How Long It Takes",
-    "description": "'Appeal Pending' means your appeal has been received and is being reviewed. Learn about the appeal process, timeline, and what to expect.",
-    "what_it_means": "'Appeal Pending' means your appeal against a declined grant decision has been received by the Independent Tribunal for Social Assistance Appeals (ITSAA) and is being reviewed. ITSAA is an independent body separate from SASSA, which ensures fairness in the appeal process. Your application and supporting documents are being evaluated by an independent tribunal member who will decide whether the original decline decision was correct.",
+    "title": "SASSA 'Appeal Pending': What It Means & Next Steps",
+    "description": "'Appeal Pending' means an SRD appeal has been lodged for a declined month and no tribunal decision is recorded yet. Check it with your ID, phone and PIN.",
+    "what_it_means": "'Appeal Pending' means an appeal has been lodged for a declined SRD month and the Independent Tribunal has not yet recorded a decision. It is not an approval, and it is not a second decline. The tribunal must finalise the appeal within 90 days of receiving it.",
     "why_it_happens": [
-      "You submitted an appeal through the ITSAA portal (srd-appeals.dsd.gov.za)",
-      "Your appeal has been logged and assigned to a case officer",
-      "The tribunal is reviewing your application and the evidence you provided",
-      "SASSA has been asked to provide their reasons for the decline"
+      "You lodged an appeal for that month on the official SASSA SRD appeals portal",
+      "The appeal is linked to your ID number and the month, not to a separate reference number",
+      "The Independent Tribunal is reassessing SASSA's decision on the information already available",
+      "The tribunal has not yet communicated a decision for that month"
     ],
     "how_to_fix": [
       {
-        "title": "Wait for Processing",
-        "content": "The tribunal process takes time. Most appeals are resolved within 60 to 90 days."
+        "title": "Check the month, not an overall status",
+        "content": "The appeals portal records outcomes per month. Open the specific month you appealed instead of looking for one overall appeal status."
       },
       {
-        "title": "Keep Your Contact Details Updated",
-        "content": "Ensure your phone number and address are correct so you receive the outcome notification."
+        "title": "Check with your ID, phone and PIN",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal, enter your 13-digit ID number and the 10-digit phone number on your SRD application, then enter the 6-digit PIN sent to that phone."
       },
       {
-        "title": "Check Your Status Online",
-        "content": "You can check your appeal status on the ITSAA portal using your reference number."
+        "title": "Wait for the 90-day tribunal period",
+        "content": "The tribunal must finalise the appeal within 90 days of receiving it. Pending during that period does not mean the appeal failed."
       },
       {
-        "title": "Do Not Submit a Second Appeal",
-        "content": "Submitting a duplicate appeal will not speed up the process and may cause delays."
+        "title": "Do not lodge a duplicate for the same month",
+        "content": "The portal rejects a second appeal for the same period. If your circumstances change, submit a new SRD application for a later month."
+      },
+      {
+        "title": "Keep your phone number active",
+        "content": "The PIN and the decision are sent to the phone number on your SRD application. If that number changes, update it on the SRD portal."
       }
     ],
-    "how_long": "The Independent Tribunal typically takes 60 to 90 days to process an appeal. Complex cases may take longer.",
+    "how_long": "The Independent Tribunal must finalise the appeal within 90 days from the date it receives the appeal. If that period passes with no outcome, follow up through official SASSA channels.",
     "who_to_contact": [
       {
-        "label": "ITSAA Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
-        "label": "DSD Contact",
-        "value": "012 312 7726"
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
-      "https://www.dsd.gov.za"
+      "https://srd.sassa.gov.za/appeals/appeal",
+      "https://www.gov.za/sites/default/files/gcis_document/202204/46271rg11428gon2042.pdf",
+      "https://www.sassa.gov.za/social-grants/srd"
     ],
     "related": [
-      "/guides/appeal-guide",
+      "/appeals/appeal-status-check",
+      "/guides/appeal-timeline",
       "/status/declined",
-      "/status/approved",
-      "/status/declined"
+      "/guides/appeal-guide"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -741,8 +742,8 @@
         "content": "You can also reapply through the SASSA WhatsApp line (082 601 0111) or the Moya app (zero data)."
       },
       {
-        "title": "Lodge an Appeal If It Was an Error",
-        "content": "If you believe the cancellation was incorrect, appeal within 90 days on the ITSAA portal (srd-appeals.dsd.gov.za) to claim back pay."
+        "title": "Check Whether a Month Was Declined",
+        "content": "A cancellation is not the same as a declined month, so check the portal for a specific decline reason and date. If a month was declined, you can appeal that month within 90 days. If there is no declined month, reapply instead of lodging an appeal."
       }
     ],
     "how_long": "A reapplication is assessed on the same monthly cycle as new applications. Check your status after the 15th of the month.",
@@ -765,7 +766,7 @@
       "/guides/sassa-grant-renewal",
       "/status/declined"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -879,7 +880,7 @@
     "status_label": "Alternative Income Detected",
     "title": "SASSA Status: 'Alternative Income Detected' — What It Means & How to Appeal",
     "description": "'Alternative Income Detected' means SASSA identified income from another source. Learn what counts as income and how to appeal this decline.",
-    "what_it_means": "'Alternative Income Detected' means SASSA's system identified income flowing into your accounts that it believes should disqualify you from the SRD grant. This can include gifts, family transfers, stokvel payouts, refunds, or informal trade — SASSA does not distinguish between 'income' and 'money you received.' If your total monthly deposits exceed {{srd_income_limit}}, you may be declined with this status. You can appeal if the money was not regular income.",
+    "what_it_means": "'Alternative Income Detected' means SASSA's checks found another income source for that month. The check can use bank and government records, and a family transfer, once-off deposit or old record can trigger it. It does not automatically prove you earned a salary, but SASSA did not accept that you met the income test for that month. You can appeal the month if the record is wrong, but you cannot add new evidence at the appeal stage.",
     "why_it_happens": [
       "A family member sent you money via e-wallet or bank transfer",
       "A stokvel payout was deposited into your account",
@@ -889,27 +890,27 @@
     ],
     "how_to_fix": [
       {
-        "title": "Review Your Bank Statements",
-        "content": "Identify every deposit in the declined month, including gifts and transfers."
+        "title": "Check the exact month and reason",
+        "content": "Use the SRD status portal to confirm the month, the decline reason and the decision date. Each month has its own 90-day appeal window."
       },
       {
-        "title": "Lodge an Appeal",
-        "content": "Go to srd-appeals.dsd.gov.za, select the declined month, and explain what each deposit was."
+        "title": "Lodge the appeal on the official portal",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal, enter your ID and phone number, then the 6-digit PIN. Open the declined month and choose no_alternative_income_source if it fits."
       },
       {
-        "title": "Provide Supporting Evidence",
-        "content": "Upload bank statements and, if a family member sent money, include a signed affidavit explaining it was a gift."
+        "title": "Understand the evidence limit",
+        "content": "The tribunal reassesses the information SASSA already had. The SRD appeal form is a reason selection, not a document-upload form, and new bank statements or affidavits cannot be added."
       },
       {
-        "title": "Prevent Future Declines",
-        "content": "Use a separate account for SRD only, or ask family to give you cash instead of electronic transfers."
+        "title": "Fix future months",
+        "content": "Correct wrong bank or contact details on the SRD portal for future assessments. A correction does not change the month you are appealing."
       }
     ],
-    "how_long": "Appeals are processed within 60 to 90 days. If successful, you receive back pay for the incorrectly declined months.",
+    "how_long": "The Independent Tribunal must finalise the appeal within 90 days of receiving it. A declined appeal confirms the decision for that month; you can apply again for a later month if you qualify.",
     "who_to_contact": [
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
         "label": "SASSA Helpline",
@@ -917,7 +918,7 @@
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "https://srd.sassa.gov.za",
       "https://www.sassa.gov.za"
     ],
@@ -925,9 +926,9 @@
       "/decline-reason/income-source-detected",
       "/status/means-test-failed",
       "/status/declined",
-      "/guides/appeal-guide"
+      "/guides/income-source-detected-appeal"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -944,27 +945,27 @@
     ],
     "how_to_fix": [
       {
-        "title": "Check Your UIF Status",
-        "content": "Contact the Department of Employment and Labour to check if your UIF record is still active."
+        "title": "Check your UIF record",
+        "content": "Contact the Department of Employment and Labour or your nearest Labour Centre to confirm whether the UIF record is active and accurate."
       },
       {
-        "title": "Request UIF Deregistration",
-        "content": "Ask your former employer to deregister you, or get help from your nearest Labour Centre."
+        "title": "Ask for deregistration for future months",
+        "content": "Ask your former employer or the Labour Centre to correct the record. This helps future SRD assessments but does not add evidence to an appeal for a past month."
       },
       {
-        "title": "Appeal With Proof",
-        "content": "Submit an appeal on the ITSAA portal with a letter from the Labour Centre confirming you are not receiving UIF benefits."
+        "title": "Appeal the declined month if the record was wrong",
+        "content": "Lodge on https://srd.sassa.gov.za/appeals/appeal within 90 days of the decision and choose the UIF-related reason shown. The appeal reassesses the record SASSA had; you cannot upload a new clearance letter at this stage."
       }
     ],
-    "how_long": "Appeals are processed within 60 to 90 days. Deregistration depends on your former employer and the Labour Centre.",
+    "how_long": "The Independent Tribunal must finalise an appeal within 90 days of receiving it. Fixing the UIF record is a separate process and depends on your former employer and the Labour Centre.",
     "who_to_contact": [
       {
-        "label": "Labour Centre",
-        "value": "Visit your nearest Department of Employment and Labour office"
+        "label": "Department of Employment and Labour",
+        "value": "Visit your nearest Labour Centre"
       },
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
         "label": "SASSA Helpline",
@@ -972,7 +973,7 @@
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "https://www.labour.gov.za",
       "https://www.sassa.gov.za"
     ],
@@ -981,7 +982,7 @@
       "/status/declined",
       "/status/means-test-failed"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -998,31 +999,35 @@
     ],
     "how_to_fix": [
       {
-        "title": "Contact Your University's Financial Aid Office",
-        "content": "Request a formal clearance letter confirming you are no longer registered or receiving NSFAS funding."
+        "title": "Check your NSFAS record",
+        "content": "Contact your university financial aid office or NSFAS to confirm whether the record still shows you as an active beneficiary."
       },
       {
-        "title": "Submit Clearance With Your Appeal",
-        "content": "Upload the NSFAS clearance letter or proof of non-funding on the ITSAA portal."
+        "title": "Ask for the record to be corrected",
+        "content": "Request a correction if you graduated, dropped out or never received funding. This helps future assessments but is not new evidence for a past appeal."
       },
       {
-        "title": "Explain Clearly in Your Appeal",
-        "content": "State that you graduated or dropped out in a specific year and are not receiving any NSFAS funding."
+        "title": "Appeal the declined month if the record was wrong",
+        "content": "Lodge on https://srd.sassa.gov.za/appeals/appeal within 90 days and choose the NSFAS-related reason shown. The tribunal reassesses the information SASSA had; there is no document upload in the SRD appeal form."
       }
     ],
-    "how_long": "Appeals are processed within 60 to 90 days, depending on how quickly you can provide clearance.",
+    "how_long": "The Independent Tribunal must finalise an appeal within 90 days of receiving it. Correcting the NSFAS record is a separate process.",
     "who_to_contact": [
       {
-        "label": "Your University's Financial Aid Office",
-        "value": "Request a clearance letter"
+        "label": "University financial aid office or NSFAS",
+        "value": "Request a record correction"
       },
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
+      },
+      {
+        "label": "SASSA Helpline",
+        "value": "0800 60 10 11"
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "https://www.nsfas.org.za",
       "https://www.sassa.gov.za"
     ],
@@ -1031,7 +1036,7 @@
       "/status/declined",
       "/status/means-test-failed"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -1039,7 +1044,7 @@
     "status_label": "Source Limit Exceeded",
     "title": "SASSA Status: 'Source Limit Exceeded' — What It Means & How to Appeal",
     "description": "'Source Limit Exceeded' means your total deposits across all sources went over the allowed limit. Learn what triggers this and how to appeal.",
-    "what_it_means": "'Source Limit Exceeded' means that when SASSA added up all the money coming into your accounts from every source, the total exceeded the allowed monthly limit of {{srd_income_limit}}. This is closely related to 'Alternative Income Detected' and 'Means Test Failed.' It means the combined value from salaries, gifts, transfers, or informal income was too high for the month in question. You can appeal if the deposits were not regular income.",
+    "what_it_means": "'Source Limit Exceeded' means the total money SASSA counted from all sources for that month went over the R624 limit. It is related to 'Alternative Income Detected' and 'Means Test Failed'. You can appeal the month if the record is wrong, but the appeal reassesses the existing information and does not allow new evidence.",
     "why_it_happens": [
       "Multiple deposits from different sources pushed your total over the limit",
       "A large one-off deposit from a family member or refund was counted",
@@ -1048,27 +1053,27 @@
     ],
     "how_to_fix": [
       {
-        "title": "Add Up Your Total Deposits",
-        "content": "Review all your bank statements and identify every credit for the declined month."
+        "title": "Check the month and decision date",
+        "content": "Confirm the exact month and decision date on the SRD status portal. The 90-day appeal window runs from that date."
       },
       {
-        "title": "Lodge an Appeal",
-        "content": "Go to srd-appeals.dsd.gov.za and choose the declined month, explaining each deposit."
+        "title": "Lodge the appeal if you disagree",
+        "content": "Go to https://srd.sassa.gov.za/appeals/appeal, verify with your ID, phone and PIN, open the declined month and choose the reason that fits."
       },
       {
-        "title": "Provide Evidence",
-        "content": "Upload statements and an affidavit if the money was a gift, refund, or one-off transfer."
+        "title": "Do not rely on uploading statements",
+        "content": "The SRD appeal form does not provide a document upload and the rules do not allow information that was not available at application."
       },
       {
-        "title": "Reduce Future Deposits",
-        "content": "Keep grant-eligible accounts separate and avoid large transfers into them."
+        "title": "Reduce future flags",
+        "content": "Keep the account used for SRD separate and avoid unnecessary large transfers into it before future monthly checks."
       }
     ],
-    "how_long": "Appeals are processed within 60 to 90 days. Success is most likely when deposits were clearly not regular income.",
+    "how_long": "The Independent Tribunal must finalise an appeal within 90 days of receiving it. There is no guarantee of back pay from the appeal decision alone.",
     "who_to_contact": [
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       },
       {
         "label": "SASSA Helpline",
@@ -1076,16 +1081,16 @@
       }
     ],
     "sources": [
-      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "https://www.sassa.gov.za"
     ],
     "related": [
       "/status/alternative-income-detected",
       "/status/means-test-failed",
       "/status/declined",
-      "/guides/appeal-guide"
+      "/guides/income-source-detected-appeal"
     ],
-    "last_updated": "2026-08-31",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
@@ -1214,12 +1219,12 @@
         "content": "Confirm your UIF status with the Department of Employment and Labour, check NSFAS for active funding, ask a former employer about a PERSAL record, and search the CIPC register for your name as a director."
       },
       {
-        "title": "Fix the Root Cause First",
-        "content": "Get a stale UIF registration deregistered (a UI-19 form from your previous employer), request an NSFAS clearance letter if funding ended, or have a PERSAL record closed. Correct the source data before you appeal."
+        "title": "Correct the Source for Future Months",
+        "content": "Ask the source to correct the record: a stale UIF registration, an ended NSFAS record or a closed PERSAL record. This helps future monthly assessments, but it is not new evidence for an appeal about a past month."
       },
       {
-        "title": "Appeal Within 90 Days With Evidence",
-        "content": "Lodge an appeal at srd-appeals.dsd.gov.za with the letters and records that prove the flag was wrong. Successful appeals are paid back pay for the declined month."
+        "title": "Appeal the Month If the Record Was Wrong",
+        "content": "Lodge an appeal at https://srd.sassa.gov.za/appeals/appeal within 90 days of the decision and choose the reason that fits. The tribunal reassesses the information SASSA already had. Letters obtained afterwards cannot be added, and the SRD appeal form has no document upload."
       },
       {
         "title": "Let the Monthly Cycle Work",
@@ -1231,7 +1236,7 @@
       "Do not appeal without first identifying and fixing the underlying cause; a general appeal without evidence rarely wins.",
       "Do not allow other people to deposit into your SRD account or use it for their transactions."
     ],
-    "how_long": "Fixing the underlying record (UIF, NSFAS, PERSAL) depends on the source, but appeals run on the standard 60 to 90 days. Once the root cause is cleared, approval can return in a later monthly assessment.",
+    "how_long": "The Independent Tribunal must finalise an appeal within 90 days of receiving it. Correcting the underlying UIF, NSFAS or PERSAL record is a separate process, and approval can return in a later monthly assessment.",
     "check_methods": [
       {
         "label": "Online (SRD Portal)",
@@ -1260,13 +1265,13 @@
         "value": "srd.sassa.gov.za"
       },
       {
-        "label": "DSD Appeals Portal",
-        "value": "srd-appeals.dsd.gov.za"
+        "label": "SASSA SRD Appeals Portal",
+        "value": "https://srd.sassa.gov.za/appeals/appeal"
       }
     ],
     "sources": [
       "https://srd.sassa.gov.za",
-      "https://srd-appeals.dsd.gov.za",
+      "https://srd.sassa.gov.za/appeals/appeal",
       "https://www.labour.gov.za",
       "https://www.sassa.gov.za"
     ],
@@ -1278,7 +1283,7 @@
       "/decline-reason/nsfas-registered",
       "/guides/appeal-guide"
     ],
-    "last_updated": "2026-09-18",
+    "last_updated": "2026-10-23",
     "author": "Lucky Cungwa"
   },
   {
