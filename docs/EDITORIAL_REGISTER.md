@@ -160,6 +160,31 @@ description 156 chars, one H1, canonical `/payment-calendar`, FAQ schema present
 
 ---
 
+### 2026-10-23 — Dates metadata, readable date tables, homepage October hold, status ID-number answer
+
+**Official sources:** SASSA October 2026 SRD announcement (22–23 October) and SASSA media statement of 14 October
+2026 on revised November dates. No new dates were inferred; December SRD remains TBA.
+
+| # | File | Change | Basis |
+|---|---|---|---|
+| 1 | `src/lib/payment-schedule.ts`, `public/data/payment-schedule-forecast.json` | Added optional `endDate` to a schedule row and gave October SRD `endDate: 2026-10-23`, so the homepage stays on October through the second SRD batch day instead of rolling to November on 23 October | October SRD is paid 22 **and** 23 October |
+| 2 | `src/app/dates/[month-year]/page.tsx` | Title/H1 → "SASSA {Month} 2026 Grant Payment Dates" (no truncated "— All"); compact confirmed summary in the description; readable dates in the payment table (`2 October 2026`, not `2026-10-02`) | Built titles 55–56 chars, descriptions 124–143 chars; raw ISO dates were visible to users |
+| 3 | `src/app/sitemap.ts` | `/dates/*` lastmod now comes from each month's own `governance.lastVerified` instead of one shared status date | Per-month verification dates in the forecast |
+| 4 | `public/data/updates.json` | `update-2026-038` description shortened to 149 chars | Previous snippet was cut in search results |
+| 5 | `src/app/payment-calendar/page.tsx`, `src/app/status-check/page.tsx` | Readable dates on month cards; "SRD R370 date TBA" singular; status-check link text now "SASSA payment calendar" | Copy consistency |
+| 6 | `src/app/status-check/page.tsx` | Added "Check your SASSA status with your ID number" steps and an ID-only FAQ; description now leads with the ID-number method | November backlog P1 #2: method query +80% / +40% |
+
+**Verification:** `npx tsc --noEmit` clean, `npm run validate:content` 0 errors/0 warnings, `npm run lint` 0 errors
+(103 pre-existing warnings), `npm run build` succeeded. Built `/dates/*`: October 55-char title / 125-char
+description, November 56 / 143, December 56 / 124; no "Grant Schedule — All" remains; November table renders
+"Friday 30 October 2026". Sitemap lastmod: October 2026-10-22, November 2026-10-15, December 2026-09-24.
+Homepage build now shows October and the 22–23 October SRD batch. `/status-check` title 52 chars, description 153.
+
+**Not claimed:** No indexation, ranking or CTR improvement is asserted. Google has not been asked to recrawl.
+Deployment was not performed; the changes are committed locally and not pushed.
+
+---
+
 ## 3. Recurring workflow
 
 1. **Research** official sources (`sassa.gov.za/newsroom/media-statements`, `srd.sassa.gov.za`, DSD,

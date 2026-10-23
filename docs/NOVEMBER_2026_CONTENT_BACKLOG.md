@@ -9,8 +9,9 @@
 **Companion documents:** `docs/EDITORIAL_REGISTER.md` (register + publication log),
 `docs/TOPIC_COVERAGE_MATRIX.md` (coverage matrix).
 
-**Status 22 October 2026:** P1 #1 implemented on `/payment-calendar` — metadata title, H1, description and a
-confirmed November 2026 block with FAQs. P1 #2 is now `/status-check` only; "approved but no Pay Day" moved to P2.
+**Status 23 October 2026:** P1 #1 implemented on `/payment-calendar` — metadata title, H1, description and a
+confirmed November 2026 block with FAQs. P1 #2 implemented on `/status-check` (ID-number steps + FAQ). Dates-page
+metadata and readable date tables fixed 23 October. "Approved but no Pay Day" remains P2.
 
 ---
 
@@ -141,9 +142,9 @@ answer; do not build a second generic dates page.
 | Demand cluster | Page that should answer it | Current state | Action |
 |---|---|---|---|
 | Generic payment dates | `/payment-calendar` | Hub page, confirmed dates, FAQ | Optimise title/H1/FAQ only |
-| November dates | `/payment-calendar` (hub) → `/dates/november-2026` | Hub holds the demand but its snippet truncated to "October"; the month page has 0 GSC impressions | **Done 22 Oct:** hub title/H1/description rewritten around November, confirmed block added. Month-page metadata still to fix |
+| November dates | `/payment-calendar` (hub) → `/dates/november-2026` | Hub holds the demand but its snippet truncated to "October"; the month page has 0 GSC impressions | **Done 22 Oct:** hub title/H1/description rewritten around November, confirmed block added. **Done 23 Oct:** month-page title/description shortened and readable date tables |
 | October dates | `/dates/october-2026`, `update-2026-038` | Now fully confirmed (SRD 22–23 Oct) | No further work this cycle |
-| Status check | `/status-check`, `/tools/status-explorer` | Strong; covers status meanings | Add ID-number method + approved/no-date section |
+| Status check | `/status-check`, `/tools/status-explorer` | Strong; covers status meanings | **Done 23 Oct:** ID-number steps + FAQ added; approved/no-date section left to P2 |
 | Approved, no Pay Day | `/status/approved` | Exists, partly covered | Expand the answer at the top of the page |
 | R350/R370 alias + dates | `/grants/srd-r370-grant` | Refreshed 22 Oct | Add "R350 is now R370" once, plus date/status answer |
 | Moya app | `/guides/moya-app-sassa` | Exists | Add a payment-dates/status section |
@@ -159,7 +160,7 @@ answer; do not build a second generic dates page.
 | # | Opportunity | Target page(s) | Why now | Guardrail |
 |---|---|---|---|---|
 | 1 | Win "November payment dates" | `/payment-calendar` first, then `/dates/november-2026` | Hub has 677,533 impressions at 1.30% CTR; month page has 0 impressions, so the hub must answer first | **Done 22 Oct** on the hub. Do not restate SRD as confirmed — it is still TBA |
-| 2 | Answer "status check using ID number" | `/status-check` only | Method query growing +80% / +40%; page ranks around position 13 | Exact steps + what each result means; no third-party portals. Do **not** edit `/tools/status-explorer` — it is a meaning lookup with 0 impressions |
+| 2 | Answer "status check using ID number" | `/status-check` only | **Done 23 Oct 2026.** Method query growing +80% / +40%; page ranks around position 13 | Exact steps + what each result means; no third-party portals. `/tools/status-explorer` unchanged — it is a meaning lookup with 0 impressions |
 | 3 | Festive-season dates (conditional) | `/payment-calendar`, `/dates/december-2026` | Breakout demand | **Only after** an official announcement; December SRD is still TBA, so no page change |
 
 ### P2 — next
