@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardHeader, CardBody, Divider, Button, Chip } from "@nextui-org/react";
+import { LinkButton, Card, CardBody, Divider, Chip } from "@/components/ui/nextui";
 import { FaUserShield, FaExternalLinkAlt, FaExclamationTriangle, FaPhoneAlt, FaMobileAlt, FaCheckCircle, FaSearch, FaCalendarAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -261,7 +261,7 @@ export default function StatusCheckPage() {
                  <p className="text-sm text-red-700 dark:text-red-300">
                     Never share your OTP or banking PIN. SASSA will only ask for your ID and phone number to check your status.
                  </p>
-                 <Button as={NextLink} href="/scam-alert" variant="flat" color="danger" size="sm" className="font-bold">Avoid Scams</Button>
+                 <LinkButton href="/scam-alert" variant="flat" color="danger" size="sm" className="font-bold">Avoid Scams</LinkButton>
               </CardBody>
            </Card>
 
@@ -633,7 +633,7 @@ export default function StatusCheckPage() {
                        </div>
                     </div>
                    <div className="mt-8 space-y-3">
-                      <Button as={NextLink} href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</Button>
+                      <LinkButton href="/payment-calendar" fullWidth color="primary" variant="flat" className="font-bold py-6">View Full {currentYear} Calendar</LinkButton>
                       <NextLink href={`/dates/${schedule.month_key}`} className="block text-center text-sm font-bold text-primary-gold underline">See the full {schedule.label} schedule</NextLink>
                    </div>
                 </div>
@@ -731,7 +731,7 @@ export default function StatusCheckPage() {
                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                     The Independent Tribunal is a separate entity from SASSA. This separation ensures fairness, but it also means the data exchange takes time. The Independent Tribunal must finalise the appeal within <strong>90 days of receiving it</strong>. If the appeal succeeds, the decline is set aside; payment timing is a separate step and is not guaranteed by the decision.
                  </p>
-                 <Button as={NextLink} href="/guides/appeal-guide" color="primary" variant="flat" size="lg" className="font-bold w-full py-8 text-xl">Read Full Appeal Guide</Button>
+                 <LinkButton href="/guides/appeal-guide" color="primary" variant="flat" size="lg" className="font-bold w-full py-8 text-xl">Read Full Appeal Guide</LinkButton>
               </div>
            </div>
         </section>
@@ -765,8 +765,8 @@ export default function StatusCheckPage() {
             I've put together detailed guides on appeals, banking details, and common SASSA problems. Browse them below or check the official SASSA website for application-specific issues.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Button as={NextLink} href="/guides" color="primary" size="lg" className="font-bold px-12 py-8 text-xl shadow-2xl rounded-3xl">Browse Detailed Guides</Button>
-            <Button as={NextLink} href="/contact" variant="flat" size="lg" className="font-bold px-12 py-8 text-xl border-2 border-primary-gold rounded-3xl">Contact Me</Button>
+            <LinkButton href="/guides" color="primary" size="lg" className="font-bold px-12 py-8 text-xl shadow-2xl rounded-3xl">Browse Detailed Guides</LinkButton>
+            <LinkButton href="/contact" variant="flat" size="lg" className="font-bold px-12 py-8 text-xl border-2 border-primary-gold rounded-3xl">Contact Me</LinkButton>
           </div>
           <p className="text-xs text-gray-400 max-w-lg mx-auto pt-8 leading-relaxed">
             * SASSA Help Hub is an independent info site. I'm not a government agency. For official services, always visit <a href="https://www.sassa.gov.za" className="underline hover:text-primary-gold">www.sassa.gov.za</a>.

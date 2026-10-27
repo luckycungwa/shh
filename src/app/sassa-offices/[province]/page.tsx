@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
+import { LinkButton, Chip, Card, CardBody, Divider } from "@/components/ui/nextui";
 import { FaMapMarkerAlt, FaPhone, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../../components/JsonLd";
@@ -37,7 +37,8 @@ export function generateStaticParams() {
   return readProvinces().map((p) => ({ province: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { province: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ province: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const province = readProvinces().find((p) => p.slug === params.province);
   if (!province) return { title: "Province Not Found" };
   const title = clampTitle(`SASSA Offices in ${province.name} — Contact Details & Locations`);
@@ -53,7 +54,8 @@ export function generateMetadata({ params }: { params: { province: string } }): 
   };
 }
 
-export default function ProvinceOfficesPage({ params }: { params: { province: string } }) {
+export default async function ProvinceOfficesPage({ params: paramsPromise }: { params: Promise<{ province: string }> }) {
+  const params = await paramsPromise;
   const province = readProvinces().find((p) => p.slug === params.province);
   if (!province) notFound();
 
@@ -214,8 +216,8 @@ export default function ProvinceOfficesPage({ params }: { params: { province: st
               <h2 className="text-2xl font-black">Looking for a specific office?</h2>
               <p className="text-secondary-gray">Check your grant status online first — you may not need to visit a branch. Need eligibility or application facts instead? See the grants guide for {province.name}.</p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button as={NextLink} href="/status-check" color="primary" className="font-bold px-8 py-6">Check SASSA Status</Button>
-                <Button as={NextLink} href={`/province/${province.slug}`} variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">SASSA Grants in {province.name}</Button>
+                <LinkButton href="/status-check" color="primary" className="font-bold px-8 py-6">Check SASSA Status</LinkButton>
+                <LinkButton href={`/province/${province.slug}`} variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">SASSA Grants in {province.name}</LinkButton>
               </div>
             </CardBody>
           </Card>

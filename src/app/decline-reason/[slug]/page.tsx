@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaExclamationTriangle, FaCheckCircle, FaClock } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
@@ -35,7 +35,8 @@ export function generateStaticParams() {
   return data.map((r) => ({ slug: r.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const data: DeclineReason[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/decline-reasons.json"), "utf8"));
   const reason = data.find((r) => r.slug === params.slug);
   if (!reason) return { title: "Decline Reason Not Found" };
@@ -57,7 +58,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function DeclineReasonPage({ params }: { params: { slug: string } }) {
+export default async function DeclineReasonPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise;
   const all: DeclineReason[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/decline-reasons.json"), "utf8"));
   const reason = all.find((r) => r.slug === params.slug);
   if (!reason) notFound();

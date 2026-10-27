@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "test": "node --test scripts/check-server-boundaries.test.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "check:production-freshness": "node scripts/check-production-freshness.mjs"
   },

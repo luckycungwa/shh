@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardBody, Chip, Divider, Button } from "@nextui-org/react";
+import { LinkButton, Card, CardBody, Chip, Divider } from "@/components/ui/nextui";
 import { FaPhoneAlt, FaMobileAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaExternalLinkAlt, FaShieldAlt, FaExclamationTriangle, FaCommentDots, FaCheckCircle, FaClock } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -127,7 +127,7 @@ export default function SassaContactPage() {
               <p className="text-sm text-red-700 dark:text-red-300 leading-relaxed">
                 SASSA will <strong>never</strong> ask for your OTP, banking PIN, or security code over the phone, WhatsApp or SMS. If someone claiming to be SASSA asks for these, it is a scam. Hang up, stop messaging, and report it to SASSA on <strong>0800 60 10 11</strong>.
               </p>
-              <Button as={NextLink} href="/scam-alert" variant="flat" color="danger" size="sm" className="font-bold">Read the Scam Alert</Button>
+              <LinkButton href="/scam-alert" variant="flat" color="danger" size="sm" className="font-bold">Read the Scam Alert</LinkButton>
             </CardBody>
           </Card>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardBody, Chip, Button } from "@nextui-org/react";
+import { LinkButton, Card, Chip } from "@/components/ui/nextui";
 import {
   FaSearch, FaExclamationTriangle, FaMoneyCheckAlt, FaUserCog,
   FaMobileAlt, FaShieldAlt, FaMapMarkerAlt, FaArrowRight,
@@ -304,12 +304,12 @@ export default function CommonProblemsPage() {
           If you cannot find your problem listed here, try the full FAQ page or contact us directly.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button as={NextLink} href="/faq" color="primary" variant="flat" size="lg" className="font-bold">
+          <LinkButton href="/faq" color="primary" variant="flat" size="lg" className="font-bold">
             Browse Full FAQ
-          </Button>
-          <Button as={NextLink} href="/contact" color="primary" size="lg" className="font-bold">
+          </LinkButton>
+          <LinkButton href="/contact" color="primary" size="lg" className="font-bold">
             Contact Us
-          </Button>
+          </LinkButton>
         </div>
       </section>
     </div>

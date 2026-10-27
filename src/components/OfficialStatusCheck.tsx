@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Chip } from "@nextui-org/react";
+import { Button, Chip } from "@/components/ui/nextui";
 import { FaExternalLinkAlt, FaShieldAlt } from "react-icons/fa";
 
 const OFFICIAL_STATUS_URL = "https://srd.sassa.gov.za/sc19/status";

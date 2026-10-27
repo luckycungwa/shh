@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Metadata } from "next";
-import { Card, CardHeader, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip, Accordion, AccordionItem, Avatar } from "@nextui-org/react";
+import { LinkButton, Card, CardBody, Button, Breadcrumbs, BreadcrumbItem, Chip, Avatar } from "@/components/ui/nextui";
 import Image from "next/image";
 import { FaClock, FaCalendarAlt, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaListUl, FaLink, FaLightbulb, FaQuestionCircle, FaMobileAlt } from "react-icons/fa";
 import NextLink from "next/link";
@@ -58,7 +58,8 @@ export async function generateStaticParams() {
   return guides.map((guide) => ({ id: guide.id }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const { id } = params;
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
@@ -98,7 +99,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default async function GuidePage({ params }: { params: { id: string } }) {
+export default async function GuidePage({ params: paramsPromise }: { params: Promise<{ id: string }> }) {
+  const params = await paramsPromise;
   const { id } = params;
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
@@ -331,9 +333,9 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
                     {guide.relatedLinks.map((link, i) => (
                        <li key={i} className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
                           <span>{link.title}</span>
-                          <Button as={NextLink} href={link.url} target="_blank" size="sm" variant="flat" color="primary">
+                          <LinkButton href={link.url} target="_blank" size="sm" variant="flat" color="primary">
                              Visit Website <FaExternalLinkAlt className="ml-2 text-xs" />
-                          </Button>
+                          </LinkButton>
                        </li>
                     ))}
                  </ul>
@@ -373,9 +375,9 @@ export default async function GuidePage({ params }: { params: { id: string } }) 
               <CardBody className="p-0 space-y-6">
                  <h3 className="text-2xl font-black text-primary-gold">Need Help?</h3>
                  <p className="text-sm text-secondary-gray">If you're still unsure about this process, you can contact me or the official SASSA helpline.</p>
-                 <Button as={NextLink} href="/contact" fullWidth color="primary" className="font-bold">
+                 <LinkButton href="/contact" fullWidth color="primary" className="font-bold">
                     Get in Touch
-                 </Button>
+                 </LinkButton>
               </CardBody>
            </Card>
 

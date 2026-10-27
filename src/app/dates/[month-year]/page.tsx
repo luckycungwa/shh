@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import NextLink from "next/link";
 import { clampTitle, clampDescription } from "../../../lib/seo";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaCalendarCheck, FaQuestionCircle, FaLink, FaExclamationTriangle } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
@@ -91,7 +91,8 @@ function confirmedSummary(s: MonthSchedule): string {
   return parts.join(", ");
 }
 
-export function generateMetadata({ params }: { params: { "month-year": string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ "month-year": string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const s = readAll().find((x) => x.month_key === params["month-year"]);
   if (!s) return { title: "Payment Dates Not Found" };
   const electionMonth = s.month_key === "november-2026";
@@ -115,7 +116,8 @@ export function generateMetadata({ params }: { params: { "month-year": string } 
   };
 }
 
-export default function PaymentDatesPage({ params }: { params: { "month-year": string } }) {
+export default async function PaymentDatesPage({ params: paramsPromise }: { params: Promise<{ "month-year": string }> }) {
+  const params = await paramsPromise;
   const schedule = readAll().find((x) => x.month_key === params["month-year"]);
   if (!schedule) notFound();
 

@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaPhone, FaExternalLinkAlt, FaQuestionCircle, FaMoneyCheckAlt, FaClock } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
@@ -41,7 +41,8 @@ export function generateStaticParams() {
   return readAll().map((a) => ({ step: a.slug }));
 }
 
-export function generateMetadata({ params }: { params: { step: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ step: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const page = readAll().find((a) => a.slug === params.step);
   if (!page) return { title: "Appeal Guide Not Found" };
   const url = `https://www.sassahelphub.co.za/appeals/${params.step}`;
@@ -57,7 +58,8 @@ export function generateMetadata({ params }: { params: { step: string } }): Meta
   };
 }
 
-export default function AppealPage({ params }: { params: { step: string } }) {
+export default async function AppealPage({ params: paramsPromise }: { params: Promise<{ step: string }> }) {
+  const params = await paramsPromise;
   const page = readAll().find((a) => a.slug === params.step);
   if (!page) notFound();
 

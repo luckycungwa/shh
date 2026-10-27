@@ -2,7 +2,7 @@
 import path from "path";
 import React from "react";
 import type { Metadata } from "next";
-import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
+import { Chip, Card, CardBody, Divider, Button } from "@/components/ui/nextui";
 import { FaExternalLinkAlt, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";

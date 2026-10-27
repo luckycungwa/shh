@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Divider, Card, CardBody, Button } from "@nextui-org/react";
+import { LinkButton, Chip, Divider, Card, CardBody } from "@/components/ui/nextui";
 import {
   FaMapMarkerAlt,
   FaInfoCircle,
@@ -66,7 +66,8 @@ export function generateStaticParams() {
   return data.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const data: Province[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/provinces.json"), "utf8"));
   const province = data.find((p) => p.slug === params.slug);
   if (!province) return { title: "Province Not Found" };
@@ -96,7 +97,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ProvincePage({ params }: { params: { slug: string } }) {
+export default async function ProvincePage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise;
   const all: Province[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/provinces.json"), "utf8"));
   const province = all.find((p) => p.slug === params.slug);
   if (!province) notFound();
@@ -282,9 +284,9 @@ export default function ProvincePage({ params }: { params: { slug: string } }) {
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               For office visits, use the dedicated directory — it lists each local office town with verified addresses and phone numbers where available, plus practical visiting guidance:
             </p>
-            <Button as={NextLink} href={`/sassa-offices/${province.slug}`} color="primary" className="font-bold">
+            <LinkButton href={`/sassa-offices/${province.slug}`} color="primary" className="font-bold">
               Open {province.name} office directory
-            </Button>
+            </LinkButton>
             {officeTowns.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-5">
                 {officeTowns.map((t, i) => (
