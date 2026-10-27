@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardHeader, CardBody, Button, Chip, Divider } from "@nextui-org/react";
+import { LinkCard, LinkButton, Card, CardHeader, CardBody, Chip, Divider } from "@/components/ui/nextui";
 import { FaBook, FaClock, FaArrowRight, FaGraduationCap, FaSearch, FaFilter, FaLightbulb, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -47,11 +47,12 @@ const faqs = [
   { q: "What documents do I need to apply for a SASSA grant?", a: "You need your 13-digit South African ID number (or refugee/asylum permit), a valid cellphone number, and your banking details for payment." },
 ];
 
-export default function GuidesListPage({ searchParams }: { searchParams?: { cat?: string } }) {
+export default async function GuidesListPage({ searchParams }: { searchParams?: Promise<{ cat?: string }> }) {
+  const query = await searchParams;
   const guidesPath = path.join(process.cwd(), "public/data/guides.json");
   const guides: Guide[] = JSON.parse(fs.readFileSync(guidesPath, "utf8"));
 
-  const active = (searchParams && searchParams.cat) || "all";
+  const active = (query && query.cat) || "all";
   const filteredGuides = active === "all" ? guides : guides.filter((g) => g.category === active);
 
   return (
@@ -106,7 +107,7 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredGuides.map((guide) => (
-          <Card key={guide.id} as={NextLink} href={`/guides/${guide.id}`} className="group p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-gold/40 transition-all h-full cursor-pointer">
+          <LinkCard key={guide.id} href={`/guides/${guide.id}`} className="group p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-gold/40 transition-all h-full cursor-pointer">
             <CardHeader className="flex-col items-start gap-2 p-0 mb-6">
                <Chip size="sm" variant="flat" color="secondary" className="font-bold uppercase text-[10px]">
                   {guide.category}
@@ -125,7 +126,7 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
                   </span>
                </div>
             </CardBody>
-          </Card>
+          </LinkCard>
         ))}
       </div>
 
@@ -142,7 +143,7 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
             "what-does-funeral-cover-cost",
             "compare-financial-options-south-africa",
           ].includes(g.id)).map((guide) => (
-            <Card key={guide.id} as={NextLink} href={`/guides/${guide.id}`} className="group p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-gold/40 transition-all h-full cursor-pointer">
+            <LinkCard key={guide.id} href={`/guides/${guide.id}`} className="group p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-gold/40 transition-all h-full cursor-pointer">
               <CardHeader className="flex-col items-start gap-2 p-0 mb-4">
                 <Chip size="sm" variant="flat" color="secondary" className="font-bold uppercase text-[10px]">
                   {guide.category}
@@ -161,7 +162,7 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
                   </span>
                 </div>
               </CardBody>
-            </Card>
+            </LinkCard>
           ))}
         </div>
       </div>
@@ -189,8 +190,8 @@ export default function GuidesListPage({ searchParams }: { searchParams?: { cat?
             <h2 className="text-3xl font-black">Need More Help?</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Every SASSA situation is different. If you cannot find the guide you need, drop me a message or visit the official SASSA website.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button as={NextLink} href="/contact" color="primary" className="font-bold px-8 py-6">Contact Us</Button>
-              <Button as={NextLink} href="/faq" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">Browse All FAQs</Button>
+              <LinkButton href="/contact" color="primary" className="font-bold px-8 py-6">Contact Us</LinkButton>
+              <LinkButton href="/faq" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">Browse All FAQs</LinkButton>
             </div>
           </CardBody>
         </Card>

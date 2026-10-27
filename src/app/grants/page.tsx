@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
+import { LinkButton, Chip, Card, CardBody, Divider } from "@/components/ui/nextui";
 import { FaExternalLinkAlt, FaQuestionCircle, FaInfoCircle, FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -143,9 +143,9 @@ export default function GrantsListingPage() {
             <h2 className="text-3xl font-black">Not Sure Which Grant Applies to You?</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Take our eligibility check or browse the detailed guide for each grant type.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button as={NextLink} href="/eligibility-check" color="primary" className="font-bold px-8 py-6">Check Eligibility</Button>
-              <Button as={NextLink} href="/guides/apply-sassa-grants" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">How to Apply</Button>
-              <Button as={NextLink} href="/guides" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">View All Guides</Button>
+              <LinkButton href="/eligibility-check" color="primary" className="font-bold px-8 py-6">Check Eligibility</LinkButton>
+              <LinkButton href="/guides/apply-sassa-grants" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">How to Apply</LinkButton>
+              <LinkButton href="/guides" variant="bordered" className="font-bold px-8 py-6 text-white border-white/20 hover:border-white/40">View All Guides</LinkButton>
             </div>
           </CardBody>
         </Card>

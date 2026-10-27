@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Button, Chip, Divider } from "@nextui-org/react";
+import { Button, Chip, Divider } from "@/components/ui/nextui";
 import { FaClock, FaPhone, FaExternalLinkAlt, FaLink, FaBan, FaQuestionCircle, FaMobileAlt, FaGlobe, FaWhatsapp } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
@@ -50,7 +50,8 @@ export function generateStaticParams() {
   return data.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const data: StatusMeaning[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/status-meanings.json"), "utf8"));
   const status = data.find((s) => s.slug === params.slug);
   if (!status) return { title: "Status Not Found" };
@@ -80,7 +81,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function StatusMeaningPage({ params }: { params: { slug: string } }) {
+export default async function StatusMeaningPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise;
   const data: StatusMeaning[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/status-meanings.json"), "utf8"));
   const status = data.find((s) => s.slug === params.slug);
   if (!status) notFound();

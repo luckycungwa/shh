@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardBody, Chip, Divider } from "@nextui-org/react";
+import { Card, CardBody, Chip, Divider } from "@/components/ui/nextui";
 import { FaQuestionCircle, FaSearch, FaExternalLinkAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";

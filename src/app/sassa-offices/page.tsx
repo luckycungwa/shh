@@ -2,7 +2,7 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaMapMarkerAlt, FaPhone, FaClock, FaSearch } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";

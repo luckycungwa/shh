@@ -1,8 +1,7 @@
 import React from 'react';
 import type { Metadata } from "next";
-import { Card, CardHeader, CardBody, Divider, Button, Link } from "@nextui-org/react";
+import { LinkButton, Card, CardHeader, CardBody, Divider } from "@/components/ui/nextui";
 import { FaExclamationTriangle, FaExternalLinkAlt, FaShieldAlt, FaQuestionCircle } from "react-icons/fa";
-import NextLink from "next/link";
 import { buildMetadata } from "../../lib/seo";
 import { getCurrentYearString } from "../../lib/config";
 import JsonLd from "../../components/JsonLd";
@@ -79,17 +78,17 @@ export default function DisclaimerPage() {
              <Card isHoverable className="p-6 border border-gray-100 dark:border-gray-800">
                 <h3 className="font-bold text-lg mb-4">Official SRD Portal</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">The only official place to apply for the SRD R370 grant and check your status online.</p>
-                <Button as={NextLink} href="https://srd.sassa.gov.za" target="_blank" color="primary" variant="flat">
+                <LinkButton href="https://srd.sassa.gov.za" target="_blank" color="primary" variant="flat">
                   Visit srd.sassa.gov.za <FaExternalLinkAlt className="ml-2 text-xs" />
-                </Button>
+                </LinkButton>
              </Card>
 
              <Card isHoverable className="p-6 border border-gray-100 dark:border-gray-800">
                 <h3 className="font-bold text-lg mb-4">Official SASSA Website</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">Access official policy documents, grant thresholds, and public announcements from SASSA.</p>
-                <Button as={NextLink} href="https://www.sassa.gov.za" target="_blank" color="primary" variant="flat">
+                <LinkButton href="https://www.sassa.gov.za" target="_blank" color="primary" variant="flat">
                   Visit sassa.gov.za <FaExternalLinkAlt className="ml-2 text-xs" />
-                </Button>
+                </LinkButton>
              </Card>
           </div>
         </section>

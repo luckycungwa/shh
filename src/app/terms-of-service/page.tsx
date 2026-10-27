@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from "next";
 import { Gavel, Scale, AlertCircle } from 'lucide-react';
-import { Card, CardBody, Divider } from "@nextui-org/react";
+import { Card, CardBody, Divider } from "@/components/ui/nextui";
 import { buildMetadata } from "../../lib/seo";
 import JsonLd from "../../components/JsonLd";
 import { breadcrumbSchema } from "../../lib/schema";

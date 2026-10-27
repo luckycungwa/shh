@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import React from "react";
-import { Button, Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
+import { LinkButton, Chip } from "@/components/ui/nextui";
 import { FaShieldAlt, FaCalendarAlt, FaQuestionCircle, FaArrowRight, FaCreditCard, FaMobileAlt as FaSmartphone, FaFileSignature, FaUserCheck, FaUsers, FaClock, FaCheckCircle, FaRegBell, FaFileAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentMonthLabel, getCurrentYearString } from "../lib/config";
@@ -110,23 +110,21 @@ export default function HomePage() {
               Your friendly, independent guide to South African social grants, payment dates, and fraud protection.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                as={NextLink}
+              <LinkButton
                 href="/status-check"
                 size="lg"
                 className="font-bold px-10 py-7 text-lg bg-primary-gold text-primary-black hover:bg-primary-gold-light shadow-gold hover:shadow-gold-lg transition-all duration-300 hover:scale-105"
               >
                 Check SASSA Status <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                as={NextLink}
+              </LinkButton>
+              <LinkButton
                 href="/payment-calendar"
                 variant="bordered"
                 size="lg"
                 className="font-bold px-10 py-7 text-lg text-white border-white/20 hover:border-primary-gold/50 hover:bg-white/5 transition-all duration-300"
               >
                 {`Payment Dates ${getCurrentYearString()}`}
-              </Button>
+              </LinkButton>
             </div>
           </div>
         </div>
@@ -229,9 +227,9 @@ export default function HomePage() {
                 SASSA Help Hub is an unofficial, independent information resource. We are not affiliated with the South African Social Security Agency.
               </p>
             </div>
-            <Button as={NextLink} href="/about" className="font-bold px-8 py-6 bg-primary-gold/10 text-primary-gold border border-primary-gold/20 hover:bg-primary-gold/20 transition-all shrink-0">
+            <LinkButton href="/about" className="font-bold px-8 py-6 bg-primary-gold/10 text-primary-gold border border-primary-gold/20 hover:bg-primary-gold/20 transition-all shrink-0">
               Learn Our Story
-            </Button>
+            </LinkButton>
           </div>
         </div>
       </section>
@@ -422,9 +420,9 @@ export default function HomePage() {
               </h2>
                <p className="text-secondary-gray-dark dark:text-secondary-gray mt-3">{`Stay informed with the latest SASSA announcements for ${getCurrentYearString()}.`}</p>
             </div>
-            <Button as={NextLink} href="/updates" variant="bordered" className="font-bold border-primary-gold/30 text-primary-gold hover:bg-primary-gold/10 shrink-0">
+            <LinkButton href="/updates" variant="bordered" className="font-bold border-primary-gold/30 text-primary-gold hover:bg-primary-gold/10 shrink-0">
               View All Updates <FaArrowRight className="ml-2" />
-            </Button>
+            </LinkButton>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -473,23 +471,21 @@ export default function HomePage() {
                Browse the FAQ or get in touch if you need help with your grant application.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                as={NextLink}
+              <LinkButton
                 href="/faq"
                 size="lg"
                 className="font-bold px-10 py-7 text-lg bg-primary-black text-white hover:bg-primary-black/90 shadow-xl hover:shadow-2xl transition-all"
               >
                 Browse FAQs <FaQuestionCircle className="ml-2" />
-              </Button>
-              <Button
-                as={NextLink}
+              </LinkButton>
+              <LinkButton
                 href="/contact"
                 variant="bordered"
                 size="lg"
                 className="font-bold px-10 py-7 text-lg border-primary-black/30 text-primary-black hover:bg-primary-black/10"
               >
                 Contact Me
-              </Button>
+              </LinkButton>
             </div>
           </div>
         </div>

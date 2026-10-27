@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Divider,
-  Button,
-  CardFooter,
-} from "@nextui-org/react";
+import { LinkButton, Card, CardHeader, CardBody, Divider, CardFooter } from "@/components/ui/nextui";
 import {
   FaShieldAlt,
   FaHeart,
@@ -156,15 +149,14 @@ export default function AboutPage() {
                     Step-by-step help to check your SASSA grant status using
                     the official portal — free, no login required.
                   </p>
-                  <Button
-                    as={NextLink}
+                  <LinkButton
                     href="/status-check"
                     color="primary"
                     variant="flat"
                     size="sm"
                   >
                     Try It Now
-                  </Button>
+                  </LinkButton>
                 </CardBody>
               </Card>
               <Card className="p-6 border border-gray-100 dark:border-gray-800">
@@ -174,15 +166,14 @@ export default function AboutPage() {
                     Plan ahead with our up-to-date SASSA grant payment schedule
                     for the full year.
                   </p>
-                  <Button
-                    as={NextLink}
+                  <LinkButton
                     href="/payment-calendar"
                     color="primary"
                     variant="flat"
                     size="sm"
                   >
                     View Schedule
-                  </Button>
+                  </LinkButton>
                 </CardBody>
               </Card>
               <Card className="p-6 border border-gray-100 dark:border-gray-800">
@@ -192,15 +183,14 @@ export default function AboutPage() {
                     Step-by-step guides for every SASSA grant; eligibility,
                     documents, and application process.
                   </p>
-                  <Button
-                    as={NextLink}
+                  <LinkButton
                     href="/guides"
                     color="primary"
                     variant="flat"
                     size="sm"
                   >
                     Browse Guides
-                  </Button>
+                  </LinkButton>
                 </CardBody>
               </Card>
               <Card className="p-6 border border-gray-100 dark:border-gray-800">
@@ -210,15 +200,14 @@ export default function AboutPage() {
                     Find your nearest SASSA office with addresses, contact
                     details, and service hours.
                   </p>
-                  <Button
-                    as={NextLink}
+                  <LinkButton
                     href="/sassa-offices"
                     color="primary"
                     variant="flat"
                     size="sm"
                   >
                     Find Offices
-                  </Button>
+                  </LinkButton>
                 </CardBody>
               </Card>
             </div>
@@ -236,14 +225,13 @@ export default function AboutPage() {
               </NextLink>
               . For anything specific to your own grant, contact SASSA directly.
             </p>
-            <Button
-              as={NextLink}
+            <LinkButton
               href="/contact"
               color="primary"
               variant="solid"
             >
               Contact the Editor
-            </Button>
+            </LinkButton>
           </div>
         </section>
 
@@ -258,16 +246,14 @@ export default function AboutPage() {
             </p>
           </CardHeader>
           <CardFooter className="gap-4 flex-wrap">
-            <Button
-              as={NextLink}
+            <LinkButton
               href="tel:0800601011"
               color="primary"
               variant="solid"
             >
               Call SASSA: 0800 60 10 11
-            </Button>
-            <Button
-              as={NextLink}
+            </LinkButton>
+            <LinkButton
               href="https://srd.sassa.gov.za"
               target="_blank"
               color="default"
@@ -276,7 +262,7 @@ export default function AboutPage() {
             >
               Visit Official Portal{" "}
               <FaExternalLinkAlt className="ml-2 text-xs" />
-            </Button>
+            </LinkButton>
           </CardFooter>
         </Card>
       </div>

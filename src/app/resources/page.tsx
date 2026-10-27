@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardHeader, CardBody, Button, Chip, Divider, Input } from "@nextui-org/react";
+import { LinkButton, Card, CardHeader, CardBody, Button, Chip, Divider, Input } from "@/components/ui/nextui";
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock, FaSearch, FaExternalLinkAlt, FaQuestionCircle, FaInfoCircle, FaCheckCircle, FaBuilding } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -179,9 +179,9 @@ export default function ResourcesPage() {
                  <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
                     Many SASSA services can now be performed online or via WhatsApp. Check our digital application guide first.
                  </p>
-                 <Button as={NextLink} href="/grants/srd-r370-grant" color="primary" variant="solid" className="font-bold px-8 py-6">
+                 <LinkButton href="/grants/srd-r370-grant" color="primary" variant="solid" className="font-bold px-8 py-6">
                     View Digital Guides <FaExternalLinkAlt className="ml-2 text-xs" />
-                 </Button>
+                 </LinkButton>
               </CardBody>
            </Card>
 

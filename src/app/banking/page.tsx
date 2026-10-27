@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import type { Metadata } from "next";
-import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
+import { LinkButton, Chip, Card, CardBody, Divider } from "@/components/ui/nextui";
 import { FaExternalLinkAlt, FaMoneyCheckAlt, FaQuestionCircle, FaInfoCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -163,7 +163,7 @@ export default function BankingHubPage() {
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Not Sure How to Receive Your Payment?</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Check your status first, then choose the payment method that works for you.</p>
-            <Button as={NextLink} href="/status-check" color="primary" className="font-bold px-10 py-7 text-lg">Check SASSA Status</Button>
+            <LinkButton href="/status-check" color="primary" className="font-bold px-10 py-7 text-lg">Check SASSA Status</LinkButton>
           </CardBody>
         </Card>
       </section>

@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaMapMarkerAlt, FaPhone, FaClock, FaLightbulb, FaQuestionCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../../../components/JsonLd";
@@ -91,7 +91,8 @@ function slugify(s: string) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-export function generateMetadata({ params }: { params: { province: string; city: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ province: string; city: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const provinceName = PROVINCE_NAMES[params.province] || params.province;
   const display = params.city.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
   const title = clampTitle(`SASSA Office in ${display}, ${provinceName} — Address & Contact`);
@@ -111,7 +112,8 @@ export function generateMetadata({ params }: { params: { province: string; city:
   };
 }
 
-export default function CityOfficePage({ params }: { params: { province: string; city: string } }) {
+export default async function CityOfficePage({ params: paramsPromise }: { params: Promise<{ province: string; city: string }> }) {
+  const params = await paramsPromise;
   const provinceName = PROVINCE_NAMES[params.province];
   const cities = readOfficeCities();
   const provinces = readProvinces();

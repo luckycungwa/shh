@@ -2,9 +2,8 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { Metadata } from "next";
-import { Avatar, Card, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip } from "@nextui-org/react";
+import { LinkButton, LinkCard, Avatar, Card, CardBody, Divider, Button, Breadcrumbs, BreadcrumbItem, Chip } from "@/components/ui/nextui";
 import { FaClock, FaCalendarAlt, FaUserEdit, FaExternalLinkAlt, FaThumbsUp, FaThumbsDown, FaArrowLeft, FaListUl, FaLink, FaQuestionCircle } from "react-icons/fa";
-import NextLink from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
@@ -37,7 +36,8 @@ export async function generateStaticParams() {
   return updates.map((update) => ({ id: update.id }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const { id } = params;
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
@@ -78,7 +78,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default async function UpdatePage({ params }: { params: { id: string } }) {
+export default async function UpdatePage({ params: paramsPromise }: { params: Promise<{ id: string }> }) {
+  const params = await paramsPromise;
   const { id } = params;
   const updatesPath = path.join(process.cwd(), "public/data/updates.json");
   const updates: Update[] = JSON.parse(fs.readFileSync(updatesPath, "utf8"));
@@ -238,15 +239,15 @@ export default async function UpdatePage({ params }: { params: { id: string } })
               <ul className="space-y-4">
                  <li className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
                      <span>SASSA SRD Portal</span>
-                    <Button as={NextLink} href="https://srd.sassa.gov.za" target="_blank" size="sm" variant="flat" color="primary">
+                    <LinkButton href="https://srd.sassa.gov.za" target="_blank" size="sm" variant="flat" color="primary">
                        Verify Source <FaExternalLinkAlt className="ml-2 text-xs" />
-                    </Button>
+                    </LinkButton>
                  </li>
                  <li className="flex items-center justify-between text-sm bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
                     <span>Department of Social Development</span>
-                    <Button as={NextLink} href="https://www.dsd.gov.za" target="_blank" size="sm" variant="flat" color="primary">
+                    <LinkButton href="https://www.dsd.gov.za" target="_blank" size="sm" variant="flat" color="primary">
                        Verify Source <FaExternalLinkAlt className="ml-2 text-xs" />
-                    </Button>
+                    </LinkButton>
                  </li>
               </ul>
            </section>
@@ -289,9 +290,9 @@ export default async function UpdatePage({ params }: { params: { id: string } })
               <CardBody className="p-0 space-y-6">
                  <h3 className="text-2xl font-black text-primary-gold">2026 Alert</h3>
                  <p className="text-sm text-secondary-gray">SASSA has implemented new biometric security measures. Ensure your cellphone number is RICA'd in your name.</p>
-                 <Button as={NextLink} href="/guides/biometric-fix-guide" fullWidth color="primary" className="font-bold">
+                 <LinkButton href="/guides/biometric-fix-guide" fullWidth color="primary" className="font-bold">
                     Learn More
-                 </Button>
+                 </LinkButton>
               </CardBody>
            </Card>
 
@@ -299,11 +300,11 @@ export default async function UpdatePage({ params }: { params: { id: string } })
               <h3 className="text-xl font-bold px-2">Related Articles</h3>
               <div className="space-y-4">
                  {updates.filter(u => u.id !== id).slice(0, 3).map(rel => (
-                    <Card key={rel.id} isPressable as={NextLink} href={`/updates/${rel.id}`} className="p-4 border border-gray-100 dark:border-gray-800 hover:border-primary-gold transition-colors">
+                    <LinkCard key={rel.id} isPressable  href={`/updates/${rel.id}`} className="p-4 border border-gray-100 dark:border-gray-800 hover:border-primary-gold transition-colors">
                        <p className="text-xs font-bold text-primary-gold uppercase mb-2">{rel.type}</p>
                        <p className="font-bold leading-tight">{rel.title}</p>
                        <p className="text-[10px] text-gray-500 mt-2">{new Date(rel.date).toLocaleDateString()}</p>
-                    </Card>
+                    </LinkCard>
                  ))}
               </div>
            </div>

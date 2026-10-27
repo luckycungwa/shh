@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaClock, FaPhone, FaExternalLinkAlt, FaMoneyCheckAlt, FaStore, FaQuestionCircle } from "react-icons/fa";
 import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
@@ -42,7 +42,8 @@ export function generateStaticParams() {
   return readAll().map((m) => ({ slug: m.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const method = readAll().find((m) => m.slug === params.slug);
   if (!method) return { title: "Payment Method Not Found" };
   const url = `https://www.sassahelphub.co.za/banking/${params.slug}`;
@@ -71,7 +72,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function BankingMethodPage({ params }: { params: { slug: string } }) {
+export default async function BankingMethodPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise;
   const method = readAll().find((m) => m.slug === params.slug);
   if (!method) notFound();
 

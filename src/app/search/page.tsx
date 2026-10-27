@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Chip, Divider } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaSearch } from "react-icons/fa";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";

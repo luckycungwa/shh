@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardBody, Chip, Divider, Button } from "@nextui-org/react";
+import { Card, Chip, Divider } from "@/components/ui/nextui";
 import { FaIdCard, FaExclamationTriangle, FaShieldAlt, FaCreditCard, FaCheckCircle, FaPhoneAlt, FaMapMarkerAlt, FaRegBell } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";

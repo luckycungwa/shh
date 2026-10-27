@@ -1,8 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Card, CardBody, Chip, Divider, Button } from "@nextui-org/react";
+import { LinkButton, Chip, Divider } from "@/components/ui/nextui";
 import { FaCoins, FaUserCheck, FaCalendarAlt, FaFileSignature, FaInfoCircle, FaShieldAlt, FaCheckCircle } from "react-icons/fa";
-import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
 import { buildMetadata } from "../../lib/seo";
 import { breadcrumbSchema, articleSchema, faqPageSchema } from "../../lib/schema";
@@ -149,7 +148,7 @@ export default function HowMuchIsSrdGrantPage() {
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Check your status for your personal Pay Day date rather than relying on third-party schedules, and only go to a retail point to collect once you receive the payment SMS.
           </p>
-          <Button as={NextLink} href="/payment-calendar" color="primary" variant="flat" className="font-bold">View the Payment Calendar</Button>
+          <LinkButton href="/payment-calendar" color="primary" variant="flat" className="font-bold">View the Payment Calendar</LinkButton>
         </section>
 
         <Divider />

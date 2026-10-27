@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Chip, Card, CardBody, Divider, Button } from "@nextui-org/react";
+import { LinkButton, Chip, Card, CardBody, Divider } from "@/components/ui/nextui";
 import { FaCalendarAlt, FaQuestionCircle, FaCheckCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../components/JsonLd";
@@ -198,7 +198,7 @@ export default function PaymentCalendarPage() {
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Waiting for Your Payment?</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Check your application status to see if your grant is approved and when you'll be paid.</p>
-            <Button as={NextLink} href="/status-check" color="primary" className="font-bold px-10 py-7 text-lg">Check SASSA Status</Button>
+            <LinkButton href="/status-check" color="primary" className="font-bold px-10 py-7 text-lg">Check SASSA Status</LinkButton>
           </CardBody>
         </Card>
       </section>

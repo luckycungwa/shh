@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Card, CardBody, Chip, Divider, Link } from "@nextui-org/react";
+import { Chip, Divider } from "@/components/ui/nextui";
 import { FaCheckCircle, FaExternalLinkAlt, FaQuestionCircle, FaInfoCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import JsonLd from "../../../components/JsonLd";
@@ -59,7 +59,8 @@ export async function generateStaticParams() {
   return files.map((f) => ({ slug: f.replace(".json", "") }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   try {
     const filePath = path.join(process.cwd(), "public/data/grants", `${params.slug}.json`);
     const data: GrantData = JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -92,7 +93,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function GrantGuidePage({ params }: { params: { slug: string } }) {
+export default async function GrantGuidePage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise;
   let data: GrantData;
   try {
     const filePath = path.join(process.cwd(), "public/data/grants", `${params.slug}.json`);

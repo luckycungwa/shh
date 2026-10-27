@@ -5,7 +5,7 @@ import { getActiveTools, TOOL_CLUSTERS } from "./tools/registry";
 
 const readJson = (rel: string): any[] => {
   try {
-    return JSON.parse(fs.readFileSync(path.join(process.cwd(), rel), "utf8"));
+    return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data", rel), "utf8"));
   } catch {
     return [];
   }
@@ -40,32 +40,32 @@ export function buildSearchIndex(): SearchRecord[] {
   }
 
   // Guides
-  for (const g of readJson("public/data/guides.json")) {
+  for (const g of readJson("guides.json")) {
     out.push({ title: g.title, description: g.description || "", url: `/guides/${g.id}`, category: g.category || "Guides" });
   }
 
   // Status meanings
-  for (const s of readJson("public/data/status-meanings.json")) {
+  for (const s of readJson("status-meanings.json")) {
     out.push({ title: s.title, description: s.description || "", url: `/status/${s.slug}`, category: "Status Meanings" });
   }
 
   // Decline reasons
-  for (const d of readJson("public/data/decline-reasons.json")) {
+  for (const d of readJson("decline-reasons.json")) {
     out.push({ title: d.title, description: d.description || "", url: `/decline-reason/${d.slug}`, category: "Decline Reasons" });
   }
 
   // Banking methods
-  for (const b of readJson("public/data/banking-methods.json")) {
+  for (const b of readJson("banking-methods.json")) {
     out.push({ title: b.title, description: b.description || "", url: `/banking/${b.slug}`, category: "Banking & Payments" });
   }
 
   // Appeals
-  for (const a of readJson("public/data/appeals.json")) {
+  for (const a of readJson("appeals.json")) {
     out.push({ title: a.title, description: a.description || "", url: `/appeals/${a.slug}`, category: "Appeals" });
   }
 
   // Payment dates
-  for (const m of readJson("public/data/payment-schedule-forecast.json")) {
+  for (const m of readJson("payment-schedule-forecast.json")) {
     out.push({ title: `SASSA Payment Dates — ${m.label}`, description: m.note || "", url: `/dates/${m.month_key}`, category: "Payment Dates" });
   }
 
@@ -74,7 +74,7 @@ export function buildSearchIndex(): SearchRecord[] {
   try {
     for (const file of fs.readdirSync(grantsDir)) {
       if (!file.endsWith(".json")) continue;
-      const arr = readJson(`public/data/grants/${file}`);
+      const arr = readJson(`grants/${file}`);
       for (const gr of Array.isArray(arr) ? arr : [arr]) {
         out.push({ title: gr.title, description: gr.description || "", url: `/grants/${gr.slug}`, category: "Grants" });
       }
@@ -84,7 +84,7 @@ export function buildSearchIndex(): SearchRecord[] {
   }
 
   // FAQ entries
-  for (const f of readJson("public/data/faqs.json")) {
+  for (const f of readJson("faqs.json")) {
     out.push({ title: f.question, description: f.answer || "", url: "/faq", category: "FAQs" });
   }
 

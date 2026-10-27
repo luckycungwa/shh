@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import { Metadata } from "next";
 import { buildMetadata } from "../../lib/seo";
-import { Card, CardHeader, CardBody, Button, Chip, Divider } from "@nextui-org/react";
+import { LinkButton, Card, CardHeader, CardBody, Chip, Divider } from "@/components/ui/nextui";
 import { FaNewspaper, FaClock, FaArrowRight, FaRss, FaBell, FaInfoCircle } from "react-icons/fa";
 import NextLink from "next/link";
 import { getCurrentYearString } from "../../lib/config";
@@ -86,9 +86,9 @@ export default function UpdatesListPage() {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">{update.summary}</p>
                   <div className="flex items-center justify-between text-xs font-bold text-secondary-gray mt-auto">
                     <p className="flex items-center gap-1"><FaClock /> {new Date(update.date).toLocaleDateString()}</p>
-                    <Button as={NextLink} href={`/updates/${update.id}`} size="sm" color="danger" variant="flat">
+                    <LinkButton href={`/updates/${update.id}`} size="sm" color="danger" variant="flat">
                       Read Alert
-                    </Button>
+                    </LinkButton>
                   </div>
                 </CardBody>
               </Card>
@@ -112,9 +112,9 @@ export default function UpdatesListPage() {
                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">{update.summary}</p>
                  <div className="flex items-center justify-between text-xs font-bold text-secondary-gray mt-auto">
                     <p className="flex items-center gap-1"><FaClock /> {new Date(update.date).toLocaleDateString()}</p>
-                    <Button as={NextLink} href={`/updates/${update.id}`} size="sm" color="primary" variant="flat">
+                    <LinkButton href={`/updates/${update.id}`} size="sm" color="primary" variant="flat">
                       Read More
-                    </Button>
+                    </LinkButton>
                  </div>
               </CardBody>
             </Card>
@@ -139,7 +139,7 @@ export default function UpdatesListPage() {
           <CardBody className="space-y-6">
             <h2 className="text-3xl font-black">Never Miss an Update</h2>
             <p className="text-secondary-gray max-w-xl mx-auto">Bookmark this page and check back regularly for the latest SASSA news and alerts.</p>
-            <Button as={NextLink} href="/status-check" color="primary" className="font-bold px-8 py-6">Check Your Grant Status</Button>
+            <LinkButton href="/status-check" color="primary" className="font-bold px-8 py-6">Check Your Grant Status</LinkButton>
           </CardBody>
         </Card>
       </section>
