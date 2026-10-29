@@ -10,6 +10,8 @@
     "lint": "eslint .",
     "test": "node --test scripts/check-server-boundaries.test.mjs",
     "validate:content": "node scripts/validate-content.mjs",
+    "check:editorial-freshness": "node scripts/check-editorial-freshness.mjs",
+    "discover:editorial": "node scripts/daily-editorial-discovery.mjs",
     "check:production-freshness": "node scripts/check-production-freshness.mjs"
   },
   "dependencies": {

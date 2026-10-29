@@ -1,0 +1,37 @@
+[
+  {
+    "topicKey": "sassa-means-test-banking-discrepancy-guide",
+    "discoveredDate": "2026-10-29",
+    "title": "SASSA Means Test Banking Data Discrepancy Guide",
+    "priorityScore": 92,
+    "status": "RECOMMENDED"
+  },
+  {
+    "topicKey": "unemployed-job-search-learnerships-south-africa",
+    "discoveredDate": "2026-10-29",
+    "title": "Unemployed Job Search & SETA Learnerships Guide 2026",
+    "priorityScore": 90,
+    "status": "RECOMMENDED"
+  },
+  {
+    "topicKey": "nsfas-bursary-application-status-appeals-guide",
+    "discoveredDate": "2026-10-29",
+    "title": "NSFAS Bursary Application, Status Meanings & Appeals Guide",
+    "priorityScore": 88,
+    "status": "RECOMMENDED"
+  },
+  {
+    "topicKey": "iec-voter-registration-special-vote-guide",
+    "discoveredDate": "2026-10-29",
+    "title": "IEC Voter Registration & Special Vote Guide for SASSA Beneficiaries",
+    "priorityScore": 85,
+    "status": "RECOMMENDED"
+  },
+  {
+    "topicKey": "municipal-indigent-support-school-fee-exemption-guide",
+    "discoveredDate": "2026-10-29",
+    "title": "Municipal Indigent Support & School Fee Exemption Guide",
+    "priorityScore": 87,
+    "status": "RECOMMENDED"
+  }
+]
