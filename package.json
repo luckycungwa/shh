@@ -1,11 +1,11 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "shh",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "next build",
     "dev": "next dev -H 127.0.0.1 -p 4000",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "test": "node --test scripts/check-server-boundaries.test.mjs",
@@ -13,10 +13,10 @@
     "check:editorial-freshness": "node scripts/check-editorial-freshness.mjs",
     "discover:editorial": "node scripts/daily-editorial-discovery.mjs",
     "check:production-freshness": "node scripts/check-production-freshness.mjs",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "preview": "opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -51,6 +51,6 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
-    "wrangler": "^4.155.0"
+    "wrangler": "^3.114.0"
   }
 }

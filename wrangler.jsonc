@@ -1,7 +1,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
-	"name": "vite-react-typescript-starter",
+	"name": "shh",
 	"compatibility_date": "2026-10-29",
 	"compatibility_flags": [
 		"nodejs_compat",
@@ -13,15 +13,11 @@
 	},
 	"services": [
 		{
-			// Self-reference service binding, the service name must match the worker name
-			// see https://opennext.js.org/cloudflare/caching
 			"binding": "WORKER_SELF_REFERENCE",
-			"service": "vite-react-typescript-starter"
+			"service": "shh"
 		}
 	],
 	"images": {
-		// Enable image optimization
-		// see https://opennext.js.org/cloudflare/howtos/image
 		"binding": "IMAGES"
 	}
 }
