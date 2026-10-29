@@ -4,20 +4,25 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev -H 127.0.0.1 -p 4000",
     "build": "next build",
+    "dev": "next dev -H 127.0.0.1 -p 4000",
     "start": "next start",
     "lint": "eslint .",
     "test": "node --test scripts/check-server-boundaries.test.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "check:editorial-freshness": "node scripts/check-editorial-freshness.mjs",
     "discover:editorial": "node scripts/daily-editorial-discovery.mjs",
-    "check:production-freshness": "node scripts/check-production-freshness.mjs"
+    "check:production-freshness": "node scripts/check-production-freshness.mjs",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@google/generative-ai": "^0.24.1",
     "@nextui-org/react": "^2.6.11",
+    "@opennextjs/cloudflare": "^1.20.14",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.1",
     "framer-motion": "^12.38.0",
@@ -45,6 +50,7 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.3.0"
+    "typescript-eslint": "^8.3.0",
+    "wrangler": "^4.155.0"
   }
 }
