@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "shh",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,19 @@
     "lint": "eslint .",
     "test": "node --test scripts/check-server-boundaries.test.mjs",
     "validate:content": "node scripts/validate-content.mjs",
-    "check:production-freshness": "node scripts/check-production-freshness.mjs"
+    "check:editorial-freshness": "node scripts/check-editorial-freshness.mjs",
+    "discover:editorial": "node scripts/daily-editorial-discovery.mjs",
+    "check:production-freshness": "node scripts/check-production-freshness.mjs",
+    "preview": "opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@google/generative-ai": "^0.24.1",
     "@nextui-org/react": "^2.6.11",
+    "@opennextjs/cloudflare": "^1.20.14",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.1",
     "framer-motion": "^12.38.0",
@@ -43,6 +50,7 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.3.0"
+    "typescript-eslint": "^8.3.0",
+    "wrangler": "^3.114.0"
   }
 }

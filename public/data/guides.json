@@ -350,7 +350,7 @@
     "steps": [
       {
         "title": "Check You Meet the 2026 Eligibility Rules",
-        "content": "Before you apply, check that you qualify. The child must be under 18 and must live with you as the primary caregiver — the person responsible for the child's daily needs. You and the child must be South African citizens, permanent residents, or refugees. Finally, you must pass the means test: if you are single, your monthly income must be R5,800 or less, and if you are married, your combined household income must be R11,600 or less. The grant is paid at R580 per child per month.",
+        "content": "Before you apply, check that you qualify. The child must be under 18 and must live with you as the primary caregiver — the person responsible for the child's daily needs. You and the child must be South African citizens, permanent residents, or refugees. Finally, you must pass the means test: if you are single, your monthly income must be R5,800 or less, and if you are married, your combined household income must be R11,600 or less. The grant is paid at R580 per child per month. <p><strong>Child Support Grant Top-Up:</strong> Relatives caring for orphaned children can receive an additional CSG Top-Up allowance (R250 extra, total R780 per child per month) without needing a formal foster care court order.</p>",
         "tips": [
           "The means test looks at your gross monthly income before tax, so count your full pay.",
           "Working parents can still qualify — the child support threshold is much higher than the SRD limit."
@@ -428,7 +428,7 @@
       "CSG application",
       "grant eligibility"
     ],
-    "lastUpdated": "2026-08-04",
+    "lastUpdated": "2026-10-29",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -1923,7 +1923,7 @@
     "steps": [
       {
         "title": "Understand What 'Bank Details Pending' Means",
-        "content": "When your SASSA SRD status shows 'Bank Details Pending', it means SASSA has approved your grant application for the month but cannot pay you because they do not have valid banking information linked to your application. Your money exists in the system but cannot be released. This is not the same as 'Pending' (which means your application is still being reviewed). 'Bank Details Pending' is a payment block, not an application review block. You must fix it before the payment batch closes for the month.",
+        "content": "When your SASSA SRD status shows 'Bank Details Pending', it means SASSA has approved your grant application for the month but cannot pay you because they do not have valid banking information linked to your application. Your money exists in the system but cannot be released. This is not the same as 'Pending' (which means your application is still being reviewed). 'Bank Details Pending' is a payment block, not an application review block. You must fix it before the payment batch closes for the month. <p><strong>Fraud Protection Warning:</strong> Never give your bank account details or OTPs to unauthorized third parties or social media representatives claiming to accelerate verification. SASSA bank verification is performed strictly through direct commercial bank electronic matching.</p>",
         "tips": [
           "Check your status on srd.sassa.gov.za first — if it says 'Approved' + 'Bank Details Pending', this guide applies.",
           "The payment batch runs in the last week of each month — fix this before the 25th to get paid that month."
@@ -1987,7 +1987,7 @@
       "fix banking details sassa",
       "sassa payment not received"
     ],
-    "lastUpdated": "2026-07-24",
+    "lastUpdated": "2026-10-29",
     "author": "Lucky Cungwa",
     "relatedLinks": [
       {
@@ -2632,7 +2632,7 @@
     "steps": [
       {
         "title": "SASSA Social Grant Reviews: The Short Answer",
-        "content": "<p>A <strong>SASSA social grant review</strong> is a check that your grant is still going to the right person. It is not a new application, and it is not a cancellation. SASSA may review a grant when its records show a possible change in income, identity, bank account, marital status or residence. A <strong>grant assessment</strong> usually refers to the routine check SASSA runs on an application or on monthly SRD eligibility; a <strong>review</strong> is a separate administrative check that can ask you to attend an office. If you receive a review notice, respond within the deadline. Ignoring it can lead to a <strong>non-compliance suspension</strong>.</p><p>SASSA has not published a formal definition of “AI data matching”. Its public statements describe <strong>data cross-checks</strong> against records held by other government departments and banks. Treat “AI” as a description of automated matching, not an official SASSA term. The practical point is the same: if your records do not match, you may be asked to verify them.</p><p><strong>What to do first:</strong> check that the SMS or letter is genuine, note the deadline, gather your ID and income documents, and go to the SASSA office named in the notice. If you are unsure, call <strong>0800 60 10 11</strong>. Do not pay anyone to “clear” a review.</p>"
+        "content": "<p>A <strong>SASSA social grant review</strong> is a check that your grant is still going to the right person. It is not a new application, and it is not a cancellation. SASSA may review a grant when its records show a possible change in income, identity, bank account, marital status or residence. A <strong>grant assessment</strong> usually refers to the routine check SASSA runs on an application or on monthly SRD eligibility; a <strong>review</strong> is a separate administrative check that can ask you to attend an office. If you receive a review notice, respond within the deadline. Ignoring it can lead to a <strong>non-compliance suspension</strong>.</p><p>SASSA has not published a formal definition of “AI data matching”. Its public statements describe <strong>data cross-checks</strong> against records held by other government departments and banks. Treat “AI” as a description of automated matching, not an official SASSA term. The practical point is the same: if your records do not match, you may be asked to verify them.</p><p><strong>What to do first:</strong> check that the SMS or letter is genuine, note the deadline, gather your ID and income documents, and go to the SASSA office named in the notice. If you are unsure, call <strong>0800 60 10 11</strong>. Do not pay anyone to “clear” a review.</p> <p><strong>Staged Review Timeline (NW4444 Governance Rules):</strong> SASSA enforces a structured timeline for grant reviews: 30 days written notice + 60 days verification window = 90 days total. Non-response leads to temporary suspension, followed by a 30-day restoration window before final lapse.</p>"
       },
       {
         "title": "Why SASSA Is Doing Verification",
@@ -2780,7 +2780,7 @@
       "sassa 90 days review",
       "sassa grant restored after review"
     ],
-    "lastUpdated": "2026-10-23",
+    "lastUpdated": "2026-10-29",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -5141,6 +5141,476 @@
         "title": "Payment calendar",
         "url": "/payment-calendar",
         "description": "When pay days fall"
+      }
+    ]
+  },
+  {
+    "id": "sassa-means-test-banking-discrepancy-guide",
+    "title": "How to Resolve SASSA Means Test Banking Data Discrepancies",
+    "description": "Step-by-step guide on resolving SASSA automated means test bank feed mismatches, appealing unmerited alternative income flags, and submitting official dispute affidavits.",
+    "category": "Troubleshooting",
+    "difficulty": "Medium",
+    "estimatedTime": "15 mins",
+    "steps": [
+      {
+        "title": "Understand How SASSA Means Test Checks Work",
+        "content": "SASSA performs automated monthly means tests for SRD and permanent grant applicants by matching ID numbers against financial institution databases. Automated bank feed matching flags any monthly credit or deposit exceeding the income threshold (R624 for SRD) as alternative income.",
+        "tips": [
+          "Deposits from family assistance, once-off loan repayments, or accidental transfers can trigger automated means test decline flags.",
+          "SASSA checks historical transaction data provided by participating South African commercial banks."
+        ]
+      },
+      {
+        "title": "Identify the Specific Means Test Decline Code",
+        "content": "Log into the official SRD portal at <a href=\"https://srd.sassa.gov.za\">srd.sassa.gov.za</a> or check your status via USSD (*120*3227#). Look for status flags such as <strong>Alternative Income Source Detected</strong> or <strong>Means Test Exceeded</strong>.",
+        "tips": [
+          "Note the exact month flagged for income verification.",
+          "Check your bank statement for that specific calendar month to locate the flagged deposit."
+        ]
+      },
+      {
+        "title": "Obtain Official 3-Month Bank Statements",
+        "content": "Request official stamped 3-month bank statements from your financial institution (Capitec, TymeBank, Postbank, FNB, Standard Bank, Nedbank, or Absa). Ensure the statement clearly shows all credits and debits for the affected period.",
+        "tips": [
+          "Stamped e-statements generated through banking apps are accepted by SASSA for dispute verification."
+        ]
+      },
+      {
+        "title": "Draft a Sworn Bank Transaction Dispute Affidavit",
+        "content": "Visit your local South African Police Service (SAPS) station or a Commissioner of Oaths to complete a sworn affidavit. Explicitly state that the flagged deposit was a non-income transaction (such as a borrowed loan repayment, money held on behalf of a relative, or an uncollected refund).",
+        "tips": [
+          "State your 13-digit ID number, bank account number, the exact date and amount of the deposit, and the non-income nature of the funds."
+        ]
+      },
+      {
+        "title": "Submit an Appeal via the Independent Tribunal",
+        "content": "Access the official SASSA Appeal portal at <a href=\"https://srd.dsd.gov.za\">srd.dsd.gov.za</a> within 90 days of the decline decision. Upload your sworn affidavit, stamped bank statements, and proof of income status. The Independent Tribunal for Social Assistance Appeals (ITSAA) will review the bank feed dispute independently.",
+        "tips": [
+          "Appeals must be lodged separately for every month that received an unmerited decline status.",
+          "The tribunal decision is final for that monthly cycle."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why did SASSA say alternative income was detected when I have no job?",
+        "a": "SASSA uses automated bank matching. Any once-off bank deposit, money transferred by a family member to buy groceries, or loan repayment that passes through your bank account during the assessment month can trigger an automated alternative income flag."
+      },
+      {
+        "q": "How do I prove a bank deposit was not income?",
+        "a": "Submit a sworn SAPS affidavit explaining the exact origin and non-income purpose of the transaction, accompanied by stamped 3-month bank statements showing your true financial standing."
+      },
+      {
+        "q": "How long does a SASSA means test bank dispute appeal take?",
+        "a": "The Independent Tribunal processes means test bank dispute appeals within 60 to 90 days. If successful, back-pay for the disputed month will be released."
+      }
+    ],
+    "tags": [
+      "sassa means test banking data discrepancy",
+      "sassa alternative income detected",
+      "sassa bank feed mismatch",
+      "appeal sassa means test"
+    ],
+    "lastUpdated": "2026-10-29",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "SASSA Official SRD Portal",
+        "url": "https://srd.sassa.gov.za"
+      },
+      {
+        "title": "Independent Tribunal for Social Assistance Appeals",
+        "url": "https://srd.dsd.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Means Test Threshold Calculator",
+        "url": "/tools/means-test-calculator",
+        "isExternal": false
+      },
+      {
+        "title": "Income Source Detected Decline Guide",
+        "url": "/decline-reason/income-source-detected",
+        "isExternal": false
+      },
+      {
+        "title": "How to Appeal a SASSA Decision",
+        "url": "/appeals/how-to-appeal",
+        "isExternal": false
+      }
+    ]
+  },
+  {
+    "id": "unemployed-job-search-learnerships-south-africa",
+    "title": "Unemployed Job Search & SETA Learnerships Guide 2026",
+    "titleShort": "Unemployed Job Search & Learnerships",
+    "description": "A practical, verified guide for unemployed South Africans to find entry-level jobs without experience, register for SETA learnerships, and avoid recruitment scams.",
+    "category": "Employment",
+    "difficulty": "Easy",
+    "estimatedTime": "12 mins",
+    "steps": [
+      {
+        "title": "Register on Official Free South African Opportunity Platforms",
+        "content": "Create free job-seeker profiles on government-backed employment portals: <ul><li><strong>SA Youth (sayouth.mobi):</strong> A zero-rated mobi site supported by Harambee and the Department of Employment and Labour offering entry-level job opportunities, learnerships, and youth programs without data costs.</li><li><strong>ESSA (essa.labour.gov.za):</strong> The Employment Services of South Africa database operated by the Department of Employment and Labour to match unemployed job seekers with public and private sector vacancies.</li><li><strong>ZAZI / NYDA Opportunities:</strong> National Youth Development Agency portals for youth training and micro-enterprise grants.</li></ul>",
+        "tips": [
+          "You do not need mobile data to access SA Youth on major SA network providers.",
+          "Keep your ID number, phone number, and location updated on your ESSA profile."
+        ]
+      },
+      {
+        "title": "Understand SETA Learnerships and How They Work",
+        "content": "A Sector Education and Training Authority (SETA) learnership is a structured learning programme that combines classroom education with practical workplace experience. Key benefits include: <ul><li><strong>NQF Qualifications:</strong> Earn a nationally recognized SAQA qualification while working.</li><li><strong>Monthly Learner Allowance/Stipend:</strong> Learners receive a mandatory monthly stipend (regulated by Department of Employment and Labour sectoral determinations) ranging from R1,800 to R4,500 depending on NQF level.</li><li><strong>No prior experience required:</strong> Most entry-level NQF Level 1–4 learnerships require only Grade 10, 11, or Matric (NSC).</li></ul>",
+        "tips": [
+          "SETA learnerships are fully funded — you should NEVER pay an application fee."
+        ]
+      },
+      {
+        "title": "Apply directly through Accredited SETA Portals",
+        "content": "Verify learnership opportunities directly through official SETA websites: <ul><li><strong>INSETA (Insurance):</strong> inseta.org.za</li><li><strong>SERVICES SETA:</strong> servicesseta.org.za</li><li><strong>BANKSETA (Banking & Finance):</strong> bankseta.org.za</li><li><strong>MICT SETA (IT & Telecoms):</strong> mict.org.za</li><li><strong>HWSETA (Health & Welfare):</strong> hwseta.org.za</li><li><strong>W&RSETA (Wholesale & Retail):</strong> wrseta.org.za</li></ul>",
+        "tips": [
+          "Check application deadlines and submit certified copies of your ID, Matric certificate, and CV."
+        ]
+      },
+      {
+        "title": "Prepare a Clean, Professional Entry-Level CV",
+        "content": "Structure a concise 1–2 page South African CV format: <ul><li><strong>Personal details:</strong> Name, 13-digit ID number, location (township/city), phone number, and professional email address.</li><li><strong>Education:</strong> Highest grade completed, school name, year passed, and key subjects.</li><li><strong>Skills & Strengths:</strong> Communication, computer literacy, reliability, teamwork, languages spoken.</li><li><strong>References:</strong> School principal, teacher, community leader, or previous informal supervisor.</li></ul>",
+        "tips": [
+          "Save your CV as a PDF file on your mobile phone for easy WhatsApp or portal uploading."
+        ]
+      },
+      {
+        "title": "Identify and Avoid Employment & Recruitment Scams",
+        "content": "Protect yourself from job scams targeting unemployed job seekers: <ul><li><strong>NO RECRUITMENT FEES:</strong> In terms of the Employment Services Act, it is illegal for any recruiter or employer to demand payment for job applications, medical checks, uniforms, or interviews.</li><li><strong>Check email addresses:</strong> Legitimate government and corporate recruiters use official domains (e.g. @labour.gov.za, @company.co.za), never @gmail.com or WhatsApp-only numbers.</li><li><strong>Vetting job posts:</strong> Verify vacancies on official company career pages before sharing personal documents.</li></ul>",
+        "tips": [
+          "Never send money via eWallet, CashSend, or voucher code for a job promise."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I lose my SASSA SRD grant if I join a SETA learnership?",
+        "a": "Yes. If you receive a monthly learnership stipend that exceeds R624 per month, automated means testing will detect the credit and suspend your SRD grant while you are earning the stipend. Once the learnership ends, you may re-apply."
+      },
+      {
+        "q": "Are SETA learnership applications free?",
+        "a": "Yes. All official SETA learnerships and SA Youth applications are 100% free. Any person asking for payment is committing fraud."
+      },
+      {
+        "q": "What is the minimum qualification for a learnership in South Africa?",
+        "a": "Many entry-level learnerships (NQF Level 1 to 3) require Grade 10 or 11. NQF Level 4 learnerships require a Matric (Grade 12) certificate."
+      }
+    ],
+    "tags": [
+      "unemployed job search south africa",
+      "seta learnerships 2026",
+      "sa youth mobi registration",
+      "entry level jobs no experience",
+      "avoid job scams south africa"
+    ],
+    "lastUpdated": "2026-10-29",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Department of Employment and Labour",
+        "url": "https://www.labour.gov.za"
+      },
+      {
+        "title": "SA Youth Mobi Platform",
+        "url": "https://sayouth.mobi"
+      },
+      {
+        "title": "Employment Services of South Africa (ESSA)",
+        "url": "https://essa.labour.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Ways to Make Extra Income in South Africa",
+        "url": "/guides/ways-to-make-extra-income-south-africa",
+        "isExternal": false
+      },
+      {
+        "title": "Free Skills Courses in South Africa",
+        "url": "/guides/free-skills-courses-south-africa",
+        "isExternal": false
+      },
+      {
+        "title": "Scam Protection Hub",
+        "url": "/scam-alert",
+        "isExternal": false
+      }
+    ]
+  },
+  {
+    "id": "nsfas-bursary-application-status-appeals-guide",
+    "title": "NSFAS Bursary Application, Status Meanings & Appeals Guide",
+    "titleShort": "NSFAS Bursary & Appeals Guide",
+    "description": "Comprehensive guide to National Student Financial Aid Scheme (NSFAS) funding for SASSA households, status code meanings, TVET vs university allowances, and appeal procedures.",
+    "category": "Education",
+    "difficulty": "Medium",
+    "estimatedTime": "15 mins",
+    "steps": [
+      {
+        "title": "Understand NSFAS Eligibility for SASSA Households",
+        "content": "The National Student Financial Aid Scheme (NSFAS) provides full bursaries to South African citizens studying at public universities and TVET colleges. <strong>SASSA Rule:</strong> Applicants who are beneficiaries of any SASSA social grant automatically meet the financial eligibility criteria (combined household income under R350,000 per annum) and receive fast-tracked approval.",
+        "tips": [
+          "If you receive a Child Support, Foster Child, or Disability Grant, make sure your ID number matches your SASSA record when registering on myNSFAS."
+        ]
+      },
+      {
+        "title": "How to Apply via myNSFAS Portal",
+        "content": "Apply online at <a href=\"https://my.nsfas.org.za\">my.nsfas.org.za</a> during the official annual application window (typically opening Q4 for the following academic year): <ol><li>Create a myNSFAS account using your 13-digit ID and active mobile number.</li><li>Upload required documents: ID copy, consent form, and parent/guardian ID copies.</li><li>Select your chosen public university or TVET college course.</li><li>Submit and record your application reference number.</li></ol>",
+        "tips": [
+          "Apply early to ensure allowance verification before the start of the academic semester."
+        ]
+      },
+      {
+        "title": "Decode Your NSFAS Portal Status Code",
+        "content": "Track your application status on myNSFAS. Common status meanings include: <ul><li><strong>Provisionally Approved:</strong> Financial check passed (automatic for SASSA households); awaiting registration confirmation from your institution.</li><li><strong>Awaiting Evaluation:</strong> Documents are being verified by NSFAS caseworkers.</li><li><strong>Financial Eligibility Successful:</strong> Income threshold verified; awaiting academic admission.</li><li><strong>Application Unsuccessful:</strong> Application declined due to missing documents or academic eligibility criteria.</li></ul>",
+        "tips": [
+          "Check your portal weekly during January and February."
+        ]
+      },
+      {
+        "title": "Submit an NSFAS Appeal if Application is Declined",
+        "content": "If your application is declined, you have 30 days from the decision date to lodge an appeal on myNSFAS: <ol><li>Log into your myNSFAS portal and click <strong>Submit Appeal</strong>.</li><li>Select the appeal reason (e.g., change in household income, loss of breadwinner, or medical disability).</li><li>Upload supporting proof (SAPS affidavit, death certificate, or updated SASSA grant letter).</li><li>Track appeal evaluation.</li></ol>",
+        "tips": [
+          "Students whose household income dropped into the SASSA threshold due to retrenchment must submit retrenchment letters."
+        ]
+      },
+      {
+        "title": "Understand TVET College & University Allowances",
+        "content": "NSFAS covers full tuition fees plus living allowances: <ul><li><strong>University Living Allowance:</strong> Paid monthly into student bank accounts or NSFAS Wallet.</li><li><strong>TVET College Accommodation & Transport Allowance:</strong> Paid according to college distance parameters.</li><li><strong>Learning Material Allowance:</strong> Once-off annual book/laptop allowance.</li></ul>",
+        "tips": [
+          "Keep your banking details updated on myNSFAS to avoid payment delays."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do SASSA grant recipients get automatic NSFAS funding?",
+        "a": "Yes. SASSA social grant beneficiaries automatically satisfy the financial eligibility check for NSFAS bursaries without needing to submit complex proof of income."
+      },
+      {
+        "q": "Can I receive both a SASSA grant and NSFAS funding?",
+        "a": "You can receive NSFAS bursary allowances as a tertiary student while your family receives household social grants (such as Child Support or Older Persons Grants). However, if you personally receive the SRD R370 grant, your NSFAS living allowance will replace the need for SRD."
+      },
+      {
+        "q": "What is the NSFAS income limit for non-SASSA households?",
+        "a": "The combined household income limit for general NSFAS applicants is R350,000 per year (or R600,000 per year for students with disabilities)."
+      }
+    ],
+    "tags": [
+      "nsfas bursary application 2026",
+      "nsfas status check mynsfas",
+      "nsfas sassa automatic approval",
+      "nsfas appeal process",
+      "tvet college nsfas funding"
+    ],
+    "lastUpdated": "2026-10-29",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "National Student Financial Aid Scheme (NSFAS)",
+        "url": "https://www.nsfas.org.za"
+      },
+      {
+        "title": "Department of Higher Education and Training",
+        "url": "https://www.dhet.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Official SASSA Resources Page",
+        "url": "/resources",
+        "isExternal": false
+      },
+      {
+        "title": "Grant Eligibility Checker",
+        "url": "/eligibility-check",
+        "isExternal": false
+      },
+      {
+        "title": "Child Support Grant Guide",
+        "url": "/grants/child-support-grant",
+        "isExternal": false
+      }
+    ]
+  },
+  {
+    "id": "iec-voter-registration-special-vote-guide",
+    "title": "IEC Voter Registration & Special Vote Guide for SASSA Beneficiaries",
+    "titleShort": "IEC Voter Registration & Special Vote",
+    "description": "How SASSA beneficiaries can check voter registration status, register online with the IEC, and apply for special home or facility voting for older persons and citizens with disabilities.",
+    "category": "Civic Rights",
+    "difficulty": "Easy",
+    "estimatedTime": "10 mins",
+    "steps": [
+      {
+        "title": "Check Your Electoral Registration Status",
+        "content": "Verify your voter registration details with the Electoral Commission of South Africa (IEC): <ul><li><strong>SMS check:</strong> SMS your 13-digit ID number to 32810 (R1.00 per SMS).</li><li><strong>Online check:</strong> Visit <a href=\"https://www.elections.org.za\">elections.org.za</a> and enter your ID number.</li><li><strong>IEC Portal:</strong> Check your registered voting district and voting station location.</li></ul>",
+        "tips": [
+          "Confirm that your registered voting station matches your current residential address."
+        ]
+      },
+      {
+        "title": "Register or Update Address Online (IEC Portal)",
+        "content": "South African citizens aged 16 and older (voting from age 18) can register to vote or update their voting address online: <ol><li>Go to <a href=\"https://registertovote.elections.org.za\">registertovote.elections.org.za</a>.</li><li>Enter your 13-digit South African Smart ID or Green Barcoded ID card details.</li><li>Take a clear photo of your ID document or scan it.</li><li>Confirm your residential address on the interactive map and submit.</li></ol>",
+        "tips": [
+          "You must possess a valid South African Smart ID Card or Green Barcoded ID book to register."
+        ]
+      },
+      {
+        "title": "Understand Special Voting for Older Persons & Disabled Beneficiaries",
+        "content": "The IEC provides Special Voting facilities for citizens who cannot physically travel to a voting station on election day due to physical infirmity, disability, pregnancy, or old age. Two special vote options exist: <ul><li><strong>Home Visit Special Vote:</strong> IEC officials visit the registered residence of severely infirm or bedridden voters to cast their ballot.</li><li><strong>Voting Station Special Vote:</strong> Allows eligible voters to cast their vote at their voting station on designated special voting days ahead of general election day.</li></ul>",
+        "tips": [
+          "Older Persons Grant and Disability Grant recipients frequently qualify for home visit special votes."
+        ]
+      },
+      {
+        "title": "How to Apply for an IEC Special Vote",
+        "content": "Apply during the official IEC special vote registration window: <ul><li><strong>Online:</strong> Submit a special vote application on elections.org.za.</li><li><strong>SMS:</strong> Send your ID number to 32249 for special voting station applications.</li><li><strong>In Person / Proxy:</strong> A relative or caregiver can submit a completed VEC9 form at your local municipal IEC office.</li></ul>",
+        "tips": [
+          "Special vote applications close prior to election day — check official IEC announcements for exact deadlines."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can SASSA officials ask who I vote for?",
+        "a": "No. Your vote is completely secret by law. SASSA grant entitlement is guaranteed by the South African Constitution and is not tied to political party affiliation. No official or political party can cancel your grant based on your vote."
+      },
+      {
+        "q": "Do I need to re-register to vote if I moved address?",
+        "a": "Yes. In South Africa, you must vote at the voting station in the electoral ward where you reside. Update your address at registertovote.elections.org.za."
+      },
+      {
+        "q": "How does a bedridden pensioner apply for a home voting visit?",
+        "a": "Submit a Special Vote application (VEC9 form) to the IEC during the special vote window, selecting the Home Visit option due to physical infirmity."
+      }
+    ],
+    "tags": [
+      "iec voter registration south africa",
+      "special vote sassa pensioners",
+      "check voting station iec",
+      "home visit special vote iec"
+    ],
+    "lastUpdated": "2026-10-29",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Electoral Commission of South Africa (IEC)",
+        "url": "https://www.elections.org.za"
+      },
+      {
+        "title": "South African Government Services Portal",
+        "url": "https://www.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "SASSA Older Persons Pension Guide",
+        "url": "/grants/old-age-pension",
+        "isExternal": false
+      },
+      {
+        "title": "SASSA Disability Grant Guide",
+        "url": "/grants/disability-grant",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Resources Page",
+        "url": "/resources",
+        "isExternal": false
+      }
+    ]
+  },
+  {
+    "id": "municipal-indigent-support-school-fee-exemption-guide",
+    "title": "Municipal Indigent Support & School Fee Exemption Guide 2026",
+    "titleShort": "Indigent Support & School Fee Exemption",
+    "description": "How SASSA grant-dependent households can register for Free Basic Water/Electricity under municipal indigent policies and apply for 100% school fee exemptions.",
+    "category": "Household Support",
+    "difficulty": "Easy",
+    "estimatedTime": "12 mins",
+    "steps": [
+      {
+        "title": "Understand Municipal Indigent Support Policies",
+        "content": "Every municipality in South Africa operates an Indigent Support Policy to assist low-income households. Qualifying households registered on the municipal indigent register receive Free Basic Services (FBS): <ul><li><strong>Free Basic Electricity (FBE):</strong> 50 kWh to 100 kWh of free electricity per month.</li><li><strong>Free Basic Water (FBW):</strong> 6,000 litres (6 kilolitres) of free water per household per month.</li><li><strong>Property Rates & Waste Exemption:</strong> 100% rebate on municipal refuse removal and sewage tariffs.</li></ul>",
+        "tips": [
+          "Income threshold: Households earning less than two times the Old Age Grant amount (or under R4,500/month combined) typically qualify."
+        ]
+      },
+      {
+        "title": "How to Apply for Municipal Indigent Registration",
+        "content": "Visit your local municipal customer care office with: <ol><li>South African ID books of account holder and adult household members.</li><li>Proof of income or SASSA grant payout slip/bank statement.</li><li>Municipal account bill or municipal affidavit if living in an informal settlement.</li><li>Sworn affidavit confirming unemployment or grant reliance.</li></ol>",
+        "tips": [
+          "Indigent status must be re-verified annually with your local municipality."
+        ]
+      },
+      {
+        "title": "Understand Public School Fee Exemption Rights",
+        "content": "In terms of the South African Schools Act (Act 84 of 1996), parents and guardians whose children attend fee-paying public schools have a statutory right to apply for full or partial school fee exemptions based on household income: <ul><li><strong>Full Exemption (100%):</strong> Granted if the combined annual gross income of both parents is less than 10 times the annual school fee per child.</li><li><strong>Automatic Exemption:</strong> Granted automatically for orphans, foster children, or children in child-headed households.</li><li><strong>Partial Exemption:</strong> Granted on a sliding scale for low-income earners.</li></ul>",
+        "tips": [
+          "A school CANNOT exclude a child, withhold report cards, or deny exam registration due to unpaid school fees while an exemption application is pending."
+        ]
+      },
+      {
+        "title": "Step-by-Step School Fee Exemption Application Process",
+        "content": "Apply at your child's school at the start of the academic year: <ol><li>Request an official <strong>School Fee Exemption Application Form</strong> from the school governing body (SGB) office.</li><li>Attach certified ID copies, proof of SASSA grant income (grant slips or 3-month bank statement), and proof of residence.</li><li>Submit the form to the SGB chairperson within 30 days of the start of term.</li><li>The SGB must evaluate and notify you of the written decision within 30 days.</li></ol>",
+        "tips": [
+          "If the SGB rejects your application, you have a statutory right to appeal to the Provincial Head of the Department of Education within 30 days."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does receiving a Child Support Grant qualify my child for free school fees?",
+        "a": "Yes. Because the Child Support Grant relies on a strict means test, households relying solely on SASSA grants almost always qualify for a 100% full school fee exemption at fee-paying public schools."
+      },
+      {
+        "q": "How much Free Basic Electricity do indigent households get?",
+        "a": "Qualifying indigent households receive between 50 kWh and 100 kWh of Free Basic Electricity (FBE) per month, depending on the municipal policy."
+      },
+      {
+        "q": "Can a school legal action be taken against an indigent parent?",
+        "a": "Schools cannot take legal action or hand over accounts to debt collectors until they have formally informed parents of the exemption policy and given them an opportunity to apply for an exemption."
+      }
+    ],
+    "tags": [
+      "municipal indigent support south africa",
+      "free basic electricity sassa",
+      "school fee exemption form application",
+      "sgb school fee exemption calculation"
+    ],
+    "lastUpdated": "2026-10-29",
+    "author": "Lucky Cungwa",
+    "sources": [
+      {
+        "title": "Department of Cooperative Governance and Traditional Affairs (COGTA)",
+        "url": "https://www.cogta.gov.za"
+      },
+      {
+        "title": "Department of Basic Education",
+        "url": "https://www.education.gov.za"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "title": "Child Support Grant Application Guide",
+        "url": "/guides/apply-child-support-grant",
+        "isExternal": false
+      },
+      {
+        "title": "Official SASSA Resources",
+        "url": "/resources",
+        "isExternal": false
+      },
+      {
+        "title": "Grant Eligibility Checker",
+        "url": "/eligibility-check",
+        "isExternal": false
       }
     ]
   }
