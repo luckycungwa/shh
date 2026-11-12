@@ -13,7 +13,7 @@ export const revalidate = 900;
 
 export const metadata: Metadata = buildMetadata({
   title: "SASSA Payment Dates for November 2026",
-  description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 date TBA.",
+  description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 processing 23 and 25 November.",
   path: "/payment-calendar",
 });
 
@@ -32,7 +32,7 @@ function prettyDate(iso: string): string {
 const faqs = [
   { q: "When are the SASSA November 2026 payment dates?", a: "SASSA confirmed the November 2026 cycle on 14 October 2026. Older Persons grants are paid on Friday 30 October, Disability grants on Monday 2 November, Children's grants on Tuesday 3 November, and the fourth payment day on Thursday 5 November 2026. The fourth day is for beneficiaries whose grants are under review." },
   { q: "Why were the November 2026 SASSA dates moved earlier?", a: "SASSA brought the November cycle forward ahead of the Local Government Elections so payments would not clash with the election period. National Treasury approved the revised dates, and all eligible beneficiaries are still paid." },
-  { q: "Have the SRD R370 dates for November 2026 been announced?", a: "Not yet. SRD R370 is paid in batches during the last week of the month, and SASSA announces the dates after mid-month. Check your personal 'Pay Day' on the official SRD portal (srd.sassa.gov.za) rather than relying on one date for everyone." },
+  { q: "Have the SRD R370 dates for November 2026 been announced?", a: "Yes. SASSA has announced SRD R370 processing dates for Monday 23 and Wednesday 25 November 2026. These are batch-processing dates, not a guarantee that every beneficiary will be paid on both days. Check your personal Pay Day on the official SRD portal (srd.sassa.gov.za)." },
   { q: "When are the permanent SASSA grants paid?", a: "Permanent grants — the Older Persons, Disability, War Veterans and Children's grants — are usually paid in the first week of each month, but the exact day depends on the grant type and SASSA can revise a cycle, as it did for November 2026." },
   { q: "Are the dates on this calendar guaranteed?", a: "Dates for months that are close are confirmed by SASSA; dates further out are projected based on SASSA's usual pattern and are marked 'projected'. Always confirm your personal date on the official SRD portal." },
   { q: "Why haven't I been paid even though the date has passed?", a: "Allow 1 to 3 business days for the payment to reflect in your bank account after your Pay Day. If it still hasn't arrived and your status is 'Approved', read our missing grant payment guide or contact the SASSA helpline on 0800 60 10 11." },
