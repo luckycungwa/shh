@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { LinkButton, Chip, Card, CardBody, Divider } from "@/components/ui/nextui";
 import { FaCalendarAlt, FaQuestionCircle, FaCheckCircle } from "react-icons/fa";
@@ -90,13 +91,13 @@ export default function PaymentCalendarPage() {
           The confirmed November 2026 dates are below, with every other month in one place.
         </p>
         <figure className="mt-8 overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 bg-white shadow-sm">
-          <img
+          <Image
             src="/images/sassa-payment-calendar-2026-2027.svg"
             alt="SASSA Help Hub 2026–2027 payment calendar guide covering Older Persons, Disability, Children's and SRD R370 grants"
-            width="1200"
-            height="630"
-            fetchPriority="high"
-            decoding="async"
+            width={1200}
+            height={630}
+            priority
+            unoptimized
             className="block h-auto w-full"
           />
           <figcaption className="px-5 py-3 text-sm text-gray-600 dark:text-gray-400">
