@@ -13,8 +13,8 @@ import { readForecast, srdDisplay, underReviewDisplay, type MonthSchedule } from
 export const revalidate = 900;
 
 export const metadata: Metadata = buildMetadata({
-  title: "SASSA Payment Dates for November 2026",
-  description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 processing 23 and 25 November.",
+  title: "SASSA Payment Dates November 2026 | Full Grant Calendar",
+  description: "Check SASSA November 2026 payment dates for Older Persons, Disability, Children's and SRD R370 grants. See the full 2026/2027 calendar, fourth payment day guidance and what to do if your money is late.",
   path: "/payment-calendar",
   ogImage: {
     url: "/images/sassa-payment-calendar-2026-2027.svg",
