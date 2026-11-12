@@ -89,12 +89,11 @@ export default function PaymentCalendarPage() {
         <section className="mb-12 bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <Chip color="success" variant="flat" size="sm" className="font-bold uppercase text-xs">Confirmed</Chip>
-            <span className="text-xs text-gray-500">Checked against SASSA's 14 October 2026 statement on 22 October 2026</span>
+            <span className="text-xs text-gray-500">Last verified: {november.governance?.lastVerified ?? "2026-11-12"}</span>
           </div>
           <h2 className="text-3xl font-black mb-3">November 2026 SASSA payment dates</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 max-w-3xl">
-            SASSA brought the November 2026 cycle forward ahead of the Local Government Elections, with National Treasury approval,
-            so payments would not clash with the election period. All eligible beneficiaries are still paid.
+            SASSA brought the permanent-grant cycle forward ahead of the Local Government Elections. The SRD dates are announced separately and your individual Pay Day must be checked on the SRD portal.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
@@ -110,7 +109,7 @@ export default function PaymentCalendarPage() {
             ))}
           </div>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            <span className="font-bold">SRD R370:</span> {srdDisplay(november.srd, november.label).day}. Check your own date on the{" "}
+            <span className="font-bold">SRD R370 processing:</span> {srdDisplay(november.srd, november.label).day}. These are processing dates, not a guarantee of an individual deposit date. Check your own Pay Day on the{" "}
             <a href="https://srd.sassa.gov.za" className="font-bold text-primary-gold underline">SRD status portal</a>.
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
@@ -126,30 +125,54 @@ export default function PaymentCalendarPage() {
         </section>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        {months.map((m) => (
-          <NextLink key={m.month_key} href={`/dates/${m.month_key}`} className="block group">
-            <Card className="p-6 hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 group-hover:border-primary-gold/30">
-              <CardBody className="p-0 space-y-3">
-                <div className="flex items-center justify-between">
-                  <Chip color="primary" variant="flat" size="sm" className="font-bold uppercase text-xs">
-                    <FaCalendarAlt className="mr-1" /> {m.month >= 10 ? "Year-End" : "Monthly"}
-                  </Chip>
-                  <span className="text-xs font-bold text-primary-gold group-hover:underline">View schedule</span>
-                </div>
-                <h2 className="text-2xl font-bold group-hover:text-primary-gold transition-colors">{m.label}</h2>
-                <div className="text-sm text-gray-500 space-y-1">
-                  <p>Older Persons: <span className="font-semibold text-gray-800 dark:text-gray-200">{prettyDate(m.older_persons.date)}</span></p>
-                  <p>SRD R370: <span className="font-semibold text-gray-800 dark:text-gray-200">{prettyDate(srdDisplay(m.srd, m.label).date)}</span></p>
-                  {!(m.older_persons.status === "confirmed" && m.disability.status === "confirmed" && m.children.status === "confirmed") && (
-                    <p className="pt-1"><Chip size="sm" variant="flat" color="warning" className="font-bold uppercase text-[10px]">Under review / projected</Chip></p>
-                  )}
-                </div>
-              </CardBody>
-            </Card>
-          </NextLink>
-        ))}
-      </div>
+      <section className="mb-12" aria-labelledby="monthly-schedule-heading">
+        <div className="flex flex-wrap items-end justify-between gap-3 mb-5">
+          <div>
+            <h2 id="monthly-schedule-heading" className="text-2xl md:text-3xl font-black">Monthly grant payment schedule</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all grant dates in one place. Select a month for payment guidance and status checks.</p>
+          </div>
+          <span className="text-xs text-gray-500">FY 2026/2027</span>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {months.map((m) => {
+            const rows = [
+              { label: "Older Persons", row: m.older_persons },
+              { label: "Disability", row: m.disability },
+              { label: "Children's Grants", row: m.children },
+              { label: "Additional / exception day", row: underReviewDisplay(m.under_review) },
+            ];
+            const srd = srdDisplay(m.srd, m.label);
+            return (
+              <NextLink key={m.month_key} href={"/dates/" + m.month_key} className="block group focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-gold rounded-2xl">
+                <Card className="h-full p-5 hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 group-hover:border-primary-gold/50">
+                  <CardBody className="p-0 space-y-4">
+                    <div className="flex items-center justify-between gap-3">
+                      <h3 className="text-xl font-black group-hover:text-primary-gold transition-colors">{m.label}</h3>
+                      <span className="text-xs font-bold text-primary-gold group-hover:underline">Full schedule →</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                      {rows.map(({ label, row }) => (
+                        <div key={label} className="min-w-0">
+                          <p className="text-xs text-gray-500 dark:text-gray-400">{label}</p>
+                          <p className="text-sm font-bold text-gray-900 dark:text-white">{row.date === "TBC" || row.date === "TBA" ? row.date : prettyDate(row.date)}</p>
+                          <p className="text-[11px] text-gray-500">{row.status === "confirmed" ? "SASSA confirmed" : "Awaiting confirmation"}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="rounded-xl bg-primary-gold/10 px-3 py-2 flex items-center justify-between gap-2">
+                      <div>
+                        <p className="text-xs font-semibold text-gray-600 dark:text-gray-300">SRD R370</p>
+                        <p className="text-sm font-bold text-gray-900 dark:text-white">{srd.status === "confirmed" ? srd.day : "Dates announced monthly"}</p>
+                      </div>
+                      <span className="text-[10px] font-bold uppercase text-gray-600 dark:text-gray-300">{srd.status === "confirmed" ? "Announced" : "Check later"}</span>
+                    </div>
+                  </CardBody>
+                </Card>
+              </NextLink>
+            );
+          })}
+        </div>
+      </section>
 
       <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800 mb-12">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><FaCheckCircle className="text-primary-gold" /> How to confirm your personal pay date</h2>
