@@ -101,7 +101,7 @@ export async function generateMetadata({ params: paramsPromise }: { params: Prom
     : clampTitle(`SASSA ${s.label} Grant Payment Dates`);
   const summary = confirmedSummary(s);
   const description = electionMonth
-    ? clampDescription("SASSA moved the November 2026 grant dates because 4 November is the Local Government Elections holiday. Older Persons 30 Oct, Disability 2 Nov, Children 3 Nov.")
+    ? clampDescription("SASSA November 2026 dates: Older Persons 30 Oct, Disability 2 Nov, Children 3 Nov, fourth day 5 Nov; SRD processing 23 and 25 Nov.")
     : clampDescription(summary
       ? `${s.label} SASSA payment dates: ${summary}.${s.srd.status === "confirmed" ? "" : " SRD R370 not yet announced."}`
       : `View the ${s.label} SASSA payment dates for the Older Persons, Disability, Children's and SRD R370 grants. Check when each grant is paid this month.`);
