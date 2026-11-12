@@ -15,6 +15,12 @@ export const metadata: Metadata = buildMetadata({
   title: "SASSA Payment Dates for November 2026",
   description: "SASSA November 2026 dates: Older Persons 30 October, Disability 2 November, Children's 3 November and the fourth payment day 5 November. SRD R370 processing 23 and 25 November.",
   path: "/payment-calendar",
+  ogImage: {
+    url: "/images/sassa-payment-calendar-2026-2027.svg",
+    width: 1200,
+    height: 630,
+    alt: "SASSA Help Hub payment calendar 2026–2027 for Older Persons, Disability, Children's and SRD R370 grants",
+  },
 });
 
 function readAll(): MonthSchedule[] {
@@ -83,6 +89,20 @@ export default function PaymentCalendarPage() {
           Check when SASSA pays the Older Persons, Disability, Children's and SRD R370 grants.
           The confirmed November 2026 dates are below, with every other month in one place.
         </p>
+        <figure className="mt-8 overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 bg-white shadow-sm">
+          <img
+            src="/images/sassa-payment-calendar-2026-2027.svg"
+            alt="SASSA Help Hub 2026–2027 payment calendar guide covering Older Persons, Disability, Children's and SRD R370 grants"
+            width="1200"
+            height="630"
+            fetchPriority="high"
+            decoding="async"
+            className="block h-auto w-full"
+          />
+          <figcaption className="px-5 py-3 text-sm text-gray-600 dark:text-gray-400">
+            SASSA Help Hub payment calendar — an independent guide. Always confirm your personal payment date through official SASSA channels.
+          </figcaption>
+        </figure>
       </header>
 
       {november && (
@@ -93,7 +113,7 @@ export default function PaymentCalendarPage() {
           </div>
           <h2 className="text-3xl font-black mb-3">November 2026 SASSA payment dates</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 max-w-3xl">
-            SASSA brought the permanent-grant cycle forward ahead of the Local Government Elections. The SRD dates are announced separately and your individual Pay Day must be checked on the SRD portal.
+            SASSA brought the permanent-grant cycle forward ahead of the Local Government Elections. For SRD R370, SASSA announced processing dates of 23 and 25 November 2026; check your personal Pay Day on the official SRD portal.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
