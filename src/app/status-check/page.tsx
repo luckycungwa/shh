@@ -27,8 +27,8 @@ export function generateMetadata(): Metadata {
   const currentMonthYear = getCurrentMonthYearKey();
   return {
     ...buildMetadata({
-      title: `SASSA SRD Status Check – R370 & Pay Day (${currentMonthYear})`,
-      description: `Check your SASSA SRD R370 status for ${currentMonthYear}. Use the official portal, understand your result and find next steps for pending, approved or declined applications.`,
+      title: `SASSA Status Check ${currentMonthYear} | SRD R370 & Pay Day`,
+      description: `Check your SRD R370 status for ${currentMonthYear}. Understand Approved, Pending or Declined, find out why Pay Day may be missing, and follow practical next steps using official SASSA channels.`,
       path: "/status-check",
       noTemplate: true,
     }),
