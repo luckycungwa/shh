@@ -210,6 +210,8 @@ export default function StatusCheckPage() {
                      { title: "What does my status mean?", url: "/tools/status-explorer", description: "Look up any SRD status" },
                      { title: "Missing payment troubleshooter", url: "/tools/payment-troubleshooter", description: "Why your money hasn't arrived" },
                      { title: "Appeal deadline calculator", url: "/tools/appeal-deadline", description: "If your application was declined" },
+                     { title: "Change a lost cellphone number", url: "/guides/lost-phone-number", description: "If you no longer have your registered number" },
+                     { title: "Update SRD banking details", url: "/guides/change-banking-details", description: "If your bank account or details changed" },
                    ]}
                  />
 
