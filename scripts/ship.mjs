@@ -16,19 +16,40 @@
  * Exits non-zero on any failure, so it is safe to chain in CI or a terminal.
  */
 import { spawnSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 const REPO = process.cwd();
 const MAX_WAIT_MS = 15 * 60 * 1000;
 const POLL_MS = 15 * 1000;
 
+// Windows resolves `npm` to npm.cmd, which needs a shell. Calling npm's JS entry
+// point through the current node binary avoids that and keeps output warning-free.
+const NPM_CLI = path.join(
+  path.dirname(process.execPath),
+  "node_modules",
+  "npm",
+  "bin",
+  "npm-cli.js",
+);
+const HAS_NPM_CLI = fs.existsSync(NPM_CLI);
+
+function npmCommand(args) {
+  if (HAS_NPM_CLI) return { exe: process.execPath, args: [NPM_CLI, ...args], shell: false };
+  return { exe: "npm", args, shell: process.platform === "win32" };
+}
+
 function run(cmd, args, opts = {}) {
-  // Windows resolves npm to npm.cmd, which needs a shell; git is a real exe.
-  const useShell = cmd === "npm" && process.platform === "win32";
-  const res = spawnSync(cmd, args, {
+  let exe = cmd;
+  let finalArgs = args;
+  let shell = false;
+  if (cmd === "npm") ({ exe, args: finalArgs, shell } = npmCommand(args));
+
+  const res = spawnSync(exe, finalArgs, {
     cwd: REPO,
     stdio: opts.capture ? ["ignore", "pipe", "pipe"] : "inherit",
     encoding: "utf8",
-    shell: useShell,
+    shell,
   });
   if (res.error) throw res.error;
   return res;
@@ -148,11 +169,12 @@ if (state !== "success") {
 
 // ---- verify production ----------------------------------------------------
 step("Verify production");
-const fresh = spawnSync("npm", ["run", "check:production-freshness"], {
+const freshCmd = npmCommand(["run", "check:production-freshness"]);
+const fresh = spawnSync(freshCmd.exe, freshCmd.args, {
   cwd: REPO,
   stdio: "inherit",
   env: { ...process.env, EXPECTED_COMMIT_SHA: sha },
-  shell: process.platform === "win32",
+  shell: freshCmd.shell,
 });
 if (fresh.status !== 0) fail("Production freshness check failed.");
 
