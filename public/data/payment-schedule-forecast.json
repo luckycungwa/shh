@@ -4,11 +4,31 @@
     "label": "September 2026",
     "year": 2026,
     "month": 9,
-    "older_persons": { "date": "2026-09-02", "day": "Wednesday", "status": "confirmed" },
-    "disability": { "date": "2026-09-03", "day": "Thursday", "status": "confirmed" },
-    "children": { "date": "2026-09-04", "day": "Friday", "status": "confirmed" },
-    "under_review": { "date": "TBC", "day": "Not yet confirmed", "status": "projected" },
-    "srd": { "date": "2026-09-23", "day": "Wednesday 23 & Friday 25 September", "status": "confirmed" },
+    "older_persons": {
+      "date": "2026-09-02",
+      "day": "Wednesday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2026-09-03",
+      "day": "Thursday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2026-09-04",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "TBC",
+      "day": "Not yet confirmed",
+      "status": "projected"
+    },
+    "srd": {
+      "date": "2026-09-23",
+      "day": "Wednesday 23 & Friday 25 September",
+      "status": "confirmed"
+    },
     "note": "SASSA has confirmed the September 2026 permanent grant dates and the SRD R370 payment dates of 23 and 25 September 2026. The fourth payment day for grants under review is not yet confirmed.",
     "governance": {
       "source": "SASSA official September 2026 SRD payment dates announcement",
@@ -22,11 +42,32 @@
     "label": "October 2026",
     "year": 2026,
     "month": 10,
-    "older_persons": { "date": "2026-10-02", "day": "Friday", "status": "confirmed" },
-    "disability": { "date": "2026-10-05", "day": "Monday", "status": "confirmed" },
-    "children": { "date": "2026-10-06", "day": "Tuesday", "status": "confirmed" },
-    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
-    "srd": { "date": "2026-10-22", "endDate": "2026-10-23", "day": "Thursday 22 & Friday 23 October", "status": "confirmed" },
+    "older_persons": {
+      "date": "2026-10-02",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2026-10-05",
+      "day": "Monday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2026-10-06",
+      "day": "Tuesday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "TBC",
+      "day": "Fourth payment day",
+      "status": "projected"
+    },
+    "srd": {
+      "date": "2026-10-22",
+      "endDate": "2026-10-23",
+      "day": "Thursday 22 & Friday 23 October",
+      "status": "confirmed"
+    },
     "note": "SASSA confirmed the October 2026 SRD R370 payment dates as Thursday 22 and Friday 23 October 2026. The permanent grant dates for October were Older Persons on Friday 2 October, Disability on Monday 5 October and Children's Grants on Tuesday 6 October. Beneficiaries are paid in a batch on either 22 or 23 October depending on their personal 'Pay Day' date on the official SRD portal, not on both dates.",
     "governance": {
       "source": "SASSA official October 2026 SRD R370 payment dates announcement",
@@ -40,17 +81,38 @@
     "label": "November 2026",
     "year": 2026,
     "month": 11,
-    "older_persons": { "date": "2026-10-30", "day": "Friday", "status": "confirmed" },
-    "disability": { "date": "2026-11-02", "day": "Monday", "status": "confirmed" },
-    "children": { "date": "2026-11-03", "day": "Tuesday", "status": "confirmed" },
-    "under_review": { "date": "2026-11-05", "day": "Thursday", "status": "confirmed" },
-    "srd": { "date": "TBC", "day": "Expected in the last week of November — confirmed after mid-month", "status": "projected" },
-    "note": "SASSA confirmed the revised November 2026 payment dates on 14 October 2026, brought forward ahead of the Local Government Elections public holiday on 4 November 2026: Older Persons will be paid Friday 30 October, Disability on Monday 2 November and Children's Grants on Tuesday 3 November 2026. The fourth payment day, Thursday 5 November 2026, is for beneficiaries whose grants fall within the review process. The SRD R370 date is paid in the last week of November and is only announced after mid-month — check the official SRD portal for your personal 'Pay Day'. All eligible beneficiaries will still be paid.",
+    "older_persons": {
+      "date": "2026-10-30",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2026-11-02",
+      "day": "Monday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2026-11-03",
+      "day": "Tuesday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "2026-11-05",
+      "day": "Thursday",
+      "status": "confirmed"
+    },
+    "srd": {
+      "date": "2026-11-23",
+      "endDate": "2026-11-25",
+      "day": "Monday 23 & Wednesday 25 November",
+      "status": "confirmed"
+    },
+    "note": "SASSA confirmed the revised November 2026 payment dates on 14 October 2026, brought forward ahead of the Local Government Elections public holiday on 4 November 2026: Older Persons will be paid Friday 30 October, Disability on Monday 2 November and Children's Grants on Tuesday 3 November 2026. The fourth payment day, Thursday 5 November 2026, is for beneficiaries whose grants fall within the review process. SASSA's November 2026 SRD announcement confirms processing dates of Monday 23 and Wednesday 25 November. These are processing dates, not guaranteed individual deposit dates; beneficiaries must check their personal Pay Day on the official SRD portal. All eligible beneficiaries will still be paid.",
     "governance": {
       "source": "SASSA media statement: SASSA announces revised November 2026 social grant payment dates ahead of Local Government Elections (14 October 2026)",
       "sourceURL": "https://sassa.gov.za/documents/uploads/SASSA_ANNOUNCES_REVISED_NOVEMBER_2026_SOCIAL_GRANT_PAYMENT_DATES_AHEAD_OF_LOCAL_GOVERNMENT_ELECTIONS.pdf",
-      "lastVerified": "2026-10-15",
-      "notes": "Per SASSA's 14 October 2026 media statement (spokesperson Dr Paseka Letsatsi), the November 2026 payment cycle was brought forward because 4 November 2026 is the Local Government Elections public holiday. Revised confirmed dates: Older Persons 30 October, Disability 2 November, Children's Grants 3 November, and the fourth payment day (for grants under review) 5 November 2026. The National Treasury approved the revised dates. Verified directly against the official SASSA media statement PDF (sassa.gov.za), corroborated by SAnews/gov.za, IOL, SABC and The Citizen. All eligible beneficiaries will still receive their grants."
+      "lastVerified": "2026-11-12",
+      "notes": "Per SASSA's 14 October 2026 media statement (spokesperson Dr Paseka Letsatsi), the November 2026 payment cycle was brought forward because 4 November 2026 is the Local Government Elections public holiday. Revised confirmed dates: Older Persons 30 October, Disability 2 November, Children's Grants 3 November, and the fourth payment day (for grants under review) 5 November 2026. The National Treasury approved the revised dates. Verified directly against the official SASSA media statement PDF (sassa.gov.za), corroborated by SAnews/gov.za, IOL, SABC and The Citizen. All eligible beneficiaries will still receive their grants. SASSA's separate November SRD announcement graphic confirms processing dates of 23 and 25 November 2026. Individual beneficiaries must check their personal Pay Day; the two dates are not a guarantee of payment to every beneficiary on both days."
     }
   },
   {
@@ -58,17 +120,37 @@
     "label": "December 2026",
     "year": 2026,
     "month": 12,
-    "older_persons": { "date": "2026-12-02", "day": "Wednesday", "status": "confirmed" },
-    "disability": { "date": "2026-12-03", "day": "Thursday", "status": "confirmed" },
-    "children": { "date": "2026-12-04", "day": "Friday", "status": "confirmed" },
-    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
-    "srd": { "date": "TBC", "day": "Expected in the last week of December — confirmed after mid-month", "status": "projected" },
-    "note": "The December 2026 permanent grant dates follow the DSD-approved 2026/27 payment schedule: Older Persons paid Wednesday 2 December, Disability Thursday 3 December and Children's Grants Friday 4 December. The SRD R370 date is paid in the last week of December and is only announced after mid-month — check the official SRD portal for your personal 'Pay Day'.",
+    "older_persons": {
+      "date": "2026-12-02",
+      "day": "Wednesday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2026-12-03",
+      "day": "Thursday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2026-12-04",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "2026-12-07",
+      "day": "Monday",
+      "status": "confirmed"
+    },
+    "srd": {
+      "date": "TBC",
+      "day": "Expected in the last week of December — confirmed after mid-month",
+      "status": "projected"
+    },
+    "note": "SASSA's official 2026/2027 annual payment schedule lists Older Persons on Wednesday 2026-12-02, Disability on Thursday 2026-12-03, Children's Grants on Friday 2026-12-04, and the additional/exception payment day for all grants on Monday 2026-12-07. SRD dates are announced separately each month; check your personal Pay Day on the official SRD portal.",
     "governance": {
-      "source": "DSD-approved 2026/27 SASSA payment schedule",
-      "sourceURL": "https://www.gov.za",
-      "lastVerified": "2026-09-24",
-      "notes": "Permanent grant dates for December 2026 (Older Persons 2 Dec, Disability 3 Dec, Children's 4 Dec) are confirmed per the DSD-approved 2026/27 payment schedule. The SRD R370 December date is not yet announced; it is paid in the last week of the month and is confirmed later in December. The fourth payment day for grants under review remains TBC."
+      "source": "SASSA official annual payment schedule for financial year 2026/2027 (user-provided SASSA graphic)",
+      "sourceURL": "https://www.sassa.gov.za/",
+      "lastVerified": "2026-11-12",
+      "notes": "Dates transcribed from the SASSA annual payment schedule graphic for FY 2026/2027 supplied for this update. The fourth column is labelled 'Exceptions all grants' in the graphic. SRD dates are separate and are not included in this annual permanent-grant schedule."
     }
   },
   {
@@ -76,17 +158,113 @@
     "label": "January 2027",
     "year": 2027,
     "month": 1,
-    "older_persons": { "date": "2027-01-05", "day": "Tuesday", "status": "confirmed" },
-    "disability": { "date": "2027-01-06", "day": "Wednesday", "status": "confirmed" },
-    "children": { "date": "2027-01-07", "day": "Thursday", "status": "confirmed" },
-    "under_review": { "date": "TBC", "day": "Fourth payment day", "status": "projected" },
-    "srd": { "date": "TBC", "day": "Expected in the last week of January — confirmed after mid-month", "status": "projected" },
-    "note": "The January 2027 permanent grant dates follow the DSD-approved 2026/27 payment schedule: Older Persons paid Tuesday 5 January, Disability Wednesday 6 January and Children's Grants Thursday 7 January. The SRD R370 date is paid in the last week of January and is only announced after mid-month — check the official SRD portal for your personal 'Pay Day'.",
+    "older_persons": {
+      "date": "2027-01-05",
+      "day": "Tuesday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2027-01-06",
+      "day": "Wednesday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2027-01-07",
+      "day": "Thursday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "2027-01-08",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "srd": {
+      "date": "TBC",
+      "day": "Expected in the last week of January — confirmed after mid-month",
+      "status": "projected"
+    },
+    "note": "SASSA's official 2026/2027 annual payment schedule lists Older Persons on Tuesday 2027-01-05, Disability on Wednesday 2027-01-06, Children's Grants on Thursday 2027-01-07, and the additional/exception payment day for all grants on Friday 2027-01-08. SRD dates are announced separately each month; check your personal Pay Day on the official SRD portal.",
     "governance": {
-      "source": "DSD-approved 2026/27 SASSA payment schedule",
-      "sourceURL": "https://www.gov.za",
-      "lastVerified": "2026-09-24",
-      "notes": "Permanent grant dates for January 2027 (Older Persons 5 Jan, Disability 6 Jan, Children's 7 Jan) are confirmed per the DSD-approved 2026/27 payment schedule. The SRD R370 January date is not yet announced; it is paid in the last week of the month and is confirmed later in January. The fourth payment day for grants under review remains TBC."
+      "source": "SASSA official annual payment schedule for financial year 2026/2027 (user-provided SASSA graphic)",
+      "sourceURL": "https://www.sassa.gov.za/",
+      "lastVerified": "2026-11-12",
+      "notes": "Dates transcribed from the SASSA annual payment schedule graphic for FY 2026/2027 supplied for this update. The fourth column is labelled 'Exceptions all grants' in the graphic. SRD dates are separate and are not included in this annual permanent-grant schedule."
+    }
+  },
+  {
+    "month_key": "february-2027",
+    "label": "February 2027",
+    "year": 2027,
+    "month": 2,
+    "older_persons": {
+      "date": "2027-02-02",
+      "day": "Tuesday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2027-02-03",
+      "day": "Wednesday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2027-02-04",
+      "day": "Thursday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "2027-02-05",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "srd": {
+      "date": "TBC",
+      "day": "Expected in the last week of February — confirmed after mid-month",
+      "status": "projected"
+    },
+    "note": "SASSA's official 2026/2027 annual payment schedule lists Older Persons on Tuesday 2027-02-02, Disability on Wednesday 2027-02-03, Children's Grants on Thursday 2027-02-04, and the additional/exception payment day for all grants on Friday 2027-02-05. SRD dates are announced separately each month; check your personal Pay Day on the official SRD portal.",
+    "governance": {
+      "source": "SASSA official annual payment schedule for financial year 2026/2027 (user-provided SASSA graphic)",
+      "sourceURL": "https://www.sassa.gov.za/",
+      "lastVerified": "2026-11-12",
+      "notes": "Dates transcribed from the SASSA annual payment schedule graphic for FY 2026/2027 supplied for this update. The fourth column is labelled 'Exceptions all grants' in the graphic. SRD dates are separate and are not included in this annual permanent-grant schedule."
+    }
+  },
+  {
+    "month_key": "march-2027",
+    "label": "March 2027",
+    "year": 2027,
+    "month": 3,
+    "older_persons": {
+      "date": "2027-03-02",
+      "day": "Tuesday",
+      "status": "confirmed"
+    },
+    "disability": {
+      "date": "2027-03-03",
+      "day": "Wednesday",
+      "status": "confirmed"
+    },
+    "children": {
+      "date": "2027-03-04",
+      "day": "Thursday",
+      "status": "confirmed"
+    },
+    "under_review": {
+      "date": "2027-03-05",
+      "day": "Friday",
+      "status": "confirmed"
+    },
+    "srd": {
+      "date": "TBC",
+      "day": "Expected in the last week of March — confirmed after mid-month",
+      "status": "projected"
+    },
+    "note": "SASSA's official 2026/2027 annual payment schedule lists Older Persons on Tuesday 2027-03-02, Disability on Wednesday 2027-03-03, Children's Grants on Thursday 2027-03-04, and the additional/exception payment day for all grants on Friday 2027-03-05. SRD dates are announced separately each month; check your personal Pay Day on the official SRD portal.",
+    "governance": {
+      "source": "SASSA official annual payment schedule for financial year 2026/2027 (user-provided SASSA graphic)",
+      "sourceURL": "https://www.sassa.gov.za/",
+      "lastVerified": "2026-11-12",
+      "notes": "Dates transcribed from the SASSA annual payment schedule graphic for FY 2026/2027 supplied for this update. The fourth column is labelled 'Exceptions all grants' in the graphic. SRD dates are separate and are not included in this annual permanent-grant schedule."
     }
   }
 ]
