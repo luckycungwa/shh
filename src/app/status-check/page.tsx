@@ -358,7 +358,7 @@ export default function StatusCheckPage() {
         </div>
       </section>
 
-      <section className="mb-16 mt-24">
+      <article className="max-w-4xl mx-auto space-y-16 mt-24">
         <section className="space-y-8">
           <div className="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border-l-8 border-blue-500 mb-12">
             <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">{currentMonthYear} Notice</h3>
