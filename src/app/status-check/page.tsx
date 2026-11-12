@@ -325,7 +325,7 @@ export default function StatusCheckPage() {
       </div>
 
       <section className="mb-16">
-        <h2 classN<section className="mb-16" aria-labelledby="status-next-steps">
+      <section className="mb-16" aria-labelledby="status-next-steps">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <Chip color="primary" variant="flat" className="font-bold uppercase mb-3">Your next step</Chip>
           <h2 id="status-next-steps" className="text-3xl md:text-4xl font-black mb-3">What happened when you checked your status?</h2>
@@ -358,7 +358,7 @@ export default function StatusCheckPage() {
         </div>
       </section>
 
-      16 mt-24">
+      <section className="mb-16 mt-24">
         <section className="space-y-8">
           <div className="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border-l-8 border-blue-500 mb-12">
             <h3 className="text-2xl font-black text-blue-900 dark:text-blue-400 mb-4">{currentMonthYear} Notice</h3>
