@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "node --test scripts/check-server-boundaries.test.mjs",
     "validate:content": "node scripts/validate-content.mjs",
-    "check:production-freshness": "node scripts/check-production-freshness.mjs"
+    "check:production-freshness": "node scripts/check-production-freshness.mjs",
+    "ship": "node scripts/ship.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
