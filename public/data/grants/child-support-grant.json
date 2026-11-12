@@ -1,9 +1,9 @@
 {
-  "title": "SASSA Child Support Grant 2026: Eligibility, Amount & How to Apply",
-  "description": "Everything you need to know about the SASSA Child Support Grant — R580 per child per month. Who qualifies, required documents, how to apply, and why applications get declined.",
+  "title": "SASSA Child Support Grant: 2026 Rules",
+  "description": "SASSA Child Support Grant: who qualifies, the R580 monthly amount, documents, how to apply, payment dates, and what to do if an approved grant is not paid.",
   "slug": "grants/child-support-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-10-16",
+  "last_updated": "2026-11-12",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -14,7 +14,11 @@
   "related": [
     "/grants/srd-r370-grant",
     "/status/declined",
+    "/status/approved",
     "/payment-calendar",
+    "/guides/missing-grant-payment-guide",
+    "/guides/bank-details-pending-fix",
+    "/guides/apply-sassa-grants",
     "/faq",
     "/eligibility-check"
   ],
@@ -62,8 +66,8 @@
     },
     {
       "type": "info",
-      "title": "Payment Dates & Amounts 2026",
-      "content": "The Child Support Grant amount is {{child_support_grant_amount}} per child per month in 2026. Payments are made on the children's grant payment day each month. <strong>In October 2026, the Child Support Grant was paid on Tuesday, 6 October</strong>, and the next payment is <strong>Tuesday, 3 November 2026</strong> (the November cycle, brought forward ahead of the 4 November Local Government Elections public holiday) — both confirmed by SASSA. See the <a href=\"/dates/october-2026\">October 2026 schedule</a> and the <a href=\"/dates/november-2026\">November 2026 schedule</a>. If you have multiple children who qualify, you will receive that amount for each child. Payments are made to the primary caregiver, not the child."
+      "title": "Payment Dates, Amount and Late Payments",
+      "content": "The Child Support Grant amount is {{child_support_grant_amount}} per child per month in 2026. It is paid on the children's grant payment day, which normally falls in the first week of each month; SASSA can move a cycle when a public holiday falls inside the payment window. Always confirm the current month's date on the <a href=\"/payment-calendar\">SASSA payment calendar</a> rather than relying on an old date. If you have more than one qualifying child, you receive the amount for each child, paid to the primary caregiver rather than to the child. If your application shows <strong>Approved</strong> but the money has not arrived, allow 1 to 3 business days after the payment date, then follow the <a href=\"/guides/missing-grant-payment-guide\">missing grant payment guide</a>. If the status says <strong>Bank Details Pending</strong>, fix the banking details first using the <a href=\"/guides/bank-details-pending-fix\">bank details guide</a>."
     },
     {
       "type": "faq",
@@ -88,6 +92,18 @@
         {
           "q": "Can I receive the grant for a child who is not my biological child?",
           "a": "Yes, if you are the primary caregiver of the child. You will need to provide documentation showing your relationship to the child and the circumstances of your care."
+        },
+        {
+          "q": "When is the Child Support Grant paid each month?",
+          "a": "Children's grants are normally paid in the first week of the month, on the children's grant payment day. The exact date can move when a public holiday falls in the payment window, so check the current month on our SASSA payment calendar or your own status rather than using an old date."
+        },
+        {
+          "q": "My Child Support Grant was approved but I have not been paid. What should I do?",
+          "a": "First check whether your status shows a payment date and whether it says Bank Details Pending. If the payment date has passed, allow up to 3 business days for the bank transfer to reflect. If the money still has not arrived, follow our missing grant payment guide and contact SASSA on 0800 60 10 11 with your ID number and reference number."
+        },
+        {
+          "q": "How do I check my Child Support Grant status?",
+          "a": "You can check your status at a SASSA office, by phoning 0800 60 10 11, or through the official SASSA channels. Your grant is not an SRD grant, so the SRD portal status check does not show it. Keep your receipt and reference number from the application."
         }
       ]
     },

@@ -226,6 +226,37 @@ and any payment timing remain separate from the appeal being lodged. Deployment 
 
 ---
 
+### 2026-11-12 - November SEO round (appeal guide, Child Support Grant, September archive)
+
+**Reason:** Three existing high-opportunity pages were underserving search intent. The appeal guide's
+title and description did not match the query mix (declined vs appeal vs outcome); the Child Support
+Grant page had no evergreen payment/late-payment guidance and was pinned to October dates; and
+`update-2026-036` (September dates) was still competing with the evergreen payment calendar.
+
+**Official sources:** No new factual claims were introduced. Existing figures (R580 CSG amount,
+90-day SRD appeal window, Independent Tribunal for Social Assistance Appeals, SASSA helpline
+0800 60 10 11) are unchanged and were already sourced in the appeal correction entry above.
+
+| # | File | Change | Basis |
+|---|---|---|---|
+| 1 | `public/data/guides.json` | Appeal guide: title to `SASSA Appeal: Declined SRD Grant Guide`, intent-led 157-character description, 3 FAQs separating declined/appeal/outcome and explaining appeal-status checks, 4 related links (`/appeals/itsaa`, `/status/appeal-pending`, `/guides/appeal-timeline`, `/tools/status-explorer`), `lastUpdated` 2026-11-12 | Existing verified appeal facts; internal link audit |
+| 2 | `public/data/grants/child-support-grant.json` | Title/description rewritten; `last_updated` 2026-11-12; October-specific date block replaced with evergreen payment-day + late-payment guidance; 3 FAQs (payment timing, approved-but-unpaid, status checking); related links expanded to 9 | SASSA payment mechanics already stated on the payment calendar; no new dates asserted |
+| 3 | `public/data/updates.json` | `update-2026-036` archived: `seoTitle` "SASSA September 2026 Dates (Archive)", archive `metaDescription`, archive callout linking `/payment-calendar` and `/status-check`, `last_updated` 2026-11-12. URL, canonical and historical body unchanged | Cannibalisation control; September dates are historical |
+
+**Deliberately not changed:** the December 2026 payment-calendar rollover (held until ~25 November
+pending verified dates); no route, canonical, `robots.txt`, sitemap or noindex change.
+
+**Verification:** `npm run validate:content` 0 errors / 1 pre-existing warning (September forecast
+`lastVerified` staleness); `npm run lint` 0 errors (85 pre-existing warnings); `npm test` 3/3 pass;
+`npm run build` succeeded. Prerendered HTML verified for the three pages: expected `<title>`,
+descriptions (157/155/159 chars), self-referencing canonicals, `index, follow`, 5 valid JSON-LD
+blocks on the appeal guide, and all three URLs present in the 196-URL sitemap.
+
+**Not claimed:** No indexation, ranking or traffic outcome is asserted. Deployment and live
+verification are recorded separately once the production build reaches READY.
+
+---
+
 ## 3. Recurring workflow
 
 1. **Research** official sources (`sassa.gov.za/newsroom/media-statements`, `srd.sassa.gov.za`, DSD,

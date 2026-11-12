@@ -161,8 +161,8 @@
   },
   {
     "id": "appeal-guide",
-    "title": "How to Appeal a Declined SASSA SRD Application",
-    "description": "A step-by-step guide to the official SASSA SRD appeal: check the declined month, lodge within 90 days using your ID, phone and PIN, and track the tribunal outcome.",
+    "title": "SASSA Appeal: Declined SRD Grant Guide",
+    "description": "Appealing a declined SASSA SRD grant: check the declined month, lodge within 90 days, then track the tribunal outcome. Steps, official links and status help.",
     "category": "Appeals & Reconsideration",
     "difficulty": "intermediate",
     "estimatedTime": "15 minutes",
@@ -254,6 +254,18 @@
       {
         "q": "The appeal portal will not accept my phone number. What should I do?",
         "a": "Check that the ID number and phone number exactly match your SRD application. If your phone number changed, update it on the SRD portal first. Try another browser, and contact the SASSA helpline on 0800 60 10 11 if it still fails."
+      },
+      {
+        "q": "What is the difference between a declined application, an appeal and an appeal outcome?",
+        "a": "A declined application is SASSA's monthly decision that you did not qualify for that month. An appeal is your formal challenge to that decision, lodged on the official SRD appeals portal within 90 days. The appeal outcome is the Independent Tribunal's decision on the challenge: it can set the decline aside or confirm it for that month. Checking your appeal status is a separate step from checking your grant status."
+      },
+      {
+        "q": "How do I check my SASSA SRD appeal status?",
+        "a": "Return to https://srd.sassa.gov.za/appeals/appeal, enter your ID number and the phone number on your application, and request a new PIN. The portal shows the outcome for each month you appealed. There is no separate appeal reference number to look up. Our appeal status check page at /appeals/appeal-status-check explains the steps."
+      },
+      {
+        "q": "Does an approved appeal mean I will be paid immediately?",
+        "a": "No. An approved appeal means the tribunal set aside the declined decision for that month, and SASSA must then implement it. It does not create a fixed payment date. Check your SRD status and the payment schedule after the outcome, and allow the normal batch and bank processing time."
       }
     ],
     "tags": [
@@ -263,7 +275,7 @@
       "declined SRD",
       "90-day appeal"
     ],
-    "lastUpdated": "2026-10-23",
+    "lastUpdated": "2026-11-12",
     "author": "Lucky Cungwa",
     "sources": [
       {
@@ -302,6 +314,26 @@
       {
         "title": "Income Source Detected: Appeal Guide",
         "url": "/guides/income-source-detected-appeal",
+        "isExternal": false
+      },
+      {
+        "title": "What the Independent Tribunal (ITSAA) Does",
+        "url": "/appeals/itsaa",
+        "isExternal": false
+      },
+      {
+        "title": "Appeal Pending: What It Means",
+        "url": "/status/appeal-pending",
+        "isExternal": false
+      },
+      {
+        "title": "How Long a SASSA Appeal Takes",
+        "url": "/guides/appeal-timeline",
+        "isExternal": false
+      },
+      {
+        "title": "Not Sure What Your Status Means?",
+        "url": "/tools/status-explorer",
         "isExternal": false
       },
       {
