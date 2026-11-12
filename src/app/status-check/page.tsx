@@ -324,7 +324,6 @@ export default function StatusCheckPage() {
         </aside>
       </div>
 
-      <section className="mb-16">
       <section className="mb-16" aria-labelledby="status-next-steps">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <Chip color="primary" variant="flat" className="font-bold uppercase mb-3">Your next step</Chip>
