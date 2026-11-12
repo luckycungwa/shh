@@ -3,7 +3,7 @@
   "description": "Comprehensive breakdown of the SASSA SRD R370 grant for 2026. The grant amount is {{srd_grant_amount}}/month. Who qualifies, required documents, how to apply, the latest confirmed 2026 payment dates, what 'Approved' means, and what to do if your application is declined.",
   "slug": "grants/srd-r370-grant",
   "pillar": "grant-guide",
-  "last_updated": "2026-10-23",
+  "last_updated": "2026-11-12",
   "reviewed_by": "Lucky Cungwa",
   "author": "Lucky Cungwa",
   "sources": [
@@ -79,6 +79,11 @@
       "content": "SASSA confirmed the <strong>October 2026</strong> payment dates for the permanent grants: Older Persons Grant on <strong>Friday, 2 October</strong>, Disability Grant on <strong>Monday, 5 October</strong>, and Children's Grants on <strong>Tuesday, 6 October</strong> - these dates have now passed. SASSA also confirmed the <strong>October {{srd_grant_amount}} SRD payment dates as Thursday 22 and Friday 23 October 2026</strong>; you are paid on one of those two dates according to your personal 'Pay Day' on the SRD portal, not on both. The fourth payment day for grants under review is not yet confirmed. Read the <a href=\"/dates/october-2026\">full October 2026 schedule</a> and the <a href=\"/payment-calendar\">payment calendar</a> for the latest confirmed dates, and the <a href=\"/dates/november-2026\">November 2026 schedule</a> for the next cycle."
     },
     {
+      "type": "info",
+      "title": "November 2026: Confirmed SRD Processing Dates",
+      "content": "SASSA has announced the November 2026 {{srd_grant_amount}} SRD processing dates as <strong>Monday 23 November</strong> and <strong>Wednesday 25 November 2026</strong>. These are processing dates for payment batches, not a promise that every beneficiary will receive money on both dates. Check your own <strong>Pay Day</strong> on the official <a href=\"https://srd.sassa.gov.za\">SRD portal</a>; your personal date determines when your payment is released. Allow up to 48 business hours for funds to reflect after Pay Day. See the <a href=\"/dates/november-2026\">November 2026 payment schedule</a> and <a href=\"/payment-calendar\">full SASSA payment calendar</a>."
+    },
+    {
       "type": "text",
       "title": "What Does 'Approved' Mean for the SRD Grant?",
       "content": "When your status shows <strong>'Approved'</strong>, it means SASSA has confirmed you qualify for the {{srd_grant_amount}} SRD grant for that month and your payment is being processed. It does not mean the money is already in your bank account. After approval, your status will later show a <strong>'Pay Day'</strong> date - this is when the payment batch is released. The money can then take up to 48 business hours to reflect in your account. See our full explanation of what <a href=\"/status/approved\">Approved means</a>."
@@ -126,8 +131,12 @@
     },
     {
       "type": "faq",
-      "title": "October 2026: Frequently Asked Questions",
+      "title": "November 2026: Frequently Asked Questions",
       "faqs": [
+        {
+          "q": "What are the November 2026 SRD payment dates?",
+          "a": "SASSA announced SRD processing dates for Monday 23 November and Wednesday 25 November 2026. These are batch-processing dates, not guaranteed individual deposit dates. Check your personal Pay Day on the official SRD portal at srd.sassa.gov.za."
+        },
         {
           "q": "What is the confirmed SRD payment date for October 2026?",
           "a": "SASSA confirmed the October 2026 SRD payment dates as Thursday 22 and Friday 23 October 2026. The SRD is paid in batches, so you are paid on one of those two dates according to your own 'Pay Day' on the official SRD portal, not on both dates. The fourth payment day for grants under review is not yet confirmed."
