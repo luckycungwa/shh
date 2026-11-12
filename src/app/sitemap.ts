@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { getActiveTools } from "../lib/tools/registry";
 import { isIndexableUpdate } from "../lib/updates";
+import { officeCitySlug } from "../lib/office-indexation";
 
 const BASE_URL = "https://www.sassahelphub.co.za";
 
@@ -145,9 +146,6 @@ export default async function sitemap() {
     "KwaZulu-Natal": "kwazulu-natal", "Limpopo": "limpopo", "Mpumalanga": "mpumalanga",
     "North West": "north-west", "Northern Cape": "northern-cape", "Western Cape": "western-cape",
   };
-  const slugifyCity = (c: string) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-  const citySlugStrip = (c: string) => c.replace(/\s*\(.*?\)\s*/g, " ").trim();
-
   // Indexation rule (see src/lib/office-indexation.ts): the sitemap contains
   // province hub pages plus ONLY curated city pages (officeCities.json
   // records with unique descriptions/tips). Template-only province-derived
@@ -157,7 +155,7 @@ export default async function sitemap() {
   for (const c of officeCities) {
     const pSlug = provinceNameToSlug[c.province];
     if (pSlug) {
-      const cityPath = `/sassa-offices/${pSlug}/${slugifyCity(c.city)}`;
+      const cityPath = `/sassa-offices/${pSlug}/${officeCitySlug(c.city)}`;
       curatedCityPaths.add(cityPath);
       officePaths.add(cityPath);
     }
@@ -169,7 +167,7 @@ export default async function sitemap() {
       if (prov) {
         officePaths.add(`/sassa-offices/${p}`);
         [...(prov.main_offices || []), ...(prov.district_offices || [])].forEach((o: any) => {
-          const cityPath = `/sassa-offices/${p}/${slugifyCity(citySlugStrip(o.town))}`;
+          const cityPath = `/sassa-offices/${p}/${officeCitySlug(o.town)}`;
           if (curatedCityPaths.has(cityPath)) officePaths.add(cityPath);
         });
       }

@@ -38,16 +38,33 @@ const faqs = [
   { q: "Can I add new evidence to my appeal?", a: "No. The SRD appeal rules say you may only rely on information and evidence that was available to SASSA when you applied. The tribunal reassesses the existing record; it is not a document-upload process." },
 ];
 
+// FAQ answers contain two kinds of link: full external URLs (the official
+// appeals portal) and bare internal paths (/guides/...). Matching the external
+// URL first is essential — linkifying every "/" ran the portal URL apart into
+// /srd and /appeals/appeal, which are 404s on this site.
 function renderAnswer(text: string) {
-  return text.split(/(\/[a-z0-9][a-z0-9/-]*)/i).map((part, i) =>
-    /^\/[a-z0-9]/i.test(part) ? (
-      <NextLink key={i} href={part} className="underline font-bold text-primary-gold hover:no-underline">
-        {part}
-      </NextLink>
-    ) : (
-      <React.Fragment key={i}>{part}</React.Fragment>
-    )
-  );
+  return text.split(/(https?:\/\/[^\s]+|\/[a-z0-9][a-z0-9/-]*)/i).map((part, i) => {
+    if (/^https?:\/\//i.test(part)) {
+      const trailing = part.match(/[.,;:)]+$/)?.[0] ?? "";
+      const href = trailing ? part.slice(0, -trailing.length) : part;
+      return (
+        <React.Fragment key={i}>
+          <a href={href} className="underline font-bold text-primary-gold hover:no-underline" target="_blank" rel="noopener noreferrer">
+            {href}
+          </a>
+          {trailing}
+        </React.Fragment>
+      );
+    }
+    if (/^\/[a-z0-9]/i.test(part)) {
+      return (
+        <NextLink key={i} href={part} className="underline font-bold text-primary-gold hover:no-underline">
+          {part}
+        </NextLink>
+      );
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
 }
 
 export default function AppealsHubPage() {

@@ -10,6 +10,7 @@ import JsonLd from "../../../components/JsonLd";
 import EditorialFooter from "../../../components/EditorialFooter";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../lib/schema";
 import { clampTitle, clampDescription } from "../../../lib/seo";
+import { officeCitySlug } from "../../../lib/office-indexation";
 
 interface Province {
   slug: string;
@@ -27,10 +28,6 @@ interface Province {
 
 function readProvinces(): Province[] {
   return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/provinces.json"), "utf8"));
-}
-
-function slugifyCity(town: string) {
-  return town.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
 export function generateStaticParams() {
@@ -107,7 +104,7 @@ export default async function ProvinceOfficesPage({ params: paramsPromise }: { p
           <h2 className="text-2xl font-bold mb-6">Main SASSA Offices in {province.name}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {province.main_offices.map((o, i) => (
-              <NextLink key={i} href={`/sassa-offices/${province.slug}/${slugifyCity(o.town)}`} className="block group">
+              <NextLink key={i} href={`/sassa-offices/${province.slug}/${officeCitySlug(o.town)}`} className="block group">
                 <Card className="p-5 hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 group-hover:border-primary-gold/30 h-full">
                   <CardBody className="p-0 space-y-2">
                     <p className="font-bold text-lg group-hover:text-primary-gold transition-colors">{o.town}</p>
@@ -133,7 +130,7 @@ export default async function ProvinceOfficesPage({ params: paramsPromise }: { p
             <h2 className="text-2xl font-bold mb-6">District Offices in {province.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {province.district_offices.map((o, i) => (
-                <NextLink key={i} href={`/sassa-offices/${province.slug}/${slugifyCity(o.town)}`} className="block group">
+                <NextLink key={i} href={`/sassa-offices/${province.slug}/${officeCitySlug(o.town)}`} className="block group">
                   <Card className="p-5 hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 group-hover:border-primary-gold/30 h-full">
                     <CardBody className="p-0 space-y-2">
                       <p className="font-bold text-lg group-hover:text-primary-gold transition-colors">{o.town}</p>

@@ -211,7 +211,7 @@ export default function StatusCheckPage() {
                      { title: "Missing payment troubleshooter", url: "/tools/payment-troubleshooter", description: "Why your money hasn't arrived" },
                      { title: "Appeal deadline calculator", url: "/tools/appeal-deadline", description: "If your application was declined" },
                      { title: "Change a lost cellphone number", url: "/guides/lost-phone-number", description: "If you no longer have your registered number" },
-                     { title: "Update SRD banking details", url: "/guides/change-banking-details", description: "If your bank account or details changed" },
+                     { title: "Update SRD banking details", url: "/guides/bank-details-pending-fix", description: "If your bank account or details changed" },
                    ]}
                  />
 

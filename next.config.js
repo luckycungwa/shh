@@ -89,6 +89,17 @@ const nextConfig = {
       { source: '/updates/update-2026-021', destination: '/sassa-offices', statusCode: 301 },
       { source: '/updates/update-2026-025', destination: '/guides/ussd-codes', statusCode: 301 },
       { source: '/updates/update-2026-026', destination: '/payment-calendar', statusCode: 301 },
+
+      // Legacy URL shapes that leaked into the wild before the link fixes on
+      // 2026-11-12: the appeals FAQ split the official portal URL into local
+      // paths, and office towns with a parenthetical former name produced slugs
+      // like "mbombela-nelspruit" that never existed as routes.
+      { source: '/srd', destination: '/grants/srd-r370-grant', statusCode: 301 },
+      { source: '/appeals/appeal', destination: '/appeals', statusCode: 301 },
+      { source: '/sassa-offices/mpumalanga/mbombela-nelspruit', destination: '/sassa-offices/mpumalanga/mbombela', statusCode: 301 },
+      { source: '/sassa-offices/eastern-cape/gqeberha-port-elizabeth', destination: '/sassa-offices/eastern-cape/gqeberha', statusCode: 301 },
+      { source: '/sassa-offices/kwazulu-natal/stanger-kwadukuza', destination: '/sassa-offices/kwazulu-natal/stanger', statusCode: 301 },
+      { source: '/sassa-offices/mpumalanga/witbank-emalahleni', destination: '/sassa-offices/mpumalanga/witbank', statusCode: 301 },
     ];
   },
 };

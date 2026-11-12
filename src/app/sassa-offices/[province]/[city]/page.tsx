@@ -9,7 +9,7 @@ import NextLink from "next/link";
 import JsonLd from "../../../../components/JsonLd";
 import EditorialFooter from "../../../../components/EditorialFooter";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "../../../../lib/schema";
-import { isCuratedOfficeCity } from "../../../../lib/office-indexation";
+import { isCuratedOfficeCity, officeCitySlug } from "../../../../lib/office-indexation";
 import { clampTitle, clampDescription } from "../../../../lib/seo";
 
 interface OfficeCity {
@@ -44,11 +44,6 @@ const PROVINCE_NAMES: Record<string, string> = {
   "western-cape": "Western Cape",
 };
 
-function citySlug(city: string) {
-  const clean = city.replace(/\s*\(.*?\)\s*/g, " ").trim();
-  return clean.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-
 function readOfficeCities(): OfficeCity[] {
   try {
     return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/officeCities.json"), "utf8"));
@@ -72,23 +67,19 @@ export function generateStaticParams() {
 
   for (const c of cities) {
     const pSlug = provinces.find((p) => p.name === c.province)?.slug;
-    if (pSlug) params.push({ province: pSlug, city: slugify(c.city) });
+    if (pSlug) params.push({ province: pSlug, city: officeCitySlug(c.city) });
   }
 
   for (const p of provinces) {
     const cityEntries = [...p.main_offices, ...(p.district_offices || [])];
     for (const o of cityEntries) {
-      const cSlug = citySlug(o.town);
+      const cSlug = officeCitySlug(o.town);
       if (!params.some((x) => x.province === p.slug && x.city === cSlug)) {
         params.push({ province: p.slug, city: cSlug });
       }
     }
   }
   return params;
-}
-
-function slugify(s: string) {
-  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
 export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ province: string; city: string }> }): Promise<Metadata> {
@@ -119,11 +110,11 @@ export default async function CityOfficePage({ params: paramsPromise }: { params
   const provinces = readProvinces();
   const province = provinces.find((p) => p.slug === params.province);
 
-  const officeCity = cities.find((c) => c.province === provinceName && slugify(c.city) === params.city);
+  const officeCity = cities.find((c) => c.province === provinceName && officeCitySlug(c.city) === params.city);
 
   const provinceOfficeEntry =
     province &&
-    [...province.main_offices, ...(province.district_offices || [])].find((o) => citySlug(o.town) === params.city);
+    [...province.main_offices, ...(province.district_offices || [])].find((o) => officeCitySlug(o.town) === params.city);
 
   if (!provinceName || (!officeCity && !provinceOfficeEntry)) notFound();
 
@@ -255,7 +246,7 @@ export default async function CityOfficePage({ params: paramsPromise }: { params
             <h2 className="text-2xl font-bold mb-6">More SASSA Offices in {provinceName}</h2>
             <div className="flex flex-wrap gap-3">
               {[...province.main_offices, ...(province.district_offices || [])].map((o, i) => (
-                <NextLink key={i} href={`/sassa-offices/${province.slug}/${citySlug(o.town)}`} className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-bold hover:bg-primary-gold hover:text-primary-black transition-colors">
+                <NextLink key={i} href={`/sassa-offices/${province.slug}/${officeCitySlug(o.town)}`} className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-bold hover:bg-primary-gold hover:text-primary-black transition-colors">
                   {o.town}
                 </NextLink>
               ))}

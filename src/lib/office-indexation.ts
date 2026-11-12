@@ -31,6 +31,14 @@ function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+// Single source of truth for city URL slugs. Office towns often carry a
+// parenthetical former name ("Mbombela (Nelspruit)"), which must be dropped so
+// that hub links, generated params, curated records and the sitemap all agree.
+// Divergent copies of this rule previously produced 404 city links.
+export function officeCitySlug(city: string): string {
+  return slugify(city.replace(/\s*\(.*?\)\s*/g, " ").trim());
+}
+
 function readOfficeCities(): any[] {
   try {
     return JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/data/officeCities.json"), "utf8"));
@@ -43,6 +51,6 @@ export function isCuratedOfficeCity(provinceSlug: string, citySlug: string): boo
   const provinceName = PROVINCE_NAMES[provinceSlug];
   if (!provinceName) return false;
   return readOfficeCities().some(
-    (c: any) => c.province === provinceName && slugify(String(c.city || "")) === citySlug
+    (c: any) => c.province === provinceName && officeCitySlug(String(c.city || "")) === citySlug
   );
 }
