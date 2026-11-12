@@ -90,6 +90,7 @@ export function buildMetadata(
     ogType?: "website" | "article";
     noTemplate?: boolean;
     robots?: { index?: boolean; follow?: boolean };
+    ogImage?: { url: string; width?: number; height?: number; alt: string };
   }
 ): Partial<Metadata> {
   const url = `${SITE_CONFIG.url}${overrides.path}`;
@@ -101,6 +102,9 @@ export function buildMetadata(
   const description = overrides.description ? clampDescription(overrides.description) : undefined;
   const ogTitle = overrides.ogTitle ? clampTitle(overrides.ogTitle, false) : title;
   const ogDescription = overrides.ogDescription ? clampDescription(overrides.ogDescription) : description;
+  const ogImage = overrides.ogImage
+    ? { ...overrides.ogImage, url: overrides.ogImage.url.startsWith("http") ? overrides.ogImage.url : `${SITE_CONFIG.url}${overrides.ogImage.url}` }
+    : { url: `${SITE_CONFIG.url}/logo.png`, width: 790, height: 790, alt: `${SITE_CONFIG.name} logo` };
   return {
     ...(title && {
       title: overrides.noTemplate || titleHasBrand
@@ -117,13 +121,13 @@ export function buildMetadata(
       siteName: SITE_CONFIG.name,
       locale: "en_ZA",
       type: overrides.ogType || "website",
-      images: [{ url: `${SITE_CONFIG.url}/logo.png`, width: 790, height: 790 }],
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle || SITE_CONFIG.name,
       description: ogDescription || SITE_CONFIG.description,
-      images: [`${SITE_CONFIG.url}/logo.png`],
+      images: [ogImage.url],
     },
   };
 }
