@@ -27,9 +27,10 @@ export function generateMetadata(): Metadata {
   const currentMonthYear = getCurrentMonthYearKey();
   return {
     ...buildMetadata({
-      title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
-      description: `Check your SASSA SRD status for ${currentMonthYear} with your ID number. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
+      title: `SASSA SRD Status Check – R370 & Pay Day (${currentMonthYear})`,
+      description: `Check your SASSA SRD R370 status for ${currentMonthYear}. Use the official portal, understand your result and find next steps for pending, approved or declined applications.`,
       path: "/status-check",
+      noTemplate: true,
     }),
     keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
   };
