@@ -268,6 +268,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Pending-status help: high-intent journey ── */}
+      <section className="max-w-7xl mx-auto px-6 pb-20 w-full" aria-labelledby="pending-help-title">
+        <div className="rounded-3xl border border-amber-200 dark:border-amber-900/60 bg-amber-50/70 dark:bg-amber-950/20 p-6 md:p-10">
+          <div className="max-w-3xl mb-8">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 mb-3">Waiting for an update?</p>
+            <h2 id="pending-help-title" className="text-3xl md:text-4xl font-black tracking-tight text-gray-900 dark:text-white">
+              Is your SASSA status still pending?
+            </h2>
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mt-3 leading-relaxed">
+              A pending or under-review status is not the same as a declined application. Find the explanation that matches the message on your status result before taking action.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { title: "My status says Pending", detail: "Understand what pending means and what to check next.", href: "/status/pending", label: "Read pending guide" },
+              { title: "My application is Under Review", detail: "See why a review may be taking place and how to follow up.", href: "/status/under-review", label: "Read review guide" },
+              { title: "Bank Details Pending", detail: "Check account-name matching and banking verification steps.", href: "/status/bank-details-pending", label: "Fix banking details" },
+              { title: "Identity Verification", detail: "Find the right steps for an ID or personal-details mismatch.", href: "/status/identity-verification", label: "Check verification steps" },
+              { title: "Approved, but no Pay Day", detail: "Understand what approval means and where to check for a payment date.", href: "/status/approved", label: "Understand approval" },
+              { title: "Marked Paid, but no money", detail: "Work through common payment delays before travelling to collect.", href: "/tools/payment-troubleshooter", label: "Use payment help" },
+            ].map((item) => (
+              <NextLink key={item.href} href={item.href} className="group rounded-2xl border border-amber-200/80 dark:border-amber-900/50 bg-white dark:bg-gray-900 p-5 hover:border-primary-gold hover:shadow-md transition-all">
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-primary-gold">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">{item.detail}</p>
+                <span className="inline-flex items-center gap-2 mt-4 text-sm font-bold text-primary-gold">
+                  {item.label} <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
+                </span>
+              </NextLink>
+            ))}
+          </div>
+
+          <p className="text-sm text-gray-700 dark:text-gray-300 mt-6">
+            Important: an appeal is for a declined month. If your result is still pending or under review, use the matching status guidance first rather than submitting an appeal for a decision that has not been made.
+          </p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+            SASSA Help Hub is independent and unofficial. Always confirm your personal result on the official SASSA portal.
+          </p>
+        </div>
+      </section>
+
       {/* ── Essential Tools ── */}
       <section className="max-w-7xl mx-auto px-6 py-28 w-full">
         <div className="text-center mb-16">
