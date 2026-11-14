@@ -102,10 +102,14 @@ export default function NavbarComponent() {
         <NavbarBrand>
           <NextLink href="/" className="flex items-center gap-2">
             <Image src="/logo.png" alt="SASSA Help Hub Logo" width={32} height={32} className="rounded ring-2 ring-primary-gold/20" />
-            {/* <p className="font-bold text-inherit hidden sm:block">
-              <span className="text-primary-black dark:text-white">SASSA</span>
-              <span className="text-primary-gold"> Help Hub</span>
-            </p> */}
+            <span className="flex flex-col leading-tight">
+              <span className="font-extrabold text-sm sm:text-base tracking-tight text-primary-black dark:text-white">
+                SASSA <span className="text-primary-gold">Help Hub</span>
+              </span>
+              <span className="text-[9px] sm:text-[10px] font-medium tracking-wide text-secondary-gray">
+                Independent grant guidance
+              </span>
+            </span>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
