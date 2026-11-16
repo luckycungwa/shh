@@ -27,10 +27,9 @@ export function generateMetadata(): Metadata {
   const currentMonthYear = getCurrentMonthYearKey();
   return {
     ...buildMetadata({
-      title: `SASSA SRD Status Check ${currentMonthYear} | R370 & Pay Day`,
-      description: `Check your SASSA SRD R370 status for ${currentMonthYear}. See what Approved, Pending or Declined means, fix common problems and check your Pay Day.`,
+      title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
+      description: `Check your SASSA SRD status for ${currentMonthYear} with your ID number. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
       path: "/status-check",
-      noTemplate: true,
     }),
     keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
   };
@@ -324,36 +323,26 @@ export default function StatusCheckPage() {
         </aside>
       </div>
 
-      <section className="mb-16" aria-labelledby="status-next-steps">
-        <div className="max-w-3xl mx-auto text-center mb-8">
-          <Chip color="primary" variant="flat" className="font-bold uppercase mb-3">Your next step</Chip>
-          <h2 id="status-next-steps" className="text-3xl md:text-4xl font-black mb-3">What happened when you checked your status?</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Choose the situation that matches your result. Each guide explains what it means, what to check and where to get help. You do not need to submit another application just because a result has not changed.
-          </p>
-        </div>
+      <section className="mb-16">
+        <h2 className="text-2xl font-black text-center mb-2">Checked your status? Now find your situation.</h2>
+        <p className="text-center text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          The most common next questions after a status check — each link explains what it means and exactly what to do.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { href: "/status/approved", title: "Approved, but no Pay Day", desc: "Understand why an approved month may not show a payment date and what to check next.", action: "Read the approved-status guide" },
-            { href: "/status/pending", title: "Still showing Pending", desc: "Learn what verification may still be outstanding and when to follow up.", action: "Understand pending status" },
-            { href: "/status/declined", title: "My application was Declined", desc: "Check the decline reason first, then learn how to challenge an incorrect decision.", action: "Check decline reasons" },
-            { href: "/guides/missing-grant-payment-guide", title: "Pay Day passed, but no money", desc: "Check bank processing, payment method and what to do if the money still has not arrived.", action: "Troubleshoot a missing payment" },
-            { href: "/guides/bank-details-pending-fix", title: "Bank details are Pending", desc: "Find out how to review and update the banking information linked to your SRD application.", action: "Fix banking details" },
-            { href: "/guides/lost-phone-number", title: "I lost my registered number", desc: "Follow the steps for changing a number you can no longer access.", action: "Recover access to your number" },
+            { href: "/status", title: "What does my status mean?", desc: "Full guide to every SASSA SRD status." },
+            { href: "/status/approved", title: "Approved but no Pay Day", desc: "Why no date is showing yet and when to expect one." },
+            { href: "/guides/missing-grant-payment-guide", title: "Pay Day today, no money", desc: "What to check before contacting SASSA." },
+            { href: "/payment-calendar", title: "Payment date changed?", desc: "How SRD batch windows work and why dates shift." },
+            { href: "/status/pending", title: "Still Pending", desc: "How long verification takes and when to follow up." },
+            { href: "/status/declined", title: "Declined", desc: "Read your decline reason and how to appeal." },
+            { href: "/guides/bank-details-pending-fix", title: "Bank details problem", desc: "Fix 'Bank Details Pending' and get paid." },
           ].map((item) => (
-            <NextLink key={item.href} href={item.href} className="group flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900/50 p-5 hover:border-primary-gold/60 hover:shadow-lg transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-gold">
-              <h3 className="font-bold text-base leading-snug mb-2 group-hover:text-primary-gold">{item.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">{item.desc}</p>
-              <span className="mt-4 text-sm font-bold text-primary-gold">{item.action} →</span>
+            <NextLink key={item.href} href={item.href} className="group block p-5 bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-primary-gold/40 hover:shadow-lg transition-all">
+              <p className="font-bold text-sm group-hover:text-primary-gold transition-colors leading-tight mb-1">{item.title}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</p>
             </NextLink>
           ))}
-        </div>
-        <div className="mt-6 rounded-2xl border border-primary-gold/30 bg-primary-gold/5 p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <h3 className="font-bold">Not sure what your status means?</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Use the Status Explorer to look up the wording shown on your result.</p>
-          </div>
-          <LinkButton href="/tools/status-explorer" color="primary" variant="flat" className="font-bold">Open Status Explorer</LinkButton>
         </div>
       </section>
 
