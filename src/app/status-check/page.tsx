@@ -25,19 +25,11 @@ function toChipDate(iso: string): string {
 
 export function generateMetadata(): Metadata {
   const currentMonthYear = getCurrentMonthYearKey();
-  // Keep the visible title inside 60 characters without truncating mid-word:
-  // the longer month names push "SASSA " past the cap, so drop that prefix
-  // instead of letting clampTitle cut the tail off the title.
-  const fullTitle = `SASSA SRD Status Check ${currentMonthYear}: R370 Approval & Pay Dates`;
-  const title = fullTitle.length > 60
-    ? `SRD Status Check ${currentMonthYear}: R370 Approval & Pay Dates`
-    : fullTitle;
   return {
     ...buildMetadata({
-      title,
-      description: `Independent guide to your SASSA SRD status check for ${currentMonthYear}: what Approved, Pending and Declined mean for the R370 grant, plus Pay Day and appeals.`,
+      title: `SASSA SRD Status Check ${currentMonthYear}: Independent Guide to R370 Approval & Payment Dates`,
+      description: `Check your SASSA SRD status for ${currentMonthYear} with your ID number. Step-by-step guide for R370 approval, biometrics, bank verification, and payment dates. Free independent help.`,
       path: "/status-check",
-      noTemplate: true,
     }),
     keywords: [`SASSA status check ${currentMonthYear}`, `SRD status check ${currentMonthYear.split(" ")[0]}`, "R370 grant status", "SASSA status check online", "SASSA payment dates"],
   };
