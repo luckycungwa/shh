@@ -6,9 +6,9 @@ records a ranking result — only the change made and the evidence behind it.
 
 ## 2026-11-16 — /status-check: restore last-known-ranking version (PR 1)
 
-- **Commit:** `33be090` — `fix(seo): restore last-known-ranking /status-check page and tighten its snippet`
+- **Commits:** `33be090` (page restore), `e242a44` (metadata restored byte-for-byte)
 - **Reason:** the page lost almost all impressions within 24h of the 12 Nov deploy.
-  Restore the page body that was live while it ranked and fix the search snippet,
+  Restore the page body and the title/description that were live while it ranked,
   without touching anything else.
 - **Baseline (Google Search Console, page filter `/status-check`, 3 months):**
   92.6k clicks, 6.31M impressions, average position 9.44. 87.7k of those clicks were
@@ -25,22 +25,28 @@ records a ranking result — only the change made and the evidence behind it.
 - **Change:**
   - `src/app/status-check/page.tsx` restored to `257830c~1` (the version live before the
     12 Nov commits), including the "Checked your status? Now find your situation." section.
-  - Title, before: `SASSA SRD Status Check November 2026 | R370 & Pay Day`
-  - Title, after: `SRD Status Check November 2026: R370 Approval & Pay Dates`
-    (pattern `SASSA SRD Status Check {Month Year}: R370 Approval & Pay Dates`; the `SASSA `
-    prefix is dropped for August–December, and for January/October, because 60 chars
-    otherwise overflow — no mid-word truncation).
-  - Description, before: `Check your SASSA SRD R370 status for November 2026. See what
-    Approved, Pending or Declined means, fix common problems and check your Pay Day.`
-  - Description, after: `Independent guide to your SASSA SRD status check for November
-    2026: what Approved, Pending and Declined mean for the R370 grant, plus Pay Day and
-    appeals.` (155 chars in the worst month, September).
+  - Metadata is byte-identical to what was live before 12 Nov. The source strings are
+    the original ones, unchanged, with `noTemplate` removed so `clampTitle` +
+    the root layout's `%s | SASSA Help Hub` template produce the same strings again
+    (verified by building `257830c~1` in a scratch worktree and diffing the bytes).
+  - `<title>` — **12 Nov (collapsed):** `SASSA SRD Status Check November 2026 | R370 & Pay Day`
+    (53 chars) → **now, as before 12 Nov:** `SASSA SRD Status Check November 2026 | SASSA Help Hub`
+    (53 chars; `clampTitle` keeps `SASSA SRD Status Check November 2026` and the layout
+    appends the brand).
+  - `<meta name="description">` — **12 Nov:** `Check your SASSA SRD R370 status for November
+    2026. See what Approved, Pending or Declined means, fix common problems and check your
+    Pay Day.` (141) → **now, as before 12 Nov:** `Check your SASSA SRD status for November
+    2026 with your ID number. Step-by-step guide for R370 approval, biometrics, bank
+    verification, and payment dates.` (154, `clampDescription` drops the final sentence
+    "Free independent help." at the sentence boundary).
+  - `og:title` / `og:description` also match the pre-12 Nov output (36 and 154 chars).
   - Kept: JSON-LD, `revalidate = 900`, canonical, all data sources (`payment-schedule-forecast.json`),
     and the two NextStepCard links from `001163f` (`/guides/lost-phone-number`,
     `/guides/bank-details-pending-fix` — both verified 200).
 - **Not changed:** ads/AdSense, `ads.txt`, `robots.txt`, canonical logic, `middleware.ts`,
   redirects, sitemap logic, and every other page.
-- **Verified:** `npm run build` and `npm run lint` pass; `/status-check` renders
-  `<title>` 57 chars, description 154 chars, canonical `https://www.sassahelphub.co.za/status-check`,
-  robots `index, follow`; all 44 internal links on the page return 200 with no redirect;
-  Lighthouse mobile performance measured before/after (see PR).
+- **Verified:** `npm run build` and `npm run lint` pass (0 errors, 85 pre-existing warnings);
+  `/status-check` renders the title/description/og strings above byte-for-byte against the
+  `257830c~1` build, canonical `https://www.sassahelphub.co.za/status-check`, robots
+  `index, follow`; all 44 internal links on the page return 200 with no redirect;
+  no month overflows (rendered titles run 48–54 chars, descriptions 149–155).
